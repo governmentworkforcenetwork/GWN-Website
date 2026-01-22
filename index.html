@@ -1,7 +1,4 @@
 
-	
-
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -1246,6 +1243,20 @@ Our way of giving back — complimentary services to support nonprofits and star
 <button class="btn alt" onclick="openModal('fs-logo')" style="margin-top:12px;">Click Here</button>
 </div>
 </article>
+
+<!-- Card 3: Community Business Partners -->
+<article class="community-card">
+  <img alt="Community business partners and networking" src="community-business-partners.png"/>
+  <div class="body">
+    <h3>Community Business Partners</h3>
+    <p style="margin:6px 0 0; color:#333; font-size:15px;">Free Visibility for Small Businesses</p>
+    <p style="margin:10px 0 0; color:#555; font-size:14px;">
+      Get listed on our platform so customers can discover your business, services, and website.
+      Listings are complimentary and reviewed for alignment with our community values.
+    </p>
+    <button class="btn alt" onclick="openModal('fs-partners')" style="margin-top:12px;">Click Here</button>
+  </div>
+</article>
 </div>
 </div>
 
@@ -1584,7 +1595,93 @@ btn.textContent = '▶ Click to listen';
 </script>
 
 
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MWQxMjcyNTg5OTNlMDAwODNkNjNkNCIsImlzc3VlciI6Im5mc2VydmVyIn0.QugYBQz60QI91kve-3fTKexhDC1SegzDkCd3SD-Ga8o"></script></body>
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MWQxMjcyNTg5OTNlMDAwODNkNjNkNCIsImlzc3VlciI6Im5mc2VydmVyIn0.QugYBQz60QI91kve-3fTKexhDC1SegzDkCd3SD-Ga8o"></script><!-- Community Free Services: Community Business Partners -->
+<div aria-hidden="true" class="modal-backdrop" id="fs-partners">
+  <div aria-labelledby="fsPartnersTitle" class="modal" role="dialog">
+    <div class="modal-header">
+      <h3 id="fsPartnersTitle">Community Business Partners (Free Listing)</h3>
+      <button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="thankyou">Thanks! Your partner listing request was received.</div>
+
+      <form method='POST' name='community_business_partners' onsubmit='return afterSubmit(this)'>
+        <input name="form-name" type="hidden" value="community_business_partners"/>
+        <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+
+        <div class="grid-2">
+          <div>
+            <label>Business Name *</label>
+            <input name="Business Name" required=""/>
+          </div>
+          <div>
+            <label>Website *</label>
+            <input name="Website" placeholder="https://..." required=""/>
+          </div>
+
+          <div>
+            <label>Contact Name *</label>
+            <input name="Contact Name" required=""/>
+          </div>
+          <div>
+            <label>Email *</label>
+            <input name="Email" type="email" required=""/>
+          </div>
+
+          <div>
+            <label>City *</label>
+            <input name="City" required=""/>
+          </div>
+          <div>
+            <label>State *</label>
+            <input name="State" required=""/>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <label>Business Category *</label>
+          <select name="Category" required="">
+            <option value="">Select one</option>
+            <option>Retail / E‑commerce</option>
+            <option>Professional Services</option>
+            <option>Health / Wellness</option>
+            <option>Beauty / Personal Care</option>
+            <option>Food / Beverage</option>
+            <option>Home Services</option>
+            <option>Creative / Media</option>
+            <option>Education / Coaching</option>
+            <option>Nonprofit / Community</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div style="margin-top:14px;">
+          <label>Short Description (What do you offer?) *</label>
+          <textarea name="Description" rows="4" required=""></textarea>
+        </div>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div>
+            <label>Instagram (optional)</label>
+            <input name="Instagram"/>
+          </div>
+          <div>
+            <label>LinkedIn / Other (optional)</label>
+            <input name="Social Link"/>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;">
+          <button class="btn" type="submit">Submit</button>
+          <button class="btn secondary" onclick="closeModal(this)" type="button">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
 
 
@@ -1789,8 +1886,6 @@ btn.textContent = '▶ Click to listen';
 
 </body>
 </html>
-
-
 
 
 
