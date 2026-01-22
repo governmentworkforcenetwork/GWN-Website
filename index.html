@@ -1787,6 +1787,48 @@ btn.textContent = '▶ Click to listen';
 
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const btn = document.querySelector(".audio-play-pause");
+const audio = document.getElementById("about-intro-audio");
+const timeEl = document.querySelector(".audio-time");
+const barEl = document.querySelector(".audio-progress-bar");
+
+if (!btn || !audio) return;
+
+// Click play/pause
+btn.addEventListener("click", () => {
+if (audio.paused) audio.play();
+else audio.pause();
+});
+
+// Update time + progress
+audio.addEventListener("timeupdate", () => {
+const cur = audio.currentTime || 0;
+const dur = audio.duration || 0;
+
+// time text
+if (timeEl) {
+const mm = String(Math.floor(cur / 60)).padStart(1, "0");
+const ss = String(Math.floor(cur % 60)).padStart(2, "0");
+timeEl.textContent = `${mm}:${ss}`;
+}
+
+// progress bar width
+if (barEl && dur > 0) {
+barEl.style.width = ((cur / dur) * 100).toFixed(2) + "%";
+}
+});
+
+// Reset on end
+audio.addEventListener("ended", () => {
+if (barEl) barEl.style.width = "0%";
+if (timeEl) timeEl.textContent = "0:00";
+});
+});
+</script>
+
+
 
 
 
@@ -1885,6 +1927,7 @@ btn.textContent = '▶ Click to listen';
 
 </body>
 </html>
+
 
 
 
