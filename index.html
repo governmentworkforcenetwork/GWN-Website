@@ -516,6 +516,22 @@ position: relative;
 z-index: 2;
 }
 
+  
+.welcome-video-wrap {
+max-width: 640px; /* Controls desktop size */
+margin: 30px auto; /* Centers it */
+padding: 0 15px; /* Prevents edge touching on small screens */
+}
+
+.welcome-video-wrap video {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 14px;
+box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
 
 <style>
 /* === GWN minimal visual fixes (layout untouched) === */
@@ -937,14 +953,19 @@ Email Us
 <div>
 
 
+
 <!-- Welcome Video -->
 <div class="welcome-video-wrap">
-<video id="welcome-video" controls playsinline preload="metadata">
+<video
+id="welcome-video"
+controls
+playsinline
+preload="metadata"
+>
 <source src="/welcome.mp4" type="video/mp4" />
 Your browser does not support the video tag.
 </video>
 </div>
-
 
 <hr>
 
@@ -1907,6 +1928,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
