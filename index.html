@@ -937,45 +937,23 @@ Email Us
 <div>
 
 
-<div class="audio-player">
+<!-- Welcome Video Player -->
+<div style="max-width:800px; margin:40px auto; text-align:center;">
 
-<button class="audio-play-pause"
+<video
+id="about-intro-video"
+width="100%"
+controls
+playsinline
+preload="metadata"
+style="border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.15);">
 
-type="button"
+<source src=".mp4" type="video/mp4">
+Your browser does not support the video tag.
 
-aria-label="Play welcome message">
-
-▶
-
-</button>
-
-
-
-<div class="audio-info">
-
-<span class="audio-label"><b>Welcome Message</b></span>
-
-<div class="audio-progress">
-
-<div class="audio-progress-bar"></div>
+</video>
 
 </div>
-
-<span class="audio-time" aria-label="Elapsed time">0:00</span>
-
-</div>
-
-
-
-<audio id="about-intro-audio" preload="none">
-
-<source src="about-intro.mp3" type="audio/mpeg" />
-
-Your browser does not support the audio element.
-
-</audio>
-
-</p></div>
 
 <hr>
 <audio id="about-audio" preload="none">
@@ -2094,6 +2072,7 @@ if (timeEl) timeEl.textContent = "0:00";
 
 </body>
 </html>
+
 
 
 
