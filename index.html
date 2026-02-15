@@ -1573,6 +1573,7 @@ Listings are free and reviewed for alignment with our community values.
 </div>
 </div>
 
+
 <!-- Community Job Visibility – Free Job Listing -->
 <div aria-hidden="true" class="modal-backdrop" id="fs-cjv">
 <div aria-labelledby="fsCjvTitle" class="modal" role="dialog">
@@ -1642,7 +1643,11 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 <div class="actions">
 <button class="btn-primary" type="submit">Submit Job Listing</button>
 <button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-
+</div>
+</form>
+</div>
+</div>
+</div>
 
 <!-- Community Free Services: Free Logo Design -->
 <div aria-hidden="true" class="modal-backdrop" id="fs-logo">
@@ -1651,20 +1656,34 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 <h3 id="fsLogoTitle">Free Logo Design (Nonprofits &amp; Startups)</h3>
 <button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
 </div>
+
 <div class="modal-body">
 <div class="thankyou">Thanks! Your logo request was received.</div>
-<form method='POST' name='free_logo_design' onsubmit='return afterSubmit(this)'>
+
+<form method="POST" name="free_logo_design" onsubmit="return afterSubmit(this)">
 <input name="form-name" type="hidden" value="free_logo_design"/>
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+
 <div class="grid-2">
-<div><label>Organization *</label><input name="Organization" required=""/></div>
-<div><label>Nonprofit or Startup? *</label><select name="Org Type" required=""><option>Nonprofit</option><option>Startup</option></select></div>
-<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
-<div><label>Email *</label><input name="Email" required="" type="email"/></div>
+<div><label>Organization *</label><input name="Organization" required type="text"/></div>
+<div>
+<label>Nonprofit or Startup? *</label>
+<select name="Org Type" required>
+<option>Nonprofit</option>
+<option>Startup</option>
+</select>
 </div>
+<div><label>Contact Name *</label><input name="Contact Name" required type="text"/></div>
+<div><label>Email *</label><input name="Email" required type="email"/></div>
+</div>
+
 <div class="grid-1">
-<div><label>Brand Description / Ideas *</label><textarea name="Brand Notes" placeholder="Colors, vibe, symbols, sample links…" required=""></textarea></div>
+<div>
+<label>Brand Description / Ideas *</label>
+<textarea name="Brand Notes" placeholder="Colors, vibe, symbols, sample links…" required></textarea>
 </div>
+</div>
+
 <div class="actions">
 <button class="btn-primary" type="submit">Submit</button>
 <button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
@@ -1673,6 +1692,8 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 </div>
 </div>
 </div>
+
+
 
 
 
@@ -1968,6 +1989,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
