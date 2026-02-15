@@ -1748,14 +1748,14 @@ if(!modal) {
 console.warn('Modal not found:', id);
 return;
 }
-modal.classList.add('open');
+modal.classList.add('active');
 modal.setAttribute('aria-hidden','false');
 }
 
 function closeModal(el){
 const backdrop = el.closest('.modal-backdrop');
 if(!backdrop) return;
-backdrop.classList.remove('open');
+backdrop.classList.remove('active');
 backdrop.setAttribute('aria-hidden','true');
 }
 
@@ -1960,6 +1960,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
