@@ -1737,17 +1737,18 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 <script>
 function openModal(id){
 // Close any open modals first
-document.querySelectorAll('.modal-backdrop.open').forEach(m => {
+document.querySelectorAll('.modal-backdrop.open').forEach(function(m){
 m.classList.remove('open');
 m.setAttribute('aria-hidden','true');
 });
 
-// Open the requested modal
 const modal = document.getElementById(id);
-if(!modal) {
+
+if(!modal){
 console.warn('Modal not found:', id);
 return;
 }
+
 modal.classList.add('open');
 modal.setAttribute('aria-hidden','false');
 }
@@ -1960,6 +1961,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
