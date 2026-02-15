@@ -499,23 +499,23 @@ margin: 40px auto 24px; /* centers it and gives breathing room above the heading
 max-width: 200px; /* make it bigger; change to 320/340 if you want even larger */
 
 }
-.audio-player {
-margin-top: 10px;
+
+  .welcome-video-wrap{
+max-width: 800px;
+margin: 18px auto;
 }
 
-.listen-link {
-display: inline-block;
-margin-top: 4px;
-font-weight: 600;
-color: #0066cc;
-text-decoration: underline;
-cursor: pointer;
+.welcome-video-wrap video{
+width: 100%;
+height: auto;
+display: block;
+border-radius: 12px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+pointer-events: auto;
+position: relative;
+z-index: 2;
 }
 
-.listen-link:hover {
-opacity: 0.8;
-}
-</style>
 
 <style>
 /* === GWN minimal visual fixes (layout untouched) === */
@@ -937,19 +937,14 @@ Email Us
 <div>
 
 
-<!-- Welcome Video (replaces audio player) -->
+<!-- Welcome Video -->
 <div class="welcome-video-wrap">
-<video
-id="welcome-video"
-controls
-playsinline
-preload="metadata"
-controlsList="nodownload"
->
-<source src="/about-intro.mp4" type="video/mp4">
+<video id="welcome-video" controls playsinline preload="metadata">
+<source src="/welcome.mp4" type="video/mp4" />
 Your browser does not support the video tag.
 </video>
 </div>
+
 
 <hr>
 
@@ -1786,31 +1781,7 @@ behavior: 'smooth'
 });
 </script>
 
-<!-- Audio play / pause for the About message -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-const btn = document.getElementById('about-audio-btn');
-const audio = document.getElementById('about-audio');
-if (!btn || !audio) return;
 
-btn.addEventListener('click', function () {
-if (audio.paused) {
-audio.play().then(function () {
-btn.textContent = '⏸ Pause audio message';
-}).catch(function (err) {
-console.log('Audio playback blocked:', err);
-});
-} else {
-audio.pause();
-btn.textContent = '▶ Click to listen';
-}
-});
-
-audio.addEventListener('ended', function () {
-btn.textContent = '▶ Click to listen';
-});
-});
-</script>
 
 
 <script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MWQxMjcyNTg5OTNlMDAwODNkNjNkNCIsImlzc3VlciI6Im5mc2VydmVyIn0.QugYBQz60QI91kve-3fTKexhDC1SegzDkCd3SD-Ga8o"></script></body>
@@ -1836,130 +1807,6 @@ btn.textContent = '▶ Click to listen';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-const btn = document.getElementById('about-audio-btn');
-const audio = document.getElementById('about-audio');
-if (!btn || !audio) return;
-
-btn.addEventListener('click', function () {
-if (audio.paused) {
-audio.play().then(function () {
-btn.textContent = '⏸ Pause audio message';
-}).catch(function (err) {
-console.log('Audio playback blocked:', err);
-});
-} else {
-audio.pause();
-btn.textContent = '▶ Click to listen';
-}
-});
-
-audio.addEventListener('ended', function () {
-btn.textContent = '▶ Click to listen';
-});
-});
-</script>
-<script>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-const btn = document.getElementById('about-audio-btn');
-
-const audio = document.getElementById('about-audio');
-
-if (!btn || !audio) return;
-
-
-
-btn.addEventListener('click', function () {
-
-if (audio.paused) {
-
-audio.play().then(function () {
-
-btn.textContent = '⏸ Pause audio message';
-
-}).catch(function (err) {
-
-console.log('Audio playback issue:', err);
-
-alert('Audio file could not be played. Please check the audio path.');
-
-});
-
-} else {
-
-audio.pause();
-
-btn.textContent = '▶ Click to listen';
-
-}
-
-});
-
-
-
-audio.addEventListener('ended', function () {
-
-btn.textContent = '▶ Click to listen';
-
-});
-
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-const btn = document.querySelector(".audio-play-pause");
-const audio = document.getElementById("about-intro-audio");
-const timeEl = document.querySelector(".audio-time");
-const barEl = document.querySelector(".audio-progress-bar");
-
-if (!btn || !audio) return;
-
-// Click play/pause
-btn.addEventListener("click", () => {
-if (audio.paused) audio.play();
-else audio.pause();
-});
-
-// Update time + progress
-audio.addEventListener("timeupdate", () => {
-const cur = audio.currentTime || 0;
-const dur = audio.duration || 0;
-
-// time text
-if (timeEl) {
-const mm = String(Math.floor(cur / 60)).padStart(1, "0");
-const ss = String(Math.floor(cur % 60)).padStart(2, "0");
-timeEl.textContent = `${mm}:${ss}`;
-}
-
-// progress bar width
-if (barEl && dur > 0) {
-barEl.style.width = ((cur / dur) * 100).toFixed(2) + "%";
-}
-});
-
-// Reset on end
-audio.addEventListener("ended", () => {
-if (barEl) barEl.style.width = "0%";
-if (timeEl) timeEl.textContent = "0:00";
-});
-});
-</script>
 
 
 
@@ -2060,6 +1907,7 @@ if (timeEl) timeEl.textContent = "0:00";
 
 </body>
 </html>
+
 
 
 
