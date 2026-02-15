@@ -1725,6 +1725,31 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 
 
 <!-- ========== /MODALS ========== -->
+  <script>
+function openModal(id){
+// close any open modals first
+document.querySelectorAll('.modal-backdrop.active').forEach(m => {
+m.classList.remove('active');
+m.setAttribute('aria-hidden','true');
+});
+
+// open the requested modal
+const modal = document.getElementById(id);
+if(!modal) return;
+modal.classList.add('active');
+modal.setAttribute('aria-hidden','false');
+}
+
+function closeModal(btn){
+const backdrop = btn.closest('.modal-backdrop');
+if(!backdrop) return;
+backdrop.classList.remove('active');
+backdrop.setAttribute('aria-hidden','true');
+}
+</script>
+
+
+
 <script>
 // Simple modal controls
 function openModal(id){
@@ -1941,6 +1966,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
