@@ -554,6 +554,16 @@ background:#fff;
 border-radius:12px;
 }
 
+.modal-backdrop{
+display:none; /* hidden by default */
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+z-index:9999;
+align-items:center;
+justify-content:center;
+padding:16px;
+}
 
 
 <style>
@@ -1736,19 +1746,20 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 <!-- ========== /MODALS ========== -->
 <script>
 function openModal(id){
-// Close any open modals first
-document.querySelectorAll('.modal-backdrop.open').forEach(function(m){
+// close any open modals
+document.querySelectorAll('.modal-backdrop').forEach(m => {
+m.style.display = 'none';
 m.classList.remove('open');
 m.setAttribute('aria-hidden','true');
 });
 
 const modal = document.getElementById(id);
-
 if(!modal){
 console.warn('Modal not found:', id);
 return;
 }
 
+modal.style.display = 'flex';
 modal.classList.add('open');
 modal.setAttribute('aria-hidden','false');
 }
@@ -1756,25 +1767,21 @@ modal.setAttribute('aria-hidden','false');
 function closeModal(el){
 const backdrop = el.closest('.modal-backdrop');
 if(!backdrop) return;
+backdrop.style.display = 'none';
 backdrop.classList.remove('open');
 backdrop.setAttribute('aria-hidden','true');
 }
 
-// close when clicking outside the modal box
+// close by clicking outside the modal
 document.addEventListener('click', function(e){
-if(e.target.classList && e.target.classList.contains('modal-backdrop') && e.target.classList.contains('open')){
+if(e.target.classList && e.target.classList.contains('modal-backdrop')){
+e.target.style.display = 'none';
 e.target.classList.remove('open');
 e.target.setAttribute('aria-hidden','true');
 }
 });
-
-// Show an inline thank-you message after Netlify receives the form
-function afterSubmit(form){
-const msg = form.parentElement.querySelector('.thankyou');
-if(msg){ msg.style.display = 'block'; }
-return true;
-}
 </script>
+
 
 </div></section><script>
 /* === Ensure hero image (hero.png) is present, contained, and not overlapped === */
@@ -1961,6 +1968,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
