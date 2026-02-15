@@ -542,6 +542,30 @@ justify-content:center;
 padding:16px;
 }
 
+.modal-backdrop.open{
+display:flex;
+}
+
+.modal{
+width:min(900px, 96vw);
+max-height:90vh;
+overflow:auto;
+background:#fff;
+border-radius:12px;
+}
+
+
+  .modal-backdrop{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.55);
+z-index:9999;
+align-items:center;
+justify-content:center;
+padding:16px;
+}
+
 .modal-backdrop.active{
 display:flex;
 }
@@ -1725,51 +1749,47 @@ Job listings are complimentary and reviewed for alignment and clarity before pub
 
 
 <!-- ========== /MODALS ========== -->
-  <script>
+<script>
 function openModal(id){
-// close any open modals first
-document.querySelectorAll('.modal-backdrop.active').forEach(m => {
-m.classList.remove('active');
+// Close any open modals first
+document.querySelectorAll('.modal-backdrop.open').forEach(m => {
+m.classList.remove('open');
 m.setAttribute('aria-hidden','true');
 });
 
-// open the requested modal
+// Open the requested modal
 const modal = document.getElementById(id);
-if(!modal) return;
-modal.classList.add('active');
+if(!modal) {
+console.warn('Modal not found:', id);
+return;
+}
+modal.classList.add('open');
 modal.setAttribute('aria-hidden','false');
 }
 
-function closeModal(btn){
-const backdrop = btn.closest('.modal-backdrop');
-if(!backdrop) return;
-backdrop.classList.remove('active');
-backdrop.setAttribute('aria-hidden','true');
-}
-</script>
-
-
-
-<script>
-// Simple modal controls
-function openModal(id){
-document.getElementById(id).classList.add('open');
-document.getElementById(id).setAttribute('aria-hidden','false');
-}
 function closeModal(el){
 const backdrop = el.closest('.modal-backdrop');
+if(!backdrop) return;
 backdrop.classList.remove('open');
 backdrop.setAttribute('aria-hidden','true');
 }
 
+// close when clicking outside the modal box
+document.addEventListener('click', function(e){
+if(e.target.classList && e.target.classList.contains('modal-backdrop') && e.target.classList.contains('open')){
+e.target.classList.remove('open');
+e.target.setAttribute('aria-hidden','true');
+}
+});
+
 // Show an inline thank-you message after Netlify receives the form
 function afterSubmit(form){
-// Optimistic visual feedback
 const msg = form.parentElement.querySelector('.thankyou');
 if(msg){ msg.style.display = 'block'; }
-return true; // allow Netlify to handle the submit
+return true;
 }
 </script>
+
 </div></section><script>
 /* === Ensure hero image (hero.png) is present, contained, and not overlapped === */
 (function(){
@@ -1840,17 +1860,6 @@ behavior: 'smooth'
 });
 });
 </script>
-
-
-
-
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MWQxMjcyNTg5OTNlMDAwODNkNjNkNCIsImlzc3VlciI6Im5mc2VydmVyIn0.QugYBQz60QI91kve-3fTKexhDC1SegzDkCd3SD-Ga8o"></script></body>
-</html>
-
-
-
-
-
 
 
 
@@ -1966,6 +1975,7 @@ behavior: 'smooth'
 
 </body>
 </html>
+
 
 
 
