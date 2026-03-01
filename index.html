@@ -1690,7 +1690,7 @@ Listings are free and reviewed for alignment with our community values.
 Job listings are complimentary and reviewed for alignment and clarity before publication.
 </p>
 
-<formname="job-listing"method="POST"data-netlify="true"onsubmit="return afterSubmit(this)">
+<form name="job-listing"method="POST"data-netlify="true"onsubmit="return afterSubmit(this)">
 <input type="hidden" name="form-name" value="job-listing">
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
@@ -2178,6 +2178,39 @@ closeServiceModal();
 });
 </script>
 
+  <script>
+function encode(data) {
+return Object.keys(data)
+.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+.join("&");
+}
+
+function afterSubmit(form) {
+// Collect values
+const data = {};
+new FormData(form).forEach((value, key) => (data[key] = value));
+
+// POST to Netlify (same as a normal form submit)
+fetch("/", {
+method: "POST",
+headers: { "Content-Type": "application/x-www-form-urlencoded" },
+body: encode(data),
+})
+.then(() => {
+// show your thank-you message (if you have a .thankyou element)
+const ty = form.closest(".modal-body")?.querySelector(".thankyou");
+if (ty) ty.style.display = "block";
+form.reset();
+})
+.catch((error) => {
+alert("Oops — submission failed. Please try again.");
+console.error(error);
+});
+
+return false; // prevent page navigation
+}
+</script>
+
 
 
   
@@ -2291,6 +2324,7 @@ closeServiceModal();
 
 </body>
 </html>
+
 
 
 
