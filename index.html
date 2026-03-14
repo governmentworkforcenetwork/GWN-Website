@@ -961,6 +961,126 @@ padding:0 18px 18px;
 }
 .cbp-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
 
+  <style>
+  .services-section {
+    padding: 60px 20px;
+    background: #fafafa;
+  }
+
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+  }
+
+  .service-badge {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+
+  .service-card h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #111111;
+  }
+
+  .service-tagline {
+    margin: 0 0 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #555555;
+    line-height: 1.5;
+  }
+
+  .service-description {
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444444;
+  }
+
+  .service-features {
+    margin: 0 0 24px;
+    padding-left: 18px;
+    color: #333333;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .service-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #111111;
+  }
+
+  .btn-primary:hover {
+    background: #222222;
+    border-color: #222222;
+  }
+
+  .btn-secondary {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #111111;
+  }
+
+  .btn-secondary:hover {
+    background: #f3f3f3;
+  }
+
+  @media (max-width: 640px) {
+    .service-card {
+      padding: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+    }
+  }
+</style>
+
 </style></head>
 <body>
 <header>
@@ -1266,6 +1386,34 @@ A structured readiness program designed to help organizations understand, prepar
 </article>
 </div>
 </div>
+</section>
+
+  <section class="services-section">
+  <div class="services-container">
+    <div class="service-card ai-photo-verification">
+      <div class="service-badge">New Digital Service</div>
+      <h3>AI Photo Verification</h3>
+      <p class="service-tagline">
+        Professional Photo Verification for Official Documents and Publications
+      </p>
+      <p class="service-description">
+        Upload your photo and receive an authenticity analysis report designed to support
+        official documents, professional submissions, and publication use.
+      </p>
+
+      <ul class="service-features">
+        <li>AI-assisted photo analysis</li>
+        <li>Self-service access anytime</li>
+        <li>Downloadable verification report</li>
+        <li>Special introductory pricing</li>
+      </ul>
+
+      <div class="service-actions">
+        <a href="/photo-verification.html" class="btn-primary">Start Verification</a>
+        <a href="/photo-verification.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <span id="talent-connect-anchor" class="mobile-offset-anchor"></span>
