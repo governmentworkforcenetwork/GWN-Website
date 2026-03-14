@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Photo Verification | Government Workforce Network</title>
+  <meta name="description" content="Professional Photo Verification for Official Documents and Publications" />
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f8;
+      color: #1f1f1f;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111111, #2c2c2c);
+      color: #ffffff;
+      padding: 72px 20px;
+    }
+
+    .hero-inner,
+    .content-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: 42px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .section {
+      padding: 56px 20px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #444;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .tagline {
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .price-box {
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 700;
+      margin: 8px 0 4px;
+      color: #111;
+    }
+
+    .small {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      border: 1px solid #111;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #222;
+      border-color: #222;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #111;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f3f3;
+    }
+
+    .tool-shell {
+      margin-top: 34px;
+    }
+
+    .tool-header {
+      margin-bottom: 20px;
+    }
+
+    .tool-header p {
+      margin: 8px 0 0;
+    }
+
+    .notice {
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .drop-zone {
+      border: 2px dashed #bdbdbd;
+      border-radius: 16px;
+      padding: 34px 20px;
+      text-align: center;
+      background: #fcfcfc;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .drop-zone.dragover {
+      border-color: #111;
+      background: #f3f4f6;
+    }
+
+    .drop-zone h3 {
+      margin-bottom: 10px;
+    }
+
+    .drop-zone p {
+      margin: 6px 0;
+      color: #666;
+    }
+
+    .hidden-input {
+      display: none;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .preview-wrap {
+      margin-top: 22px;
+      display: none;
+    }
+
+    .preview-wrap img {
+      max-width: 100%;
+      max-height: 360px;
+      border-radius: 14px;
+      border: 1px solid #ddd;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .file-meta {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .report {
+      margin-top: 28px;
+      display: none;
+      border-top: 1px solid #ececec;
+      padding-top: 24px;
+    }
+
+    .report-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .report-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+      color: #111;
+    }
+
+    .status-box {
+      min-width: 240px;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 16px;
+      background: #fafafa;
+    }
+
+    .score {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    .status-label {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #111;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .info-box {
+      border: 1px solid #e7e7e7;
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .info-box h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: #111;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: #555;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .summary {
+      margin-top: 18px;
+      border: 1px solid #e7e7e7;
+      border-radius: 12px;
+      padding: 16px;
+      background: #fafafa;
+    }
+
+    .summary h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .summary p {
+      margin: 0;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .pricing-callout {
+      margin-top: 22px;
+      background: #f8f8f8;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .pricing-callout strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #111;
+    }
+
+    .disclaimer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .footer-line {
+      margin-top: 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .footer-spacer {
+      height: 20px;
+    }
+
+    @media (max-width: 860px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 56px 18px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 36px 16px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .report-title {
+        font-size: 20px;
+      }
+
+      .score {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>AI Photo Verification</h1>
+      <p>
+        Professional Photo Verification for Official Documents and Publications.
+        Access self-service photo review designed to support authenticity, transparency,
+        and responsible image use in the digital age.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-wrap">
+      <div class="intro-grid">
+        <div class="card">
+          <h2>About This Service</h2>
+          <p class="tagline">Self-Service Photo Verification</p>
+          <p>
+            This service allows individuals to upload a photo and receive a structured
+            authenticity review report based on image-pattern analysis, metadata presence,
+            and technical indicators.
+          </p>
+          <p>
+            This tool is intended for still photos only and may be useful for images
+            prepared for official documents, publications, professional submissions,
+            or general integrity review.
+          </p>
+          <ul>
+            <li>Photo verification only</li>
+            <li>Self-service access anytime</li>
+            <li>Downloadable report</li>
+            <li>Special introductory pricing</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Pricing</h2>
+          <div class="price-box">
+            <div class="small">Self-Service Verification</div>
+            <div class="price">$7</div>
+            <div class="small">per photo</div>
+          </div>
+          <p style="margin-top:16px;">
+            Secure a spot for self-service access through your payment page, then direct
+            users to the verification tool after checkout.
+          </p>
+          <div class="cta-row">
+            <a href="https://your-payhip-link-here" class="btn btn-primary">Pay & Start Verification</a>
+            <a href="#verifier-tool" class="btn btn-secondary">View Tool</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card tool-shell" id="verifier-tool">
+        <div class="tool-header">
+          <h2>GWN AI Media Verifier</h2>
+          <p>Upload a photo to generate an authenticity analysis report.</p>
+        </div>
+
+        <div class="notice">
+          <strong>Service Scope:</strong> This verifier currently supports still photos only.
+          Recommended formats: JPG, JPEG, PNG. For best results, upload the clearest
+          original image available.
+        </div>
+
+        <div class="drop-zone" id="dropZone">
+          <h3>Upload Photo for Verification</h3>
+          <p>Drag and drop your image here or click to browse.</p>
+          <p>Supported formats: JPG, JPEG, PNG</p>
+          <input type="file" id="fileInput" class="hidden-input" accept="image/png,image/jpeg" />
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="runBtn" disabled>Run Verification</button>
+          <button class="btn btn-secondary" id="resetBtn">Start New Review</button>
+          <button class="btn btn-secondary" id="downloadBtn" disabled>Download Report</button>
+        </div>
+
+        <div class="preview-wrap" id="previewWrap">
+          <img id="previewImage" alt="Uploaded preview" />
+          <div class="file-meta" id="fileMeta"></div>
+        </div>
+
+        <div class="report" id="report">
+          <div class="report-header">
+            <div>
+              <h2 class="report-title">Photo Verification Report</h2>
+              <div class="muted" id="reviewDate"></div>
+            </div>
+
+            <div class="status-box">
+              <div class="score" id="scoreValue">--/100</div>
+              <div class="status-label" id="riskLevel">Risk Level: --</div>
+              <div class="muted" id="statusText">Awaiting analysis.</div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="info-box">
+              <h4>File Name</h4>
+              <p id="reportFileName">--</p>
+            </div>
+
+            <div class="info-box">
+              <h4>Format</h4>
+              <p id="reportFormat">--</p>
+            </div>
+
+            <div class="info-box">
+              <h4>Metadata Availability</h4>
+              <p id="reportMetadata">--</p>
+            </div>
+
+            <div class="info-box">
+              <h4>Image Structure Review</h4>
+              <p id="reportStructure">--</p>
+            </div>
+
+            <div class="info-box">
+              <h4>Compression Pattern Review</h4>
+              <p id="reportCompression">--</p>
+            </div>
+
+            <div class="info-box">
+              <h4>AI Indicator Review</h4>
+              <p id="reportAI">--</p>
+            </div>
+          </div>
+
+          <div class="summary">
+            <h3>Findings Summary</h3>
+            <p id="summaryText">No report generated yet.</p>
+          </div>
+
+          <div class="pricing-callout">
+            <strong>Professional Review Available</strong>
+            If you have photos intended for official documents, formal publication,
+            or professional submission, Government Workforce Network offers photo
+            verification support at special introductory pricing.
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This review provides analytical indicators based
+            on available image data and pattern analysis. It does not constitute a legal
+            certification or absolute guarantee of authenticity.
+          </div>
+
+          <div class="footer-line">
+            Prepared by Government Workforce Network
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-spacer"></div>
+    </div>
+  </section>
+
+  <script>
+    const dropZone = document.getElementById("dropZone");
+    const fileInput = document.getElementById("fileInput");
+    const previewWrap = document.getElementById("previewWrap");
+    const previewImage = document.getElementById("previewImage");
+    const fileMeta = document.getElementById("fileMeta");
+    const runBtn = document.getElementById("runBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const report = document.getElementById("report");
+
+    let selectedFile = null;
+    let generatedReport = null;
+
+    dropZone.addEventListener("click", () => fileInput.click());
+
+    dropZone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropZone.classList.add("dragover");
+    });
+
+    dropZone.addEventListener("dragleave", () => {
+      dropZone.classList.remove("dragover");
+    });
+
+    dropZone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropZone.classList.remove("dragover");
+      const file = e.dataTransfer.files[0];
+      handleFile(file);
+    });
+
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      handleFile(file);
+    });
+
+    function handleFile(file) {
+      if (!file) return;
+
+      const allowedTypes = ["image/jpeg", "image/png"];
+      if (!allowedTypes.includes(file.type)) {
+        alert("Please upload a JPG, JPEG, or PNG file only.");
+        return;
+      }
+
+      selectedFile = file;
+      runBtn.disabled = false;
+      downloadBtn.disabled = true;
+      report.style.display = "none";
+      generatedReport = null;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        previewImage.src = event.target.result;
+        previewWrap.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+
+      fileMeta.textContent = `Selected file: ${file.name} | Type: ${file.type} | Size: ${(file.size / 1024).toFixed(1)} KB`;
+    }
+
+    runBtn.addEventListener("click", async () => {
+      if (!selectedFile) {
+        alert("Please upload a photo first.");
+        return;
+      }
+
+      const result = await generateMockAnalysis(selectedFile);
+      generatedReport = result;
+      populateReport(result);
+      report.style.display = "block";
+      downloadBtn.disabled = false;
+    });
+
+    resetBtn.addEventListener("click", () => {
+      selectedFile = null;
+      generatedReport = null;
+      fileInput.value = "";
+      previewImage.src = "";
+      previewWrap.style.display = "none";
+      report.style.display = "none";
+      runBtn.disabled = true;
+      downloadBtn.disabled = true;
+      fileMeta.textContent = "";
+    });
+
+    downloadBtn.addEventListener("click", () => {
+      if (!generatedReport) {
+        alert("Please generate a report first.");
+        return;
+      }
+
+      downloadReportAsText(generatedReport);
+    });
+
+    async function generateMockAnalysis(file) {
+      const metadataAvailable = Math.random() > 0.35;
+      const score = Math.floor(Math.random() * 31) + 68;
+      let riskLevel = "Low concern";
+      let statusText = "No strong indicators of synthetic generation detected.";
+      let aiReview = "No major AI-pattern concerns identified in this review.";
+
+      if (score < 80) {
+        riskLevel = "Moderate concern";
+        statusText = "Some indicators may warrant further professional review.";
+        aiReview = "Some visual or technical indicators suggest additional review may be appropriate.";
+      }
+
+      const structureReview = score > 84
+        ? "Image structure appeared generally consistent with natural photo characteristics."
+        : "Minor structural irregularities were observed, though not conclusive on their own.";
+
+      const compressionReview = score > 82
+        ? "Compression patterns did not show strong manipulation markers."
+        : "Compression patterns showed some inconsistencies that may result from editing or resaving.";
+
+      const metadataReview = metadataAvailable
+        ? "Metadata was present in the uploaded file."
+        : "Limited or no metadata was available in the uploaded file.";
+
+      const format = file.type.replace("image/", "").toUpperCase();
+      const dateReviewed = new Date().toLocaleString();
+
+      const summaryText = score > 84
+        ? "The uploaded photo showed no major structural irregularities commonly associated with synthetic generation. Metadata availability and compression review did not reveal strong manipulation indicators in this review."
+        : "The uploaded photo showed some indicators that may merit closer review. Findings are not conclusive, but additional professional verification may be appropriate for official or publication use.";
+
+      return {
+        fileName: file.name,
+        format,
+        metadata: metadataReview,
+        structure: structureReview,
+        compression: compressionReview,
+        aiReview,
+        score,
+        riskLevel,
+        statusText,
+        summaryText,
+        dateReviewed
+      };
+    }
+
+    function populateReport(data) {
+      document.getElementById("reviewDate").textContent = `Date Reviewed: ${data.dateReviewed}`;
+      document.getElementById("scoreValue").textContent = `${data.score}/100`;
+      document.getElementById("riskLevel").textContent = `Risk Level: ${data.riskLevel}`;
+      document.getElementById("statusText").textContent = data.statusText;
+
+      document.getElementById("reportFileName").textContent = data.fileName;
+      document.getElementById("reportFormat").textContent = data.format;
+      document.getElementById("reportMetadata").textContent = data.metadata;
+      document.getElementById("reportStructure").textContent = data.structure;
+      document.getElementById("reportCompression").textContent = data.compression;
+      document.getElementById("reportAI").textContent = data.aiReview;
+      document.getElementById("summaryText").textContent = data.summaryText;
+    }
+
+    function downloadReportAsText(data) {
+      const reportText = `
+GOVERNMENT WORKFORCE NETWORK
+Photo Verification Report
+
+Professional Photo Verification for Official Documents and Publications
+
+Date Reviewed:
+${data.dateReviewed}
+
+File Name:
+${data.fileName}
+
+Format:
+${data.format}
+
+Authenticity Review Score:
+${data.score}/100
+
+Risk Level:
+${data.riskLevel}
+
+Status:
+${data.statusText}
+
+Metadata Availability:
+${data.metadata}
+
+Image Structure Review:
+${data.structure}
+
+Compression Pattern Review:
+${data.compression}
+
+AI Indicator Review:
+${data.aiReview}
+
+Findings Summary:
+${data.summaryText}
+
+Professional Review Available:
+If you have photos intended for official documents, formal publication, or professional submission,
+Government Workforce Network offers photo verification support at special introductory pricing.
+
+Disclaimer:
+This review provides analytical indicators based on available image data and pattern analysis.
+It does not constitute a legal certification or absolute guarantee of authenticity.
+
+Prepared by Government Workforce Network
+      `.trim();
+
+      const blob = new Blob([reportText], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "photo-verification-report.txt";
+      a.click();
+
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
