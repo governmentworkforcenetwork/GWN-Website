@@ -1132,10 +1132,10 @@ cursor: pointer;
 
 .tc-checkbox {
 display: flex;
-align-items: center;
-gap: 10px;
+align-items: center; /* 👈 vertically aligned */
+gap: 12px; /* 👈 space between box and text */
 margin-top: 20px;
-margin-bottom: 24px; /* 👈 adds space before button */
+margin-bottom: 24px;
 }
 
   .tc-submit {
@@ -1150,8 +1150,16 @@ cursor: pointer;
 margin-top: 10px; /* 👈 extra breathing room */
 }
 
-  .tc-checkbox input {
-margin-top: 2px;
+.tc-checkbox input {
+width: 18px;
+height: 18px;
+cursor: pointer;
+}
+
+  .tc-checkbox label {
+font-size: 14px;
+line-height: 1.4;
+cursor: pointer;
 }
 
 .tc-checkbox span {
@@ -2573,7 +2581,11 @@ Please do not include sensitive personal information.
 <label>Location Preference</label>
 <input type="text" name="location_preference" />
 
-<div class="tc-checkbox"><input type="checkbox" required /><span>I agree to submit this information for pilot workforce engagement.</span>
+<div class="tc-checkbox">
+<input type="checkbox" id="agree" required />
+<label for="agree">
+I agree to submit this information for pilot workforce engagement.
+</label>
 </div>
 
 <button type="submit" class="tc-submit">Submit Talent Interest</button>
