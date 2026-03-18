@@ -1132,8 +1132,31 @@ cursor: pointer;
 
 .tc-checkbox {
 display: flex;
+align-items: center;
 gap: 10px;
-margin-bottom: 16px;
+margin-top: 20px;
+margin-bottom: 24px; /* 👈 adds space before button */
+}
+
+  .tc-submit {
+width: 100%;
+padding: 16px;
+border-radius: 999px;
+border: none;
+background: linear-gradient(135deg, #1d4ed8, #2563eb);
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+margin-top: 10px; /* 👈 extra breathing room */
+}
+
+  .tc-checkbox input {
+margin-top: 2px;
+}
+
+.tc-checkbox span {
+font-size: 14px;
+line-height: 1.4;
 }
 
 .tc-note {
