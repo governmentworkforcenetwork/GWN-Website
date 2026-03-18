@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Talent Interest Form | Government Workforce Network</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: linear-gradient(180deg, #0c1d4a 0%, #12398c 100%);
+color: #111;
+}
+
+.page-wrap {
+max-width: 1100px;
+margin: 0 auto;
+padding: 40px 20px 60px;
+}
+
+.top-link {
+display: inline-block;
+margin-bottom: 20px;
+color: #fff;
+text-decoration: none;
+font-weight: 700;
+}
+
+.top-link:hover {
+text-decoration: underline;
+}
+
+.form-card {
+background: #fff;
+border-radius: 22px;
+padding: 36px;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.form-title {
+margin: 0 0 12px;
+font-size: 2rem;
+font-weight: 800;
+color: #111827;
+}
+
+.form-subtitle {
+margin: 0 0 10px;
+color: #374151;
+line-height: 1.6;
+font-size: 1rem;
+}
+
+.privacy-note {
+margin: 0 0 28px;
+color: #4b5563;
+line-height: 1.6;
+font-size: 0.98rem;
+}
+
+.gwn-form {
+display: grid;
+gap: 18px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+}
+
+.form-group label {
+font-weight: 700;
+margin-bottom: 8px;
+color: #111827;
+}
+
+.gwn-form input,
+.gwn-form select,
+.gwn-form textarea {
+width: 100%;
+box-sizing: border-box;
+padding: 14px 16px;
+border: 1px solid #d1d5db;
+border-radius: 14px;
+font-size: 1rem;
+font-family: inherit;
+background: #fff;
+}
+
+.gwn-form textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.checkbox-group {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-top: 4px;
+}
+
+.checkbox-group input[type="checkbox"] {
+margin-top: 4px;
+width: auto;
+}
+
+.checkbox-group label {
+margin: 0;
+font-weight: 500;
+line-height: 1.5;
+color: #111827;
+}
+
+.submit-btn {
+width: 100%;
+border: none;
+border-radius: 999px;
+padding: 16px 22px;
+background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+color: #fff;
+font-size: 1rem;
+font-weight: 800;
+cursor: pointer;
+}
+
+.submit-btn:hover {
+opacity: 0.96;
+}
+
+@media (max-width: 768px) {
+.form-card {
+padding: 24px;
+}
+
+.form-title {
+font-size: 1.6rem;
+}
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<a href="/" class="top-link">← Back to Home</a>
+
+<div class="form-card">
+<h1 class="form-title">Talent Interest Form</h1>
+<p class="form-subtitle">
+Join the Talent Connect Workforce Program and share your interests, skills,
+and career goals for workforce engagement opportunities.
+</p>
+<p class="privacy-note">
+We collect limited information for pilot workforce engagement purposes.
+Please do not include sensitive personal information.
+</p>
+
+<form
+name="talent-interest"
+method="POST"
+data-netlify="true"
+netlify-honeypot="bot-field"
+action="/thank-you.html"
+class="gwn-form"
+>
+<input type="hidden" name="form-name" value="talent-interest" />
+
+<p style="display:none;">
+<label>Do not fill this out if you're human:
+<input name="bot-field" />
+</label>
+</p>
+
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="email" required />
+</div>
+
+<div class="form-group">
+<label for="current_status">Current Status *</label>
+<select id="current_status" name="current_status" required>
+<option value="">Select one</option>
+<option>Student</option>
+<option>Recent Graduate</option>
+<option>Veteran</option>
+<option>Transitioning Military</option>
+<option>Professional</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="area_of_interest">Area of Interest *</label>
+<select id="area_of_interest" name="area_of_interest" required>
+<option value="">Select one</option>
+<option>Public Sector</option>
+<option>Human Resources</option>
+<option>Information Technology</option>
+<option>Finance</option>
+<option>Healthcare Support</option>
+<option>Communications</option>
+<option>Administration</option>
+<option>Operations</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="top_skills">Top Skills</label>
+<input
+type="text"
+id="top_skills"
+name="top_skills"
+placeholder="Example: communication, Excel, data entry, project coordination"
+/>
+</div>
+
+<div class="form-group">
+<label for="career_interests">Career Interests</label>
+<textarea
+id="career_interests"
+name="career_interests"
+placeholder="Share the type of opportunities or career paths you are interested in."
+></textarea>
+</div>
+
+<div class="form-group">
+<label for="preferred_work_type">Preferred Work Type</label>
+<select id="preferred_work_type" name="preferred_work_type">
+<option value="">Select one</option>
+<option>Full-time</option>
+<option>Part-time</option>
+<option>Internship</option>
+<option>Fellowship</option>
+<option>Open to opportunities</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="location_preference">Location Preference</label>
+<input
+type="text"
+id="location_preference"
+name="location_preference"
+placeholder="Example: Louisiana, California, Remote"
+/>
+</div>
+
+<div class="checkbox-group">
+<input type="checkbox" id="consent" name="consent" required />
+<label for="consent">
+I agree to submit this information to Government Workforce Network LLC
+for pilot workforce engagement purposes.
+</label>
+</div>
+
+<button type="submit" class="submit-btn">Submit Talent Interest</button>
+</form>
+</div>
+</div>
+</body>
+</html>
