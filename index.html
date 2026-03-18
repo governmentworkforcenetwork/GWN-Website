@@ -1079,6 +1079,91 @@ padding:0 18px 18px;
       font-size: 24px;
     }
   }
+
+  .tc-modal {
+display: none;
+position: fixed;
+z-index: 999;
+inset: 0;
+background: rgba(0,0,0,0.6);
+justify-content: center;
+align-items: center;
+}
+
+.tc-modal-content {
+background: #fff;
+width: 90%;
+max-width: 700px;
+border-radius: 18px;
+padding: 30px;
+position: relative;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+.tc-close {
+position: absolute;
+right: 20px;
+top: 15px;
+font-size: 28px;
+cursor: pointer;
+}
+
+.tc-modal input,
+.tc-modal select,
+.tc-modal textarea {
+width: 100%;
+padding: 12px;
+margin: 8px 0 16px;
+border-radius: 10px;
+border: 1px solid #ccc;
+}
+
+.tc-submit {
+width: 100%;
+padding: 14px;
+border-radius: 999px;
+border: none;
+background: #1d4ed8;
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+}
+
+.tc-checkbox {
+display: flex;
+gap: 10px;
+margin-bottom: 16px;
+}
+
+.tc-note {
+font-size: 14px;
+color: #555;
+margin-bottom: 20px;
+}
+
+  .primary-btn {
+display: inline-block;
+padding: 14px 28px;
+border-radius: 999px;
+border: none;
+background: linear-gradient(135deg, #0f172a, #1e3a8a);
+color: #ffffff;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.primary-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.primary-btn:active {
+transform: scale(0.98);
+}
 </style>
 
 </style></head>
@@ -1451,9 +1536,9 @@ A structured readiness program designed to help organizations understand, prepar
 <p>Position yourself for opportunities by increasing visibility with employers engaged in our workforce program.
   Join our Talent Connect Workforce Program and connect with opportunities across universities, as well as veteran, military, and diverse workforce communities, including individuals with disabilities. </p>
 </div>
-<center><a class="btn" href="#job-seeker-form">Join Talent Interest List</a></center>
+<center> <button class="primary-btn" onclick="openTalentForm()">Join Talent Interest List</button></center>
 </article>
-
+ 
 <!-- Employer Request card -->
 <article class="tc-card">
 <div class="media">
@@ -2408,6 +2493,95 @@ console.error(error);
 return false; // prevent page navigation
 }
 </script>
+
+  <!-- TALENT INTEREST MODAL -->
+<div id="talentModal" class="tc-modal">
+<div class="tc-modal-content">
+
+<span class="tc-close" onclick="closeTalentForm()">&times;</span>
+
+<h2>Talent Interest Form</h2>
+<p class="tc-note">
+We collect limited information for pilot workforce engagement purposes.
+Please do not include sensitive personal information.
+</p>
+
+<form name="talent-interest" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="talent-interest" />
+
+<label>Email Address *</label>
+<input type="email" name="email" required />
+
+<label>Current Status *</label>
+<select name="current_status" required>
+<option value="">Select one</option>
+<option>Student</option>
+<option>Recent Graduate</option>
+<option>Veteran</option>
+<option>Transitioning Military</option>
+<option>Professional</option>
+</select>
+
+<label>Sector Interest *</label>
+<select name="sector_interest" required>
+<option value="">Select one</option>
+<option>Public Sector (Government)</option>
+<option>Private Sector</option>
+<option>Nonprofit/Community</option>
+<option>Open to Public & Private</option>
+<option>Open to All Sectors</option>
+</select>
+
+<label>Top Skills</label>
+<input type="text" name="top_skills" />
+
+<label>Career Interests</label>
+<textarea name="career_interests"></textarea>
+
+<label>Preferred Work Type</label>
+<select name="preferred_work_type">
+<option value="">Select one</option>
+<option>Full-time</option>
+<option>Part-time</option>
+<option>Internship</option>
+  <option>Volunteer</option>
+</select>
+
+<label>Location Preference</label>
+<input type="text" name="location_preference" />
+
+<div class="tc-checkbox">
+<input type="checkbox" required />
+<span>I agree to submit this information for pilot workforce engagement.</span>
+</div>
+
+<button type="submit" class="tc-submit">Submit Talent Interest</button>
+</form>
+
+</div>
+</div>
+
+  <script>
+function openTalentForm() {
+document.getElementById("talentModal").style.display = "flex";
+}
+
+function closeTalentForm() {
+document.getElementById("talentModal").style.display = "none";
+}
+
+// close when clicking outside
+window.onclick = function(event) {
+const modal = document.getElementById("talentModal");
+if (event.target === modal) {
+modal.style.display = "none";
+}
+}
+</script>
+
+  <form name="talent-interest" netlify hidden>
+<input type="text" name="email" />
+</form>
 
 
 
