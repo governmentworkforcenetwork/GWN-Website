@@ -1580,7 +1580,7 @@ A structured readiness program designed to help organizations understand, prepar
 <h3>Employer Talent Request</h3>
 <p>Be part of the Talent Connect Workforce Pilot Program. Partner with Government Workforce Network LLC to connect with emerging talent from universities, veteran and military communities, and diverse workforce populations, including individuals with disabilities.</p>
 </div>
-<center><a class="btn" href="#employer-form">Submit Talent Request</a></center>
+<center><button class="primary-btn" onclick="openEmployerForm()">Submit Talent Request</button></center>
 </article>
 </div>
 
@@ -2615,6 +2615,109 @@ modal.style.display = "none";
   <form name="talent-interest" netlify hidden>
 <input type="text" name="email" />
 </form>
+
+  <!-- EMPLOYER TALENT REQUEST MODAL -->
+<div id="employerModal" class="tc-modal">
+<div class="tc-modal-content">
+<span class="tc-close" onclick="closeEmployerForm()">&times;</span>
+
+<h2>Employer Talent Request</h2>
+<p class="tc-note">
+Partner with Government Workforce Network LLC to share your workforce needs
+and connect with emerging talent across universities, veteran and military
+communities, and diverse workforce populations, including individuals with disabilities.
+</p>
+
+<form name="employer-talent-request" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="employer-talent-request" />
+
+<label>Organization Name *</label>
+<input type="text" name="organization_name" required />
+
+<label>Contact Email *</label>
+<input type="email" name="contact_email" required />
+
+<label>Organization Type *</label>
+<select name="organization_type" required>
+<option value="">Select one</option>
+<option>County Agency</option>
+<option>City / Municipal Agency</option>
+<option>University / College</option>
+<option>Private Employer</option>
+<option>Nonprofit Organization</option>
+<option>Veteran / Military Organization</option>
+<option>Other</option>
+</select>
+
+<label>Talent Need / Sector *</label>
+<select name="talent_need_sector" required>
+<option value="">Select one</option>
+<option>Public Sector (Government)</option>
+<option>Private Sector</option>
+<option>Nonprofit / Community</option>
+<option>Open to Multiple Sectors</option>
+</select>
+
+<label>Opportunity Type *</label>
+<select name="opportunity_type" required>
+<option value="">Select one</option>
+<option>Full-time</option>
+<option>Part-time</option>
+<option>Internship</option>
+<option>Fellowship</option>
+<option>Contract</option>
+<option>General Talent Pipeline Interest</option>
+</select>
+
+<label>Location</label>
+<input type="text" name="location" placeholder="Example: Baton Rouge, Louisiana or Remote" />
+
+<label>Skills or Qualifications Needed</label>
+<textarea name="skills_needed"></textarea>
+
+<label>Additional Notes</label>
+<textarea name="additional_notes"></textarea>
+
+<div class="tc-checkbox">
+<input type="checkbox" id="employerAgree" required />
+<label for="employerAgree">
+I agree to submit this information for pilot workforce engagement purposes.
+</label>
+</div>
+
+<button type="submit" class="tc-submit">Submit Talent Request</button>
+</form>
+</div>
+</div>
+
+  
+<form name="employer-talent-request" netlify hidden>
+<input type="text" name="organization_name" />
+<input type="email" name="contact_email" />
+</form>
+
+  <script>
+function openEmployerForm() {
+document.getElementById("employerModal").style.display = "flex";
+}
+
+function closeEmployerForm() {
+document.getElementById("employerModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+const talentModal = document.getElementById("talentModal");
+const employerModal = document.getElementById("employerModal");
+
+if (event.target === talentModal) {
+talentModal.style.display = "none";
+}
+if (event.target === employerModal) {
+employerModal.style.display = "none";
+}
+}
+</script>
+
 
 
 
