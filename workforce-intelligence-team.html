@@ -6,14 +6,9 @@
   <title>Workforce Intelligence Team | Government Workforce Network LLC</title>
 
   <style>
-    
     * {
       box-sizing: border-box;
     }
-    
-    html {
-scroll-behavior: smooth;
-}
 
     html {
       scroll-behavior: smooth;
@@ -296,6 +291,8 @@ scroll-behavior: smooth;
       font-size: 15px;
       font-weight: 800;
       transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
     }
 
     .cta-btn:hover {
@@ -303,11 +300,108 @@ scroll-behavior: smooth;
       transform: translateY(-2px);
     }
 
+    .apply-section {
+      display: none;
+      padding: 20px 0 10px;
+    }
+
+    .apply-section.show {
+      display: block;
+    }
+
+    .form-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #d9e8f2;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 12px 30px rgba(18,52,77,.08);
+    }
+
+    .form-shell h2 {
+      margin-top: 0;
+      color: #12344d;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .form-shell p {
+      text-align: center;
+      color: #29465b;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 24px;
+      font-size: 16px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #12344d;
+      font-size: 16px;
+    }
+
+    .form-shell input,
+    .form-shell select,
+    .form-shell textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9e8f2;
+      border-radius: 14px;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: #fff;
+    }
+
+    .form-shell textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .close-btn {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 14px 24px;
+      background: #eef3ff;
+      color: #12344d;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .close-btn:hover {
+      background: #dfe8ff;
+    }
+
     footer {
       text-align: center;
       color: #cfd8ef;
       font-size: 14px;
-      padding: 0 20px 42px;
+      padding: 30px 20px 42px;
     }
 
     @media (max-width: 768px) {
@@ -346,7 +440,8 @@ scroll-behavior: smooth;
       .intro-card,
       .purpose-card,
       .why-card,
-      .cta-card {
+      .cta-card,
+      .form-shell {
         padding: 28px 22px;
         border-radius: 20px;
       }
@@ -354,7 +449,8 @@ scroll-behavior: smooth;
       .intro-card h2,
       .purpose-card h2,
       .why-card h2,
-      .cta-card h2 {
+      .cta-card h2,
+      .form-shell h2 {
         font-size: 28px;
       }
 
@@ -377,6 +473,15 @@ scroll-behavior: smooth;
       .board-name {
         font-size: 24px;
       }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .close-btn {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -389,7 +494,7 @@ scroll-behavior: smooth;
       <a href="/">Home</a>
       <a href="/#about-anchor">About</a>
       <a href="/workforce-intelligence-team">Workforce Intelligence Team</a>
-      <a href="/events.html">Events</a>
+      <a href="/events">Events</a>
     </nav>
   </header>
 
@@ -416,6 +521,24 @@ scroll-behavior: smooth;
         </p>
         <div class="note-box">
           Workforce Intelligence Team profiles are provided for informational purposes only. Direct contact information for members is not published on this page.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="intro-card">
+        <h2>A New Approach to Leadership</h2>
+        <p>
+          Government Workforce Network is committed to developing a new generation of workforce leaders by creating opportunities for individuals—especially students and emerging professionals—to contribute, grow, and support one another.
+        </p>
+        <p>
+          In many traditional systems, leadership can feel distant and difficult to access. This model takes a different approach—one that is more relatable, inclusive, and grounded in shared experience.
+        </p>
+        <p>
+          Through the Workforce Intelligence Team, individuals contribute ideas, perspectives, and insight while also helping to motivate and guide others. This creates an environment where leadership is not defined by position, but by impact, connection, and contribution.
+        </p>
+        <div class="note-box">
+          This model encourages peer-to-peer engagement, where students and professionals alike can learn from one another, build confidence, and take part in shaping the future of the workforce.
         </div>
       </div>
     </section>
@@ -686,10 +809,10 @@ scroll-behavior: smooth;
         </article>
 
         <article class="board-card">
-          <img src="joy-soo.jpg" alt="Photo placeholder for Global Workforce Intelligence Contributor" class="board-photo">
+          <img src="joy-soo.jpg" alt="Photo of Joy Soo" class="board-photo">
           <div class="board-body">
             <div class="board-name">Joy Soo</div>
-            <div class="board-section-label">Founder of MUSA</div> <p class="board-text">
+            <div class="board-section-label">Founder of MUSA</div>
             <div class="board-title">Philippines, Global Workforce Intelligence Director</div>
 
             <div class="board-section-label">Role Summary</div>
@@ -761,7 +884,65 @@ scroll-behavior: smooth;
           To express interest, please click below to complete the form.
         </p>
 
-       <a href="#apply" class="btn">Apply or Express Interest</a>
+        <button type="button" class="cta-btn" id="openFormBtn">Apply or Express Interest</button>
+      </div>
+    </section>
+
+    <section class="apply-section" id="applySection">
+      <div class="form-shell" id="applyForm">
+        <h2>Apply or Express Interest</h2>
+        <p>
+          Complete the form below to express interest in the Workforce Intelligence Team.
+        </p>
+
+        <form name="workforce-intelligence-interest" method="POST" data-netlify="true" action="/thank-you">
+          <input type="hidden" name="form-name" value="workforce-intelligence-interest">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="full_name">Full Name</label>
+              <input id="full_name" type="text" name="full_name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="interest_area">Select Opportunity</label>
+            <select id="interest_area" name="interest_area" required>
+              <option value="">Select a Volunteer Opportunity</option>
+              <option>Workforce Strategy Intelligence Contributor</option>
+              <option>Education & University Partnerships Intelligence Contributor</option>
+              <option>Veteran & Military Programs Intelligence Contributor</option>
+              <option>Community Engagement Intelligence Contributor</option>
+              <option>Employer & Industry Partnerships Intelligence Contributor</option>
+              <option>Inclusive Workforce Intelligence Contributor</option>
+              <option>AI & Workforce Technology Intelligence Contributor</option>
+              <option>Policy & Government Relations Intelligence Contributor</option>
+              <option>Sponsorships & Strategic Partnerships Intelligence Contributor</option>
+              <option>Communications & Brand Intelligence Contributor</option>
+              <option>General Interest</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="why_interested">Why are you interested?</label>
+            <textarea id="why_interested" name="why_interested" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="additional_notes">Anything else you would like to share?</label>
+            <textarea id="additional_notes" name="additional_notes"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="cta-btn">Submit Form</button>
+            <button type="button" class="close-btn" id="closeFormBtn">Close Form</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -771,85 +952,26 @@ scroll-behavior: smooth;
     Government Workforce Network LLC
   </footer>
 
-  <section id="apply" style="padding: 50px 20px 80px;">
-<div style="max-width: 900px; margin: 0 auto; background: #ffffff; border: 1px solid #d9e8f2; border-radius: 24px; padding: 32px; box-shadow: 0 12px 30px rgba(18,52,77,.08);">
-<h2 style="margin-top: 0; color: #12344d; text-align: center;">Apply or Express Interest</h2>
-<p style="text-align: center; color: #29465b; line-height: 1.7; max-width: 700px; margin: 0 auto 24px;">
-Complete the form below to express interest in the Workforce Intelligence Team.
-</p>
+  <script>
+    const openFormBtn = document.getElementById('openFormBtn');
+    const closeFormBtn = document.getElementById('closeFormBtn');
+    const applySection = document.getElementById('applySection');
 
-<form name="workforce-intelligence-interest" method="POST" data-netlify="true" action="/thank-you.html">
-<input type="hidden" name="form-name" value="workforce-intelligence-interest">
+    openFormBtn.addEventListener('click', function () {
+      applySection.classList.add('show');
+      setTimeout(function () {
+        applySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    });
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
-<div>
-<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Full Name</label>
-<input type="text" name="full_name" required style="width:100%; padding:14px; border:1px solid #d9e8f2; border-radius:14px;">
-</div>
-<div>
-<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Email Address</label>
-<input type="email" name="email" required style="width:100%; padding:14px; border:1px solid #d9e8f2; border-radius:14px;">
-</div>
-</div>
+    closeFormBtn.addEventListener('click', function () {
+      applySection.classList.remove('show');
+      setTimeout(function () {
+        openFormBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    });
+  </script>
 
-<div style="margin-bottom: 16px;">
-<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Select Opportunity</label>
-<select name="interest_area" required style="width:100%; padding:14px; border:1px solid #d9e8f2; border-radius:14px;">
-<option value="">Select a Volunteer Opportunity</option>
-<option>Workforce Strategy Intelligence Contributor</option>
-<option>Education & University Partnerships Intelligence Contributor</option>
-<option>Veteran & Military Programs Intelligence Contributor</option>
-<option>Community Engagement Intelligence Contributor</option>
-<option>Employer & Industry Partnerships Intelligence Contributor</option>
-<option>Inclusive Workforce Intelligence Contributor</option>
-<option>AI & Workforce Technology Intelligence Contributor</option>
-<option>Policy & Government Relations Intelligence Contributor</option>
-<option>Sponsorships & Strategic Partnerships Intelligence Contributor</option>
-<option>General Interest</option>
-</select>
-</div>
-
-<div style="margin-bottom: 16px;">
-<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Why are you interested?</label>
-<textarea name="why_interested" required style="width:100%; min-height:140px; padding:14px; border:1px solid #d9e8f2; border-radius:14px;"></textarea>
-</div>
-
-<div style="margin-bottom: 22px;">
-<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Anything else you would like to share?</label>
-<textarea name="additional_notes" style="width:100%; min-height:120px; padding:14px; border:1px solid #d9e8f2; border-radius:14px;"></textarea>
-</div>
-
-<div style="text-align:center;">
-<button type="submit" style="background:#d8bf72; color:#111; border:none; padding:16px 28px; border-radius:999px; font-weight:700; font-size:1rem; cursor:pointer;">
-Submit Form
-</button>
-</div>
-</form>
-</div>
-</section>
-
-
+  <script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzFhMWFjMzBlOGFjMDAwOTYwNzYxOSIsImlzc3VlciI6Im5mc2VydmVyIn0.g-UhKfzs0z6PZaPXR_y5BrrQywFGNGYe0ICPhjFgNso"></script>
 </body>
 </html>
-
-
-<section class="section">
-  <div class="intro-card">
-    <h2>A New Approach to Leadership</h2>
-    <p>
-      Government Workforce Network is committed to developing a new generation of workforce leaders by creating opportunities for individuals—especially students and emerging professionals—to contribute, grow, and support one another.
-    </p>
-
-    <p>
-      In many traditional systems, leadership can feel distant and difficult to access. This model takes a different approach—one that is more relatable, inclusive, and grounded in shared experience.
-    </p>
-
-    <p>
-      Through the Workforce Intelligence Team, individuals contribute ideas, perspectives, and insight while also helping to motivate and guide others. This creates an environment where leadership is not defined by position, but by impact, connection, and contribution.
-    </p>
-
-    <div class="note-box">
-      This model encourages peer-to-peer engagement, where students and professionals alike can learn from one another, build confidence, and take part in shaping the future of the workforce.
-    </div>
-  </div>
-</section>
