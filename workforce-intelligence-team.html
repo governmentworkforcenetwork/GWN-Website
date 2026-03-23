@@ -6,9 +6,14 @@
   <title>Workforce Intelligence Team | Government Workforce Network LLC</title>
 
   <style>
+    
     * {
       box-sizing: border-box;
     }
+    
+    html {
+scroll-behavior: smooth;
+}
 
     html {
       scroll-behavior: smooth;
@@ -756,7 +761,7 @@
           To express interest, please click below to complete the form.
         </p>
 
-        <a href="/workforce-intelligence-interest.html" class="cta-btn">Apply or Express Interest</a>
+       <a href="#apply" class="btn">Apply or Express Interest</a>
       </div>
     </section>
 
@@ -765,6 +770,64 @@
   <footer>
     Government Workforce Network LLC
   </footer>
+
+  <section id="apply" style="padding: 50px 20px 80px;">
+<div style="max-width: 900px; margin: 0 auto; background: #ffffff; border: 1px solid #d9e8f2; border-radius: 24px; padding: 32px; box-shadow: 0 12px 30px rgba(18,52,77,.08);">
+<h2 style="margin-top: 0; color: #12344d; text-align: center;">Apply or Express Interest</h2>
+<p style="text-align: center; color: #29465b; line-height: 1.7; max-width: 700px; margin: 0 auto 24px;">
+Complete the form below to express interest in the Workforce Intelligence Team.
+</p>
+
+<form name="workforce-intelligence-interest" method="POST" data-netlify="true" action="/thank-you.html">
+<input type="hidden" name="form-name" value="workforce-intelligence-interest">
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+<div>
+<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Full Name</label>
+<input type="text" name="full_name" required style="width:100%; padding:14px; border:1px solid #d9e8f2; border-radius:14px;">
+</div>
+<div>
+<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Email Address</label>
+<input type="email" name="email" required style="width:100%; padding:14px; border:1px solid #d9e8f2; border-radius:14px;">
+</div>
+</div>
+
+<div style="margin-bottom: 16px;">
+<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Select Opportunity</label>
+<select name="interest_area" required style="width:100%; padding:14px; border:1px solid #d9e8f2; border-radius:14px;">
+<option value="">Select a Volunteer Opportunity</option>
+<option>Workforce Strategy Intelligence Contributor</option>
+<option>Education & University Partnerships Intelligence Contributor</option>
+<option>Veteran & Military Programs Intelligence Contributor</option>
+<option>Community Engagement Intelligence Contributor</option>
+<option>Employer & Industry Partnerships Intelligence Contributor</option>
+<option>Inclusive Workforce Intelligence Contributor</option>
+<option>AI & Workforce Technology Intelligence Contributor</option>
+<option>Policy & Government Relations Intelligence Contributor</option>
+<option>Sponsorships & Strategic Partnerships Intelligence Contributor</option>
+<option>General Interest</option>
+</select>
+</div>
+
+<div style="margin-bottom: 16px;">
+<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Why are you interested?</label>
+<textarea name="why_interested" required style="width:100%; min-height:140px; padding:14px; border:1px solid #d9e8f2; border-radius:14px;"></textarea>
+</div>
+
+<div style="margin-bottom: 22px;">
+<label style="display:block; font-weight:700; margin-bottom:8px; color:#12344d;">Anything else you would like to share?</label>
+<textarea name="additional_notes" style="width:100%; min-height:120px; padding:14px; border:1px solid #d9e8f2; border-radius:14px;"></textarea>
+</div>
+
+<div style="text-align:center;">
+<button type="submit" style="background:#d8bf72; color:#111; border:none; padding:16px 28px; border-radius:999px; font-weight:700; font-size:1rem; cursor:pointer;">
+Submit Form
+</button>
+</div>
+</form>
+</div>
+</section>
+
 
 </body>
 </html>
