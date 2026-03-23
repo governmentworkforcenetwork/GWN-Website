@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workforce Intelligence Team | Government Workforce Network LLC</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
+      color: #ffffff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.92);
+      padding: 18px 32px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover {
+      color: #d8b24c;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 55px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px 100px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.15;
+      margin: 0 0 14px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+    }
+
+    .gold-rule {
+      width: 92px;
+      height: 6px;
+      margin: 0 auto 28px;
+      border-radius: 999px;
+      background: #d8b24c;
+    }
+
+    .hero-sub {
+      max-width: 960px;
+      margin: 0 auto;
+      color: #e8eef9;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .section {
+      margin-top: 54px;
+    }
+
+    .intro-card,
+    .purpose-card,
+    .why-card,
+    .cta-card {
+      background: rgba(255,255,255,0.97);
+      color: #222;
+      border-radius: 26px;
+      padding: 38px 34px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+    }
+
+    .intro-card h2,
+    .purpose-card h2,
+    .why-card h2,
+    .section-heading h2,
+    .cta-card h2 {
+      margin: 0 0 16px;
+      font-size: 34px;
+      font-weight: 800;
+      color: #111;
+      line-height: 1.2;
+    }
+
+    .intro-card p,
+    .purpose-card p,
+    .why-card p,
+    .cta-card p {
+      margin: 0 0 16px;
+      color: #444;
+      line-height: 1.85;
+      font-size: 16px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin: 70px 0 34px;
+    }
+
+    .section-heading h2 {
+      color: #fff;
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading .gold-rule {
+      margin-bottom: 0;
+      width: 80px;
+      height: 5px;
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .board-card {
+      background: #ffffff;
+      color: #222;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .board-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.22);
+    }
+
+    .board-photo {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      background: #dfe5f2;
+    }
+
+    .board-body {
+      padding: 26px 24px 28px;
+    }
+
+    .board-name {
+      font-size: 28px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .board-title {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      background: #eef3ff;
+      color: #1d3f8f;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .board-section-label {
+      font-size: 14px;
+      font-weight: 800;
+      color: #162a63;
+      margin-bottom: 8px;
+      margin-top: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .board-text {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .responsibility-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #444;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .responsibility-list li {
+      margin-bottom: 8px;
+    }
+
+    .purpose-grid,
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .purpose-item,
+    .why-item {
+      background: #f7f9fd;
+      border-radius: 18px;
+      padding: 22px 20px;
+    }
+
+    .purpose-item h3,
+    .why-item h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #13224a;
+      font-weight: 800;
+    }
+
+    .purpose-item p,
+    .why-item p {
+      margin: 0;
+      color: #444;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .note-box {
+      margin-top: 22px;
+      padding: 18px 20px;
+      background: #f4f6fb;
+      border-left: 5px solid #d8b24c;
+      border-radius: 14px;
+      color: #444;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .cta-card {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 24px;
+      background: #d8b24c;
+      color: #111;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 800;
+      transition: all 0.25s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e7c46a;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      color: #cfd8ef;
+      font-size: 14px;
+      padding: 0 20px 42px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 18px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 82px 18px 42px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero-sub {
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .container {
+        padding: 0 18px 90px;
+      }
+
+      .intro-card,
+      .purpose-card,
+      .why-card,
+      .cta-card {
+        padding: 28px 22px;
+        border-radius: 20px;
+      }
+
+      .intro-card h2,
+      .purpose-card h2,
+      .why-card h2,
+      .cta-card h2 {
+        font-size: 28px;
+      }
+
+      .section-heading {
+        margin: 58px 0 28px;
+      }
+
+      .section-heading h2 {
+        font-size: 32px;
+      }
+
+      .board-photo {
+        height: 280px;
+      }
+
+      .board-body {
+        padding: 22px 20px 24px;
+      }
+
+      .board-name {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">Government Workforce Network LLC</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#about-anchor">About</a>
+      <a href="/workforce-intelligence-team">Workforce Intelligence Team</a>
+      <a href="/events.html">Events</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Workforce Intelligence Team</h1>
+      <div class="gold-rule"></div>
+      <p class="hero-sub">
+        The Workforce Intelligence Team represents a modern, forward-thinking approach to strategic insight—bringing together diverse perspectives, real-world expertise, and innovative thinking to support Government Workforce Network’s mission of building income, opportunity, and well-being.
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <section class="section">
+      <div class="intro-card">
+        <h2>About the Workforce Intelligence Team</h2>
+        <p>
+          This team is designed as a collective of human intelligence, lived experience, and AI-informed insight, working together to generate ideas, strengthen strategies, and support workforce pathways that create meaningful opportunities across communities.
+        </p>
+        <p>
+          Members are selected for their perspective, commitment to service, and ability to contribute thoughtful insight that helps Government Workforce Network remain innovative, mission-centered, and future-ready.
+        </p>
+        <div class="note-box">
+          Workforce Intelligence Team profiles are provided for informational purposes only. Direct contact information for members is not published on this page.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="purpose-card">
+        <h2>Purpose of the Workforce Intelligence Team</h2>
+        <p>
+          The Workforce Intelligence Team serves as a strategic foundation for shaping ideas, strengthening direction, and supporting initiatives that align with Government Workforce Network’s mission of building income, opportunity, and well-being.
+        </p>
+        <p>
+          This model is designed to be modern, flexible, and impact-oriented—ensuring that ideas remain innovative while also being practical, inclusive, and connected to real-world workforce needs.
+        </p>
+
+        <div class="purpose-grid">
+          <div class="purpose-item">
+            <h3>Income</h3>
+            <p>Support strategies and ideas that strengthen access to meaningful work, career growth, and economic opportunity.</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Opportunity</h3>
+            <p>Expand pathways that connect education, employers, communities, and emerging talent.</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Well-Being</h3>
+            <p>Encourage workforce approaches that value inclusion, sustainability, support, and long-term community impact.</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Innovation</h3>
+            <p>Combine human expertise with AI-informed thinking to support modern, adaptive, and future-ready workforce solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="why-card">
+        <h2>Why a Workforce Intelligence Team?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>1. Why Human Intelligence Matters</h3>
+            <p>
+              While AI can generate ideas and information, human experience, judgment, and lived perspective remain essential. Human intelligence ensures that ideas are grounded, relevant, and connected to real people, institutions, and communities.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>2. Why AI-Informed Thinking is Integrated</h3>
+            <p>
+              The future of work is evolving rapidly. This model embraces AI as a tool to enhance creativity, identify trends, and support modern thinking—while still relying on human perspective to shape direction and meaning.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>3. Why This Model Strengthens Impact</h3>
+            <p>
+              Traditional advisory models often focus only on guidance. This model is designed to support practical insight, collaboration, and ideas that help connect workforce strategy to real-world outcomes across education, employment, and community impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Meet the Workforce Intelligence Team</h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="board-grid">
+
+        <article class="board-card">
+          <img src="advisory-member-1.jpg" alt="Photo of Marivel Morgana Nunez" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Marivel Morgana Nunez</div>
+            <div class="board-title">Founder & Workforce Intelligence Director</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Provides strategic leadership and high-level direction to support the organization’s growth, mission alignment, and long-term workforce impact.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Guide strategic direction and organizational priorities</li>
+              <li>Strengthen partnership-building and institutional credibility</li>
+              <li>Lead mission-aligned innovation across workforce and community initiatives</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-2.jpg" alt="Photo placeholder for Workforce Strategy Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Workforce Strategy Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes insight and perspective to support the development of workforce strategies and talent pipeline initiatives aligned with the organization’s mission.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on workforce trends and future-of-work developments</li>
+              <li>Contribute ideas to strengthen talent pipelines and workforce programs</li>
+              <li>Provide input on alignment between education, employers, and community needs</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-3.jpg" alt="Photo placeholder for Education & University Partnerships Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Education & University Partnerships Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes ideas and insight to strengthen university engagement and student workforce readiness initiatives.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on university partnerships and student engagement</li>
+              <li>Contribute ideas to support student career readiness</li>
+              <li>Provide input on strengthening connections between education and workforce pathways</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-4.jpg" alt="Photo placeholder for Veteran & Military Programs Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Veteran & Military Programs Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes perspective to support initiatives serving veterans, transitioning service members, and military families.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share insight on veteran workforce transition needs</li>
+              <li>Contribute ideas for outreach to military and veteran communities</li>
+              <li>Provide input on resources and partnerships that support veteran employment</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-5.jpg" alt="Photo placeholder for Community Engagement Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Community Engagement Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes perspective to support outreach, inclusion, and engagement with communities and diverse populations.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share insight on community needs and engagement strategies</li>
+              <li>Contribute ideas to expand outreach efforts</li>
+              <li>Provide input on inclusive workforce initiatives</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-6.jpg" alt="Photo placeholder for Employer & Industry Partnerships Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Employer & Industry Partnerships Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes insight to strengthen employer engagement and workforce pipeline connections.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on employer needs and hiring trends</li>
+              <li>Contribute ideas to improve employer engagement strategies</li>
+              <li>Provide input on strengthening talent pipeline connections</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-7.jpg" alt="Photo placeholder for Inclusive Workforce Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Inclusive Workforce Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes perspective to support inclusive and equitable workforce initiatives.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share insight on inclusive workforce practices</li>
+              <li>Contribute ideas to improve access and equity</li>
+              <li>Provide input on engaging diverse communities, including individuals with disabilities</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-8.jpg" alt="Photo placeholder for AI & Workforce Technology Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">AI & Workforce Technology Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes insight on AI, technology, and the evolving workforce landscape.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on AI and emerging technologies</li>
+              <li>Contribute ideas for future-ready workforce solutions</li>
+              <li>Provide input on integrating technology into workforce strategies</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-9.jpg" alt="Photo placeholder for Policy & Government Relations Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Policy & Government Relations Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes insight related to public-sector priorities, workforce policy alignment, and government engagement.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on workforce policies and regulations</li>
+              <li>Contribute ideas for government engagement strategies</li>
+              <li>Provide input on alignment with public-sector initiatives</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-10.jpg" alt="Photo placeholder for Sponsorships & Strategic Partnerships Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Sponsorships & Strategic Partnerships Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes ideas to support partnerships, sponsorship opportunities, and sustainable engagement models.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on partnership and sponsorship strategies</li>
+              <li>Contribute ideas to strengthen collaboration opportunities</li>
+              <li>Provide input on long-term sustainability approaches</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-11.jpg" alt="Photo placeholder for Global Workforce Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Global Workforce Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes global perspective on workforce trends, talent development, and cross-cultural employment practices.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share insight on global workforce trends</li>
+              <li>Contribute perspective on international education-to-employment pathways</li>
+              <li>Provide input on cross-cultural workforce strategies</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <img src="advisory-member-12.jpg" alt="Photo placeholder for Communications & Brand Intelligence Contributor" class="board-photo">
+          <div class="board-body">
+            <div class="board-name">Vacant</div>
+            <div class="board-title">Communications & Brand Intelligence Contributor</div>
+
+            <div class="board-section-label">Role Summary</div>
+            <p class="board-text">
+              Contributes insight to strengthen messaging, visibility, and organizational communication.
+            </p>
+
+            <div class="board-section-label">Key Contributions</div>
+            <ul class="responsibility-list">
+              <li>Share perspective on communication and branding strategies</li>
+              <li>Contribute ideas to enhance outreach and engagement</li>
+              <li>Provide input on strengthening organizational credibility</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cta-card">
+        <h2>Interested in Joining the Workforce Intelligence Team?</h2>
+
+        <p><strong>Time Commitment:</strong> Approximately 6 hours per month.</p>
+
+        <p>
+          This is a voluntary, non-paid contributor role open to professionals, students, veterans, retirees, and individuals interested in contributing to workforce innovation.
+        </p>
+
+        <p>
+          This opportunity is ideal for individuals with little to no prior experience who are seeking to gain practical knowledge and real-world exposure. Participants will develop valuable insights, strengthen professional skills, and gain meaningful experience in a collaborative environment.
+        </p>
+
+        <p>
+          Participants contribute ideas, perspectives, and insight that support Government Workforce Network’s mission of building income, opportunity, and well-being.
+        </p>
+
+        <p>
+          We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment.
+        </p>
+
+        <p>
+          <strong>
+            Members of the Workforce Intelligence Team serve as contributors who provide ideas, perspective, and insight. This is a non-operational role with no decision-making authority or ownership in the organization.
+          </strong>
+        </p>
+
+        <p>
+          To express interest, please click below to complete the form.
+        </p>
+
+        <a href="/workforce-intelligence-interest.html" class="cta-btn">Apply or Express Interest</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    Government Workforce Network LLC
+  </footer>
+
+</body>
+</html>
+
+
+<section class="section">
+  <div class="intro-card">
+    <h2>A New Approach to Leadership</h2>
+    <p>
+      Government Workforce Network is committed to developing a new generation of workforce leaders by creating opportunities for individuals—especially students and emerging professionals—to contribute, grow, and support one another.
+    </p>
+
+    <p>
+      In many traditional systems, leadership can feel distant and difficult to access. This model takes a different approach—one that is more relatable, inclusive, and grounded in shared experience.
+    </p>
+
+    <p>
+      Through the Workforce Intelligence Team, individuals contribute ideas, perspectives, and insight while also helping to motivate and guide others. This creates an environment where leadership is not defined by position, but by impact, connection, and contribution.
+    </p>
+
+    <div class="note-box">
+      This model encourages peer-to-peer engagement, where students and professionals alike can learn from one another, build confidence, and take part in shaping the future of the workforce.
+    </div>
+  </div>
+</section>
