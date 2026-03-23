@@ -1232,6 +1232,116 @@ height: 180px;
 width: 100%;
 }
 
+  .site-header {
+background: linear-gradient(135deg, #0b224f, #234ea0);
+padding: 18px 20px;
+}
+
+.brand-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 16px;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 14px;
+text-decoration: none;
+color: #fff;
+}
+
+.brand span {
+font-size: 1.2rem;
+font-weight: 700;
+line-height: 1.2;
+}
+
+.logo {
+width: 72px;
+height: 72px;
+object-fit: contain;
+border-radius: 12px;
+background: #fff;
+padding: 6px;
+}
+
+.site-nav ul {
+list-style: none;
+margin: 20px 0 0;
+padding: 0;
+display: flex;
+justify-content: center;
+gap: 28px;
+flex-wrap: wrap;
+}
+
+.site-nav a {
+color: #fff;
+text-decoration: none;
+font-weight: 600;
+font-size: 1rem;
+}
+
+.nav-toggle {
+display: none;
+background: transparent;
+border: none;
+color: #fff;
+font-size: 2rem;
+cursor: pointer;
+line-height: 1;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+.brand span {
+font-size: 0.95rem;
+}
+
+.logo {
+width: 58px;
+height: 58px;
+}
+
+.nav-toggle {
+display: block;
+}
+
+.site-nav {
+display: none;
+width: 100%;
+margin-top: 14px;
+background: rgba(255, 255, 255, 0.08);
+border-radius: 14px;
+padding: 10px 0;
+}
+
+.site-nav.show {
+display: block;
+}
+
+.site-nav ul {
+flex-direction: column;
+gap: 0;
+margin: 0;
+}
+
+.site-nav li {
+text-align: center;
+}
+
+.site-nav a {
+display: block;
+padding: 14px 18px;
+font-size: 1.05rem;
+}
+
+.site-nav a:hover {
+background: rgba(255, 255, 255, 0.08);
+}
+}
 
 </style>
 
@@ -2682,6 +2792,17 @@ if (event.target === employerModal) {
 employerModal.style.display = "none";
 }
 }
+</script>
+
+  <script>
+const navToggle = document.querySelector('.nav-toggle');
+const mobileNav = document.querySelector('.site-nav');
+
+navToggle.addEventListener('click', () => {
+mobileNav.classList.toggle('show');
+const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+navToggle.setAttribute('aria-expanded', !expanded);
+});
 </script>
 
 
