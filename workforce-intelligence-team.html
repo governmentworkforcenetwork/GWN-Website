@@ -1012,10 +1012,13 @@ Participation is entirely voluntary and may be discontinued at any time by the p
 </p>
 </div>
 
-<a href="#apply-form" class="apply-btn">Apply or Express Interest</a>
+<button class="apply-btn" onclick="openModal('applyModal')">
+Apply or Express Interest
+</button>
 
 </div>
 </section>
+
     <section class="apply-section" id="applySection">
       <div class="form-shell" id="applyForm">
         <h2>Apply or Express Interest</h2>
@@ -1065,6 +1068,66 @@ Participation is entirely voluntary and may be discontinued at any time by the p
             <label for="additional_notes">Anything else you would like to share?</label>
             <textarea id="additional_notes" name="additional_notes"></textarea>
           </div>
+
+              ​<!-- APPLY / EXPRESS INTEREST MODAL -->
+<div class="modal-backdrop" id="applyModal">
+<div class="modal">
+
+<div class="modal-header">
+<h3>Apply or Express Interest</h3>
+<button class="modal-close" onclick="closeModal(this)">×</button>
+</div>
+
+<div class="modal-body">
+
+<form name="workforce-intelligence-interest" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="workforce-intelligence-interest" />
+
+<div class="grid-2">
+<div>
+<label>Name *</label>
+<input type="text" name="name" required />
+</div>
+
+<div>
+<label>Email *</label>
+<input type="email" name="email" required />
+</div>
+
+<div>
+<label>Status *</label>
+<select name="status" required>
+<option value="">Select</option>
+<option>Student</option>
+<option>Professional</option>
+<option>Veteran</option>
+<option>Retiree</option>
+</select>
+</div>
+
+<div>
+<label>Interest Area</label>
+<input type="text" name="interest" />
+</div>
+</div>
+
+<div class="grid-1">
+<div>
+<label>Why are you interested?</label>
+<textarea name="message"></textarea>
+</div>
+</div>
+
+<div class="actions">
+<button class="btn-primary" type="submit">Submit</button>
+<button class="btn-secondary" type="button" onclick="closeModal(this)">Cancel</button>
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
 
           <div class="form-actions">
             <button type="submit" class="cta-btn">Submit Form</button>
