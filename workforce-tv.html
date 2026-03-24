@@ -1,183 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workforce TV | Government Workforce Network LLC</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Workforce TV | Government Workforce Network LLC</title>
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
-      color: #ffffff;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
+  color: #ffffff;
+}
 
-    header {
-      background: rgba(0,0,0,0.92);
-      padding: 18px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+header {
+  background: rgba(0,0,0,0.92);
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
-    .brand {
-      font-weight: 700;
-      font-size: 20px;
-    }
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+}
 
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
 
-    nav a:hover {
-      color: #d8b24c;
-    }
+nav a:hover {
+  color: #d8b24c;
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-    }
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
-    }
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
 
-    .gold-rule {
-      width: 90px;
-      height: 5px;
-      background: #d8b24c;
-      margin: 0 auto 20px;
-      border-radius: 999px;
-    }
+.gold-rule {
+  width: 90px;
+  height: 5px;
+  background: #d8b24c;
+  margin: 0 auto 20px;
+  border-radius: 999px;
+}
 
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      color: #e8eef9;
-      line-height: 1.8;
-      font-size: 18px;
-    }
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  color: #e8eef9;
+  line-height: 1.8;
+  font-size: 18px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px 100px;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px 100px;
+}
 
-    .card {
-      background: #ffffff;
-      color: #222;
-      border-radius: 24px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 16px 30px rgba(0,0,0,0.18);
-    }
+.card {
+  background: #ffffff;
+  color: #222;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 16px 30px rgba(0,0,0,0.18);
+}
 
-    .card h2 {
-      margin-top: 0;
-      font-size: 28px;
-      color: #111;
-    }
+.card h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #111;
+}
 
-    .card p {
-      line-height: 1.8;
-      color: #444;
-      font-size: 16px;
-    }
+.card p {
+  line-height: 1.8;
+  color: #444;
+  font-size: 16px;
+}
 
-    .cta-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 14px 24px;
-      background: #d8b24c;
-      color: #111;
-      border-radius: 999px;
-      font-weight: 800;
-      text-decoration: none;
-      transition: 0.25s;
-    }
+.card ul {
+  color: #444;
+  line-height: 1.9;
+  padding-left: 20px;
+}
 
-    .cta-btn:hover {
-      background: #e7c46a;
-      transform: translateY(-2px);
-    }
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  background: #d8b24c;
+  color: #111;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+}
 
-    .highlight-box {
-      background: #f4f6fb;
-      border-left: 5px solid #d8b24c;
-      padding: 18px;
-      border-radius: 12px;
-      margin-top: 15px;
-      color: #444;
-    }
+.cta-btn:hover {
+  background: #e7c46a;
+  transform: translateY(-2px);
+}
 
-    footer {
-      text-align: center;
-      color: #cfd8ef;
-      font-size: 14px;
-      padding: 0 20px 40px;
-    }
+.highlight-box {
+  background: #f4f6fb;
+  border-left: 5px solid #d8b24c;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 15px;
+  color: #444;
+}
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-        align-items: flex-start;
-      }
+/* TV card */
+.tv-card {
+  position: relative;
+  background: linear-gradient(180deg, #1c2338 0%, #0f1423 100%);
+  border: 10px solid #0a0f1b;
+  border-radius: 28px;
+  padding: 34px 30px 42px;
+  margin-bottom: 54px;
+  box-shadow:
+    0 18px 36px rgba(0,0,0,0.30),
+    inset 0 0 0 2px rgba(255,255,255,0.04);
+}
 
-      .hero h1 {
-        font-size: 36px;
-      }
+.tv-card::before,
+.tv-card::after {
+  content: "";
+  position: absolute;
+  bottom: -34px;
+  width: 6px;
+  height: 34px;
+  background: #0a0f1b;
+  border-radius: 999px;
+}
 
-      .container {
-        padding: 30px 18px 80px;
-      }
+.tv-card::before {
+  left: 32%;
+  transform: rotate(14deg);
+}
 
-      .card {
-        padding: 24px 20px;
-      }
-    }
-  </style>
+.tv-card::after {
+  right: 32%;
+  transform: rotate(-14deg);
+}
+
+.tv-screen {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+.tv-screen h2 {
+  margin-top: 0;
+  font-size: 30px;
+  color: #0b1f3a;
+}
+
+.tv-screen p {
+  line-height: 1.85;
+  color: #334155;
+  font-size: 16px;
+}
+
+.tv-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #d8b24c;
+  color: #111;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.tv-highlight {
+  background: #eef3ff;
+  border-left: 5px solid #d8b24c;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 16px;
+  color: #334155;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 3000;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal {
+  width: min(900px, 96vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #0B1F3A, #1d3f8f);
+  color: #ffffff;
+  border-radius: 24px 24px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 28px 24px 30px;
+  color: #12344d;
+}
+
+.modal-body p {
+  color: #29465b;
+  line-height: 1.7;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #12344d;
+  font-size: 16px;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9e8f2;
+  border-radius: 14px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+.modal textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.close-btn {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 14px 24px;
+  background: #eef3ff;
+  color: #12344d;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.close-btn:hover {
+  background: #dfe8ff;
+}
+
+footer {
+  text-align: center;
+  color: #cfd8ef;
+  font-size: 14px;
+  padding: 0 20px 40px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .container {
+    padding: 30px 18px 80px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    width: 100%;
+  }
+
+  .modal-header h3 {
+    font-size: 21px;
+  }
+
+  .close-btn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .tv-card {
+    padding: 22px 18px 34px;
+  }
+
+  .tv-screen {
+    padding: 22px 18px;
+  }
+
+  .tv-screen h2 {
+    font-size: 24px;
+  }
+
+  .tv-card::before,
+  .tv-card::after {
+    height: 26px;
+    bottom: -26px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="brand">Government Workforce Network LLC</div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/workforce-intelligence-team">Our Team</a>
-      <a href="/workforce-tv.html">Workforce TV</a>
-    </nav>
-  </header>
+<header>
+  <div class="brand">Government Workforce Network LLC</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/workforce-intelligence-team">Our Team</a>
+    <a href="/workforce-tv">Workforce TV</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>Workforce TV</h1>
-    <div class="gold-rule"></div>
-    <p>
-      Live workforce conversations connecting students, professionals, and communities directly with employers.
-      Gain real insight into careers, hiring expectations, and workforce opportunities.
-    </p>
-  </section>
+<section class="hero">
+  <h1>Workforce TV</h1>
+  <div class="gold-rule"></div>
+  <p>
+    Live workforce conversations connecting students, professionals, and communities directly with employers.
+    Gain real insight into careers, hiring expectations, and workforce opportunities.
+  </p>
+</section>
 
-  <div class="container">
+<div class="container">
 
-    <!-- LIVE SESSION -->
-    <div class="card">
+  <!-- LIVE SESSION -->
+  <div class="tv-card">
+    <div class="tv-screen">
+      <div class="tv-badge">Live Broadcast</div>
       <h2>Next Live Session</h2>
 
       <p><strong>Topic:</strong> Careers in County Government</p>
@@ -189,71 +432,190 @@
         Join Live on Microsoft Teams
       </a>
 
-      <div class="highlight-box">
+      <div class="tv-highlight">
         Join this live session to hear directly from professionals, ask questions, and learn about real career pathways.
       </div>
     </div>
-
-    <!-- ABOUT -->
-    <div class="card">
-      <h2>About Workforce TV</h2>
-      <p>
-        Workforce TV is a live discussion series hosted by Government Workforce Network, designed to create direct access between employers and individuals exploring career opportunities.
-      </p>
-
-      <p>
-        These sessions provide real conversations—not just presentations—where participants can hear from professionals, ask questions, and gain insight into the realities of different careers.
-      </p>
-
-      <div class="highlight-box">
-        This is part of our mission to build income, opportunity, and well-being by creating accessible, real-world workforce connections.
-      </div>
-    </div>
-
-    <!-- FOR STUDENTS -->
-    <div class="card">
-      <h2>For Students & Participants</h2>
-      <p>
-        Workforce TV provides a space to learn directly from employers, understand career expectations, and explore opportunities in a way that is accessible and engaging.
-      </p>
-
-      <ul>
-        <li>Ask questions directly to professionals</li>
-        <li>Learn about real job responsibilities</li>
-        <li>Understand hiring expectations</li>
-        <li>Explore career pathways</li>
-      </ul>
-    </div>
-
-    <!-- FOR EMPLOYERS -->
-    <div class="card">
-      <h2>For Employers & Organizations</h2>
-      <p>
-        Organizations can participate as featured guests in Workforce TV sessions, providing visibility, engaging with talent, and sharing insights about career opportunities.
-      </p>
-
-      <p>
-        Workforce TV is part of our employer engagement model and may be included as part of partnership or service packages.
-      </p>
-
-      <a href="mailto:your-email@example.com" class="cta-btn">
-        Request to Be Featured
-      </a>
-    </div>
-
-    <!-- PAST SESSIONS -->
-    <div class="card">
-      <h2>Past Sessions</h2>
-      <p>
-        Recorded sessions will be available here. Stay tuned for replays and highlights.
-      </p>
-    </div>
-
   </div>
 
-  <footer>
-    Government Workforce Network LLC
-  </footer>
+  <!-- ABOUT -->
+  <div class="card">
+    <h2>About Workforce TV</h2>
+    <p>
+      Workforce TV is a live discussion series hosted by Government Workforce Network, designed to create direct access between employers and individuals exploring career opportunities.
+    </p>
+
+    <p>
+      These sessions provide real conversations—not just presentations—where participants can hear from professionals, ask questions, and gain insight into the realities of different careers.
+    </p>
+
+    <div class="highlight-box">
+      This is part of our mission to build income, opportunity, and well-being by creating accessible, real-world workforce connections.
+    </div>
+  </div>
+
+  <!-- FOR STUDENTS -->
+  <div class="card">
+    <h2>For Students & Participants</h2>
+    <p>
+      Workforce TV provides a space to learn directly from employers, understand career expectations, and explore opportunities in a way that is accessible and engaging.
+    </p>
+
+    <ul>
+      <li>Ask questions directly to professionals</li>
+      <li>Learn about real job responsibilities</li>
+      <li>Understand hiring expectations</li>
+      <li>Explore career pathways</li>
+    </ul>
+  </div>
+
+  <!-- FOR EMPLOYERS -->
+  <div class="card">
+    <h2>For Employers & Organizations</h2>
+    <p>
+      Organizations can participate as featured guests in Workforce TV sessions, providing visibility, engaging with talent, and sharing insights about career opportunities.
+    </p>
+
+    <p>
+      Workforce TV is part of our employer engagement model and may be included as part of partnership or service packages.
+    </p>
+
+    <button type="button" class="cta-btn" onclick="openModal('featureModal')">
+      Request to Be Featured
+    </button>
+  </div>
+
+  <!-- PAST SESSIONS -->
+  <div class="card">
+    <h2>Past Sessions</h2>
+    <p>
+      Recorded sessions will be available here. Stay tuned for replays and highlights.
+    </p>
+  </div>
+
+</div>
+
+<!-- REQUEST TO BE FEATURED MODAL -->
+<div class="modal-backdrop" id="featureModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-labelledby="featureModalTitle">
+    <div class="modal-header">
+      <h3 id="featureModalTitle">Request Pricing</h3>
+      <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+    </div>
+
+    <div class="modal-body">
+      <p>
+        Complete the form below to request to be featured on Workforce TV.
+      </p>
+
+      <form name="workforce-tv-feature-request" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="workforce-tv-feature-request">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="organization_name">Organization / Business Name</label>
+            <input id="organization_name" type="text" name="organization_name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact_name">Contact Name</label>
+            <input id="contact_name" type="text" name="contact_name" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" name="phone">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="website">Website or Social Media Link</label>
+          <input id="website" type="text" name="website">
+        </div>
+
+        <div class="form-group">
+          <label for="feature_type">Type of Feature Requested</label>
+          <select id="feature_type" name="feature_type" required>
+            <option value="">Select one</option>
+            <option>Business Feature</option>
+            <option>Organization Feature</option>
+            <option>Community Initiative</option>
+            <option>Event Feature</option>
+            <option>Student / Emerging Leader Spotlight</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="summary">Tell us about what you would like featured</label>
+          <textarea id="summary" name="summary" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="audience_value">Why would this be valuable to our audience?</label>
+          <textarea id="audience_value" name="audience_value"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="cta-btn">Submit Request</button>
+          <button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Government Workforce Network LLC
+</footer>
+
+<script>
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(el) {
+  const modal = el.closest('.modal-backdrop');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('modal-backdrop')) {
+    e.target.classList.remove('open');
+    e.target.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    const openModalEl = document.querySelector('.modal-backdrop.open');
+    if (openModalEl) {
+      openModalEl.classList.remove('open');
+      openModalEl.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+});
+</script>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzIxOWU3ZGQ3Yzc1MDAwOGZlYTMyNyIsImlzc3VlciI6Im5mc2VydmVyIn0.Tw5sRDlFWr7aZk2PeAnkDE6TkCpn50cJvlGWXIo0wWA"></script>
 
 </body>
 </html>
+
+Sent from my iPhone
