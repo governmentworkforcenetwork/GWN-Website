@@ -1348,64 +1348,6 @@ background: rgba(255, 255, 255, 0.08);
 display: none;
 }
 
-/* MOBILE ONLY */
-@media (max-width: 768px) {
-
-/* HIDE YOUR CURRENT NAV */
-nav {
-display: none !important;
-}
-
-.mobile-header {
-display: block;
-padding: 15px;
-background: linear-gradient(135deg, #0b224f, #234ea0);
-}
-
-.mobile-top {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.mobile-logo {
-width: 60px;
-border-radius: 10px;
-background: #fff;
-padding: 5px;
-}
-
-.mobile-toggle {
-font-size: 2rem;
-background: none;
-border: none;
-color: white;
-}
-
-.mobile-menu {
-display: none;
-margin-top: 15px;
-background: rgba(255,255,255,0.1);
-border-radius: 12px;
-}
-
-.mobile-menu a {
-display: block;
-padding: 14px;
-color: white;
-text-align: center;
-text-decoration: none;
-font-weight: 600;
-}
-
-.mobile-menu a:hover {
-background: rgba(255,255,255,0.1);
-}
-
-.mobile-menu.show {
-display: block;
-}
-}
 
 
 </style>
@@ -1440,24 +1382,6 @@ display: block;
 </ul>
 </nav>
 </header>
-
-<!-- MOBILE NAV ONLY -->
-<div class="mobile-header">
-<div class="mobile-top">
-<img src="logo.jpg" class="mobile-logo">
-<button class="mobile-toggle">☰</button>
-</div>
-
-<div class="mobile-menu">
-<a href="#about">About</a>
-<a href="#initiatives">Initiatives</a>
-<a href="#consulting">Consulting Services</a>
-<a href="#talent-connect">Talent Connect</a>
-<a href="#free-services">Free Services</a>
-<a href="#opportunities">Opportunities</a>
-<a href="#events">Events</a>
-</div>
-</div>
 
   
 <section id="hero">
@@ -2879,25 +2803,6 @@ employerModal.style.display = "none";
 }
 </script>
 
-  <script>
-const navToggle = document.querySelector('.nav-toggle');
-const mobileNav = document.querySelector('.site-nav');
-
-navToggle.addEventListener('click', () => {
-mobileNav.classList.toggle('show');
-const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-navToggle.setAttribute('aria-expanded', !expanded);
-});
-</script>
-
-  <script>
-const toggle = document.querySelector('.mobile-toggle');
-const menu = document.querySelector('.mobile-menu');
-
-toggle.addEventListener('click', () => {
-menu.classList.toggle('show');
-});
-</script>
 
 
 
