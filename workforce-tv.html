@@ -481,7 +481,7 @@ footer {
     </p>
 
     <button type="button" class="cta-btn" onclick="openModal('featureModal')">
-      Request to Be Featured
+      Request Pricing & Details
     </button>
   </div>
 
@@ -495,21 +495,21 @@ footer {
 
 </div>
 
-<!-- REQUEST TO BE FEATURED MODAL -->
+<!-- REQUEST PRICING & DETAILS MODAL -->
 <div class="modal-backdrop" id="featureModal" aria-hidden="true">
   <div class="modal" role="dialog" aria-labelledby="featureModalTitle">
     <div class="modal-header">
-      <h3 id="featureModalTitle">Request Pricing</h3>
+      <h3 id="featureModalTitle">Request Pricing & Details</h3>
       <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
     </div>
 
     <div class="modal-body">
       <p>
-        Complete the form below to request to be featured on Workforce TV.
+        Complete the form below to request Workforce TV pricing and details.
       </p>
 
       <form name="workforce-tv-feature-request" method="POST" data-netlify="true" action="/thank-you.html">
-        <input type="hidden" name="form-name" value="workforce-tv-feature-request">
+        <input type="hidden" name="form-name" value="workforce-tv-pricing&details-request">
 
         <div class="form-grid">
           <div class="form-group">
