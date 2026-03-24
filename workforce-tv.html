@@ -22,6 +22,10 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
 }
 
 .brand {
@@ -33,6 +37,7 @@ nav {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 nav a {
@@ -40,6 +45,7 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
+  transition: color 0.25s ease;
 }
 
 nav a:hover {
@@ -109,7 +115,7 @@ nav a:hover {
   display: inline-block;
   margin-top: 15px;
   padding: 14px 24px;
-  background: #d8b24c;
+  background: linear-gradient(135deg, #d8b24c, #e7c46a);
   color: #111;
   border-radius: 999px;
   font-weight: 800;
@@ -117,11 +123,13 @@ nav a:hover {
   transition: 0.25s;
   border: none;
   cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
 .cta-btn:hover {
-  background: #e7c46a;
+  background: linear-gradient(135deg, #e7c46a, #f0d57b);
   transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
 }
 
 .highlight-box {
@@ -133,17 +141,18 @@ nav a:hover {
   color: #444;
 }
 
-/* TV card */
+/* Premium TV card */
 .tv-card {
   position: relative;
-  background: linear-gradient(180deg, #1c2338 0%, #0f1423 100%);
+  background: linear-gradient(180deg, #12192d 0%, #090d17 100%);
   border: 10px solid #0a0f1b;
-  border-radius: 28px;
-  padding: 34px 30px 42px;
-  margin-bottom: 54px;
+  border-radius: 32px;
+  padding: 32px 28px 42px;
+  margin-bottom: 56px;
   box-shadow:
-    0 18px 36px rgba(0,0,0,0.30),
-    inset 0 0 0 2px rgba(255,255,255,0.04);
+    0 20px 50px rgba(0,0,0,0.38),
+    inset 0 0 0 2px rgba(255,255,255,0.04),
+    0 0 40px rgba(216,178,76,0.08);
 }
 
 .tv-card::before,
@@ -151,27 +160,39 @@ nav a:hover {
   content: "";
   position: absolute;
   bottom: -34px;
-  width: 6px;
+  width: 7px;
   height: 34px;
   background: #0a0f1b;
   border-radius: 999px;
 }
 
 .tv-card::before {
-  left: 32%;
-  transform: rotate(14deg);
+  left: 33%;
+  transform: rotate(15deg);
 }
 
 .tv-card::after {
-  right: 32%;
-  transform: rotate(-14deg);
+  right: 33%;
+  transform: rotate(-15deg);
 }
 
-.tv-screen {
+.tv-card .tv-screen {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  border-radius: 18px;
+  border-radius: 22px;
   padding: 30px;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,0.06),
+    inset 0 0 30px rgba(255,255,255,0.45);
+  position: relative;
+}
+
+.tv-card .tv-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
+  pointer-events: none;
 }
 
 .tv-screen h2 {
@@ -189,14 +210,15 @@ nav a:hover {
 .tv-badge {
   display: inline-block;
   margin-bottom: 14px;
-  padding: 7px 14px;
+  padding: 8px 14px;
   border-radius: 999px;
-  background: #d8b24c;
+  background: linear-gradient(135deg, #c6922d, #e7c46a);
   color: #111;
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .tv-highlight {
@@ -401,8 +423,8 @@ footer {
   <div class="brand">Government Workforce Network LLC</div>
   <nav>
     <a href="/">Home</a>
-    <a href="/workforce-intelligence-team">Our Team</a>
     <a href="/workforce-tv">Workforce TV</a>
+    <a href="#" onclick="openModal('featureModal'); return false;">Request Pricing & Details</a>
   </nav>
 </header>
 
@@ -477,7 +499,7 @@ footer {
     </p>
 
     <p>
-      Workforce TV is part of our employer engagement model and may be included as part of partnership or service packages.
+      Workforce TV is part of our employer engagement model and may be included as part of partnership or service packages. Request pricing and details to learn more about availability and package options.
     </p>
 
     <button type="button" class="cta-btn" onclick="openModal('featureModal')">
@@ -508,8 +530,8 @@ footer {
         Complete the form below to request Workforce TV pricing and details.
       </p>
 
-      <form name="workforce-tv-feature-request" method="POST" data-netlify="true" action="/thank-you.html">
-        <input type="hidden" name="form-name" value="workforce-tv-pricing&details-request">
+      <form name="workforce-tv-pricing-details-request" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="workforce-tv-pricing-details-request">
 
         <div class="form-grid">
           <div class="form-group">
@@ -613,9 +635,7 @@ document.addEventListener('keydown', function (e) {
 });
 </script>
 
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzIxOWU3ZGQ3Yzc1MDAwOGZlYTMyNyIsImlzc3VlciI6Im5mc2VydmVyIn0.Tw5sRDlFWr7aZk2PeAnkDE6TkCpn50cJvlGWXIo0wWA"></script>
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzIxZTlhYmI3MzcxMDAwODM2YWE1YyIsImlzc3VlciI6Im5mc2VydmVyIn0.ZgoaehzqKOYKzuyN0egSW1U1Vzl3XRqsO0nfEqkvttk"></script>
 
 </body>
 </html>
-
-Sent from my iPhone
