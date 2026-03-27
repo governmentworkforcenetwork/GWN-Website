@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Talent Connect – Job Seekers | Government Workforce Network LLC</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+color: #111827;
+background: linear-gradient(180deg, #071738 0%, #0b2f73 45%, #0a2252 100%);
+}
+
+.page-wrap {
+max-width: 1180px;
+margin: 0 auto;
+padding: 40px 18px 70px;
+}
+
+.main-card {
+background: #ffffff;
+border-radius: 34px;
+padding: 36px 34px 48px;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+overflow: hidden;
+}
+
+.top-actions,
+.bottom-actions {
+display: flex;
+justify-content: flex-start;
+margin-bottom: 28px;
+}
+
+.bottom-actions {
+margin-top: 34px;
+margin-bottom: 0;
+}
+
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 14px 24px;
+border: 2px solid #cfd8e3;
+border-radius: 18px;
+background: #ffffff;
+color: #0a1e4f;
+text-decoration: none;
+font-weight: 700;
+font-size: 1rem;
+transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+background: #f8fbff;
+border-color: #9fb2cc;
+transform: translateY(-1px);
+}
+
+.hero {
+background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+border: 1px solid #dbe7ff;
+border-radius: 28px;
+padding: 34px 28px;
+margin-bottom: 30px;
+}
+
+.hero h1 {
+margin: 0 0 12px;
+font-size: clamp(2.3rem, 4vw, 4rem);
+line-height: 1.02;
+letter-spacing: -0.03em;
+color: #071738;
+}
+
+.hero .subtext {
+margin: 0 0 18px;
+font-size: 1.14rem;
+line-height: 1.7;
+max-width: 950px;
+color: #24364f;
+}
+
+.tagline-pill {
+display: inline-block;
+padding: 13px 20px;
+border: 1.5px solid #bccae2;
+border-radius: 999px;
+background: #f3f4f6;
+color: #0f1f4a;
+font-weight: 800;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+font-size: 0.95rem;
+}
+
+.section {
+margin-top: 30px;
+}
+
+.section h2 {
+margin: 0 0 18px;
+font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+line-height: 1.15;
+color: #071738;
+}
+
+.panel {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 24px;
+padding: 26px 24px;
+box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.panel p {
+margin: 0 0 16px;
+line-height: 1.8;
+font-size: 1.05rem;
+color: #24364f;
+}
+
+.panel p:last-child {
+margin-bottom: 0;
+}
+
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 20px;
+}
+
+.card {
+background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+border: 1px solid #e4ebf5;
+border-radius: 22px;
+padding: 24px 22px;
+box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+}
+
+.card h3 {
+margin: 0 0 10px;
+font-size: 1.2rem;
+color: #0a1e4f;
+}
+
+.card p {
+margin: 0;
+line-height: 1.8;
+color: #374151;
+font-size: 1rem;
+}
+
+.split-section {
+display: grid;
+grid-template-columns: 0.95fr 1.05fr;
+gap: 22px;
+margin-top: 30px;
+}
+
+.list-panel {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 24px;
+padding: 26px 24px;
+box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.list-panel ul,
+.list-panel ol {
+margin: 0;
+padding-left: 22px;
+line-height: 1.9;
+color: #374151;
+font-size: 1.02rem;
+}
+
+.highlight-panel {
+background: linear-gradient(180deg, #f7faff 0%, #edf4ff 100%);
+border: 1px solid #d7e5ff;
+}
+
+.important-box {
+margin-top: 24px;
+background: #f9fafb;
+border-left: 4px solid #173f90;
+border-radius: 18px;
+padding: 18px 20px;
+color: #24364f;
+line-height: 1.8;
+font-size: 1rem;
+}
+
+.cta-box {
+margin-top: 34px;
+background: linear-gradient(135deg, #071738 0%, #103b8f 100%);
+border-radius: 28px;
+padding: 34px 28px;
+text-align: center;
+color: #ffffff;
+}
+
+.cta-box h2 {
+margin: 0 0 12px;
+font-size: clamp(2rem, 3vw, 3rem);
+line-height: 1.1;
+color: #ffffff;
+}
+
+.cta-box p {
+margin: 0 0 20px;
+font-size: 1.2rem;
+line-height: 1.7;
+color: rgba(255,255,255,0.92);
+}
+
+.primary-btn {
+display: inline-block;
+padding: 15px 28px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 800;
+font-size: 1rem;
+background: #ffffff;
+color: #0a1e4f;
+}
+
+@media (max-width: 900px) {
+.cards-grid,
+.split-section {
+grid-template-columns: 1fr;
+}
+
+.main-card {
+padding: 24px 18px 32px;
+border-radius: 24px;
+}
+
+.hero,
+.panel,
+.list-panel,
+.card,
+.cta-box {
+border-radius: 20px;
+}
+
+.back-btn {
+width: 100%;
+justify-content: center;
+}
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<div class="main-card">
+
+<div class="top-actions">
+<a href="/" class="back-btn">← Go Back to Home Page</a>
+</div>
+
+<section class="hero">
+<h1>Talent Connect – Job Seekers</h1>
+<p class="subtext">
+A visibility and access platform designed to help job seekers connect with employers,
+organizations, and workforce opportunities through intentional, human-centered pathways.
+</p>
+<span class="tagline-pill">Be Seen • Be Considered • Be Connected</span>
+</section>
+
+<section class="section">
+<h2>What This Is</h2>
+<div class="panel">
+<p>
+Talent Connect is designed for job seekers who want greater visibility beyond traditional
+applications. In today’s AI-driven hiring environment, many qualified individuals are
+filtered out before they are fully seen.
+</p>
+<p>
+Talent Connect helps create more direct pathways to opportunity by increasing visibility,
+expanding access, and supporting meaningful workforce connection through participating
+employers, workforce partners, and community-based engagement.
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2>What This Offers</h2>
+<div class="cards-grid">
+<div class="card">
+<h3>Increased Visibility</h3>
+<p>Gain exposure beyond traditional application systems and automated screening.</p>
+</div>
+<div class="card">
+<h3>Workforce Access</h3>
+<p>Connect with workforce sessions, employer engagement, and opportunity-related pathways.</p>
+</div>
+<div class="card">
+<h3>Inclusive Participation</h3>
+<p>Open to students, veterans, stay-at-home parents, career changers, returning professionals, and more.</p>
+</div>
+<div class="card">
+<h3>AI-Aware Environment</h3>
+<p>Navigate a changing workforce landscape while still having room for meaningful human connection.</p>
+</div>
+</div>
+</section>
+
+<div class="split-section">
+<section class="list-panel">
+<h2>Who This Is For</h2>
+<ul>
+<li>Job seekers looking for greater visibility</li>
+<li>Individuals impacted by automated application systems</li>
+<li>Career changers and returning professionals</li>
+<li>Students and early-career individuals</li>
+<li>Veterans, military-connected individuals, and individuals with disabilities</li>
+<li>Anyone seeking a more direct pathway to workforce access and opportunity</li>
+</ul>
+</section>
+
+<section class="list-panel highlight-panel">
+<h2>How the Process Works</h2>
+<ol>
+<li><strong>Submit the Form</strong> — Complete the Talent Connect form with your information.</li>
+<li><strong>Join the Network</strong> — Your submission may be added to the Talent Connect participant list.</li>
+<li><strong>Receive Updates</strong> — You may be informed about events, sessions, and workforce-related opportunities.</li>
+<li><strong>Stay Connected</strong> — When relevant opportunities arise, you may receive information about openings or engagement activities.</li>
+</ol>
+</section>
+</div>
+
+<div class="split-section">
+<section class="list-panel">
+<h2>What to Expect</h2>
+<ul>
+<li>Confirmation that your information was submitted</li>
+<li>Possible addition to the Talent Connect participant list</li>
+<li>Potential invitations to employer or workforce-related sessions</li>
+<li>Updates on relevant opportunities or openings when available</li>
+<li>A human-centered approach focused on visibility, connection, and access</li>
+</ul>
+</section>
+
+<section class="list-panel">
+<h2>Important Information</h2>
+<p>
+Participation is free. Submission does not guarantee employment, interview selection,
+placement, or direct employer response. Talent Connect is intended to increase visibility
+and strengthen access to workforce opportunities through connection, communication, and
+community-based engagement.
+</p>
+</section>
+</div>
+
+<section class="cta-box">
+<h2>The future of workforce is not just automated.</h2>
+<p>It is connected, visible, and human.</p>
+<a href="#join" class="primary-btn">Join Talent Connect</a>
+</section>
+
+<div class="bottom-actions">
+<a href="/" class="back-btn">← Go Back to Home Page</a>
+</div>
+
+</div>
+</div>
+</body>
+</html>
+
