@@ -515,6 +515,35 @@ footer {
     font-size: 21px;
   }
 }
+
+/* === FIX CARD IMAGE (FINAL PERFECT VERSION) === */
+.card-image {
+width: 100%;
+height: 220px;
+overflow: hidden;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+background: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card-image img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+background: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+.card-image {
+height: 180px;
+}
+}
+
 </style>
 </head>
 
@@ -639,7 +668,7 @@ footer {
     <div class="initiative-grid">
 
       <article class="initiative-card">
-        <img src="free-logodesign.png" alt="Photo placeholder for Talent Connect" class="initiative-photo">
+        <div class="card-image"><img src="free-logodesign.png" alt="Free Logo Design"></div>
         <div class="initiative-body">
           <div class="initiative-name">Free Logo Design</div>
           <div class="initiative-title">Brand Support Initiative</div>
@@ -659,7 +688,7 @@ footer {
       </article>
 
       <article class="initiative-card">
-        <img src="community-job-visibility" alt="Photo placeholder for Community Free Services" class="initiative-photo">
+        <div class="card-image"><img src="community-job-visibility.png" alt="Free Job Listing"></div>
         <div class="initiative-body">
           <div class="initiative-name">Free Job Listing</div>
           <div class="initiative-title">Workforce Visibility Initiative</div>
@@ -680,7 +709,7 @@ footer {
       </article>
 
    <article class="initiative-card">
-        <img src="community-business-partners.png" alt="Photo placeholder for Community Free Services" class="initiative-photo">
+     <div class="card-image"><img src="community-business-partners.png" alt="Free Business Listing"></div>
         <div class="initiative-body">
           <div class="initiative-name">Free Business Listing</div>
           <div class="initiative-title">Community Support Initiative</div>
@@ -700,7 +729,7 @@ footer {
       </article>
 
       <article class="initiative-card">
-        <img src="student-recognition-initiative" alt="Photo placeholder for Recognition and Visibility Efforts" class="initiative-photo">
+        <div class="card-image"><img src="student-recognition-initiative.png" alt="Student Recognition"></div>
         <div class="initiative-body">
           <div class="initiative-name">Student Recognition</div>
           <div class="initiative-title">Emerging Talent Recognition Initiative</div>
@@ -721,7 +750,7 @@ footer {
       </article>
 
       <article class="initiative-card">
-        <img src="branded-by-marivel-logo.png" alt="Photo placeholder for Workforce Outreach and Access" class="initiative-photo">
+        <div class="card-image"><img src="branded-by-marivel-logo.png" alt="Branded By Marivel"></div>
         <div class="initiative-body">
           <div class="initiative-name">Branded By Marivel</div>
           <div class="initiative-title">Entrepreneurship Empowerment Initiative</div>
@@ -742,7 +771,7 @@ footer {
       </article>
 
       <article class="initiative-card">
-        <img src="sip-and-serve.png" alt="Photo placeholder for Sip and Serve Networking" class="initiative-photo">
+        <div class="card-image"><img src="sip-and-serve.png" alt="Sip & Serve"></div>
         <div class="initiative-body">
           <div class="initiative-name">Sip & Serve Networking</div>
           <div class="initiative-title">Connection & Human-Centered Engagement Initiative</div>
