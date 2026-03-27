@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Employer Talent Request | Government Workforce Network LLC</title>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+color: #111827;
+background:
+linear-gradient(180deg, #071738 0%, #0b2f73 45%, #0a2252 100%);
+}
+
+.page-wrap {
+max-width: 1180px;
+margin: 0 auto;
+padding: 40px 18px 70px;
+}
+
+.main-card {
+background: #ffffff;
+border-radius: 34px;
+padding: 36px 34px 48px;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+overflow: hidden;
+}
+
+.top-actions,
+.bottom-actions {
+display: flex;
+justify-content: flex-start;
+margin-bottom: 28px;
+}
+
+.bottom-actions {
+margin-top: 34px;
+margin-bottom: 0;
+}
+
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 14px 24px;
+border: 2px solid #cfd8e3;
+border-radius: 18px;
+background: #ffffff;
+color: #0a1e4f;
+text-decoration: none;
+font-weight: 700;
+font-size: 1rem;
+transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+background: #f8fbff;
+border-color: #9fb2cc;
+transform: translateY(-1px);
+}
+
+.hero {
+background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+border: 1px solid #dbe7ff;
+border-radius: 28px;
+padding: 34px 28px;
+margin-bottom: 30px;
+}
+
+.hero h1 {
+margin: 0 0 12px;
+font-size: clamp(2.3rem, 4vw, 4rem);
+line-height: 1.02;
+letter-spacing: -0.03em;
+color: #071738;
+}
+
+.hero .subtext {
+margin: 0 0 18px;
+font-size: 1.14rem;
+line-height: 1.7;
+max-width: 950px;
+color: #24364f;
+}
+
+.tagline-pill {
+display: inline-block;
+padding: 13px 20px;
+border: 1.5px solid #bccae2;
+border-radius: 999px;
+background: #f3f4f6;
+color: #0f1f4a;
+font-weight: 800;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+font-size: 0.95rem;
+}
+
+.intro-grid {
+display: grid;
+grid-template-columns: 1.35fr 0.9fr;
+gap: 22px;
+margin-bottom: 30px;
+}
+
+.intro-panel,
+.info-panel {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 24px;
+padding: 26px 24px;
+box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.intro-panel p,
+.info-panel p {
+margin: 0 0 16px;
+line-height: 1.8;
+font-size: 1.06rem;
+color: #24364f;
+}
+
+.intro-panel p:last-child,
+.info-panel p:last-child {
+margin-bottom: 0;
+}
+
+.mini-note {
+background: #f9fafb;
+border-left: 4px solid #173f90;
+border-radius: 14px;
+padding: 16px 18px;
+font-size: 1rem;
+line-height: 1.7;
+color: #24364f;
+}
+
+.section {
+margin-top: 30px;
+}
+
+.section h2 {
+margin: 0 0 18px;
+font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+line-height: 1.15;
+color: #071738;
+}
+
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 20px;
+}
+
+.card {
+background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+border: 1px solid #e4ebf5;
+border-radius: 22px;
+padding: 24px 22px;
+box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+}
+
+.card h3 {
+margin: 0 0 10px;
+font-size: 1.2rem;
+color: #0a1e4f;
+}
+
+.card p {
+margin: 0;
+line-height: 1.8;
+color: #374151;
+font-size: 1rem;
+}
+
+.split-section {
+display: grid;
+grid-template-columns: 0.95fr 1.05fr;
+gap: 22px;
+margin-top: 30px;
+}
+
+.panel {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 24px;
+padding: 26px 24px;
+box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.panel ul,
+.panel ol {
+margin: 0;
+padding-left: 22px;
+line-height: 1.9;
+color: #374151;
+font-size: 1.02rem;
+}
+
+.highlight-panel {
+background: linear-gradient(180deg, #f7faff 0%, #edf4ff 100%);
+border: 1px solid #d7e5ff;
+}
+
+.expectation-box {
+margin-top: 24px;
+background: #f9fafb;
+border: 1px solid #e5e7eb;
+border-radius: 24px;
+padding: 26px 24px;
+}
+
+.expectation-box p {
+margin: 0 0 14px;
+line-height: 1.8;
+color: #374151;
+font-size: 1.02rem;
+}
+
+.expectation-box p:last-child {
+margin-bottom: 0;
+}
+
+.cta-box {
+margin-top: 34px;
+background: linear-gradient(135deg, #071738 0%, #103b8f 100%);
+border-radius: 28px;
+padding: 34px 28px;
+text-align: center;
+color: #ffffff;
+}
+
+.cta-box h2 {
+margin: 0 0 12px;
+font-size: clamp(2rem, 3vw, 3rem);
+line-height: 1.1;
+color: #ffffff;
+}
+
+.cta-box p {
+margin: 0 0 20px;
+font-size: 1.2rem;
+line-height: 1.7;
+color: rgba(255,255,255,0.92);
+}
+
+.primary-btn {
+display: inline-block;
+padding: 15px 28px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: 800;
+font-size: 1rem;
+background: #ffffff;
+color: #0a1e4f;
+transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px) {
+.intro-grid,
+.split-section,
+.cards-grid {
+grid-template-columns: 1fr;
+}
+
+.main-card {
+padding: 24px 18px 32px;
+border-radius: 24px;
+}
+
+.hero,
+.panel,
+.intro-panel,
+.info-panel,
+.card,
+.expectation-box,
+.cta-box {
+border-radius: 20px;
+}
+
+.back-btn {
+width: 100%;
+justify-content: center;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+<div class="main-card">
+
+<div class="top-actions">
+<a href="/" class="back-btn">← Go Back to Home Page</a>
+</div>
+
+<section class="hero">
+<h1>Employer Talent Request</h1>
+<p class="subtext">
+A workforce access solution designed to help employers, organizations, and workforce partners
+connect with a broader, more intentional pipeline of job seekers through visibility, outreach,
+and human-centered engagement.
+</p>
+<span class="tagline-pill">Access Talent • Expand Reach • Hire with Intention</span>
+</section>
+
+<div class="intro-grid">
+<div class="intro-panel">
+<p>
+Employer Talent Request is designed for organizations seeking stronger access to talent
+beyond traditional recruiting channels. In today’s hiring environment, automation can
+limit visibility and reduce meaningful connection between employers and qualified individuals.
+</p>
+<p>
+This request process helps organizations strengthen outreach, expand access to workforce
+communities, and engage with a broader pool of job seekers through a more intentional,
+human-centered pathway.
+</p>
+</div>
+
+<div class="info-panel">
+<div class="mini-note">
+<strong>Important:</strong> Submission of an employer talent request does not guarantee
+candidate placement, immediate referrals, or hiring outcomes. It is intended to support
+access, visibility, and workforce connection.
+</div>
+</div>
+</div>
+
+<section class="section">
+<h2>What Employer Talent Request Offers</h2>
+<div class="cards-grid">
+<div class="card">
+<h3>Broader Talent Access</h3>
+<p>
+Connect with job seekers across workforce networks, community-based outreach, universities,
+and other talent-connected pathways.
+</p>
+</div>
+
+<div class="card">
+<h3>Intentional Outreach</h3>
+<p>
+Expand your reach beyond automated systems and create more direct opportunities for
+workforce engagement and visibility.
+</p>
+</div>
+
+<div class="card">
+<h3>Human-Centered Hiring Support</h3>
+<p>
+Strengthen recruitment efforts through connection-focused strategies that support
+access, awareness, and participation.
+</p>
+</div>
+
+<div class="card">
+<h3>AI-Aware Workforce Strategy</h3>
+<p>
+Balance evolving recruitment technology with more meaningful, people-centered pathways
+to talent discovery and engagement.
+</p>
+</div>
+</div>
+</section>
+
+<div class="split-section">
+<section class="panel">
+<h2>Who This Is For</h2>
+<ul>
+<li>Employers seeking stronger access to job seekers</li>
+<li>Organizations looking to expand outreach and visibility</li>
+<li>Public sector, nonprofit, and private sector employers</li>
+<li>Teams seeking more inclusive and intentional workforce engagement</li>
+<li>Organizations interested in connecting with diverse workforce communities</li>
+<li>Employers looking for more human-centered hiring pathways</li>
+</ul>
+</section>
+
+<section class="panel highlight-panel">
+<h2>How the Process Works</h2>
+<ol>
+<li><strong>Submit the Request Form</strong> — Complete the employer talent request form with your organization’s information and workforce needs.</li>
+<li><strong>Request Review</strong> — The information submitted is reviewed to better understand your hiring interests, outreach goals, and areas of workforce connection.</li>
+<li><strong>Workforce Visibility Support</strong> — Your request may be used to inform future outreach, engagement opportunities, employer sessions, or related workforce access efforts.</li>
+<li><strong>Connection Opportunities</strong> — When aligned, your organization may be connected to relevant talent engagement activities, visibility opportunities, or workforce-related communication.</li>
+</ol>
+</section>
+</div>
+
+<div class="expectation-box">
+<h2>What to Expect After You Submit</h2>
+<p>Your request helps us better understand your organization’s workforce interests and areas of talent need.</p>
+<p>You may receive communication related to workforce engagement opportunities, relevant sessions, outreach efforts, or broader talent visibility pathways connected to Talent Connect.</p>
+<p>
+Employer Talent Request is intended to support stronger access, communication, and workforce
+connection. It does not replace your internal hiring process or guarantee placement outcomes.
+</p>
+</div>
+
+<section class="cta-box">
+<h2>The future of workforce is not just automated.</h2>
+<p>It is connected, visible, and human.</p>
+<a href="#request" class="primary-btn">Submit Talent Request</a>
+</section>
+
+<div class="bottom-actions">
+<a href="/" class="back-btn">← Go Back to Home Page</a>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+
