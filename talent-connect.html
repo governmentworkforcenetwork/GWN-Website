@@ -90,7 +90,7 @@ nav a.active {
 
 .hero-sub {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 0 auto 14px;
   color: #e8eef9;
   font-size: 18px;
   line-height: 1.9;
@@ -265,7 +265,7 @@ nav a.active {
   font-size: 15px;
   color: #444;
   line-height: 1.8;
-  margin: 0;
+  margin: 0 0 12px;
 }
 
 .service-list {
@@ -415,53 +415,122 @@ footer {
   color: #12344d;
 }
 
-.modal-body p {
+.modal-body p.modal-intro {
   color: #29465b;
   line-height: 1.7;
   margin: 0 0 24px;
   text-align: center;
 }
 
+/* Form styles */
+.talent-form {
+  margin-top: 8px;
+}
+
+.form-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 26px 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.form-section h2 {
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+  color: #071738;
+}
+
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
 }
 
 .form-group {
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
 .form-group label {
-  display: block;
-  font-weight: 700;
   margin-bottom: 8px;
-  color: #12344d;
+  font-weight: 700;
+  color: #0a1e4f;
   font-size: 16px;
 }
 
-.modal input,
-.modal select,
-.modal textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #d9e8f2;
-  border-radius: 14px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  color: #222;
-  background: #fff;
+.optional {
+  font-weight: 400;
+  color: #6b7280;
 }
 
-.modal textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #cfd8e3;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  color: #111827;
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #173f90;
+  box-shadow: 0 0 0 3px rgba(23, 63, 144, 0.12);
+}
+
+.form-group textarea {
   min-height: 140px;
   resize: vertical;
 }
 
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 4px;
+  width: auto;
+}
+
 .form-actions {
-  text-align: center;
-  margin-top: 8px;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.form-submit-btn {
+  display: inline-block;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #071738 0%, #103b8f 100%);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .close-btn {
@@ -566,237 +635,10 @@ footer {
   .modal-header h3 {
     font-size: 21px;
   }
-}
 
-  .talent-form {
-margin-top: 24px;
-}
-
-.form-section {
-background: #ffffff;
-border: 1px solid #e5e7eb;
-border-radius: 24px;
-padding: 26px 24px;
-margin-bottom: 22px;
-box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-}
-
-.form-section h2 {
-margin: 0 0 18px;
-font-size: 1.5rem;
-color: #071738;
-}
-
-.form-grid {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 18px 20px;
-}
-
-.form-group {
-display: flex;
-flex-direction: column;
-}
-
-.form-group.full-width {
-grid-column: 1 / -1;
-}
-
-.form-group label {
-margin-bottom: 8px;
-font-weight: 700;
-color: #0a1e4f;
-}
-
-.optional {
-font-weight: 400;
-color: #6b7280;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-width: 100%;
-border: 1px solid #cfd8e3;
-border-radius: 14px;
-padding: 14px 14px;
-font-size: 1rem;
-font-family: Arial, sans-serif;
-color: #111827;
-background: #ffffff;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-outline: none;
-border-color: #173f90;
-box-shadow: 0 0 0 3px rgba(23, 63, 144, 0.12);
-}
-
-.checkbox-group {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-line-height: 1.7;
-color: #374151;
-}
-
-.checkbox-group input[type="checkbox"] {
-margin-top: 4px;
-}
-
-.form-actions {
-margin-top: 28px;
-text-align: left;
-}
-
-.primary-btn {
-display: inline-block;
-padding: 15px 28px;
-border: none;
-border-radius: 999px;
-text-decoration: none;
-font-weight: 800;
-font-size: 1rem;
-background: linear-gradient(135deg, #071738 0%, #103b8f 100%);
-color: #ffffff;
-cursor: pointer;
-transition: all 0.2s ease;
-}
-
-.primary-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-@media (max-width: 900px) {
-.form-grid {
-grid-template-columns: 1fr;
-}
-
-.form-section {
-border-radius: 20px;
-}
-
-.primary-btn {
-width: 100%;
-}
-}
-  .talent-form {
-margin-top: 24px;
-}
-
-.form-section {
-background: #ffffff;
-border: 1px solid #e5e7eb;
-border-radius: 24px;
-padding: 26px 24px;
-margin-bottom: 22px;
-box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-}
-
-.form-section h2 {
-margin: 0 0 18px;
-font-size: 1.5rem;
-color: #071738;
-}
-
-.form-grid {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 18px 20px;
-}
-
-.form-group {
-display: flex;
-flex-direction: column;
-}
-
-.form-group.full-width {
-grid-column: 1 / -1;
-}
-
-.form-group label {
-margin-bottom: 8px;
-font-weight: 700;
-color: #0a1e4f;
-}
-
-.optional {
-font-weight: 400;
-color: #6b7280;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-width: 100%;
-border: 1px solid #cfd8e3;
-border-radius: 14px;
-padding: 14px 14px;
-font-size: 1rem;
-font-family: Arial, sans-serif;
-color: #111827;
-background: #ffffff;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-outline: none;
-border-color: #173f90;
-box-shadow: 0 0 0 3px rgba(23, 63, 144, 0.12);
-}
-
-.checkbox-group {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-line-height: 1.7;
-color: #374151;
-}
-
-.checkbox-group input[type="checkbox"] {
-margin-top: 4px;
-}
-
-.form-actions {
-margin-top: 28px;
-text-align: left;
-}
-
-.primary-btn {
-display: inline-block;
-padding: 15px 28px;
-border: none;
-border-radius: 999px;
-text-decoration: none;
-font-weight: 800;
-font-size: 1rem;
-background: linear-gradient(135deg, #071738 0%, #103b8f 100%);
-color: #ffffff;
-cursor: pointer;
-transition: all 0.2s ease;
-}
-
-.primary-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-@media (max-width: 900px) {
-.form-grid {
-grid-template-columns: 1fr;
-}
-
-.form-section {
-border-radius: 20px;
-}
-
-.primary-btn {
-width: 100%;
-}
+  .form-submit-btn {
+    width: 100%;
+  }
 }
 </style>
 </head>
@@ -822,7 +664,7 @@ width: 100%;
       As automation continues to reshape recruitment, many qualified individuals are filtered out before being seen. Talent Connect restores human-centered access by creating direct pathways between employers and talent across universities, workforce communities, and underrepresented populations.
     </p>
     <p class="hero-sub">
-     The program combines structured visibility, intentional connection, and AI workforce readiness—ensuring individuals are not only seen, but prepared to engage, communicate, and succeed in a modern hiring landscape.
+      The program combines structured visibility, intentional connection, and AI workforce readiness—ensuring individuals are not only seen, but prepared to engage, communicate, and succeed in a modern hiring landscape.
     </p>
   </div>
 </section>
@@ -836,13 +678,13 @@ width: 100%;
         Talent Connect is built to strengthen real human connection in a workforce increasingly influenced by automation. While AI improves efficiency, it often reduces meaningful interaction—creating barriers for individuals seeking opportunity and clarity.
       </p>
       <p>
-    Our approach reintroduces access, visibility, and conversation into the hiring process. Individuals gain the ability to be seen beyond a resume, while employers gain access to a more intentional and diverse talent pipeline.
+        Our approach reintroduces access, visibility, and conversation into the hiring process. Individuals gain the ability to be seen beyond a resume, while employers gain access to a more intentional and diverse talent pipeline.
       </p>
       <p>
-   By integrating AI readiness into the experience, Talent Connect helps individuals understand how to navigate modern hiring systems while maintaining the human engagement needed to stand out and succeed.
+        By integrating AI readiness into the experience, Talent Connect helps individuals understand how to navigate modern hiring systems while maintaining the human engagement needed to stand out and succeed.
       </p>
       <div class="note-box">
-    Be seen. Be connected. Be chosen.
+        Be seen. Be connected. Be chosen.
       </div>
     </div>
   </section>
@@ -891,13 +733,13 @@ width: 100%;
 
           <div class="service-section-label">Overview</div>
           <p class="service-text">
-           Position yourself to be seen in a workforce where visibility is no longer guaranteed. Talent Connect helps individuals move beyond automated screening by creating direct exposure to employers actively seeking talent.
+            Position yourself to be seen in a workforce where visibility is no longer guaranteed. Talent Connect helps individuals move beyond automated screening by creating direct exposure to employers actively seeking talent.
           </p>
-<p class="service-text">
-        This program supports individuals across universities, veteran and military communities, stay-at-home parents returning to work, and individuals with disabilities—ensuring inclusive access to opportunity.
+          <p class="service-text">
+            This program supports individuals across universities, veteran and military communities, stay-at-home parents returning to work, and individuals with disabilities—ensuring inclusive access to opportunity.
           </p>
-<p class="service-text">
-        Through AI readiness awareness, participants also gain insight into how modern hiring systems work and how to better position themselves for success.
+          <p class="service-text">
+            Through AI readiness awareness, participants also gain insight into how modern hiring systems work and how to better position themselves for success.
           </p>
 
           <div class="service-section-label">What It Supports</div>
@@ -911,7 +753,7 @@ width: 100%;
           <div class="card-footer-space"></div>
 
           <div class="button-stack">
-            <button type="button" class="primary-btn" onclick="openModal('talentConnectModal', 'Talent Listing - Job Seekers')">Join Talent Connect</button>
+            <button type="button" class="primary-btn" onclick="openModal('jobSeekerModal')">Join Talent Connect</button>
             <a href="/talent-connect-explore.html" class="secondary-btn">Explore More</a>
           </div>
         </div>
@@ -925,13 +767,13 @@ width: 100%;
 
           <div class="service-section-label">Overview</div>
           <p class="service-text">
-           Access a more intentional and diverse talent pipeline through Talent Connect. Designed for modern workforce challenges, this program helps organizations move beyond traditional job postings and automated filtering.
+            Access a more intentional and diverse talent pipeline through Talent Connect. Designed for modern workforce challenges, this program helps organizations move beyond traditional job postings and automated filtering.
           </p>
-  <p class="service-text">
-           Employers gain structured access to individuals across universities, workforce communities, and underrepresented talent groups—while strengthening visibility, engagement, and hiring outcomes.
+          <p class="service-text">
+            Employers gain structured access to individuals across universities, workforce communities, and underrepresented talent groups—while strengthening visibility, engagement, and hiring outcomes.
           </p>
- <p class="service-text">
-           Talent Connect supports a more human-centered hiring approach, enhanced by AI awareness and strategic workforce connection.
+          <p class="service-text">
+            Talent Connect supports a more human-centered hiring approach, enhanced by AI awareness and strategic workforce connection.
           </p>
 
           <div class="service-section-label">What It Supports</div>
@@ -945,7 +787,7 @@ width: 100%;
           <div class="card-footer-space"></div>
 
           <div class="button-stack">
-            <button type="button" class="primary-btn" onclick="openModal('talentConnectModal', 'Employer Talent Request')">Submit Talent Request</button>
+            <button type="button" class="primary-btn" onclick="openModal('employerRequestModal')">Submit Talent Request</button>
             <a href="/talent-request-explore.html" class="secondary-btn">Explore More</a>
           </div>
         </div>
@@ -982,12 +824,12 @@ width: 100%;
     <div class="cta-card">
       <h2>Interested in Talent Connect?</h2>
       <p>
-       Whether you are an individual seeking to be seen or an organization looking for meaningful access to talent, Talent Connect creates a pathway where visibility meets opportunity.
+        Whether you are an individual seeking to be seen or an organization looking for meaningful access to talent, Talent Connect creates a pathway where visibility meets opportunity.
       </p>
       <p>
         In a workforce shaped by AI, connection matters more than ever. Be part of a program designed to restore access, strengthen engagement, and create real opportunity.
       </p>
-      <button type="button" class="cta-btn" onclick="openModal('talentConnectModal')">
+      <button type="button" class="cta-btn" onclick="openModal('employerRequestModal')">
         Submit Talent Connect Inquiry
       </button>
     </div>
@@ -995,194 +837,416 @@ width: 100%;
 
 </div>
 
-<div class="modal-backdrop" id="talentConnectModal" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="talentConnectModalTitle">
+<!-- JOB SEEKER MODAL -->
+<div class="modal-backdrop" id="jobSeekerModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-labelledby="jobSeekerModalTitle">
     <div class="modal-header">
-      <h3 id="talentConnectModalTitle">Talent Connect Inquiry</h3>
+      <h3 id="jobSeekerModalTitle">Join Talent Connect</h3>
       <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
     </div>
 
     <div class="modal-body">
-      <p>
-        Complete the form below to join Talent Connect or submit an employer talent request.
+      <p class="modal-intro">
+        Complete the form below to join Talent Connect as a job seeker.
       </p>
 
-      <form action="/thank-you" method="POST" name="talent-connect-inquiry" data-netlify="true" netlify-honeypot="bot-field">
-       
-        <form name="talent-connect-job-seekers" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
-<input type="hidden" name="form-name" value="talent-connect-job-seekers" />
-<p style="display:none;">
-<label>Do not fill this out if you're human: <input name="bot-field" /></label>
-</p>
+      <form name="talent-connect-job-seekers" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
+        <input type="hidden" name="form-name" value="talent-connect-job-seekers" />
+        <p style="display:none;">
+          <label>Do not fill this out if you're human: <input name="bot-field" /></label>
+        </p>
 
-<div class="form-section">
-<h2>Contact Information</h2>
+        <div class="form-section">
+          <h2>Contact Information</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="jsFullName">Full Name</label>
+              <input type="text" id="jsFullName" name="full_name" required />
+            </div>
 
-<div class="form-grid">
-<div class="form-group">
-<label for="fullName">Full Name</label>
-<input type="text" id="fullName" name="full_name" required />
+            <div class="form-group">
+              <label for="jsEmailAddress">Email Address</label>
+              <input type="email" id="jsEmailAddress" name="email_address" required />
+            </div>
+
+            <div class="form-group">
+              <label for="jsPhoneNumber">Phone Number</label>
+              <input type="tel" id="jsPhoneNumber" name="phone_number" />
+            </div>
+
+            <div class="form-group">
+              <label for="jsCountry">Country</label>
+              <input type="text" id="jsCountry" name="country" required />
+            </div>
+
+            <div class="form-group">
+              <label for="jsStateProvince">State / Province</label>
+              <input type="text" id="jsStateProvince" name="state_province" />
+            </div>
+
+            <div class="form-group">
+              <label for="jsCity">City</label>
+              <input type="text" id="jsCity" name="city" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Background</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="jsCurrentStatus">Current Status</label>
+              <select id="jsCurrentStatus" name="current_status" required>
+                <option value="">Select one</option>
+                <option value="Student">Student</option>
+                <option value="Recent Graduate">Recent Graduate</option>
+                <option value="Employed and Exploring">Employed and Exploring</option>
+                <option value="Unemployed / Seeking Work">Unemployed / Seeking Work</option>
+                <option value="Career Changer">Career Changer</option>
+                <option value="Returning to Workforce">Returning to Workforce</option>
+                <option value="Veteran / Military-Connected">Veteran / Military-Connected</option>
+                <option value="Individual with Disability">Individual with Disability</option>
+                <option value="Stay-at-Home Parent Returning to Work">Stay-at-Home Parent Returning to Work</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="jsSchoolName">School / University Name <span class="optional">(Optional)</span></label>
+              <input type="text" id="jsSchoolName" name="school_university_name" />
+            </div>
+
+            <div class="form-group">
+              <label for="jsOrganizationName">Current Employer / Organization <span class="optional">(Optional)</span></label>
+              <input type="text" id="jsOrganizationName" name="current_employer_organization" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Opportunity Preferences</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="jsOpportunityType">Type of Opportunity Seeking</label>
+              <select id="jsOpportunityType" name="type_of_opportunity_seeking" required>
+                <option value="">Select one</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Contract">Contract</option>
+                <option value="Temporary">Temporary</option>
+                <option value="Internship">Internship</option>
+                <option value="Fellowship">Fellowship</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Open to Multiple Options">Open to Multiple Options</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="jsWorkFormat">Preferred Work Format</label>
+              <select id="jsWorkFormat" name="preferred_work_format" required>
+                <option value="">Select one</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="On-Site">On-Site</option>
+                <option value="Open to Any">Open to Any</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="jsAvailability">Preferred Hours / Availability</label>
+              <select id="jsAvailability" name="preferred_hours_availability" required>
+                <option value="">Select one</option>
+                <option value="Full-Time Schedule">Full-Time Schedule</option>
+                <option value="Part-Time Schedule">Part-Time Schedule</option>
+                <option value="Mornings">Mornings</option>
+                <option value="Afternoons">Afternoons</option>
+                <option value="Evenings">Evenings</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="jsCareerField">Career Field of Interest</label>
+              <input type="text" id="jsCareerField" name="career_field_of_interest" placeholder="Example: Human Resources, Administration, Communications" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Skills and Experience</h2>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="jsSkillsSummary">Skills / Experience Summary</label>
+              <textarea id="jsSkillsSummary" name="skills_experience_summary" rows="5" placeholder="Briefly describe your experience, strengths, and areas of interest." required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="jsAdditionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
+              <textarea id="jsAdditionalNotes" name="additional_notes" rows="4" placeholder="Share anything else you would like employers or workforce partners to know."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Consent</h2>
+          <div class="checkbox-group">
+            <input type="checkbox" id="jsConsentAgreement" name="consent_agreement" required />
+            <label for="jsConsentAgreement">
+              I understand that Talent Connect is intended to support visibility and access to opportunities and does not guarantee employment, interview selection, or placement.
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="form-submit-btn">Submit</button>
+          <button type="button" class="close-btn" onclick="closeModal(this)">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
-<div class="form-group">
-<label for="emailAddress">Email Address</label>
-<input type="email" id="emailAddress" name="email_address" required />
+<!-- EMPLOYER MODAL -->
+<div class="modal-backdrop" id="employerRequestModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-labelledby="employerRequestModalTitle">
+    <div class="modal-header">
+      <h3 id="employerRequestModalTitle">Employer Talent Request</h3>
+      <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-intro">
+        Complete the form below to submit an employer talent request, consultation request, or general inquiry.
+      </p>
+
+      <form name="employer-request-form" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
+        <input type="hidden" name="form-name" value="employer-request-form" />
+        <p style="display:none;">
+          <label>Do not fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-section">
+          <h2>Organization Contact Information</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="emFullName">Full Name</label>
+              <input type="text" id="emFullName" name="full_name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="emJobTitle">Job Title</label>
+              <input type="text" id="emJobTitle" name="job_title" />
+            </div>
+
+            <div class="form-group">
+              <label for="emOrganizationName">Organization Name</label>
+              <input type="text" id="emOrganizationName" name="organization_name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="emOrganizationType">Organization Type</label>
+              <select id="emOrganizationType" name="organization_type" required>
+                <option value="">Select one</option>
+                <option value="Public Sector">Public Sector</option>
+                <option value="Nonprofit">Nonprofit</option>
+                <option value="Private Sector">Private Sector</option>
+                <option value="Educational Institution">Educational Institution</option>
+                <option value="Workforce Development Organization">Workforce Development Organization</option>
+                <option value="Small Business">Small Business</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emEmailAddress">Email Address</label>
+              <input type="email" id="emEmailAddress" name="email_address" required />
+            </div>
+
+            <div class="form-group">
+              <label for="emPhoneNumber">Phone Number</label>
+              <input type="tel" id="emPhoneNumber" name="phone_number" />
+            </div>
+
+            <div class="form-group">
+              <label for="emCountry">Country</label>
+              <input type="text" id="emCountry" name="country" required />
+            </div>
+
+            <div class="form-group">
+              <label for="emStateProvince">State / Province</label>
+              <input type="text" id="emStateProvince" name="state_province" />
+            </div>
+
+            <div class="form-group">
+              <label for="emCity">City</label>
+              <input type="text" id="emCity" name="city" />
+            </div>
+
+            <div class="form-group">
+              <label for="emWebsite">Organization Website <span class="optional">(Optional)</span></label>
+              <input type="url" id="emWebsite" name="organization_website" placeholder="https://yourorganization.com" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Request Type</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="emRequestType">What are you contacting us about?</label>
+              <select id="emRequestType" name="request_type" required>
+                <option value="">Select one</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Consultation Request">Consultation Request</option>
+                <option value="Employer Talent Request">Employer Talent Request</option>
+                <option value="Partnership / Collaboration">Partnership / Collaboration</option>
+                <option value="Workforce Strategy Support">Workforce Strategy Support</option>
+                <option value="Recruitment Support">Recruitment Support</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emTimeline">Desired Timeline</label>
+              <select id="emTimeline" name="desired_timeline">
+                <option value="">Select one</option>
+                <option value="As soon as possible">As soon as possible</option>
+                <option value="Within 30 days">Within 30 days</option>
+                <option value="Within 60 days">Within 60 days</option>
+                <option value="Within 90 days">Within 90 days</option>
+                <option value="Just exploring options">Just exploring options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Workforce / Hiring Needs</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="emSupportType">Type of Support Needed</label>
+              <select id="emSupportType" name="type_of_support_needed" required>
+                <option value="">Select one</option>
+                <option value="Talent Pipeline Support">Talent Pipeline Support</option>
+                <option value="Recruitment Outreach">Recruitment Outreach</option>
+                <option value="Workforce Strategy">Workforce Strategy</option>
+                <option value="Hiring Consultation">Hiring Consultation</option>
+                <option value="Employer Branding Support">Employer Branding Support</option>
+                <option value="University / Early Career Outreach">University / Early Career Outreach</option>
+                <option value="Multiple Needs">Multiple Needs</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emOpportunityType">Type of Opportunities</label>
+              <select id="emOpportunityType" name="type_of_opportunities">
+                <option value="">Select one</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Contract">Contract</option>
+                <option value="Temporary">Temporary</option>
+                <option value="Internship">Internship</option>
+                <option value="Fellowship">Fellowship</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Multiple Types">Multiple Types</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emWorkFormat">Work Format</label>
+              <select id="emWorkFormat" name="work_format">
+                <option value="">Select one</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="On-Site">On-Site</option>
+                <option value="Multiple Formats">Multiple Formats</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emPositionsCount">Estimated Number of Positions <span class="optional">(Optional)</span></label>
+              <input type="text" id="emPositionsCount" name="estimated_number_of_positions" placeholder="Example: 3, 10, ongoing" />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="emRolesNeeded">Roles or Talent Needed</label>
+              <textarea id="emRolesNeeded" name="roles_or_talent_needed" rows="4" placeholder="Briefly describe the roles, talent areas, or workforce support you are seeking." required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Service Interest</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="emConsultationInterest">Interested in Consultation?</label>
+              <select id="emConsultationInterest" name="consultation_interest" required>
+                <option value="">Select one</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe / Need More Information">Maybe / Need More Information</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emPackageInterest">Interested in Service Package Discussion?</label>
+              <select id="emPackageInterest" name="package_interest" required>
+                <option value="">Select one</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Need More Information First">Need More Information First</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="emGoalsSummary">Goals / Request Summary</label>
+              <textarea id="emGoalsSummary" name="goals_request_summary" rows="5" placeholder="Tell us more about your organization’s needs, goals, or the type of support you are looking for." required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Additional Information</h2>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="emAdditionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
+              <textarea id="emAdditionalNotes" name="additional_notes" rows="4" placeholder="Share any additional information that may help us understand your request."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Consent</h2>
+          <div class="checkbox-group">
+            <input type="checkbox" id="emConsentAgreement" name="consent_agreement" required />
+            <label for="emConsentAgreement">
+              I understand that Employer Request is a paid service inquiry. Submission of this form does not create a contract, guarantee service, candidate placement, or confirm pricing. Pricing and service scope may be discussed after review of the request.
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="form-submit-btn">Submit Employer Request</button>
+          <button type="button" class="close-btn" onclick="closeModal(this)">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
-<div class="form-group">
-<label for="phoneNumber">Phone Number</label>
-<input type="tel" id="phoneNumber" name="phone_number" />
-</div>
-
-<div class="form-group">
-<label for="country">Country</label>
-<input type="text" id="country" name="country" required />
-</div>
-
-<div class="form-group">
-<label for="stateProvince">State / Province</label>
-<input type="text" id="stateProvince" name="state_province" />
-</div>
-
-<div class="form-group">
-<label for="city">City</label>
-<input type="text" id="city" name="city" />
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Background</h2>
-
-<div class="form-grid">
-<div class="form-group">
-<label for="currentStatus">Current Status</label>
-<select id="currentStatus" name="current_status" required>
-<option value="">Select one</option>
-<option value="Student">Student</option>
-<option value="Recent Graduate">Recent Graduate</option>
-<option value="Employed and Exploring">Employed and Exploring</option>
-<option value="Unemployed / Seeking Work">Unemployed / Seeking Work</option>
-<option value="Career Changer">Career Changer</option>
-<option value="Returning to Workforce">Returning to Workforce</option>
-<option value="Veteran / Military-Connected">Veteran / Military-Connected</option>
-<option value="Individual with Disability">Individual with Disability</option>
-<option value="Stay-at-Home Parent Returning to Work">Stay-at-Home Parent Returning to Work</option>
-<option value="Other">Other</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="schoolName">School / University Name <span class="optional">(Optional)</span></label>
-<input type="text" id="schoolName" name="school_university_name" />
-</div>
-
-<div class="form-group">
-<label for="organizationName">Current Employer / Organization <span class="optional">(Optional)</span></label>
-<input type="text" id="organizationName" name="current_employer_organization" />
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Opportunity Preferences</h2>
-
-<div class="form-grid">
-<div class="form-group">
-<label for="opportunityType">Type of Opportunity Seeking</label>
-<select id="opportunityType" name="type_of_opportunity_seeking" required>
-<option value="">Select one</option>
-<option value="Full-Time">Full-Time</option>
-<option value="Part-Time">Part-Time</option>
-<option value="Contract">Contract</option>
-<option value="Temporary">Temporary</option>
-<option value="Internship">Internship</option>
-<option value="Fellowship">Fellowship</option>
-<option value="Volunteer">Volunteer</option>
-<option value="Open to Multiple Options">Open to Multiple Options</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="workFormat">Preferred Work Format</label>
-<select id="workFormat" name="preferred_work_format" required>
-<option value="">Select one</option>
-<option value="Remote">Remote</option>
-<option value="Hybrid">Hybrid</option>
-<option value="On-Site">On-Site</option>
-<option value="Open to Any">Open to Any</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="availability">Preferred Hours / Availability</label>
-<select id="availability" name="preferred_hours_availability" required>
-<option value="">Select one</option>
-<option value="Full-Time Schedule">Full-Time Schedule</option>
-<option value="Part-Time Schedule">Part-Time Schedule</option>
-<option value="Mornings">Mornings</option>
-<option value="Afternoons">Afternoons</option>
-<option value="Evenings">Evenings</option>
-<option value="Weekends">Weekends</option>
-<option value="Flexible">Flexible</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="careerField">Career Field of Interest</label>
-<input type="text" id="careerField" name="career_field_of_interest" placeholder="Example: Human Resources, Administration, Communications" required />
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Skills and Experience</h2>
-
-<div class="form-grid">
-<div class="form-group full-width">
-<label for="skillsSummary">Skills / Experience Summary</label>
-<textarea id="skillsSummary" name="skills_experience_summary" rows="5" placeholder="Briefly describe your experience, strengths, and areas of interest." required></textarea>
-</div>
-
-<div class="form-group full-width">
-<label for="additionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
-<textarea id="additionalNotes" name="additional_notes" rows="4" placeholder="Share anything else you would like employers or workforce partners to know."></textarea>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Consent</h2>
-
-<div class="checkbox-group">
-<input type="checkbox" id="consentAgreement" name="consent_agreement" required />
-<label for="consentAgreement">
-I understand that Talent Connect is intended to support visibility and access to opportunities and does not guarantee employment, interview selection, or placement.
-</label>
-</div>
-</div>
-
-<div class="form-actions">
-<button type="submit" class="primary-btn">Submit</button>
-</div>
-</form>
 <footer>
   Government Workforce Network LLC
 </footer>
 
-
 <script>
-function openModal(id, selectedInterest = '') {
+function openModal(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
-
-  if (selectedInterest) {
-    const interestSelect = modal.querySelector('#talent_connect_interest');
-    if (interestSelect) interestSelect.value = selectedInterest;
-  }
 }
 
 function closeModal(el) {
@@ -1215,3 +1279,5 @@ document.addEventListener('keydown', function (e) {
 
 </body>
 </html>
+
+Sent from my iPhone
