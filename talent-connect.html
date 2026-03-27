@@ -946,6 +946,226 @@ width: 100%;
 
           <div class="button-stack">
             <button type="button" class="primary-btn" onclick="openModal('talentConnectModal', 'Employer Talent Request')">Submit Talent Request</button>
+            <form name="employer-request-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
+<input type="hidden" name="form-name" value="employer-request-form" />
+<p style="display:none;">
+<label>Do not fill this out if you're human: <input name="bot-field" /></label>
+</p>
+
+<div class="form-section">
+<h2>Organization Contact Information</h2>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="contactName">Full Name</label>
+<input type="text" id="contactName" name="full_name" required />
+</div>
+
+<div class="form-group">
+<label for="jobTitle">Job Title</label>
+<input type="text" id="jobTitle" name="job_title" />
+</div>
+
+<div class="form-group">
+<label for="organizationName">Organization Name</label>
+<input type="text" id="organizationName" name="organization_name" required />
+</div>
+
+<div class="form-group">
+<label for="organizationType">Organization Type</label>
+<select id="organizationType" name="organization_type" required>
+<option value="">Select one</option>
+<option value="Public Sector">Public Sector</option>
+<option value="Nonprofit">Nonprofit</option>
+<option value="Private Sector">Private Sector</option>
+<option value="Educational Institution">Educational Institution</option>
+<option value="Workforce Development Organization">Workforce Development Organization</option>
+<option value="Small Business">Small Business</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="emailAddress">Email Address</label>
+<input type="email" id="emailAddress" name="email_address" required />
+</div>
+
+<div class="form-group">
+<label for="phoneNumber">Phone Number</label>
+<input type="tel" id="phoneNumber" name="phone_number" />
+</div>
+
+<div class="form-group">
+<label for="country">Country</label>
+<input type="text" id="country" name="country" required />
+</div>
+
+<div class="form-group">
+<label for="stateProvince">State / Province</label>
+<input type="text" id="stateProvince" name="state_province" />
+</div>
+
+<div class="form-group">
+<label for="city">City</label>
+<input type="text" id="city" name="city" />
+</div>
+
+<div class="form-group">
+<label for="website">Organization Website <span class="optional">(Optional)</span></label>
+<input type="url" id="website" name="organization_website" placeholder="https://yourorganization.com" />
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Request Type</h2>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="requestType">What are you contacting us about?</label>
+<select id="requestType" name="request_type" required>
+<option value="">Select one</option>
+<option value="General Inquiry">General Inquiry</option>
+<option value="Consultation Request">Consultation Request</option>
+<option value="Employer Talent Request">Employer Talent Request</option>
+<option value="Partnership / Collaboration">Partnership / Collaboration</option>
+<option value="Workforce Strategy Support">Workforce Strategy Support</option>
+<option value="Recruitment Support">Recruitment Support</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="timeline">Desired Timeline</label>
+<select id="timeline" name="desired_timeline">
+<option value="">Select one</option>
+<option value="As soon as possible">As soon as possible</option>
+<option value="Within 30 days">Within 30 days</option>
+<option value="Within 60 days">Within 60 days</option>
+<option value="Within 90 days">Within 90 days</option>
+<option value="Just exploring options">Just exploring options</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Workforce / Hiring Needs</h2>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="supportType">Type of Support Needed</label>
+<select id="supportType" name="type_of_support_needed" required>
+<option value="">Select one</option>
+<option value="Talent Pipeline Support">Talent Pipeline Support</option>
+<option value="Recruitment Outreach">Recruitment Outreach</option>
+<option value="Workforce Strategy">Workforce Strategy</option>
+<option value="Hiring Consultation">Hiring Consultation</option>
+<option value="Employer Branding Support">Employer Branding Support</option>
+<option value="University / Early Career Outreach">University / Early Career Outreach</option>
+<option value="Multiple Needs">Multiple Needs</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="opportunityType">Type of Opportunities</label>
+<select id="opportunityType" name="type_of_opportunities">
+<option value="">Select one</option>
+<option value="Full-Time">Full-Time</option>
+<option value="Part-Time">Part-Time</option>
+<option value="Contract">Contract</option>
+<option value="Temporary">Temporary</option>
+<option value="Internship">Internship</option>
+<option value="Fellowship">Fellowship</option>
+<option value="Volunteer">Volunteer</option>
+<option value="Multiple Types">Multiple Types</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="workFormat">Work Format</label>
+<select id="workFormat" name="work_format">
+<option value="">Select one</option>
+<option value="Remote">Remote</option>
+<option value="Hybrid">Hybrid</option>
+<option value="On-Site">On-Site</option>
+<option value="Multiple Formats">Multiple Formats</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="positionsCount">Estimated Number of Positions <span class="optional">(Optional)</span></label>
+<input type="text" id="positionsCount" name="estimated_number_of_positions" placeholder="Example: 3, 10, ongoing" />
+</div>
+
+<div class="form-group full-width">
+<label for="rolesNeeded">Roles or Talent Needed</label>
+<textarea id="rolesNeeded" name="roles_or_talent_needed" rows="4" placeholder="Briefly describe the roles, talent areas, or workforce support you are seeking." required></textarea>
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Service Interest</h2>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="consultationInterest">Interested in Consultation?</label>
+<select id="consultationInterest" name="consultation_interest" required>
+<option value="">Select one</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="Maybe / Need More Information">Maybe / Need More Information</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="packageInterest">Interested in Service Package Discussion?</label>
+<select id="packageInterest" name="package_interest" required>
+<option value="">Select one</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="Need More Information First">Need More Information First</option>
+</select>
+</div>
+
+<div class="form-group full-width">
+<label for="goalsSummary">Goals / Request Summary</label>
+<textarea id="goalsSummary" name="goals_request_summary" rows="5" placeholder="Tell us more about your organization’s needs, goals, or the type of support you are looking for." required></textarea>
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Additional Information</h2>
+
+<div class="form-grid">
+<div class="form-group full-width">
+<label for="additionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
+<textarea id="additionalNotes" name="additional_notes" rows="4" placeholder="Share any additional information that may help us understand your request."></textarea>
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Consent</h2>
+
+<div class="checkbox-group">
+<input type="checkbox" id="consentAgreement" name="consent_agreement" required />
+<label for="consentAgreement">
+I understand that Employer Request is a paid service inquiry. Submission of this form does not create a contract, guarantee service, candidate placement, or confirm pricing. Pricing and service scope may be discussed after review of the request.
+</label>
+</div>
+</div>
+
+<div class="form-actions">
+<button type="submit" class="primary-btn">Submit Employer Request</button>
+</div>
+</form>
+  <footer>
+  Government Workforce Network LLC
+</footer>
             <a href="/talent-request-explore.html" class="secondary-btn">Explore More</a>
           </div>
         </div>
@@ -1167,227 +1387,6 @@ I understand that Talent Connect is intended to support visibility and access to
 </div>
 </form>
 <footer>
-  Government Workforce Network LLC
-</footer>
-
-        <form name="employer-request-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
-<input type="hidden" name="form-name" value="employer-request-form" />
-<p style="display:none;">
-<label>Do not fill this out if you're human: <input name="bot-field" /></label>
-</p>
-
-<div class="form-section">
-<h2>Organization Contact Information</h2>
-
-<div class="form-grid">
-<div class="form-group">
-<label for="contactName">Full Name</label>
-<input type="text" id="contactName" name="full_name" required />
-</div>
-
-<div class="form-group">
-<label for="jobTitle">Job Title</label>
-<input type="text" id="jobTitle" name="job_title" />
-</div>
-
-<div class="form-group">
-<label for="organizationName">Organization Name</label>
-<input type="text" id="organizationName" name="organization_name" required />
-</div>
-
-<div class="form-group">
-<label for="organizationType">Organization Type</label>
-<select id="organizationType" name="organization_type" required>
-<option value="">Select one</option>
-<option value="Public Sector">Public Sector</option>
-<option value="Nonprofit">Nonprofit</option>
-<option value="Private Sector">Private Sector</option>
-<option value="Educational Institution">Educational Institution</option>
-<option value="Workforce Development Organization">Workforce Development Organization</option>
-<option value="Small Business">Small Business</option>
-<option value="Other">Other</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="emailAddress">Email Address</label>
-<input type="email" id="emailAddress" name="email_address" required />
-</div>
-
-<div class="form-group">
-<label for="phoneNumber">Phone Number</label>
-<input type="tel" id="phoneNumber" name="phone_number" />
-</div>
-
-<div class="form-group">
-<label for="country">Country</label>
-<input type="text" id="country" name="country" required />
-</div>
-
-<div class="form-group">
-<label for="stateProvince">State / Province</label>
-<input type="text" id="stateProvince" name="state_province" />
-</div>
-
-<div class="form-group">
-<label for="city">City</label>
-<input type="text" id="city" name="city" />
-</div>
-
-<div class="form-group">
-<label for="website">Organization Website <span class="optional">(Optional)</span></label>
-<input type="url" id="website" name="organization_website" placeholder="https://yourorganization.com" />
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Request Type</h2>
-
-<div class="form-grid">
-<div class="form-group">
-<label for="requestType">What are you contacting us about?</label>
-<select id="requestType" name="request_type" required>
-<option value="">Select one</option>
-<option value="General Inquiry">General Inquiry</option>
-<option value="Consultation Request">Consultation Request</option>
-<option value="Employer Talent Request">Employer Talent Request</option>
-<option value="Partnership / Collaboration">Partnership / Collaboration</option>
-<option value="Workforce Strategy Support">Workforce Strategy Support</option>
-<option value="Recruitment Support">Recruitment Support</option>
-<option value="Other">Other</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="timeline">Desired Timeline</label>
-<select id="timeline" name="desired_timeline">
-<option value="">Select one</option>
-<option value="As soon as possible">As soon as possible</option>
-<option value="Within 30 days">Within 30 days</option>
-<option value="Within 60 days">Within 60 days</option>
-<option value="Within 90 days">Within 90 days</option>
-<option value="Just exploring options">Just exploring options</option>
-</select>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Workforce / Hiring Needs</h2>
-
-<div class="form-grid">
-<div class="form-group">
-<label for="supportType">Type of Support Needed</label>
-<select id="supportType" name="type_of_support_needed" required>
-<option value="">Select one</option>
-<option value="Talent Pipeline Support">Talent Pipeline Support</option>
-<option value="Recruitment Outreach">Recruitment Outreach</option>
-<option value="Workforce Strategy">Workforce Strategy</option>
-<option value="Hiring Consultation">Hiring Consultation</option>
-<option value="Employer Branding Support">Employer Branding Support</option>
-<option value="University / Early Career Outreach">University / Early Career Outreach</option>
-<option value="Multiple Needs">Multiple Needs</option>
-<option value="Other">Other</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="opportunityType">Type of Opportunities</label>
-<select id="opportunityType" name="type_of_opportunities">
-<option value="">Select one</option>
-<option value="Full-Time">Full-Time</option>
-<option value="Part-Time">Part-Time</option>
-<option value="Contract">Contract</option>
-<option value="Temporary">Temporary</option>
-<option value="Internship">Internship</option>
-<option value="Fellowship">Fellowship</option>
-<option value="Volunteer">Volunteer</option>
-<option value="Multiple Types">Multiple Types</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="workFormat">Work Format</label>
-<select id="workFormat" name="work_format">
-<option value="">Select one</option>
-<option value="Remote">Remote</option>
-<option value="Hybrid">Hybrid</option>
-<option value="On-Site">On-Site</option>
-<option value="Multiple Formats">Multiple Formats</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="positionsCount">Estimated Number of Positions <span class="optional">(Optional)</span></label>
-<input type="text" id="positionsCount" name="estimated_number_of_positions" placeholder="Example: 3, 10, ongoing" />
-</div>
-
-<div class="form-group full-width">
-<label for="rolesNeeded">Roles or Talent Needed</label>
-<textarea id="rolesNeeded" name="roles_or_talent_needed" rows="4" placeholder="Briefly describe the roles, talent areas, or workforce support you are seeking." required></textarea>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Service Interest</h2>
-
-<div class="form-grid">
-<div class="form-group">
-<label for="consultationInterest">Interested in Consultation?</label>
-<select id="consultationInterest" name="consultation_interest" required>
-<option value="">Select one</option>
-<option value="Yes">Yes</option>
-<option value="No">No</option>
-<option value="Maybe / Need More Information">Maybe / Need More Information</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="packageInterest">Interested in Service Package Discussion?</label>
-<select id="packageInterest" name="package_interest" required>
-<option value="">Select one</option>
-<option value="Yes">Yes</option>
-<option value="No">No</option>
-<option value="Need More Information First">Need More Information First</option>
-</select>
-</div>
-
-<div class="form-group full-width">
-<label for="goalsSummary">Goals / Request Summary</label>
-<textarea id="goalsSummary" name="goals_request_summary" rows="5" placeholder="Tell us more about your organization’s needs, goals, or the type of support you are looking for." required></textarea>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Additional Information</h2>
-
-<div class="form-grid">
-<div class="form-group full-width">
-<label for="additionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
-<textarea id="additionalNotes" name="additional_notes" rows="4" placeholder="Share any additional information that may help us understand your request."></textarea>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Consent</h2>
-
-<div class="checkbox-group">
-<input type="checkbox" id="consentAgreement" name="consent_agreement" required />
-<label for="consentAgreement">
-I understand that Employer Request is a paid service inquiry. Submission of this form does not create a contract, guarantee service, candidate placement, or confirm pricing. Pricing and service scope may be discussed after review of the request.
-</label>
-</div>
-</div>
-
-<div class="form-actions">
-<button type="submit" class="primary-btn">Submit Employer Request</button>
-</div>
-</form>
-  <footer>
   Government Workforce Network LLC
 </footer>
 
