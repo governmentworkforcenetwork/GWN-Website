@@ -777,64 +777,174 @@ footer {
       </p>
 
       <form action="/thank-you" method="POST" name="talent-connect-inquiry" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="talent-connect-inquiry">
-        <p style="display:none;">
-          <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-        </p>
+       
+        <form name="talent-connect-job-seekers" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
+<input type="hidden" name="form-name" value="talent-connect-job-seekers" />
+<p style="display:none;">
+<label>Do not fill this out if you're human: <input name="bot-field" /></label>
+</p>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="full_name">Full Name</label>
-            <input id="full_name" type="text" name="full_name" required>
-          </div>
+<div class="form-section">
+<h2>Contact Information</h2>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" name="email" required>
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="organization_name">Organization / Business / School Name</label>
-            <input id="organization_name" type="text" name="organization_name">
-          </div>
-
-          <div class="form-group">
-            <label for="country">Country</label>
-            <input id="country" type="text" name="country">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="talent_connect_interest">Select Interest</label>
-          <select id="talent_connect_interest" name="talent_connect_interest" required>
-            <option value="">Select One</option>
-            <option>Talent Listing - Job Seekers</option>
-            <option>Employer Talent Request</option>
-            <option>General Talent Connect Inquiry</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="website_link">Website / LinkedIn / Social Media</label>
-          <input id="website_link" type="text" name="website_link">
-        </div>
-
-        <div class="form-group">
-          <label for="message">Tell Us More</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="cta-btn">Submit Form</button>
-          <button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div class="form-grid">
+<div class="form-group">
+<label for="fullName">Full Name</label>
+<input type="text" id="fullName" name="full_name" required />
 </div>
 
+<div class="form-group">
+<label for="emailAddress">Email Address</label>
+<input type="email" id="emailAddress" name="email_address" required />
+</div>
+
+<div class="form-group">
+<label for="phoneNumber">Phone Number</label>
+<input type="tel" id="phoneNumber" name="phone_number" />
+</div>
+
+<div class="form-group">
+<label for="country">Country</label>
+<input type="text" id="country" name="country" required />
+</div>
+
+<div class="form-group">
+<label for="stateProvince">State / Province</label>
+<input type="text" id="stateProvince" name="state_province" />
+</div>
+
+<div class="form-group">
+<label for="city">City</label>
+<input type="text" id="city" name="city" />
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Background</h2>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="currentStatus">Current Status</label>
+<select id="currentStatus" name="current_status" required>
+<option value="">Select one</option>
+<option value="Student">Student</option>
+<option value="Recent Graduate">Recent Graduate</option>
+<option value="Employed and Exploring">Employed and Exploring</option>
+<option value="Unemployed / Seeking Work">Unemployed / Seeking Work</option>
+<option value="Career Changer">Career Changer</option>
+<option value="Returning to Workforce">Returning to Workforce</option>
+<option value="Veteran / Military-Connected">Veteran / Military-Connected</option>
+<option value="Individual with Disability">Individual with Disability</option>
+<option value="Stay-at-Home Parent Returning to Work">Stay-at-Home Parent Returning to Work</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="schoolName">School / University Name <span class="optional">(Optional)</span></label>
+<input type="text" id="schoolName" name="school_university_name" />
+</div>
+
+<div class="form-group">
+<label for="organizationName">Current Employer / Organization <span class="optional">(Optional)</span></label>
+<input type="text" id="organizationName" name="current_employer_organization" />
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Opportunity Preferences</h2>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="opportunityType">Type of Opportunity Seeking</label>
+<select id="opportunityType" name="type_of_opportunity_seeking" required>
+<option value="">Select one</option>
+<option value="Full-Time">Full-Time</option>
+<option value="Part-Time">Part-Time</option>
+<option value="Contract">Contract</option>
+<option value="Temporary">Temporary</option>
+<option value="Internship">Internship</option>
+<option value="Fellowship">Fellowship</option>
+<option value="Volunteer">Volunteer</option>
+<option value="Open to Multiple Options">Open to Multiple Options</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="workFormat">Preferred Work Format</label>
+<select id="workFormat" name="preferred_work_format" required>
+<option value="">Select one</option>
+<option value="Remote">Remote</option>
+<option value="Hybrid">Hybrid</option>
+<option value="On-Site">On-Site</option>
+<option value="Open to Any">Open to Any</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="availability">Preferred Hours / Availability</label>
+<select id="availability" name="preferred_hours_availability" required>
+<option value="">Select one</option>
+<option value="Full-Time Schedule">Full-Time Schedule</option>
+<option value="Part-Time Schedule">Part-Time Schedule</option>
+<option value="Mornings">Mornings</option>
+<option value="Afternoons">Afternoons</option>
+<option value="Evenings">Evenings</option>
+<option value="Weekends">Weekends</option>
+<option value="Flexible">Flexible</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="careerField">Career Field of Interest</label>
+<input type="text" id="careerField" name="career_field_of_interest" placeholder="Example: Human Resources, Administration, Communications" required />
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Skills and Experience</h2>
+
+<div class="form-grid">
+<div class="form-group full-width">
+<label for="skillsSummary">Skills / Experience Summary</label>
+<textarea id="skillsSummary" name="skills_experience_summary" rows="5" placeholder="Briefly describe your experience, strengths, and areas of interest." required></textarea>
+</div>
+
+<div class="form-group">
+<label for="linkedinProfile">LinkedIn Profile <span class="optional">(Optional)</span></label>
+<input type="url" id="linkedinProfile" name="linkedin_profile" placeholder="https://linkedin.com/in/yourname" />
+</div>
+
+<div class="form-group">
+<label for="resumeLink">Resume Link <span class="optional">(Optional)</span></label>
+<input type="url" id="resumeLink" name="resume_link" placeholder="https://drive.google.com/..." />
+</div>
+
+<div class="form-group full-width">
+<label for="additionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
+<textarea id="additionalNotes" name="additional_notes" rows="4" placeholder="Share anything else you would like employers or workforce partners to know."></textarea>
+</div>
+</div>
+</div>
+
+<div class="form-section">
+<h2>Consent</h2>
+
+<div class="checkbox-group">
+<input type="checkbox" id="consentAgreement" name="consent_agreement" required />
+<label for="consentAgreement">
+I understand that Talent Connect is intended to support visibility and access to opportunities and does not guarantee employment, interview selection, or placement.
+</label>
+</div>
+</div>
+
+<div class="form-actions">
+<button type="submit" class="primary-btn">Submit</button>
+</div>
+</form>
 <footer>
   Government Workforce Network LLC
 </footer>
