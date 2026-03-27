@@ -1,2673 +1,1530 @@
 
 
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Government Workforce Network LLC - Together, Building Income, Opportunity, and Well-Being " name="description"/>
-<title>Government Workforce Network LLC</title>
-<style>
-/* ===== Base ===== */
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-:root{
---navy:#0B1F3A;
---navy-2:#12325E;
---royal:#214A9A;
---accent:#D4AF37; /* Presidential gold accent */
---ink:#222;
---muted:#5a6b7a;
---card:#ffffff;
---soft:#f6f8fb;
---brand-green:#2E8B57;
-}
-body{
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-line-height:1.6; color:var(--ink);
-background: linear-gradient(180deg, #0e1d36 0%, #1c3e83 100%) fixed;
-}
-.container{ max-width:1200px; margin:0 auto; padding:0 20px; }
-
-/* ===== Header / Nav ===== */
-header{
-background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
-color:#fff; padding:10px 0; box-shadow:0 6px 24px rgba(0,0,0,.25);
-position:sticky; top:0; z-index:50;
-}
-nav{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-.logo{ display:flex; align-items:center; gap:12px; padding-left:6px; }
-.logo img{ height:64px; width:auto; background:#fff; padding:4px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,.2); }
-.logo-text{ font-size:1.45rem; font-weight:800; color:#fff; letter-spacing:.2px; }
-
-.nav-links{ list-style:none; display:flex; gap:1.5rem; align-items:center; }
-.nav-links a{ color:#fff; text-decoration:none; font-weight:600; letter-spacing:.2px; padding:6px 2px; border-bottom:2px solid transparent; }
-.nav-links a:hover{ border-color:var(--accent); }
-.nav-get-involved{ background:#3B4A6B; color:#fff; padding:10px 18px; border-radius:8px; font-weight:700; text-decoration:none; box-shadow:0 2px 10px rgba(0,0,0,.25); }
-.nav-get-involved:hover{ background:#4a5a7a; }
-
-/* ===== Hero ===== */
-.hero{
-position:relative; min-height:420px; display:flex; align-items:center;
-/* CHANGED: lightened overlay alphas for better photo visibility */
-background: linear-gradient(115deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 100%), url('hero.jpg') center/cover no-repeat;
-border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.hero-content{ text-align:center; color:#fff; padding:50px 0; }
-.eyebrow{ text-transform:uppercase; letter-spacing:.15em; font-weight:700; color:var(--accent); font-size:.9rem; opacity:.95; }
-.hero h1{
-font-size:2.4rem; margin:.75rem auto 0; max-width: 960px;
-text-shadow: 0 8px 30px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.35);
-line-height:1.25;
-}
-.lede{ max-width:920px; margin:12px auto 0; opacity:.95; }
-
-/* ===== Sections ===== */
-.section{ padding:70px 0; }
-.panel{ background: rgba(255,255,255,.92); border-radius:12px; padding:22px 26px; box-shadow:0 12px 40px rgba(0,0,0,.12); }
-
-h2.section-title{
-color:#fff; text-align:center; font-size:2.1rem; margin-bottom:18px; font-weight:900; letter-spacing:.2px;
-position:relative;
-}
-h2.section-title.dark{ color:#fff; }
-.title-wrap{ text-align:center; margin-bottom:20px; }
-.title-wrap .rule{
-width:72px; height:4px; background:var(--accent); margin:10px auto 0; border-radius:3px;
-box-shadow:0 6px 16px rgba(212,175,55,.35);
-}
-
-/* ===== Cards (Consulting Services) ===== */
-.cards-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:26px; }
-.service-card{
-background:var(--card); border-radius:14px; box-shadow:0 12px 34px rgba(0,0,0,.14);
-overflow:hidden; display:flex; flex-direction:column; border:1px solid rgba(11,31,58,.06);
-}
-.svc-img{ background:#0e1d36; }
-.svc-img img{ width:100%; height:220px; object-fit:cover; display:block; filter:saturate(.92) contrast(1.02); }
-.svc-body{ padding:18px 18px 22px; display:flex; flex-direction:column; gap:12px; }
-.svc-body h3{ color:var(--navy-2); }
-
-.btn{ background:var(--navy); color:#fff; border:none; border-radius:8px; padding:12px 16px; cursor:pointer; font-weight:700; letter-spacing:.25px; box-shadow:0 6px 18px rgba(0,0,0,.20); }
-.btn:hover{ background:#1b2e52; }
-.btn.alt{ background:var(--brand-green); }
-.btn.alt:hover{ background:#256e46; }
-
-/* ===== Community Free Services ===== */
-#community-services{ background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(246,248,251,.98)); }
-#community-services .section-title{ color:var(--brand-green); }
-.community-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:26px; max-width:1100px; margin:0 auto; justify-items:center; }
-.community-card{ background:var(--card); border-radius:14px; box-shadow:0 12px 34px rgba(0,0,0,.14); overflow:hidden; width:100%; max-width:560px; border:1px solid rgba(11,31,58,.06); }
-.community-card img{ width:100%; height:240px; object-fit:cover; display:block; }
-.community-card .body{ padding:18px 18px 24px; }
-.community-card h3{ margin:0; color:var(--brand-green); font-size:20px; font-weight:800; }
-
-/* ===== Footer ===== */
-footer{ background:var(--navy); color:#fff; text-align:center; padding:30px 0; }
-footer p{ opacity:.9; }
-
-/* ===== Modals (Netlify forms) ===== */
-.modal-backdrop{
-position: fixed; inset: 0; background: rgba(0,0,0,.55);
-display: none; align-items: center; justify-content: center; z-index: 1000;
-}
-.modal-backdrop.open{ display: flex; }
-.modal{
-width: min(760px, 92vw); background: #fff; border-radius: 12px;
-box-shadow: 0 20px 60px rgba(0,0,0,.35); overflow: hidden;
-border:1px solid rgba(11,31,58,.08);
-}
-.modal-header{
-background: linear-gradient(135deg, #0B1F3A, #214A9A);
-color:#fff; padding:16px 20px; display:flex; justify-content:space-between; align-items:center;
-}
-.modal-header h3{ margin:0; font-size:1.15rem; font-weight:800; }
-.modal-body{ padding:18px 20px 22px; }
-.modal-close{
-background:transparent; border:none; color:#fff; font-size:1.4rem; cursor:pointer;
-}
-.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.grid-1{ display:grid; grid-template-columns:1fr; gap:14px; }
-.modal label{ font-weight:700; font-size:.92rem; color:#12325E; }
-.modal input, .modal select, .modal textarea{
-width:100%; padding:10px 12px; border:1px solid #d6dbe3; border-radius:8px; font:inherit;
-}
-.modal textarea{ min-height:120px; resize:vertical; }
-.modal .actions{ margin-top:16px; display:flex; gap:10px; }
-.btn-primary{ background:#0B1F3A; color:#fff; padding:12px 16px; border-radius:8px; border:none; font-weight:800; cursor:pointer; }
-.btn-secondary{ background:#e9edf5; color:#12325E; padding:12px 16px; border-radius:8px; border:none; font-weight:700; cursor:pointer; }
-.honeypot{ display:none; } /* Netlify spam trap */
-.thankyou{ display:none; padding:12px 14px; border-radius:8px; background:#f0f7ed; color:#1b4d2b; border:1px solid #cfe7d6; margin-bottom:12px; }
-
-/* ===== Mobile ===== */
-@media (max-width: 768px){
-nav{ flex-direction:column; align-items:center; }
-.logo{ padding-left:0; justify-content:center; margin-bottom:8px; }
-.nav-links{ flex-direction:column; width:100%; gap:10px; align-items:center; }
-.nav-get-involved{ width:auto; }
-.hero{ min-height:360px; padding:48px 16px; }
-.hero h1{ font-size:1.7rem; }
-.grid-2{ grid-template-columns:1fr; }
-}
-/* ========================================= */
-
-/* NAVIGATION BAR: Even Spacing & Alignment */
-
-/* ========================================= */
-
-
-
-header nav ul {
-
-display: flex;
-
-justify-content: center; /* Centers everything evenly */
-
-align-items: center;
-
-list-style: none;
-
-margin: 0;
-
-padding: 0;
-
-gap: 50px; /* Adjust this number for spacing between items (40–60 looks best) */
-
-flex-wrap: nowrap; /* Prevents wrapping like Glow Together into two lines */
-
-white-space: nowrap; /* Keeps all items in one line */
-
-}
-
-header nav ul li {
-
-flex: 0 1 auto; /* Prevents items from stretching unevenly */
-
-text-align: center;
-
-}
-
-header nav ul li a {
-
-color: white;
-
-font-weight: 600;
-
-text-decoration: none;
-
-font-size: 1rem;
-
-transition: color 0.3s ease, border-bottom 0.3s ease;
-
-border-bottom: 2px solid transparent;
-
-padding-bottom: 4px;
-
-}
-
-/* Adds a subtle gold underline on hover */
-
-header nav ul li a:hover {
-
-color: var(--accent);
-
-border-bottom: 2px solid var(--accent);
-
-}
-
-/* Fix for mobile */
-
-@media (max-width: 768px) {
-
-header nav ul {
-
-flex-wrap: wrap;
-
-justify-content: center;
-
-gap: 25px;
-
-}
-
-}
-
-/* Space between "LLC" brand and the first nav item ("About") */
-
-header a[href="#about"], nav a[href="#about"] { 
-
-margin-left: 70px !important; 
-
-}
-
-/* ===== HERO SECTION WITH FADE-IN IMAGE ===== */
-#hero {
-position: relative;
-height: 100vh;
-background: url("assets/hero-group-photo.jpg") center/cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-color: #fff;
-overflow: hidden;
-opacity: 0; /* Start transparent */
-animation: fadeBg 2.5s ease-in-out forwards; /* Background fade-in */
-}
-
-/* Subtle overlay for readability */
-.hero-overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.35);
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-}
-
-/* Hero content */
-.hero-content {
-position: relative;
-z-index: 2;
-max-width: 800px;
-padding: 0 20px;
-}
-
-/* Logo */
-.hero-logo {
-width: 110px;
-height: auto;
-margin-bottom: 20px;
-filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
-opacity: 0;
-animation: fadeInUp 1.2s ease-out forwards;
-animation-delay: 0.8s; /* starts after background fades in */
-}
-
-/* Blurb */
-.hero-content h1 {
-font-size: 2rem;
-font-weight: 700;
-line-height: 1.4;
-text-shadow: 0 3px 8px rgba(0,0,0,0.5);
-opacity: 0;
-animation: fadeInUp 1.4s ease-out forwards;
-animation-delay: 1.2s;
-}
-
-/* Animations */
-@keyframes fadeBg {
-0% { opacity: 0; transform: scale(1.02); }
-100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes fadeInUp {
-0% {
-opacity: 0;
-transform: translateY(20px);
-}
-100% {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-#hero {
-height: 75vh;
-}
-.hero-logo {
-width: 90px;
-}
-.hero-content h1 {
-font-size: 1.4rem;
-padding: 0 15px;
-}
-}
-/* HERO IMAGE CONTAINER */
-.hero-image {
-position: relative;
-margin-top: 35px;
-display: flex;
-justify-content: center;
-align-items: center;
-animation: fadeInUp 1.6s ease-out forwards;
-animation-delay: 1.6s;
-}
-
-/* SOFT GLOW BEHIND PHOTO */
-.hero-glow {
-position: absolute;
-width: 420px;
-height: 420px;
-border-radius: 50%;
-background: radial-gradient(
-circle,
-rgba(255, 255, 255, 0.45) 0%,
-rgba(255, 255, 255, 0.15) 45%,
-rgba(0, 0, 0, 0) 80%
-);
-filter: blur(40px);
-z-index: 1;
-}
-
-/* TEAM PHOTO */
-.hero-image img {
-position: relative;
-z-index: 2;
-width: 420px;
-max-width: 90%;
-border-radius: 15px;
-box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
--webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-image img:hover {
-transform: scale(1.03);
-box-shadow: 0 8px 22px rgba(0,0,0,0.5);
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-.hero-glow {
-width: 300px;
-height: 300px;
-filter: blur(25px);
-}
-.hero-image img {
-width: 300px;
-}
-}
-<div class="talent-container">
-<div class="talent-card"> ... </div>
-<div class="talent-card"> ... </div>
-</div>
-
-<style>
-.talent-container {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
-}
-.talent-card {
-background: white;
-border-radius: 10px;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-width: 400px;
-padding: 20px;
-text-align: center;
-}
-/* ===== Section Titles (Lead With, Mission, Vision) ===== */
-.section-title {
-margin-top: 40px; /* reduced top spacing */
-margin-bottom: 15px; /* tightens below title */
-text-align: center;
-}
-/* ===== Content Boxes (Mission, Vision, etc.) ===== */
-.about-box {
-background-color: rgba(255, 255, 255, 0.9);
-border-radius: 12px;
-padding: 30px 40px;
-margin: 40px auto; /* reduces top gap between title & box */
-max-width: 700px;
-width: 85%;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-text-align: center;
-}
-/* Layout for the 3-column section */
-.three-columns {
-display: flex;
-justify-content: center;
-gap: 30px;
-flex-wrap: wrap; /* stacks on mobile */
-margin-top: 40px;
-}
-
-.info-card {
-background-color: rgba(255, 255, 255, 0.9);
-border-radius: 12px;
-padding: 25px 30px;
-width: 300px; /* each card width */
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-text-align: center;
-}
-
-.info-card h3 {
-margin-bottom: 15px;
-color: #002855; /* navy tone */
-}
-
-.section-title {
-text-align: center;
-margin-top: 60px;
-margin-bottom: 20px;
-}
-
-.about-box {
-background-color: rgba(255, 255, 255, 0.9);
-border-radius: 12px;
-padding: 30px 40px;
-margin: 0 auto 40px;
-max-width: 800px;
-text-align: center;
-}
-
-}
-
-/* Fix anchor scroll position for 'About' section */
-#about {
-scroll-margin-top: 40px; /* adjust this number based on your navbar height */
-padding-top: 20px; /* optional small spacing for breathing room */
-}
-/* Mobile-only: make sure section headings are visible
-when tapping nav links (About, Programs, Talent Connect, etc.) */
-@media (max-width: 768px) {
-#about,
-#programs,
-#be-glow,
-#services,
-#talent-connect,
-#community-services,
-#opportunities {
-scroll-margin-top: 120px; /* clears the logo + stacked menu on phone */
-}
-}
-/* MOBILE: smaller offset so headings are fully visible */
-@media (max-width: 768px) {
-#about,
-#programs,
-#be-glow,
-#services,
-#talent-connect,
-#community-services,
-#opportunities {
-scroll-margin-top: 60px; /* smaller gap for phones */
-}
-}
-.hero-logo {
-
-display: block;
-
-margin: 40px auto 24px; /* centers it and gives breathing room above the heading */
-
-max-width: 200px; /* make it bigger; change to 320/340 if you want even larger */
-
-}
-
-  .welcome-video-wrap{
-max-width: 800px;
-margin: 18px auto;
-}
-
-.welcome-video-wrap video{
-width: 100%;
-height: auto;
-display: block;
-border-radius: 12px;
-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-pointer-events: auto;
-position: relative;
-z-index: 2;
-}
-
-  
-.welcome-video-wrap {
-max-width: 640px; /* Controls desktop size */
-margin: 30px auto; /* Centers it */
-padding: 0 15px; /* Prevents edge touching on small screens */
-}
-
-.welcome-video-wrap video {
-width: 100%;
-height: auto;
-display: block;
-border-radius: 14px;
-box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.modal-backdrop{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,0.55);
-z-index:9999;
-align-items:center;
-justify-content:center;
-padding:16px;
-}
-
-.modal-backdrop.open{
-display:flex;
-}
-
-.modal{
-width:min(900px, 96vw);
-max-height:90vh;
-overflow:auto;
-background:#fff;
-border-radius:12px;
-}
-
-.modal-backdrop{
-display:none; /* hidden by default */
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.55);
-z-index:9999;
-align-items:center;
-justify-content:center;
-padding:16px;
-}
-
-
-<style>
-/* === GWN minimal visual fixes (layout untouched) === */
-.hero{
-/* Soft light-blue -> white gradient behind hero image */
-background: linear-gradient(180deg, #1a46a3 0%, #ffffff 100%) !important;
-padding-top: 32px;
-padding-bottom: 14px;
-}
-/* Keep hero text below image and never overlay faces */
-.hero .hero-content, .hero .content, .hero-content{
-position: static !important;
-margin-top: 16px;
-text-align: center;
-}
-
-/* Contained hero photo (no crop), centered, rounded 20px */
-.hero img.hero-photo{
-display: block !important;
-width: 100% !important;
-max-height: 560px !important; /* magazine-style taller hero */
-height: auto !important;
-object-fit: contain !important;
-object-position: center !important;
-border-radius: 20px !important;
-margin: 0 auto !important;
-box-shadow: none !important; /* clean & flat */
-}
-
-/* Undo any absolute-placed hero image rules from old styles */
-.hero img{ position: static !important; }
-
-/* De-zoom all other photos without changing card sizes/spacing */
-#programs img,
-#paid img,
-#free img,
-.programs img,
-.services img,
-.card img,
-.svc-img img,
-.service-card img,
-.community-card img{
-object-fit: contain !important;
-object-position: center !important;
-}
-
-/* === Minor headline nudge for balance (keep layout) === */
-.hero .hero-content, .hero .content, .hero-content{
-margin-top: 6px !important; /* was 16px */
-}
-
-/* === Opportunities minor polish (layout untouched) === */
-.job-item:hover { box-shadow: 0 0 10px rgba(212,175,55,0.4); border-color: var(--accent); }
-@media (max-width:700px){
-.job-item { grid-template-columns:1fr; text-align:left; }
-}
-
-/* === Hero headline slight upward nudge for balance === */
-.hero h1 {
-margin-top: -10px !important;
-}
-
-/* === NAV MINI-FIX (keeps layout, prevents wrap, balances spacing) === */
-@media (min-width: 901px){
-nav { flex-wrap: nowrap !important; }
-.logo img { height: 56px !important; } /* slightly smaller to free space */
-.logo-text { white-space: nowrap !important; }
-.nav-links { flex-wrap: nowrap !important; gap: 1rem !important; }
-.nav-links a { font-size: 0.95rem !important; }
-.nav-get-involved { padding: 8px 14px !important; font-size: 0.95rem !important; }
-}
-/* For mid widths where wrapping could occur */
-@media (min-width: 700px) and (max-width: 900px){
-.nav-links { gap: 0.8rem !important; }
-.nav-links a { font-size: 0.9rem !important; }
-.logo img { height: 52px !important; }
-}
-/* ===== TALENT CONNECT LAYOUT ===== */
-.section-pad { padding: 56px 20px; }
-.tc-wrap { max-width: 1200px; margin: 0 auto; }
-
-.tc-title {
-text-align:center; color:#fff; font-weight:800; font-size: clamp(28px, 3vw, 40px);
-text-shadow: 0 2px 10px rgba(0,0,0,.35);
-margin-bottom: 28px;
-}
-
-/* card grid */
-.service-grid {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 24px;
-}
-@media (max-width: 820px){
-.service-grid { grid-template-columns: 1fr; }
-}
-
-/* card */
-.tc-card {
-background: rgba(255,255,255,.92);
-border-radius: 16px;
-box-shadow: 0 12px 30px rgba(0,0,0,.22);
-overflow: hidden;
-display:flex; flex-direction:column;
-min-height: 230px;
-border: 1px solid rgba(255,255,255,.35);
-}
-.tc-card .media {
-height: 140px;
-background: linear-gradient(135deg,#2b3a67,#4b74ff);
-display:flex; align-items:center; justify-content:center;
-}
-.tc-card .media img { max-height: 100%; max-width: 100%; object-fit: cover; }
-
-.tc-card .body { padding: 18px 18px 10px; color:#1b2235; }
-.tc-card h3 {
-margin: 0 0 6px; font-size: 20px; line-height:1.2; font-weight:800; color:#0f1833;
-}
-.tc-card p { margin: 0; opacity:.85; }
-
-/* button */
-.btn-primary {
-margin: 16px 18px 18px;
-display:inline-block; text-align:center;
-background: #15203d; color:#fff; font-weight:800;
-padding: 12px 18px; border-radius: 10px; text-decoration:none;
-box-shadow: inset 0 0 0 2px rgba(255,255,255,.06), 0 6px 16px rgba(0,0,0,.25);
-}
-.btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
-
-/* form shells */
-.form-panel {
-margin-top: 36px;
-background: rgba(255,255,255,.96);
-border: 1px solid rgba(255,255,255,.4);
-border-radius: 16px;
-box-shadow: 0 12px 30px rgba(0,0,0,.22);
-padding: 22px;
-}
-.form-panel h4 { margin: 0 0 10px; font-size: 18px; color:#0f1833; }
-.grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
-@media (max-width: 720px){ .grid-2 { grid-template-columns: 1fr; } }
-
-input[type="text"], input[type="email"], input[type="tel"], textarea {
-width: 100%; padding: 12px 14px; border-radius: 10px; border:1px solid #cfd6ff;
-background:#f7f9ff; outline:none;
-}
-textarea { min-height: 110px; resize: vertical; }
-
-/* Submit buttons on forms */
-.form-panel .submit {
-margin-top: 10px; background:#2342f0; color:#fff; border:0; border-radius:10px;
-padding: 12px 18px; font-weight:800; cursor:pointer;
-box-shadow: 0 6px 16px rgba(35,66,240,.35);
-}
-.form-panel .submit:hover { filter: brightness(1.05); }
-
-/* Disclaimer box – high contrast & tidy */
-.disclaimer {
-margin-top: 14px;
-background: #0f1833;
-color: #fff;
-border-radius: 12px;
-padding: 14px 14px 10px;
-}
-.disclaimer strong {
-display:block; letter-spacing:.02em; text-transform:uppercase;
-font-size: 12px; opacity:.8; margin-bottom:6px;
-}
-.disclaimer p { margin: 0; font-size: 13px; line-height:1.45; opacity:.95; }
-
-/* tiny helper for the checkbox row */
-.disclaimer-ack { margin-top: 10px; display:flex; gap:10px; align-items:flex-start; color:#fff; }
-.disclaimer-ack input { margin-top: 2px; }
-
-/* Mobile-only: make anchor jumps land with headings fully visible */
-@media (max-width: 768px) {
-:target {
-scroll-margin-top: 140px; /* fine-tune if needed (120–160 range) */
-}
-}
-/* Invisible anchors used ONLY to adjust scroll position on mobile */
-
-.mobile-offset-anchor {
-
-display: block;
-
-position: relative;
-
-height: 0;
-
-}
-
-
-
-/* Desktop / tablet: no offset (keeps your current behavior 100% the same) */
-
-@media (min-width: 769px) {
-
-.mobile-offset-anchor {
-
-top: 0;
-
-}
-
-}
-
-/* Mobile: pull the anchor up so headings land just under the header */
-
-@media (max-width: 768px) {
-
-.mobile-offset-anchor {
-
-top: -140px; /* adjust to -130 / -150 later if you want tiny tweaks */
-
-}
-
-}
-
-/* DESKTOP: hide small header logo and center the nav links */
-
-@media (min-width: 769px) {/* Align Mission, Vision, Glow+Grow cards */
-
-.about-three-cards {
-
-display: flex;
-
-gap: 20px;
-
-justify-content: center;
-
-align-items: stretch;
-
-flex-wrap: wrap;
-
-}
-
-
-
-.about-three-cards .card {
-
-flex: 1 1 300px;
-
-max-width: 360px;
-
-display: flex;
-
-flex-direction: column;
-
-justify-content: space-between;
-
-}
-
-
-.logo {
-
-display: none; /* hides the small logo + 'Government Workforce Network LLC' in the header */
-
-}
-
-
-
-nav {
-
-justify-content: center; /* centers About / Programs / etc. across the top */
-
-}
-
-}
-/* Mission / Vision / Glow + Grow — aligned in one row on desktop */
-
-@media (min-width: 900px) {
-
-.three-columns.equal-cards {
-
-display: flex;
-
-flex-direction: row;
-
-flex-wrap: nowrap; /* ❗ don’t allow wrapping */
-
-justify-content: center;
-
-align-items: stretch;
-
-gap: 24px;
-
-}
-
-
-
-.three-columns.equal-cards .info-card {
-
-flex: 1 1 0;
-
-max-width: 340px; /* keeps them narrow enough to fit */
-
-display: flex;
-
-flex-direction: column;
-
-justify-content: space-between;
-
-}
-
-}
-
-  /* Buttons area inside service card */
-.service-actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:14px;
-}
-
-/* Button base (use your existing if you already have) */
-.btn{
-display:inline-block;
-padding:10px 14px;
-border-radius:10px;
-font-weight:700;
-text-decoration:none;
-border:none;
-cursor:pointer;
-}
-
-.btn-primary{
-background:#0b1f44;
-color:#fff;
-}
-
-.btn-secondary{
-background:transparent;
-color:#0b1f44;
-border:1px solid rgba(11,31,68,0.35);
-}
-
-  
-/* ===== Explore More Modal (SAFE - does not affect Netlify form modals) ===== */
-.svc-modal{
-position:fixed;
-inset:0;
-display:none;
-z-index:10000;
-}
-.svc-modal.is-open{ display:block; }
-
-.svc-overlay{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.55);
-}
-
-.svc-card{
-position:relative;
-max-width:820px;
-margin:6vh auto;
-background:#fff;
-border-radius:16px;
-padding:22px;
-box-shadow:0 18px 50px rgba(0,0,0,0.25);
-z-index:1;
-}
-
-.svc-close{
-position:absolute;
-top:12px;
-right:12px;
-width:40px;
-height:40px;
-border-radius:10px;
-border:1px solid rgba(0,0,0,0.12);
-background:#fff;
-cursor:pointer;
-}
-
-.service-actions{
-display:flex;
-justify-content:center; /* centers Explore More */
-padding:0 18px 18px;
-}
-
-
-
-/* ===== Community Business Partners: secondary button ===== */
-.btn.outline{
-  background: transparent;
-  color: var(--navy);
-  border: 2px solid rgba(11,31,58,.25);
-  box-shadow: none;
-}
-.btn.outline:hover{
-  background: rgba(11,31,58,.06);
-}
-.cbp-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Government Workforce Network LLC - Together, Building Income, Opportunity, and Well-Being"
+  />
+  <title>Government Workforce Network LLC</title>
 
   <style>
-  .services-section {
-    padding: 60px 20px;
-    background: #fafafa;
-  }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-  .services-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-  }
-
-  .service-card {
-    background: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-radius: 18px;
-    padding: 28px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
-  }
-
-  .service-badge {
-    display: inline-block;
-    margin-bottom: 14px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: #111111;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-  }
-
-  .service-card h3 {
-    margin: 0 0 10px;
-    font-size: 28px;
-    line-height: 1.2;
-    color: #111111;
-  }
-
-  .service-tagline {
-    margin: 0 0 14px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #555555;
-    line-height: 1.5;
-  }
-
-  .service-description {
-    margin: 0 0 18px;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #444444;
-  }
-
-  .service-features {
-    margin: 0 0 24px;
-    padding-left: 18px;
-    color: #333333;
-    line-height: 1.8;
-    font-size: 15px;
-  }
-
-  .service-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.2s ease;
-  }
-
-  .btn-primary {
-    background: #111111;
-    color: #ffffff;
-    border: 1px solid #111111;
-  }
-
-  .btn-primary:hover {
-    background: #222222;
-    border-color: #222222;
-  }
-
-  .btn-secondary {
-    background: #ffffff;
-    color: #111111;
-    border: 1px solid #111111;
-  }
-
-  .btn-secondary:hover {
-    background: #f3f3f3;
-  }
-
-  @media (max-width: 640px) {
-    .service-card {
-      padding: 22px;
+    :root{
+      --navy:#0B1F3A;
+      --navy-2:#12325E;
+      --royal:#214A9A;
+      --accent:#D4AF37;
+      --ink:#222;
+      --muted:#5a6b7a;
+      --card:#ffffff;
+      --soft:#f6f8fb;
+      --brand-green:#2E8B57;
     }
 
-    .service-card h3 {
-      font-size: 24px;
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: linear-gradient(180deg, #0e1d36 0%, #1c3e83 100%) fixed;
     }
-  }
 
-  .tc-modal {
-display: none;
-position: fixed;
-z-index: 999;
-inset: 0;
-background: rgba(0,0,0,0.6);
-justify-content: center;
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header{
+      background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
+      color: #fff;
+      padding: 12px 0;
+      box-shadow: 0 6px 24px rgba(0,0,0,.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .logo img{
+      height: 62px;
+      width: auto;
+      background: #fff;
+      padding: 4px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    }
+
+    .logo-text{
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: .2px;
+      white-space: nowrap;
+    }
+
+    .nav-links{
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a{
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: .2px;
+      padding: 6px 2px;
+      border-bottom: 2px solid transparent;
+      transition: color .25s ease, border-color .25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover{
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    #hero{
+      position: relative;
+      min-height: 88vh;
+      background:
+        linear-gradient(115deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.38) 100%),
+        url("hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-overlay{
+      width: 100%;
+      padding: 70px 20px 50px;
+    }
+
+    .hero-content{
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero-logo{
+      width: 110px;
+      height: auto;
+      margin: 0 auto 22px;
+      display: block;
+      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.45));
+    }
+
+    .hero-content h1{
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      text-shadow: 0 8px 24px rgba(0,0,0,.35);
+      margin-bottom: 18px;
+    }
+
+    .hero-content p{
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.94);
+    }
+
+    .hero-image{
+      position: relative;
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-glow{
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.32) 0%,
+        rgba(255,255,255,0.08) 45%,
+        rgba(0,0,0,0) 80%
+      );
+      filter: blur(40px);
+      z-index: 1;
+    }
+
+    .hero-image img{
+      position: relative;
+      z-index: 2;
+      width: 420px;
+      max-width: 92%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+      display: block;
+    }
+
+    .mobile-offset-anchor{
+      display: block;
+      position: relative;
+      height: 0;
+    }
+
+    .about-section{
+      padding: 80px 20px;
+      color: #ffffff;
+    }
+
+    .about-container{
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .gold-line{
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 0 auto 24px auto;
+      border-radius: 2px;
+      box-shadow: 0 6px 16px rgba(212,175,55,.35);
+    }
+
+    .about-container h2{
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .about-container p{
+      font-size: 1.08rem;
+      line-height: 1.85;
+      margin-bottom: 22px;
+      color: #e5e7eb;
+    }
+
+    .contact-card{
+      margin: 38px auto 34px;
+      max-width: 840px;
+      background: rgba(255,255,255,0.95);
+      color: var(--navy-2);
+      border-radius: 14px;
+      padding: 24px 28px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+      text-align: left;
+    }
+
+    .contact-item{
+      margin-bottom: 12px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .contact-item:last-child{
+      margin-bottom: 0;
+    }
+
+    .contact-label{
+      font-weight: 800;
+      margin-right: 6px;
+    }
+
+    .contact-card a{
+      color: var(--navy-2);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover{
+      text-decoration: underline;
+    }
+
+    .welcome-video-wrap{
+      max-width: 640px;
+      margin: 30px auto 42px;
+      padding: 0 15px;
+    }
+
+    .welcome-video-wrap video{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      background: #000;
+    }
+
+    .three-columns{
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .info-card{
+      background-color: rgba(255,255,255,0.94);
+      border-radius: 14px;
+      padding: 28px 30px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .info-card h3{
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .info-card p{
+      color: #24364d;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .services-section{
+      padding: 70px 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));
+    }
+
+    .services-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card{
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+    }
+
+    .service-badge{
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #111111;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .service-card h3{
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #111111;
+    }
+
+    .service-tagline{
+      margin: 0 0 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    .service-description{
+      margin: 0 0 18px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #444444;
+    }
+
+    .service-features{
+      margin: 0 0 24px;
+      padding-left: 18px;
+      color: #333333;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .service-actions{
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-primary{
+      background: #111111;
+      color: #ffffff;
+      border: 1px solid #111111;
+    }
+
+    .btn-primary:hover{
+      background: #222222;
+      border-color: #222222;
+    }
+
+    .btn-secondary{
+      background: #ffffff;
+      color: #111111;
+      border: 1px solid #111111;
+    }
+
+    .btn-secondary:hover{
+      background: #f3f3f3;
+    }
+
+    #opportunities{
+      padding: 70px 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));
+    }
+
+    .title-wrap{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title{
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: .2px;
+      margin-bottom: 10px;
+      color: var(--royal);
+    }
+
+    .rule{
+      width: 72px;
+      height: 4px;
+      background: var(--accent);
+      margin: 10px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 6px 16px rgba(212,175,55,.35);
+    }
+
+    .job-list{
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .job-card{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .job-title{
+      margin-bottom: 8px;
+      font-size: 1.35rem;
+    }
+
+    .job-title a{
+      color: var(--royal);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .job-title a:hover{
+      text-decoration: underline;
+    }
+
+    .job-meta{
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .job-summary{
+      color: #333;
+      margin-bottom: 10px;
+      line-height: 1.75;
+    }
+
+    .job-apply{
+      display: inline-block;
+      margin-top: 6px;
+      color: var(--navy-2);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .job-apply:hover{
+      text-decoration: underline;
+    }
+
+    footer{
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p{
+      opacity: .92;
+    }
+
+    .modal-backdrop{
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open{
+      display: flex;
+    }
+
+    .modal{
+      width: min(760px, 92vw);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      overflow: hidden;
+      border: 1px solid rgba(11,31,58,.08);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-header{
+      background: linear-gradient(135deg, #0B1F3A, #214A9A);
+      color: #fff;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h3{
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .modal-body{
+      padding: 18px 20px 22px;
+    }
+
+    .modal-close{
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .grid-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .grid-1{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .modal label{
+      font-weight: 700;
+      font-size: .92rem;
+      color: #12325E;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .modal input,
+    .modal select,
+    .modal textarea{
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d6dbe3;
+      border-radius: 8px;
+      font: inherit;
+    }
+
+    .modal textarea{
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .modal .actions{
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-submit{
+      background: #0B1F3A;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-cancel{
+      background: #e9edf5;
+      color: #12325E;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .honeypot{
+      display: none;
+    }
+
+    .thankyou{
+      display: none;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #f0f7ed;
+      color: #1b4d2b;
+      border: 1px solid #cfe7d6;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 900px){
+      nav{
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo{
+        justify-content: center;
+      }
+
+      .nav-links{
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px){
+      #hero{
+        min-height: auto;
+      }
+
+      .hero-overlay{
+        padding: 52px 16px 36px;
+      }
+
+      .hero-logo{
+        width: 90px;
+      }
+
+      .hero-content h1{
+        font-size: 1.8rem;
+      }
+
+      .hero-glow{
+        width: 300px;
+        height: 300px;
+        filter: blur(25px);
+      }
+
+      .hero-image img{
+        width: 300px;
+      }
+
+      .grid-2{
+        grid-template-columns: 1fr;
+      }
+
+      .section-title{
+        font-size: 1.9rem;
+      }
+
+      .about-container h2{
+        font-size: 2rem;
+      }
+
+      .service-card{
+        padding: 22px;
+      }
+
+      .service-card h3{
+        font-size: 24px;
+      }
+
+      .mobile-offset-anchor{
+        top: -120px;
+      }
+    }
+header{
+background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
+color:#fff;
+padding: 10px 0;
+box-shadow: 0 6px 24px rgba(0,0,0,.25);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.top-nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.logo{
+display: flex;
+align-items: center;
+gap: 12px;
+min-width: 0;
+flex-shrink: 0;
+}
+
+.logo img{
+height: 60px;
+width: auto;
+background: #fff;
+padding: 4px;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.logo-text{
+font-size: 1.2rem;
+font-weight: 800;
+color: #fff;
+line-height: 1.2;
+white-space: nowrap;
+}
+
+.nav-links{
+list-style: none;
+display: flex;
+gap: 18px;
+align-items: center;
+justify-content: flex-end;
+flex-wrap: wrap;
+margin: 0;
+padding: 0;
+}
+
+.nav-links li{
+margin: 0;
+padding: 0;
+}
+
+.nav-links a{
+color: #fff;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.98rem;
+padding: 6px 0;
+border-bottom: 2px solid transparent;
+transition: color .25s ease, border-color .25s ease;
+white-space: nowrap;
+}
+
+.nav-links a:hover{
+color: var(--accent);
+border-bottom-color: var(--accent);
+}
+
+/* Tablet */
+@media (max-width: 1100px){
+.top-nav{
+flex-direction: column;
 align-items: center;
 }
 
-.tc-modal-content {
-background: #fff;
-width: 90%;
-max-width: 700px;
-border-radius: 18px;
-padding: 30px;
-position: relative;
-max-height: 90vh;
-overflow-y: auto;
+.logo{
+justify-content: center;
 }
 
-.tc-close {
-position: absolute;
-right: 20px;
-top: 15px;
-font-size: 28px;
-cursor: pointer;
-}
-
-.tc-modal input,
-.tc-modal select,
-.tc-modal textarea {
-width: 100%;
-padding: 12px;
-margin: 8px 0 16px;
-border-radius: 10px;
-border: 1px solid #ccc;
-}
-
-.tc-submit {
-width: 100%;
-padding: 14px;
-border-radius: 999px;
-border: none;
-background: #1d4ed8;
-color: #fff;
-font-weight: bold;
-cursor: pointer;
-}
-
-.tc-checkbox {
-display: flex;
-align-items: center; /* 👈 vertically aligned */
-gap: 12px; /* 👈 space between box and text */
-margin-top: 20px;
-margin-bottom: 24px;
-}
-
-  .tc-submit {
-width: 100%;
-padding: 16px;
-border-radius: 999px;
-border: none;
-background: linear-gradient(135deg, #1d4ed8, #2563eb);
-color: #fff;
-font-weight: bold;
-cursor: pointer;
-margin-top: 10px; /* 👈 extra breathing room */
-}
-
-.tc-checkbox input {
-width: 18px;
-height: 18px;
-cursor: pointer;
-}
-
-  .tc-checkbox label {
-font-size: 14px;
-line-height: 1.4;
-cursor: pointer;
-}
-
-.tc-checkbox span {
-font-size: 14px;
-line-height: 1.4;
-}
-
-.tc-note {
-font-size: 14px;
-color: #555;
-margin-bottom: 20px;
-}
-
-  .primary-btn {
-display: inline-block;
-padding: 14px 28px;
-border-radius: 999px;
-border: none;
-background: linear-gradient(135deg, #0f172a, #1e3a8a);
-color: #ffffff;
-font-size: 16px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-
-.primary-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-}
-
-.primary-btn:active {
-transform: scale(0.98);
-}
-
- 
-  #opportunities {
-text-align: left;
-}
-
-#opportunities h2 {
+.logo-text{
+white-space: normal;
 text-align: center;
 }
-#opportunities {
-max-width: 900px;
-margin: 0 auto;
-padding: 40px 20px;
+
+.nav-links{
+justify-content: center;
+gap: 14px 22px;
 }
 
-  #community-services {
-background: #F0FDF4;
-padding: 40px 0 60px 0; /* 👈 reduces top space */
-margin-top: 40px; /* 👈 creates clean gap from above */
+.nav-links a{
+font-size: 0.95rem;
+}
 }
 
-#talent-connect {
-margin-bottom: 40px;
+/* Mobile */
+@media (max-width: 768px){
+header{
+padding: 12px 0;
 }
 
-  .tc-card img {
-object-fit: cover;
-height: 180px;
+.top-nav{
+gap: 14px;
+}
+
+.logo{
+flex-direction: column;
+justify-content: center;
+text-align: center;
+gap: 10px;
+}
+
+.logo img{
+height: 72px;
+}
+
+.logo-text{
+font-size: 1.05rem;
+white-space: normal;
+text-align: center;
+}
+
+.nav-links{
 width: 100%;
+justify-content: center;
+gap: 12px 18px;
 }
 
-  .tc-card img {
-object-fit: cover;
-height: 180px;
-width: 100%;
+.nav-links a{
+font-size: 0.95rem;
+}
 }
 
-  .gold-line {
-width: 60px;
-height: 4px;
-background: #d4af37;
-margin: 0 auto 30px auto;
-border-radius: 2px;
-}
+  </style>
+</head>
 
-</style>
-
-</style></head>
 <body>
-<header>
-<nav class="container">
-<div class="logo"><picture><source srcset="logo.png" type="image/png"/><img alt="Government Workforce Network LLC Logo" loading="eager" src="logo.png"/></picture>
-
-
+  <header>
+<nav class="container top-nav">
+<div class="logo">
+<img src="logo.png" alt="Government Workforce Network LLC Logo" />
 <span class="logo-text">Government Workforce Network LLC</span>
 </div>
+
 <ul class="nav-links">
 <li><a href="#about-anchor">About</a></li>
-  
-<li><a href="initiatives.html">Initiatives</a></li>
-
-<li><a href="consulting.html">Consulting</a></li>
-
-<li><a href="talent-connect.html">Talent Connect</a></li>
-
-<li><a href="#opportunities">Opportunities</a></li>
-
-<li><a href='/events'>Events</a></li>
-  
-<li><a href='/workforce-tv'>Workforce TV</a></li>
-  
-<li><a href='/workforce-intelligence-team'>Our Team</a></li>
-
-
+<li><a href="/initiatives">Initiatives</a></li>
+<li><a href="/consulting">Consulting</a></li>
+<li><a href="/talent-connect">Talent Connect</a></li>
+<li><a href="/opportunities">Opportunities</a></li>
+<li><a href="/events">Events</a></li>
+<li><a href="/workforce-tv">Workforce TV</a></li>
+<li><a href="/workforce-intelligence-team">Our Team</a></li>
 </ul>
 </nav>
 </header>
-<section id="hero">
-<div class="hero-overlay fade-bg">
-<div class="hero-content">
-<img src="logo.png" alt="Government Workforce Network Logo" class="hero-logo fade-in" />
-<h1 class="fade-in-delayed">
-Together, Building Income, Opportunity, and Well-Being </h1>
-<div class="hero-image fade-in-delayed-2">
-<div class="hero-glow"></div>
-<img src="hero.png" alt="Diverse Workforce Team" />
-</div>
-</div>
-</div>
-</section>
-<span id="about-anchor" class="mobile-offset-anchor"></span>
 
-<section id="about">
+  <section id="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <img src="logo.png" alt="Government Workforce Network Logo" class="hero-logo" />
+        <h1>Together, Building Income, Opportunity, and Well-Being</h1>
 
-<!-- People come first. Strategy builds what comes next. + Mission/Vision content here -->
+        <p>
+          Government Workforce Network LLC is building a people-centered ecosystem that helps organizations and individuals navigate the future of work through strategic consulting, workforce readiness, innovative initiatives, and meaningful connection.
+        </p>
 
-</section>
-<section class="about-section">
-<div class="about-container">
+        <div class="hero-image">
+          <div class="hero-glow"></div>
+          <img src="hero.png" alt="Diverse Workforce Team" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="gold-line"></div>
-<h2>About</h2>
+  <span id="about-anchor" class="mobile-offset-anchor"></span>
 
-<p>
-Government Workforce Network LLC is a strategic workforce consulting and development organization focused on building income, opportunity, and well-being in a rapidly evolving, AI-driven world.
-</p>
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="gold-line"></div>
+      <h2>About</h2>
 
-<p>
-As technology continues to reshape how organizations hire, operate, and grow, we help bridge the gap between automation and human connection. Our work ensures that while systems become more efficient, people remain seen, supported, and empowered.
-</p>
-
-<p>
-We partner with universities, public sector organizations, and workforce communities to strengthen talent pipelines, modernize workforce strategy, and create pathways for sustainable career growth. Through our approach, we support both organizations adapting to AI and individuals navigating a changing workforce landscape.
-</p>
-
-<p>
-Our work integrates consulting, community engagement, and innovative workforce initiatives—ensuring organizations are prepared for the future of work while individuals are not left behind by it.
-</p>
-
-</div>
-</section>
-<hr>
-<p>
-<!-- Contact Information -->
-<div style="margin-top:20px; line-height:1.8; font-size:16px;">
-
-<!-- Phone -->
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="#12325E" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.6 10.8C8.2 14 10 15.8 13.2 17.4L15.4 15.2C15.7 14.9 16.2 14.8 16.6 14.9C17.8 15.3 19 15.5 20.2 15.5C20.7 15.5 21 15.8 21 16.3V20C21 20.6 20.6 21 20 21C9.5 21 3 14.5 3 4C3 3.4 3.4 3 4 3H7.7C8.2 3 8.5 3.3 8.5 3.8C8.5 5 8.7 6.2 9.1 7.4C9.2 7.8 9.1 8.3 8.8 8.6L6.6 10.8Z"/>
-</svg>
-<a href="tel:+19497752175" style="text-decoration:none; color:#12325E; font-weight:600;">
-(949) 775-2175
-</a>
-</div>
-
-<!-- Email -->
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="#12325E" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
-</svg>
-<a href="mailto:admin@governmentworkforcenetwork.com" style="text-decoration:none; color:#12325E; font-weight:600;">
-Email Us
-</a>
-</div>
-
-<!-- Instagram -->
-<div style="display:flex; align-items:center; gap:8px;">
-<a href="https://instagram.com/government_workforce_network" target="_blank" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12325E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-<circle cx="12" cy="12" r="4"/>
-<circle cx="18" cy="6" r="1"/>
-</svg>
-<span style="color:#12325E; font-weight:600;">
-@government_workforce_network
-</span>
-</a>
-</div>
-
-<!-- Mailing Address -->
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-<a href="mailing address" style="text-decoration:none; color:#12325E; font-weight:600;">
-Address: 25422 Trabuco Rd., #339, Lake Forest, CA 92630 
-</a>
-</div>
-
-<!-- Hours -->
-<div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-<a href="mailing address" style="text-decoration:none; color:#12325E; font-weight:600;">
-Hours: Monday - Friday, 9:00 a.m. - 4:00 p.m. PT
-</a>
-</div>
-
-</div>
-
-</p>
-
-<div>
-
-
-
-<!-- Welcome Video -->
-<div class="welcome-video-wrap">
-<video
-id="welcome-video"
-controls
-playsinline
-preload="metadata"
->
-<source src="/welcome.mp4" type="video/mp4" />
-Your browser does not support the video tag.
-</video>
-</div>
-
-<hr>
-
-<div class="three-columns">
-
-<div class="info-card">
-
-<h3>Mission</h3>
-
-<p>To build an integrated ecosystem that strengthens income pathways, expands access to opportunity, and promotes well-being through strategic consulting, workforce initiatives, and community driven collaboration.</p>
-
-</div>
-
-
-
-<div class="info-card">
-
-<h3>Vision</h3>
-
-<p>To cultivate a nationally recognized ecosystem where organizations and individuals thrive through expanded opportunity, structured growth, and sustainable economic empowerment.</p>
-
-</div>
-
-</div>
-</div>
-</section>
-
-</div>
-
-
-<section id="be-glow">
-
-  <section class="services-section">
-  <div class="services-container">
-    <div class="service-card ai-photo-verification">
-      <div class="service-badge">New Digital Service</div>
-      <h3>AI Photo Verification</h3>
-      <p class="service-tagline">
-        Professional Photo Verification for Official Documents and Publications
-      </p>
-      <p class="service-description">
-        Upload your photo and receive an authenticity analysis report designed to support
-        official documents, professional submissions, and publication use.
+      <p>
+        Government Workforce Network LLC is a strategic workforce consulting and development organization focused on building income, opportunity, and well-being in a rapidly evolving, AI-driven world.
       </p>
 
-       <ul class="service-features">
-    <li>AI-assisted photo analysis</li>
-    <li>Self-service access anytime</li>
-    <li>Downloadable verification report</li>
-    <li>Free service • Optional donation</li>
-  </ul>
+      <p>
+        As technology continues to reshape how organizations hire, operate, and grow, we help bridge the gap between automation and human connection. Our work ensures that while systems become more efficient, people remain seen, supported, and empowered.
+      </p>
 
-       <div class="donation-note">
-    This tool is provided free of charge as part of Government Workforce Network’s commitment to digital integrity and responsible media use. 
-    If you find this tool helpful, voluntary donation are welcome to support continued access and improvements.
-  </div>
+      <p>
+        We partner with universities, public sector organizations, and workforce communities to strengthen talent pipelines, modernize workforce strategy, and create pathways for sustainable career growth. Through our approach, we support both organizations adapting to AI and individuals navigating a changing workforce landscape.
+      </p>
 
-  <div class="service-actions">
+      <p>
+        Our work integrates consulting, community engagement, and innovative workforce initiatives—ensuring organizations are prepared for the future of work while individuals are not left behind by it.
+      </p>
 
-    <a class='btn-primary' href='/photo-verification'>
-      Start Verification
-    </a>
+      <div class="contact-card">
+        <div class="contact-item">
+          <span class="contact-label">Phone:</span>
+          <a href="tel:+19497752175">(949) 775-2175</a>
+        </div>
 
-    <a href="https://www.paypal.com/ncp/payment/QKVYHAQWYPY6W"class="btn-secondary" target="_blank">
-      Contribute to Community Access. Click Here to Donate.
-    </a>
+        <div class="contact-item">
+          <span class="contact-label">Email:</span>
+          <a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">Instagram:</span>
+          <a href="https://instagram.com/government_workforce_network" target="_blank">@government_workforce_network</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">Address:</span>
+          <span>25422 Trabuco Rd., #339, Lake Forest, CA 92630</span>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">Hours:</span>
+          <span>Monday - Friday, 9:00 a.m. - 4:00 p.m. PT</span>
+        </div>
+      </div>
+
+      <div class="welcome-video-wrap">
+        <video id="welcome-video" controls playsinline preload="metadata">
+          <source src="/welcome.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="three-columns">
+        <div class="info-card">
+          <h3>Mission</h3>
+          <p>
+            To build an integrated ecosystem that strengthens income pathways, expands access to opportunity, and promotes well-being through strategic consulting, workforce initiatives, and community-driven collaboration.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Vision</h3>
+          <p>
+            To cultivate a nationally recognized ecosystem where organizations and individuals thrive through expanded opportunity, structured growth, and sustainable economic empowerment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="be-glow">
+    <div class="services-container">
+      <div class="service-card ai-photo-verification">
+        <div class="service-badge">New Digital Service</div>
+        <h3>AI Photo Verification</h3>
+
+        <p class="service-tagline">
+          Professional Photo Verification for Official Documents and Publications
+        </p>
+
+        <p class="service-description">
+          Upload your photo and receive an authenticity analysis report designed to support official documents, professional submissions, and publication use.
+        </p>
+
+        <ul class="service-features">
+          <li>AI-assisted photo analysis</li>
+          <li>Self-service access anytime</li>
+          <li>Downloadable verification report</li>
+          <li>Free service • Optional donation</li>
+        </ul>
+
+        <p class="service-description">
+          This tool is provided free of charge as part of Government Workforce Network’s commitment to digital integrity and responsible media use. If you find this tool helpful, voluntary donations are welcome to support continued access and improvements.
+        </p>
+
+        <div class="service-actions">
+          <a class="btn-primary" href="/photo-verification">Start Verification</a>
+          <a class="btn-secondary" href="https://www.paypal.com/ncp/payment/QKVYHAQWYPY6W" target="_blank">
+            Contribute to Community Access
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <span id="opportunities-anchor" class="mobile-offset-anchor"></span>
+
+  <section id="opportunities">
+    <div class="container">
+      <div class="title-wrap">
+        <h2 class="section-title">Opportunities</h2>
+        <div class="rule"></div>
+      </div>
+
+      <p style="max-width:860px; margin:0 auto 28px; color:#223; text-align:center;">
+        Explore current open opportunities.
+      </p>
+
+      <div class="job-list">
+        <div class="job-card">
+          <h3 class="job-title">
+            <a href="https://brandedbymarivel.com" target="_blank" rel="noopener">
+              USA Community Brand Partner
+            </a>
+          </h3>
+
+          <div class="job-meta">30% Income of Sales • Easy to Start</div>
+
+          <p class="job-summary">
+            Promote Branded By Marivel™. Share referral links, campaigns, and community outreach. All products are owned, produced, and shipped from California, U.S.A.
+          </p>
+
+          <p class="job-summary">
+            We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment for all participants.
+          </p>
+
+          <a href="mailto:admin@governmentworkforcenetwork.com" class="job-apply">Email Us</a>
+        </div>
+
+        <div class="job-card">
+          <h3 class="job-title">
+            <a href="https://brandedbymarivel.com" target="_blank" rel="noopener">
+              International Territory Partner
+            </a>
+          </h3>
+
+          <div class="job-meta">30% Income of Sales in Your Country • Easy to Start</div>
+
+          <p class="job-summary">
+            Promote Branded By Marivel™ in your country. Share referral links, campaigns, and community outreach. All products are owned, produced, and shipped from California, U.S.A.
+          </p>
+
+          <p class="job-summary">
+            We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment for all participants.
+          </p>
+
+          <a href="mailto:admin@governmentworkforcenetwork.com" class="job-apply">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Government Workforce Network LLC. All rights reserved.</p>
+    <p>Together, Building Income, Opportunity, and Well-Being</p>
+  </footer>
+
+  <!-- Strategic Recruitment & Job Visibility -->
+  <div class="modal-backdrop" id="jobModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="jobModalTitle">
+      <div class="modal-header">
+        <h3 id="jobModalTitle">Strategic Recruitment & Job Visibility</h3>
+        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="thankyou">Thank you! Your job posting was submitted.</div>
+
+        <form method="POST" name="paid_job_posting" onsubmit="return afterSubmit(this)">
+          <input type="hidden" name="form-name" value="paid_job_posting" />
+          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid-2">
+            <div>
+              <label>Organization *</label>
+              <input name="Organization" type="text" required />
+            </div>
+            <div>
+              <label>Website</label>
+              <input name="Website" type="url" />
+            </div>
+            <div>
+              <label>Contact Name *</label>
+              <input name="Contact Name" type="text" required />
+            </div>
+            <div>
+              <label>Email *</label>
+              <input name="Email" type="email" required />
+            </div>
+            <div>
+              <label>Phone</label>
+              <input name="Phone" type="tel" />
+            </div>
+            <div>
+              <label>Job Title *</label>
+              <input name="Job Title" type="text" required />
+            </div>
+          </div>
+
+          <div class="grid-1">
+            <div>
+              <label>Location (City/State or Remote)</label>
+              <input name="Location" type="text" />
+            </div>
+            <div>
+              <label>Job Description / How to Apply *</label>
+              <textarea name="Job Description" required></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-submit" type="submit">Submit Posting</button>
+            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ======= Opportunities ======= -->
-<span id="opportunities-anchor" class="mobile-offset-anchor"></span>
-
-<section id="opportunities">
-
-<!-- Opportunities content -->
-
-</section>
-<section class="section" id="opportunities" style="background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));">
-<div class="container">
-<div class="title-wrap">
-<h2 class="section-title" style="color:var(--royal);">Opportunities</h2>
-<div class="rule" style="background:var(--accent);"></div>
-</div>
-<p class="section-sub" style="max-width:860px; margin:0 auto 28px; color:#223; text-align:center;">
-Explore current open opportunities.</p>
-
-<div class="job-list" style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
-<!-- =========================
-COPY-PASTE JOB TEMPLATE
-How to add a job:
-1) Duplicate the block below (uncomment it)
-2) Replace title/link, employer, and closing date
-========================= -->
-
- <!-- ===== JOB CARD (COPY / PASTE TO ADD NEW JOB) ===== -->
-<div class="job-card">
-<h3 class="job-title">
-<a href="https://brandedbymarivel.com" target="_blank" rel="noopener">
-USA Community Brand Partner
-</a>
-</h3>
-<div class="job-meta">
-30% Income of Sales • Easy to Start
-</div>
-<p class="job-summary">
-Promote Branded By Marivel™. Share referral links, campaigns, community outreach. All products are owned, produced, and shipped from California, U.S.A. Email us if interested.
-</p>
-<p>
-<p class="job-summary">
-We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment for all participants.
-</p></p>
-<a class="job-apply"
-href="https://brandedbymarivel.com/job-id"target="_blank"rel="noopener">
-<a href="mailto:admin@governmentworkforcenetwork.com" style="text-decoration:none; color:#12325E; font-weight:600;">
-Email Us
-</a>
-</div>
-  
-<div class="job-card">
-<h3 class="job-title">
-<a href="https://brandedbymarivel.com" target="_blank" rel="noopener">
-International Territory Partner
-</a>
-</h3>
-<div class="job-meta">
-30% Income of Sales in Your Country • Easy to Start
-</div>
-<p class="job-summary">
-Promote Branded By Marivel™ in your country. Share referral links, campaigns, community outreach. All products are owned, produced, and shipped from California, U.S.A. Email us if interested.
-</p>
-<p>
-<p class="job-summary">
-We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment for all participants.
-</p></p>
-<a class="job-apply"
-href="https://brandedbymarivel.com/job-id"target="_blank"rel="noopener">
-<a href="mailto:admin@governmentworkforcenetwork.com" style="text-decoration:none; color:#12325E; font-weight:600;">
-Email Us
-</a>
-</div>
-
-</a>
-</div>
-
-
-<!--
-<div class="job-item" style="display:grid; grid-template-columns:1fr 1fr 1fr; background:#fff; border:1px solid rgba(0,0,0,0.08); padding:12px 20px; border-radius:8px; align-items:center;">
-<a href="https://employer-website.com/apply" target="_blank" rel="noopener" style="font-weight:700; color:var(--royal); text-decoration:none;">Job Title Here</a>
-<span style="color:#333;">Employer Name</span>
-<span style="color:#777;">Closing: MMM DD, YYYY</span>
-</div>
--->
-</div>
-</div>
-</section>
-</section>
-<footer>
-<p>© 2025 Government Workforce Network LLC. All rights reserved.</p>
-<p>Together, Building Income, Opportunity, and Well-Being</p>
-</footer>
-<!-- ========== MODALS WITH NETLIFY FORMS ========== -->
-<div aria-hidden="true" class="modal-backdrop" id="jobModal">
-<div aria-labelledby="jobModalTitle" class="modal" role="dialog">
-<div class="modal-header">
-<h3 id="jobModalTitle">Strategic Recruitment & Job Visibility</h3>
-<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
-</div>
-<div class="modal-body">
-<div class="thankyou">Thank you! Your job posting was submitted.</div>
-<form method='POST' name='paid_job_posting' onsubmit='return afterSubmit(this)'>
-<input name="form-name" type="hidden" value="paid_job_posting"/>
-<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
-<div class="grid-2">
-<div>
-<label>Organization *</label>
-<input name="Organization" required="" type="text"/>
-</div>
-<div>
-<label>Website</label>
-<input name="Website" type="url"/>
-</div>
-<div>
-<label>Contact Name *</label>
-<input name="Contact Name" required="" type="text"/>
-</div>
-<div>
-<label>Email *</label>
-<input name="Email" required="" type="email"/>
-</div>
-<div>
-<label>Phone</label>
-<input name="Phone" type="tel"/>
-</div>
-<div>
-<label>Job Title *</label>
-<input name="Job Title" required="" type="text"/>
-</div>
-</div>
-<div class="grid-1">
-<div>
-<label>Location (City/State or Remote)</label>
-<input name="Location" type="text"/>
-</div>
-<div>
-<label>Job Description / How to Apply *</label>
-<textarea name="Job Description" required=""></textarea>
-</div>
-</div>
-<div class="actions">
-<button class="btn-primary" type="submit">Submit Posting</button>
-<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<div aria-hidden="true" class="modal-backdrop" id="grantModal">
-<div aria-labelledby="grantModalTitle" class="modal" role="dialog">
-<div class="modal-header">
-<h3 id="grantModalTitle">Visibility & Recognition Gala – Consultation Request</h3>
-<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
-</div>
-<div class="modal-body">
-<div class="thankyou">Thank you! Your inquiry was sent.</div>
-<form method='POST' name='visibility & recognition gala_inquiry' onsubmit='return afterSubmit(this)'>
-<input name="form-name" type="hidden" value="'visibility & recognition gala "/>
-<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
-<div class="grid-2">
-<div><label>Organization *</label><input name="Organization" required=""/></div>
-<div><label>Organization Type</label><select name="Private Company"><option>Private Company</option><option>Government Agency</option><option>Nonprofit</option><><option>Other</option></select></div>
-<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
-<div><label>Email *</label><input name="Email" required="" type="email"/></div>
-<div><label>Phone</label><input name="Phone" type="tel"/></div>
-<div><label>Proposed Event Date</label><input name="Proposed Event Date" type="date"/></div>
-</div>
-<div class="grid-1">
-<div><label>Event Objectives</label><input name=" Event Objectives"/></div>
-<div><label> Tell Us About Your Recognition Program Needs*</label><textarea name=" Tell Us About Your Recognition Program Needs" required=""></textarea></div>
-</div>
-<div class="actions">
-<button class="btn-primary" type="submit">Request Consultation</button>
-<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<div aria-hidden="true" class="modal-backdrop" id="webModal">
-<div aria-labelledby="webModalTitle" class="modal" role="dialog">
-<div class="modal-header">
-<h3 id="webModalTitle">Government Funding & Readiness Bootcamp – Readiness Application</h3>
-<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
-</div>
-<div class="modal-body">
-<div class="thankyou">Thank you! We’ll get back to you shortly.</div>
-<form method='POST' name='bootcamp_inquiry' onsubmit='return afterSubmit(this)'>
-<input name="form-name" type="hidden" value="bootcamp_inquiry"/>
-<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
-<div class="grid-2">
-<div><label>Organization *</label><input name="Organization" required=""/></div>
-<div><label>Type *</label><select name="Type" required=""><option>Private Business</option><option>Nonprofit</option><option>Startup</option> <option>Other</option></select></div>
-<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
-<div><label>Email *</label><input name="Email" required="" type="email"/></div>
-<div><label>Current Funding Stage</label><input name="Budget" placeholder=""/></div>
-<div><label>Type *</label><select name="Type" required=""><option>Exploring opportunities</option><option>Preparing for first grant/contract</option><option>Previously applied but was not awarded</option> <option>Other</option></select></div>
-<div><label>Funding Timeline Goal</label><input name="Timeline" placeholder="e.g., within 3 months" type="text"/></div>
-</div>
-<div class="grid-1">
-<div><label>Describe Your Funding Objectives & Readiness Level *</label><textarea name="Funding Objectives and Readiness Level" required=""></textarea></div>
-</div>
-<div class="actions">
-<button class="btn-primary" type="submit">Apply for Bootcamp</button>
-<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<!-- Community Free Services: Community Business Partners -->
-<div aria-hidden="true" class="modal-backdrop" id="fs-cbp">
-<div aria-labelledby="fsCbpTitle" class="modal" role="dialog">
-<div class="modal-header">
-<h3 id="fsCbpTitle">Community Business Partners — Free Listing (USA Only)</h3>
-<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
-</div>
-<div class="modal-body">
-<div class="thankyou">Thanks! Your business listing request was received.</div>
-<p style="margin:0 0 12px; color:#12325E; font-weight:700;">
-Listings are free and reviewed for alignment with our community values.
-</p>
-
-<form method='POST' name='community-business-partner' onsubmit='return afterSubmit(this)'>
-<input type="hidden" name="form-name" value="community-business-partner">
-<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
-
-<div class="grid-2">
-<div>
-<label>Business Name *</label>
-<input name="Business Name" required="" type="text"/>
-</div>
-<div>
-<label>Category *</label>
-<select name="Category" required="">
-<option value="" selected="" disabled="">Select one</option>
-<option>Retail</option>
-<option>Services</option>
-<option>Food &amp; Beverage</option>
-<option>Health &amp; Wellness</option>
-<option>Nonprofit</option>
-<option>Professional Services</option>
-<option>Other</option>
-</select>
-</div>
-<div>
-<label>City *</label>
-<input name="City" required="" type="text"/>
-</div>
-<div>
-<label>State *</label>
-<input name="State" maxlength="2" placeholder="CA" required="" type="text"/>
-</div>
-<div>
-<label>Website</label>
-<input name="Website" placeholder="https://yourwebsite.com" type="url"/>
-</div>
-<div>
-<label>Instagram</label>
-<input name="Instagram" placeholder="@yourhandle" type="text"/>
-</div>
-</div>
-
-<div class="grid-1">
-<div>
-<label>Business Description *</label>
-<textarea name="Short Description" required="" placeholder="Describe your business…"></textarea>
-</div>
-</div>
-
-<div class="actions">
-<button class="btn-primary" type="submit">Submit for Review</button>
-<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-
-
-<!-- Community Job Visibility – Free Job Listing -->
-<div aria-hidden="true" class="modal-backdrop" id="fs-cjv">
-<div aria-labelledby="fsCjvTitle" class="modal" role="dialog">
-<div class="modal-header">
-<h3 id="fsCjvTitle">Community Job Visibility – Free Job Listing</h3>
-<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
-</div>
-
-<div class="modal-body">
-<div class="thankyou">Thanks! Your job listing request was received.</div>
-
-<p style="margin:0 0 12px; color:#12325E; font-weight:700;">
-Job listings are complimentary and reviewed for alignment and clarity before publication.
-</p>
-
-<form method='POST' name='job-listing' onsubmit='return afterSubmit(this)'>
-<input type="hidden" name="form-name" value="job-listing">
-<p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-
-<div class="grid-2">
-<div>
-<label>Organization/Employer Name *</label>
-<input name="Organization/Employer Name" type="text" required />
-</div>
-
-<div>
-<label>Employment Type *</label>
-<select name="Employment Type" required>
-<option value="" selected disabled>Select one</option>
-<option>Full-time</option>
-<option>Part-time</option>
-<option>Contract</option>
-<option>Internship</option>
-<option>Temporary</option>
-<option>Other</option>
-</select>
-</div>
-
-<div>
-<label>City *</label>
-<input name="City" type="text" required />
-</div>
-
-<div>
-<label>State (2-letter) *</label>
-<input name="State" type="text" maxlength="2" placeholder="CA" pattern="[A-Za-z]{2}" required />
-</div>
-
-<div>
-<label>Job Title *</label>
-<input name="Job Title" type="text" placeholder="Registered Nurse - ICU" required />
-</div>
-
-<div>
-<label>Application Link *</label>
-<input name="Application Link" type="url" placeholder="https://yourwebsite.com/careers" required />
-</div>
-</div>
-
-<div class="grid-1">
-<div>
-<label>Job Summary *</label>
-<textarea name="Job Summary" required placeholder="Describe the role, responsibilities, and desirable qualifications."></textarea>
-</div>
-</div>
-
-<div class="actions">
-<button class="btn-primary" type="submit">Submit Job Listing</button>
-<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-
-<!-- Community Free Services: Free Logo Design -->
-<div aria-hidden="true" class="modal-backdrop" id="fs-logo">
-<div aria-labelledby="fsLogoTitle" class="modal" role="dialog">
-<div class="modal-header">
-<h3 id="fsLogoTitle">Free Logo Design (Nonprofits &amp; Startups)</h3>
-<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
-</div>
-
-<div class="modal-body">
-<div class="thankyou">Thanks! Your logo request was received.</div>
-
-<form method="POST" name="free_logo_design" onsubmit="return afterSubmit(this)">
-<input name="form-name" type="hidden" value="free_logo_design"/>
-<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
 
-<div class="grid-2">
-<div><label>Organization *</label><input name="Organization" required type="text"/></div>
-<div>
-<label>Nonprofit or Startup? *</label>
-<select name="Org Type" required>
-<option>Nonprofit</option>
-<option>Startup</option>
-</select>
-</div>
-<div><label>Contact Name *</label><input name="Contact Name" required type="text"/></div>
-<div><label>Email *</label><input name="Email" required type="email"/></div>
-</div>
-
-<div class="grid-1">
-<div>
-<label>Brand Description / Ideas *</label>
-<textarea name="Brand Notes" placeholder="Colors, vibe, symbols, sample links…" required></textarea>
-</div>
-</div>
-
-<div class="actions">
-<button class="btn-primary" type="submit">Submit</button>
-<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ========== /MODALS ========== -->
-<script>
-function openModal(id){
-// close any open modals
-document.querySelectorAll('.modal-backdrop').forEach(m => {
-m.style.display = 'none';
-m.classList.remove('open');
-m.setAttribute('aria-hidden','true');
-});
-
-const modal = document.getElementById(id);
-if(!modal){
-console.warn('Modal not found:', id);
-return;
-}
-
-modal.style.display = 'flex';
-modal.classList.add('open');
-modal.setAttribute('aria-hidden','false');
-}
-
-function closeModal(el){
-const backdrop = el.closest('.modal-backdrop');
-if(!backdrop) return;
-backdrop.style.display = 'none';
-backdrop.classList.remove('open');
-backdrop.setAttribute('aria-hidden','true');
-}
-
-// close by clicking outside the modal
-document.addEventListener('click', function(e){
-if(e.target.classList && e.target.classList.contains('modal-backdrop')){
-e.target.style.display = 'none';
-e.target.classList.remove('open');
-e.target.setAttribute('aria-hidden','true');
-}
-});
-</script>
-
-
-</div></section><script>
-/* === Ensure hero image (hero.png) is present, contained, and not overlapped === */
-(function(){
-var hero = document.querySelector('.hero');
-if(!hero) return;
-// Prefer an existing <img> inside hero; else create one
-var img = hero.querySelector('img');
-if(!img){
-img = document.createElement('img');
-hero.insertBefore(img, hero.firstChild);
-} else {
-// If found but not the first node, move it to the top so text remains below
-if(hero.firstElementChild !== img){
-hero.insertBefore(img, hero.firstElementChild);
-}
-}
-img.src = 'hero.png';
-img.alt = img.alt || 'Government Workforce Network — Hero';
-img.classList.add('hero-photo');
-img.style.position = 'static';
-img.style.width = '100%';
-img.style.height = 'auto';
-})();
-</script>
-<!-- Netlify RUM (keep for analytics) -->
-<script
-async
-id="netlify-rum-container"
-src="/.netlify/scripts/rum"
-data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
-data-netlify-deploy-branch="main"
-data-netlify-deploy-context="production"
-data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI">
-</script>
-
-<!-- Mobile-only smooth scroll for nav (desktop behavior untouched) -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-function isMobile () {
-return window.innerWidth <= 768;
-}
-
-const header = document.querySelector('header');
-const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-navLinks.forEach(function (link) {
-link.addEventListener('click', function (e) {
-if (!isMobile()) return;
-
-const targetId = this.getAttribute('href').substring(1);
-const target = document.getElementById(targetId);
-if (!target) return;
-
-e.preventDefault();
-
-const headerHeight = header ? header.offsetHeight : 0;
-const targetY =
-target.getBoundingClientRect().top +
-window.pageYOffset -
-headerHeight -
-16;
-
-window.scrollTo({
-top: targetY,
-behavior: 'smooth'
-});
-});
-});
-});
-</script>
-
-<script>
-
-/* ===== Explore More Service Modal (safe – does NOT touch Netlify form modals) ===== */
-.svc-modal{
-position: fixed;
-inset: 0;
-display: none;
-z-index: 9999;
-}
-
-.svc-modal.is-open{ display: block; }
-
-.svc-modal-overlay{
-position: absolute;
-inset: 0;
-background: rgba(0,0,0,0.55);
-}
-
-.svc-modal-card{
-position: relative;
-max-width: 820px;
-margin: 6vh auto;
-background: #fff;
-border-radius: 16px;
-padding: 22px;
-box-shadow: 0 18px 50px rgba(0,0,0,0.25);
-z-index: 1;
-}
-
-.svc-modal-close{
-position: absolute;
-top: 12px;
-right: 12px;
-width: 40px;
-height: 40px;
-border-radius: 10px;
-border: 1px solid rgba(0,0,0,0.12);
-background: #fff;
-cursor: pointer;
-}
-
-.svc-modal-subtitle{
-margin-top: 6px;
-font-weight: 800;
-opacity: 0.85;
-}
-
-#svcModalBody h3{
-margin-top: 16px;
-margin-bottom: 6px;
-}
-
-#svcModalBody ul{
-margin-top: 8px;
-line-height: 1.6;
-}
-
-.svc-modal-actions{
-display: flex;
-gap: 12px;
-flex-wrap: wrap;
-margin-top: 18px;
-}
-</script>
-
-
-  
-<script>
-const SERVICE_DETAILS = {
-vhr: {
-title: "Virtual Human Resources (AI-Enhanced)",
-subtitle: "Human-Led. AI-Assisted. Compliance-Aware.",
-sections: [
-{ heading: "Recruitment & Hiring Support", bullets: [
-"Job posting drafting and optimization",
-"Interview questions and structured scoring guides",
-"Candidate communication templates",
-"Hiring workflow documentation and checklists"
-]},
-{ heading: "Employer Relations Support", bullets: [
-"Employee communication templates",
-"Performance coaching and documentation tools",
-"Attendance and conduct documentation support",
-"Manager guidance and conversation scripts"
-]},
-{ heading: "HR Documentation & Policy Support", bullets: [
-"HR policies and procedures templates",
-"Employee handbook section drafting support",
-"Onboarding and training documentation",
-"Workplace FAQs and internal guidance materials"
-]},
-{ heading: "Job Classification & Specification Support", bullets: [
-"Classification documentation organization",
-"Drafting and refinement of class specifications",
-"Duty statements and competency framework support",
-"Benchmark and role comparison research summaries (where applicable)"
-]}
-],
-ctaHref: "/contact.html"
-},
-
-gala: {
-title: "Visibility & Recognition Gala Packages",
-subtitle: "Elevate culture. Strengthen visibility. Celebrate excellence.",
-sections: [
-{ heading: "Package Support", bullets: [
-"Event concept support and package structuring",
-"Recognition categories and award framework",
-"Brand visibility strategy (digital + on-site)",
-"Community engagement and partner outreach support"
-]},
-{ heading: "Optional Enhancements", bullets: [
-"Sponsor tier language and outreach templates",
-"Program flow and run-of-show support",
-"Promotion copy for email and social media"
-]}
-],
-ctaHref: "/contact.html"
-},
-
-bootcamp: {
-title: "Government Funding & Readiness Bootcamp",
-subtitle: "Navigate funding and contracting opportunities with clarity and confidence.",
-sections: [
-{ heading: "Readiness Support", bullets: [
-"Funding readiness checklist and planning support",
-"Capability and positioning guidance",
-"Template support for narratives and summaries",
-"Basic process guidance for grants and contracting pathways"
-]},
-{ heading: "Optional Enhancements", bullets: [
-"Document organization guidance (client-provided materials)",
-"Opportunity tracking structure and workflow"
-]}
-],
-ctaHref: "/contact.html"
-}
-};
-
-const svcModal = document.getElementById("serviceModal");
-const titleEl = document.getElementById("svcModalTitle");
-const subtitleEl = document.getElementById("svcModalSubtitle");
-const bodyEl = document.getElementById("svcModalBody");
-const ctaEl = document.getElementById("svcModalCTA");
-
-let lastFocused = null;
-
-function openServiceModal(key){
-const data = SERVICE_DETAILS[key];
-if(!data) return;
-
-lastFocused = document.activeElement;
-
-titleEl.textContent = data.title;
-subtitleEl.textContent = data.subtitle;
-
-bodyEl.innerHTML = "";
-data.sections.forEach(sec => {
-const h = document.createElement("h3");
-h.textContent = sec.heading;
-bodyEl.appendChild(h);
-
-const ul = document.createElement("ul");
-sec.bullets.forEach(b => {
-const li = document.createElement("li");
-li.textContent = b;
-ul.appendChild(li);
-});
-bodyEl.appendChild(ul);
-});
-
-ctaEl.href = data.ctaHref || "/contact.html";
-
-svcModal.classList.add("is-open");
-svcModal.setAttribute("aria-hidden","false");
-document.body.style.overflow = "hidden";
-}
-
-function closeServiceModal(){
-svcModal.classList.remove("is-open");
-svcModal.setAttribute("aria-hidden","true");
-document.body.style.overflow = "";
-if(lastFocused) lastFocused.focus();
-}
-
-// bind Explore More buttons
-document.querySelectorAll(".explore-btn").forEach(btn => {
-btn.addEventListener("click", () => openServiceModal(btn.dataset.service));
-});
-
-// close handlers
-svcModal.querySelectorAll("[data-close-svc]").forEach(el => {
-el.addEventListener("click", closeServiceModal);
-});
-
-document.addEventListener("keydown", (e) => {
-if(e.key === "Escape" && svcModal.classList.contains("is-open")){
-closeServiceModal();
-}
-});
-</script>
+  <!-- Visibility & Recognition Gala -->
+  <div class="modal-backdrop" id="grantModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="grantModalTitle">
+      <div class="modal-header">
+        <h3 id="grantModalTitle">Visibility & Recognition Gala – Consultation Request</h3>
+        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="thankyou">Thank you! Your inquiry was sent.</div>
+
+        <form method="POST" name="visibility-recognition-gala-inquiry" onsubmit="return afterSubmit(this)">
+          <input type="hidden" name="form-name" value="visibility-recognition-gala-inquiry" />
+          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid-2">
+            <div>
+              <label>Organization *</label>
+              <input name="Organization" required />
+            </div>
+            <div>
+              <label>Organization Type</label>
+              <select name="Organization Type">
+                <option>Private Company</option>
+                <option>Government Agency</option>
+                <option>Nonprofit</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>Contact Name *</label>
+              <input name="Contact Name" required />
+            </div>
+            <div>
+              <label>Email *</label>
+              <input name="Email" type="email" required />
+            </div>
+            <div>
+              <label>Phone</label>
+              <input name="Phone" type="tel" />
+            </div>
+            <div>
+              <label>Proposed Event Date</label>
+              <input name="Proposed Event Date" type="date" />
+            </div>
+          </div>
+
+          <div class="grid-1">
+            <div>
+              <label>Event Objectives</label>
+              <input name="Event Objectives" />
+            </div>
+            <div>
+              <label>Tell Us About Your Recognition Program Needs *</label>
+              <textarea name="Recognition Program Needs" required></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-submit" type="submit">Request Consultation</button>
+            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Government Funding & Readiness Bootcamp -->
+  <div class="modal-backdrop" id="webModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="webModalTitle">
+      <div class="modal-header">
+        <h3 id="webModalTitle">Government Funding & Readiness Bootcamp – Readiness Application</h3>
+        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="thankyou">Thank you! We’ll get back to you shortly.</div>
+
+        <form method="POST" name="bootcamp_inquiry" onsubmit="return afterSubmit(this)">
+          <input type="hidden" name="form-name" value="bootcamp_inquiry" />
+          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid-2">
+            <div>
+              <label>Organization *</label>
+              <input name="Organization" required />
+            </div>
+            <div>
+              <label>Type *</label>
+              <select name="Type" required>
+                <option>Private Business</option>
+                <option>Nonprofit</option>
+                <option>Startup</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>Contact Name *</label>
+              <input name="Contact Name" required />
+            </div>
+            <div>
+              <label>Email *</label>
+              <input name="Email" type="email" required />
+            </div>
+            <div>
+              <label>Current Funding Stage</label>
+              <input name="Current Funding Stage" />
+            </div>
+            <div>
+              <label>Readiness Status *</label>
+              <select name="Readiness Status" required>
+                <option>Exploring opportunities</option>
+                <option>Preparing for first grant/contract</option>
+                <option>Previously applied but was not awarded</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>Funding Timeline Goal</label>
+              <input name="Timeline" type="text" placeholder="e.g., within 3 months" />
+            </div>
+          </div>
+
+          <div class="grid-1">
+            <div>
+              <label>Describe Your Funding Objectives & Readiness Level *</label>
+              <textarea name="Funding Objectives and Readiness Level" required></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-submit" type="submit">Apply for Bootcamp</button>
+            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Business Partners -->
+  <div class="modal-backdrop" id="fs-cbp" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="fsCbpTitle">
+      <div class="modal-header">
+        <h3 id="fsCbpTitle">Community Business Partners — Free Listing (USA Only)</h3>
+        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="thankyou">Thanks! Your business listing request was received.</div>
+
+        <p style="margin:0 0 12px; color:#12325E; font-weight:700;">
+          Listings are free and reviewed for alignment with our community values.
+        </p>
+
+        <form method="POST" name="community-business-partner" onsubmit="return afterSubmit(this)">
+          <input type="hidden" name="form-name" value="community-business-partner" />
+          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid-2">
+            <div>
+              <label>Business Name *</label>
+              <input name="Business Name" type="text" required />
+            </div>
+            <div>
+              <label>Category *</label>
+              <select name="Category" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Retail</option>
+                <option>Services</option>
+                <option>Food & Beverage</option>
+                <option>Health & Wellness</option>
+                <option>Nonprofit</option>
+                <option>Professional Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>City *</label>
+              <input name="City" type="text" required />
+            </div>
+            <div>
+              <label>State *</label>
+              <input name="State" type="text" maxlength="2" placeholder="CA" required />
+            </div>
+            <div>
+              <label>Website</label>
+              <input name="Website" type="url" placeholder="https://yourwebsite.com" />
+            </div>
+            <div>
+              <label>Instagram</label>
+              <input name="Instagram" type="text" placeholder="@yourhandle" />
+            </div>
+          </div>
+
+          <div class="grid-1">
+            <div>
+              <label>Business Description *</label>
+              <textarea name="Short Description" required placeholder="Describe your business…"></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-submit" type="submit">Submit for Review</button>
+            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Job Visibility -->
+  <div class="modal-backdrop" id="fs-cjv" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="fsCjvTitle">
+      <div class="modal-header">
+        <h3 id="fsCjvTitle">Community Job Visibility – Free Job Listing</h3>
+        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="thankyou">Thanks! Your job listing request was received.</div>
+
+        <p style="margin:0 0 12px; color:#12325E; font-weight:700;">
+          Job listings are complimentary and reviewed for alignment and clarity before publication.
+        </p>
+
+        <form method="POST" name="job-listing" onsubmit="return afterSubmit(this)">
+          <input type="hidden" name="form-name" value="job-listing" />
+          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid-2">
+            <div>
+              <label>Organization/Employer Name *</label>
+              <input name="Organization/Employer Name" type="text" required />
+            </div>
+            <div>
+              <label>Employment Type *</label>
+              <select name="Employment Type" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Contract</option>
+                <option>Internship</option>
+                <option>Temporary</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>City *</label>
+              <input name="City" type="text" required />
+            </div>
+            <div>
+              <label>State (2-letter) *</label>
+              <input name="State" type="text" maxlength="2" placeholder="CA" pattern="[A-Za-z]{2}" required />
+            </div>
+            <div>
+              <label>Job Title *</label>
+              <input name="Job Title" type="text" placeholder="Registered Nurse - ICU" required />
+            </div>
+            <div>
+              <label>Application Link *</label>
+              <input name="Application Link" type="url" placeholder="https://yourwebsite.com/careers" required />
+            </div>
+          </div>
+
+          <div class="grid-1">
+            <div>
+              <label>Job Summary *</label>
+              <textarea name="Job Summary" required placeholder="Describe the role, responsibilities, and desirable qualifications."></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-submit" type="submit">Submit Job Listing</button>
+            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Free Logo Design -->
+  <div class="modal-backdrop" id="fs-logo" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="fsLogoTitle">
+      <div class="modal-header">
+        <h3 id="fsLogoTitle">Free Logo Design (Nonprofits & Startups)</h3>
+        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="thankyou">Thanks! Your logo request was received.</div>
+
+        <form method="POST" name="free_logo_design" onsubmit="return afterSubmit(this)">
+          <input type="hidden" name="form-name" value="free_logo_design" />
+          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid-2">
+            <div>
+              <label>Organization *</label>
+              <input name="Organization" type="text" required />
+            </div>
+            <div>
+              <label>Nonprofit or Startup? *</label>
+              <select name="Org Type" required>
+                <option>Nonprofit</option>
+                <option>Startup</option>
+              </select>
+            </div>
+            <div>
+              <label>Contact Name *</label>
+              <input name="Contact Name" type="text" required />
+            </div>
+            <div>
+              <label>Email *</label>
+              <input name="Email" type="email" required />
+            </div>
+          </div>
+
+          <div class="grid-1">
+            <div>
+              <label>Brand Description / Ideas *</label>
+              <textarea name="Brand Notes" placeholder="Colors, vibe, symbols, sample links…" required></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script>
-function encode(data) {
-return Object.keys(data)
-.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-.join("&");
-}
-
-function afterSubmit(form) {
-// Collect values
-const data = {};
-new FormData(form).forEach((value, key) => (data[key] = value));
-
-// POST to Netlify (same as a normal form submit)
-fetch("/", {
-method: "POST",
-headers: { "Content-Type": "application/x-www-form-urlencoded" },
-body: encode(data),
-})
-.then(() => {
-// show your thank-you message (if you have a .thankyou element)
-const ty = form.closest(".modal-body")?.querySelector(".thankyou");
-if (ty) ty.style.display = "block";
-form.reset();
-})
-.catch((error) => {
-alert("Oops — submission failed. Please try again.");
-console.error(error);
-});
-
-return false; // prevent page navigation
-}
-</script>
-
-  <!-- TALENT INTEREST MODAL -->
-<div id="talentModal" class="tc-modal">
-<div class="tc-modal-content">
-
-<span class="tc-close" onclick="closeTalentForm()">&times;</span>
-
-<h2>Talent Interest Form</h2>
-<p class="tc-note">
-We collect limited information for pilot workforce engagement purposes.
-Please do not include sensitive personal information.
-</p>
-
-<form method='POST' name='talent-interest'>
-<input type="hidden" name="form-name" value="talent-interest" />
-
-<label>Email Address *</label>
-<input type="email" name="email" required />
-
-<label>Current Status *</label>
-<select name="current_status" required>
-<option value="">Select one</option>
-<option>Student</option>
-<option>Recent Graduate</option>
-<option>Veteran</option>
-<option>Transitioning Military</option>
-<option>Professional</option>
-</select>
-
-<label>Sector Interest *</label>
-<select name="sector_interest" required>
-<option value="">Select one</option>
-<option>Public Sector (Government)</option>
-<option>Private Sector</option>
-<option>Nonprofit/Community</option>
-<option>Open to Public & Private</option>
-<option>Open to All Sectors</option>
-</select>
-
-<label>Top Skills</label>
-<input type="text" name="top_skills" />
-
-<label>Career Interests</label>
-<textarea name="career_interests"></textarea>
-
-<label>Preferred Work Type</label>
-<select name="preferred_work_type">
-<option value="">Select one</option>
-<option>Full-time</option>
-<option>Part-time</option>
-<option>Internship</option>
-  <option>Volunteer</option>
-</select>
-
-<label>Location Preference</label>
-<input type="text" name="location_preference" />
-
-<div class="tc-checkbox">
-<input type="checkbox" id="agree" required />
-<label for="agree">
-I agree to submit this information for pilot workforce engagement.
-</label>
-</div>
-
-<button type="submit" class="tc-submit">Submit Talent Interest</button>
-</form>
-
-</div>
-</div>
-
-  <script>
-function openTalentForm() {
-document.getElementById("talentModal").style.display = "flex";
-}
-
-function closeTalentForm() {
-document.getElementById("talentModal").style.display = "none";
-}
-
-// close when clicking outside
-window.onclick = function(event) {
-const modal = document.getElementById("talentModal");
-if (event.target === modal) {
-modal.style.display = "none";
-}
-}
-</script>
-
-  <form hidden method='post' name='talent-interest'><input type='hidden' name='form-name' value='talent-interest' />
-<input type="text" name="email" />
-</form>
-
-  <!-- EMPLOYER TALENT REQUEST MODAL -->
-<div id="employerModal" class="tc-modal">
-<div class="tc-modal-content">
-<span class="tc-close" onclick="closeEmployerForm()">&times;</span>
-
-<h2>Employer Talent Request</h2>
-<p class="tc-note">
-Partner with Government Workforce Network LLC to share your workforce needs
-and connect with emerging talent across universities, veteran and military
-communities, and diverse workforce populations, including individuals with disabilities.
-</p>
-
-<form method='POST' name='employer-talent-request'>
-<input type="hidden" name="form-name" value="employer-talent-request" />
-
-<label>Organization Name *</label>
-<input type="text" name="organization_name" required />
-
-<label>Contact Email *</label>
-<input type="email" name="contact_email" required />
-
-<label>Organization Type *</label>
-<select name="organization_type" required>
-<option value="">Select one</option>
-<option>County Agency</option>
-<option>City / Municipal Agency</option>
-<option>University / College</option>
-<option>Private Employer</option>
-<option>Nonprofit Organization</option>
-<option>Veteran / Military Organization</option>
-<option>Other</option>
-</select>
-
-<label>Talent Need / Sector *</label>
-<select name="talent_need_sector" required>
-<option value="">Select one</option>
-<option>Public Sector (Government)</option>
-<option>Private Sector</option>
-<option>Nonprofit / Community</option>
-<option>Open to Multiple Sectors</option>
-</select>
-
-<label>Opportunity Type *</label>
-<select name="opportunity_type" required>
-<option value="">Select one</option>
-<option>Full-time</option>
-<option>Part-time</option>
-<option>Internship</option>
-<option>Fellowship</option>
-<option>Contract</option>
-<option>General Talent Pipeline Interest</option>
-</select>
-
-<label>Location</label>
-<input type="text" name="location" placeholder="Example: Baton Rouge, Louisiana or Remote" />
-
-<label>Skills or Qualifications Needed</label>
-<textarea name="skills_needed"></textarea>
-
-<label>Additional Notes</label>
-<textarea name="additional_notes"></textarea>
-
-<div class="tc-checkbox">
-<input type="checkbox" id="employerAgree" required />
-<label for="employerAgree">
-I agree to submit this information for pilot workforce engagement purposes.
-</label>
-</div>
-
-<button type="submit" class="tc-submit">Submit Talent Request</button>
-</form>
-</div>
-</div>
-
-  
-<form hidden method='post' name='employer-talent-request'><input type='hidden' name='form-name' value='employer-talent-request' />
-<input type="text" name="organization_name" />
-<input type="email" name="contact_email" />
-</form>
-
-  <script>
-function openEmployerForm() {
-document.getElementById("employerModal").style.display = "flex";
-}
-
-function closeEmployerForm() {
-document.getElementById("employerModal").style.display = "none";
-}
-
-window.onclick = function(event) {
-const talentModal = document.getElementById("talentModal");
-const employerModal = document.getElementById("employerModal");
-
-if (event.target === talentModal) {
-talentModal.style.display = "none";
-}
-if (event.target === employerModal) {
-employerModal.style.display = "none";
-}
-}
-</script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzFhOTA5YzliMDg2MDAwODc3YzExZiIsImlzc3VlciI6Im5mc2VydmVyIn0.n7lEYKwnnIKG1KV39WqnUdVtAc23WIlfRJ_GhBl-B-o"></script></body>
+    function openModal(id){
+      document.querySelectorAll('.modal-backdrop').forEach(function(modal){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+      });
+
+      var modal = document.getElementById(id);
+      if(!modal) return;
+
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+    }
+
+    function closeModal(el){
+      var backdrop = el.closest('.modal-backdrop');
+      if(!backdrop) return;
+      backdrop.classList.remove('open');
+      backdrop.setAttribute('aria-hidden','true');
+    }
+
+    document.addEventListener('click', function(e){
+      if(e.target.classList && e.target.classList.contains('modal-backdrop')){
+        e.target.classList.remove('open');
+        e.target.setAttribute('aria-hidden','true');
+      }
+    });
+
+    function encode(data) {
+      return Object.keys(data)
+        .map(function(key){
+          return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
+        })
+        .join("&");
+    }
+
+    function afterSubmit(form) {
+      var data = {};
+      new FormData(form).forEach(function(value, key){
+        data[key] = value;
+      });
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(data),
+      })
+      .then(function(){
+        var ty = form.closest(".modal-body")?.querySelector(".thankyou");
+        if (ty) ty.style.display = "block";
+        form.reset();
+      })
+      .catch(function(error){
+        alert("Oops — submission failed. Please try again.");
+        console.error(error);
+      });
+
+      return false;
+    }
+  </script>
+
+  <script
+    async
+    id="netlify-rum-container"
+    src="/.netlify/scripts/rum"
+    data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
+    data-netlify-deploy-branch="main"
+    data-netlify-deploy-context="production">
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
