@@ -1,0 +1,907 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Initiatives | Government Workforce Network LLC</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
+  color: #ffffff;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.92);
+  padding: 18px 32px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #d8b24c;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 55px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.gold-rule {
+  width: 92px;
+  height: 6px;
+  margin: 0 auto 28px;
+  border-radius: 999px;
+  background: #d8b24c;
+}
+
+.hero-sub {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #e8eef9;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.section {
+  margin-top: 54px;
+}
+
+.intro-card,
+.content-card,
+.cta-card {
+  background: rgba(255,255,255,0.97);
+  color: #222;
+  border-radius: 26px;
+  padding: 38px 34px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+}
+
+.intro-card h2,
+.content-card h2,
+.section-heading h2,
+.cta-card h2 {
+  margin: 0 0 16px;
+  font-size: 34px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.2;
+}
+
+.intro-card p,
+.content-card p,
+.cta-card p {
+  margin: 0 0 16px;
+  color: #444;
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 70px 0 34px;
+}
+
+.section-heading h2 {
+  color: #fff;
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.section-heading .gold-rule {
+  margin-bottom: 0;
+  width: 80px;
+  height: 5px;
+}
+
+.initiative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.initiative-card {
+  background: #ffffff;
+  color: #222;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.initiative-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.22);
+}
+
+.initiative-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: #dfe5f2;
+}
+
+.initiative-body {
+  padding: 26px 24px 28px;
+}
+
+.initiative-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.initiative-title {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  background: #eef3ff;
+  color: #1d3f8f;
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.initiative-section-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #162a63;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.initiative-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.responsibility-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #444;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.responsibility-list li {
+  margin-bottom: 8px;
+}
+
+.pillars-grid,
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.pillar-item,
+.pathway-item {
+  background: #f7f9fd;
+  border-radius: 18px;
+  padding: 22px 20px;
+}
+
+.pillar-item h3,
+.pathway-item h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #13224a;
+  font-weight: 800;
+}
+
+.pillar-item p,
+.pathway-item p {
+  margin: 0;
+  color: #444;
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+.note-box {
+  margin-top: 22px;
+  padding: 18px 20px;
+  background: #f4f6fb;
+  border-left: 5px solid #d8b24c;
+  border-radius: 14px;
+  color: #444;
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+.cta-card {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 24px;
+  background: #d8b24c;
+  color: #111;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #e7c46a;
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  color: #cfd8ef;
+  font-size: 14px;
+  padding: 30px 20px 42px;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 2000;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal {
+  width: min(900px, 96vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #0B1F3A, #1d3f8f);
+  color: #ffffff;
+  border-radius: 22px 22px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 28px 24px 30px;
+  color: #12344d;
+}
+
+.modal-body p {
+  color: #29465b;
+  line-height: 1.7;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #12344d;
+  font-size: 16px;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9e8f2;
+  border-radius: 14px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+.modal textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.close-btn {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 14px 24px;
+  background: #eef3ff;
+  color: #12344d;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.close-btn:hover {
+  background: #dfe8ff;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 16px 18px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 82px 18px 42px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .container {
+    padding: 0 18px 90px;
+  }
+
+  .intro-card,
+  .content-card,
+  .cta-card {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  .intro-card h2,
+  .content-card h2,
+  .cta-card h2 {
+    font-size: 28px;
+  }
+
+  .section-heading {
+    margin: 58px 0 28px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .initiative-photo {
+    height: 230px;
+    object-position: center;
+  }
+
+  .initiative-body {
+    padding: 22px 20px 24px;
+  }
+
+  .initiative-name {
+    font-size: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .close-btn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .modal {
+    width: 100%;
+  }
+
+  .modal-header h3 {
+    font-size: 21px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">Government Workforce Network LLC</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/#about-anchor">About</a>
+    <a href="/initiatives" class="active">Initiatives</a>
+    <a href="/consulting-services">Consulting Services</a>
+    <a href="/talent-connect">Talent Connect</a>
+    <a href="/free-services">Free Services</a>
+    <a href="/opportunities">Opportunities</a>
+    <a href="/events">Events</a>
+    <a href="/workforce-tv">Workforce TV</a>
+    <a href="/our-team">Our Team</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Initiatives</h1>
+    <div class="gold-rule"></div>
+    <p class="hero-sub">
+      Our initiatives are designed to bridge the gap between talent, opportunity, and real-world impact. Through these efforts, Government Workforce Network LLC creates pathways for visibility, connection, recognition, and meaningful community support—advancing income, opportunity, and well-being for individuals and organizations.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="section">
+    <div class="intro-card">
+      <h2>About Our Initiatives</h2>
+      <p>
+        Government Workforce Network LLC develops initiatives that are designed to strengthen visibility, expand access, and support meaningful connection across communities, organizations, and individuals.
+      </p>
+      <p>
+   These initiatives reflect our commitment to people-centered support and real-world impact—offering practical pathways that contribute to income, opportunity, and well-being.
+      </p>
+      <p>
+  While our consulting and workforce programs provide structured, paid services, our initiatives represent our continued investment in accessible, community-driven support.
+      </p>
+      <div class="note-box">
+        Together, we are building income, opportunity, and well-being.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-card">
+      <h2>Purpose of Our Initiatives</h2>
+      <p>
+        Our initiatives are designed to turn mission into movement. They focus on increasing visibility, expanding access, strengthening connection, and creating practical pathways for growth.
+      </p>
+      <p>
+      Each initiative contributes to building stronger bridges between people, opportunity, and community-centered progress—ensuring that support is not only accessible, but impactful.
+      </p>
+
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <h3>Visibility</h3>
+          <p>Increase exposure for individuals, organizations, and missions that deserve to be seen, recognized, and supported.</p>
+        </div>
+        <div class="pillar-item">
+          <h3>Opportunity</h3>
+          <p>Create stronger pathways that connect people, programs, employers, and communities to meaningful next steps.
+</p>
+        </div>
+        <div class="pillar-item">
+          <h3>Connection</h3>
+          <p>Encourage intentional relationship-building between talent, institutions, organizations, and community partners.</p>
+        </div>
+        <div class="pillar-item">
+          <h3>Impact</h3>
+          <p>Support practical, mission-driven efforts that lead to sustainable outcomes across workforce and community spaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-card">
+      <h2>How These Initiatives Support the Mission</h2>
+      <div class="pathway-grid">
+        <div class="pathway-item">
+          <h3>1. Build Awareness</h3>
+          <p>
+            Help individuals and organizations discover opportunities, services, and community-driven efforts that may otherwise remain unseen.
+          </p>
+        </div>
+        <div class="pathway-item">
+          <h3>2. Strengthen Access</h3>
+          <p>
+           Create more direct pathways between people, resources, employers, and institutions through intentional outreach and structured connection.
+          </p>
+        </div>
+        <div class="pathway-item">
+          <h3>3. Encourage Participation</h3>
+          <p>
+        Provide welcoming and inclusive ways for individuals, employers, founders, and partners to engage in meaningful programs.
+          </p>
+        </div>
+        <div class="pathway-item">
+          <h3>4. Expand Opportunity</h3>
+          <p>
+      Transform awareness and connection into real-world outcomes—supporting growth, visibility, and long-term opportunity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <h2>Featured Initiatives</h2>
+      <div class="gold-rule"></div>
+    </div>
+
+    <div class="initiative-grid">
+
+      <article class="initiative-card">
+        <img src="free-logodesign.png" alt="Photo placeholder for Talent Connect" class="initiative-photo">
+        <div class="initiative-body">
+          <div class="initiative-name">Free Logo Design</div>
+          <div class="initiative-title">Brand Support Initiative</div>
+
+          <div class="initiative-section-label">Overview</div>
+          <p class="initiative-text">
+            Supports organizations and founders with professional visual identity to strengthen brand presence.
+          </p>
+
+          <div class="initiative-section-label">Why It Matters</div>
+          <ul class="responsibility-list">
+            <li>Supports early-stage growth</li>
+            <li>Supports visibility for mission-driven work that deserves to be recognized</li>
+<li>Bridges the gap between vision and professional presentation</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="initiative-card">
+        <img src="community-job-visibility" alt="Photo placeholder for Community Free Services" class="initiative-photo">
+        <div class="initiative-body">
+          <div class="initiative-name">Free Job Listing</div>
+          <div class="initiative-title">Workforce Visibility Initiative</div>
+
+          <div class="initiative-section-label">Overview</div>
+          <p class="initiative-text">
+            The Free Job Listing initiative offers complimentary exposure for organizations to share opportunities more broadly, increasing visibility and access to diverse, qualified talent.
+          </p>
+
+          <div class="initiative-section-label">Why It Matters</div>
+          <ul class="responsibility-list">
+<li>Broadens access to opportunity across underrepresented talent communities</li>
+<li>Enhances visibility for organizations seeking meaningful hires</li>
+<li>Supports more inclusive and accessible recruitment pathways</li>
+<li>Strengthens the connection between opportunity and qualified talent</li>
+          </ul>
+        </div>
+      </article>
+
+   <article class="initiative-card">
+        <img src="community-business-partners.png" alt="Photo placeholder for Community Free Services" class="initiative-photo">
+        <div class="initiative-body">
+          <div class="initiative-name">Free Business Listing</div>
+          <div class="initiative-title">Community Support Initiative</div>
+
+          <div class="initiative-section-label">Overview</div>
+          <p class="initiative-text">
+            Provides complimentary visibility support for qualifying nonprofits, startups, and mission-aligned organizations.
+          </p>
+
+          <div class="initiative-section-label">Why It Matters</div>
+         <ul class="responsibility-list">
+<li>Supports early-stage growth</li>
+<li>Increases visibility</li>
+<li>Strengthens community presence</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="initiative-card">
+        <img src="student-recognition-initiative" alt="Photo placeholder for Recognition and Visibility Efforts" class="initiative-photo">
+        <div class="initiative-body">
+          <div class="initiative-name">Student Recognition</div>
+          <div class="initiative-title">Emerging Talent Recognition Initiative</div>
+
+          <div class="initiative-section-label">Overview</div>
+          <p class="initiative-text">
+            The Student Recognition initiative elevates and celebrates emerging talent by highlighting student achievement, leadership, and potential while increasing visibility across academic and workforce communities.
+          </p>
+
+          <div class="initiative-section-label">Why It Matters</div>
+          <ul class="responsibility-list">
+<li>Recognizes students who demonstrate leadership, effort, and potential</li>
+<li>Increases visibility for emerging talent entering the workforce</li>
+<li>Encourages confidence, motivation, and continued growth</li>
+<li>Bridges the gap between education and real-world opportunity</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="initiative-card">
+        <img src="branded-by-marivel-logo.png" alt="Photo placeholder for Workforce Outreach and Access" class="initiative-photo">
+        <div class="initiative-body">
+          <div class="initiative-name">Branded By Marivel</div>
+          <div class="initiative-title">Entrepreneurship Empowerment Initiative</div>
+
+          <div class="initiative-section-label">Overview</div>
+          <p class="initiative-text">
+            Branded by Marivel™ represents a real-life entrepreneurship journey, created to inspire and empower individuals—especially stay-at-home parents and aspiring founders—to build income, identity, and opportunity through creativity and personal brand expression.
+          </p>
+
+          <div class="initiative-section-label">Why It Matters</div>
+          <ul class="responsibility-list">
+<li>Demonstrates that entrepreneurship can start with simple, accessible steps</li>
+<li>Encourages individuals to explore income-building opportunities on their own terms</li>
+<li>Supports confidence, identity, and personal brand development</li>
+<li>Provides a relatable, real-life example of turning ideas into a business</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="initiative-card">
+        <img src="sip-and-serve.png" alt="Photo placeholder for Sip and Serve Networking" class="initiative-photo">
+        <div class="initiative-body">
+          <div class="initiative-name">Sip & Serve Networking</div>
+          <div class="initiative-title">Connection & Human-Centered Engagement Initiative</div>
+          <div class="initiative-section-label">Overview</div>
+          <p class="initiative-text">
+            Sip & Serve Networking is designed to bring people back to meaningful, in-person and intentional connection, offering a human-centered experience in a world increasingly shaped by digital interaction and artificial intelligence.
+          </p>
+
+          <div class="initiative-section-label">Why It Matters</div>
+          <ul class="responsibility-list">
+<li>Restores meaningful human connection in an increasingly digital and AI-driven world</li>
+<li>Creates space for authentic conversations beyond screens and automation</li>
+<li>Strengthens relationships, trust, and community engagement</li>
+<li>Balances innovation with the human experience at the center</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-card">
+      <h2>Interested in One of Our Initiatives?</h2>
+      <p>
+Whether you are interested in collaboration, participation, sponsorship, or community partnership, we welcome you to connect with us.
+      </p>
+      <p>
+      Government Workforce Network LLC is committed to building meaningful relationships that support visibility, connection, and opportunity across communities.
+      </p>
+      <button type="button" class="cta-btn" onclick="openModal('initiativeModal')">
+        Submit Initiative Inquiry
+      </button>
+    </div>
+  </section>
+
+</div>
+
+<div class="modal-backdrop" id="initiativeModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-labelledby="initiativeModalTitle">
+    <div class="modal-header">
+      <h3 id="initiativeModalTitle">Initiative Inquiry</h3>
+      <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+    </div>
+
+    <div class="modal-body">
+      <p>
+        Complete the form below to ask about an initiative, partnership, participation, or collaboration opportunity.
+      </p>
+
+      <form action="/thank-you" method="POST" name="initiative-inquiry">
+        <input type="hidden" name="form-name" value="initiative-inquiry">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="full_name">Full Name</label>
+            <input id="full_name" type="text" name="full_name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="organization_name">Organization / Business / School Name</label>
+            <input id="organization_name" type="text" name="organization_name">
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input id="country" type="text" name="country">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="initiative_interest">Initiative of Interest</label>
+          <select id="initiative_interest" name="initiative_interest" required>
+            <option value="">Select an Initiative</option>
+            <option>Talent Connect</option>
+            <option>Community Free Services</option>
+            <option>Recognition & Visibility Efforts</option>
+            <option>Workforce Outreach & Access</option>
+            <option>Sip & Serve Networking</option>
+            <option>Future Initiatives</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="interest_type">Type of Interest</label>
+          <select id="interest_type" name="interest_type" required>
+            <option value="">Select One</option>
+            <option>Learn More</option>
+            <option>Partnership / Collaboration</option>
+            <option>Participation Interest</option>
+            <option>Sponsorship / Support</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell Us More</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="cta-btn">Submit Form</button>
+          <button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Government Workforce Network LLC
+</footer>
+
+<script>
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(el) {
+  const modal = el.closest('.modal-backdrop');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('modal-backdrop')) {
+    e.target.classList.remove('open');
+    e.target.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    const openModalEl = document.querySelector('.modal-backdrop.open');
+    if (openModalEl) {
+      openModalEl.classList.remove('open');
+      openModalEl.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+
+Sent from my iPhone
