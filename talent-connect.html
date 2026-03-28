@@ -861,8 +861,8 @@ footer {
           <h2>Contact Information</h2>
           <div class="form-grid">
             <div class="form-group">
-              <label for="jsFullName">Full Name</label>
-              <input type="text" id="jsFullName" name="full_name" required />
+              <label for="jsFirstName">First Name (ONLY)</label>
+              <input type="text" id="jsFirstName" name="first_name" required />
             </div>
 
             <div class="form-group">
@@ -871,43 +871,33 @@ footer {
             </div>
 
             <div class="form-group">
-              <label for="jsPhoneNumber">Phone Number</label>
-              <input type="tel" id="jsPhoneNumber" name="phone_number" />
-            </div>
-
-            <div class="form-group">
-              <label for="jsCountry">Country</label>
-              <input type="text" id="jsCountry" name="country" required />
-            </div>
-
-            <div class="form-group">
-              <label for="jsStateProvince">State / Province</label>
-              <input type="text" id="jsStateProvince" name="state_province" />
-            </div>
-
-            <div class="form-group">
-              <label for="jsCity">City</label>
-              <input type="text" id="jsCity" name="city" />
+              <label for="jsStateProvince">State</label>
+              <input type="text" id="jsState" name="state" />
             </div>
           </div>
         </div>
 
         <div class="form-section">
-          <h2>Background</h2>
+          <h2>Community/Background</h2>
           <div class="form-grid">
             <div class="form-group">
-              <label for="jsCurrentStatus">Current Status</label>
+              <label for="jsCurrentStatus">Which best describes you?</label>
               <select id="jsCurrentStatus" name="current_status" required>
                 <option value="">Select one</option>
+                <option value="Student">Veteran</option>
+                <option value="Student">Active Duty Military</option>
+                <option value="Student">Transitioning Service Member</option>
+                <option value="Student">Military Spouse</option>
                 <option value="Student">Student</option>
-                <option value="Recent Graduate">Recent Graduate</option>
+                <option value="Student">Recent Graduate</option>
+                <option value="Student">Stay-at-home Parent Returning to Work</option>
+                <option value="Student">Professional Seeking New Opportunities</option>
+                <option value="Student">Career Explorer</option>
                 <option value="Employed and Exploring">Employed and Exploring</option>
                 <option value="Unemployed / Seeking Work">Unemployed / Seeking Work</option>
                 <option value="Career Changer">Career Changer</option>
                 <option value="Returning to Workforce">Returning to Workforce</option>
-                <option value="Veteran / Military-Connected">Veteran / Military-Connected</option>
                 <option value="Individual with Disability">Individual with Disability</option>
-                <option value="Stay-at-Home Parent Returning to Work">Stay-at-Home Parent Returning to Work</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -928,17 +918,20 @@ footer {
           <h2>Opportunity Preferences</h2>
           <div class="form-grid">
             <div class="form-group">
-              <label for="jsOpportunityType">Type of Opportunity Seeking</label>
+              <label for="jsOpportunityType">What type of opportunities or support are you most interested in?</label>
               <select id="jsOpportunityType" name="type_of_opportunity_seeking" required>
                 <option value="">Select one</option>
-                <option value="Full-Time">Full-Time</option>
-                <option value="Part-Time">Part-Time</option>
-                <option value="Contract">Contract</option>
+                <option value="Full-Time">Full-Time Employment</option>
+                <option value="Part-Time">Part-Time Employment</option>
+                <option value="Contract">Contract/Project Work</option>
+               <option value="Contract">Internship/Early Career Opportunities</option>
                 <option value="Temporary">Temporary</option>
-                <option value="Internship">Internship</option>
                 <option value="Fellowship">Fellowship</option>
                 <option value="Volunteer">Volunteer</option>
-                <option value="Open to Multiple Options">Open to Multiple Options</option>
+              <option value="Contract">Career Transition Support</option>
+               <option value="Contract">Professional Visibility Support</option>
+              <option value="Contract">Networking/Community Access</option>
+               <option value="Contract">Open to Multiple Opportunities</option>
               </select>
             </div>
 
@@ -988,6 +981,15 @@ footer {
             </div>
           </div>
         </div>
+
+         <div class="form-group">
+              <label for="privateresources">Would you like to be considered for private member tools and military-focused resources?</label>
+              <select id="privateresources" name="privateresources" required>
+                <option value="">Select one</option>
+                <option value="Remote">Yes</option>
+                <option value="Hybrid">No</option>
+              </select>
+            </div>
 
         <div class="form-section">
           <h2>Consent</h2>
