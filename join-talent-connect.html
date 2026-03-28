@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talent Connect | Government Workforce Network LLC</title>
+
+<style>
+*{box-sizing:border-box;}
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(180deg,#f5f8fc,#edf3fa);
+color:#12263f;
+}
+
+.container{
+max-width:900px;
+margin:60px auto;
+padding:30px;
+background:#fff;
+border-radius:24px;
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+p{
+color:#617488;
+line-height:1.6;
+}
+
+input, select, textarea{
+width:100%;
+padding:14px;
+margin-top:8px;
+margin-bottom:16px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+button{
+width:100%;
+padding:16px;
+background:#0b1f3a;
+color:#fff;
+border:none;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.success{
+display:none;
+margin-top:20px;
+padding:15px;
+background:#e8f8f0;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Join Talent Connect</h1>
+
+<p>
+A private, low-barrier access system designed to connect individuals to opportunities, tools, and support — without unnecessary complexity.
+</p>
+
+<p><strong>No resume required. No complicated process.</strong></p>
+
+<form name="talent-connect" method="POST" data-netlify="true">
+
+<input type="hidden" name="form-name" value="talent-connect">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Category</label>
+<select name="category" required>
+<option>Veteran</option>
+<option>Active Duty</option>
+<option>Military Family</option>
+<option>Student</option>
+<option>Stay-at-home Parent</option>
+<option>Professional</option>
+<option>Other</option>
+</select>
+
+<label>Skills / Interests</label>
+<textarea name="skills"></textarea>
+
+<button type="submit">Join Talent Connect</button>
+
+</form>
+
+<div class="success" id="successBox">
+You’re in. Your private access will be sent to your email.
+</div>
+
+</div>
+
+<script>
+document.querySelector("form").addEventListener("submit",function(){
+document.getElementById("successBox").style.display="block";
+});
+</script>
+
+</body>
+</html>
+
+Sent from my iPhone
