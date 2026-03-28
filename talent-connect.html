@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -749,12 +750,12 @@ footer {
             <li>Inclusion of veteran, military, and disability communities</li>
             <li>A more direct pathway to career opportunity and workforce exposure</li>
           </ul>
-            <div class="button-stack">
-  <a href="/join-talent-connect.html" class="primary-btn">Join Talent Connect</a>
-            </div>
-</div>
 
-<a href="/talent-connect-explore.html" class="secondary-btn">Explore More</a>
+          <div class="card-footer-space"></div>
+
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('jobSeekerModal')">Join Talent Connect</button>
+            <a class='secondary-btn' href='/talent-connect-explore'>Explore More</a>
           </div>
         </div>
       </article>
@@ -788,7 +789,7 @@ footer {
 
           <div class="button-stack">
             <button type="button" class="primary-btn" onclick="openModal('employerRequestModal')">Submit Talent Request</button>
-            <a href="/talent-request-explore.html" class="secondary-btn">Explore More</a>
+            <a class='secondary-btn' href='/talent-request-explore'>Explore More</a>
           </div>
         </div>
       </article>
@@ -850,7 +851,7 @@ footer {
         Complete the form below to join Talent Connect as a job seeker.
       </p>
 
-      <form name="talent-connect-job-seekers" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
+      <form action='/thank-you' class='talent-form' method='POST' name='talent-connect-job-seekers'>
         <input type="hidden" name="form-name" value="talent-connect-job-seekers" />
         <p style="display:none;">
           <label>Do not fill this out if you're human: <input name="bot-field" /></label>
@@ -1020,7 +1021,7 @@ footer {
         Complete the form below to submit an employer talent request, consultation request, or general inquiry.
       </p>
 
-      <form name="employer-request-form" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="talent-form">
+      <form action='/thank-you' class='talent-form' method='POST' name='employer-request-form'>
         <input type="hidden" name="form-name" value="employer-request-form" />
         <p style="display:none;">
           <label>Do not fill this out if you're human: <input name="bot-field" /></label>
@@ -1277,6 +1278,7 @@ document.addEventListener('keydown', function (e) {
 });
 </script>
 
-</body>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzcyMTFmMGFiZjA2MDAwODNhNTk2MCIsImlzc3VlciI6Im5mc2VydmVyIn0.dzV7XKgC41m_z7I4d-rmrP-68dotSRZOTu2a_-ZYonQ"></script></body>
 </html>
 
