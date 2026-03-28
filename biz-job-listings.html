@@ -1,0 +1,817 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Biz & Job Listing | Government Workforce Network LLC</title>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
+color: #ffffff;
+}
+
+header {
+background: rgba(0, 0, 0, 0.92);
+padding: 18px 32px;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+backdrop-filter: blur(6px);
+border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand {
+font-weight: 700;
+font-size: 20px;
+letter-spacing: 0.2px;
+}
+
+nav {
+display: flex;
+flex-wrap: wrap;
+gap: 18px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 15px;
+font-weight: 600;
+transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+color: #d8b24c;
+}
+
+.hero {
+text-align: center;
+padding: 100px 20px 55px;
+}
+
+.container {
+max-width: 1180px;
+margin: 0 auto;
+padding: 0 20px 100px;
+}
+
+.hero h1 {
+font-size: 56px;
+line-height: 1.15;
+margin: 0 0 14px;
+font-weight: 800;
+letter-spacing: -0.6px;
+}
+
+.gold-rule {
+width: 92px;
+height: 6px;
+margin: 0 auto 28px;
+border-radius: 999px;
+background: #d8b24c;
+}
+
+.hero-sub {
+max-width: 980px;
+margin: 0 auto;
+color: #e8eef9;
+font-size: 18px;
+line-height: 1.9;
+}
+
+.section {
+margin-top: 54px;
+}
+
+.intro-card,
+.content-card,
+.cta-card {
+background: rgba(255,255,255,0.97);
+color: #222;
+border-radius: 26px;
+padding: 38px 34px;
+box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+}
+
+.intro-card h2,
+.content-card h2,
+.section-heading h2,
+.cta-card h2 {
+margin: 0 0 16px;
+font-size: 34px;
+font-weight: 800;
+color: #111;
+line-height: 1.2;
+}
+
+.intro-card p,
+.content-card p,
+.cta-card p {
+margin: 0 0 16px;
+color: #444;
+line-height: 1.85;
+font-size: 16px;
+}
+
+.section-heading {
+text-align: center;
+margin: 70px 0 34px;
+}
+
+.section-heading h2 {
+color: #fff;
+font-size: 42px;
+margin-bottom: 12px;
+}
+
+.section-heading .gold-rule {
+margin-bottom: 0;
+width: 80px;
+height: 5px;
+}
+
+.note-box {
+margin-top: 22px;
+padding: 18px 20px;
+background: #f4f6fb;
+border-left: 5px solid #d8b24c;
+border-radius: 14px;
+color: #444;
+line-height: 1.75;
+font-size: 15px;
+}
+
+.purpose-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 22px;
+margin-top: 24px;
+}
+
+.purpose-item {
+background: #f7f9fd;
+border-radius: 18px;
+padding: 22px 20px;
+}
+
+.purpose-item h3 {
+margin: 0 0 10px;
+font-size: 20px;
+color: #13224a;
+font-weight: 800;
+}
+
+.purpose-item p {
+margin: 0;
+color: #444;
+line-height: 1.75;
+font-size: 15px;
+}
+
+/* NEW SPLIT LAYOUT */
+.listing-split {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 28px;
+align-items: start;
+}
+
+.listing-panel {
+background: rgba(255,255,255,0.97);
+color: #222;
+border-radius: 26px;
+padding: 34px 30px;
+box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+}
+
+.listing-panel h3 {
+margin: 0 0 10px;
+font-size: 30px;
+font-weight: 800;
+color: #111;
+line-height: 1.2;
+}
+
+.panel-subtext {
+margin: 0 0 24px;
+color: #4d4d4d;
+line-height: 1.8;
+font-size: 15px;
+}
+
+.listing-stack {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.listing-item {
+background: #f7f9fd;
+border: 1px solid #e6ecf7;
+border-radius: 18px;
+padding: 20px 18px;
+transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.listing-item:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 26px rgba(0,0,0,0.10);
+border-color: #d8b24c;
+}
+
+.listing-type {
+display: inline-block;
+margin-bottom: 10px;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 0.3px;
+text-transform: uppercase;
+background: #eef3ff;
+color: #1d3f8f;
+padding: 7px 12px;
+border-radius: 999px;
+}
+
+.listing-link-btn {
+background: none;
+border: none;
+padding: 0;
+margin: 0 0 8px;
+font-size: 22px;
+font-weight: 800;
+line-height: 1.3;
+color: #111;
+cursor: pointer;
+text-align: left;
+transition: color 0.25s ease;
+}
+
+.listing-link-btn:hover {
+color: #0d3270;
+}
+
+.listing-meta {
+margin: 0;
+font-size: 15px;
+line-height: 1.75;
+color: #444;
+}
+
+.info-banner {
+margin-top: 28px;
+padding: 20px 22px;
+background: #f4f6fb;
+border-left: 5px solid #d8b24c;
+border-radius: 14px;
+color: #444;
+line-height: 1.8;
+font-size: 15px;
+}
+
+.cta-card {
+text-align: center;
+margin-top: 30px;
+}
+
+.cta-btn,
+.primary-btn,
+.secondary-btn,
+.modal-link-btn {
+display: inline-block;
+text-decoration: none;
+border: none;
+cursor: pointer;
+text-align: center;
+font-weight: 800;
+transition: all 0.25s ease;
+}
+
+.cta-btn {
+margin-top: 10px;
+padding: 14px 24px;
+background: #d8b24c;
+color: #111;
+border-radius: 999px;
+font-size: 15px;
+}
+
+.cta-btn:hover {
+background: #e7c46a;
+transform: translateY(-2px);
+}
+
+.primary-btn {
+width: 100%;
+padding: 16px 20px;
+border-radius: 18px;
+background: #072453;
+color: #fff;
+font-size: 15px;
+box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.primary-btn:hover {
+background: #0d3270;
+transform: translateY(-1px);
+}
+
+.secondary-btn {
+align-self: center;
+min-width: 220px;
+padding: 16px 22px;
+border-radius: 18px;
+background: #fff;
+color: #111;
+font-size: 15px;
+border: 2px solid #222;
+}
+
+.secondary-btn:hover {
+background: #f7f7f7;
+transform: translateY(-1px);
+}
+
+footer {
+text-align: center;
+color: #cfd8ef;
+font-size: 14px;
+padding: 30px 20px 42px;
+}
+
+/* Modal */
+.modal-backdrop {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.6);
+display: none;
+align-items: center;
+justify-content: center;
+padding: 18px;
+z-index: 2000;
+}
+
+.modal-backdrop.open {
+display: flex;
+}
+
+.modal {
+width: min(720px, 96vw);
+max-height: 90vh;
+overflow-y: auto;
+background: #ffffff;
+border-radius: 22px;
+box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.modal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 24px;
+background: linear-gradient(135deg, #0B1F3A, #1d3f8f);
+color: #ffffff;
+border-radius: 22px 22px 0 0;
+}
+
+.modal-header h3 {
+margin: 0;
+font-size: 24px;
+font-weight: 800;
+}
+
+.modal-close {
+border: none;
+background: transparent;
+color: #ffffff;
+font-size: 30px;
+line-height: 1;
+cursor: pointer;
+}
+
+.modal-body {
+padding: 28px 24px 30px;
+color: #12344d;
+}
+
+.modal-badge {
+display: inline-block;
+margin-bottom: 14px;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 0.3px;
+text-transform: uppercase;
+background: #eef3ff;
+color: #1d3f8f;
+padding: 8px 13px;
+border-radius: 999px;
+}
+
+.modal-summary {
+color: #29465b;
+line-height: 1.85;
+margin: 0 0 18px;
+font-size: 16px;
+}
+
+.modal-detail-box {
+background: #f7f9fc;
+border: 1px solid #dfe7f2;
+border-radius: 16px;
+padding: 18px 18px;
+margin-bottom: 22px;
+}
+
+.modal-detail-box p {
+margin: 0;
+text-align: left;
+color: #29465b;
+line-height: 1.8;
+font-size: 15px;
+}
+
+.modal-actions {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.modal-link-btn {
+padding: 14px 22px;
+background: #072453;
+color: #fff;
+border-radius: 999px;
+font-size: 15px;
+}
+
+.modal-link-btn:hover {
+background: #0d3270;
+transform: translateY(-1px);
+}
+
+.close-btn {
+padding: 14px 24px;
+background: #eef3ff;
+color: #12344d;
+text-decoration: none;
+border-radius: 999px;
+font-size: 15px;
+font-weight: 800;
+border: none;
+cursor: pointer;
+transition: all 0.25s ease;
+}
+
+.close-btn:hover {
+background: #dfe8ff;
+}
+
+@media (max-width: 980px) {
+.listing-split {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 768px) {
+header {
+padding: 16px 18px;
+flex-direction: column;
+gap: 12px;
+align-items: flex-start;
+}
+
+.brand {
+font-size: 18px;
+}
+
+nav {
+gap: 12px;
+}
+
+.hero {
+padding: 82px 18px 42px;
+}
+
+.hero h1 {
+font-size: 40px;
+}
+
+.hero-sub {
+font-size: 16px;
+line-height: 1.85;
+}
+
+.container {
+padding: 0 18px 90px;
+}
+
+.intro-card,
+.content-card,
+.cta-card,
+.listing-panel {
+padding: 28px 22px;
+border-radius: 20px;
+}
+
+.intro-card h2,
+.content-card h2,
+.cta-card h2 {
+font-size: 28px;
+}
+
+.section-heading {
+margin: 58px 0 28px;
+}
+
+.section-heading h2 {
+font-size: 32px;
+}
+
+.listing-panel h3 {
+font-size: 26px;
+}
+
+.listing-link-btn {
+font-size: 20px;
+}
+
+.modal {
+width: 100%;
+}
+
+.modal-header h3 {
+font-size: 21px;
+}
+
+.modal-actions {
+flex-direction: column;
+}
+
+.modal-link-btn,
+.close-btn {
+width: 100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="brand">Government Workforce Network LLC</div>
+<nav>
+<a href="/">Home</a>
+<a href="/biz&joblisting" class="active">Biz & Job Listing</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Biz and Job Listings</h1>
+<div class="gold-rule"></div>
+<p class="hero-sub">
+Explore Biz and Job Listings through a simple, low-barrier page built to support income, opportunity, and well-being, making access easier for everyone.
+</p>
+</div>
+</section>
+
+<div class="container">
+
+<section class="section">
+<div class="intro-card">
+<h2>About This Page</h2>
+<p>
+This page is part of Government Workforce Network LLC’s commitment to expanding access, visibility, and opportunity through practical, community-centered solutions.</p>
+<p>
+We offer free job listings and free business listings as a way to remove barriers and create a space where opportunities can be seen, shared, and accessed more easily—without unnecessary cost or complexity.</p>
+<p>
+While many platforms operate on paid access models, we believe that not all opportunities should be behind a paywall. This initiative reflects our belief that access, visibility, and connection should be available to everyone, especially those who are building, growing, or seeking new pathways.
+</p>
+<p>
+This is not just a listing page—it is a support-driven access point designed to help individuals, businesses, and communities connect in a more inclusive and meaningful way.
+</p>
+<div class="note-box">
+Together, Building Income, Opportunity, and Well-Being
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-heading">
+<h2>Current Listings</h2>
+<div class="gold-rule"></div>
+</div>
+
+<div class="listing-split">
+
+<div class="listing-panel">
+<h3>Job Listings</h3>
+<p class="panel-subtext">
+Click a position title to view a brief description and open the related job flyer.
+</p>
+
+<div class="listing-stack">
+
+<div class="listing-item">
+<div class="listing-type">Global Opportunity</div>
+<button
+type="button"
+class="listing-link-btn"
+data-modal-type="Overview"
+data-modal-title="International Independent Brand Ambassador"
+data-modal-summary="Promote Branded By Marivel™ in your country. Share referral links, campaigns, and community outreach. All products are owned, produced, and shipped from California, U.S.A."
+data-modal-detail="We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment for all participants."
+data-modal-link="mailto:admin@governmentworkforcenetwork.com"
+data-modal-link-text="Email Us"
+onclick="openListingModal(this)">
+International Independent Brand Ambassador</button>
+<p class="listing-meta">
+Sales and Marketing • Commissioned Based • Non-Employee 
+</p>
+</div>
+
+
+<div class="listing-item">
+<div class="listing-type">Volunteer (Non-Paid)</div>
+<button
+type="button"
+class="listing-link-btn"
+data-modal-type="Overview"
+data-modal-title="Workforce Intelligence Team Contributor"
+data-modal-summary="This is a voluntary, non-paid opportunity designed for individuals who want to gain practical experience, build professional skills, and contribute to meaningful projects. Time Commitment: Approximately 6 hours per month (flexible). Open to students, recent graduates, veterans, and professionals. No prior experience required. Interested individuals can express interest by completing a short form on our website."
+
+data-modal-detail="We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment for all participants."
+data-modal-link="https://governmentworkforcenetwork.com/workforce-intelligence-team"
+data-modal-link-text="View Our website"
+onclick="openListingModal(this)">
+Workforce Intelligence Team Contributor
+</button>
+<p class="listing-meta">
+Multiple Volunteer Opportunities Available</p>
+</div>
+</div>
+</div>
+
+<div class="listing-panel">
+<h3>Business Listings</h3>
+<p class="panel-subtext">
+Click a business name to view a brief description and visit the business website.
+</p>
+
+<div class="listing-stack">
+
+<div class="listing-item">
+<div class="listing-type">Business Listing</div>
+<button
+type="button"
+class="listing-link-btn"
+data-modal-type="Business Listing"
+data-modal-title="Next Mission Business Services"
+data-modal-summary="Provides business and workforce-related support services, information resources, and practical external guidance."
+data-modal-detail="This business may be useful for individuals seeking additional support, tools, and external information related to career, business, or general workforce needs."
+data-modal-link="https://example.com/business-3"
+data-modal-link-text="Visit Business Website"
+onclick="openListingModal(this)">
+Next Mission Business Services
+</button>
+<p class="listing-meta">
+Business support, workforce resources, and external guidance.
+</p>
+</div>
+
+<div class="listing-item">
+<div class="listing-type">Business Listing</div>
+<button
+type="button"
+class="listing-link-btn"
+data-modal-type="Business Listing"
+data-modal-title="Valor Workforce Solutions"
+data-modal-summary="Offers workforce support, training navigation, and practical connection points for individuals exploring career-related resources."
+data-modal-detail="This business may be helpful for people looking for a simple way to access tools, support services, and workforce-related information through an external provider."
+data-modal-link="https://example.com/business-2"
+data-modal-link-text="Visit Business Website"
+onclick="openListingModal(this)">
+Valor Workforce Solutions
+</button>
+<p class="listing-meta">
+Workforce support, training navigation, and access to external resources.
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<section class="section">
+<div class="cta-card">
+<h2>Want to Be Featured?</h2>
+<p>
+We provide free business and job Listings to support access, visibility, and opportunity.
+</p>
+<p>
+No cost. No barriers. Free to share. Built for everyone.
+</p>
+<a href="/initiatives" class="cta-btn">Submit Initiative Inquiry</a>
+</div>
+</section>
+
+</div>
+
+<div class="modal-backdrop" id="listingModal" aria-hidden="true">
+<div class="modal" role="dialog" aria-labelledby="listingModalTitle">
+<div class="modal-header">
+<h3 id="listingModalTitle">Listing Information</h3>
+<button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+</div>
+
+<div class="modal-body">
+<div class="modal-badge" id="listingModalType">Listing</div>
+<p class="modal-summary" id="listingModalSummary"></p>
+
+<div class="modal-detail-box">
+<p id="listingModalDetail"></p>
+</div>
+
+<div class="modal-actions">
+<a id="listingModalLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-link-btn">Open Link</a>
+<button type="button" class="close-btn" onclick="closeModal(this)">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+Government Workforce Network LLC
+</footer>
+
+<script>
+function openListingModal(button) {
+const modal = document.getElementById('listingModal');
+if (!modal || !button) return;
+
+const modalTitle = document.getElementById('listingModalTitle');
+const modalType = document.getElementById('listingModalType');
+const modalSummary = document.getElementById('listingModalSummary');
+const modalDetail = document.getElementById('listingModalDetail');
+const modalLink = document.getElementById('listingModalLink');
+
+modalTitle.textContent = button.dataset.modalTitle || 'Listing Information';
+modalType.textContent = button.dataset.modalType || 'Listing';
+modalSummary.textContent = button.dataset.modalSummary || '';
+modalDetail.textContent = button.dataset.modalDetail || '';
+modalLink.href = button.dataset.modalLink || '#';
+modalLink.textContent = button.dataset.modalLinkText || 'Open Link';
+
+modal.classList.add('open');
+modal.setAttribute('aria-hidden', 'false');
+document.body.style.overflow = 'hidden';
+}
+
+function closeModal(el) {
+const modal = el.closest('.modal-backdrop');
+if (!modal) return;
+modal.classList.remove('open');
+modal.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
+}
+
+document.addEventListener('click', function (e) {
+if (e.target.classList.contains('modal-backdrop')) {
+e.target.classList.remove('open');
+e.target.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
+}
+});
+
+document.addEventListener('keydown', function (e) {
+if (e.key === 'Escape') {
+const openModalEl = document.querySelector('.modal-backdrop.open');
+if (openModalEl) {
+openModalEl.classList.remove('open');
+openModalEl.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
+}
+}
+});
+</script>
+
+</body>
+</html>
