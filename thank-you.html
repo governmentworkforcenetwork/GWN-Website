@@ -5,62 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | Government Workforce Network LLC</title>
   <style>
+    * { box-sizing: border-box; }
+
+    :root{
+      --navy:#07101d;
+      --navy-2:#102347;
+      --gold:#d8b24c;
+      --gold-2:#ecd38b;
+      --white:#ffffff;
+      --text:#1f2937;
+      --muted:#5b677a;
+      --line:rgba(255,255,255,0.10);
+      --card-shadow:0 20px 60px rgba(5,16,37,0.20);
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
+      background:
+        radial-gradient(circle at top, rgba(216,178,76,0.14), transparent 24%),
+        linear-gradient(180deg, #06101c 0%, #102347 44%, #09111e 100%);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(6, 11, 21, 0.88);
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 20px;
       color: #fff;
+    }
+
+    .wrap {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      text-align: center;
+      padding: 40px 20px 60px;
     }
 
-    .card {
-      background: rgba(255,255,255,0.97);
-      color: #222;
-      border-radius: 24px;
-      max-width: 700px;
-      padding: 40px 30px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    .thank-card {
+      width: 100%;
+      max-width: 760px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+      color: var(--text);
+      border-radius: 30px;
+      padding: 44px 34px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+      border: 1px solid rgba(15, 30, 60, 0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #111827;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
     }
 
     h1 {
-      margin-top: 0;
-      font-size: 40px;
-      color: #111;
+      margin: 0 0 14px;
+      font-size: 42px;
+      color: #0f1e36;
+      letter-spacing: -0.8px;
+    }
+
+    .gold-rule {
+      width: 90px;
+      height: 5px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      margin: 0 auto 22px;
+      border-radius: 999px;
     }
 
     p {
-      line-height: 1.8;
-      color: #444;
-      font-size: 16px;
+      margin: 0 0 16px;
+      line-height: 1.85;
+      color: #425066;
+      font-size: 17px;
     }
 
-    a {
+    .highlight-box {
+      margin-top: 24px;
+      background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+      border-left: 5px solid var(--gold);
+      padding: 18px 20px;
+      border-radius: 16px;
+      text-align: left;
+      color: #425066;
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
       display: inline-block;
-      margin-top: 18px;
-      padding: 14px 24px;
+      padding: 15px 24px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #111827;
       border-radius: 999px;
-      background: #d8b24c;
-      color: #111;
-      text-decoration: none;
       font-weight: 800;
+      text-decoration: none;
+      transition: 0.25s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+    }
+
+    .secondary-btn {
+      display: inline-block;
+      padding: 15px 24px;
+      background: #eef3ff;
+      color: #102347;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .secondary-btn:hover {
+      background: #dde8ff;
+    }
+
+    footer {
+      text-align: center;
+      color: #d1dbef;
+      font-size: 14px;
+      padding: 0 20px 34px;
+    }
+
+    @media (max-width: 768px) {
+      .thank-card {
+        padding: 34px 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Thank You</h1>
-    <p>
-      Your interest form has been submitted successfully. We appreciate your interest in joining the Government Workforce Network Workforce Intelligence Team.
-    </p>
-    <p>
-      A member of our team will review your submission and follow up if there is a potential fit.
-    </p>
-    <a href="/workforce-intelligence-team">Back to Workforce Intelligence Team</a>
+
+  <header>
+    <div class="brand">Government Workforce Network LLC</div>
+  </header>
+
+  <div class="wrap">
+    <div class="thank-card">
+      <div class="badge">Submission Received</div>
+      <h1>Thank You</h1>
+      <div class="gold-rule"></div>
+
+      <p>
+        Your submission has been received successfully.
+      </p>
+
+      <p>
+        We appreciate your interest in Government Workforce Network LLC and Workforce TV. Our team will review your submission and follow up as appropriate based on the type of request received.
+      </p>
+
+      <div class="highlight-box">
+        If you submitted a <strong>Workforce TV pricing or partnership inquiry</strong>, we will review your request to better understand your goals, audience, and preferred session format.
+        <br /><br />
+        If you joined the <strong>Get Notified</strong> list, you may receive future updates regarding upcoming live sessions, featured topics, and Workforce TV announcements.
+      </div>
+
+      <div class="actions">
+        <a href="/workforce-tv" class="cta-btn">Return to Workforce TV</a>
+        <a href="/" class="secondary-btn">Back to Home</a>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    Government Workforce Network LLC
+  </footer>
+
 </body>
 </html>
