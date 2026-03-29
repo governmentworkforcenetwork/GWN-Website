@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Structure | Government Workforce Network LLC</title>
+  <meta name="description" content="Government Workforce Network LLC structure page showing how initiatives support talent, engagement, solutions, and opportunities across a connected, human-centered, AI-enabled workforce ecosystem." />
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --navy-2:#12325e;
+      --navy-3:#163a6b;
+      --gold:#d4af37;
+      --gold-soft:rgba(212,175,55,0.30);
+      --gold-faint:rgba(212,175,55,0.08);
+      --white:#ffffff;
+      --white-soft:rgba(255,255,255,0.88);
+      --white-muted:rgba(255,255,255,0.74);
+      --border-soft:rgba(255,255,255,0.12);
+      --border-strong:rgba(255,255,255,0.82);
+      --card-bg:rgba(255,255,255,0.04);
+      --card-bg-2:rgba(255,255,255,0.05);
+      --shadow:0 14px 34px rgba(0,0,0,0.16);
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 45%, var(--navy) 100%);
+      color:var(--white);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .page-shell{
+      width:100%;
+      overflow:hidden;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    .section{
+      padding:88px 0;
+    }
+
+    .eyebrow{
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--gold);
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      font-size:clamp(2rem, 4vw, 3.3rem);
+      line-height:1.12;
+      font-weight:800;
+      margin-bottom:18px;
+      color:var(--white);
+    }
+
+    .section-subtitle{
+      max-width:860px;
+      margin:0 auto;
+      font-size:1.04rem;
+      line-height:1.8;
+      color:var(--white-soft);
+    }
+
+    .hero-structure{
+      text-align:center;
+      padding-top:96px;
+      padding-bottom:64px;
+    }
+
+    .hero-structure .page-title{
+      font-size:clamp(2.4rem, 5vw, 4.2rem);
+      line-height:1.08;
+      font-weight:800;
+      max-width:980px;
+      margin:0 auto 18px;
+      color:var(--white);
+    }
+
+    .hero-structure .page-subtitle{
+      max-width:900px;
+      margin:0 auto;
+      font-size:1.08rem;
+      line-height:1.85;
+      color:var(--white-soft);
+    }
+
+    .hero-note{
+      margin-top:26px;
+      display:inline-block;
+      padding:10px 16px;
+      border:1px solid var(--gold-soft);
+      border-radius:999px;
+      background:var(--gold-faint);
+      color:var(--white-soft);
+      font-size:0.92rem;
+      letter-spacing:0.3px;
+    }
+
+    .structure-card{
+      background:var(--card-bg);
+      border:1px solid var(--border-soft);
+      border-radius:28px;
+      padding:40px 26px 42px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(2px);
+    }
+
+    .org-chart-wrap{
+      text-align:center;
+    }
+
+    .org-chart{
+      position:relative;
+      max-width:1080px;
+      margin:0 auto;
+    }
+
+    .org-top,
+    .org-core{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .org-box{
+      background:rgba(255,255,255,0.03);
+      border:1.5px solid var(--border-strong);
+      border-radius:20px;
+      padding:24px 22px;
+    }
+
+    .org-main{
+      width:min(760px, 100%);
+      font-size:clamp(1.15rem, 2vw, 1.65rem);
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+
+    .org-core-box{
+      width:360px;
+      max-width:100%;
+      border:1.5px solid var(--gold-soft);
+      background:rgba(212,175,55,0.04);
+    }
+
+    .org-core-box strong{
+      display:block;
+      font-size:1.55rem;
+      text-transform:uppercase;
+      letter-spacing:0.5px;
+      font-weight:800;
+      margin-bottom:6px;
+      color:var(--white);
+    }
+
+    .org-core-box span,
+    .org-pillar p span{
+      color:var(--white-soft);
+      font-size:0.98rem;
+    }
+
+    .line-vertical{
+      width:2px;
+      background:rgba(255,255,255,0.78);
+      margin:0 auto;
+    }
+
+    .line-vertical.short{
+      height:34px;
+    }
+
+    .line-vertical.medium{
+      height:30px;
+    }
+
+    .ai-support{
+      margin:14px auto 14px;
+      font-size:0.9rem;
+      line-height:1.5;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:var(--gold);
+    }
+
+    .line-horizontal{
+      height:2px;
+      width:calc(100% - 180px);
+      max-width:840px;
+      background:rgba(255,255,255,0.78);
+      margin:0 auto 34px;
+    }
+
+    .org-pillars{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:26px;
+      align-items:stretch;
+    }
+
+    .org-pillar{
+      min-height:290px;
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+    }
+
+    .org-pillar h3{
+      font-size:1.34rem;
+      line-height:1.3;
+      font-weight:800;
+      text-transform:uppercase;
+      margin-bottom:16px;
+      color:var(--white);
+    }
+
+    .org-divider{
+      width:100%;
+      height:1px;
+      background:var(--gold-soft);
+      margin:0 0 18px;
+    }
+
+    .org-divider.soft{
+      background:rgba(255,255,255,0.28);
+      margin:18px 0;
+    }
+
+    .org-pillar p{
+      font-size:1.16rem;
+      line-height:1.55;
+      font-weight:500;
+      color:var(--white);
+    }
+
+    .explain-section{
+      padding-top:34px;
+    }
+
+    .explain-heading{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .support-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .support-card{
+      background:var(--card-bg-2);
+      border:1px solid var(--border-soft);
+      border-radius:22px;
+      padding:30px 24px;
+      box-shadow:0 12px 26px rgba(0,0,0,0.12);
+      min-height:100%;
+    }
+
+    .support-top{
+      margin-bottom:16px;
+    }
+
+    .support-card h3{
+      font-size:1.38rem;
+      line-height:1.28;
+      font-weight:800;
+      margin-bottom:8px;
+      color:var(--white);
+    }
+
+    .support-label{
+      font-size:0.9rem;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:var(--gold);
+    }
+
+    .support-body{
+      font-size:1rem;
+      line-height:1.85;
+      color:var(--white-soft);
+    }
+
+    .support-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .support-links span{
+      display:inline-flex;
+      align-items:center;
+      padding:9px 14px;
+      border-radius:999px;
+      border:1px solid var(--gold-soft);
+      background:var(--gold-faint);
+      font-size:0.9rem;
+      color:var(--white);
+      white-space:nowrap;
+    }
+
+    .summary-bar{
+      margin-top:30px;
+      padding-top:22px;
+      border-top:1px solid var(--gold-soft);
+      text-align:center;
+    }
+
+    .summary-bar p{
+      max-width:900px;
+      margin:0 auto;
+      font-size:1rem;
+      line-height:1.85;
+      color:var(--white-soft);
+    }
+
+    .summary-bar strong{
+      color:var(--white);
+    }
+
+    .closing-section{
+      text-align:center;
+      padding-top:20px;
+    }
+
+    .closing-card{
+      max-width:960px;
+      margin:0 auto;
+      background:var(--card-bg);
+      border:1px solid var(--border-soft);
+      border-radius:24px;
+      padding:32px 24px;
+    }
+
+    .closing-card p{
+      font-size:1.04rem;
+      line-height:1.9;
+      color:var(--white-soft);
+    }
+
+    .closing-card strong{
+      color:var(--gold);
+    }
+
+    @media (max-width: 980px){
+      .org-pillars,
+      .support-grid{
+        grid-template-columns:1fr;
+      }
+
+      .line-horizontal,
+      .line-vertical{
+        display:none;
+      }
+
+      .org-pillars{
+        margin-top:20px;
+      }
+
+      .ai-support{
+        margin-top:20px;
+        margin-bottom:18px;
+      }
+
+      .org-pillar{
+        min-height:auto;
+      }
+    }
+
+    @media (max-width: 640px){
+      .section{
+        padding:68px 0;
+      }
+
+      .hero-structure{
+        padding-top:76px;
+        padding-bottom:48px;
+      }
+
+      .container{
+        padding:0 16px;
+      }
+
+      .structure-card{
+        border-radius:22px;
+        padding:28px 16px 30px;
+      }
+
+      .org-box,
+      .support-card,
+      .closing-card{
+        border-radius:18px;
+      }
+
+      .org-box{
+        padding:20px 16px;
+      }
+
+      .org-core-box strong{
+        font-size:1.28rem;
+      }
+
+      .org-pillar h3,
+      .support-card h3{
+        font-size:1.18rem;
+      }
+
+      .org-pillar p{
+        font-size:1.04rem;
+      }
+
+      .section-subtitle,
+      .hero-structure .page-subtitle,
+      .support-body,
+      .summary-bar p,
+      .closing-card p{
+        font-size:0.98rem;
+      }
+
+      .hero-note{
+        font-size:0.84rem;
+        padding:9px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+
+    <section class="hero-structure">
+      <div class="container">
+        <p class="eyebrow">OUR STRUCTURE</p>
+        <h1 class="page-title">Government Workforce Network LLC</h1>
+        <p class="page-subtitle">
+          Building Income, Opportunity, and Well-being through a Connected, Human-Centered, AI-Enabled Workforce Ecosystem.
+        </p>
+        <div class="hero-note">A clear view of how our ecosystem is organized and connected</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="structure-card org-chart-wrap">
+          <p class="eyebrow">ECOSYSTEM STRUCTURE</p>
+          <h2 class="section-title">How Our Organization Is Structured</h2>
+          <p class="section-subtitle">
+            Our structure is built around initiatives as the impact core, with each pillar supporting how people enter, engage, and grow through the ecosystem.
+          </p>
+
+          <div class="org-chart" style="margin-top:42px;">
+
+            <div class="org-top">
+              <div class="org-box org-main">Government Workforce Network LLC</div>
+            </div>
+
+            <div class="line-vertical short"></div>
+
+            <div class="org-core">
+              <div class="org-box org-core-box">
+                <strong>Initiatives</strong>
+                <span>(Impact Core)</span>
+              </div>
+            </div>
+
+            <div class="line-vertical medium"></div>
+
+            <div class="ai-support">Human-Centered, AI-Enabled Infrastructure Across the Ecosystem</div>
+
+            <div class="line-horizontal"></div>
+
+            <div class="org-pillars">
+              <div class="org-box org-pillar">
+                <h3>Talent &amp; Community</h3>
+                <div class="org-divider"></div>
+                <p>Talent Connect<br><span>(Entry Point)</span></p>
+                <div class="org-divider soft"></div>
+                <p>Workforce Intelligence Team<br><span>(Contributors)</span></p>
+              </div>
+
+              <div class="org-box org-pillar">
+                <h3>Engagement</h3>
+                <div class="org-divider"></div>
+                <p>Workforce TV<br><span>(Engagement)</span></p>
+                <div class="org-divider soft"></div>
+                <p>Events<br><span>(Experience)</span></p>
+              </div>
+
+              <div class="org-box org-pillar">
+                <h3>Solutions &amp; Opportunities</h3>
+                <div class="org-divider"></div>
+                <p>Consulting<br><span>(Solutions)</span></p>
+                <div class="org-divider soft"></div>
+                <p>Biz &amp; Job Listings<br><span>(Opportunities)</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="explain-section">
+            <div class="explain-heading">
+              <p class="eyebrow">HOW IT WORKS</p>
+              <h2 class="section-title">How Our Initiatives Support the Ecosystem</h2>
+              <p class="section-subtitle">
+                Our initiatives are the foundation of the ecosystem. They bring people together, create meaningful engagement, and help build the trust that leads to solutions and opportunities.
+              </p>
+            </div>
+
+            <div class="support-grid">
+              <article class="support-card">
+                <div class="support-top">
+                  <h3>Talent &amp; Community</h3>
+                  <p class="support-label">People</p>
+                </div>
+                <p class="support-body">
+                  Initiatives attract and activate people into the ecosystem. They create opportunities for individuals to be seen, included, and connected through experiences that feel real, welcoming, and purposeful.
+                </p>
+                <div class="support-links">
+                  <span>Talent Connect</span>
+                  <span>Workforce Intelligence Team</span>
+                </div>
+              </article>
+
+              <article class="support-card">
+                <div class="support-top">
+                  <h3>Engagement</h3>
+                  <p class="support-label">Connection</p>
+                </div>
+                <p class="support-body">
+                  Initiatives create the experiences that drive engagement. They help shape the conversations, stories, and moments that bring Workforce TV and events to life in a meaningful and human-centered way.
+                </p>
+                <div class="support-links">
+                  <span>Workforce TV</span>
+                  <span>Events</span>
+                </div>
+              </article>
+
+              <article class="support-card">
+                <div class="support-top">
+                  <h3>Solutions &amp; Opportunities</h3>
+                  <p class="support-label">Value</p>
+                </div>
+                <p class="support-body">
+                  Initiatives help build trust, credibility, and relationships. That foundation supports consulting, partnerships, and opportunities by showing that the organization is not only offering services, but creating real impact.
+                </p>
+                <div class="support-links">
+                  <span>Consulting</span>
+                  <span>Biz &amp; Job Listings</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="summary-bar">
+              <p>
+                <strong>In simple terms:</strong> initiatives help attract people, drive engagement, and build trust across the ecosystem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing-section">
+      <div class="container">
+        <div class="closing-card">
+          <p>
+            <strong>Why this structure matters:</strong> it shows that Government Workforce Network LLC is not a collection of disconnected services. It is a connected ecosystem built to support people, strengthen engagement, and create meaningful solutions and opportunities through initiatives that drive real impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
