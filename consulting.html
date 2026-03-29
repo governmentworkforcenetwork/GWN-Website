@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +68,7 @@ nav a.active {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px 100px;
 }
@@ -88,12 +89,29 @@ nav a.active {
   background: #d8b24c;
 }
 
+.hero-tagline {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  color: #d8b24c;
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 800;
+}
+
 .hero-sub {
   max-width: 980px;
   margin: 0 auto;
   color: #e8eef9;
   font-size: 18px;
   line-height: 1.9;
+}
+
+.hero-highlight {
+  max-width: 960px;
+  margin: 18px auto 0;
+  color: #cfd8ef;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .section {
@@ -191,7 +209,7 @@ nav a.active {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 28px;
   align-items: stretch;
 }
@@ -213,71 +231,68 @@ nav a.active {
   box-shadow: 0 18px 36px rgba(0,0,0,0.22);
 }
 
-.service-photo {
+.service-video-wrap {
+  position: relative;
+  background: #dfe5f2;
+}
+
+.service-video {
   width: 100%;
-  height: 270px;
+  height: 260px;
   object-fit: cover;
-  object-position: center;
   display: block;
   background: #dfe5f2;
 }
 
+.video-badge {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background: rgba(7, 36, 83, 0.88);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
 .service-body {
-  padding: 26px 24px 28px;
+  padding: 24px 22px 26px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .service-name {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: #111;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 .service-title {
   display: inline-block;
   align-self: flex-start;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
   text-transform: uppercase;
   background: #eef3ff;
   color: #1d3f8f;
   padding: 8px 14px;
   border-radius: 999px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-.service-section-label {
+.service-caption {
+  margin: 0;
+  color: #55606f;
   font-size: 14px;
-  font-weight: 800;
-  color: #162a63;
-  margin-bottom: 8px;
-  margin-top: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-.service-text {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.8;
-  margin: 0;
-}
-
-.service-list {
-  margin: 0;
-  padding-left: 18px;
-  color: #444;
-  line-height: 1.8;
-  font-size: 15px;
-}
-
-.service-list li {
-  margin-bottom: 8px;
+  line-height: 1.7;
 }
 
 .card-footer-space {
@@ -285,14 +300,13 @@ nav a.active {
 }
 
 .button-stack {
-  margin-top: 26px;
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .primary-btn,
-.secondary-btn,
 .cta-btn {
   display: inline-block;
   text-decoration: none;
@@ -315,22 +329,6 @@ nav a.active {
 
 .primary-btn:hover {
   background: #0d3270;
-  transform: translateY(-1px);
-}
-
-.secondary-btn {
-  align-self: center;
-  min-width: 220px;
-  padding: 16px 22px;
-  border-radius: 18px;
-  background: #fff;
-  color: #111;
-  font-size: 15px;
-  border: 2px solid #222;
-}
-
-.secondary-btn:hover {
-  background: #f7f7f7;
   transform: translateY(-1px);
 }
 
@@ -417,7 +415,7 @@ footer {
 
 .modal-body p {
   color: #29465b;
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0 0 24px;
   text-align: center;
 }
@@ -507,7 +505,9 @@ footer {
     font-size: 40px;
   }
 
-  .hero-sub {
+  .hero-sub,
+  .hero-tagline,
+  .hero-highlight {
     font-size: 16px;
     line-height: 1.85;
   }
@@ -537,9 +537,8 @@ footer {
     font-size: 32px;
   }
 
-  .service-photo {
-    height: 230px;
-    object-position: center;
+  .service-video {
+    height: 220px;
   }
 
   .service-body {
@@ -608,10 +607,10 @@ footer {
         Our consulting approach integrates human-centered practices with emerging technologies to help organizations adapt to workforce change while maintaining meaningful connection, practical structure, and long-term readiness.
       </p>
       <p>
-       We provide tailored consulting support across recruitment, role design, assessments, bilingual evaluation strategy, onboarding, process improvement, employee recognition, and funding readiness.
+        We provide tailored consulting support across recruitment, role design, assessments, bilingual evaluation strategy, onboarding, process improvement, employee recognition, funding readiness, and recruitment-focused content creation.
       </p>
-   <p>
-        These services reflect a forward-thinking strategy aligned with our mission to build income, opportunity, and well-being through real-world, people-centered solutions.
+      <p>
+        Each service card below now features a short video summary so you can quickly understand the service and submit an inquiry if it aligns with your organization’s needs.
       </p>
       <div class="note-box">
         We help organizations bridge the gap between automation and human connection—ensuring technology strengthens workforce strategy without replacing meaningful engagement.
@@ -623,7 +622,7 @@ footer {
     <div class="content-card">
       <h2>How Our Consulting Services Support Organizations</h2>
       <p>
-      Our consulting services are structured to help organizations strengthen operational confidence, improve workforce visibility, modernize hiring and support practices, and prepare more intentionally for the future of work.
+        Our services are structured to help organizations strengthen operational confidence, improve workforce visibility, modernize hiring and support practices, and prepare more intentionally for the future of work.
       </p>
 
       <div class="purpose-grid">
@@ -641,8 +640,7 @@ footer {
         </div>
         <div class="purpose-item">
           <h3>Strategic Support</h3>
-          <p>Provide practical, forward-looking guidance that balances innovation with real operational needs and organizational priorities.
-</p>
+          <p>Provide practical, forward-looking guidance that balances innovation with real operational needs and organizational priorities.</p>
         </div>
       </div>
     </div>
@@ -657,86 +655,235 @@ footer {
     <div class="service-grid">
 
       <article class="service-card">
-        <img src="virtual-human-resources.png" alt="Photo placeholder for Virtual Human Resources (AI-Enhanced)" class="service-photo">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="ai-job-analysis-poster.jpg">
+            <source src="ai-job-analysis.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="service-body">
-          <div class="service-name">Virtual Human Resources (AI-Enhanced)</div>
-          <div class="service-title">HR Operations Support</div>
-
-          <div class="service-section-label">Overview</div>
-          <p class="service-text">
-            Human-led. AI-assisted. Compliance-aware. On-demand HR operational support designed to assist organizations with recruitment, employee relations, HR documentation, and classification support without replacing human judgment or decision-making.
-          </p>
-
-          <div class="service-section-label">What It Supports</div>
-          <ul class="service-list">
-            <li>Recruitment-related support</li>
-            <li>Employee relations and HR documentation assistance</li>
-            <li>Classification and operational HR support</li>
-            <li>AI-enhanced efficiency with human oversight</li>
-          </ul>
-
+          <div class="service-name">AI-Enhanced Job Analysis &amp; Position Design</div>
+          <div class="service-title">Role Design Support</div>
+          <p class="service-caption">Short video summary available above.</p>
           <div class="card-footer-space"></div>
-
           <div class="button-stack">
-            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Virtual Human Resources (AI-Enhanced)')">Request Consultation</button>
-            <a href="virtual-human-resources.html" class="secondary-btn">Explore More</a>
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'AI-Enhanced Job Analysis & Position Design')">Submit Inquiry</button>
           </div>
         </div>
       </article>
 
       <article class="service-card">
-        <img src="recognition-galas.jpg" alt="Photo placeholder for Employee Visibility and Recognition Gala" class="service-photo">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="hard-to-fill-poster.jpg">
+            <source src="strategic-recruitment-hard-to-fill.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="service-body">
-          <div class="service-name">Employee Visibility &amp; Recognition Gala</div>
-          <div class="service-title">Recognition Strategy Support</div>
-
-          <div class="service-section-label">Overview</div>
-          <p class="service-text">
-            Elevate culture. Strengthen visibility. Celebrate excellence. Strategic recognition and gala planning support designed to honor service, leadership, and impact while strengthening organizational pride and public visibility.
-          </p>
-
-          <div class="service-section-label">What It Supports</div>
-          <ul class="service-list">
-            <li>Recognition-centered planning and concept development</li>
-            <li>Employee and leadership visibility initiatives</li>
-            <li>Culture-building and morale-focused recognition strategy</li>
-            <li>Public-facing appreciation and impact storytelling</li>
-          </ul>
-
+          <div class="service-name">Strategic Recruitment for Hard-to-Fill Roles</div>
+          <div class="service-title">Recruitment Planning</div>
+          <p class="service-caption">Short video summary available above.</p>
           <div class="card-footer-space"></div>
-
           <div class="button-stack">
-            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Employee Visibility & Recognition Gala')">Request Consultation</button>
-            <a href="gala.html" class="secondary-btn">Explore More</a>
-            <div class="service-actions">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Strategic Recruitment for Hard-to-Fill Roles')">Submit Inquiry</button>
           </div>
         </div>
       </article>
 
       <article class="service-card">
-        <img src="government-funding-readiness-bootcamp.png" alt="Photo placeholder for Government Funding and Readiness Bootcamp" class="service-photo">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="assessment-test-development-poster.jpg">
+            <source src="strategic-assessment-test-development.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Strategic Assessment &amp; Test Development</div>
+          <div class="service-title">Role-Specific Evaluation</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Strategic Assessment & Test Development')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="bilingual-assessment-development-poster.jpg">
+            <source src="bilingual-assessment-development.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Bilingual Assessment Development</div>
+          <div class="service-title">Language-Specific Evaluation</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Bilingual Assessment Development')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="bilingual-testing-strategy-poster.jpg">
+            <source src="bilingual-testing-strategy.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Bilingual Testing Strategy</div>
+          <div class="service-title">High-Volume Hiring Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Bilingual Testing Strategy')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="live-recruitment-engagement-poster.jpg">
+            <source src="live-recruitment-engagement-strategy.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Live Recruitment Engagement Strategy</div>
+          <div class="service-title">Human-Centered Recruitment</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Live Recruitment Engagement Strategy')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="human-centered-onboarding-poster.jpg">
+            <source src="human-centered-onboarding-strategy.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Human-Centered Onboarding Strategy</div>
+          <div class="service-title">Onboarding Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Human-Centered Onboarding Strategy')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="offer-process-optimization-poster.jpg">
+            <source src="offer-process-optimization.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Offer Process Optimization</div>
+          <div class="service-title">Hiring Workflow Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Offer Process Optimization')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="recruitment-retention-optimization-poster.jpg">
+            <source src="recruitment-retention-optimization.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Recruitment &amp; Retention Optimization</div>
+          <div class="service-title">Workforce Stability Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Recruitment & Retention Optimization')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="employee-relations-hr-documentation-poster.jpg">
+            <source src="employee-relations-hr-documentation-support.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Employee Relations &amp; HR Documentation Support</div>
+          <div class="service-title">Operational HR Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Employee Relations & HR Documentation Support')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="recruitment-visual-video-content-poster.jpg">
+            <source src="recruitment-visual-video-content-creation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Recruitment Visual &amp; Video Content Creation</div>
+          <div class="service-title">Recruitment Marketing Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Recruitment Visual & Video Content Creation')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="employee-recognition-visibility-poster.jpg">
+            <source src="employee-recognition-visibility-gala.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-body">
+          <div class="service-name">Employee Recognition &amp; Visibility Gala</div>
+          <div class="service-title">Recognition Experience Support</div>
+          <p class="service-caption">Short video summary available above.</p>
+          <div class="card-footer-space"></div>
+          <div class="button-stack">
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Employee Recognition & Visibility Gala')">Submit Inquiry</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-video-wrap">
+          <span class="video-badge">Video Overview</span>
+          <video class="service-video" controls preload="metadata" playsinline poster="government-funding-readiness-bootcamp-poster.jpg">
+            <source src="government-funding-readiness-bootcamp.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="service-body">
           <div class="service-name">Government Funding &amp; Readiness Bootcamp</div>
           <div class="service-title">Funding Readiness Support</div>
-
-          <div class="service-section-label">Overview</div>
-          <p class="service-text">
-            Navigate funding and contracting opportunities with clarity and confidence. A structured readiness program designed to help organizations understand, prepare for, and pursue government funding responsibly.
-          </p>
-
-          <div class="service-section-label">What It Supports</div>
-          <ul class="service-list">
-            <li>Grant and contract readiness awareness</li>
-            <li>Government funding navigation support</li>
-            <li>SAM and certification readiness basics</li>
-            <li>Strategic preparation before pursuing opportunities</li>
-          </ul>
-
+          <p class="service-caption">Short video summary available above.</p>
           <div class="card-footer-space"></div>
-
           <div class="button-stack">
-            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Government Funding & Readiness Bootcamp')">Request Consultation</button>
-            <a href="Bootcamp.html" class="secondary-btn">Explore More</a>
+            <button type="button" class="primary-btn" onclick="openModal('consultingModal', 'Government Funding & Readiness Bootcamp')">Submit Inquiry</button>
           </div>
         </div>
       </article>
@@ -749,20 +896,20 @@ footer {
       <h2>How the Process Works</h2>
       <div class="pathway-grid">
         <div class="pathway-item">
-          <h3>1. Share Your Needs</h3>
-          <p>Tell us what type of consulting support your organization is seeking and where you need clarity, visibility, or readiness.</p>
+          <h3>1. Watch the Service Summary</h3>
+          <p>Review the short video on the service card that best aligns with your organization’s needs.</p>
         </div>
         <div class="pathway-item">
-          <h3>2. Review and Alignment</h3>
-          <p>We review your inquiry to understand the service fit, your priorities, and the type of support that may be most helpful.</p>
+          <h3>2. Submit Your Inquiry</h3>
+          <p>Use the inquiry button to share your service interest, goals, and the type of support you may be seeking.</p>
         </div>
         <div class="pathway-item">
-          <h3>3. Initial Consultation</h3>
-          <p>We connect regarding your goals, scope, and possible next steps based on your organization’s needs.</p>
+          <h3>3. Review and Consultation</h3>
+          <p>We review your inquiry and connect regarding your needs, priorities, scope, and possible next steps.</p>
         </div>
         <div class="pathway-item">
           <h3>4. Move Forward Strategically</h3>
-          <p>Support moves forward based on alignment, availability, organizational fit, and the type of consultation requested.</p>
+          <p>Consulting support moves forward based on alignment, availability, project complexity, and organizational fit.</p>
         </div>
       </div>
     </div>
@@ -772,7 +919,7 @@ footer {
     <div class="cta-card">
       <h2>Interested in Consulting Support?</h2>
       <p>
-        If you would like to request consultation for one of our consulting services, submit an inquiry below and share more about your organization and goals.
+        If your organization would like to request consultation, submit an inquiry and share more about your goals, priorities, and service needs.
       </p>
       <p>
         We welcome mission-aligned conversations that support visibility, modernization, readiness, and long-term opportunity.
@@ -831,8 +978,18 @@ footer {
           <label for="service_interest">Service of Interest</label>
           <select id="service_interest" name="service_interest" required>
             <option value="">Select a Service</option>
-            <option>Virtual Human Resources (AI-Enhanced)</option>
-            <option>Employee Visibility & Recognition Gala</option>
+            <option>AI-Enhanced Job Analysis & Position Design</option>
+            <option>Strategic Recruitment for Hard-to-Fill Roles</option>
+            <option>Strategic Assessment & Test Development</option>
+            <option>Bilingual Assessment Development</option>
+            <option>Bilingual Testing Strategy</option>
+            <option>Live Recruitment Engagement Strategy</option>
+            <option>Human-Centered Onboarding Strategy</option>
+            <option>Offer Process Optimization</option>
+            <option>Recruitment & Retention Optimization</option>
+            <option>Employee Relations & HR Documentation Support</option>
+            <option>Recruitment Visual & Video Content Creation</option>
+            <option>Employee Recognition & Visibility Gala</option>
             <option>Government Funding & Readiness Bootcamp</option>
             <option>General Consulting Inquiry</option>
           </select>
@@ -902,6 +1059,8 @@ document.addEventListener('keydown', function (e) {
   }
 });
 </script>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzhkMWE1NThhYzc5MDAwOGFjOGMwMCIsImlzc3VlciI6Im5mc2VydmVyIn0.FV3VWaixQpLFRhUOjGKDcU7wtA8kU9_NAisb9Vc_0ZU"></script>
 
 </body>
 </html>
