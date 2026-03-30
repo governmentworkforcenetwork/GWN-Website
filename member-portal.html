@@ -1,864 +1,1099 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Talent Connect Member Portal | Government Workforce Network LLC</title>
-  <meta
-    name="description"
-    content="Private member portal for Talent Connect. Access exclusive workforce tools, open-access innovation resources, and low-barrier support."
-  />
-  <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #12263f;
-      background:
-        radial-gradient(circle at top left, rgba(33,74,154,0.14), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(212,175,55,0.10), transparent 30%),
-        linear-gradient(180deg, #f5f8fc 0%, #edf3fa 100%);
-    }
-
-    :root{
-      --navy:#0b1f3a;
-      --navy2:#12325e;
-      --royal:#214a9a;
-      --gold:#d4af37;
-      --ink:#213547;
-      --muted:#617488;
-      --line:rgba(11,31,58,0.10);
-      --white:#ffffff;
-      --soft:#f8fbff;
-      --shadow:0 20px 60px rgba(11,31,58,0.10);
-      --shadow-soft:0 12px 32px rgba(11,31,58,0.06);
-      --radius-xl:30px;
-      --radius-lg:24px;
-      --radius-md:16px;
-    }
-
-    /* ACCESS GATE */
-    .gate-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background:
-        linear-gradient(135deg, rgba(11,31,58,0.90), rgba(18,50,94,0.88)),
-        radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 30%);
-      backdrop-filter: blur(8px);
-    }
-
-    .gate-card {
-      width: 100%;
-      max-width: 620px;
-      background: rgba(255,255,255,0.96);
-      border: 1px solid rgba(11,31,58,0.10);
-      border-radius: 30px;
-      box-shadow: 0 28px 70px rgba(0,0,0,0.22);
-      overflow: hidden;
-    }
-
-    .gate-top {
-      padding: 28px 26px 22px;
-      background: linear-gradient(135deg, rgba(11,31,58,0.98), rgba(33,74,154,0.94));
-      color: #fff;
-    }
-
-    .gate-eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.2px;
-      margin-bottom: 14px;
-    }
-
-    .gate-top h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
-      line-height: 1.1;
-    }
-
-    .gate-top p {
-      margin: 0;
-      color: rgba(255,255,255,0.92);
-      line-height: 1.75;
-      font-size: 0.98rem;
-    }
-
-    .gate-body {
-      padding: 24px 26px 28px;
-    }
-
-    .gate-note {
-      margin: 0 0 18px;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 0.97rem;
-    }
-
-    .gate-field label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.94rem;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .gate-field input {
-      width: 100%;
-      border: 1px solid rgba(11,31,58,0.14);
-      border-radius: 14px;
-      padding: 15px 14px;
-      font-size: 1rem;
-      color: var(--ink);
-      background: #fff;
-      outline: none;
-      transition: border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .gate-field input:focus {
-      border-color: rgba(33,74,154,0.45);
-      box-shadow: 0 0 0 4px rgba(33,74,154,0.10);
-    }
-
-    .gate-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .btn {
-      appearance: none;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-size: 0.96rem;
-      font-weight: 800;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #0b1f3a, #214a9a);
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(33,74,154,0.24);
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: #0b1f3a;
-      border: 1px solid rgba(11,31,58,0.14);
-      box-shadow: 0 8px 20px rgba(11,31,58,0.05);
-    }
-
-    .gate-error {
-      display: none;
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: #fff5f5;
-      border: 1px solid rgba(181, 54, 54, 0.16);
-      color: #8f2323;
-      font-size: 0.93rem;
-      line-height: 1.6;
-    }
-
-    .gate-footer {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.65;
-    }
-
-    /* MAIN PORTAL */
-    .portal-shell {
-      display: none;
-    }
-
-    .page {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 22px 18px 80px;
-    }
-
-    .member-banner {
-      margin-bottom: 16px;
-      border-radius: 18px;
-      padding: 12px 16px;
-      background: linear-gradient(135deg, rgba(11,31,58,0.96), rgba(33,74,154,0.92));
-      color: #fff;
-      font-size: 0.94rem;
-      line-height: 1.6;
-      box-shadow: 0 12px 28px rgba(11,31,58,0.14);
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border-radius: 36px;
-      padding: 38px 28px;
-      background:
-        linear-gradient(135deg, rgba(11,31,58,0.97), rgba(18,50,94,0.95) 48%, rgba(33,74,154,0.92) 100%);
-      color: #fff;
-      box-shadow: var(--shadow);
-      margin-bottom: 22px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      right: -70px;
-      bottom: -90px;
-      background: rgba(255,255,255,0.07);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      right: 160px;
-      top: -70px;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.3px;
-      margin-bottom: 14px;
-    }
-
-    .hero h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2rem, 4vw, 3.7rem);
-      line-height: 1.08;
-      max-width: 900px;
-    }
-
-    .hero p {
-      margin: 0 0 12px;
-      max-width: 860px;
-      color: rgba(255,255,255,0.94);
-      line-height: 1.8;
-      font-size: 1.04rem;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.16);
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .overview-card {
-      background: rgba(255,255,255,0.93);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .overview-card h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-      font-size: 1.02rem;
-    }
-
-    .overview-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 0.95rem;
-    }
-
-    .section-wrap {
-      margin-top: 30px;
-    }
-
-    .section-head {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.65rem;
-      font-weight: 800;
-    }
-
-    .section-sub {
-      margin: 0 0 18px;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 0.98rem;
-      max-width: 900px;
-    }
-
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .tool-card {
-      background: rgba(255,255,255,0.94);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 22px;
-      box-shadow: 0 18px 48px rgba(11,31,58,0.08);
-      display: flex;
-      flex-direction: column;
-      min-height: 280px;
-      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-    }
-
-    .tool-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 50px rgba(11,31,58,0.11);
-      border-color: rgba(33,74,154,0.18);
-    }
-
-    .tool-badge {
-      display: inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: #eef4ff;
-      border: 1px solid rgba(33,74,154,0.10);
-      color: #163d77;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-      margin-bottom: 12px;
-      width: fit-content;
-    }
-
-    .tool-badge.gold {
-      background: rgba(212,175,55,0.12);
-      border-color: rgba(212,175,55,0.18);
-      color: #7c5d00;
-    }
-
-    .tool-badge.soft {
-      background: rgba(12,122,67,0.10);
-      border-color: rgba(12,122,67,0.14);
-      color: #0c6c3c;
-    }
-
-    .tool-card h3 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.15rem;
-      line-height: 1.3;
-    }
-
-    .tool-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 0.96rem;
-      flex: 1;
-    }
-
-    .tool-actions {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn-disabled {
-      background: #f2f5f8;
-      color: #738396;
-      border: 1px solid rgba(11,31,58,0.08);
-      cursor: default;
-      box-shadow: none;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .info-card {
-      background: rgba(255,255,255,0.94);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 22px;
-      box-shadow: 0 18px 48px rgba(11,31,58,0.08);
-    }
-
-    .info-card h3 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.08rem;
-    }
-
-    .info-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 0.96rem;
-    }
-
-    .toggle-box {
-      margin-top: 14px;
-      padding: 16px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
-      border: 1px solid rgba(33,74,154,0.10);
-    }
-
-    .toggle-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .toggle-row input {
-      margin-top: 4px;
-      transform: scale(1.1);
-    }
-
-    .toggle-row label {
-      color: #29435c;
-      line-height: 1.7;
-      font-size: 0.96rem;
-    }
-
-    .future-section {
-      margin-top: 22px;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .future-section h3 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.16rem;
-    }
-
-    .future-section p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 0.97rem;
-      max-width: 920px;
-    }
-
-    .future-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .future-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: #eef4ff;
-      border: 1px solid rgba(33,74,154,0.10);
-      color: #163d77;
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    .footer-note {
-      margin-top: 24px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #f7fbff 0%, #eef5ff 100%);
-      border: 1px solid rgba(33,74,154,0.10);
-      color: #2b455f;
-      line-height: 1.7;
-      font-size: 0.94rem;
-    }
-
-    @media (max-width: 1080px) {
-      .tools-grid,
-      .overview-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .hero {
-        padding: 28px 18px;
-        border-radius: 28px;
-      }
-
-      .tools-grid,
-      .overview-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .tool-actions,
-      .gate-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .gate-top,
-      .gate-body {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Talent Connect Member Portal | Government Workforce Network LLC</title>
+<meta
+name="description"
+content="Private member portal for Talent Connect. Access exclusive workforce tools, guided support resources, and premium transition-focused tools through Government Workforce Network LLC."
+/>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+color: #12263f;
+background:
+radial-gradient(circle at top left, rgba(33,74,154,0.14), transparent 28%),
+radial-gradient(circle at bottom right, rgba(212,175,55,0.10), transparent 30%),
+linear-gradient(180deg, #f5f8fc 0%, #edf3fa 100%);
+}
+
+:root{
+--navy:#0b1f3a;
+--navy2:#12325e;
+--royal:#214a9a;
+--gold:#d4af37;
+--gold-soft:#f4e6a7;
+--ink:#213547;
+--muted:#617488;
+--line:rgba(11,31,58,0.10);
+--white:#ffffff;
+--soft:#f8fbff;
+--soft2:#eef5ff;
+--shadow:0 20px 60px rgba(11,31,58,0.10);
+--shadow-soft:0 12px 32px rgba(11,31,58,0.06);
+--radius-xl:30px;
+--radius-lg:24px;
+--radius-md:16px;
+}
+
+/* ACCESS GATE */
+.gate-overlay {
+position: fixed;
+inset: 0;
+z-index: 9999;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+background:
+linear-gradient(135deg, rgba(11,31,58,0.90), rgba(18,50,94,0.88)),
+radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 30%);
+backdrop-filter: blur(8px);
+}
+
+.gate-card {
+width: 100%;
+max-width: 640px;
+background: rgba(255,255,255,0.97);
+border: 1px solid rgba(11,31,58,0.10);
+border-radius: 30px;
+box-shadow: 0 28px 70px rgba(0,0,0,0.22);
+overflow: hidden;
+}
+
+.gate-top {
+padding: 28px 26px 22px;
+background: linear-gradient(135deg, rgba(11,31,58,0.98), rgba(33,74,154,0.94));
+color: #fff;
+}
+
+.gate-eyebrow {
+display: inline-block;
+padding: 8px 14px;
+border-radius: 999px;
+background: rgba(255,255,255,0.14);
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1.2px;
+margin-bottom: 14px;
+}
+
+.gate-top h1 {
+margin: 0 0 10px;
+font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+line-height: 1.1;
+}
+
+.gate-top p {
+margin: 0;
+color: rgba(255,255,255,0.92);
+line-height: 1.75;
+font-size: 0.98rem;
+}
+
+.gate-body {
+padding: 24px 26px 28px;
+}
+
+.gate-note {
+margin: 0 0 18px;
+color: var(--muted);
+line-height: 1.75;
+font-size: 0.97rem;
+}
+
+.gate-field label {
+display: block;
+margin-bottom: 8px;
+font-size: 0.94rem;
+font-weight: 700;
+color: var(--navy);
+}
+
+.gate-field input {
+width: 100%;
+border: 1px solid rgba(11,31,58,0.14);
+border-radius: 14px;
+padding: 15px 14px;
+font-size: 1rem;
+color: var(--ink);
+background: #fff;
+outline: none;
+transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.gate-field input:focus {
+border-color: rgba(33,74,154,0.45);
+box-shadow: 0 0 0 4px rgba(33,74,154,0.10);
+}
+
+.gate-actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 18px;
+}
+
+.btn {
+appearance: none;
+border: none;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+padding: 14px 20px;
+border-radius: 14px;
+font-size: 0.96rem;
+font-weight: 800;
+transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+background: linear-gradient(135deg, #0b1f3a, #214a9a);
+color: #fff;
+box-shadow: 0 14px 30px rgba(33,74,154,0.24);
+}
+
+.btn-secondary {
+background: #fff;
+color: #0b1f3a;
+border: 1px solid rgba(11,31,58,0.14);
+box-shadow: 0 8px 20px rgba(11,31,58,0.05);
+}
+
+.btn-disabled {
+background: #f2f5f8;
+color: #738396;
+border: 1px solid rgba(11,31,58,0.08);
+cursor: default;
+box-shadow: none;
+}
+
+.gate-error {
+display: none;
+margin-top: 14px;
+padding: 12px 14px;
+border-radius: 14px;
+background: #fff5f5;
+border: 1px solid rgba(181, 54, 54, 0.16);
+color: #8f2323;
+font-size: 0.93rem;
+line-height: 1.6;
+}
+
+.gate-footer {
+margin-top: 16px;
+color: var(--muted);
+font-size: 0.88rem;
+line-height: 1.65;
+}
+
+/* MAIN PORTAL */
+.portal-shell {
+display: none;
+}
+
+.page {
+max-width: 1280px;
+margin: 0 auto;
+padding: 22px 18px 80px;
+}
+
+.member-banner {
+margin-bottom: 16px;
+border-radius: 18px;
+padding: 12px 16px;
+background: linear-gradient(135deg, rgba(11,31,58,0.96), rgba(33,74,154,0.92));
+color: #fff;
+font-size: 0.94rem;
+line-height: 1.6;
+box-shadow: 0 12px 28px rgba(11,31,58,0.14);
+}
+
+.hero {
+position: relative;
+overflow: hidden;
+border-radius: 36px;
+padding: 40px 28px;
+background:
+linear-gradient(135deg, rgba(11,31,58,0.97), rgba(18,50,94,0.95) 48%, rgba(33,74,154,0.92) 100%);
+color: #fff;
+box-shadow: var(--shadow);
+margin-bottom: 22px;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+width: 300px;
+height: 300px;
+border-radius: 50%;
+right: -70px;
+bottom: -90px;
+background: rgba(255,255,255,0.07);
+}
+
+.hero::after {
+content: "";
+position: absolute;
+width: 180px;
+height: 180px;
+border-radius: 50%;
+right: 160px;
+top: -70px;
+background: rgba(255,255,255,0.04);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+}
+
+.eyebrow {
+display: inline-block;
+padding: 8px 14px;
+border-radius: 999px;
+background: rgba(255,255,255,0.14);
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1.3px;
+margin-bottom: 14px;
+}
+
+.hero h1 {
+margin: 0 0 14px;
+font-size: clamp(2rem, 4vw, 3.7rem);
+line-height: 1.08;
+max-width: 960px;
+}
+
+.hero p {
+margin: 0 0 12px;
+max-width: 900px;
+color: rgba(255,255,255,0.94);
+line-height: 1.8;
+font-size: 1.04rem;
+}
+
+.pill-row {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 22px;
+}
+
+.pill {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 10px 14px;
+border-radius: 999px;
+background: rgba(255,255,255,0.10);
+border: 1px solid rgba(255,255,255,0.16);
+font-size: 0.92rem;
+font-weight: 700;
+}
+
+.overview-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+margin-bottom: 24px;
+}
+
+.overview-card {
+background: rgba(255,255,255,0.93);
+border: 1px solid var(--line);
+border-radius: 24px;
+padding: 20px;
+box-shadow: var(--shadow-soft);
+}
+
+.overview-card h3 {
+margin: 0 0 8px;
+color: var(--navy);
+font-size: 1.02rem;
+}
+
+.overview-card p {
+margin: 0;
+color: var(--muted);
+line-height: 1.75;
+font-size: 0.95rem;
+}
+
+.section-wrap {
+margin-top: 30px;
+}
+
+.section-head {
+margin: 0 0 10px;
+color: var(--navy);
+font-size: 1.7rem;
+font-weight: 800;
+}
+
+.section-sub {
+margin: 0 0 18px;
+color: var(--muted);
+line-height: 1.7;
+font-size: 0.98rem;
+max-width: 940px;
+}
+
+.featured-spotlight {
+background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+border: 1px solid var(--line);
+border-radius: 30px;
+padding: 24px;
+box-shadow: var(--shadow);
+margin-bottom: 24px;
+display: grid;
+grid-template-columns: 1.15fr 0.85fr;
+gap: 18px;
+align-items: stretch;
+}
+
+.featured-panel {
+background: linear-gradient(135deg, rgba(11,31,58,0.98), rgba(33,74,154,0.94));
+border-radius: 24px;
+padding: 26px;
+color: #fff;
+box-shadow: 0 20px 48px rgba(11,31,58,0.18);
+}
+
+.featured-label {
+display: inline-block;
+padding: 7px 12px;
+border-radius: 999px;
+background: rgba(255,255,255,0.13);
+font-size: 0.8rem;
+font-weight: 800;
+letter-spacing: 0.6px;
+margin-bottom: 12px;
+}
+
+.featured-panel h3 {
+margin: 0 0 10px;
+font-size: 1.45rem;
+line-height: 1.25;
+}
+
+.featured-panel p {
+margin: 0 0 12px;
+color: rgba(255,255,255,0.92);
+line-height: 1.8;
+font-size: 0.97rem;
+}
+
+.featured-pills {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 18px;
+}
+
+.featured-pills span {
+display: inline-flex;
+padding: 9px 12px;
+border-radius: 999px;
+background: rgba(255,255,255,0.10);
+border: 1px solid rgba(255,255,255,0.14);
+font-size: 0.86rem;
+font-weight: 700;
+}
+
+.featured-side {
+background: linear-gradient(180deg, #f8fbff 0%, #edf4ff 100%);
+border: 1px solid rgba(33,74,154,0.10);
+border-radius: 24px;
+padding: 22px;
+}
+
+.featured-side h4 {
+margin: 0 0 10px;
+color: var(--navy);
+font-size: 1.05rem;
+}
+
+.featured-side ul {
+margin: 0;
+padding-left: 18px;
+color: var(--muted);
+line-height: 1.8;
+font-size: 0.95rem;
+}
+
+.featured-side li + li {
+margin-top: 6px;
+}
+
+.tools-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.tool-card {
+background: rgba(255,255,255,0.94);
+border: 1px solid var(--line);
+border-radius: 26px;
+padding: 22px;
+box-shadow: 0 18px 48px rgba(11,31,58,0.08);
+display: flex;
+flex-direction: column;
+min-height: 300px;
+transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.tool-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 22px 50px rgba(11,31,58,0.11);
+border-color: rgba(33,74,154,0.18);
+}
+
+.tool-badge {
+display: inline-block;
+padding: 7px 12px;
+border-radius: 999px;
+background: #eef4ff;
+border: 1px solid rgba(33,74,154,0.10);
+color: #163d77;
+font-size: 0.82rem;
+font-weight: 800;
+letter-spacing: 0.4px;
+margin-bottom: 12px;
+width: fit-content;
+}
+
+.tool-badge.gold {
+background: rgba(212,175,55,0.12);
+border-color: rgba(212,175,55,0.18);
+color: #7c5d00;
+}
+
+.tool-badge.soft {
+background: rgba(12,122,67,0.10);
+border-color: rgba(12,122,67,0.14);
+color: #0c6c3c;
+}
+
+.tool-badge.premium {
+background: linear-gradient(135deg, rgba(212,175,55,0.18), rgba(255,255,255,0.85));
+border-color: rgba(212,175,55,0.24);
+color: #6d5200;
+}
+
+.tool-card h3 {
+margin: 0 0 10px;
+color: var(--navy);
+font-size: 1.15rem;
+line-height: 1.3;
+}
+
+.tool-card p {
+margin: 0;
+color: var(--muted);
+line-height: 1.75;
+font-size: 0.96rem;
+flex: 1;
+}
+
+.tool-actions {
+margin-top: 18px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.info-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+margin-top: 20px;
+}
+
+.info-card {
+background: rgba(255,255,255,0.94);
+border: 1px solid var(--line);
+border-radius: 24px;
+padding: 22px;
+box-shadow: 0 18px 48px rgba(11,31,58,0.08);
+}
+
+.info-card h3 {
+margin: 0 0 10px;
+color: var(--navy);
+font-size: 1.08rem;
+}
+
+.info-card p {
+margin: 0;
+color: var(--muted);
+line-height: 1.75;
+font-size: 0.96rem;
+}
+
+.toggle-box {
+margin-top: 14px;
+padding: 16px;
+border-radius: 18px;
+background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+border: 1px solid rgba(33,74,154,0.10);
+}
+
+.toggle-row {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+}
+
+.toggle-row input {
+margin-top: 4px;
+transform: scale(1.1);
+}
+
+.toggle-row label {
+color: #29435c;
+line-height: 1.7;
+font-size: 0.96rem;
+}
+
+.member-journey {
+margin-top: 22px;
+background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+border: 1px solid var(--line);
+border-radius: 28px;
+padding: 24px;
+box-shadow: var(--shadow-soft);
+}
+
+.member-journey h3 {
+margin: 0 0 12px;
+color: var(--navy);
+font-size: 1.16rem;
+}
+
+.journey-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 14px;
+margin-top: 14px;
+}
+
+.journey-step {
+background: #f8fbff;
+border: 1px solid rgba(33,74,154,0.10);
+border-radius: 20px;
+padding: 18px;
+}
+
+.journey-step strong {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 34px;
+height: 34px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(--gold), #efd98b);
+color: #19283d;
+font-size: 0.94rem;
+margin-bottom: 10px;
+}
+
+.journey-step h4 {
+margin: 0 0 6px;
+color: var(--navy);
+font-size: 0.98rem;
+}
+
+.journey-step p {
+margin: 0;
+color: var(--muted);
+font-size: 0.92rem;
+line-height: 1.7;
+}
+
+.future-section {
+margin-top: 22px;
+background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+border: 1px solid var(--line);
+border-radius: 28px;
+padding: 24px;
+box-shadow: var(--shadow-soft);
+}
+
+.future-section h3 {
+margin: 0 0 10px;
+color: var(--navy);
+font-size: 1.16rem;
+}
+
+.future-section p {
+margin: 0 0 16px;
+color: var(--muted);
+line-height: 1.75;
+font-size: 0.97rem;
+max-width: 920px;
+}
+
+.future-pills {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.future-pill {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 10px 14px;
+border-radius: 999px;
+background: #eef4ff;
+border: 1px solid rgba(33,74,154,0.10);
+color: #163d77;
+font-size: 0.88rem;
+font-weight: 700;
+}
+
+.footer-note {
+margin-top: 24px;
+padding: 16px 18px;
+border-radius: 18px;
+background: linear-gradient(180deg, #f7fbff 0%, #eef5ff 100%);
+border: 1px solid rgba(33,74,154,0.10);
+color: #2b455f;
+line-height: 1.7;
+font-size: 0.94rem;
+}
+
+@media (max-width: 1180px) {
+.featured-spotlight,
+.tools-grid,
+.overview-grid,
+.journey-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.info-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 760px) {
+.hero {
+padding: 28px 18px;
+border-radius: 28px;
+}
+
+.featured-spotlight,
+.tools-grid,
+.overview-grid,
+.journey-grid {
+grid-template-columns: 1fr;
+}
+
+.tool-actions,
+.gate-actions {
+flex-direction: column;
+}
+
+.btn {
+width: 100%;
+}
+
+.gate-top,
+.gate-body {
+padding-left: 18px;
+padding-right: 18px;
+}
+}
+</style>
 </head>
 <body>
 
-  <!-- ACCESS GATE -->
-  <div class="gate-overlay" id="gateOverlay">
-    <div class="gate-card">
-      <div class="gate-top">
-        <span class="gate-eyebrow">PRIVATE MEMBER ACCESS</span>
-        <h1>Enter Your Member Access Code</h1>
-        <p>
-          This member portal is intended for approved Talent Connect members. Enter your access code below to continue to your private tools and resources.
-        </p>
-      </div>
+<!-- ACCESS GATE -->
+<div class="gate-overlay" id="gateOverlay">
+<div class="gate-card">
+<div class="gate-top">
+<span class="gate-eyebrow">PRIVATE MEMBER ACCESS</span>
+<h1>Enter Your Member Access Code</h1>
+<p>
+This portal is reserved for approved Talent Connect members. Enter your access code below to continue to your private workforce tools, featured resources, and member support space.
+</p>
+</div>
 
-      <div class="gate-body">
-        <p class="gate-note">
-          Access codes are shared directly with approved members. If you joined Talent Connect and have not yet received your code, please contact us or wait for your onboarding message.
-        </p>
+<div class="gate-body">
+<p class="gate-note">
+Access codes are shared directly with approved Talent Connect participants. If you joined Talent Connect and have not yet received your code, please wait for your follow-up message or contact us for support.
+</p>
 
-        <div class="gate-field">
-          <label for="accessCode">Member Access Code</label>
-          <input
-            type="password"
-            id="accessCode"
-            placeholder="Enter your access code"
-            autocomplete="off"
-          />
-        </div>
+<div class="gate-field">
+<label for="accessCode">Member Access Code</label>
+<input
+type="password"
+id="accessCode"
+placeholder="Enter your access code"
+autocomplete="off"
+/>
+</div>
 
-        <div class="gate-actions">
-          <button class="btn btn-primary" onclick="checkAccess()">Enter Portal</button>
-          <a class="btn btn-secondary" href="/">Leave</a>
-        </div>
+<div class="gate-actions">
+<button class="btn btn-primary" onclick="checkAccess()">Enter Portal</button>
+<a class="btn btn-secondary" href="/">Leave</a>
+</div>
 
-        <div class="gate-error" id="gateError">
-          The access code entered is incorrect. Please try again.
-        </div>
+<div class="gate-error" id="gateError">
+The access code entered is incorrect. Please try again.
+</div>
 
-        <div class="gate-footer">
-          Government Workforce Network LLC<br>
-          Together, Building Income, Opportunity, and Well-being
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="gate-footer">
+Government Workforce Network LLC<br>
+Together, Building Income, Opportunity, and Well-being
+</div>
+</div>
+</div>
+</div>
 
-  <!-- PORTAL -->
-  <div class="portal-shell" id="portalShell">
-    <div class="page">
+<!-- PORTAL -->
+<div class="portal-shell" id="portalShell">
+<div class="page">
 
-      <div class="member-banner">
-        <strong>Private Member Access</strong> — Exclusive resources for Talent Connect members, plus select innovation tools made available for broader community use.
-      </div>
+<div class="member-banner">
+<strong>Private Member Access</strong> — Featured workforce resources, guided tools, and select innovation support are available here for approved Talent Connect members.
+</div>
 
-      <section class="hero">
-        <div class="hero-content">
-          <span class="eyebrow">TALENT CONNECT MEMBER PORTAL</span>
-          <h1>Welcome to Your Private Workforce Support Space</h1>
-          <p>
-            This member portal was created to make workforce support feel more accessible, more useful, and less overwhelming. Here, Talent Connect members can access practical tools designed to save time, reduce friction, and support real action.
-          </p>
-          <p>
-            Some tools are exclusive to members. Others may also be publicly available as part of our Innovation Lab and community access efforts. This space will continue to evolve as Government Workforce Network expands its support model.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Exclusive Member Tools</span>
-            <span class="pill">Low-Barrier Access</span>
-            <span class="pill">Save Your Own Outputs</span>
-            <span class="pill">Public + Private Resources</span>
-            <span class="pill">Built to Evolve</span>
-          </div>
-        </div>
-      </section>
+<section class="hero">
+<div class="hero-content">
+<span class="eyebrow">TALENT CONNECT MEMBER PORTAL</span>
+<h1>Welcome to Your Private Workforce Support Space</h1>
+<p>
+This portal was created to make workforce support feel more accessible, more useful, and less overwhelming. Talent Connect members can access practical tools designed to reduce friction, strengthen positioning, and support real next-step action.
+</p>
+<p>
+Some resources are exclusive to members. Others may also be made available as part of our broader innovation and community access efforts. This portal will continue to evolve as Government Workforce Network expands its support model.
+</p>
+<div class="pill-row">
+<span class="pill">Exclusive Member Tools</span>
+<span class="pill">Premium Guided Access</span>
+<span class="pill">Save Your Own Outputs</span>
+<span class="pill">Low-Barrier Support</span>
+<span class="pill">Built to Evolve</span>
+</div>
+</div>
+</section>
 
-      <div class="overview-grid">
-        <div class="overview-card">
-          <h3>Why This Portal Exists</h3>
-          <p>
-            Talent Connect is designed to reduce unnecessary barriers and give members access to useful, immediate support without requiring a complicated process.
-          </p>
-        </div>
+<div class="overview-grid">
+<div class="overview-card">
+<h3>Why This Portal Exists</h3>
+<p>
+Talent Connect is designed to reduce unnecessary barriers and provide members with useful, practical support in a more intentional and human-centered format.
+</p>
+</div>
 
-        <div class="overview-card">
-          <h3>How To Use It</h3>
-          <p>
-            Open a tool, complete what you need, review your output, and save it on your own device. The goal is clarity, simplicity, and action.
-          </p>
-        </div>
+<div class="overview-card">
+<h3>How To Use It</h3>
+<p>
+Open a tool, complete what you need, review your output, and save it on your own device. The focus is clarity, action, and immediate value without unnecessary complexity.
+</p>
+</div>
 
-        <div class="overview-card">
-          <h3>What To Expect</h3>
-          <p>
-            Members may receive updates by email regarding sessions, opportunities, employer interest, and future resources as this ecosystem continues to grow.
-          </p>
-        </div>
-      </div>
+<div class="overview-card">
+<h3>What To Expect</h3>
+<p>
+Members may receive updates by email regarding featured resources, sessions, employer-related opportunities, and future enhancements as the ecosystem continues to grow.
+</p>
+</div>
+</div>
 
-      <section class="section-wrap">
-        <h2 class="section-head">Exclusive Member Tools</h2>
-        <p class="section-sub">
-          These tools are intended to support Talent Connect members directly. They are part of our zero-barrier workforce access model and are designed to provide immediate value with minimal friction.
-        </p>
+<section class="section-wrap">
+<h2 class="section-head">Featured Member Resource</h2>
+<p class="section-sub">
+This featured resource is one of the strongest tools currently available inside the member portal. It is designed to support clearer experience translation, stronger civilian positioning, and a more guided workforce transition experience.
+</p>
 
-        <div class="tools-grid">
-          <div class="tool-card">
-            <span class="tool-badge soft">MEMBER EXCLUSIVE</span>
-            <h3>Zero-Barrier Resume Builder</h3>
-            <p>
-              Create a professional resume through a guided process designed to help reduce overwhelm and translate experience into stronger workforce language.
-            </p>
-            <div class="tool-actions">
-              <a href="/veteran-resume-builder.html" class="btn btn-primary">Open Tool</a>
-              <a href="#" class="btn btn-secondary">Learn More</a>
-            </div>
-          </div>
+<div class="featured-spotlight">
+<div class="featured-panel">
+<span class="featured-label">FLAGSHIP MEMBER TOOL</span>
+<h3>Military-to-Civilian Experience Translator</h3>
+<p>
+This premium experience translator is designed to help translate military experience into clearer civilian workforce language through a structured, guided process.
+</p>
+<p>
+The experience includes stronger role interpretation, five-position career progression framing, transferable skill emphasis, and a competency-informed structure that helps present military backgrounds more clearly to civilian employers.
+</p>
 
-          <div class="tool-card">
-            <span class="tool-badge soft">MEMBER EXCLUSIVE</span>
-            <h3>LinkedIn Summary Generator</h3>
-            <p>
-              Build a polished, professional summary that helps strengthen your visibility online and supports your next step with less pressure.
-            </p>
-            <div class="tool-actions">
-              <a href="/veteran-resume-builder.html" class="btn btn-primary">Open Tool</a>
-              <a href="#" class="btn btn-secondary">Learn More</a>
-            </div>
-          </div>
+<div class="featured-pills">
+<span>5 Experience History Structure</span>
+<span>Career Progression Framing</span>
+<span>Military-to-Civilian Translation</span>
+<span>Stronger Resume Language</span>
+</div>
 
-          <div class="tool-card">
-            <span class="tool-badge gold">COMING NEXT</span>
-            <h3>Cover Letter Generator</h3>
-            <p>
-              Create a tailored letter more efficiently using guided prompts and AI-supported drafting designed to help members start faster and with greater confidence.
-            </p>
-            <div class="tool-actions">
-              <span class="btn btn-disabled">Coming Soon</span>
-            </div>
-          </div>
+<div class="tool-actions" style="margin-top:20px;">
+<a href="/veteran-resume-builder.html" class="btn btn-primary">Create Resume</a>
+<a href="#memberJourney" class="btn btn-secondary">How Access Works</a>
+</div>
+</div>
 
-          <div class="tool-card">
-            <span class="tool-badge gold">COMING NEXT</span>
-            <h3>Military-to-Civilian Translator</h3>
-            <p>
-              Translate roles, titles, and responsibilities into clearer civilian-friendly language to improve understanding and strengthen presentation to employers.
-            </p>
-            <div class="tool-actions">
-              <span class="btn btn-disabled">Coming Soon</span>
-            </div>
-          </div>
+<div class="featured-side">
+<h4>What this tool is designed to support</h4>
+<ul>
+<li>Clearer civilian interpretation of military experience</li>
+<li>Stronger work history presentation through five-position career progression</li>
+<li>More polished and premium resume language</li>
+<li>Reduced overwhelm through guided prompts and structured outputs</li>
+<li>A stronger starting point for workforce transition and visibility</li>
+</ul>
+</div>
+</div>
+</section>
 
-          <div class="tool-card">
-            <span class="tool-badge gold">COMING NEXT</span>
-            <h3>Interview Prep Tool</h3>
-            <p>
-              Prepare more confidently for interviews by generating talking points, stronger responses, and practical guidance for employer conversations.
-            </p>
-            <div class="tool-actions">
-              <span class="btn btn-disabled">Coming Soon</span>
-            </div>
-          </div>
+<section class="section-wrap">
+<h2 class="section-head">Exclusive Member Tools</h2>
+<p class="section-sub">
+These tools are intended to support Talent Connect members directly. They are part of our lower-barrier workforce support model and are designed to provide immediate value with minimal friction.
+</p>
 
-          <div class="tool-card">
-            <span class="tool-badge gold">FUTURE EXPANSION</span>
-            <h3>Member Resource Library</h3>
-            <p>
-              A future resource area for downloadable guides, session materials, educational support, and member-facing workforce development resources.
-            </p>
-            <div class="tool-actions">
-              <span class="btn btn-disabled">Evolving</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="tools-grid">
+<div class="tool-card">
+<span class="tool-badge premium">FEATURED MEMBER TOOL</span>
+<h3>Military-to-Civilian Experience Translator</h3>
+<p>
+Create a stronger civilian-facing resume through a guided experience that helps translate military service, highlight transferable value, and present up to five positions of experience history in a clearer progression.
+</p>
+<div class="tool-actions">
+<a href="/veteran-resume-builder.html" class="btn btn-primary">Open Tool</a>
+<a href="#" class="btn btn-secondary">Learn More</a>
+</div>
+</div>
 
-      <section class="section-wrap">
-        <h2 class="section-head">Innovation Lab & Open-Access Resources</h2>
-        <p class="section-sub">
-          Some resources are intentionally made available to the broader public as part of our Innovation Lab and community access mission. These tools may also be featured inside the member portal for convenience.
-        </p>
+<div class="tool-card">
+<span class="tool-badge soft">MEMBER EXCLUSIVE</span>
+<h3>LinkedIn Summary Generator</h3>
+<p>
+Build a polished, professional summary that helps strengthen online visibility and supports your next step with less pressure and more confidence.
+</p>
+<div class="tool-actions">
+<a href="/veteran-resume-builder.html" class="btn btn-primary">Open Tool</a>
+<a href="#" class="btn btn-secondary">Learn More</a>
+</div>
+</div>
 
-        <div class="tools-grid">
-          <div class="tool-card">
-            <span class="tool-badge">OPEN ACCESS</span>
-            <h3>AI Photo Verification</h3>
-            <p>
-              Explore our public-facing digital integrity tool designed to support trust, awareness, and practical use of technology in professional and official environments.
-            </p>
-            <div class="tool-actions">
-              <a href="/events/photo-verification.html" class="btn btn-primary">Open Tool</a>
-              <a href="/talent-connect" class="btn btn-secondary">Talent Connect</a>
-            </div>
-          </div>
+<div class="tool-card">
+<span class="tool-badge gold">COMING NEXT</span>
+<h3>Cover Letter Generator</h3>
+<p>
+Create a tailored letter more efficiently using guided prompts and AI-supported drafting designed to help members start faster and with stronger initial positioning.
+</p>
+<div class="tool-actions">
+<span class="btn btn-disabled">Coming Soon</span>
+</div>
+</div>
 
-          <div class="tool-card">
-            <span class="tool-badge">COMMUNITY ACCESS</span>
-            <h3>Workforce Innovation Expansion</h3>
-            <p>
-              This space will continue to evolve with future community-facing tools that support access, digital readiness, and practical use of innovation.
-            </p>
-            <div class="tool-actions">
-              <span class="btn btn-disabled">More Coming</span>
-            </div>
-          </div>
+<div class="tool-card">
+<span class="tool-badge gold">COMING NEXT</span>
+<h3>Military Role Translation Tool</h3>
+<p>
+Translate roles, titles, and responsibilities into clearer civilian-friendly language to improve understanding, strengthen communication, and support resume and interview preparation.
+</p>
+<div class="tool-actions">
+<span class="btn btn-disabled">Coming Soon</span>
+</div>
+</div>
 
-          <div class="tool-card">
-            <span class="tool-badge">MISSION-ALIGNED</span>
-            <h3>Why Public + Private Tools Matter</h3>
-            <p>
-              Public tools help broaden access and awareness. Member tools deepen support and provide a more structured experience for individuals within Talent Connect.
-            </p>
-            <div class="tool-actions">
-              <a href="/join-talent-connect.html" class="btn btn-secondary">Join Talent Connect</a>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="tool-card">
+<span class="tool-badge gold">COMING NEXT</span>
+<h3>Interview Prep Tool</h3>
+<p>
+Prepare more confidently for interviews by generating stronger talking points, role-specific responses, and practical guidance for employer conversations.
+</p>
+<div class="tool-actions">
+<span class="btn btn-disabled">Coming Soon</span>
+</div>
+</div>
 
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>Opportunities & Member Updates</h3>
-          <p>
-            Talent Connect members may receive direct email updates regarding vacancies, informational sessions, workforce insights, or employer-related opportunities. This keeps the system simple and avoids unnecessary platform friction.
-          </p>
-        </div>
+<div class="tool-card">
+<span class="tool-badge gold">FUTURE EXPANSION</span>
+<h3>Member Resource Library</h3>
+<p>
+A future resource area for guides, session materials, educational support, templates, and member-facing workforce development resources.
+</p>
+<div class="tool-actions">
+<span class="btn btn-disabled">Evolving</span>
+</div>
+</div>
+</div>
+</section>
 
-        <div class="info-card">
-          <h3>Optional Employer Visibility</h3>
-          <p>
-            Visibility to employers should remain optional. Members should be able to receive support and use tools without being forced into exposure or unnecessary additional steps.
-          </p>
-          <div class="toggle-box">
-            <div class="toggle-row">
-              <input type="checkbox" id="visibilityOptIn" />
-              <label for="visibilityOptIn">
-                I would like to be considered for optional employer visibility or future talent matching opportunities.
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="section-wrap">
+<h2 class="section-head">Innovation Lab & Open-Access Resources</h2>
+<p class="section-sub">
+Some resources are intentionally made available more broadly as part of our innovation and community access mission. These may also be featured inside the portal for convenience.
+</p>
 
-      <div class="future-section">
-        <h3>What Still Needs to Evolve</h3>
-        <p>
-          This portal reflects a growing workforce access model. As Government Workforce Network continues to expand, this member experience may evolve to include smarter matching, additional AI tools, guided career support, and deeper member resources — while keeping access simple and human-centered.
-        </p>
+<div class="tools-grid">
+<div class="tool-card">
+<span class="tool-badge">OPEN ACCESS</span>
+<h3>AI Photo Verification</h3>
+<p>
+Explore our public-facing digital integrity tool designed to support trust, awareness, and practical use of technology in professional and official environments.
+</p>
+<div class="tool-actions">
+<a href="/events/photo-verification.html" class="btn btn-primary">Open Tool</a>
+<a href="/talent-connect" class="btn btn-secondary">Talent Connect</a>
+</div>
+</div>
 
-        <div class="future-pills">
-          <span class="future-pill">Cover Letters</span>
-          <span class="future-pill">Interview Preparation</span>
-          <span class="future-pill">Military-to-Civilian Translation</span>
-          <span class="future-pill">Resource Library</span>
-          <span class="future-pill">Employer Matching</span>
-          <span class="future-pill">Future Sessions & Updates</span>
-        </div>
-      </div>
+<div class="tool-card">
+<span class="tool-badge">COMMUNITY ACCESS</span>
+<h3>Workforce Innovation Expansion</h3>
+<p>
+This area will continue to evolve with future community-facing tools that support access, digital readiness, and practical use of innovation.
+</p>
+<div class="tool-actions">
+<span class="btn btn-disabled">More Coming</span>
+</div>
+</div>
 
-      <div class="footer-note">
-        <strong>Member Note:</strong> Outputs generated from tools in this portal should be reviewed and saved by you directly on your own device. Some tools are exclusive to Talent Connect members, while others may also be offered publicly as part of our community access and innovation efforts.
-      </div>
+<div class="tool-card">
+<span class="tool-badge">MISSION-ALIGNED</span>
+<h3>Why Public + Private Tools Matter</h3>
+<p>
+Public tools broaden access and awareness. Member tools provide a more guided and deeper support experience for individuals within Talent Connect.
+</p>
+<div class="tool-actions">
+<a href="/join-talent-connect.html" class="btn btn-secondary">Join Talent Connect</a>
+</div>
+</div>
+</div>
+</section>
 
-    </div>
-  </div>
+<div class="info-grid">
+<div class="info-card">
+<h3>Opportunities & Member Updates</h3>
+<p>
+Talent Connect members may receive direct email updates regarding vacancies, informational sessions, workforce insights, featured resources, or employer-related opportunities. This keeps the system practical and avoids unnecessary platform friction.
+</p>
+</div>
 
-  <script>
-    const MEMBER_ACCESS_CODE = "GWN2026";
+<div class="info-card">
+<h3>Optional Employer Visibility</h3>
+<p>
+Visibility to employers should remain optional. Members should be able to receive support and use tools without being forced into exposure or additional pressure.
+</p>
+<div class="toggle-box">
+<div class="toggle-row">
+<input type="checkbox" id="visibilityOptIn" />
+<label for="visibilityOptIn">
+I would like to be considered for optional employer visibility or future talent matching opportunities.
+</label>
+</div>
+</div>
+</div>
+</div>
 
-    function checkAccess() {
-      const input = document.getElementById("accessCode").value.trim();
-      const errorBox = document.getElementById("gateError");
+<div class="member-journey" id="memberJourney">
+<h3>How Member Access Works</h3>
+<div class="journey-grid">
+<div class="journey-step">
+<strong>1</strong>
+<h4>Join Talent Connect</h4>
+<p>
+Complete the Talent Connect submission form so we can better understand your workforce interests and support needs.
+</p>
+</div>
 
-      if (input === MEMBER_ACCESS_CODE) {
-        sessionStorage.setItem("gwnMemberPortalAccess", "granted");
-        document.getElementById("gateOverlay").style.display = "none";
-        document.getElementById("portalShell").style.display = "block";
-      } else {
-        errorBox.style.display = "block";
-      }
-    }
+<div class="journey-step">
+<strong>2</strong>
+<h4>Receive Follow-Up</h4>
+<p>
+Approved participants receive follow-up communication, including access details and next-step instructions when applicable.
+</p>
+</div>
 
-    document.getElementById("accessCode").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        checkAccess();
-      }
-    });
+<div class="journey-step">
+<strong>3</strong>
+<h4>Enter the Portal</h4>
+<p>
+Use your member access code to enter the private member portal and view available tools and featured resources.
+</p>
+</div>
 
-    window.addEventListener("load", function() {
-      const hasAccess = sessionStorage.getItem("gwnMemberPortalAccess");
-      if (hasAccess === "granted") {
-        document.getElementById("gateOverlay").style.display = "none";
-        document.getElementById("portalShell").style.display = "block";
-      }
-    });
-  </script>
+<div class="journey-step">
+<strong>4</strong>
+<h4>Use Tools & Save Outputs</h4>
+<p>
+Complete your work inside the tool, review outputs, and save everything directly to your own device for future use.
+</p>
+</div>
+</div>
+</div>
+
+<div class="future-section">
+<h3>What Still Needs to Evolve</h3>
+<p>
+This portal reflects a growing workforce access model. As Government Workforce Network continues to expand, this member experience may evolve to include deeper matching, additional AI-supported tools, guided career support, and stronger member resources — while keeping access simple and human-centered.
+</p>
+
+<div class="future-pills">
+<span class="future-pill">Cover Letters</span>
+<span class="future-pill">Interview Preparation</span>
+<span class="future-pill">Role Translation</span>
+<span class="future-pill">Resource Library</span>
+<span class="future-pill">Employer Matching</span>
+<span class="future-pill">Member Updates</span>
+<span class="future-pill">Resume Enhancements</span>
+<span class="future-pill">Guided Career Support</span>
+</div>
+</div>
+
+<div class="footer-note">
+<strong>Member Note:</strong> Outputs generated from tools in this portal should be reviewed and saved directly on your own device. Some tools are exclusive to Talent Connect members, while others may also be offered publicly as part of our community access and innovation efforts. Featured resources may evolve over time as the portal continues to expand.
+</div>
+
+</div>
+</div>
+
+<script>
+const MEMBER_ACCESS_CODE = "GWN2026";
+
+function checkAccess() {
+const input = document.getElementById("accessCode").value.trim();
+const errorBox = document.getElementById("gateError");
+
+if (input === MEMBER_ACCESS_CODE) {
+sessionStorage.setItem("gwnMemberPortalAccess", "granted");
+document.getElementById("gateOverlay").style.display = "none";
+document.getElementById("portalShell").style.display = "block";
+} else {
+errorBox.style.display = "block";
+}
+}
+
+document.getElementById("accessCode").addEventListener("keypress", function(e) {
+if (e.key === "Enter") {
+e.preventDefault();
+checkAccess();
+}
+});
+
+window.addEventListener("load", function() {
+const hasAccess = sessionStorage.getItem("gwnMemberPortalAccess");
+if (hasAccess === "granted") {
+document.getElementById("gateOverlay").style.display = "none";
+document.getElementById("portalShell").style.display = "block";
+}
+});
+</script>
 </body>
 </html>
-
-Sent from my iPhone
