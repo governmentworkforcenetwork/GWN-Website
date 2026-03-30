@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,6 +175,7 @@
       font-weight: 800;
       text-decoration: none;
       transition: 0.25s ease;
+      cursor: pointer;
     }
 
     .secondary-btn:hover { background: rgba(255,255,255,0.14); }
@@ -585,6 +585,51 @@
       font-size: 13px;
     }
 
+    .notify-toggle-wrap {
+      margin-top: 22px;
+    }
+
+    .notify-toggle-btn {
+      display: inline-block;
+      padding: 15px 26px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #111827;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      font-size: 15px;
+    }
+
+    .notify-toggle-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+    }
+
+    .notify-form-panel {
+      display: none;
+      margin-top: 22px;
+    }
+
+    .notify-form-panel.open {
+      display: block;
+      animation: fadeSlideDown 0.28s ease;
+    }
+
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .notify-form {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.10);
@@ -637,6 +682,38 @@
       font-size: 14px;
       line-height: 1.7;
       color: #dce7fa;
+    }
+
+    .notify-form select option,
+    .modal select option {
+      color: #111827;
+      background: #ffffff;
+    }
+
+    .notify-form select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image:
+        linear-gradient(45deg, transparent 50%, #ffffff 50%),
+        linear-gradient(135deg, #ffffff 50%, transparent 50%);
+      background-position:
+        calc(100% - 18px) calc(50% - 3px),
+        calc(100% - 12px) calc(50% - 3px);
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+      padding-right: 42px;
+    }
+
+    .notify-form select:focus,
+    .notify-form input:focus,
+    .notify-form textarea:focus,
+    .modal input:focus,
+    .modal select:focus,
+    .modal textarea:focus {
+      outline: none;
+      border-color: var(--gold-2);
+      box-shadow: 0 0 0 3px rgba(236,211,139,0.18);
     }
 
     .cta-band {
@@ -871,6 +948,13 @@
       nav {
         gap: 14px;
       }
+
+      .notify-toggle-btn,
+      .cta-btn,
+      .secondary-btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -882,7 +966,7 @@
       <a href="/">Home</a>
       <a href="/workforce-tv">Workforce TV</a>
       <a href="#live-session">Next Broadcast</a>
-      <a href="#get-notified">Get Notified</a>
+      <a href="#get-notified" onclick="setTimeout(function(){ openNotifyForm(); }, 150);">Get Notified</a>
       <a href="#" onclick="openModal('featureModal'); return false;">Request Pricing & Details</a>
     </nav>
   </header>
@@ -897,7 +981,7 @@
       </p>
       <div class="hero-actions">
         <a href="#live-session" class="cta-btn">View Next Broadcast</a>
-        <a href="#get-notified" class="secondary-btn">Get Notified</a>
+        <a href="#get-notified" class="secondary-btn" onclick="setTimeout(function(){ openNotifyForm(); }, 150);">Get Notified</a>
       </div>
     </div>
   </section>
@@ -925,7 +1009,8 @@
 
     <div class="banner-note">
       <strong>Session Access Information:</strong> For paid employer or organization-hosted sessions, access to the live session may be unlisted from the public until participants are confirmed.
-This page is designed to promote the session, build visibility, collect interest, and guide approved attendees to the live session at the appropriate time.</div>
+      This page is designed to promote the session, build visibility, collect interest, and guide approved attendees to the live session at the appropriate time.
+    </div>
 
     <div class="grid-2" id="live-session">
       <div class="tv-card">
@@ -943,7 +1028,7 @@ This page is designed to promote the session, build visibility, collect interest
             </div>
             <div class="meta-item">
               <span class="meta-label">Featured Organization</span>
-              <span class="meta-value">Government Workforce Network LLC (Workforce TV Initiative</span>
+              <span class="meta-value">Government Workforce Network LLC (Workforce TV Initiative)</span>
             </div>
             <div class="meta-item">
               <span class="meta-label">Date</span>
@@ -956,7 +1041,7 @@ This page is designed to promote the session, build visibility, collect interest
           </div>
 
           <a href="https://teams.live.com/meet/9357419554469?p=aoeONQNDXbUw10pruG" target="_blank" class="cta-btn" rel="noopener">Join Live Session</a>
-       
+
           <div class="tv-highlight">
             Real-world insights, practical strategies, and open discussion to help you navigate life after graduation with confidence.
           </div>
@@ -1159,64 +1244,77 @@ This page is designed to promote the session, build visibility, collect interest
         <span>Special Broadcast Alerts</span>
       </div>
 
-      <form class="notify-form" action="/thank-you" method="POST" name="workforce-tv-get-notified" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="workforce-tv-get-notified" />
-        <input type="hidden" name="bot-field" />
+      <div class="notify-toggle-wrap">
+        <button type="button" class="notify-toggle-btn" id="notifyToggleBtn" onclick="toggleNotifyForm()">
+          Get Notified
+        </button>
+      </div>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="notify_name">Full Name</label>
-            <input id="notify_name" type="text" name="notify_name" placeholder="Enter your name" required />
+      <div class="notify-form-panel" id="notifyFormPanel">
+        <form class="notify-form" action="/thank-you" method="POST" name="workforce-tv-get-notified" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="workforce-tv-get-notified" />
+          <input type="hidden" name="bot-field" />
+
+          <div hidden>
+            <label for="notify_bot_field">Do not fill this out</label>
+            <input id="notify_bot_field" name="bot-field" />
           </div>
-          <div class="form-group">
-            <label for="notify_email">Email Address</label>
-            <input id="notify_email" type="email" name="notify_email" placeholder="Enter your email" required />
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="notify_name">Full Name</label>
+              <input id="notify_name" type="text" name="notify_name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="notify_email">Email Address</label>
+              <input id="notify_email" type="email" name="notify_email" placeholder="Enter your email" required />
+            </div>
           </div>
-        </div>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="notify_category">I am interested as a</label>
-            <select id="notify_category" name="notify_category">
-              <option value="">Select one</option>
-              <option>Student</option>
-              <option>Professional</option>
-              <option>Job Seeker</option>
-              <option>Veteran / Military-Connected Individual</option>
-              <option>Retiree</option>
-              <option>Individual with Disability</option>
-              <option>Employer / Organization</option>
-              <option>Community Member</option>
-              <option>Other</option>
-            </select>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="notify_category">I am interested as a</label>
+              <select id="notify_category" name="notify_category" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Student">Student</option>
+                <option value="Professional">Professional</option>
+                <option value="Job Seeker">Job Seeker</option>
+                <option value="Veteran / Military-Connected Individual">Veteran / Military-Connected Individual</option>
+                <option value="Retiree">Retiree</option>
+                <option value="Individual with Disability">Individual with Disability</option>
+                <option value="Employer / Organization">Employer / Organization</option>
+                <option value="Community Member">Community Member</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="notify_interest">Primary Interest</label>
+              <select id="notify_interest" name="notify_interest" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Upcoming Live Sessions">Upcoming Live Sessions</option>
+                <option value="Employer Spotlights">Employer Spotlights</option>
+                <option value="Career Conversations">Career Conversations</option>
+                <option value="Recruitment / Hiring Discussions">Recruitment / Hiring Discussions</option>
+                <option value="Workforce Awareness Topics">Workforce Awareness Topics</option>
+                <option value="All Workforce TV Updates">All Workforce TV Updates</option>
+              </select>
+            </div>
           </div>
+
           <div class="form-group">
-            <label for="notify_interest">Primary Interest</label>
-            <select id="notify_interest" name="notify_interest">
-              <option value="">Select one</option>
-              <option>Upcoming Live Sessions</option>
-              <option>Employer Spotlights</option>
-              <option>Career Conversations</option>
-              <option>Recruitment / Hiring Discussions</option>
-              <option>Workforce Awareness Topics</option>
-              <option>All Workforce TV Updates</option>
-            </select>
+            <label for="notify_message">Optional Message</label>
+            <textarea id="notify_message" name="notify_message" placeholder="Share any topics or sessions you would like to see in the future."></textarea>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="notify_message">Optional Message</label>
-          <textarea id="notify_message" name="notify_message" placeholder="Share any topics or sessions you would like to see in the future."></textarea>
-        </div>
+          <div class="form-actions">
+            <button type="submit" class="cta-btn">Join the Notification List</button>
+          </div>
 
-        <div class="form-actions">
-          <button type="submit" class="cta-btn">Join the Notification List</button>
-        </div>
-
-        <div class="notify-note">
-          By submitting this form, you are requesting to receive future Workforce TV-related updates and announcements from Government Workforce Network LLC.
-        </div>
-      </form>
+          <div class="notify-note">
+            By submitting this form, you are requesting to receive future Workforce TV-related updates and announcements from Government Workforce Network LLC.
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="cta-band">
@@ -1252,6 +1350,11 @@ This page is designed to promote the session, build visibility, collect interest
           <input type="hidden" name="form-name" value="workforce-tv-pricing-details-request" />
           <input type="hidden" name="bot-field" />
 
+          <div hidden>
+            <label for="pricing_bot_field">Do not fill this out</label>
+            <input id="pricing_bot_field" name="bot-field" />
+          </div>
+
           <div class="form-grid">
             <div class="form-group">
               <label for="organization_name">Organization / Business Name</label>
@@ -1282,15 +1385,15 @@ This page is designed to promote the session, build visibility, collect interest
           <div class="form-group">
             <label for="feature_type">Type of Session or Engagement Requested</label>
             <select id="feature_type" name="feature_type" required>
-              <option value="">Select one</option>
-              <option>Employer / Organization Spotlight Session</option>
-              <option>Meet & Greet with Students or Target Audience</option>
-              <option>Recruitment & Hiring Session</option>
-              <option>Workforce Engagement Event</option>
-              <option>Community or Initiative Feature</option>
-              <option>Educational or Career Exposure Session</option>
-              <option>Panel Discussion or Special Topic Session</option>
-              <option>Other</option>
+              <option value="" disabled selected>Select one</option>
+              <option value="Employer / Organization Spotlight Session">Employer / Organization Spotlight Session</option>
+              <option value="Meet & Greet with Students or Target Audience">Meet & Greet with Students or Target Audience</option>
+              <option value="Recruitment & Hiring Session">Recruitment & Hiring Session</option>
+              <option value="Workforce Engagement Event">Workforce Engagement Event</option>
+              <option value="Community or Initiative Feature">Community or Initiative Feature</option>
+              <option value="Educational or Career Exposure Session">Educational or Career Exposure Session</option>
+              <option value="Panel Discussion or Special Topic Session">Panel Discussion or Special Topic Session</option>
+              <option value="Other">Other</option>
             </select>
           </div>
 
@@ -1318,6 +1421,29 @@ This page is designed to promote the session, build visibility, collect interest
   </footer>
 
   <script>
+    function toggleNotifyForm() {
+      const panel = document.getElementById('notifyFormPanel');
+      const btn = document.getElementById('notifyToggleBtn');
+      if (!panel || !btn) return;
+
+      panel.classList.toggle('open');
+
+      if (panel.classList.contains('open')) {
+        btn.textContent = 'Hide Notification Form';
+      } else {
+        btn.textContent = 'Get Notified';
+      }
+    }
+
+    function openNotifyForm() {
+      const panel = document.getElementById('notifyFormPanel');
+      const btn = document.getElementById('notifyToggleBtn');
+      if (!panel || !btn) return;
+
+      panel.classList.add('open');
+      btn.textContent = 'Hide Notification Form';
+    }
+
     function openModal(id) {
       const modal = document.getElementById(id);
       if (!modal) return;
