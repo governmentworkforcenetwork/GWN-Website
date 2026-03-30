@@ -1,41 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zero-Barrier Veteran Resume Builder | Government Workforce Network LLC</title>
-  <meta name="description" content="Exclusive Talent Connect tool. Build a resume instantly with no sign-up, no stored data, and military-to-civilian AI-guided translation." />
+  <title>Zero-Barrier Veteran Experience Translator and Resume Builder | Government Workforce Network LLC</title>
+  <meta name="description" content="Exclusive Talent Connect tool. Build a premium military-to-civilian resume instantly with no sign-up, no stored data, career progression framing, and OPM competency-informed language." />
   <style>
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      color:#12263f;
-      background:
-        radial-gradient(circle at top left, rgba(33,74,154,0.16), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(212,175,55,0.10), transparent 30%),
-        linear-gradient(180deg, #f4f8fc 0%, #ecf2f9 100%);
-    }
 
     :root{
       --navy:#0b1f3a;
       --navy2:#12325e;
       --royal:#214a9a;
       --gold:#d4af37;
+      --gold2:#f0d577;
       --ink:#23384d;
       --muted:#607286;
       --line:rgba(11,31,58,0.10);
       --soft:#f7fbff;
       --white:#ffffff;
-      --shadow:0 20px 60px rgba(11,31,58,0.10);
+      --shadow:0 24px 70px rgba(11,31,58,0.10);
+      --card-shadow:0 16px 40px rgba(11,31,58,0.08);
       --radius-xl:30px;
       --radius-lg:22px;
       --radius-md:14px;
+      --success:#0f7b42;
+      --success-bg:#eefaf3;
+      --warn:#9a6700;
+      --warn-bg:#fff8e8;
+    }
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      color:#12263f;
+      background:
+        radial-gradient(circle at top left, rgba(33,74,154,0.16), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(212,175,55,0.11), transparent 30%),
+        linear-gradient(180deg, #f4f8fc 0%, #ecf2f9 100%);
     }
 
     .page{
-      max-width:1320px;
+      max-width:1380px;
       margin:0 auto;
       padding:22px 18px 80px;
     }
@@ -56,11 +64,22 @@
       overflow:hidden;
       border-radius:36px;
       background:
-        linear-gradient(135deg, rgba(11,31,58,0.97), rgba(18,50,94,0.95) 46%, rgba(33,74,154,0.93) 100%);
+        linear-gradient(135deg, rgba(11,31,58,0.98), rgba(18,50,94,0.96) 48%, rgba(33,74,154,0.93) 100%);
       color:#fff;
-      padding:36px 28px;
+      padding:38px 30px;
       box-shadow:var(--shadow);
       margin-bottom:18px;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      right:-50px;
+      top:-50px;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.06);
     }
 
     .hero::after{
@@ -68,8 +87,8 @@
       position:absolute;
       right:-40px;
       bottom:-60px;
-      width:260px;
-      height:260px;
+      width:280px;
+      height:280px;
       border-radius:50%;
       background:rgba(255,255,255,0.07);
     }
@@ -87,16 +106,16 @@
 
     .hero h1{
       margin:0 0 14px;
-      font-size:clamp(2rem,4.3vw,3.9rem);
-      line-height:1.08;
-      max-width:980px;
+      font-size:clamp(2rem,4.3vw,4rem);
+      line-height:1.06;
+      max-width:1000px;
     }
 
     .hero p{
       margin:0 0 10px;
-      max-width:960px;
-      color:rgba(255,255,255,0.94);
-      line-height:1.8;
+      max-width:980px;
+      color:rgba(255,255,255,0.95);
+      line-height:1.82;
       font-size:1.04rem;
     }
 
@@ -127,7 +146,7 @@
     }
 
     .innovation-card{
-      background:rgba(255,255,255,0.90);
+      background:rgba(255,255,255,0.92);
       border:1px solid var(--line);
       border-radius:22px;
       padding:18px;
@@ -143,7 +162,7 @@
     .innovation-card p{
       margin:0;
       color:var(--muted);
-      line-height:1.7;
+      line-height:1.72;
       font-size:0.94rem;
     }
 
@@ -158,19 +177,17 @@
       color:var(--ink);
     }
 
-    .privacy-bar strong{
-      color:var(--navy);
-    }
+    .privacy-bar strong{ color:var(--navy); }
 
     .layout{
       display:grid;
-      grid-template-columns:1.02fr 0.98fr;
+      grid-template-columns:1.03fr 0.97fr;
       gap:20px;
       align-items:start;
     }
 
     .card{
-      background:rgba(255,255,255,0.92);
+      background:rgba(255,255,255,0.93);
       border:1px solid var(--line);
       border-radius:var(--radius-xl);
       padding:24px;
@@ -213,9 +230,7 @@
       gap:14px;
     }
 
-    .field{
-      margin-bottom:14px;
-    }
+    .field{ margin-bottom:14px; }
 
     .field label{
       display:block;
@@ -236,11 +251,11 @@
       color:var(--ink);
       background:#fff;
       outline:none;
-      transition:border-color .2s ease, box-shadow .2s ease;
+      transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
     }
 
     .field textarea{
-      min-height:110px;
+      min-height:105px;
       resize:vertical;
       line-height:1.6;
     }
@@ -279,6 +294,39 @@
       color:var(--navy);
     }
 
+    .experience-block{
+      margin-top:16px;
+      padding:16px;
+      border:1px solid rgba(11,31,58,0.10);
+      border-radius:20px;
+      background:linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+      box-shadow:0 10px 24px rgba(11,31,58,0.04);
+    }
+
+    .experience-block h3{
+      margin:0 0 12px;
+      color:var(--navy);
+      font-size:1.05rem;
+    }
+
+    .experience-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:8px;
+    }
+
+    .experience-tag{
+      display:inline-flex;
+      padding:7px 10px;
+      border-radius:999px;
+      background:#eef4ff;
+      border:1px solid rgba(33,74,154,0.10);
+      color:#163d77;
+      font-size:0.8rem;
+      font-weight:700;
+    }
+
     .btn-row{
       display:flex;
       flex-wrap:wrap;
@@ -298,12 +346,10 @@
       border-radius:14px;
       font-size:0.97rem;
       font-weight:800;
-      transition:transform .2s ease, box-shadow .2s ease;
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
     }
 
-    .btn:hover{
-      transform:translateY(-2px);
-    }
+    .btn:hover{ transform:translateY(-2px); }
 
     .btn-primary{
       background:linear-gradient(135deg, var(--navy), var(--royal));
@@ -319,7 +365,7 @@
     }
 
     .btn-gold{
-      background:linear-gradient(135deg, #c99f22, var(--gold));
+      background:linear-gradient(135deg, #c99f22, var(--gold2));
       color:#241a04;
       box-shadow:0 14px 30px rgba(212,175,55,0.26);
     }
@@ -364,17 +410,10 @@
       font-size:0.97rem;
     }
 
-    .resume-body{
-      padding:24px;
-    }
+    .resume-body{ padding:24px; }
 
-    .resume-section{
-      margin-bottom:24px;
-    }
-
-    .resume-section:last-child{
-      margin-bottom:0;
-    }
+    .resume-section{ margin-bottom:24px; }
+    .resume-section:last-child{ margin-bottom:0; }
 
     .resume-section h3{
       margin:0 0 10px;
@@ -389,7 +428,7 @@
     .resume-section p{
       margin:0;
       color:#263b4d;
-      line-height:1.75;
+      line-height:1.76;
       white-space:pre-line;
     }
 
@@ -401,7 +440,33 @@
 
     .resume-list li{
       margin-bottom:9px;
-      line-height:1.7;
+      line-height:1.72;
+    }
+
+    .role-block{
+      margin-bottom:18px;
+      padding-bottom:14px;
+      border-bottom:1px solid rgba(11,31,58,0.08);
+    }
+
+    .role-block:last-child{
+      margin-bottom:0;
+      padding-bottom:0;
+      border-bottom:none;
+    }
+
+    .role-title{
+      font-weight:800;
+      color:var(--navy);
+      margin-bottom:6px;
+      line-height:1.45;
+    }
+
+    .role-meta{
+      color:var(--muted);
+      font-size:0.92rem;
+      margin-bottom:8px;
+      line-height:1.6;
     }
 
     .muted-placeholder{
@@ -448,7 +513,8 @@
       font-size:0.96rem;
     }
 
-    .linkedin-box{
+    .linkedin-box,
+    .text-box{
       margin-top:14px;
       padding:16px;
       border-radius:18px;
@@ -457,6 +523,56 @@
       color:#28405a;
       line-height:1.75;
       white-space:pre-line;
+    }
+
+    .competency-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .competency-item{
+      border:1px solid rgba(11,31,58,0.08);
+      background:#fff;
+      border-radius:18px;
+      padding:14px;
+    }
+
+    .competency-item strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:6px;
+      font-size:0.95rem;
+    }
+
+    .match-high{
+      background:var(--success-bg);
+      border-color:rgba(15,123,66,0.16);
+    }
+
+    .match-medium{
+      background:var(--warn-bg);
+      border-color:rgba(154,103,0,0.14);
+    }
+
+    .competency-status{
+      display:inline-block;
+      margin-top:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:0.78rem;
+      font-weight:800;
+    }
+
+    .status-high{
+      background:rgba(15,123,66,0.10);
+      color:var(--success);
+    }
+
+    .status-medium{
+      background:rgba(154,103,0,0.10);
+      color:var(--warn);
     }
 
     .disclaimer{
@@ -469,13 +585,17 @@
       line-height:1.65;
     }
 
-    @media (max-width:1100px){
-      .layout{
-        grid-template-columns:1fr;
-      }
-      .innovation-strip{
-        grid-template-columns:1fr;
-      }
+    .tiny-note{
+      margin-top:10px;
+      font-size:0.84rem;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    @media (max-width:1150px){
+      .layout{ grid-template-columns:1fr; }
+      .innovation-strip{ grid-template-columns:1fr; }
+      .competency-grid{ grid-template-columns:1fr; }
     }
 
     @media (max-width:720px){
@@ -511,12 +631,11 @@
       .form-card,
       .tool-card,
       .btn-row,
-      .disclaimer{
+      .disclaimer,
+      .tiny-note{
         display:none !important;
       }
-      .layout{
-        display:block;
-      }
+      .layout{ display:block; }
       .preview-card{
         border:none;
         box-shadow:none;
@@ -535,24 +654,25 @@
 <body>
   <div class="page">
     <div class="top-banner">
-      <strong>Talent Connect Exclusive Tools</strong> — Part of the Government Workforce Network Workforce Innovation Lab. Designed to provide barrier-free, practical, and private workforce support for veterans, service members, and military families.
+      <strong>Talent Connect Exclusive Tools</strong> — Part of the Government Workforce Network Workforce Innovation Lab. Designed to provide barrier-free, practical, private, and premium workforce support for veterans, service members, and military families.
     </div>
 
     <section class="hero">
       <span class="eyebrow">ZERO-BARRIER VETERAN ACCESS</span>
       <h1>Zero-Barrier Veteran Resume Builder</h1>
       <p>
-        Create a professional resume instantly through a guided military-aware workflow that helps translate service experience into civilian-ready language.
+        Create a premium civilian-ready resume through a guided military-aware workflow that translates service experience into stronger professional language, structured career progression, and targeted resume content.
       </p>
       <p>
-        No sign-up. No account. No required data storage. Everything is generated in your browser and saved only if <strong>you</strong> choose to save it on your own device.
+        No sign-up. No account. No required data storage. Everything is generated in your browser and remains on your device unless <strong>you</strong> choose to save it.
       </p>
       <div class="hero-pills">
         <span class="hero-pill">No Login Required</span>
         <span class="hero-pill">Nothing Stored</span>
-        <span class="hero-pill">Military-to-Civilian Translation</span>
-        <span class="hero-pill">Private Sector + Federal Mode</span>
-        <span class="hero-pill">LinkedIn Summary Included</span>
+        <span class="hero-pill">5 Experience History Entries</span>
+        <span class="hero-pill">Career Progression Framing</span>
+        <span class="hero-pill">OPM Competency-Informed</span>
+        <span class="hero-pill">Private + Federal Mode</span>
       </div>
     </section>
 
@@ -560,19 +680,19 @@
       <div class="innovation-card">
         <h3>Why This Exists</h3>
         <p>
-          Veterans and service members deserve direct access to useful tools without friction, unnecessary sign-ups, or barriers that delay progress.
+          Veterans deserve direct access to high-quality resume tools without paywalls, unnecessary sign-ups, or confusing systems that create more barriers than support.
         </p>
       </div>
       <div class="innovation-card">
         <h3>How It Works</h3>
         <p>
-          Complete the guided fields, choose your resume mode, generate your results, and save them yourself. Nothing is kept on this page.
+          Enter your military service background, add up to five experience histories, choose your output mode, and generate polished resume content instantly.
         </p>
       </div>
       <div class="innovation-card">
-        <h3>GWN Innovation Lab</h3>
+        <h3>Premium Translation Logic</h3>
         <p>
-          This tool is part of our broader commitment to AI workforce readiness, digital accessibility, and practical innovation that puts people first.
+          The tool uses stronger language, progression framing, and OPM competency-informed validation to help convert military experience into clearer civilian value.
         </p>
       </div>
     </div>
@@ -586,7 +706,7 @@
       <section class="card form-card">
         <h2>Build Your Resume</h2>
         <p class="sub">
-          Enter your information below. This builder will generate a civilian-friendly resume, a federal-style experience draft, and a LinkedIn-ready summary based on your service background, leadership scope, and duties.
+          Enter your background below. This builder will generate a stronger civilian-friendly resume, a federal-style experience draft, a LinkedIn-ready summary, and an OPM competency alignment review based on your service history and progression.
         </p>
 
         <form id="resumeForm">
@@ -602,7 +722,7 @@
             </label>
           </div>
           <div class="helper">
-            Private Sector mode creates concise, modern resume language. Federal Style mode creates longer, more detailed accomplishment language.
+            Private Sector mode creates concise, modern, premium resume language. Federal Style mode creates more detailed accomplishment language with stronger scope and accountability framing.
           </div>
 
           <div class="section-title">Basic Information</div>
@@ -682,7 +802,7 @@
 
           <div class="grid-2">
             <div class="field">
-              <label for="teamSize">Team Size Supervised (Optional)</label>
+              <label for="teamSize">Largest Team Size Supervised (Optional)</label>
               <input type="text" id="teamSize" placeholder="Example: 12 personnel" />
             </div>
             <div class="field">
@@ -698,20 +818,25 @@
             </div>
           </div>
 
-          <div class="section-title">Experience Translation</div>
-
-          <div class="field">
-            <label for="primaryDuties">Primary Duties and Responsibilities</label>
-            <textarea id="primaryDuties" placeholder="Example: Led mission planning, supervised operations, managed personnel readiness, coordinated logistics, maintained compliance, prepared reports, trained junior staff."></textarea>
-            <div class="helper">
-              You can write naturally. The builder will help convert service language into resume-ready language.
+          <div class="grid-2">
+            <div class="field">
+              <label for="careerLevel">Career Level Target</label>
+              <select id="careerLevel">
+                <option value="">Select level</option>
+                <option>Individual Contributor</option>
+                <option>Supervisor / Lead</option>
+                <option>Manager</option>
+                <option>Senior Manager</option>
+                <option>Director / Executive Track</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="topStrengths">Top Strength Themes</label>
+              <input type="text" id="topStrengths" placeholder="Example: leadership, operations, analysis, compliance" />
             </div>
           </div>
 
-          <div class="field">
-            <label for="achievements">Major Accomplishments / Results</label>
-            <textarea id="achievements" placeholder="Example: Improved readiness, reduced delays, trained 25 personnel, managed high-value equipment, completed critical missions on schedule."></textarea>
-          </div>
+          <div class="section-title">Certifications, Education & Tools</div>
 
           <div class="grid-2">
             <div class="field">
@@ -729,6 +854,13 @@
             <textarea id="additionalSkills" placeholder="Example: leadership, operations, team coordination, compliance, scheduling, communication, analysis"></textarea>
           </div>
 
+          <div class="section-title">Experience History (Up to 5 Roles)</div>
+          <div class="helper">
+            Add up to five roles to create a stronger career progression story. Use military titles, duty stations, commands, assignments, or civilian positions.
+          </div>
+
+          <div id="experienceInputs"></div>
+
           <div class="btn-row">
             <button type="button" class="btn btn-primary" onclick="generateResume()">Generate Resume</button>
             <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear Form</button>
@@ -736,7 +868,7 @@
           </div>
 
           <div class="micro">
-            This tool assists with resume drafting and military-to-civilian language translation. It does not guarantee employment outcomes.
+            This tool assists with resume drafting and military-to-civilian translation. It does not guarantee employment outcomes. Users should review all generated content before use.
           </div>
         </form>
       </section>
@@ -767,10 +899,13 @@
               </div>
 
               <div class="resume-section">
+                <h3>Career Progression Snapshot</h3>
+                <p id="previewProgression" class="muted-placeholder">Your career progression summary will appear here.</p>
+              </div>
+
+              <div class="resume-section">
                 <h3 id="experienceTitle">Professional Experience</h3>
-                <ul id="previewExperience" class="resume-list">
-                  <li class="muted-placeholder">Your translated experience bullets will appear here.</li>
-                </ul>
+                <div id="previewExperienceBlocks" class="muted-placeholder">Your translated experience history will appear here.</div>
               </div>
 
               <div class="resume-section">
@@ -792,16 +927,39 @@
           <div class="tool-card">
             <h3>LinkedIn Summary</h3>
             <p>
-              This section creates a polished LinkedIn-ready “About” summary based on your background and target role.
+              This section creates a polished LinkedIn-ready “About” summary based on your background, target role, and leadership trajectory.
             </p>
-            <div class="linkedin-box" id="linkedinSummary">
-Your LinkedIn summary will appear here after generation.
+            <div class="linkedin-box" id="linkedinSummary">Your LinkedIn summary will appear here after generation.</div>
+          </div>
+
+          <div class="tool-card">
+            <h3>OPM Competency Alignment</h3>
+            <p>
+              This review helps validate translation language using competency-style themes often relevant to federal and structured professional environments.
+            </p>
+            <div class="competency-grid" id="competencyGrid">
+              <div class="competency-item">
+                <strong>Competency results will appear here.</strong>
+                Complete the form and generate the resume to view the alignment review.
+              </div>
             </div>
+            <div class="tiny-note">
+              This section is an informed alignment aid and not an official OPM scoring tool.
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <h3>Federal Narrative Summary</h3>
+            <p>
+              This section creates a stronger detailed narrative useful for federal-style positioning, applications, and expanded accomplishment framing.
+            </p>
+            <div class="text-box" id="federalNarrative">Your expanded federal-style narrative will appear here after generation.</div>
           </div>
 
           <div class="btn-row">
             <button type="button" class="btn btn-primary" onclick="copyResumeText()">Copy Resume Text</button>
             <button type="button" class="btn btn-secondary" onclick="copyLinkedInSummary()">Copy LinkedIn Summary</button>
+            <button type="button" class="btn btn-secondary" onclick="copyFederalNarrative()">Copy Federal Narrative</button>
             <button type="button" class="btn btn-secondary" onclick="window.print()">Print / Save as PDF</button>
             <button type="button" class="btn btn-secondary" onclick="downloadResumeText()">Download .txt</button>
           </div>
@@ -815,13 +973,71 @@ Your LinkedIn summary will appear here after generation.
   </div>
 
   <script>
+    const experienceContainer = document.getElementById("experienceInputs");
+
+    function buildExperienceInputs(){
+      let html = "";
+      for(let i = 1; i <= 5; i++){
+        html += `
+          <div class="experience-block">
+            <h3>Experience ${i}</h3>
+            <div class="experience-meta">
+              <span class="experience-tag">Career History</span>
+              <span class="experience-tag">Translation Ready</span>
+              <span class="experience-tag">Progression Aware</span>
+            </div>
+
+            <div class="grid-2">
+              <div class="field">
+                <label for="roleTitle_${i}">Role / Duty Title</label>
+                <input type="text" id="roleTitle_${i}" placeholder="Example: Operations Supervisor / Platoon Sergeant" />
+              </div>
+              <div class="field">
+                <label for="employerUnit_${i}">Unit / Command / Employer</label>
+                <input type="text" id="employerUnit_${i}" placeholder="Example: 3rd Fleet / Battalion / Company / Agency" />
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="field">
+                <label for="location_${i}">Location</label>
+                <input type="text" id="location_${i}" placeholder="Example: San Diego, CA" />
+              </div>
+              <div class="field">
+                <label for="dates_${i}">Dates</label>
+                <input type="text" id="dates_${i}" placeholder="Example: 2021 - 2024" />
+              </div>
+              <div class="field">
+                <label for="scope_${i}">Leadership / Scope</label>
+                <input type="text" id="scope_${i}" placeholder="Example: Led 18 personnel / managed daily operations" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="duties_${i}">Primary Duties and Responsibilities</label>
+              <textarea id="duties_${i}" placeholder="Example: Led mission planning; supervised operations; managed readiness; coordinated logistics; maintained compliance; trained junior staff; prepared reports"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="achievements_${i}">Major Accomplishments / Results</label>
+              <textarea id="achievements_${i}" placeholder="Example: Improved readiness; reduced delays; trained 25 personnel; managed high-value equipment; completed critical missions on time"></textarea>
+            </div>
+          </div>
+        `;
+      }
+      experienceContainer.innerHTML = html;
+    }
+
+    buildExperienceInputs();
+
     function getValue(id){
-      return document.getElementById(id).value.trim();
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : "";
     }
 
     function getSelectedMode(){
       const checked = document.querySelector('input[name="resumeMode"]:checked');
-      return checked ? checked.value : 'private';
+      return checked ? checked.value : "private";
     }
 
     function splitItems(text){
@@ -849,6 +1065,14 @@ Your LinkedIn summary will appear here after generation.
         .replace(/>/g, "&gt;");
     }
 
+    function cleanSentence(text){
+      if(!text) return "";
+      let t = text.trim();
+      t = t.charAt(0).toUpperCase() + t.slice(1);
+      if(!/[.!?]$/.test(t)) t += ".";
+      return t;
+    }
+
     function getBranchLanguage(branch){
       const map = {
         "Army": "high-accountability operational and mission support environments",
@@ -866,45 +1090,49 @@ Your LinkedIn summary will appear here after generation.
     function getRankProfile(rank){
       const r = (rank || "").toLowerCase();
 
-      if (/(captain|major|colonel|commander|chief warrant officer|lieutenant colonel)/.test(r)) {
+      if (/(captain|major|colonel|commander|chief warrant officer|lieutenant colonel|executive officer)/.test(r)) {
         return {
           level: "senior leadership",
-          summary: "senior leadership, operational accountability, cross-functional coordination, and strategic decision-making",
+          summary: "senior leadership, operational accountability, cross-functional coordination, resource alignment, and strategic decision-making",
+          tone: "executive-ready",
           bullets: [
             "Provided senior-level leadership in high-responsibility environments requiring accountability, sound judgment, and mission-focused execution.",
-            "Directed operations, coordinated personnel, and supported strategic priorities while maintaining readiness, discipline, and continuity.",
-            "Translated leadership experience into strong capabilities in team oversight, planning, resource alignment, and organizational execution."
+            "Directed operations, aligned personnel and resources, and sustained performance under demanding conditions with strong organizational discipline.",
+            "Translated leadership depth into strengths in planning, execution, workforce oversight, and enterprise-level coordination."
           ]
         };
       }
 
-      if (/(lieutenant|sergeant major|master sergeant|first sergeant|chief petty officer|senior chief|master chief|gunnery sergeant|major sergeant)/.test(r)) {
+      if (/(lieutenant|sergeant major|master sergeant|first sergeant|chief petty officer|senior chief|master chief|gunnery sergeant)/.test(r)) {
         return {
           level: "leadership",
-          summary: "team leadership, personnel development, operational execution, and accountability under demanding conditions",
+          summary: "team leadership, personnel development, operational execution, accountability, and workforce coordination under demanding conditions",
+          tone: "management-ready",
           bullets: [
             "Led teams and supervised personnel in structured environments where reliability, readiness, and accountability were essential.",
             "Supported mission execution through leadership, workflow coordination, training support, and disciplined implementation.",
-            "Brought strong experience in guiding teams, solving operational challenges, and maintaining high performance expectations."
+            "Brought strong experience in guiding teams, solving operational challenges, and maintaining high performance standards."
           ]
         };
       }
 
       if (/(sergeant|staff sergeant|technical sergeant|petty officer|corporal|specialist|lead)/.test(r)) {
         return {
-          level: "team supervision",
-          summary: "front-line supervision, process reliability, team coordination, and day-to-day operational support",
+          level: "front-line leadership",
+          summary: "front-line supervision, team coordination, operational consistency, process reliability, and day-to-day mission support",
+          tone: "supervisor-ready",
           bullets: [
-            "Supported day-to-day operations through dependable execution, team coordination, and adherence to procedures and standards.",
-            "Contributed to team performance by assisting with supervision, training, readiness, and task completion in time-sensitive settings.",
-            "Applied discipline, initiative, and operational awareness to maintain consistency and support collective success."
+            "Supported day-to-day operations through dependable execution, team coordination, and adherence to procedures and performance standards.",
+            "Contributed to team performance by assisting with supervision, readiness, training, and timely completion of operational priorities.",
+            "Applied initiative, discipline, and situational awareness to support continuity and operational effectiveness."
           ]
         };
       }
 
       return {
         level: "operational support",
-        summary: "mission support, adaptable execution, teamwork, and structured problem-solving",
+        summary: "mission support, adaptable execution, teamwork, structured problem-solving, and dependable performance",
+        tone: "strong contributor",
         bullets: [
           "Delivered reliable support in mission-driven environments requiring discipline, adaptability, and effective collaboration.",
           "Worked within structured systems where accuracy, readiness, and accountability contributed directly to successful outcomes.",
@@ -926,62 +1154,91 @@ Your LinkedIn summary will appear here after generation.
       const t = (text || "").toLowerCase();
       const categories = [];
 
-      if (/(led|lead|supervis|managed|mentor|trained|directed|oversaw)/.test(t)) categories.push("leadership");
+      if (/(led|lead|supervis|managed|mentor|trained|directed|oversaw|commanded)/.test(t)) categories.push("leadership");
       if (/(logistics|supply|inventory|transport|shipment|distribution)/.test(t)) categories.push("logistics");
       if (/(mission|operations|readiness|deployment|planning|execution)/.test(t)) categories.push("operations");
-      if (/(train|instruction|coach|qualified|curriculum)/.test(t)) categories.push("training");
-      if (/(compliance|inspection|policy|regulation|safety|quality)/.test(t)) categories.push("compliance");
-      if (/(report|analysis|analy|brief|intel|research|data)/.test(t)) categories.push("analysis");
-      if (/(maint|repair|equipment|systems|technical|mechanic|aviation|engineering)/.test(t)) categories.push("technical");
-      if (/(admin|schedule|records|documentation|coordinat)/.test(t)) categories.push("administration");
-      if (/(customer|client|support|service|community)/.test(t)) categories.push("service");
+      if (/(train|instruction|coach|qualified|curriculum|mentorship)/.test(t)) categories.push("training");
+      if (/(compliance|inspection|policy|regulation|safety|quality|standard)/.test(t)) categories.push("compliance");
+      if (/(report|analysis|analy|brief|intel|research|data|metrics|dashboard)/.test(t)) categories.push("analysis");
+      if (/(maint|repair|equipment|systems|technical|mechanic|aviation|engineering|platform)/.test(t)) categories.push("technical");
+      if (/(admin|schedule|records|documentation|coordinat|tracking)/.test(t)) categories.push("administration");
+      if (/(customer|client|support|service|community|stakeholder)/.test(t)) categories.push("service");
+      if (/(budget|resource|asset|procurement|allocation)/.test(t)) categories.push("resource management");
 
       return uniqueArray(categories);
     }
 
-    function buildSummary(data, cats){
+    function normalizeCompetencyName(cat){
+      const map = {
+        "leadership": "Leadership",
+        "logistics": "Planning and Organizing",
+        "operations": "Execution and Accountability",
+        "training": "Developing Others",
+        "compliance": "Attention to Detail",
+        "analysis": "Analytical Thinking",
+        "technical": "Technical Credibility",
+        "administration": "Organizational Awareness",
+        "service": "Customer Service",
+        "resource management": "Resource Management"
+      };
+      return map[cat] || titleCase(cat);
+    }
+
+    function buildSummary(data, cats, experiences){
       const rankProfile = getRankProfile(data.rank);
       const years = data.yearsService || "multiple years";
       const branchText = data.branch ? data.branch + " service" : "military service";
       const specialty = data.specialty || "operations and mission support";
       const sector = sectorLanguage(data.targetSector);
       const branchLang = getBranchLanguage(data.branch);
+      const targetRole = data.jobTitle || "professional leadership or operations roles";
+
+      const roleCount = experiences.length;
+      let progressionText = "";
+
+      if(roleCount >= 3){
+        progressionText = "Demonstrates clear career progression through increasing responsibility, leadership scope, and operational trust. ";
+      } else if(roleCount >= 1){
+        progressionText = "Brings transferable experience supported by progressive responsibility and dependable performance. ";
+      }
 
       let summary = `${data.fullName || "Candidate"} is a results-driven professional with ${years} of ${branchText} experience in ${specialty}. `;
-      summary += `Brings proven experience in ${rankProfile.summary} developed within ${branchLang}. `;
+      summary += `Offers proven strength in ${rankProfile.summary}, developed within ${branchLang}. `;
+      summary += progressionText;
 
       if (cats.length){
-        const prettyCats = cats.map(c => {
-          if (c === "training") return "training and development";
-          if (c === "analysis") return "analysis and reporting";
-          return c;
-        });
-        summary += `Offers transferable strengths in ${prettyCats.join(", ")} with the ability to contribute value in ${sector}.`;
+        const prettyCats = cats.slice(0,5).map(normalizeCompetencyName);
+        summary += `Positions well for ${targetRole} with transferable strengths in ${prettyCats.join(", ")} and the ability to contribute value in ${sector}.`;
       } else {
-        summary += `Able to translate disciplined service experience into strong performance within ${sector}.`;
+        summary += `Able to translate disciplined service experience into strong civilian performance within ${sector}.`;
       }
 
       return summary;
     }
 
-    function buildLinkedInSummary(data, cats){
+    function buildLinkedInSummary(data, cats, experiences){
       const rankProfile = getRankProfile(data.rank);
       const years = data.yearsService || "multiple years";
       const branch = data.branch || "military";
       const specialty = data.specialty || "operations and mission support";
       const sector = sectorLanguage(data.targetSector);
       const targetRole = data.jobTitle || "leadership, operations, or mission-support roles";
+      const roleCount = experiences.length;
 
       let text = `I am a military professional with ${years} of experience in the ${branch}, bringing a strong foundation in ${specialty}. `;
-      text += `My background includes ${rankProfile.summary}, with experience developed in structured, high-accountability environments where reliability, teamwork, and performance matter. `;
+      text += `My background includes ${rankProfile.summary}, developed in structured, high-accountability environments where reliability, performance, and teamwork matter. `;
+
+      if(roleCount >= 3){
+        text += `Across multiple assignments, I have continued to build on my leadership, execution, and operational scope, creating a strong progression story that translates well into civilian roles. `;
+      }
 
       if (cats.length){
-        text += `I have transferable strengths in ${cats.join(", ")}, and I am especially interested in opportunities related to ${targetRole}. `;
+        text += `My transferable strengths include ${cats.slice(0,6).map(normalizeCompetencyName).join(", ")}, and I am especially interested in opportunities related to ${targetRole}. `;
       } else {
         text += `I am interested in opportunities where I can apply my service-based experience to meaningful civilian work. `;
       }
 
-      text += `I value professionalism, integrity, collaboration, and continuous growth, and I am open to contributing in ${sector}.`;
+      text += `I value professionalism, integrity, accountability, collaboration, and continuous growth, and I am open to contributing in ${sector}.`;
       return text;
     }
 
@@ -990,17 +1247,19 @@ Your LinkedIn summary will appear here after generation.
       const specialty = splitItems(data.specialty);
       const addSkills = splitItems(data.additionalSkills);
       const certs = splitItems(data.certifications);
+      const strengths = splitItems(data.topStrengths);
 
       const catMap = {
         leadership: ["Leadership", "Team Supervision", "Personnel Coordination"],
         logistics: ["Logistics Coordination", "Inventory Management", "Operational Support"],
-        operations: ["Operations Management", "Mission Planning", "Readiness Support"],
+        operations: ["Operations Management", "Mission Planning", "Execution Management"],
         training: ["Training Delivery", "Coaching", "Workforce Development"],
         compliance: ["Compliance", "Policy Adherence", "Quality & Safety Awareness"],
         analysis: ["Reporting", "Data Review", "Research & Analysis"],
         technical: ["Technical Operations", "Equipment Oversight", "Systems Support"],
         administration: ["Scheduling", "Documentation", "Administrative Coordination"],
-        service: ["Client Support", "Community Service", "Service Excellence"]
+        service: ["Customer Service", "Stakeholder Support", "Service Excellence"],
+        "resource management": ["Resource Management", "Asset Accountability", "Resource Coordination"]
       };
 
       cats.forEach(cat => {
@@ -1009,84 +1268,148 @@ Your LinkedIn summary will appear here after generation.
 
       const rankProfile = getRankProfile(data.rank);
       if (rankProfile.level === "senior leadership" || rankProfile.level === "leadership") {
-        skills.push("Strategic Coordination", "Leadership Accountability");
+        skills.push("Strategic Coordination", "Leadership Accountability", "Cross-Functional Leadership");
       }
 
       if (data.teamSize) skills.push("Staff Oversight");
-      if (data.clearance) skills.push("Confidential Information Handling");
+      if (data.clearance) skills.push("Sensitive Information Handling");
+      if (data.careerLevel) skills.push(titleCase(data.careerLevel));
 
       if (specialty.length) skills = skills.concat(specialty.map(s => titleCase(s)));
       if (certs.length) skills = skills.concat(certs.map(c => titleCase(c)));
       if (addSkills.length) skills = skills.concat(addSkills.map(s => titleCase(s)));
+      if (strengths.length) skills = skills.concat(strengths.map(s => titleCase(s)));
 
       skills.push("Professional Communication", "Problem Solving", "Cross-Functional Collaboration");
 
-      return uniqueArray(skills).slice(0, 18);
+      return uniqueArray(skills).slice(0, 20);
     }
 
-    function buildExperienceBullets(data, cats, mode){
-      const bullets = [];
-      const duties = splitItems(data.primaryDuties);
-      const achievements = splitItems(data.achievements);
-      const tools = splitItems(data.systemsTools);
-      const teamText = data.teamSize ? `, including oversight of ${data.teamSize}` : "";
-      const rankProfile = getRankProfile(data.rank);
+    function getExperiences(){
+      const roles = [];
+      for(let i = 1; i <= 5; i++){
+        const role = {
+          roleTitle: getValue(`roleTitle_${i}`),
+          employerUnit: getValue(`employerUnit_${i}`),
+          location: getValue(`location_${i}`),
+          dates: getValue(`dates_${i}`),
+          scope: getValue(`scope_${i}`),
+          duties: getValue(`duties_${i}`),
+          achievements: getValue(`achievements_${i}`)
+        };
 
-      rankProfile.bullets.forEach(b => bullets.push(mode === "federal" ? expandFederalBullet(b, data) : b));
-
-      duties.forEach(duty => {
-        const d = duty.toLowerCase();
-
-        let bullet = "";
-        if (/(led|lead|supervis|managed|oversaw|directed)/.test(d)) {
-          bullet = `Led teams and coordinated operational priorities${teamText}, ensuring accountability, continuity, and mission-focused execution.`;
-        } else if (/(mission|operation|readiness|deployment|planning|execution)/.test(d)) {
-          bullet = `Supported and executed mission-critical operations through planning, coordination, and readiness-focused decision-making.`;
-        } else if (/(logistics|supply|inventory|transport|distribution)/.test(d)) {
-          bullet = `Managed logistics, resource coordination, and supply support to maintain continuity, efficiency, and operational readiness.`;
-        } else if (/(train|instruction|coach|mentor)/.test(d)) {
-          bullet = `Provided training, guidance, and onboarding support to strengthen team performance, readiness, and professional development.`;
-        } else if (/(report|brief|analysis|research|data|intel)/.test(d)) {
-          bullet = `Prepared reports, analyzed information, and communicated findings to support informed planning and effective execution.`;
-        } else if (/(compliance|policy|inspection|regulation|safety|quality)/.test(d)) {
-          bullet = `Maintained compliance with procedures, standards, and regulatory expectations while supporting safe and reliable operations.`;
-        } else if (/(admin|schedule|records|documentation|coordinate)/.test(d)) {
-          bullet = `Coordinated schedules, documentation, and administrative workflows to support efficient operations and accurate recordkeeping.`;
-        } else if (/(equipment|systems|technical|maintenance|repair)/.test(d)) {
-          bullet = `Supported technical operations, equipment readiness, and systems reliability in demanding and time-sensitive environments.`;
-        } else {
-          bullet = `Applied disciplined, mission-oriented support to deliver reliable results in structured, high-responsibility environments.`;
+        if(
+          role.roleTitle || role.employerUnit || role.location || role.dates ||
+          role.scope || role.duties || role.achievements
+        ){
+          roles.push(role);
         }
+      }
+      return roles;
+    }
 
-        bullets.push(mode === "federal" ? expandFederalBullet(bullet, data) : bullet);
-      });
+    function getCareerStage(index, total){
+      if(total <= 1) return "Relevant Experience";
+      if(index === 0) return "Most Recent Role";
+      if(index === total - 1) return "Earlier Career Foundation";
+      return "Progression Role";
+    }
 
-      achievements.forEach(item => {
-        const base = `Demonstrated measurable impact through ${item.charAt(0).toLowerCase() + item.slice(1)}.`;
-        bullets.push(mode === "federal" ? expandFederalAchievement(base, item, data) : base);
-      });
+    function buildDutyBullet(duty, data, scope){
+      const d = (duty || "").toLowerCase();
+      const scopeText = scope ? ` ${scope}.` : "";
 
-      if (tools.length) {
-        const toolBullet = `Utilized tools, systems, and operational platforms including ${tools.join(", ")} to support performance, tracking, and execution.`;
-        bullets.push(mode === "federal" ? expandFederalBullet(toolBullet, data) : toolBullet);
+      if (/(led|lead|supervis|managed|oversaw|directed|commanded)/.test(d)) {
+        return `Led personnel, coordinated priorities, and drove execution across operational responsibilities while maintaining accountability, continuity, and performance expectations.${scopeText}`;
+      } else if (/(mission|operation|readiness|deployment|planning|execution)/.test(d)) {
+        return `Planned, supported, and executed mission-critical operations with strong attention to readiness, coordination, and timely delivery of objectives.${scopeText}`;
+      } else if (/(logistics|supply|inventory|transport|distribution)/.test(d)) {
+        return `Managed logistics, supply flow, and resource coordination to sustain continuity, efficiency, and operational readiness.${scopeText}`;
+      } else if (/(train|instruction|coach|mentor|qualified)/.test(d)) {
+        return `Delivered training, guidance, and performance support to strengthen capability, readiness, and team effectiveness.${scopeText}`;
+      } else if (/(report|brief|analysis|research|data|intel|metrics)/.test(d)) {
+        return `Prepared reports, analyzed information, and communicated findings to support informed decisions, planning, and operational execution.${scopeText}`;
+      } else if (/(compliance|policy|inspection|regulation|safety|quality)/.test(d)) {
+        return `Maintained compliance with procedures, standards, safety expectations, and operational requirements to support reliable performance.${scopeText}`;
+      } else if (/(admin|schedule|records|documentation|coordinate|tracking)/.test(d)) {
+        return `Coordinated schedules, records, documentation, and workflow tracking to support efficiency, visibility, and accurate execution.${scopeText}`;
+      } else if (/(equipment|systems|technical|maintenance|repair|platform)/.test(d)) {
+        return `Supported technical operations, equipment readiness, and system reliability in demanding and time-sensitive environments.${scopeText}`;
+      } else if (duty) {
+        return `Applied disciplined, mission-oriented support to deliver reliable results in structured, high-responsibility environments.${scopeText}`;
       }
 
-      if (data.clearance) {
-        const clearanceBullet = `Worked within security-conscious environments requiring discretion, integrity, and responsible handling of sensitive information.`;
-        bullets.push(mode === "federal" ? expandFederalBullet(clearanceBullet, data) : clearanceBullet);
-      }
+      return "";
+    }
 
-      return uniqueArray(bullets).slice(0, mode === "federal" ? 10 : 8);
+    function buildAchievementBullet(item, mode, data){
+      if(!item) return "";
+      const clean = item.charAt(0).toLowerCase() + item.slice(1);
+      if(mode === "federal"){
+        return `Demonstrated measurable contribution through ${clean}. This accomplishment reflects accountability, follow-through, and the ability to produce outcomes in support of organizational priorities.`;
+      }
+      return `Demonstrated measurable impact through ${clean}.`;
     }
 
     function expandFederalBullet(base, data){
       const branchLang = getBranchLanguage(data.branch);
-      return `${base} Experience developed in ${branchLang}, with responsibility for maintaining standards, supporting mission continuity, and contributing to reliable organizational performance.`;
+      return `${base} Experience developed in ${branchLang}, with responsibility for maintaining standards, supporting mission continuity, and contributing to dependable organizational performance.`;
     }
 
-    function expandFederalAchievement(base, item, data){
-      const target = data.jobTitle ? ` in support of ${data.jobTitle} objectives` : "";
-      return `${base} This accomplishment reflects demonstrated capability in executing responsibilities with accountability, consistency, and measurable contribution${target}.`;
+    function buildExperienceHistory(data, experiences, mode){
+      if(!experiences.length) return [];
+      const rankProfile = getRankProfile(data.rank);
+
+      return experiences.map((exp, index) => {
+        let bullets = [];
+
+        if(index === 0){
+          bullets.push(rankProfile.bullets[0]);
+        } else if(index === 1){
+          bullets.push(rankProfile.bullets[1]);
+        } else if(index === 2){
+          bullets.push(rankProfile.bullets[2]);
+        }
+
+        splitItems(exp.duties).forEach(duty => {
+          const bullet = buildDutyBullet(duty, data, exp.scope);
+          if(bullet) bullets.push(mode === "federal" ? expandFederalBullet(bullet, data) : bullet);
+        });
+
+        splitItems(exp.achievements).forEach(item => {
+          const bullet = buildAchievementBullet(item, mode, data);
+          if(bullet) bullets.push(bullet);
+        });
+
+        bullets = uniqueArray(bullets).slice(0, mode === "federal" ? 6 : 4);
+
+        return {
+          roleTitle: exp.roleTitle || "Role Title",
+          employerUnit: exp.employerUnit || "",
+          location: exp.location || "",
+          dates: exp.dates || "",
+          scope: exp.scope || "",
+          stage: getCareerStage(index, experiences.length),
+          bullets
+        };
+      });
+    }
+
+    function buildCareerProgression(experiences, data){
+      if(!experiences.length){
+        return "Career progression summary will appear here after generation.";
+      }
+
+      const roleTitles = experiences.map(e => e.roleTitle).filter(Boolean);
+      const first = roleTitles[roleTitles.length - 1] || "earlier assignments";
+      const latest = roleTitles[0] || "most recent role";
+
+      let line = `Progression shows movement from ${first} to ${latest}`;
+      if(data.teamSize) line += `, including leadership exposure reaching ${data.teamSize}`;
+      line += ".";
+      line += " The overall background reflects growing responsibility, stronger decision-making, and increasing value across structured operational environments.";
+
+      return line;
     }
 
     function buildMilitaryBackground(data){
@@ -1095,10 +1418,13 @@ Your LinkedIn summary will appear here after generation.
       if (data.rank) bits.push(data.rank);
       if (data.specialty) bits.push(data.specialty);
       if (data.yearsService) bits.push(data.yearsService);
+
       let line = bits.join(" | ");
       if (data.teamSize) line += `${line ? " | " : ""}Leadership Scope: ${data.teamSize}`;
       if (data.clearance) line += `${line ? " | " : ""}Clearance: ${data.clearance}`;
+      if (data.careerLevel) line += `${line ? " | " : ""}Career Target: ${data.careerLevel}`;
       if (!line) line = "Military background details were not entered.";
+
       return line;
     }
 
@@ -1108,24 +1434,71 @@ Your LinkedIn summary will appear here after generation.
       return certs.map(c => titleCase(c));
     }
 
-    function buildBadges(data, cats, mode){
+    function buildBadges(data, cats, mode, experiences){
       const badges = [];
       if (mode === "private") badges.push("Private Sector Mode");
       if (mode === "federal") badges.push("Federal Style Mode");
       if (data.branch) badges.push(data.branch);
       if (data.targetSector) badges.push(data.targetSector);
       if (data.clearance) badges.push(data.clearance);
+      if (experiences.length) badges.push(`${experiences.length} Roles Added`);
+      if (data.careerLevel) badges.push(data.careerLevel);
 
       cats.forEach(cat => {
-        if (cat === "operations") badges.push("Operations");
-        if (cat === "logistics") badges.push("Logistics");
-        if (cat === "leadership") badges.push("Leadership");
-        if (cat === "technical") badges.push("Technical");
-        if (cat === "training") badges.push("Training");
-        if (cat === "compliance") badges.push("Compliance");
+        const pretty = normalizeCompetencyName(cat);
+        badges.push(pretty);
       });
 
-      return uniqueArray(badges).slice(0, 8);
+      badges.push("OPM-Informed Translation");
+
+      return uniqueArray(badges).slice(0, 10);
+    }
+
+    function buildCompetencyAlignment(cats){
+      const preferredOrder = [
+        "leadership", "analysis", "compliance", "operations", "training",
+        "technical", "administration", "service", "logistics", "resource management"
+      ];
+
+      const selected = uniqueArray(
+        preferredOrder.filter(c => cats.includes(c)).concat(cats)
+      ).slice(0, 8);
+
+      if(!selected.length){
+        return [{
+          name: "Competency Review Pending",
+          explanation: "Add duties, accomplishments, and skills to generate competency alignment indicators.",
+          level: "medium"
+        }];
+      }
+
+      return selected.map((cat, index) => ({
+        name: normalizeCompetencyName(cat),
+        explanation: `Relevant language was identified from the entered duties, accomplishments, and skills, supporting stronger civilian translation for this competency area.`,
+        level: index < 5 ? "high" : "medium"
+      }));
+    }
+
+    function buildFederalNarrative(data, experiences, cats){
+      const branchLang = getBranchLanguage(data.branch);
+      const role = data.jobTitle || "target role";
+      const years = data.yearsService || "multiple years";
+      const specialty = data.specialty || "operations and mission support";
+
+      let text = `${data.fullName || "Candidate"} offers ${years} of experience developed through ${data.branch || "military"} service in ${specialty}. `;
+      text += `This background was built within ${branchLang} and includes increasing responsibility across leadership, execution, coordination, accountability, and support of mission or organizational objectives. `;
+
+      if(experiences.length){
+        text += `The career record reflects progression across ${experiences.length} documented role${experiences.length > 1 ? "s" : ""}, demonstrating growing trust, adaptability, and the ability to perform in high-responsibility settings. `;
+      }
+
+      if(cats.length){
+        text += `Competency-aligned strengths reflected in the submitted background include ${cats.slice(0,7).map(normalizeCompetencyName).join(", ")}, supporting qualification narratives for ${role} and similar positions. `;
+      }
+
+      text += `The overall record demonstrates readiness to transfer disciplined service experience into civilian environments requiring sound judgment, professionalism, collaboration, and dependable results.`;
+
+      return text;
     }
 
     function renderList(elementId, items){
@@ -1135,6 +1508,46 @@ Your LinkedIn summary will appear here after generation.
         return;
       }
       el.innerHTML = items.map(item => `<li>${escapeHtml(item)}</li>`).join("");
+    }
+
+    function renderExperienceBlocks(blocks){
+      const el = document.getElementById("previewExperienceBlocks");
+
+      if(!blocks.length){
+        el.innerHTML = "Your translated experience history will appear here.";
+        el.className = "muted-placeholder";
+        return;
+      }
+
+      el.className = "";
+
+      el.innerHTML = blocks.map(block => `
+        <div class="role-block">
+          <div class="role-title">${escapeHtml(block.roleTitle)}${block.employerUnit ? " | " + escapeHtml(block.employerUnit) : ""}</div>
+          <div class="role-meta">
+            ${escapeHtml(block.stage)}
+            ${block.location ? " • " + escapeHtml(block.location) : ""}
+            ${block.dates ? " • " + escapeHtml(block.dates) : ""}
+            ${block.scope ? " • " + escapeHtml(block.scope) : ""}
+          </div>
+          <ul class="resume-list">
+            ${block.bullets.map(b => `<li>${escapeHtml(cleanSentence(b))}</li>`).join("")}
+          </ul>
+        </div>
+      `).join("");
+    }
+
+    function renderCompetencyGrid(items){
+      const grid = document.getElementById("competencyGrid");
+      grid.innerHTML = items.map(item => `
+        <div class="competency-item ${item.level === "high" ? "match-high" : "match-medium"}">
+          <strong>${escapeHtml(item.name)}</strong>
+          <div>${escapeHtml(item.explanation)}</div>
+          <span class="competency-status ${item.level === "high" ? "status-high" : "status-medium"}">
+            ${item.level === "high" ? "Strong Match" : "Emerging Match"}
+          </span>
+        </div>
+      `).join("");
     }
 
     function generateResume(){
@@ -1152,29 +1565,35 @@ Your LinkedIn summary will appear here after generation.
         clearance: getValue("clearance"),
         teamSize: getValue("teamSize"),
         targetSector: getValue("targetSector"),
-        primaryDuties: getValue("primaryDuties"),
-        achievements: getValue("achievements"),
+        careerLevel: getValue("careerLevel"),
+        topStrengths: getValue("topStrengths"),
         systemsTools: getValue("systemsTools"),
         certifications: getValue("certifications"),
         additionalSkills: getValue("additionalSkills")
       };
 
       const mode = getSelectedMode();
+      const experiences = getExperiences();
+
       const categoryText = [
-        data.primaryDuties,
-        data.achievements,
+        data.specialty,
         data.additionalSkills,
-        data.specialty
+        data.topStrengths,
+        data.systemsTools,
+        ...experiences.map(e => [e.roleTitle, e.scope, e.duties, e.achievements].join(" "))
       ].join(" ");
 
       const cats = detectCategories(categoryText);
-      const summary = buildSummary(data, cats);
+      const summary = buildSummary(data, cats, experiences);
       const skills = buildSkills(data, cats);
-      const experience = buildExperienceBullets(data, cats, mode);
+      const experienceBlocks = buildExperienceHistory(data, experiences, mode);
+      const progression = buildCareerProgression(experiences, data);
       const military = buildMilitaryBackground(data);
       const certs = buildCerts(data);
-      const badges = buildBadges(data, cats, mode);
-      const linkedinSummary = buildLinkedInSummary(data, cats);
+      const badges = buildBadges(data, cats, mode, experiences);
+      const linkedinSummary = buildLinkedInSummary(data, cats, experiences);
+      const competencyItems = buildCompetencyAlignment(cats);
+      const federalNarrative = buildFederalNarrative(data, experiences, cats);
 
       document.getElementById("previewName").textContent = data.fullName || "Your Name";
 
@@ -1191,13 +1610,16 @@ Your LinkedIn summary will appear here after generation.
         : "Target Job Title • Email • Phone • City, State • LinkedIn";
 
       document.getElementById("previewSummary").textContent = summary;
+      document.getElementById("previewProgression").textContent = progression;
       document.getElementById("previewMilitary").textContent = military;
       document.getElementById("linkedinSummary").textContent = linkedinSummary;
+      document.getElementById("federalNarrative").textContent = federalNarrative;
       document.getElementById("experienceTitle").textContent = mode === "federal" ? "Specialized Experience" : "Professional Experience";
 
       renderList("previewSkills", skills);
-      renderList("previewExperience", experience);
       renderList("previewCerts", certs);
+      renderExperienceBlocks(experienceBlocks);
+      renderCompetencyGrid(competencyItems);
 
       const badgeWrap = document.getElementById("previewBadges");
       badgeWrap.innerHTML = badges.map(b => `<span class="mini-badge">${escapeHtml(b)}</span>`).join("");
@@ -1212,13 +1634,22 @@ Your LinkedIn summary will appear here after generation.
       document.getElementById("previewName").textContent = "Your Name";
       document.getElementById("previewContact").textContent = "Target Job Title • Email • Phone • City, State • LinkedIn";
       document.getElementById("previewSummary").textContent = "Your professional summary will appear here after generation.";
+      document.getElementById("previewProgression").textContent = "Your career progression summary will appear here.";
       document.getElementById("previewMilitary").textContent = "Your military background details will appear here.";
       document.getElementById("linkedinSummary").textContent = "Your LinkedIn summary will appear here after generation.";
+      document.getElementById("federalNarrative").textContent = "Your expanded federal-style narrative will appear here after generation.";
       document.getElementById("experienceTitle").textContent = "Professional Experience";
       document.getElementById("previewSkills").innerHTML = '<li class="muted-placeholder">Your competencies will appear here.</li>';
-      document.getElementById("previewExperience").innerHTML = '<li class="muted-placeholder">Your translated experience bullets will appear here.</li>';
       document.getElementById("previewCerts").innerHTML = '<li class="muted-placeholder">Your certifications and training will appear here.</li>';
+      document.getElementById("previewExperienceBlocks").className = "muted-placeholder";
+      document.getElementById("previewExperienceBlocks").textContent = "Your translated experience history will appear here.";
       document.getElementById("previewBadges").innerHTML = "";
+      document.getElementById("competencyGrid").innerHTML = `
+        <div class="competency-item">
+          <strong>Competency results will appear here.</strong>
+          Complete the form and generate the resume to view the alignment review.
+        </div>
+      `;
     }
 
     function loadSample(){
@@ -1235,11 +1666,51 @@ Your LinkedIn summary will appear here after generation.
       document.getElementById("clearance").value = "Secret";
       document.getElementById("teamSize").value = "18 personnel";
       document.getElementById("targetSector").value = "Private Sector";
-      document.getElementById("primaryDuties").value = "Led mission planning; supervised operations; managed personnel readiness; coordinated logistics; maintained compliance; trained junior staff; prepared reports";
-      document.getElementById("achievements").value = "Improved readiness across unit operations; reduced delays in mission support; trained 25 personnel; managed high-value equipment and critical timelines";
+      document.getElementById("careerLevel").value = "Manager";
+      document.getElementById("topStrengths").value = "leadership, operations, planning, accountability, communication";
       document.getElementById("systemsTools").value = "reporting systems, logistics tracking tools, communications equipment, readiness dashboards";
       document.getElementById("certifications").value = "Leadership training, safety training, operational planning coursework";
       document.getElementById("additionalSkills").value = "leadership, communication, scheduling, analysis, problem solving, team coordination";
+
+      document.getElementById("roleTitle_1").value = "Operations Officer";
+      document.getElementById("employerUnit_1").value = "Naval Command";
+      document.getElementById("location_1").value = "San Diego, CA";
+      document.getElementById("dates_1").value = "2022 - 2025";
+      document.getElementById("scope_1").value = "Led 18 personnel and coordinated mission planning priorities";
+      document.getElementById("duties_1").value = "Led mission planning; supervised operations; managed personnel readiness; coordinated logistics; prepared reports";
+      document.getElementById("achievements_1").value = "Improved readiness across unit operations; reduced delays in mission support; completed critical priorities on schedule";
+
+      document.getElementById("roleTitle_2").value = "Division Supervisor";
+      document.getElementById("employerUnit_2").value = "Fleet Readiness Team";
+      document.getElementById("location_2").value = "Coronado, CA";
+      document.getElementById("dates_2").value = "2019 - 2022";
+      document.getElementById("scope_2").value = "Supervised daily workflow and team execution";
+      document.getElementById("duties_2").value = "Supervised operations; maintained compliance; trained junior staff; coordinated documentation";
+      document.getElementById("achievements_2").value = "Trained 25 personnel; improved workflow consistency; strengthened documentation accuracy";
+
+      document.getElementById("roleTitle_3").value = "Mission Coordinator";
+      document.getElementById("employerUnit_3").value = "Operations Support Unit";
+      document.getElementById("location_3").value = "Bahrain";
+      document.getElementById("dates_3").value = "2016 - 2019";
+      document.getElementById("scope_3").value = "Supported mission readiness and reporting";
+      document.getElementById("duties_3").value = "Coordinated mission support; prepared reports; tracked readiness; supported execution";
+      document.getElementById("achievements_3").value = "Improved reporting timeliness; supported high-tempo operations; enhanced tracking visibility";
+
+      document.getElementById("roleTitle_4").value = "Operations Specialist";
+      document.getElementById("employerUnit_4").value = "Naval Support Activity";
+      document.getElementById("location_4").value = "Norfolk, VA";
+      document.getElementById("dates_4").value = "2014 - 2016";
+      document.getElementById("scope_4").value = "Provided operational and administrative support";
+      document.getElementById("duties_4").value = "Coordinated schedules; maintained records; supported operations; communicated updates";
+      document.getElementById("achievements_4").value = "Improved coordination flow; supported reliable recordkeeping; maintained continuity";
+
+      document.getElementById("roleTitle_5").value = "Junior Operations Support";
+      document.getElementById("employerUnit_5").value = "Initial Assignment";
+      document.getElementById("location_5").value = "Great Lakes, IL";
+      document.getElementById("dates_5").value = "2012 - 2014";
+      document.getElementById("scope_5").value = "Supported foundational mission and team requirements";
+      document.getElementById("duties_5").value = "Supported operations; maintained standards; assisted team readiness";
+      document.getElementById("achievements_5").value = "Built strong operational foundation; earned leadership trust; supported team effectiveness";
 
       generateResume();
     }
@@ -1248,13 +1719,21 @@ Your LinkedIn summary will appear here after generation.
       const name = document.getElementById("previewName").textContent;
       const contact = document.getElementById("previewContact").textContent;
       const summary = document.getElementById("previewSummary").textContent;
+      const progression = document.getElementById("previewProgression").textContent;
       const military = document.getElementById("previewMilitary").textContent;
       const linkedin = document.getElementById("linkedinSummary").textContent;
+      const federalNarrative = document.getElementById("federalNarrative").textContent;
       const experienceTitle = document.getElementById("experienceTitle").textContent;
 
       const skillItems = Array.from(document.querySelectorAll("#previewSkills li")).map(li => li.textContent);
-      const expItems = Array.from(document.querySelectorAll("#previewExperience li")).map(li => li.textContent);
       const certItems = Array.from(document.querySelectorAll("#previewCerts li")).map(li => li.textContent);
+
+      const roles = Array.from(document.querySelectorAll("#previewExperienceBlocks .role-block")).map(block => {
+        const title = block.querySelector(".role-title")?.textContent || "";
+        const meta = block.querySelector(".role-meta")?.textContent || "";
+        const bullets = Array.from(block.querySelectorAll("li")).map(li => "- " + li.textContent).join("\n");
+        return `${title}\n${meta}\n${bullets}`;
+      }).join("\n\n");
 
       return `${name}
 ${contact}
@@ -1265,8 +1744,11 @@ ${summary}
 CORE COMPETENCIES
 ${skillItems.map(i => "- " + i).join("\n")}
 
+CAREER PROGRESSION SNAPSHOT
+${progression}
+
 ${experienceTitle.toUpperCase()}
-${expItems.map(i => "- " + i).join("\n")}
+${roles}
 
 MILITARY BACKGROUND
 ${military}
@@ -1275,7 +1757,10 @@ CERTIFICATIONS & TRAINING
 ${certItems.map(i => "- " + i).join("\n")}
 
 LINKEDIN SUMMARY
-${linkedin}`;
+${linkedin}
+
+FEDERAL NARRATIVE SUMMARY
+${federalNarrative}`;
     }
 
     function copyResumeText(){
@@ -1291,6 +1776,15 @@ ${linkedin}`;
       const text = document.getElementById("linkedinSummary").textContent;
       navigator.clipboard.writeText(text).then(function(){
         alert("LinkedIn summary copied successfully.");
+      }).catch(function(){
+        alert("Unable to copy automatically. Please copy manually.");
+      });
+    }
+
+    function copyFederalNarrative(){
+      const text = document.getElementById("federalNarrative").textContent;
+      navigator.clipboard.writeText(text).then(function(){
+        alert("Federal narrative copied successfully.");
       }).catch(function(){
         alert("Unable to copy automatically. Please copy manually.");
       });
@@ -1312,5 +1806,3 @@ ${linkedin}`;
   </script>
 </body>
 </html>
-
-Sent from my iPhone
