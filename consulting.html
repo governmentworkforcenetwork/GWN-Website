@@ -243,11 +243,13 @@ min-height: 280px;
 
 
 .service-video {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  background: #dfe5f2;
+width: 100%;
+height: 260px;
+object-fit: contain;
+object-position: center center;
+display: block;
+background: #09162f;
+border-radius: 16px;
 }
 
 .video-badge {
@@ -486,14 +488,12 @@ footer {
 .close-btn:hover {
   background: #dfe8ff;
 }
-
+  
 @media (max-width: 768px) {
-  header {
-    padding: 16px 18px;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
+.service-video-wrap {
+padding: 8px;
+min-height: 236px;
+}
 
   .brand {
     font-size: 18px;
@@ -543,9 +543,10 @@ footer {
     font-size: 32px;
   }
 
-  .service-video {
-    height: 220px;
-  }
+.service-video {
+height: 220px;
+}
+}
 
   .service-body {
     padding: 22px 20px 24px;
