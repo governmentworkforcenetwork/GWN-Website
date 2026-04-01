@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is HR Prepared? | Government Workforce Network LLC</title>
+  <meta
+    name="description"
+    content="Is HR Prepared? Questions worth asking in an evolving, AI-driven workforce. Educational and informational content by Government Workforce Network LLC."
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy-1: #07101d;
+      --navy-2: #0d1c38;
+      --navy-3: #17315f;
+      --gold-1: #d8b24c;
+      --gold-2: #ecd38b;
+      --white: #ffffff;
+      --soft-white: rgba(255,255,255,0.90);
+      --muted: rgba(255,255,255,0.72);
+      --line: rgba(255,255,255,0.12);
+      --glass: rgba(255,255,255,0.06);
+      --glass-2: rgba(255,255,255,0.09);
+      --shadow-lg: 0 24px 70px rgba(0,0,0,0.34);
+      --shadow-md: 0 16px 42px rgba(0,0,0,0.24);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max-width: 1260px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(circle at top left, rgba(216,178,76,0.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.06), transparent 20%),
+        linear-gradient(180deg, var(--navy-1) 0%, var(--navy-2) 48%, var(--navy-1) 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 12, 24, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .brand-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--soft-white);
+      font-size: 0.96rem;
+      transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-2);
+    }
+
+    .nav-links .featured-link {
+      padding: 8px 14px;
+      border: 1px solid rgba(216,178,76,0.34);
+      border-radius: 999px;
+      background: rgba(216,178,76,0.08);
+      color: var(--gold-2);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links .featured-link:hover {
+      color: var(--white);
+      border-color: rgba(236,211,139,0.62);
+      background: rgba(216,178,76,0.14);
+    }
+
+    .hero {
+      padding: 96px 0 56px;
+    }
+
+    .hero-wrap {
+      position: relative;
+      overflow: hidden;
+      padding: 56px 46px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.13);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 14% 14%, rgba(216,178,76,0.18), transparent 26%),
+        radial-gradient(circle at 88% 4%, rgba(255,255,255,0.08), transparent 22%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(216,178,76,0.32);
+      background: rgba(216,178,76,0.08);
+      color: var(--gold-2);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      max-width: 900px;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.06;
+      letter-spacing: -1.4px;
+    }
+
+    .hero-subtitle {
+      margin: 0 0 18px;
+      color: var(--gold-2);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 900px;
+      color: var(--soft-white);
+      font-size: 1.07rem;
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      max-width: 930px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--gold-1);
+      border-radius: 0 14px 14px 0;
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .section {
+      padding: 16px 0 76px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.65rem, 2.6vw, 2.35rem);
+      line-height: 1.2;
+      letter-spacing: -0.6px;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      min-height: 100%;
+      padding: 24px 22px 22px;
+      border-radius: var(--radius-lg);
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: var(--glass-2);
+      border-color: rgba(216,178,76,0.28);
+      box-shadow: 0 20px 46px rgba(0,0,0,0.28);
+    }
+
+    .card-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      background: rgba(216,178,76,0.12);
+      border: 1px solid rgba(216,178,76,0.30);
+      color: var(--gold-2);
+      font-weight: 700;
+      font-size: 0.98rem;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.16rem;
+      line-height: 1.28;
+      letter-spacing: -0.2px;
+    }
+
+    .main-question {
+      margin: 0 0 14px;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .prompts {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .prompts li {
+      margin-bottom: 10px;
+    }
+
+    .reflection {
+      padding: 4px 0 84px;
+    }
+
+    .reflection-box {
+      padding: 36px 30px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(216,178,76,0.12), rgba(255,255,255,0.05));
+      border: 1px solid rgba(216,178,76,0.18);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .reflection-box h3 {
+      margin: 0 0 12px;
+      font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+      line-height: 1.24;
+      letter-spacing: -0.5px;
+    }
+
+    .reflection-box p {
+      margin: 0 auto;
+      max-width: 790px;
+      color: var(--soft-white);
+      font-size: 1.03rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 42px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-align: center;
+    }
+
+    @media (max-width: 1120px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 74px 0 40px;
+      }
+
+      .hero-wrap {
+        padding: 34px 22px;
+        border-radius: 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px 18px 20px;
+      }
+
+      .reflection-box {
+        padding: 28px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-title">Government Workforce Network LLC</div>
+        <div class="brand-subtitle">Workforce Reflection</div>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="#questions">Questions</a>
+        <a href="#reflection">Reflection</a>
+        <a href="/is-hr-prepared.html" class="featured-link">Is HR Prepared?</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrap">
+          <div class="eyebrow">Educational Purposes Only</div>
+          <h1>Is HR Prepared?</h1>
+          <p class="hero-subtitle">Questions worth asking in an evolving, AI-driven workforce.</p>
+          <p>
+            Workforce systems are changing quickly, yet many hiring practices, qualification standards,
+            screening methods, and job structures remain largely unquestioned. This page is designed to
+            encourage thoughtful reflection on how organizations define readiness, measure capability,
+            and explain requirements in a modern workforce environment.
+          </p>
+
+          <div class="hero-note">
+            This content is provided for educational and informational purposes only. It is intended to encourage
+            critical thinking and discussion around workforce practices. It does not constitute legal advice,
+            HR consulting, policy recommendations, or a challenge to any specific employer, organization, or agency.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="questions">
+      <div class="container">
+        <div class="section-head">
+          <h2>Questions for HR leaders, employers, and organizations</h2>
+          <p>
+            These questions are not conclusions. They are reflection points intended to encourage
+            review, modernization, and dialogue in a workforce landscape shaped by evolving technology,
+            changing expectations, and accelerated learning.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Years of Experience</h3>
+            <p class="main-question">How was the required number of years of experience validated for this role?</p>
+            <ul class="prompts">
+              <li>What competencies or responsibilities require that exact timeframe?</li>
+              <li>Can those capabilities be developed faster in today’s AI-enabled environment?</li>
+              <li>Are qualified applicants being screened out before meaningful review?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Job Classifications</h3>
+            <p class="main-question">When was this job classification last reviewed for current relevance?</p>
+            <ul class="prompts">
+              <li>Does it still reflect how the work is actually performed today?</li>
+              <li>Have technology and AI changed the role enough to warrant reevaluation?</li>
+              <li>Could outdated structures be limiting agility, growth, or innovation?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Minimum Qualifications</h3>
+            <p class="main-question">Are minimum qualifications based on demonstrated job needs or legacy standards?</p>
+            <ul class="prompts">
+              <li>Were they supported by job analysis, competency review, or practical validation?</li>
+              <li>Do they measure real capability, or simply inherited requirements?</li>
+              <li>Could alternative pathways show readiness just as effectively?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">04</div>
+            <h3>Applicant Screening</h3>
+            <p class="main-question">How many strong applicants are being filtered out before human review even begins?</p>
+            <ul class="prompts">
+              <li>What role do automated rules or keyword-based filters play?</li>
+              <li>Is potential being overlooked because it does not match legacy wording?</li>
+              <li>How is fairness evaluated in early-stage screening?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">05</div>
+            <h3>Transferable Skills</h3>
+            <p class="main-question">How are transferable skills recognized, interpreted, and valued in your hiring process?</p>
+            <ul class="prompts">
+              <li>Can student, military, volunteer, or nontraditional experience count meaningfully?</li>
+              <li>Are valuable capabilities being translated clearly, or dismissed too quickly?</li>
+              <li>Is narrow qualification language hiding broader readiness?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">06</div>
+            <h3>AI in Hiring</h3>
+            <p class="main-question">How is AI being used in hiring decisions, and how is that use being reviewed or validated?</p>
+            <ul class="prompts">
+              <li>Can the process be explained clearly to applicants and stakeholders?</li>
+              <li>Has the system been evaluated for bias, consistency, and relevance?</li>
+              <li>Who is accountable for AI-influenced outcomes?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">07</div>
+            <h3>Experience vs Capability</h3>
+            <p class="main-question">Does length of experience always reflect readiness to perform at a high level?</p>
+            <ul class="prompts">
+              <li>Can someone demonstrate capability without long tenure?</li>
+              <li>What actually predicts performance and success in the role?</li>
+              <li>Are high-potential individuals being overlooked too early?</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">08</div>
+            <h3>Transparency</h3>
+            <p class="main-question">Can qualification standards and hiring decisions be clearly explained to applicants?</p>
+            <ul class="prompts">
+              <li>Would the rationale hold up under closer review?</li>
+              <li>Can the explanation go beyond generic qualification language?</li>
+              <li>Is transparency part of the applicant experience?</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reflection" id="reflection">
+      <div class="container">
+        <div class="reflection-box">
+          <h3>Preparedness begins with the willingness to ask better questions.</h3>
+          <p>
+            The goal is not criticism for its own sake. The goal is thoughtful reflection on whether
+            current workforce systems still align with modern realities, emerging technologies,
+            and a more complete understanding of capability, readiness, and access to opportunity.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © Government Workforce Network LLC — Educational and informational content only.
+    </div>
+  </footer>
+</body>
+</html>
