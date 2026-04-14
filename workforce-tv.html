@@ -967,7 +967,7 @@
       <a href="/workforce-tv">Workforce TV</a>
       <a href="#live-session">Next Broadcast</a>
       <a href="#get-notified" onclick="setTimeout(function(){ openNotifyForm(); }, 150);">Get Notified</a>
-      <a href="#" onclick="openModal('featureModal'); return false;">Request Pricing & Details</a>
+      <a href="#" onclick="openModal('featureModal'); return false;">Book a Session</a>
     </nav>
   </header>
 
@@ -1149,7 +1149,7 @@
         Customized packages are available for government agencies, educational institutions, nonprofits, workforce development partners, and private-sector employers based on your goals, audience, and desired format.
       </p>
 
-      <button type="button" class="cta-btn" onclick="openModal('featureModal')">Request Pricing & Details</button>
+      <button type="button" class="cta-btn" onclick="openModal('featureModal')">Book a Session</button>
     </div>
 
     <div class="card">
@@ -1322,11 +1322,11 @@
         <div>
           <h2>Interested in hosting a Workforce TV session?</h2>
           <p>
-            Request pricing, availability, and partnership details to explore how Workforce TV can support your organization’s visibility, workforce goals, outreach, and audience engagement.
+            Complete the form below to request Workforce TV session availability, details, and booking.
           </p>
         </div>
         <div class="cta-band-actions">
-          <a href="#" class="cta-btn" onclick="openModal('featureModal'); return false;">Request Pricing & Details</a>
+          <a href="#" class="cta-btn" onclick="openModal('featureModal'); return false;">Book a Session</a>
           <a href="#live-session" class="secondary-btn">View Broadcast Section</a>
         </div>
       </div>
@@ -1337,13 +1337,13 @@
   <div class="modal-backdrop" id="featureModal" aria-hidden="true">
     <div class="modal" role="dialog" aria-labelledby="featureModalTitle">
       <div class="modal-header">
-        <h3 id="featureModalTitle">Request Pricing & Details</h3>
+        <h3 id="featureModalTitle">Book a Session</h3>
         <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
       </div>
 
       <div class="modal-body">
         <p>
-          Complete the form below to request Workforce TV pricing, availability, and partnership details. We review each inquiry to better understand your goals, intended audience, and preferred session format.
+          Complete the form below to request Workforce TV session availability, details, and booking.
         </p>
 
         <form action="/thank-you" method="POST" name="workforce-tv-pricing-details-request" data-netlify="true" netlify-honeypot="bot-field">
