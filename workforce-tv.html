@@ -563,176 +563,6 @@ letter-spacing: 0.6px;
 white-space: nowrap;
 }
 
-.featured-replay {
-background: linear-gradient(135deg, #0d1b33 0%, #1c3c74 100%);
-color: #ffffff;
-border-radius: 28px;
-padding: 28px;
-margin-bottom: 24px;
-border: 1px solid rgba(255,255,255,0.10);
-box-shadow: 0 18px 45px rgba(0,0,0,0.22);
-}
-
-.featured-replay-grid {
-display: grid;
-grid-template-columns: 1.02fr 0.98fr;
-gap: 22px;
-align-items: stretch;
-}
-
-.featured-thumbnail {
-position: relative;
-min-height: 300px;
-border-radius: 22px;
-overflow: hidden;
-background:
-linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
-radial-gradient(circle at center, rgba(216,178,76,0.22), transparent 46%),
-linear-gradient(135deg, #08111f, #16305e);
-border: 1px solid rgba(255,255,255,0.10);
-display: flex;
-align-items: flex-end;
-padding: 22px;
-}
-
-.featured-thumbnail::before {
-content: "▶";
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 84px;
-height: 84px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 32px;
-font-weight: 700;
-color: #0d1b33;
-background: linear-gradient(135deg, var(--gold), var(--gold-2));
-box-shadow: 0 14px 34px rgba(0,0,0,0.28);
-}
-
-.featured-thumbnail-text {
-position: relative;
-z-index: 1;
-}
-
-.featured-thumbnail-text span {
-display: inline-block;
-margin-bottom: 10px;
-padding: 7px 12px;
-border-radius: 999px;
-background: rgba(255,255,255,0.12);
-border: 1px solid rgba(255,255,255,0.12);
-color: #fff1bf;
-font-size: 12px;
-font-weight: 800;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-}
-
-.featured-thumbnail-text h3 {
-margin: 0;
-font-size: 28px;
-line-height: 1.2;
-color: #ffffff;
-}
-
-.featured-replay-panel {
-background: rgba(255,255,255,0.08);
-border: 1px solid rgba(255,255,255,0.10);
-border-radius: 22px;
-padding: 24px;
-backdrop-filter: blur(6px);
-}
-
-.featured-replay-panel h3 {
-margin: 0 0 12px;
-font-size: 28px;
-line-height: 1.2;
-color: #ffffff;
-}
-
-.featured-replay-panel p {
-margin: 0 0 14px;
-line-height: 1.8;
-color: #e6edf9;
-}
-
-.featured-replay-meta {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 12px;
-margin: 18px 0;
-}
-
-.featured-replay-meta .meta-box {
-background: rgba(255,255,255,0.10);
-border: 1px solid rgba(255,255,255,0.10);
-border-radius: 16px;
-padding: 14px 16px;
-}
-
-.featured-replay-meta .meta-box span:first-child {
-display: block;
-font-size: 12px;
-font-weight: 800;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-color: #d8e5ff;
-margin-bottom: 6px;
-}
-
-.featured-replay-meta .meta-box span:last-child {
-display: block;
-font-size: 16px;
-font-weight: 700;
-color: #ffffff;
-line-height: 1.5;
-}
-
-.replay-tags {
-display: flex;
-gap: 10px;
-flex-wrap: wrap;
-margin-bottom: 18px;
-}
-
-.replay-tags span {
-padding: 8px 12px;
-border-radius: 999px;
-background: rgba(255,255,255,0.10);
-border: 1px solid rgba(255,255,255,0.12);
-color: #fff3ca;
-font-size: 12px;
-font-weight: 700;
-}
-
-.replay-topic-box {
-background: rgba(255,255,255,0.08);
-border: 1px solid rgba(255,255,255,0.10);
-border-radius: 18px;
-padding: 18px;
-margin-top: 18px;
-}
-
-.replay-topic-box h4 {
-margin: 0 0 10px;
-font-size: 15px;
-letter-spacing: 0.3px;
-text-transform: uppercase;
-color: #fff3ca;
-}
-
-.replay-topic-box ul {
-margin: 0;
-padding-left: 20px;
-color: #edf4ff;
-line-height: 1.8;
-}
-
 .replay-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -800,16 +630,15 @@ background: #000;
 padding: 0;
 height: auto;
 display: block;
+aspect-ratio: 16 / 9;
 }
 
-.replay-video {
+.replay-iframe {
 width: 100%;
+height: 100%;
 display: block;
+border: 0;
 background: #000;
-}
-
-.replay-video::-webkit-media-controls-panel {
-background-color: rgba(255,255,255,0.92);
 }
 
 .replay-card-body {
@@ -1063,8 +892,6 @@ padding: 0 20px 42px;
 .channel-strip,
 .grid-2,
 .form-grid,
-.featured-replay-grid,
-.featured-replay-meta,
 .replay-grid,
 .cta-band-inner {
 grid-template-columns: 1fr;
@@ -1102,8 +929,6 @@ padding: 24px 18px 82px;
 .tv-screen,
 .side-panel,
 .replay-library,
-.featured-replay,
-.featured-replay-panel,
 .cta-band {
 padding: 24px 20px;
 }
@@ -1137,15 +962,6 @@ gap: 14px;
 .secondary-btn {
 width: 100%;
 text-align: center;
-}
-
-.featured-thumbnail {
-min-height: 240px;
-}
-
-.featured-thumbnail-text h3,
-.featured-replay-panel h3 {
-font-size: 24px;
 }
 }
 </style>
@@ -1378,69 +1194,24 @@ Workforce TV can also support educational career exposure, community-centered co
 <div>
 <h2>Replay Library</h2>
 <p>
-Explore recorded Workforce TV conversations in a more polished library format. This section is designed to showcase featured replays, create a stronger content presence, and make it easier for visitors to watch past discussions as the platform grows.
+Explore recorded Workforce TV conversations in a more polished library format. This section is designed to showcase past discussions and make it easier for visitors to watch Workforce TV replays as the platform grows.
 </p>
 </div>
 <div class="replay-library-badge">Workforce TV Replay Archive</div>
-</div>
-
-<div class="featured-replay">
-<div class="featured-replay-grid">
-<div class="featured-thumbnail">
-<div class="featured-thumbnail-text">
-<span>Featured Replay</span>
-<h3>After Graduation: What Now?</h3>
-</div>
-</div>
-
-<div class="featured-replay-panel">
-<h3>After Graduation: What Now? A Real-World Workforce Discussion</h3>
-<p>
-This session provided a real-world perspective on transitioning from college to career in today’s evolving job market, with practical insight for students and emerging talent navigating what comes next.
-</p>
-
-<div class="featured-replay-meta">
-<div class="meta-box">
-<span>Date</span>
-<span>April 15, 2026</span>
-</div>
-<div class="meta-box">
-<span>Host</span>
-<span>Marivel Nunez</span>
-</div>
-</div>
-
-<div class="replay-tags">
-<span>Career Readiness</span>
-<span>Graduates</span>
-<span>AI Era</span>
-<span>Workforce Insight</span>
-</div>
-
-<a href="/assets/videos/04-15-26.mp4" class="cta-btn" target="_blank" rel="noopener">Watch Featured Replay</a>
-
-<div class="replay-topic-box">
-<h4>Topics Covered</h4>
-<ul>
-<li>What to expect after graduation in today’s workforce</li>
-<li>How hiring is changing in the AI era</li>
-<li>Why many applicants are screened out—and how to stay visible</li>
-<li>The importance of networking, adaptability, and personal positioning</li>
-<li>Practical strategies to navigate uncertainty with confidence</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 
 <div class="replay-grid">
 
 <div class="replay-card">
 <div class="replay-thumb replay-video-wrap">
-<video controls class="replay-video">
-<source src="/assets/videos/04-15-26.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe
+class="replay-iframe"
+src="https://www.youtube.com/embed/vl1kNUisR-4"
+title="After Graduation: What Now? A Real-World Workforce Discussion"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
 </div>
 <div class="replay-card-body">
 <h3>After Graduation: What Now? A Real-World Workforce Discussion</h3>
@@ -1466,7 +1237,7 @@ A practical session focused on life after graduation, career readiness, changing
 <span>Career Strategy</span>
 </div>
 
-<a href="/assets/videos/04-15-26.mp4" class="cta-btn" target="_blank" rel="noopener">Watch Replay</a>
+<a href="https://youtu.be/vl1kNUisR-4" class="cta-btn" target="_blank" rel="noopener">Watch Replay</a>
 </div>
 </div>
 
@@ -1489,7 +1260,7 @@ A practical session focused on life after graduation, career readiness, changing
 </div>
 
 <p>
-Use this replay card for your next recorded session. Add the title, the recording date, the host, a short description, and your Microsoft Teams or Media Player replay link.
+Use this replay card for your next recorded session. Add the title, the recording date, the host, a short description, and your replay link.
 </p>
 
 <div class="replay-chip-row">
@@ -1521,7 +1292,7 @@ Use this replay card for your next recorded session. Add the title, the recordin
 </div>
 
 <p>
-This third replay card helps the page feel like a true replay library and gives you a ready-made structure for future sessions as Workforce TV continues to expand.
+This replay card gives you a ready-made structure for future sessions as Workforce TV continues to expand.
 </p>
 
 <div class="replay-chip-row">
@@ -1537,7 +1308,7 @@ This third replay card helps the page feel like a true replay library and gives 
 </div>
 
 <div class="replay-note">
-<strong>Replay Note:</strong> The current replay uses <code>/assets/videos/04-15-26.mp4</code>. For future sessions, duplicate any replay card block and update the title, date, host, summary, tags, and video path.
+<strong>Replay Note:</strong> The current replay uses your YouTube video link. For future sessions, duplicate any replay card block and update the title, date, host, summary, tags, and replay link.
 </div>
 </div>
 
