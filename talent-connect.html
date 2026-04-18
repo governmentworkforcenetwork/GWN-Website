@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,1876 +8,1271 @@
 <title>Talent Connect | Government Workforce Network LLC</title>
 <meta
 name="description"
-content="Talent Connect is a free, inclusive job seeker program by Government Workforce Network LLC designed to support visibility, workforce readiness, and access to opportunity in an AI-driven hiring environment."
+content="Talent Connect by Government Workforce Network LLC is a human-centered workforce visibility and connection program supporting U.S. and global talent in an AI-driven hiring environment."
 />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
 rel="stylesheet"
 />
-
 <style>
-:root {
---header-offset: 90px;
---navy: #071530;
---navy-2: #0d2045;
---navy-3: #122a5e;
---gold: #c9a84c;
---gold-lt: #e8c96a;
---gold-dk: #a87d2c;
---cream: #f7f3ed;
---cream-2: #ede9e2;
---white: #ffffff;
---text: #1a1a2e;
---muted: #5a6480;
---radius: 20px;
---radius-lg: 32px;
-}
-
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-html {
-scroll-behavior: smooth;
-}
-
-body {
-font-family: 'DM Sans', sans-serif;
-background: var(--cream);
-color: var(--text);
-overflow-x: hidden;
-}
-
-section[id] {
-scroll-margin-top: var(--header-offset);
-}
-
-header {
-position: sticky;
-top: 0;
-z-index: 900;
-background: rgba(7, 21, 48, 0.96);
-backdrop-filter: blur(14px);
--webkit-backdrop-filter: blur(14px);
-border-bottom: 1px solid rgba(201, 168, 76, 0.18);
-padding: 0 48px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 72px;
-}
-
-.brand {
-font-family: 'Sora', sans-serif;
-font-weight: 700;
-font-size: 15px;
-color: var(--white);
-letter-spacing: 0.2px;
-display: flex;
-align-items: center;
-gap: 10px;
-}
-
-.brand-mark {
-width: 32px;
-height: 32px;
-background: linear-gradient(135deg, var(--gold), var(--gold-dk));
-border-radius: 8px;
-display: grid;
-place-items: center;
-font-size: 14px;
-font-weight: 800;
-color: var(--navy);
-flex-shrink: 0;
-}
-
-nav {
-display: flex;
-gap: 6px;
-align-items: center;
-flex-wrap: wrap;
-}
-
-nav a {
-color: rgba(255, 255, 255, 0.75);
-text-decoration: none;
-font-family: 'Sora', sans-serif;
-font-size: 13.5px;
-font-weight: 600;
-padding: 8px 16px;
-border-radius: 999px;
-transition: all 0.2s ease;
-letter-spacing: 0.1px;
-}
-
-nav a:hover {
-color: var(--white);
-background: rgba(255, 255, 255, 0.1);
-}
-
-nav a.active {
-background: linear-gradient(135deg, var(--gold), var(--gold-dk));
-color: var(--navy);
-}
-
-.hero {
-background: var(--navy);
-position: relative;
-overflow: hidden;
-padding: 110px 48px 100px;
-min-height: 600px;
-display: flex;
-align-items: center;
-}
-
-.hero-bg-grid {
-position: absolute;
-inset: 0;
-background-image:
-linear-gradient(rgba(201, 168, 76, 0.06) 1px, transparent 1px),
-linear-gradient(90deg, rgba(201, 168, 76, 0.06) 1px, transparent 1px);
-background-size: 60px 60px;
-pointer-events: none;
-}
-
-.hero-orb-1 {
-position: absolute;
-width: 600px;
-height: 600px;
-border-radius: 50%;
-background: radial-gradient(circle, rgba(201, 168, 76, 0.14) 0%, transparent 70%);
-top: -200px;
-right: -100px;
-pointer-events: none;
-}
-
-.hero-orb-2 {
-position: absolute;
-width: 400px;
-height: 400px;
-border-radius: 50%;
-background: radial-gradient(circle, rgba(18, 42, 94, 0.8) 0%, transparent 70%);
-bottom: -100px;
-left: 30%;
-pointer-events: none;
-}
-
-.hero-inner {
-max-width: 1140px;
-margin: 0 auto;
-position: relative;
-z-index: 2;
-width: 100%;
-}
-
-.hero-eyebrow {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: rgba(201, 168, 76, 0.12);
-border: 1px solid rgba(201, 168, 76, 0.3);
-border-radius: 999px;
-padding: 6px 16px;
-font-family: 'Sora', sans-serif;
-font-size: 12px;
-font-weight: 700;
-color: var(--gold-lt);
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 28px;
-animation: fadeSlideUp 0.7s ease both;
-}
-
-.hero-eyebrow::before {
-content: '';
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: var(--gold);
-flex-shrink: 0;
-}
-
-.hero h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(52px, 7vw, 86px);
-line-height: 1.05;
-color: var(--white);
-margin-bottom: 24px;
-animation: fadeSlideUp 0.7s 0.1s ease both;
-}
-
-.hero h1 em {
-font-style: italic;
-color: var(--gold-lt);
-}
-
-.hero-desc {
-max-width: 680px;
-font-size: 17px;
-line-height: 1.85;
-color: rgba(255, 255, 255, 0.72);
-margin-bottom: 44px;
-font-weight: 300;
-animation: fadeSlideUp 0.7s 0.2s ease both;
-}
-
-.hero-actions {
-display: flex;
-gap: 14px;
-flex-wrap: wrap;
-animation: fadeSlideUp 0.7s 0.3s ease both;
-}
-
-.btn-primary {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-padding: 16px 30px;
-background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dk) 100%);
-color: var(--navy);
-border: none;
-border-radius: 999px;
-font-family: 'Sora', sans-serif;
-font-size: 14px;
-font-weight: 800;
-cursor: pointer;
-text-decoration: none;
-transition: all 0.25s ease;
-box-shadow: 0 8px 28px rgba(201, 168, 76, 0.35);
-letter-spacing: 0.2px;
-}
-
-.btn-primary:hover {
-transform: translateY(-2px);
-box-shadow: 0 14px 36px rgba(201, 168, 76, 0.45);
-}
-
-.btn-ghost {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-padding: 15px 28px;
-background: transparent;
-color: var(--white);
-border: 1.5px solid rgba(255, 255, 255, 0.28);
-border-radius: 999px;
-font-family: 'Sora', sans-serif;
-font-size: 14px;
-font-weight: 600;
-cursor: pointer;
-text-decoration: none;
-transition: all 0.25s ease;
-}
-
-.btn-ghost:hover {
-border-color: rgba(255, 255, 255, 0.6);
-background: rgba(255, 255, 255, 0.07);
-}
-
-.hero-stats {
-display: flex;
-gap: 0;
-margin-top: 64px;
-border-top: 1px solid rgba(255, 255, 255, 0.1);
-padding-top: 36px;
-animation: fadeSlideUp 0.7s 0.4s ease both;
-}
-
-.hero-stat {
-flex: 1;
-padding-right: 32px;
-border-right: 1px solid rgba(255, 255, 255, 0.1);
-margin-right: 32px;
-}
-
-.hero-stat:last-child {
-border-right: none;
-margin-right: 0;
-padding-right: 0;
-}
-
-.hero-stat-num {
-font-family: 'DM Serif Display', serif;
-font-size: 36px;
-color: var(--gold-lt);
-line-height: 1;
-margin-bottom: 6px;
-}
-
-.hero-stat-label {
-font-size: 13px;
-color: rgba(255, 255, 255, 0.5);
-font-weight: 400;
-line-height: 1.4;
-}
-
-.page-wrap {
-max-width: 1140px;
-margin: 0 auto;
-padding: 0 48px;
-}
-
-section.block {
-padding: 80px 0;
-}
-
-section.block + section.block {
-border-top: 1px solid var(--cream-2);
-}
-
-.section-label {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-font-family: 'Sora', sans-serif;
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-color: var(--gold-dk);
-margin-bottom: 20px;
-}
-
-.section-label::before {
-content: '';
-width: 20px;
-height: 2px;
-background: var(--gold);
-border-radius: 999px;
-}
-
-.section-heading {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(32px, 4vw, 48px);
-line-height: 1.1;
-color: var(--navy);
-margin-bottom: 16px;
-}
-
-.section-heading em {
-font-style: italic;
-color: var(--gold-dk);
-}
-
-.section-sub {
-font-size: 16px;
-color: var(--muted);
-line-height: 1.8;
-max-width: 600px;
-font-weight: 300;
-}
-
-.about-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 48px;
-align-items: center;
-margin-top: 48px;
-}
-
-.about-visual {
-background: var(--navy);
-border-radius: var(--radius-lg);
-padding: 48px 40px;
-position: relative;
-overflow: hidden;
-}
-
-.about-visual-bg {
-position: absolute;
-inset: 0;
-background-image:
-linear-gradient(rgba(201, 168, 76, 0.08) 1px, transparent 1px),
-linear-gradient(90deg, rgba(201, 168, 76, 0.08) 1px, transparent 1px);
-background-size: 30px 30px;
-pointer-events: none;
-}
-
-.about-badge {
-position: relative;
-z-index: 2;
-display: inline-flex;
-align-items: center;
-gap: 10px;
-background: rgba(201, 168, 76, 0.15);
-border: 1px solid rgba(201, 168, 76, 0.35);
-border-radius: 12px;
-padding: 10px 16px;
-font-family: 'Sora', sans-serif;
-font-size: 13px;
-font-weight: 700;
-color: var(--gold-lt);
-margin-bottom: 28px;
-}
-
-.about-visual-headline {
-position: relative;
-z-index: 2;
-font-family: 'DM Serif Display', serif;
-font-size: 38px;
-line-height: 1.1;
-color: var(--white);
-margin-bottom: 18px;
-}
-
-.about-visual-text {
-position: relative;
-z-index: 2;
-font-size: 15px;
-color: rgba(255, 255, 255, 0.65);
-line-height: 1.8;
-font-weight: 300;
-}
-
-.about-pillars {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 14px;
-margin-top: 24px;
-position: relative;
-z-index: 2;
-}
-
-.about-pillar {
-background: rgba(255, 255, 255, 0.06);
-border: 1px solid rgba(255, 255, 255, 0.1);
-border-radius: 14px;
-padding: 16px;
-}
-
-.about-pillar-icon {
-font-size: 20px;
-margin-bottom: 8px;
-}
-
-.about-pillar-label {
-font-family: 'Sora', sans-serif;
-font-size: 13px;
-font-weight: 700;
-color: var(--white);
-margin-bottom: 4px;
-}
-
-.about-pillar-desc {
-font-size: 12.5px;
-color: rgba(255, 255, 255, 0.5);
-line-height: 1.5;
-}
-
-.about-content p {
-font-size: 16px;
-color: var(--muted);
-line-height: 1.9;
-margin-bottom: 20px;
-font-weight: 300;
-}
-
-.about-content p:last-child {
-margin-bottom: 0;
-}
-
-.about-highlight {
-background: linear-gradient(135deg, #071530, #0d2045);
-border-radius: 18px;
-padding: 24px;
-border-left: 3px solid var(--gold);
-margin-top: 28px;
-}
-
-.about-highlight p {
-margin: 0;
-font-size: 15px;
-color: rgba(255, 255, 255, 0.85);
-line-height: 1.8;
-}
-
-.about-highlight strong {
-color: var(--gold-lt);
-font-family: 'Sora', sans-serif;
-}
-
-.welcome-section {
-background: var(--navy);
-padding: 90px 0;
-position: relative;
-overflow: hidden;
-}
-
-.welcome-section::before {
-content: '';
-position: absolute;
-inset: 0;
-background-image:
-linear-gradient(rgba(201, 168, 76, 0.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(201, 168, 76, 0.05) 1px, transparent 1px);
-background-size: 50px 50px;
-pointer-events: none;
-}
-
-.welcome-section .section-label {
-color: var(--gold-lt);
-}
-
-.welcome-section .section-label::before {
-background: var(--gold-lt);
-}
-
-.welcome-section .section-heading {
-color: var(--white);
-}
-
-.welcome-section .section-sub {
-color: rgba(255, 255, 255, 0.6);
-}
-
-.welcome-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 16px;
-margin-top: 52px;
-}
-
-.welcome-card {
-background: rgba(255, 255, 255, 0.05);
-border: 1px solid rgba(255, 255, 255, 0.1);
-border-radius: var(--radius);
-padding: 28px 24px;
-transition: all 0.3s ease;
-position: relative;
-overflow: hidden;
-}
-
-.welcome-card::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 2px;
-background: linear-gradient(90deg, var(--gold), var(--gold-dk));
-transform: scaleX(0);
-transition: transform 0.3s ease;
-}
-
-.welcome-card:hover {
-background: rgba(255, 255, 255, 0.08);
-transform: translateY(-4px);
-border-color: rgba(201, 168, 76, 0.3);
-}
-
-.welcome-card:hover::after {
-transform: scaleX(1);
-}
-
-.welcome-icon {
-width: 44px;
-height: 44px;
-background: rgba(201, 168, 76, 0.15);
-border-radius: 12px;
-display: grid;
-place-items: center;
-font-size: 20px;
-margin-bottom: 18px;
-}
-
-.welcome-card h3 {
-font-family: 'Sora', sans-serif;
-font-size: 16px;
-font-weight: 700;
-color: var(--white);
-margin-bottom: 10px;
-line-height: 1.3;
-}
-
-.welcome-card p {
-font-size: 14px;
-color: rgba(255, 255, 255, 0.55);
-line-height: 1.75;
-font-weight: 300;
-}
-
-.why-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-margin-top: 52px;
-}
-
-.why-card {
-background: var(--white);
-border: 1px solid var(--cream-2);
-border-radius: var(--radius);
-padding: 32px 28px;
-display: flex;
-gap: 20px;
-align-items: flex-start;
-transition: all 0.25s ease;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-}
-
-.why-card:hover {
-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-transform: translateY(-3px);
-}
-
-.why-num {
-font-family: 'DM Serif Display', serif;
-font-size: 42px;
-color: var(--cream-2);
-line-height: 1;
-flex-shrink: 0;
-width: 48px;
-font-style: italic;
-}
-
-.why-card h3 {
-font-family: 'Sora', sans-serif;
-font-size: 17px;
-font-weight: 700;
-color: var(--navy);
-margin-bottom: 10px;
-}
-
-.why-card p {
-font-size: 14.5px;
-color: var(--muted);
-line-height: 1.8;
-font-weight: 300;
-}
-
-.tools-section {
-background: linear-gradient(160deg, #f7f3ed 0%, #ede9e2 100%);
-}
-
-.tools-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 24px;
-margin-top: 52px;
-}
-
-.tool-card {
-background: var(--white);
-border-radius: var(--radius-lg);
-overflow: hidden;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-transition: all 0.3s ease;
-display: flex;
-flex-direction: column;
-}
-
-.tool-card:hover {
-box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
-transform: translateY(-5px);
-}
-
-.tool-photo {
-width: 100%;
-height: 200px;
-object-fit: cover;
-display: block;
-background: linear-gradient(135deg, var(--navy), var(--navy-3));
-}
-
-.tool-photo-placeholder {
-width: 100%;
-height: 200px;
-background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 48px;
-position: relative;
-overflow: hidden;
-}
-
-.tool-photo-placeholder::after {
-content: '';
-position: absolute;
-inset: 0;
-background-image:
-linear-gradient(rgba(201, 168, 76, 0.08) 1px, transparent 1px),
-linear-gradient(90deg, rgba(201, 168, 76, 0.08) 1px, transparent 1px);
-background-size: 20px 20px;
-}
-
-.tool-body {
-padding: 28px 26px 30px;
-flex: 1;
-display: flex;
-flex-direction: column;
-}
-
-.tool-badge {
-display: inline-flex;
-align-items: center;
-gap: 6px;
-background: #f0f4ff;
-color: var(--navy-3);
-font-family: 'Sora', sans-serif;
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 0.5px;
-text-transform: uppercase;
-padding: 6px 12px;
-border-radius: 999px;
-margin-bottom: 16px;
-align-self: flex-start;
-}
-
-.tool-badge.free {
-background: #eefaf3;
-color: #1a7a40;
-}
-
-.tool-name {
-font-family: 'DM Serif Display', serif;
-font-size: 26px;
-color: var(--navy);
-line-height: 1.15;
-margin-bottom: 14px;
-}
-
-.tool-overline {
-font-family: 'Sora', sans-serif;
-font-size: 11px;
-font-weight: 700;
-color: var(--gold-dk);
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-margin-top: 18px;
-}
-
-.tool-text {
-font-size: 14.5px;
-color: var(--muted);
-line-height: 1.8;
-margin-bottom: 0;
-font-weight: 300;
-}
-
-.tool-list {
-margin: 0;
-padding: 0;
-list-style: none;
-margin-top: 4px;
-}
-
-.tool-list li {
-font-size: 14px;
-color: var(--muted);
-line-height: 1.7;
-padding: 5px 0 5px 18px;
-border-bottom: 1px solid #f0f0f0;
-position: relative;
-font-weight: 300;
-}
-
-.tool-list li::before {
-content: '';
-position: absolute;
-left: 0;
-top: 14px;
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: var(--gold);
-}
-
-.tool-list li:last-child {
-border-bottom: none;
-}
-
-.tool-spacer {
-flex: 1;
-}
-
-.steps-wrap {
-margin-top: 56px;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 0;
-position: relative;
-}
-
-.steps-wrap::before {
-content: '';
-position: absolute;
-top: 36px;
-left: calc(12.5%);
-right: calc(12.5%);
-height: 1px;
-background: linear-gradient(90deg, var(--gold), var(--gold-dk), var(--gold));
-z-index: 0;
-}
-
-.step {
-text-align: center;
-padding: 0 16px;
-position: relative;
-z-index: 1;
-}
-
-.step-circle {
-width: 72px;
-height: 72px;
-border-radius: 50%;
-background: var(--white);
-border: 2px solid var(--gold);
-display: grid;
-place-items: center;
-margin: 0 auto 24px;
-font-family: 'DM Serif Display', serif;
-font-size: 28px;
-font-style: italic;
-color: var(--gold-dk);
-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.step h3 {
-font-family: 'Sora', sans-serif;
-font-size: 15px;
-font-weight: 700;
-color: var(--navy);
-margin-bottom: 10px;
-}
-
-.step p {
-font-size: 13.5px;
-color: var(--muted);
-line-height: 1.75;
-font-weight: 300;
-}
-
-.cta-section {
-background: var(--navy);
-padding: 100px 48px;
-position: relative;
-overflow: hidden;
-}
-
-.cta-section::before {
-content: '';
-position: absolute;
-inset: 0;
-background-image:
-linear-gradient(rgba(201, 168, 76, 0.06) 1px, transparent 1px),
-linear-gradient(90deg, rgba(201, 168, 76, 0.06) 1px, transparent 1px);
-background-size: 60px 60px;
-pointer-events: none;
-}
-
-.cta-orb {
-position: absolute;
-width: 500px;
-height: 500px;
-border-radius: 50%;
-background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
-top: -150px;
-left: -100px;
-pointer-events: none;
-}
-
-.cta-inner {
-max-width: 640px;
-margin: 0 auto;
-text-align: center;
-position: relative;
-z-index: 2;
-}
-
-.cta-inner .section-label {
-color: var(--gold-lt);
-justify-content: center;
-margin-bottom: 24px;
-}
-
-.cta-inner .section-label::before {
-background: var(--gold-lt);
-}
-
-.cta-inner h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(36px, 5vw, 58px);
-line-height: 1.1;
-color: var(--white);
-margin-bottom: 20px;
-}
-
-.cta-inner h2 em {
-font-style: italic;
-color: var(--gold-lt);
-}
-
-.cta-inner p {
-font-size: 16px;
-color: rgba(255, 255, 255, 0.65);
-line-height: 1.85;
-margin-bottom: 40px;
-font-weight: 300;
-}
-
-.cta-btns {
-display: flex;
-justify-content: center;
-gap: 14px;
-flex-wrap: wrap;
-}
-
-.modal-backdrop {
-position: fixed;
-inset: 0;
-background: rgba(5, 12, 30, 0.75);
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
-display: none;
-align-items: center;
-justify-content: center;
-padding: 20px;
-z-index: 2000;
-}
-
-.modal-backdrop.open {
-display: flex;
-}
-
-.modal {
-width: min(860px, 96vw);
-max-height: 90vh;
-overflow-y: auto;
-background: var(--cream);
-border-radius: 28px;
-box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-}
-
-.modal-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 24px 30px;
-background: var(--navy);
-border-radius: 28px 28px 0 0;
-}
-
-.modal-header h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 26px;
-color: var(--white);
-font-weight: 400;
-}
-
-.modal-close {
-border: none;
-background: rgba(255, 255, 255, 0.1);
-color: var(--white);
-font-size: 22px;
-line-height: 1;
-cursor: pointer;
-width: 38px;
-height: 38px;
-border-radius: 50%;
-display: grid;
-place-items: center;
-transition: background 0.2s;
-}
-
-.modal-close:hover {
-background: rgba(255, 255, 255, 0.2);
-}
-
-.modal-body {
-padding: 32px 30px 36px;
-}
-
-.modal-intro {
-text-align: center;
-font-size: 15px;
-color: var(--muted);
-line-height: 1.75;
-margin-bottom: 28px;
-}
-
-.talent-form {
-margin-top: 0;
-}
-
-.form-section {
-background: var(--white);
-border: 1px solid var(--cream-2);
-border-radius: 20px;
-padding: 28px 26px;
-margin-bottom: 18px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-.form-section h2 {
-font-family: 'Sora', sans-serif;
-font-size: 16px;
-font-weight: 700;
-color: var(--navy);
-margin-bottom: 20px;
-display: flex;
-align-items: center;
-gap: 10px;
-}
-
-.form-section h2::before {
-content: '';
-width: 4px;
-height: 18px;
-background: linear-gradient(180deg, var(--gold), var(--gold-dk));
-border-radius: 999px;
-flex-shrink: 0;
-}
-
-.form-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 16px 20px;
-}
-
-.form-group {
-display: flex;
-flex-direction: column;
-}
-
-.form-group.full-width {
-grid-column: 1 / -1;
-}
-
-.form-group label {
-margin-bottom: 7px;
-font-family: 'Sora', sans-serif;
-font-weight: 600;
-color: var(--navy);
-font-size: 13px;
-letter-spacing: 0.1px;
-}
-
-.optional {
-font-weight: 400;
-color: var(--muted);
-font-size: 12px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-width: 100%;
-border: 1.5px solid #e2e6f0;
-border-radius: 12px;
-padding: 12px 14px;
-font-size: 14.5px;
-font-family: 'DM Sans', sans-serif;
-color: var(--text);
-background: var(--cream);
-transition: all 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-outline: none;
-border-color: var(--navy-3);
-background: var(--white);
-box-shadow: 0 0 0 3px rgba(18, 42, 94, 0.1);
-}
-
-.form-group textarea {
-min-height: 120px;
-resize: vertical;
-}
-
-.checkbox-group {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-line-height: 1.7;
-color: var(--muted);
-font-size: 14px;
-}
-
-.checkbox-group input[type="checkbox"] {
-width: 18px;
-height: 18px;
-margin-top: 3px;
-accent-color: var(--navy);
-flex-shrink: 0;
-}
-
-.form-actions {
-margin-top: 24px;
-display: flex;
-gap: 12px;
-flex-wrap: wrap;
-}
-
-.form-submit-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-padding: 14px 28px;
-border: none;
-border-radius: 999px;
-font-family: 'Sora', sans-serif;
-font-weight: 800;
-font-size: 14px;
-background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
-color: var(--white);
-cursor: pointer;
-transition: all 0.2s ease;
-box-shadow: 0 8px 20px rgba(7, 21, 48, 0.25);
+:root{
+--navy:#0b1f3a;
+--navy-2:#12325e;
+--blue:#214a9a;
+--sky:#eaf2ff;
+--gold:#d4af37;
+--gold-soft:#f7e9ae;
+--text:#18324a;
+--muted:#5f7287;
+--white:#ffffff;
+--line:#d9e3f2;
+--bg:#f5f8fc;
+--card:#ffffff;
+--shadow:0 14px 42px rgba(11,31,58,.10);
+--shadow-soft:0 10px 28px rgba(11,31,58,.07);
+--radius:22px;
+--radius-sm:16px;
+--max:1180px;
+--us-accent:#1d4ed8;
+--global-accent:#0f766e;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:"Sora",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+color:var(--text);
+background:
+radial-gradient(circle at top left, rgba(33,74,154,.12), transparent 28%),
+radial-gradient(circle at bottom right, rgba(212,175,55,.10), transparent 26%),
+linear-gradient(180deg,#f8fbff 0%, #eef4fb 100%);
+line-height:1.65;
+}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{
+width:min(var(--max), calc(100% - 32px));
+margin:0 auto;
+}
+
+.topbar{
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter: blur(12px);
+background:rgba(255,255,255,.88);
+border-bottom:1px solid rgba(11,31,58,.08);
+}
+
+.topbar-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+padding:14px 0;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+min-width:0;
+}
+
+.brand-badge{
+width:42px;
+height:42px;
+border-radius:12px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,var(--navy),var(--blue));
+color:#fff;
+font-weight:800;
+box-shadow:var(--shadow-soft);
+flex:0 0 auto;
+}
+
+.brand-text{
+min-width:0;
+}
+
+.brand-text strong{
+display:block;
+font-size:.95rem;
+color:var(--navy);
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.brand-text span{
+display:block;
+font-size:.76rem;
+color:var(--muted);
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:flex-end;
+}
+
+.nav a{
+padding:10px 14px;
+border-radius:999px;
+font-size:.88rem;
+font-weight:600;
+color:var(--navy);
+transition:.2s ease;
+}
+
+.nav a:hover{
+background:var(--sky);
+color:var(--blue);
+}
+
+.hero{
+padding:72px 0 36px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:28px;
+align-items:stretch;
+}
+
+.hero-card,
+.stat-card,
+.section-card,
+.service-card,
+.process-card,
+.access-card,
+.cta-card,
+.form-shell,
+.join-option{
+background:rgba(255,255,255,.92);
+border:1px solid rgba(17,50,94,.08);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+}
+
+.hero-card{
+padding:38px;
+position:relative;
+overflow:hidden;
+}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:8px 14px;
+border-radius:999px;
+background:#f0f6ff;
+border:1px solid #dbe8ff;
+color:var(--blue);
+font-size:.82rem;
+font-weight:700;
+letter-spacing:.02em;
+margin-bottom:18px;
+}
+
+h1,h2,h3,h4{
+margin:0 0 14px;
+line-height:1.16;
+color:var(--navy);
+}
+
+h1{
+font-family:"DM Serif Display", Georgia, serif;
+font-size:clamp(2.3rem, 5vw, 4.2rem);
+letter-spacing:-.02em;
+}
+
+h2{
+font-family:"DM Serif Display", Georgia, serif;
+font-size:clamp(1.8rem, 3vw, 2.8rem);
+letter-spacing:-.02em;
+}
+
+h3{
+font-size:1.18rem;
+font-weight:700;
+}
+
+p{
+margin:0 0 16px;
+color:var(--text);
+}
+
+.lead{
+font-size:1.02rem;
+color:var(--muted);
+max-width:760px;
+}
+
+.hero-actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:24px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+min-height:50px;
+padding:14px 20px;
+border-radius:14px;
+font-weight:700;
+font-size:.95rem;
+transition:.2s ease;
+border:1px solid transparent;
+cursor:pointer;
+font-family:inherit;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,var(--navy),var(--blue));
+color:#fff;
+box-shadow:0 16px 34px rgba(33,74,154,.22);
+}
+
+.btn-primary:hover{transform:translateY(-1px)}
+
+.btn-secondary{
+background:#fff;
+color:var(--navy);
+border-color:var(--line);
+}
+
+.btn-secondary:hover{
+background:#f7fbff;
+border-color:#bfd1ec;
+}
+
+.hero-side{
+display:grid;
+grid-template-rows:1fr 1fr;
+gap:20px;
+}
+
+.stat-card{
+padding:24px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.stat-card .kicker{
+color:var(--blue);
+font-size:.8rem;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.08em;
+margin-bottom:8px;
+}
+
+.stat-card strong{
+display:block;
+font-size:1.3rem;
+color:var(--navy);
+margin-bottom:8px;
+}
+
+.section{
+padding:34px 0;
+}
+
+.section-card{
+padding:34px;
+}
+
+.section-header{
+display:flex;
+flex-wrap:wrap;
+align-items:end;
+justify-content:space-between;
+gap:18px;
+margin-bottom:20px;
+}
+
+.subtle{
+color:var(--muted);
+}
+
+.network-link{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:14px 18px;
+border-radius:14px;
+background:#f5f9ff;
+border:1px solid #d7e5fa;
+color:var(--navy);
+font-weight:700;
+margin-top:8px;
 }
 
-.form-submit-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 14px 28px rgba(7, 21, 48, 0.35);
+.network-link:hover{
+background:#edf5ff;
 }
 
-.close-btn {
-display: inline-flex;
-align-items: center;
-padding: 13px 22px;
-background: var(--cream);
-color: var(--muted);
-border: 1.5px solid var(--cream-2);
-border-radius: 999px;
-font-family: 'Sora', sans-serif;
-font-size: 14px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.2s ease;
+.support-grid,
+.services-grid,
+.process-grid,
+.access-grid,
+.join-choice-grid{
+display:grid;
+gap:18px;
 }
 
-.close-btn:hover {
-background: var(--cream-2);
-color: var(--navy);
+.support-grid{
+grid-template-columns:repeat(4,1fr);
+margin-top:12px;
 }
 
-footer {
-background: var(--navy);
-padding: 40px 48px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 20px;
-border-top: 1px solid rgba(201, 168, 76, 0.15);
+.support-item{
+padding:20px;
+background:#fbfdff;
+border:1px solid var(--line);
+border-radius:18px;
 }
 
-.footer-brand {
-font-family: 'Sora', sans-serif;
-font-size: 14px;
-color: rgba(255, 255, 255, 0.5);
+.support-item h3{
+margin-bottom:8px;
 }
 
-.footer-motto {
-font-family: 'DM Serif Display', serif;
-font-style: italic;
-font-size: 16px;
-color: var(--gold-lt);
+.services-grid{
+grid-template-columns:1fr;
 }
 
-@keyframes fadeSlideUp {
-from { opacity: 0; transform: translateY(24px); }
-to { opacity: 1; transform: translateY(0); }
+.service-card{
+padding:24px;
+height:100%;
 }
 
-@media (max-width: 900px) {
-:root {
---header-offset: 130px;
+.tag{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:7px 12px;
+border-radius:999px;
+background:#f2f7ff;
+border:1px solid #dae7fb;
+color:var(--blue);
+font-size:.78rem;
+font-weight:700;
+margin-bottom:14px;
 }
 
-header {
-padding: 16px 20px;
-height: auto;
-flex-direction: column;
-align-items: flex-start;
-gap: 12px;
+.service-list,
+.privacy-list,
+.plain-list{
+margin:14px 0 0;
+padding-left:18px;
+color:var(--text);
 }
 
-.hero {
-padding: 80px 20px 70px;
+.service-list li,
+.privacy-list li,
+.plain-list li{
+margin:0 0 10px;
 }
 
-.hero-stats {
-flex-direction: column;
-gap: 20px;
+.choose-access{
+background:linear-gradient(180deg,#f9fbff 0%, #eff5fd 100%);
+border:1px solid #dbe5f1;
+border-radius:30px;
+padding:34px;
+box-shadow:var(--shadow);
 }
 
-.hero-stat {
-border-right: none;
-margin-right: 0;
-border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-padding-bottom: 20px;
-padding-right: 0;
+.access-grid{
+grid-template-columns:repeat(2,1fr);
+margin-top:22px;
 }
 
-.hero-stat:last-child {
-border-bottom: none;
+.access-card{
+padding:26px;
+position:relative;
+overflow:hidden;
 }
 
-.page-wrap {
-padding: 0 20px;
+.access-card::before{
+content:"";
+position:absolute;
+inset:0 auto auto 0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,var(--blue),var(--gold));
 }
 
-.about-grid {
-grid-template-columns: 1fr;
+.access-card p{
+color:var(--muted);
 }
 
-.welcome-grid {
-grid-template-columns: 1fr 1fr;
+.access-card .mini{
+font-size:.8rem;
+font-weight:700;
+color:var(--blue);
+text-transform:uppercase;
+letter-spacing:.07em;
+margin-bottom:8px;
 }
 
-.why-grid {
-grid-template-columns: 1fr;
+.process-grid{
+grid-template-columns:repeat(4,1fr);
 }
 
-.tools-grid {
-grid-template-columns: 1fr;
+.process-card{
+padding:24px;
+text-align:left;
 }
 
-.steps-wrap {
-grid-template-columns: 1fr 1fr;
-gap: 28px;
+.step{
+width:42px;
+height:42px;
+border-radius:12px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,var(--navy),var(--blue));
+color:#fff;
+font-weight:800;
+margin-bottom:14px;
+box-shadow:var(--shadow-soft);
 }
 
-.steps-wrap::before {
-display: none;
+.join-choice-grid{
+grid-template-columns:repeat(2,1fr);
+margin-bottom:22px;
 }
 
-.cta-section {
-padding: 70px 20px;
+.join-option{
+padding:24px;
+border:1px solid var(--line);
 }
 
-footer {
-flex-direction: column;
-text-align: center;
-padding: 32px 20px;
+.join-option h3{
+margin-bottom:10px;
 }
 
-.form-grid {
-grid-template-columns: 1fr;
+.join-option p{
+color:var(--muted);
+margin-bottom:18px;
 }
 
-.modal-body {
-padding: 24px 18px;
+.us-title{
+color:var(--us-accent);
 }
 
-.modal-header {
-padding: 20px 18px;
+.global-title{
+color:var(--global-accent);
 }
+
+.form-wrap{
+display:grid;
+gap:24px;
+}
+
+.form-shell{
+padding:26px;
+display:none;
+}
+
+.form-shell.active{
+display:block;
+animation:fadeIn .25s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(8px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.form-shell h3{
+margin-bottom:6px;
+}
+
+.form-shell .intro{
+color:var(--muted);
+font-size:.94rem;
+margin-bottom:18px;
+}
+
+.form-shell.us-form{
+border-top:5px solid var(--us-accent);
+}
+
+.form-shell.global-form{
+border-top:5px solid var(--global-accent);
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.field,
+.field-full{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.field-full{
+grid-column:1 / -1;
+}
+
+label{
+font-size:.86rem;
+font-weight:700;
+color:var(--navy);
+}
+
+input,
+select,
+textarea{
+width:100%;
+border:1px solid #cfdced;
+background:#fff;
+border-radius:14px;
+min-height:48px;
+padding:12px 14px;
+font:inherit;
+color:var(--text);
+outline:none;
+transition:.18s ease;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:#8eb3ea;
+box-shadow:0 0 0 4px rgba(33,74,154,.10);
+}
+
+.consent{
+margin-top:18px;
+padding:14px 16px;
+border-radius:14px;
+background:#f8fbff;
+border:1px solid var(--line);
+font-size:.88rem;
+color:var(--muted);
+}
+
+.submit-row{
+margin-top:18px;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.cta-card{
+padding:32px;
+text-align:center;
+}
+
+.cta-card p{
+max-width:850px;
+margin:0 auto 18px;
+color:var(--muted);
+}
+
+.footer{
+padding:36px 0 48px;
+text-align:center;
+color:var(--muted);
+font-size:.92rem;
+}
+
+.footer strong{
+color:var(--navy);
+}
+
+.divider{
+height:1px;
+background:linear-gradient(90deg,transparent,rgba(11,31,58,.12),transparent);
+margin:26px 0;
+}
+
+.small-note{
+font-size:.84rem;
+color:var(--muted);
+}
+
+.visually-hidden{
+position:absolute !important;
+width:1px;height:1px;
+padding:0;margin:-1px;
+overflow:hidden;clip:rect(0,0,0,0);
+white-space:nowrap;border:0;
+}
+
+@media (max-width: 1100px){
+.hero-grid,
+.process-grid,
+.support-grid,
+.access-grid,
+.join-choice-grid{
+grid-template-columns:1fr;
+}
+
+.hero-side{
+grid-template-rows:auto;
+}
+}
+
+@media (max-width: 760px){
+.topbar-inner{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.nav{
+width:100%;
+justify-content:flex-start;
 }
 
-@media (max-width: 560px) {
-:root {
---header-offset: 160px;
+.hero{
+padding-top:48px;
 }
 
-.welcome-grid {
-grid-template-columns: 1fr;
+.hero-card,
+.section-card,
+.choose-access,
+.cta-card,
+.form-shell,
+.join-option{
+padding:24px;
 }
 
-.steps-wrap {
-grid-template-columns: 1fr;
+.form-grid{
+grid-template-columns:1fr;
 }
 
-nav {
-flex-wrap: wrap;
-gap: 4px;
+.btn{
+width:100%;
 }
 
-nav a {
-font-size: 12px;
-padding: 6px 12px;
+.hero-actions{
+flex-direction:column;
 }
 }
 </style>
 </head>
 <body>
-<header>
-<div class="brand">Government Workforce Network LLC</div>
-<nav>
+
+<header class="topbar">
+<div class="container topbar-inner">
+<div class="brand">
+<div class="brand-badge">GWN</div>
+<div class="brand-text">
+<strong>Government Workforce Network LLC</strong>
+<span>Talent Connect</span>
+</div>
+</div>
+
+<nav class="nav" aria-label="Primary Navigation">
 <a href="/">Home</a>
-<a href="/career-center-partners">Our Network</a>
+<a href="/career-center-university-network">Career Center &amp; University Network</a>
 <a href="#about">About</a>
-<a href="#community">Our Community</a>
-<a href="#why-join">Why Join</a>
-<a href="#tools">Free Tools &amp; Support</a>
-<a href="#process">How it Works</a>
-<a href="/talent-connect" class="active">Talent Connect</a>
+<a href="#choose-access">Access Paths</a>
+<a href="#services">The Program</a>
+<a href="#process">Process</a>
+<a href="#join">Join</a>
 </nav>
+</div>
 </header>
 
+<main>
 <section class="hero">
-<div class="hero-bg-grid"></div>
-<div class="hero-orb-1"></div>
-<div class="hero-orb-2"></div>
-
-<div class="hero-inner">
-<div class="hero-eyebrow">Free Program · Open to All</div>
-<h1>Be Seen.<br />Be <em>Supported.</em><br />Move Forward.</h1>
-<p class="hero-desc">
-Talent Connect is a free, inclusive program designed to help real people gain workforce
-visibility and access to opportunity — even in a world increasingly shaped by AI-driven hiring.
+<div class="container hero-grid">
+<div class="hero-card">
+<div class="eyebrow">Human-Centered Access in an AI-Driven Hiring Environment</div>
+<h1>Talent Connect</h1>
+<p class="lead">
+Talent Connect is a workforce visibility and connection program designed to help bridge
+the growing gap between people and opportunity in a hiring environment increasingly shaped
+by automation, screening filters, and reduced human interaction.
+</p>
+<p class="lead">
+As hiring continues to evolve, many qualified individuals are filtered out before being seen.
+Talent Connect restores access by creating more intentional pathways between talent and opportunity
+helping people gain visibility, strengthen workforce readiness, and move forward with greater clarity.
 </p>
 
 <div class="hero-actions">
-<button type="button" class="btn-primary" onclick="openModal('jobSeekerModal')">
-Join Talent Connect — It's Free<span>→</span>
-</button>
-<a href="/career-center-partners" class="btn-ghost">Career Center Network</a>
+<a href="#choose-access" class="btn btn-primary">Choose Your Access Path</a>
+<a href="#join" class="btn btn-secondary">Join Talent Connect</a>
+</div>
 </div>
 
-<div class="hero-stats">
-<div class="hero-stat">
-<div class="hero-stat-num">Free</div>
-<div class="hero-stat-label">No resume required to get started</div>
+<div class="hero-side">
+<div class="stat-card">
+<div class="kicker">Now Expanding</div>
+<strong>Supporting U.S. and Global Talent</strong>
+<p>
+Talent Connect is expanding beyond borders because opportunity should not be limited by geography.
+</p>
 </div>
-<div class="hero-stat">
-<div class="hero-stat-num">Inclusive</div>
-<div class="hero-stat-label">Students, veterans, career changers, returners, and more</div>
-</div>
-<div class="hero-stat">
-<div class="hero-stat-num">Human</div>
-<div class="hero-stat-label">A more people-centered path beyond automated filtering</div>
+
+<div class="stat-card">
+<div class="kicker">Built for Real Access</div>
+<strong>Minimal barriers. Human-centered connection.</strong>
+<p>
+Designed to support diverse individuals, including students, veterans, career changers, emerging professionals, and
+underrepresented communities seeking greater visibility and opportunity.
+</p>
 </div>
 </div>
 </div>
 </section>
 
-<div class="page-wrap">
-<section class="block" id="about">
-<div class="about-grid">
-<div class="about-visual">
-<div class="about-visual-bg"></div>
-<div class="about-badge">✦ About the Program</div>
-<div class="about-visual-headline">Designed for people, not algorithms.</div>
-<p class="about-visual-text">
-Many qualified individuals are filtered out before they are ever truly seen.
-Talent Connect was built to help change that.
+<section id="about" class="section">
+<div class="container">
+<div class="section-card">
+<div class="section-header">
+<div>
+<h2>About Talent Connect</h2>
+<p class="subtle">
+Talent Connect is built to strengthen real human connection in a workforce increasingly influenced by automation.
 </p>
-
-<div class="about-pillars">
-<div class="about-pillar">
-<div class="about-pillar-icon">👁</div>
-<div class="about-pillar-label">Visibility</div>
-<div class="about-pillar-desc">Strengthen your presence in a crowded hiring landscape</div>
-</div>
-
-<div class="about-pillar">
-<div class="about-pillar-icon">🤝</div>
-<div class="about-pillar-label">Access</div>
-<div class="about-pillar-desc">Inclusive entry into opportunity with fewer barriers</div>
-</div>
-
-<div class="about-pillar">
-<div class="about-pillar-icon">🛡</div>
-<div class="about-pillar-label">Support</div>
-<div class="about-pillar-desc">Tools designed for real people in real transitions</div>
-</div>
-
-<div class="about-pillar">
-<div class="about-pillar-icon">🚀</div>
-<div class="about-pillar-label">Readiness</div>
-<div class="about-pillar-desc">Navigate modern hiring with more clarity and confidence</div>
 </div>
 </div>
-</div>
-
-<div class="about-content">
-<div class="section-label">About Talent Connect</div>
-<h2 class="section-heading">A more <em>human-centered</em> path to opportunity</h2>
 
 <p>
-Talent Connect is designed specifically for job seekers who want stronger workforce visibility,
-meaningful support, and a more accessible way to move forward in a rapidly evolving hiring landscape.
+While AI may improve efficiency, it can also reduce meaningful interaction and create new barriers
+for individuals seeking opportunity and direction. Talent Connect reintroduces access, visibility,
+and conversation into the experience helping individuals become seen beyond a resume while supporting
+more intentional workforce connection.
 </p>
 <p>
-This is not built around gatekeeping. It is a free program intended to reduce barriers and help
-individuals better navigate a workforce environment increasingly shaped by automation and AI screening.
-</p>
-<p>
-Participants may also be considered for specialized tools and resources based on their background,
-interests, and career direction.
+By integrating workforce visibility with AI readiness awareness, Talent Connect supports a more
+informed and human-centered approach to opportunity, engagement, and hiring.
 </p>
 
-<div class="about-highlight">
-<p><strong>Free to join.</strong> Minimal information collected. No resume required to get started. Everyone is welcome.</p>
-</div>
-
-<div style="margin-top: 28px;">
-<a href="/career-center-partners" class="btn-ghost" style="border-color: #ccc; color: var(--navy); font-size: 13px; padding: 11px 22px;">
-View Our Career Center &amp; University Network →
+<a class="network-link" href="/career-center-university-network">
+View Our Career Center &amp; University Network
 </a>
-</div>
-</div>
-</div>
-</section>
-</div>
 
-<section class="welcome-section" id="community">
-<div class="page-wrap">
-<div class="section-label">Community</div>
-<h2 class="section-heading">Everyone is <em>welcome</em> here</h2>
-<p class="section-sub">
-Talent Connect is intentionally open and inclusive across every stage of life, education,
-experience, and workforce transition.
-</p>
+<div class="divider"></div>
 
-<div class="welcome-grid">
-<div class="welcome-card">
-<div class="welcome-icon">🎓</div>
-<h3>Students &amp; Recent Graduates</h3>
-<p>Building experience, exploring career direction, and learning to communicate your value more clearly to employers.</p>
+<h3>How Talent Connect Supports Participants</h3>
+<div class="support-grid">
+<div class="support-item">
+<h3>Visibility</h3>
+<p>Help individuals become discoverable beyond automated systems by increasing real-world exposure and workforce presence.</p>
 </div>
-
-<div class="welcome-card">
-<div class="welcome-icon">🎖</div>
-<h3>Veterans &amp; Military Transitioners</h3>
-<p>Navigating the shift from military service to civilian opportunity with more clarity, translation tools, and support.</p>
+<div class="support-item">
+<h3>Access</h3>
+<p>Provide structured, direct access to opportunity across universities, workforce communities, and emerging populations.</p>
 </div>
-
-<div class="welcome-card">
-<div class="welcome-icon">🔄</div>
-<h3>Career Changers &amp; Returners</h3>
-<p>Returning to work, changing industries, or rebuilding momentum after time away from the workforce.</p>
+<div class="support-item">
+<h3>Connection</h3>
+<p>Create meaningful, human-centered interactions that go beyond digital applications and automated screening.</p>
 </div>
-
-<div class="welcome-card">
-<div class="welcome-icon">⭐</div>
-<h3>All Job Seekers</h3>
-<p>Professionals, caregivers, disabled community members, early-career talent, and anyone seeking a more supportive path to opportunity.</p>
+<div class="support-item">
+<h3>Opportunity</h3>
+<p>Support stronger workforce outcomes by aligning readiness, engagement, visibility, and access.</p>
+</div>
 </div>
 </div>
 </div>
 </section>
 
-<div class="page-wrap">
-<section class="block" id="why-join">
-<div class="section-label">Why Join</div>
-<h2 class="section-heading">Built to reduce barriers,<br />not create them</h2>
-<p class="section-sub">Four core reasons people choose Talent Connect as a starting point.</p>
-
-<div class="why-grid">
-<div class="why-card">
-<div class="why-num">1</div>
+<section id="choose-access" class="section">
+<div class="container">
+<div class="choose-access">
+<div class="section-header">
 <div>
-<h3>Greater Visibility</h3>
-<p>Build stronger presence in a hiring environment where many qualified people are screened out before being fully considered.</p>
-</div>
-</div>
-
-<div class="why-card">
-<div class="why-num">2</div>
-<div>
-<h3>Completely Free Access</h3>
-<p>Join at no cost and access a program designed to reduce barriers instead of creating more. No fees, no fine print.</p>
-</div>
-</div>
-
-<div class="why-card">
-<div class="why-num">3</div>
-<div>
-<h3>Workforce Readiness</h3>
-<p>Better understand how modern hiring works and how to position yourself more effectively in an AI-shaped hiring environment.</p>
-</div>
-</div>
-
-<div class="why-card">
-<div class="why-num">4</div>
-<div>
-<h3>Targeted Support</h3>
-<p>Gain access to tools and resources designed for real people with real transitions, goals, and different types of experience.</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-
-<section class="block tools-section" id="tools">
-<div class="page-wrap">
-<div class="section-label">Free Tools &amp; Support</div>
-<h2 class="section-heading">Resources built for <em>your</em> journey</h2>
-<p class="section-sub">Specialized tools designed to meet you exactly where you are — no experience level required.</p>
-
-<div class="tools-grid">
-<div class="tool-card">
-<!-- Replace with your real image when ready:
-<img src="talent-connect-general.png" alt="Diverse professionals in an inclusive workforce setting" class="tool-photo" />
--->
-<div class="tool-photo-placeholder">🌐</div>
-
-<div class="tool-body">
-<span class="tool-badge free">✓ Free Program</span>
-<div class="tool-name">Talent Connect Access</div>
-<p class="tool-text" style="color: var(--gold-dk); font-weight: 600; font-size: 14px; margin-bottom: 10px;">
-A free starting point for visibility, workforce support, and access to opportunity.
+<h2>Choose Your Access Path</h2>
+<p class="subtle">
+Talent Connect now supports participants across the United States and internationally.
+Select the path that best fits your location and workforce context.
 </p>
-
-<div class="tool-overline">Overview</div>
-<p class="tool-text">
-Helps job seekers move forward with more clarity in a workforce shaped by AI, automation,
-and reduced human connection. Designed to help you be seen, supported, and better prepared.
-</p>
-
-<div class="tool-overline">What It Supports</div>
-<ul class="tool-list">
-<li>Greater workforce visibility</li>
-<li>Inclusive access to support and resources</li>
-<li>A more human-centered entry point into opportunity</li>
-<li>Better understanding of the modern hiring environment</li>
-</ul>
-<div class="tool-spacer"></div>
 </div>
 </div>
 
-<div class="tool-card">
-<!-- Replace with your real image when ready:
-<img src="talent-connect-students.png" alt="Student and early-career workforce readiness support" class="tool-photo" />
--->
-<div class="tool-photo-placeholder">📚</div>
-
-<div class="tool-body">
-<span class="tool-badge">Students &amp; Early Career</span>
-<div class="tool-name">Student Experience Tool</div>
-
-<div class="tool-overline">Overview</div>
-<p class="tool-text">
-Designed for students and recent graduates who feel they do not yet have enough formal work experience.
-Translates academic work, projects, and campus activities into professional language.
-</p>
-
-<div class="tool-overline">What It Helps With</div>
-<ul class="tool-list">
-<li>Turning student experience into employer-ready language</li>
-<li>Identifying transferable and technical skills</li>
-<li>Supporting resume and profile development</li>
-<li>Communicating your value with more confidence</li>
-</ul>
-<div class="tool-spacer"></div>
-</div>
-</div>
-
-<div class="tool-card">
-<!-- Replace with your real image when ready:
-<img src="talent-connect-military.png" alt="Military to civilian transition support" class="tool-photo" />
--->
-<div class="tool-photo-placeholder">🎖</div>
-
-<div class="tool-body">
-<span class="tool-badge">Veterans &amp; Military</span>
-<div class="tool-name">Military Transition Tool</div>
-
-<div class="tool-overline">Overview</div>
-<p class="tool-text">
-Built for veterans, active-duty, and transitioning service members who need help translating military
-experience into civilian-facing language and workforce opportunities.
-</p>
-
-<div class="tool-overline">What It Helps With</div>
-<ul class="tool-list">
-<li>Military-to-civilian resume translation</li>
-<li>Clarifying transferable skills and measurable impact</li>
-<li>Improving communication of experience to employers</li>
-<li>Supporting confidence during career transition</li>
-</ul>
-<div class="tool-spacer"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<div class="page-wrap">
-<section class="block" id="process">
-<div class="section-label">Process</div>
-<h2 class="section-heading">How it works</h2>
-<p class="section-sub">Four simple steps from where you are now to greater visibility and opportunity.</p>
-
-<div class="steps-wrap">
-<div class="step">
-<div class="step-circle">1</div>
-<h3>Join for Free</h3>
-<p>Complete a simple form with minimal information so we can understand your background, goals, and interests.</p>
-</div>
-
-<div class="step">
-<div class="step-circle">2</div>
-<h3>Share Your Direction</h3>
-<p>Tell us what types of opportunities, work formats, and career fields you are interested in exploring.</p>
-</div>
-
-<div class="step">
-<div class="step-circle">3</div>
-<h3>Access Tools &amp; Support</h3>
-<p>Be considered for relevant tools, resources, and workforce support based on your needs and background.</p>
-</div>
-
-<div class="step">
-<div class="step-circle">4</div>
-<h3>Strengthen Your Visibility</h3>
-<p>Build a more intentional pathway to opportunity in a changing hiring environment that increasingly favors visibility.</p>
-</div>
-</div>
-</section>
-</div>
-
-<section class="cta-section">
-<div class="cta-orb"></div>
-<div class="cta-inner">
-<div class="section-label">Get Started</div>
-<h2>Ready to be <em>seen?</em></h2>
+<div class="access-grid">
+<article class="access-card">
+<div class="mini">United States</div>
+<h3 class="us-title">Talent Connect: U.S.A. Access</h3>
 <p>
-Talent Connect is free and open to job seekers who want a more human-centered path to visibility,
-readiness, and opportunity. No resume required to start.
+Designed for individuals in the United States, including students, veterans, military-connected
+communities, disabled community, career changers, returning workers, professionals seeking stronger visibility
+in a modern hiring environment, and anyone seeking a more supportive path to opportunity.
 </p>
+<p>
+This path may align more closely with U.S. based hiring structures, employer engagement,
+and workforce readiness support relevant to the American job market.
+</p>
+<a href="#join" class="btn btn-primary" onclick="openForm('us-form')">Open U.S. Access Form</a>
+</article>
 
-<div class="cta-btns">
-<button type="button" class="btn-primary" onclick="openModal('jobSeekerModal')">
-Join Talent Connect — Free<span>→</span>
-</button>
+<article class="access-card">
+<div class="mini">International</div>
+<h3 class="global-title">🌍 Talent Connect: Global Access</h3>
+<p>
+Designed for international students, global job seekers, and individuals outside the United States
+who want stronger visibility, connection, and support navigating opportunity in a changing workforce.
+</p>
+<p>
+This path helps create a more inclusive point of entry for people whose education, experience,
+or career journey deserves to be seen across borders.
+</p>
+<a href="#join" class="btn btn-primary" onclick="openForm('global-form')">Open Global Access Form</a>
+</article>
+</div>
 </div>
 </div>
 </section>
 
-<div class="modal-backdrop" id="jobSeekerModal" aria-hidden="true">
-<div class="modal" role="dialog" aria-labelledby="jobSeekerModalTitle">
-<div class="modal-header">
-<h3 id="jobSeekerModalTitle">Join Talent Connect</h3>
-<button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
+<section id="services" class="section">
+<div class="container">
+<div class="section-card">
+<div class="section-header">
+<div>
+<h2>Talent Connect Program</h2>
+<p class="subtle">
+Structured visibility and connection for individuals.
+</p>
+</div>
 </div>
 
-<div class="modal-body">
-<p class="modal-intro">
-Complete the form below to join Talent Connect as a job seeker. This program is free and designed
-to support visibility, access, and workforce readiness.
+<div class="services-grid">
+<article class="service-card">
+<div class="tag">For the Talent Community</div>
+<h3>Talent Listing</h3>
+<p>
+This service is completely free and designed to expand access to opportunity for individuals
+seeking stronger visibility in today’s workforce.
+</p>
+<p>
+Talent Connect helps people move beyond passive application cycles and automated filtering by creating
+more direct pathways to visibility, workforce connection, and opportunity.
 </p>
 
-<form action="/thank-you" class="talent-form" method="POST" name="talent-connect-job-seekers" netlify>
-<input type="hidden" name="form-name" value="talent-connect-job-seekers" />
-<p style="display:none;">
-<label>Do not fill this out if you're human: <input name="bot-field" /></label>
+<ul class="service-list">
+<li>Greater visibility with participating employers and workforce connections</li>
+<li>Connection to opportunities across universities and workforce communities</li>
+<li>Inclusive support for veteran, military, student, disability, and returning workforce communities</li>
+<li>A more intentional pathway to workforce exposure and opportunity</li>
+</ul>
+
+<div class="muted-box">
+<strong style="color:var(--navy);display:block;margin-bottom:8px;">Privacy Statement</strong>
+<ul class="privacy-list">
+<li>We intentionally collect minimal data</li>
+<li>We do not require resumes or sensitive personal information to join</li>
+<li>Your email is used only for communication related to Talent Connect, opportunities, and resources</li>
+<li>Access details and communication will be sent by email</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process" class="section">
+<div class="container">
+<div class="section-card">
+<div class="section-header">
+<div>
+<h2>How the Process Works</h2>
+<p class="subtle">
+A simple, more intentional approach to visibility, connection, and workforce access.
+</p>
+</div>
+</div>
+
+<div class="process-grid">
+<article class="process-card">
+<div class="step">1</div>
+<h3>Choose Your Path</h3>
+<p>Select the access path that best fits your location and workforce context: U.S.A. Access or Global Access.</p>
+</article>
+
+<article class="process-card">
+<div class="step">2</div>
+<h3>Open the Form</h3>
+<p>Click the button for the access path that fits you. Your selected form will open in the Join section below.</p>
+</article>
+
+<article class="process-card">
+<div class="step">3</div>
+<h3>Increase Visibility</h3>
+<p>Participants gain greater exposure beyond automated screening and become part of a more intentional connection pathway.</p>
+</article>
+
+<article class="process-card">
+<div class="step">4</div>
+<h3>Support Opportunity</h3>
+<p>The result is stronger access, more meaningful engagement, and clearer pathways to modern workforce opportunity.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section id="join" class="section">
+<div class="container">
+<div class="section-card">
+<div class="section-header">
+<div>
+<h2>Join Talent Connect</h2>
+<p class="subtle">
+Select your access path. Your form will open when you click the matching button.
+</p>
+</div>
+</div>
+
+<div class="join-choice-grid">
+<article class="join-option">
+<h3 class="us-title">Talent Connect: U.S.A. Access</h3>
+<p>For participants in the United States, including students, veterans, professionals, and workforce communities.</p>
+<button type="button" class="btn btn-primary" onclick="openForm('us-form')">Open U.S. Access Form</button>
+</article>
+
+<article class="join-option">
+<h3 class="global-title">🌍 Talent Connect: Global Access</h3>
+<p>For international students and global job seekers outside the United States seeking stronger visibility and opportunity.</p>
+<button type="button" class="btn btn-primary" onclick="openForm('global-form')">Open Global Access Form</button>
+</article>
+</div>
+
+<div class="form-wrap">
+<div class="form-shell us-form" id="us-form">
+<h3 class="us-title">🇺🇸 Talent Connect: U.S. Access</h3>
+<p class="intro">
+For participants in the United States, including students, veterans, professionals, and workforce communities.
 </p>
 
-<div class="form-section">
-<h2>Contact Information</h2>
+<form action="#" method="post">
+<div class="visually-hidden">
+<label for="website-us">Do not fill this out if you're human</label>
+<input type="text" id="website-us" name="website" tabindex="-1" autocomplete="off" />
+</div>
+
 <div class="form-grid">
-<div class="form-group">
-<label for="jsFirstName">First Name</label>
-<input type="text" id="jsFirstName" name="first_name" required />
+<div class="field">
+<label for="us-first-name">First Name (Only)</label>
+<input type="text" id="us-first-name" name="first_name" required />
 </div>
 
-<div class="form-group">
-<label for="jsEmailAddress">Email Address</label>
-<input type="email" id="jsEmailAddress" name="email_address" required />
+<div class="field">
+<label for="us-email">Email Address</label>
+<input type="email" id="us-email" name="email" required />
 </div>
 
-<div class="form-group full-width">
-<label for="jsState">State <span class="optional">(Optional)</span></label>
-<input type="text" id="jsState" name="state" />
-</div>
-</div>
+<div class="field">
+<label for="us-state">State</label>
+<input type="text" id="us-state" name="state" />
 </div>
 
-<div class="form-section">
-<h2>Community / Background</h2>
-<div class="form-grid">
-<div class="form-group">
-<label for="jsCurrentStatus">Which best describes you?</label>
-<select id="jsCurrentStatus" name="current_status" required>
+<div class="field">
+<label for="us-community">Which best describes you?</label>
+<select id="us-community" name="community">
 <option value="">Select one</option>
-<option value="Veteran">Veteran</option>
-<option value="Active Duty Military">Active Duty Military</option>
-<option value="Transitioning Service Member">Transitioning Service Member</option>
-<option value="Military Spouse">Military Spouse</option>
-<option value="Student">Student</option>
-<option value="Recent Graduate">Recent Graduate</option>
-<option value="Stay-at-home Parent Returning to Work">Stay-at-home Parent Returning to Work</option>
-<option value="Professional Seeking New Opportunities">Professional Seeking New Opportunities</option>
-<option value="Career Explorer">Career Explorer</option>
-<option value="Employed and Exploring">Employed and Exploring</option>
-<option value="Unemployed / Seeking Work">Unemployed / Seeking Work</option>
-<option value="Career Changer">Career Changer</option>
-<option value="Returning to Workforce">Returning to Workforce</option>
-<option value="Individual with Disability">Individual with Disability</option>
-<option value="Workforce Advocate / Mentor">Workforce Advocate / Mentor</option>
-<option value="Other">Other</option>
+<option>Veteran</option>
+<option>Active Duty Military</option>
+<option>Transitioning Service Member</option>
+<option>Military Spouse</option>
+<option>Student</option>
+<option>Recent Graduate</option>
+<option>Stay-at-home Parent Returning to Work</option>
+<option>Professional Seeking New Opportunities</option>
+<option>Career Explorer</option>
+<option>Employed and Exploring</option>
+<option>Unemployed / Seeking Work</option>
+<option>Career Changer</option>
+<option>Returning to Workforce</option>
+<option>Individual with Disability</option>
+<option>Workforce Advocate / Mentor</option>
+<option>Other</option>
 </select>
 </div>
 
-<div class="form-group">
-<label for="jsSchoolName">School / University Name <span class="optional">(Optional)</span></label>
-<input type="text" id="jsSchoolName" name="school_university_name" />
+<div class="field">
+<label for="us-school">School / University Name (Optional)</label>
+<input type="text" id="us-school" name="school" />
 </div>
 
-<div class="form-group">
-<label for="jsOrganizationName">Current Employer / Organization <span class="optional">(Optional)</span></label>
-<input type="text" id="jsOrganizationName" name="current_employer_organization" />
-</div>
-</div>
+<div class="field">
+<label for="us-employer">Current Employer / Organization (Optional)</label>
+<input type="text" id="us-employer" name="employer" />
 </div>
 
-<div class="form-section">
-<h2>Opportunity Preferences</h2>
-<div class="form-grid">
-<div class="form-group">
-<label for="jsOpportunityType">What type of opportunities or support are you most interested in?</label>
-<select id="jsOpportunityType" name="type_of_opportunity_seeking" required>
+<div class="field">
+<label for="us-interest">Opportunity or Support Interest</label>
+<select id="us-interest" name="interest">
 <option value="">Select one</option>
-<option value="Full-Time Employment">Full-Time Employment</option>
-<option value="Part-Time Employment">Part-Time Employment</option>
-<option value="Contract / Project Work">Contract / Project Work</option>
-<option value="Internship / Early Career Opportunities">Internship / Early Career Opportunities</option>
-<option value="Temporary Employment">Temporary Employment</option>
-<option value="Resume & Experience Translation">Resume &amp; Experience Translation</option>
-<option value="Interview Preparation & Career Guidance">Interview Preparation &amp; Career Guidance</option>
-<option value="Career Transition Support">Career Transition Support</option>
-<option value="Professional Visibility Support">Professional Visibility Support</option>
-<option value="Networking / Community Access">Networking / Community Access</option>
-<option value="Mentor Connection Program">Mentor Connection Program</option>
-<option value="Open to Multiple Opportunities">Open to Multiple Opportunities</option>
+<option>Full-Time Employment</option>
+<option>Part-Time Employment</option>
+<option>Contract / Project Work</option>
+<option>Internship / Early Career Opportunities</option>
+<option>Temporary Employment</option>
+<option>Resume & Experience Translation</option>
+<option>Interview Preparation & Career Guidance</option>
+<option>Career Transition Support</option>
+<option>Professional Visibility Support</option>
+<option>Networking / Community Access</option>
+<option>Open to Multiple Opportunities</option>
 </select>
 </div>
 
-<div class="form-group">
-<label for="jsWorkFormat">Preferred Work Format</label>
-<select id="jsWorkFormat" name="preferred_work_format" required>
+<div class="field">
+<label for="us-format">Preferred Work Format</label>
+<select id="us-format" name="work_format">
 <option value="">Select one</option>
-<option value="Remote">Remote</option>
-<option value="Hybrid">Hybrid</option>
-<option value="On-Site">On-Site</option>
-<option value="Open to Any">Open to Any</option>
+<option>Remote</option>
+<option>Hybrid</option>
+<option>On-Site</option>
+<option>Open to Any</option>
 </select>
 </div>
 
-<div class="form-group">
-<label for="jsAvailability">Preferred Hours / Availability</label>
-<select id="jsAvailability" name="preferred_hours_availability" required>
+<div class="field">
+<label for="us-hours">Preferred Hours / Availability</label>
+<select id="us-hours" name="availability">
 <option value="">Select one</option>
-<option value="Full-Time Schedule">Full-Time Schedule</option>
-<option value="Part-Time Schedule">Part-Time Schedule</option>
-<option value="Mornings">Mornings</option>
-<option value="Afternoons">Afternoons</option>
-<option value="Evenings">Evenings</option>
-<option value="Weekends">Weekends</option>
-<option value="Flexible">Flexible</option>
+<option>Full-Time Schedule</option>
+<option>Part-Time Schedule</option>
+<option>Mornings</option>
+<option>Afternoons</option>
+<option>Evenings</option>
+<option>Weekends</option>
+<option>Flexible</option>
 </select>
 </div>
 
-<div class="form-group">
-<label for="jsCareerField">Career Field of Interest</label>
-<input type="text" id="jsCareerField" name="career_field_of_interest" placeholder="e.g. Human Resources, Administration, Communications" required />
+<div class="field">
+<label for="us-field">Career Field of Interest</label>
+<input type="text" id="us-field" name="career_field" />
 </div>
+
+<div class="field-full">
+<label for="us-summary">Skills / Experience Summary</label>
+<textarea id="us-summary" name="summary"></textarea>
+</div>
+
+<div class="field-full">
+<label for="us-notes">Additional Notes (Optional)</label>
+<textarea id="us-notes" name="notes"></textarea>
 </div>
 </div>
 
-<div class="form-section">
-<h2>Skills and Experience</h2>
-<div class="form-grid">
-<div class="form-group full-width">
-<label for="jsSkillsSummary">Skills / Experience Summary</label>
-<textarea id="jsSkillsSummary" name="skills_experience_summary" rows="5" placeholder="Briefly describe your experience, strengths, and areas of interest." required></textarea>
-</div>
-
-<div class="form-group full-width">
-<label for="jsAdditionalNotes">Additional Notes <span class="optional">(Optional)</span></label>
-<textarea id="jsAdditionalNotes" name="additional_notes" rows="4" placeholder="Share anything else you would like us to know."></textarea>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Tool Access</h2>
-<div class="form-grid">
-<div class="form-group full-width">
-<label for="privateresources">Would you like to be considered for student, military, or other member-focused tools and resources?</label>
-<select id="privateresources" name="privateresources" required>
-<option value="">Select one</option>
-<option value="Yes">Yes</option>
-<option value="No">No</option>
-</select>
-</div>
-</div>
-</div>
-
-<div class="form-section">
-<h2>Consent</h2>
-<div class="checkbox-group">
-<input type="checkbox" id="jsConsentAgreement" name="consent_agreement" required />
-<label for="jsConsentAgreement">
-I understand that Talent Connect is intended to support visibility, access, and workforce readiness
+<div class="consent">
+I understand that Talent Connect is intended to support visibility and access to opportunities
 and does not guarantee employment, interview selection, or placement.
-</label>
+</div>
+
+<div class="submit-row">
+<button type="submit" class="btn btn-primary">Submit U.S. Access</button>
+</div>
+</form>
+</div>
+
+<div class="form-shell global-form" id="global-form">
+<h3 class="global-title">🌍 Talent Connect: Global Access</h3>
+<p class="intro">
+For international students and global job seekers outside the United States seeking stronger visibility and opportunity.
+</p>
+
+<form action="#" method="post">
+<div class="visually-hidden">
+<label for="website-global">Do not fill this out if you're human</label>
+<input type="text" id="website-global" name="website" tabindex="-1" autocomplete="off" />
+</div>
+
+<div class="form-grid">
+<div class="field">
+<label for="global-first-name">First Name (Only)</label>
+<input type="text" id="global-first-name" name="first_name" required />
+</div>
+
+<div class="field">
+<label for="global-email">Email Address</label>
+<input type="email" id="global-email" name="email" required />
+</div>
+
+<div class="field">
+<label for="global-country">Country</label>
+<input type="text" id="global-country" name="country" />
+</div>
+
+<div class="field">
+<label for="global-region">State / Province / Region</label>
+<input type="text" id="global-region" name="region" />
+</div>
+
+<div class="field">
+<label for="global-background">Which best describes you?</label>
+<select id="global-background" name="background">
+<option value="">Select one</option>
+<option>Student</option>
+<option>Recent Graduate</option>
+<option>International Student</option>
+<option>Professional Seeking New Opportunities</option>
+<option>Career Changer</option>
+<option>Returning to Workforce</option>
+<option>Entrepreneur / Independent Professional</option>
+<option>Workforce Advocate / Mentor</option>
+<option>Individual with Disability</option>
+<option>Career Explorer</option>
+<option>Employed and Exploring</option>
+<option>Unemployed / Seeking Work</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-school">School / University Name (Optional)</label>
+<input type="text" id="global-school" name="school" />
+</div>
+
+<div class="field">
+<label for="global-org">Current Employer / Organization (Optional)</label>
+<input type="text" id="global-org" name="organization" />
+</div>
+
+<div class="field">
+<label for="global-interest">Opportunity or Support Interest</label>
+<select id="global-interest" name="interest">
+<option value="">Select one</option>
+<option>Full-Time Employment</option>
+<option>Part-Time Employment</option>
+<option>Contract / Project Work</option>
+<option>Internship / Early Career Opportunities</option>
+<option>Temporary Employment</option>
+<option>Career Guidance</option>
+<option>Resume / CV Positioning Support</option>
+<option>Professional Visibility Support</option>
+<option>Networking / Community Access</option>
+<option>Open to Multiple Opportunities</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-format">Preferred Work Format</label>
+<select id="global-format" name="work_format">
+<option value="">Select one</option>
+<option>Remote</option>
+<option>Hybrid</option>
+<option>On-Site</option>
+<option>Open to Any</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-availability">Availability</label>
+<select id="global-availability" name="availability">
+<option value="">Select one</option>
+<option>Full-Time Schedule</option>
+<option>Part-Time Schedule</option>
+<option>Mornings</option>
+<option>Afternoons</option>
+<option>Evenings</option>
+<option>Weekends</option>
+<option>Flexible</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-field">Career Field of Interest</label>
+<input type="text" id="global-field" name="career_field" />
+</div>
+
+<div class="field-full">
+<label for="global-summary">Skills / Experience Summary</label>
+<textarea id="global-summary" name="summary"></textarea>
+</div>
+
+<div class="field-full">
+<label for="global-notes">Additional Notes (Optional)</label>
+<textarea id="global-notes" name="notes"></textarea>
 </div>
 </div>
 
-<div class="form-actions">
-<button type="submit" class="form-submit-btn">Submit →</button>
-<button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
+<div class="consent">
+I understand that Talent Connect is intended to support visibility and access to opportunities
+and does not guarantee employment, interview selection, or placement.
+</div>
+
+<div class="submit-row">
+<button type="submit" class="btn btn-primary">Submit Global Access</button>
 </div>
 </form>
 </div>
 </div>
-</div>
 
-<footer>
-<div class="footer-brand">© 2026 Government Workforce Network LLC. All rights reserved.</div>
-<div class="footer-motto">Together, Building Income, Opportunity, and Well-Being</div>
+<div class="divider"></div>
+
+<p class="small-note">
+Privacy note: We intentionally collect minimal information. We do not require resumes or sensitive
+personal information to join. Your email is used only for communication related to Talent Connect,
+opportunities, and relevant resources.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="cta-card">
+<h2>Interested in Talent Connect?</h2>
+<p>
+Talent Connect creates a pathway where visibility meets opportunity.
+In a workforce shaped by AI, connection matters more than ever.
+</p>
+<div class="hero-actions" style="justify-content:center;">
+<a href="#join" class="btn btn-primary">Join Talent Connect</a>
+<a href="/career-center-university-network" class="btn btn-secondary">View University Network</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p><strong>© 2026 Government Workforce Network LLC.</strong> All rights reserved.</p>
+<p>Together, Building Income, Opportunity, and Well-Being</p>
+</div>
 </footer>
 
 <script>
-function openModal(id) {
-const modal = document.getElementById(id);
-if (!modal) return;
-modal.classList.add('open');
-modal.setAttribute('aria-hidden', 'false');
-document.body.style.overflow = 'hidden';
-}
+function openForm(formId) {
+const forms = document.querySelectorAll('.form-shell');
+forms.forEach(form => form.classList.remove('active'));
 
-function closeModal(el) {
-const modal = el.closest('.modal-backdrop');
-if (!modal) return;
-modal.classList.remove('open');
-modal.setAttribute('aria-hidden', 'true');
-document.body.style.overflow = '';
-}
-
-document.addEventListener('click', function (e) {
-if (e.target.classList.contains('modal-backdrop')) {
-e.target.classList.remove('open');
-e.target.setAttribute('aria-hidden', 'true');
-document.body.style.overflow = '';
-}
-});
-
-document.addEventListener('keydown', function (e) {
-if (e.key === 'Escape') {
-const open = document.querySelector('.modal-backdrop.open');
-if (open) {
-open.classList.remove('open');
-open.setAttribute('aria-hidden', 'true');
-document.body.style.overflow = '';
+const selectedForm = document.getElementById(formId);
+if (selectedForm) {
+selectedForm.classList.add('active');
+selectedForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
-});
 </script>
 
-<script
-async
-id="netlify-rum-container"
-src="/.netlify/scripts/rum"
-data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
-data-netlify-deploy-branch="main"
-data-netlify-deploy-context="production"
-data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzcyMTFmMGFiZjA2MDAwODNhNTk2MCIsImlzc3VlciI6Im5mc2VydmVyIn0.dzV7XKgC41m_z7I4d-rmrP-68dotSRZOTu2a_-ZYonQ"
-></script>
 </body>
 </html>
-
-
