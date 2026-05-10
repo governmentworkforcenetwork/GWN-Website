@@ -30,19 +30,8 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 .partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px} .partner-link{display:flex;align-items:center;min-height:72px;padding:17px 18px;border:1px solid #dde4ee;border-radius:18px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:800;background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease} .partner-link:hover{transform:translateY(-3px);border-color:rgba(29,78,216,.35);color:var(--blue);box-shadow:0 16px 28px rgba(13,35,71,.12)}
 .partner-link[data-link-status="official-search"]::after{content:" verify";font-size:10px;color:#8a6a00;background:#fff3c4;border-radius:999px;padding:3px 7px;margin-left:auto;white-space:nowrap}
 .cta-band{margin-top:34px;padding:28px;border-radius:26px;background:linear-gradient(135deg,#071426,#0d2347);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap} .cta-band h3{font-size:24px;margin-bottom:6px} .cta-band p{color:rgba(255,255,255,.78);max-width:720px;font-size:14px} .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:900;font-size:13px} .btn-primary{background:var(--gold);color:#111} .btn-secondary{border:1px solid rgba(255,255,255,.32);color:#fff;margin-left:10px}
-.footer-note{text-align:center;color:#607086;font-size:12px;margin-top:22px} 
-.no-results{
-  display:none;
-  padding:22px;
-  margin-top:24px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:#fff7dd;
-  color:#5b4a0c;
-  font-size:14px;
-  font-weight:700;
-}
-[hidden]{display:none!important}
+.footer-note{text-align:center;color:#607086;font-size:12px;margin-top:22px}
+.no-results{display:none;padding:22px;margin-top:24px;border:1px solid var(--line);border-radius:18px;background:#fff7dd;color:#5b4a0c;font-size:14px;font-weight:700}
 
 @media (max-width:820px){.topbar{padding:16px 20px}.hero{padding-top:54px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-intro{grid-template-columns:1fr;padding:24px}.toolbar{grid-template-columns:1fr;position:static;padding:18px 22px}.state-nav{padding:16px 22px 6px}.directory{padding:18px 22px 30px}}
 @media (max-width:520px){.stats{grid-template-columns:1fr}.partner-link{font-size:13px}}
@@ -587,7 +576,7 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
       </section>
     <div id="noResults" class="no-results">No matching schools found. Try searching by school name, state, or region.</div>
 
-    <div class="cta-band">
+<div class="cta-band">
       <div><h3>Connect with Talent Connect</h3><p>Talent Connect supports workforce visibility, career readiness, and human-centered access in an AI-influenced hiring environment.</p></div>
       <div><a class="btn btn-primary" href="/talent-connect">Explore Talent Connect</a><a class="btn btn-secondary" href="/">Back Home</a></div>
     </div>
@@ -599,7 +588,7 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 
 <script>
 (function () {
-  function normalizeText(value) {
+  function clean(value) {
     return String(value || "")
       .toLowerCase()
       .replace(/&/g, " and ")
@@ -609,69 +598,83 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
       .trim();
   }
 
-  function setupNetworkSearch() {
-    var searchInput = document.getElementById("schoolSearch");
+  function showEverything() {
+    var links = document.querySelectorAll(".partner-link");
+    var sections = document.querySelectorAll(".state-section");
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.display = "flex";
+    }
+    for (var j = 0; j < sections.length; j++) {
+      sections[j].style.display = "block";
+    }
+    var noResults = document.getElementById("noResults");
+    if (noResults) noResults.style.display = "none";
+    var resultCount = document.getElementById("resultCount");
+    if (resultCount) resultCount.textContent = "Showing all";
+  }
+
+  function filterCareerCenterNetwork() {
+    var input = document.getElementById("schoolSearch");
     var resultCount = document.getElementById("resultCount");
     var noResults = document.getElementById("noResults");
-    var links = Array.prototype.slice.call(document.querySelectorAll(".partner-link"));
-    var sections = Array.prototype.slice.call(document.querySelectorAll(".state-section"));
+    var links = document.querySelectorAll(".partner-link");
+    var sections = document.querySelectorAll(".state-section");
 
-    if (!searchInput || !resultCount || links.length === 0) {
+    if (!input) return;
+
+    var query = clean(input.value);
+
+    if (query === "") {
+      showEverything();
       return;
     }
 
-    links.forEach(function (link) {
+    var count = 0;
+
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
       var section = link.closest(".state-section");
-      var stateHeading = section ? section.querySelector("h3") : null;
-      var stateText = stateHeading ? stateHeading.textContent : "";
+      var heading = section ? section.querySelector("h3") : null;
+      var state = heading ? heading.textContent : "";
       var dataState = link.getAttribute("data-state") || "";
-      var schoolText = link.textContent || "";
-      var hrefText = link.getAttribute("href") || "";
+      var text = clean(link.textContent + " " + state + " " + dataState);
 
-      link.setAttribute(
-        "data-search-text",
-        normalizeText(schoolText + " " + stateText + " " + dataState + " " + hrefText)
-      );
-    });
-
-    function runSearch() {
-      var query = normalizeText(searchInput.value);
-      var visibleCount = 0;
-
-      links.forEach(function (link) {
-        var searchText = link.getAttribute("data-search-text") || "";
-        var isMatch = query === "" || searchText.indexOf(query) !== -1;
-
-        link.hidden = !isMatch;
-        if (isMatch) visibleCount++;
-      });
-
-      sections.forEach(function (section) {
-        var visibleLinks = section.querySelectorAll(".partner-link:not([hidden])");
-        section.hidden = visibleLinks.length === 0;
-      });
-
-      resultCount.textContent = query === ""
-        ? "Showing all"
-        : visibleCount + " result" + (visibleCount === 1 ? "" : "s");
-
-      if (noResults) {
-        noResults.style.display = visibleCount === 0 ? "block" : "none";
-      }
+      var match = text.indexOf(query) !== -1;
+      link.style.display = match ? "flex" : "none";
+      if (match) count++;
     }
 
-    searchInput.addEventListener("input", runSearch);
-    searchInput.addEventListener("keyup", runSearch);
-    searchInput.addEventListener("change", runSearch);
-    searchInput.addEventListener("search", runSearch);
+    for (var s = 0; s < sections.length; s++) {
+      var visible = sections[s].querySelectorAll('.partner-link[style*="flex"]').length > 0;
+      sections[s].style.display = visible ? "block" : "none";
+    }
 
-    runSearch();
+    if (resultCount) {
+      resultCount.textContent = count + " result" + (count === 1 ? "" : "s");
+    }
+
+    if (noResults) {
+      noResults.style.display = count === 0 ? "block" : "none";
+    }
+  }
+
+  window.filterCareerCenterNetwork = filterCareerCenterNetwork;
+
+  function initSearch() {
+    var input = document.getElementById("schoolSearch");
+    if (!input) return;
+
+    input.value = "";
+    input.addEventListener("input", filterCareerCenterNetwork);
+    input.addEventListener("search", filterCareerCenterNetwork);
+    input.addEventListener("keyup", filterCareerCenterNetwork);
+    showEverything();
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setupNetworkSearch);
+    document.addEventListener("DOMContentLoaded", initSearch);
   } else {
-    setupNetworkSearch();
+    initSearch();
   }
 })();
 </script>
