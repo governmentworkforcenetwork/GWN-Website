@@ -582,31 +582,6 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 <p class="footer-note">Government Workforce Network LLC | Career Center & University Network Directory</p>
 </main>
 
-<script>
-const searchInput = document.getElementById("schoolSearch");
-const links = Array.from(document.querySelectorAll(".partner-link"));
-const sections = Array.from(document.querySelectorAll(".state-section"));
-const resultCount = document.getElementById("resultCount");
-function updateCount(count){ resultCount.textContent = count === links.length ? "Showing all" : `${count} result${count === 1 ? "" : "s"}`; }
-function filterSchools(){
-  const q = searchInput.value.trim().toLowerCase();
-  let visibleCount = 0;
-  links.forEach(link => {
-    const text = `${link.textContent} ${link.dataset.state || ""}`.toLowerCase();
-    const match = !q || text.includes(q);
-    link.classList.toggle("hidden", !match);
-    if(match) visibleCount++;
-  });
-  sections.forEach(section => {
-    const visibleLinks = section.querySelectorAll(".partner-link:not(.hidden)");
-    section.classList.toggle("hidden", visibleLinks.length === 0);
-  });
-  updateCount(visibleCount);
-}
-searchInput.addEventListener("input", filterSchools);
-updateCount(links.length);
-</script>
-
   <script>
 document.addEventListener("DOMContentLoaded", function () {
 const searchInput = document.getElementById("schoolSearch");
