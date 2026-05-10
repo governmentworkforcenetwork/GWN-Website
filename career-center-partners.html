@@ -606,5 +606,50 @@ function filterSchools(){
 searchInput.addEventListener("input", filterSchools);
 updateCount(links.length);
 </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+const searchInput = document.getElementById("schoolSearch");
+const resultCount = document.getElementById("resultCount");
+const links = Array.from(document.querySelectorAll(".partner-link"));
+const sections = Array.from(document.querySelectorAll(".state-section"));
+
+if (!searchInput) return;
+
+function filterSchools() {
+const query = searchInput.value.toLowerCase().trim();
+let visibleCount = 0;
+
+links.forEach(link => {
+const schoolName = link.textContent.toLowerCase();
+const stateName = (link.getAttribute("data-state") || "").toLowerCase();
+const match = schoolName.includes(query) || stateName.includes(query);
+
+if (match || query === "") {
+link.style.display = "flex";
+visibleCount++;
+} else {
+link.style.display = "none";
+}
+});
+
+sections.forEach(section => {
+const visibleLinks = Array.from(section.querySelectorAll(".partner-link"))
+.filter(link => link.style.display !== "none");
+
+section.style.display = visibleLinks.length > 0 ? "block" : "none";
+});
+
+if (resultCount) {
+resultCount.textContent = query === ""
+? "Showing all"
+: `${visibleCount} result${visibleCount === 1 ? "" : "s"}`;
+}
+}
+
+searchInput.addEventListener("input", filterSchools);
+filterSchools();
+});
+</script>
 </body>
 </html>
