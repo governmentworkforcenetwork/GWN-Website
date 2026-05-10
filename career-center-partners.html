@@ -68,7 +68,7 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
   </div>
 
   <div class="toolbar">
-    <input id="schoolSearch" class="search" type="search" placeholder="Search by school, state, or college name..." aria-label="Search schools" />
+   <input id="schoolSearch" class="search" type="search" placeholder="Search by school, state, or college name..." aria-label="Search schools" oninput="filterNetwork()" />
     <div class="filter-note"><span id="resultCount">Showing all</span></div>
   </div>
 
@@ -583,47 +583,50 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 </main>
 
 <script>
-window.onload = function () {
-var searchInput = document.getElementById("schoolSearch");
-var resultCount = document.getElementById("resultCount");
-var links = document.querySelectorAll(".partner-link");
-var sections = document.querySelectorAll(".state-section");
+function filterNetwork() {
+var input = document.getElementById("schoolSearch");
+var countText = document.getElementById("resultCount");
+var query = input.value.toLowerCase().trim();
 
-if (!searchInput) return;
+var schools = document.getElementsByClassName("partner-link");
+var sections = document.getElementsByClassName("state-section");
 
-function searchSchools() {
-var query = searchInput.value.toLowerCase().trim();
 var count = 0;
 
-links.forEach(function (link) {
-var section = link.closest(".state-section");
-var stateName = section ? section.querySelector("h3").textContent : "";
-var schoolName = link.textContent || "";
+for (var i = 0; i < schools.length; i++) {
+var school = schools[i];
+var section = school.closest(".state-section");
+var state = section ? section.getElementsByTagName("h3")[0].innerText : "";
+var text = (school.innerText + " " + state).toLowerCase();
 
-var searchableText = (schoolName + " " + stateName).toLowerCase();
-
-if (query === "" || searchableText.indexOf(query) !== -1) {
-link.style.display = "flex";
+if (query === "" || text.indexOf(query) > -1) {
+school.style.display = "flex";
 count++;
 } else {
-link.style.display = "none";
-}
-});
-
-sections.forEach(function (section) {
-var visible = section.querySelectorAll('.partner-link[style*="flex"]').length;
-section.style.display = visible > 0 ? "block" : "none";
-});
-
-if (resultCount) {
-resultCount.textContent = query === "" ? "Showing all" : count + " result" + (count === 1 ? "" : "s");
+school.style.display = "none";
 }
 }
 
-searchInput.oninput = searchSchools;
-searchSchools();
-};
+for (var j = 0; j < sections.length; j++) {
+var visible = false;
+var links = sections[j].getElementsByClassName("partner-link");
+
+for (var k = 0; k < links.length; k++) {
+if (links[k].style.display !== "none") {
+visible = true;
+break;
+}
+}
+
+sections[j].style.display = visible ? "block" : "none";
+}
+
+if (countText) {
+countText.innerText = query === "" ? "Showing all" : count + " result" + (count === 1 ? "" : "s");
+}
+}
 </script>
+
 
 
 <script async id="netlify-rum-container" src="/.netlify/scripts/rum" ...></script>
