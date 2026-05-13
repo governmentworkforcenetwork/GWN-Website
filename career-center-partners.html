@@ -28,13 +28,20 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 .state-nav{padding:18px 34px 8px;background:#fff;display:flex;gap:10px;flex-wrap:wrap} .state-nav a{text-decoration:none;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--ice);color:#233041;font-size:12px;font-weight:800} .state-nav a:hover{background:var(--navy2);color:#fff;border-color:var(--navy2)} .state-nav span{opacity:.65;margin-left:4px}
 .directory{padding:26px 34px 40px;background:#fff} .state-section{margin-top:26px;padding-top:20px;border-top:1px solid var(--line)} .state-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px} .state-heading h3{font-size:24px;letter-spacing:-.02em} .state-heading span{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px} .partner-link{display:flex;align-items:center;min-height:72px;padding:17px 18px;border:1px solid #dde4ee;border-radius:18px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:800;background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease} .partner-link:hover{transform:translateY(-3px);border-color:rgba(29,78,216,.35);color:var(--blue);box-shadow:0 16px 28px rgba(13,35,71,.12)}
-.partner-link[data-link-status="official-search"]::after{content:" verify";font-size:10px;color:#8a6a00;background:#fff3c4;border-radius:999px;padding:3px 7px;margin-left:auto;white-space:nowrap}
+.partner-link[data-link-status="official-search"]::after{
+display:none !important;
+content:none !important;
+}
 .cta-band{margin-top:34px;padding:28px;border-radius:26px;background:linear-gradient(135deg,#071426,#0d2347);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap} .cta-band h3{font-size:24px;margin-bottom:6px} .cta-band p{color:rgba(255,255,255,.78);max-width:720px;font-size:14px} .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:900;font-size:13px} .btn-primary{background:var(--gold);color:#111} .btn-secondary{border:1px solid rgba(255,255,255,.32);color:#fff;margin-left:10px}
 .footer-note{text-align:center;color:#607086;font-size:12px;margin-top:22px}
 .no-results{display:none;padding:22px;margin-top:24px;border:1px solid var(--line);border-radius:18px;background:#fff7dd;color:#5b4a0c;font-size:14px;font-weight:700}
 
 @media (max-width:820px){.topbar{padding:16px 20px}.hero{padding-top:54px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-intro{grid-template-columns:1fr;padding:24px}.toolbar{grid-template-columns:1fr;position:static;padding:18px 22px}.state-nav{padding:16px 22px 6px}.directory{padding:18px 22px 30px}}
 @media (max-width:520px){.stats{grid-template-columns:1fr}.partner-link{font-size:13px}}
+  .verify,
+.verify-badge{
+display:none !important;
+}
 </style>
 </head>
 <body>
@@ -299,7 +306,7 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 <a class="partner-link" href="https://uiowa.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">University of Iowa</a>
 <a class="partner-link" href="https://uiu.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Upper Iowa University</a>
 <a class="partner-link" href="https://www.wartburg.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Wartburg College</a>
-<a class="partner-link" href="https://uni.edu/" target="_blank" rel="noopener noreferrer" data-state="University of Northern Iowa</a>
+<a class="partner-link" href="https://uni.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">University of Northern Iowa</a>
 </div>
 </section>
 <!-- KANSAS -->
@@ -390,7 +397,7 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 <a class="partner-link" href="https://www.ulm.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">University of Louisiana---Monroe</a>
 <a class="partner-link" href="https://www.uno.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">University of New Orleans</a>
 <a class="partner-link" href="https://www.xula.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Xavier University of Louisiana</a>
-<a class="partner-link" href="https://www.dcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Delgado Community College</a>
+<a class="partner-link" href="https://www.dcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Delgado Community College</a>
 </div>
 </section>
 <!-- MAINE -->
@@ -506,8 +513,8 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 <a class="partner-link" href="https://www.udmercy.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">University of Detroit Mercy</a>
 <a class="partner-link" href="https://www.oakland.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Oakland University</a>
 <a class="partner-link" href="https://www.msu.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Michigan State University</a>
-<a class="partner-link" href="https://www.lakemichigancollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Lake Michigan College</a>
-<a class="partner-link" href="https://www.kzoo.edu/" target="_blank" rel="noopener noreferrer" data-state="Kalamazoo College</a> 
+<a class="partner-link" href="https://www.lakemichigancollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Lake Michigan College</a>
+<a class="partner-link" href="https://www.kzoo.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Kalamazoo College</a>
 </div>
 </section>
 <!-- MINNESOTA -->
@@ -975,9 +982,9 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
 <a class="partner-link" href="https://www.wilson.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Wilson College</a>
 <a class="partner-link" href="https://www.ycp.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">York College of Pennsylvania</a>
 <a class="partner-link" href="https://www.lafayette.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lafayette College</a>
-<a class="partner-link" href="https://www.juniata.edu/" target="_blank" rel="noopener noreferrer" data-state="Juniata College</a>
-<a class="partner-link" href="https://www.jefferson.edu/" target="_blank" rel="noopener noreferrer" data-state="Thomas Jefferson University</a>
-<a class="partner-link" href="https://www.lehigh.edu/" target="_blank" rel="noopener noreferrer" data-state="Lehigh University</a>    
+<a class="partner-link" href="https://www.juniata.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Juniata College</a>
+<a class="partner-link" href="https://www.jefferson.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Thomas Jefferson University</a>
+<a class="partner-link" href="https://www.lehigh.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lehigh University</a>  
 </div>
 </section>
 
@@ -1399,11 +1406,6 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);l
     initSearch();
   }
 })();
-
-  .verify,
-.verify-badge{
-display:none !important;
-}
 </script>
 
 
