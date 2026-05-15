@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Talent Connect Global | Government Workforce Network LLC</title>
+<meta name="description" content="Talent Connect Global is a subscription-based workforce visibility, resource, and connection program for international participants." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+--navy:#082f49;
+--teal:#0f766e;
+--emerald:#047857;
+--cyan:#0891b2;
+--gold:#d4af37;
+--mint:#ecfdf5;
+--aqua:#ecfeff;
+--bg:#f2fbfb;
+--white:#ffffff;
+--text:#17333a;
+--muted:#5f7680;
+--line:#d6eeee;
+--shadow:0 18px 50px rgba(15,118,110,.13);
+--shadow2:0 10px 28px rgba(15,118,110,.08);
+--radius:24px;
+--max:1180px;
+}
+
+*{box-sizing:border-box}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:105px;
+}
+
+body{
+margin:0;
+font-family:"Sora",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+color:var(--text);
+background:
+radial-gradient(circle at top left,rgba(8,145,178,.16),transparent 30%),
+radial-gradient(circle at bottom right,rgba(15,118,110,.16),transparent 28%),
+linear-gradient(180deg,#f7ffff 0%,#edfafa 100%);
+line-height:1.65;
+}
+
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font-family:inherit}
+
+.container{
+width:min(var(--max),calc(100% - 32px));
+margin:0 auto;
+}
+
+.topbar{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(15,118,110,.12);
+box-shadow:0 4px 18px rgba(15,118,110,.05);
+}
+
+.topbar-inner{
+min-height:84px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px;
+position:relative;
+}
+
+.brand strong{
+display:block;
+font-size:.96rem;
+color:var(--navy);
+}
+
+.brand span{
+display:block;
+font-size:.76rem;
+color:var(--teal);
+font-weight:700;
+margin-top:2px;
+}
+
+.nav{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.nav a{
+padding:10px 14px;
+border-radius:999px;
+font-size:.84rem;
+font-weight:700;
+color:var(--navy);
+transition:.2s ease;
+white-space:nowrap;
+}
+
+.nav a:hover{
+background:var(--aqua);
+color:var(--teal);
+}
+
+.nav-toggle{
+display:none;
+width:46px;
+height:46px;
+border-radius:14px;
+border:1px solid var(--line);
+background:#fff;
+color:var(--navy);
+font-size:1.4rem;
+cursor:pointer;
+}
+
+.hero{
+padding:72px 0 38px;
+}
+
+.hero-card{
+position:relative;
+overflow:hidden;
+border-radius:34px;
+padding:54px;
+background:
+linear-gradient(135deg,rgba(8,47,73,.98),rgba(15,118,110,.94)),
+linear-gradient(135deg,var(--navy),var(--teal));
+box-shadow:var(--shadow);
+color:#fff;
+}
+
+.hero-card:before{
+content:"";
+position:absolute;
+inset:auto -100px -140px auto;
+width:360px;
+height:360px;
+border-radius:999px;
+background:rgba(45,212,191,.18);
+filter:blur(4px);
+}
+
+.hero-card:after{
+content:"";
+position:absolute;
+inset:-120px auto auto -90px;
+width:280px;
+height:280px;
+border-radius:999px;
+background:rgba(255,255,255,.08);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+max-width:900px;
+}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:8px 14px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.22);
+color:#a7f3d0;
+font-size:.82rem;
+font-weight:800;
+letter-spacing:.02em;
+margin-bottom:18px;
+}
+
+h1,h2,h3{
+margin:0 0 14px;
+line-height:1.15;
+}
+
+h1{
+font-family:"DM Serif Display",Georgia,serif;
+font-size:clamp(2.7rem,6vw,5rem);
+letter-spacing:-.035em;
+color:#fff;
+}
+
+h2{
+font-family:"DM Serif Display",Georgia,serif;
+font-size:clamp(2rem,4vw,3.1rem);
+letter-spacing:-.025em;
+color:var(--navy);
+}
+
+h3{
+font-size:1.15rem;
+color:var(--navy);
+}
+
+.hero p{
+font-size:1.08rem;
+color:rgba(255,255,255,.9);
+max-width:790px;
+margin:0 0 18px;
+}
+
+.promise{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:22px;
+}
+
+.promise span{
+display:inline-flex;
+align-items:center;
+padding:9px 13px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.18);
+color:#fff;
+font-size:.86rem;
+font-weight:800;
+}
+
+.actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:28px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:52px;
+padding:14px 22px;
+border-radius:15px;
+font-size:.95rem;
+font-weight:800;
+border:1px solid transparent;
+cursor:pointer;
+transition:.2s ease;
+}
+
+.btn:hover{
+transform:translateY(-1px);
+}
+
+.btn-mint{
+background:linear-gradient(135deg,#5eead4,#a7f3d0);
+color:#063b3a;
+box-shadow:0 16px 34px rgba(94,234,212,.22);
+}
+
+.btn-white{
+background:#fff;
+color:var(--navy);
+border-color:rgba(255,255,255,.55);
+}
+
+.btn-teal{
+background:linear-gradient(135deg,var(--teal),var(--cyan));
+color:#fff;
+box-shadow:0 16px 34px rgba(15,118,110,.22);
+}
+
+.section{
+padding:34px 0;
+}
+
+.card{
+background:rgba(255,255,255,.94);
+border:1px solid rgba(15,118,110,.10);
+border-radius:var(--radius);
+padding:36px;
+box-shadow:var(--shadow);
+}
+
+.center{text-align:center}
+.center p{margin-left:auto;margin-right:auto}
+
+p{
+margin:0 0 16px;
+}
+
+.subtle{
+color:var(--muted);
+max-width:850px;
+}
+
+.grid{
+display:grid;
+gap:18px;
+}
+
+.grid-3{
+grid-template-columns:repeat(3,1fr);
+}
+
+.item{
+background:#fbffff;
+border:1px solid var(--line);
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow2);
+}
+
+.item strong{
+display:block;
+color:var(--navy);
+font-size:1.05rem;
+margin-bottom:8px;
+}
+
+.item p{
+color:var(--muted);
+font-size:.94rem;
+margin:0;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+padding:8px 13px;
+border-radius:999px;
+font-size:.78rem;
+font-weight:800;
+background:#ecfeff;
+color:#0e7490;
+border:1px solid #a5f3fc;
+margin-bottom:14px;
+}
+
+.subscription-badge{
+background:#f0fdf4;
+color:#166534;
+border-color:#bbf7d0;
+}
+
+.callout{
+background:linear-gradient(135deg,#ecfeff,#ffffff);
+border:1px solid #a5f3fc;
+border-radius:22px;
+padding:24px;
+margin-top:22px;
+}
+
+.callout strong{
+display:block;
+color:var(--navy);
+font-size:1.08rem;
+margin-bottom:8px;
+}
+
+.who-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+margin-top:24px;
+}
+
+.who-pill{
+background:#f8ffff;
+border:1px solid var(--line);
+border-radius:16px;
+padding:14px;
+font-weight:800;
+color:var(--navy);
+font-size:.9rem;
+text-align:center;
+}
+
+.form-shell{
+margin-top:24px;
+background:#fff;
+border:1px solid var(--line);
+border-radius:22px;
+padding:28px;
+box-shadow:var(--shadow2);
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.field,
+.field-full{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.field-full{
+grid-column:1/-1;
+}
+
+label{
+font-size:.86rem;
+font-weight:800;
+color:var(--navy);
+}
+
+input,
+select,
+textarea{
+width:100%;
+border:1px solid #c6e7e7;
+background:#fff;
+border-radius:14px;
+min-height:48px;
+padding:12px 14px;
+font:inherit;
+color:var(--text);
+outline:none;
+transition:.18s ease;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:#2dd4bf;
+box-shadow:0 0 0 4px rgba(45,212,191,.14);
+}
+
+.privacy{
+margin-top:18px;
+padding:15px 16px;
+border-radius:15px;
+background:#f8ffff;
+border:1px solid var(--line);
+font-size:.87rem;
+color:var(--muted);
+}
+
+.hidden{
+position:absolute;
+left:-9999px;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+.success-message{
+display:none;
+margin-bottom:20px;
+padding:18px;
+border-radius:18px;
+background:#ecfdf5;
+border:1px solid #bbf7d0;
+color:#14532d;
+font-weight:800;
+}
+
+.footer{
+padding:36px 0 50px;
+text-align:center;
+font-size:.9rem;
+color:var(--muted);
+}
+
+.footer strong{color:var(--navy)}
+
+@media(max-width:1080px){
+.grid-3,.who-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:920px){
+.nav-toggle{display:block}
+
+.nav{
+display:none;
+position:absolute;
+top:84px;
+left:0;
+right:0;
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+padding:12px;
+box-shadow:var(--shadow);
+flex-direction:column;
+align-items:stretch;
+}
+
+.nav.open{display:flex}
+
+.nav a{
+border:1px solid var(--line);
+border-radius:14px;
+padding:12px 14px;
+}
+}
+
+@media(max-width:760px){
+.hero{
+padding-top:48px;
+}
+
+.hero-card,
+.card,
+.form-shell{
+padding:26px;
+}
+
+.grid-3,.who-grid,.form-grid{
+grid-template-columns:1fr;
+}
+
+.btn{
+width:100%;
+}
+
+.actions{
+flex-direction:column;
+}
+
+.brand span{
+display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="container topbar-inner">
+<div class="brand">
+<strong>Government Workforce Network LLC</strong>
+<span>Talent Connect Global</span>
+</div>
+
+<button class="nav-toggle" type="button" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+
+<nav class="nav" id="nav">
+<a href="/">Home</a>
+<a href="#about">About</a>
+<a href="#subscription">Global Access</a>
+<a href="#who">Who We Support</a>
+<a href="#how">How It Helps</a>
+<a href="#join">Join Interest List</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container">
+<div class="hero-card">
+<div class="hero-content">
+<div class="eyebrow">Global Workforce Visibility & Resource Access</div>
+
+<h1>Talent Connect Global</h1>
+
+<p>
+Talent Connect Global is a workforce visibility and resource access program for individuals outside the United States who want stronger support, connection, and opportunity in a changing global workforce.
+</p>
+
+<p>
+This global access path is separate from Talent Connect USA and is designed as a subscription-based program for international participants.
+</p>
+
+<div class="promise">
+<span>Global Access</span>
+<span>Workforce Visibility</span>
+<span>Career Resources</span>
+<span>Connection Support</span>
+</div>
+
+<div class="actions">
+<a href="#join" class="btn btn-mint">Join Global Interest List</a>
+<a href="#subscription" class="btn btn-white">View Global Access Details</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="section">
+<div class="container">
+<div class="card center">
+<span class="badge">Built for Global Talent</span>
+<h2>A Global Pathway for Talent to Be Seen</h2>
+
+<p class="subtle">
+Talent Connect Global is designed for international students, global job seekers, professionals, career changers, and individuals outside the United States who want better access to workforce resources, visibility, and connection.
+</p>
+
+<p class="subtle">
+This program helps create a more intentional global talent community where education, skills, experience, and career goals can be better understood and supported.
+</p>
+</div>
+</div>
+</section>
+
+<section id="subscription" class="section">
+<div class="container">
+<div class="card">
+<span class="badge subscription-badge">Subscription-Based Global Access</span>
+<h2>Global Access Will Be Separate from U.S. Free Access</h2>
+
+<p class="subtle">
+Talent Connect Global is planned as a separate subscription-based access path for individuals outside the United States.
+</p>
+
+<div class="callout">
+<strong>Important Note</strong>
+<p>
+Talent Connect USA is free for U.S. participants. Talent Connect Global is a separate international access path and may include subscription-based resources, visibility support, community access, and workforce tools.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="who" class="section">
+<div class="container">
+<div class="card">
+<h2>Who Talent Connect Global Supports</h2>
+<p class="subtle">
+Talent Connect Global is for individuals outside the United States seeking workforce support, resources, visibility, and connection.
+</p>
+
+<div class="who-grid">
+<div class="who-pill">International Students</div>
+<div class="who-pill">Global Job Seekers</div>
+<div class="who-pill">Recent Graduates</div>
+<div class="who-pill">Career Changers</div>
+<div class="who-pill">Remote Work Seekers</div>
+<div class="who-pill">Skilled Professionals</div>
+<div class="who-pill">Returning Workers</div>
+<div class="who-pill">Entrepreneurs</div>
+<div class="who-pill">Independent Professionals</div>
+<div class="who-pill">Workforce Explorers</div>
+<div class="who-pill">Disabled Communities</div>
+<div class="who-pill">Global Talent Communities</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" class="section">
+<div class="container">
+<div class="card center">
+<h2>How Talent Connect Global Helps</h2>
+<p class="subtle">
+Talent Connect Global is being designed to help international participants access workforce resources, strengthen professional visibility, and connect with future global workforce opportunities.
+</p>
+
+<div class="grid grid-3" style="margin-top:24px;">
+<div class="item">
+<strong>Join the Interest List</strong>
+<p>Share your background, location, career interests, and support needs.</p>
+</div>
+
+<div class="item">
+<strong>Receive Updates</strong>
+<p>Get updates about the Global launch, subscription access, resources, and workforce support.</p>
+</div>
+
+<div class="item">
+<strong>Prepare for Visibility</strong>
+<p>Become part of a future global talent community designed to support connection and opportunity.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="join" class="section">
+<div class="container">
+<div class="card">
+<div id="success-message" class="success-message">
+Thank you. Your Talent Connect Global interest form has been received.
+</div>
+
+<span class="badge">Global Interest Form</span>
+<h2>Join the Talent Connect Global Interest List</h2>
+
+<p class="subtle">
+Complete the form below so we can better understand your location, background, career interests, and global workforce support needs.
+</p>
+
+<div class="form-shell">
+<form action="/success.html" method="POST" name="talent-connect-global" data-netlify="true" netlify-honeypot="website">
+<input type="hidden" name="form-name" value="talent-connect-global" />
+
+<div class="hidden">
+<label for="website-global">Do not fill this out if you're human</label>
+<input type="text" id="website-global" name="website" tabindex="-1" autocomplete="off" />
+</div>
+
+<div class="form-grid">
+<div class="field">
+<label for="global-first-name">First Name Only</label>
+<input type="text" id="global-first-name" name="first_name" required />
+</div>
+
+<div class="field">
+<label for="global-email">Email Address</label>
+<input type="email" id="global-email" name="email" required />
+</div>
+
+<div class="field">
+<label for="global-country">Country</label>
+<input type="text" id="global-country" name="country" required />
+</div>
+
+<div class="field">
+<label for="global-region">State / Province / Region</label>
+<input type="text" id="global-region" name="region" />
+</div>
+
+<div class="field">
+<label for="global-background">Which best describes you?</label>
+<select id="global-background" name="background">
+<option value="">Select one</option>
+<option>International Student</option>
+<option>Student</option>
+<option>Recent Graduate</option>
+<option>Global Job Seeker</option>
+<option>Professional Seeking New Opportunities</option>
+<option>Career Changer</option>
+<option>Returning to Workforce</option>
+<option>Remote Work Seeker</option>
+<option>Entrepreneur / Independent Professional</option>
+<option>Workforce Advocate / Mentor</option>
+<option>Individual with Disability</option>
+<option>Career Explorer</option>
+<option>Employed and Exploring</option>
+<option>Unemployed / Seeking Work</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-school">School / University Name Optional</label>
+<input type="text" id="global-school" name="school" />
+</div>
+
+<div class="field">
+<label for="global-org">Current Employer / Organization Optional</label>
+<input type="text" id="global-org" name="organization" />
+</div>
+
+<div class="field">
+<label for="global-interest">Opportunity or Support Interest</label>
+<select id="global-interest" name="interest">
+<option value="">Select one</option>
+<option>Full-Time Employment</option>
+<option>Part-Time Employment</option>
+<option>Contract / Project Work</option>
+<option>Internship / Early Career Opportunities</option>
+<option>Temporary Employment</option>
+<option>Remote / Global Opportunities</option>
+<option>Career Guidance</option>
+<option>Resume / CV Positioning Support</option>
+<option>Professional Visibility Support</option>
+<option>Networking / Community Access</option>
+<option>Open to Multiple Opportunities</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-format">Preferred Work Format</label>
+<select id="global-format" name="work_format">
+<option value="">Select one</option>
+<option>Remote</option>
+<option>Hybrid</option>
+<option>On-Site</option>
+<option>Open to Any</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-availability">Availability</label>
+<select id="global-availability" name="availability">
+<option value="">Select one</option>
+<option>Full-Time Schedule</option>
+<option>Part-Time Schedule</option>
+<option>Mornings</option>
+<option>Afternoons</option>
+<option>Evenings</option>
+<option>Weekends</option>
+<option>Flexible</option>
+</select>
+</div>
+
+<div class="field">
+<label for="global-field">Career Field of Interest</label>
+<input type="text" id="global-field" name="career_field" placeholder="Example: IT, healthcare, administration, education, customer support" />
+</div>
+
+<div class="field-full">
+<label for="global-summary">Skills / Experience Summary</label>
+<textarea id="global-summary" name="summary" placeholder="Briefly share your background, skills, or what type of opportunity/support you are seeking."></textarea>
+</div>
+
+<div class="field-full">
+<label for="global-notes">Additional Notes Optional</label>
+<textarea id="global-notes" name="notes"></textarea>
+</div>
+</div>
+
+<div class="privacy">
+I understand that Talent Connect Global is a separate international access path and may include subscription-based access in the future. Submitting this form does not guarantee employment, interview selection, placement, or access approval. Government Workforce Network LLC intentionally collects minimal information and uses email only for Talent Connect Global-related communication, updates, resources, and launch information.
+</div>
+
+<div class="actions">
+<button type="submit" class="btn btn-teal">Submit Global Interest Form</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="card center">
+<h2>Global talent deserves visibility.</h2>
+<p class="subtle">
+If you are outside the United States and want workforce support, resources, visibility, or connection, join the Talent Connect Global interest list for future updates.
+</p>
+
+<div class="actions" style="justify-content:center;">
+<a href="#join" class="btn btn-teal">Join Global Interest List</a>
+<a href="/" class="btn btn-white" style="border-color:var(--line);">Return Home</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+<p><strong>© 2026 Government Workforce Network LLC.</strong> All rights reserved.</p>
+<p>Together, Building Income, Opportunity, and Well-Being</p>
+</div>
+</footer>
+
+<script>
+function toggleNav(){
+const nav=document.getElementById("nav");
+nav.classList.toggle("open");
+}
+
+document.querySelectorAll("#nav a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("nav").classList.remove("open");
+});
+});
+
+window.addEventListener("DOMContentLoaded",()=>{
+const params=new URLSearchParams(window.location.search);
+if(params.get("success")==="true"){
+const message=document.getElementById("success-message");
+if(message){
+message.style.display="block";
+message.scrollIntoView({behavior:"smooth",block:"center"});
+}
+}
+});
+</script>
+
+</body>
+</html>
+
+
