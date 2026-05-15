@@ -1,10 +1,14 @@
+
+<!-- Talent Connect USA | Government Workforce Network LLC -->
+<!-- Full HTML ready to paste into your page file -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Talent Connect | Government Workforce Network LLC</title>
-<meta name="description" content="Talent Connect by Government Workforce Network LLC is a human-centered workforce visibility and connection program supporting United States (U.S.) and global talent in an AI-driven hiring environment." />
+<title>Talent Connect USA | Government Workforce Network LLC</title>
+<meta name="description" content="Talent Connect USA is a free workforce visibility, resource, and connection program for U.S. participants." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,32 +17,29 @@
 <style>
 :root{
 --navy:#0b1f3a;
---navy-2:#12325e;
+--navy2:#12325e;
 --blue:#214a9a;
---sky:#eaf2ff;
 --gold:#d4af37;
---gold-soft:#f7e9ae;
---text:#18324a;
---muted:#5f7287;
---white:#ffffff;
---line:#d9e3f2;
+--gold2:#f7e9ae;
 --bg:#f5f8fc;
---card:#ffffff;
---shadow:0 14px 42px rgba(11,31,58,.10);
---shadow-soft:0 10px 28px rgba(11,31,58,.07);
---radius:22px;
---radius-sm:16px;
+--white:#ffffff;
+--text:#19324a;
+--muted:#60758a;
+--line:#dce6f2;
+--soft:#eef5ff;
+--success:#ecfdf5;
+--success-text:#14532d;
+--shadow:0 18px 50px rgba(11,31,58,.10);
+--shadow2:0 10px 28px rgba(11,31,58,.07);
+--radius:24px;
 --max:1180px;
---us-accent:#1d4ed8;
---global-accent:#0f766e;
---header-height:86px;
 }
 
 *{box-sizing:border-box}
 
 html{
 scroll-behavior:smooth;
-scroll-padding-top:110px;
+scroll-padding-top:105px;
 }
 
 body{
@@ -46,138 +47,127 @@ margin:0;
 font-family:"Sora",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 color:var(--text);
 background:
-radial-gradient(circle at top left, rgba(33,74,154,.12), transparent 28%),
-radial-gradient(circle at bottom right, rgba(212,175,55,.10), transparent 26%),
-linear-gradient(180deg,#f8fbff 0%, #eef4fb 100%);
+radial-gradient(circle at top left,rgba(33,74,154,.12),transparent 30%),
+radial-gradient(circle at bottom right,rgba(212,175,55,.13),transparent 28%),
+linear-gradient(180deg,#f8fbff 0%,#eef4fb 100%);
 line-height:1.65;
 }
 
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font-family:inherit}
 
 .container{
-width:min(var(--max), calc(100% - 32px));
+width:min(var(--max),calc(100% - 32px));
 margin:0 auto;
 }
 
 .topbar{
 position:sticky;
 top:0;
-z-index:1000;
-backdrop-filter: blur(12px);
-background:rgba(255,255,255,.92);
+z-index:999;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(11,31,58,.08);
 box-shadow:0 4px 18px rgba(11,31,58,.04);
 }
 
 .topbar-inner{
-min-height:var(--header-height);
+min-height:84px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:18px;
-padding:14px 0;
 position:relative;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-min-width:0;
-flex:1 1 auto;
+.brand strong{
+display:block;
+font-size:.96rem;
+color:var(--navy);
 }
 
-.brand-text strong{
+.brand span{
 display:block;
-font-size:.95rem;
+font-size:.76rem;
+color:var(--muted);
+font-weight:600;
+margin-top:2px;
+}
+
+.nav{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.nav a{
+padding:10px 14px;
+border-radius:999px;
+font-size:.84rem;
+font-weight:700;
 color:var(--navy);
+transition:.2s ease;
 white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
+}
+
+.nav a:hover{
+background:var(--soft);
+color:var(--blue);
 }
 
 .nav-toggle{
 display:none;
-align-items:center;
-justify-content:center;
 width:46px;
 height:46px;
 border-radius:14px;
 border:1px solid var(--line);
 background:#fff;
 color:var(--navy);
+font-size:1.4rem;
 cursor:pointer;
-flex:0 0 auto;
-transition:.2s ease;
-}
-
-.nav-toggle:hover{
-background:#f7fbff;
-border-color:#bfd1ec;
-}
-
-.nav-toggle svg{
-width:22px;
-height:22px;
-}
-
-.nav{
-display:flex;
-align-items:center;
-flex-wrap:nowrap;
-gap:8px;
-justify-content:flex-end;
-flex:0 1 auto;
-}
-
-.nav a{
-padding:10px 14px;
-border-radius:999px;
-font-size:.86rem;
-font-weight:600;
-color:var(--navy);
-transition:.2s ease;
-white-space:nowrap;
-}
-
-.nav a:hover,
-.nav a:focus-visible{
-background:var(--sky);
-color:var(--blue);
-outline:none;
 }
 
 .hero{
-padding:72px 0 36px;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:28px;
-align-items:stretch;
-}
-
-.hero-card,
-.stat-card,
-.section-card,
-.service-card,
-.process-card,
-.access-card,
-.cta-card,
-.form-shell,
-.join-option{
-background:rgba(255,255,255,.92);
-border:1px solid rgba(17,50,94,.08);
-border-radius:var(--radius);
-box-shadow:var(--shadow);
+padding:72px 0 38px;
 }
 
 .hero-card{
-padding:38px;
 position:relative;
 overflow:hidden;
+border-radius:34px;
+padding:54px;
+background:
+linear-gradient(135deg,rgba(11,31,58,.97),rgba(33,74,154,.94)),
+linear-gradient(135deg,var(--navy),var(--blue));
+box-shadow:var(--shadow);
+color:#fff;
+}
+
+.hero-card:before{
+content:"";
+position:absolute;
+inset:auto -100px -140px auto;
+width:360px;
+height:360px;
+border-radius:999px;
+background:rgba(212,175,55,.18);
+filter:blur(4px);
+}
+
+.hero-card:after{
+content:"";
+position:absolute;
+inset:-120px auto auto -90px;
+width:280px;
+height:280px;
+border-radius:999px;
+background:rgba(255,255,255,.08);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+max-width:900px;
 }
 
 .eyebrow{
@@ -186,342 +176,219 @@ align-items:center;
 gap:10px;
 padding:8px 14px;
 border-radius:999px;
-background:#f0f6ff;
-border:1px solid #dbe8ff;
-color:var(--blue);
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.22);
+color:var(--gold2);
 font-size:.82rem;
-font-weight:700;
+font-weight:800;
 letter-spacing:.02em;
 margin-bottom:18px;
 }
 
-h1,h2,h3,h4{
+h1,h2,h3{
 margin:0 0 14px;
-line-height:1.16;
-color:var(--navy);
+line-height:1.15;
 }
 
 h1{
-font-family:"DM Serif Display", Georgia, serif;
-font-size:clamp(2.3rem, 5vw, 4.2rem);
-letter-spacing:-.02em;
+font-family:"DM Serif Display",Georgia,serif;
+font-size:clamp(2.7rem,6vw,5rem);
+letter-spacing:-.035em;
+color:#fff;
 }
 
 h2{
-font-family:"DM Serif Display", Georgia, serif;
-font-size:clamp(1.8rem, 3vw, 2.8rem);
-letter-spacing:-.02em;
+font-family:"DM Serif Display",Georgia,serif;
+font-size:clamp(2rem,4vw,3.1rem);
+letter-spacing:-.025em;
+color:var(--navy);
 }
 
 h3{
-font-size:1.18rem;
-font-weight:700;
+font-size:1.15rem;
+color:var(--navy);
 }
 
-p{
-margin:0 0 16px;
-color:var(--text);
+.hero p{
+font-size:1.08rem;
+color:rgba(255,255,255,.9);
+max-width:790px;
+margin:0 0 18px;
 }
 
-.lead{
-font-size:1.02rem;
-color:var(--muted);
-max-width:760px;
+.promise{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:22px;
 }
 
-.hero-actions{
+.promise span{
+display:inline-flex;
+align-items:center;
+padding:9px 13px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.18);
+color:#fff;
+font-size:.86rem;
+font-weight:800;
+}
+
+.actions{
 display:flex;
 flex-wrap:wrap;
 gap:12px;
-margin-top:24px;
+margin-top:28px;
 }
 
 .btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-gap:10px;
-min-height:50px;
-padding:14px 20px;
-border-radius:14px;
-font-weight:700;
+min-height:52px;
+padding:14px 22px;
+border-radius:15px;
 font-size:.95rem;
-transition:.2s ease;
+font-weight:800;
 border:1px solid transparent;
 cursor:pointer;
-font-family:inherit;
+transition:.2s ease;
 }
 
-.btn-primary{
+.btn:hover{
+transform:translateY(-1px);
+}
+
+.btn-gold{
+background:linear-gradient(135deg,var(--gold),#f4d978);
+color:#10233d;
+box-shadow:0 16px 34px rgba(212,175,55,.22);
+}
+
+.btn-white{
+background:#fff;
+color:var(--navy);
+border-color:rgba(255,255,255,.55);
+}
+
+.btn-blue{
 background:linear-gradient(135deg,var(--navy),var(--blue));
 color:#fff;
 box-shadow:0 16px 34px rgba(33,74,154,.22);
-}
-
-.btn-primary:hover{transform:translateY(-1px)}
-
-.btn-secondary{
-background:#fff;
-color:var(--navy);
-border-color:var(--line);
-}
-
-.btn-secondary:hover{
-background:#f7fbff;
-border-color:#bfd1ec;
-}
-
-.hero-side{
-display:grid;
-grid-template-rows:1fr 1fr;
-gap:20px;
-}
-
-.stat-card{
-padding:24px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-.stat-card .kicker{
-color:var(--blue);
-font-size:.8rem;
-font-weight:700;
-text-transform:uppercase;
-letter-spacing:.08em;
-margin-bottom:8px;
-}
-
-.stat-card strong{
-display:block;
-font-size:1.3rem;
-color:var(--navy);
-margin-bottom:8px;
 }
 
 .section{
 padding:34px 0;
 }
 
-.section-card{
-padding:34px;
+.card{
+background:rgba(255,255,255,.94);
+border:1px solid rgba(11,31,58,.08);
+border-radius:var(--radius);
+padding:36px;
+box-shadow:var(--shadow);
 }
 
-.section-header{
-display:flex;
-flex-wrap:wrap;
-align-items:end;
-justify-content:space-between;
-gap:18px;
-margin-bottom:20px;
+.center{text-align:center}
+.center p{margin-left:auto;margin-right:auto}
+
+p{
+margin:0 0 16px;
 }
 
 .subtle{
 color:var(--muted);
+max-width:850px;
 }
 
-.network-link{
-display:inline-flex;
-align-items:center;
-gap:10px;
-padding:14px 18px;
-border-radius:14px;
-background:#f5f9ff;
-border:1px solid #d7e5fa;
-color:var(--navy);
-font-weight:700;
-margin-top:8px;
-}
-
-.network-link:hover{
-background:#edf5ff;
-}
-
-.support-grid,
-.services-grid,
-.process-grid,
-.access-grid,
-.join-choice-grid{
+.grid{
 display:grid;
 gap:18px;
 }
 
-.support-grid{
-grid-template-columns:repeat(4,1fr);
-margin-top:12px;
+.grid-3{
+grid-template-columns:repeat(3,1fr);
 }
 
-.support-item{
-padding:20px;
+.grid-2{
+grid-template-columns:repeat(2,1fr);
+}
+
+.item{
 background:#fbfdff;
 border:1px solid var(--line);
-border-radius:18px;
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow2);
 }
 
-.services-grid{
-grid-template-columns:1fr;
-}
-
-.service-card{
-padding:24px;
-height:100%;
-}
-
-.tag{
-display:inline-flex;
-align-items:center;
-gap:8px;
-padding:7px 12px;
-border-radius:999px;
-background:#f2f7ff;
-border:1px solid #dae7fb;
-color:var(--blue);
-font-size:.78rem;
-font-weight:700;
-margin-bottom:14px;
-}
-
-.service-list,
-.privacy-list,
-.plain-list{
-margin:14px 0 0;
-padding-left:18px;
-color:var(--text);
-}
-
-.service-list li,
-.privacy-list li,
-.plain-list li{
-margin:0 0 10px;
-}
-
-.muted-box{
-margin-top:20px;
-padding:18px;
-border-radius:18px;
-background:#f8fbff;
-border:1px solid var(--line);
-}
-
-.choose-access{
-background:linear-gradient(180deg,#f9fbff 0%, #eff5fd 100%);
-border:1px solid #dbe5f1;
-border-radius:30px;
-padding:34px;
-box-shadow:var(--shadow);
-}
-
-.access-grid{
-grid-template-columns:repeat(2,1fr);
-margin-top:22px;
-}
-
-.access-card{
-padding:26px;
-position:relative;
-overflow:hidden;
-}
-
-.access-card::before{
-content:"";
-position:absolute;
-inset:0 auto auto 0;
-width:100%;
-height:5px;
-background:linear-gradient(90deg,var(--blue),var(--gold));
-}
-
-.access-card p{
-color:var(--muted);
-}
-
-.access-card .mini{
-font-size:.8rem;
-font-weight:700;
-color:var(--blue);
-text-transform:uppercase;
-letter-spacing:.07em;
+.item strong{
+display:block;
+color:var(--navy);
+font-size:1.05rem;
 margin-bottom:8px;
 }
 
-.process-grid{
-grid-template-columns:repeat(4,1fr);
-}
-
-.process-card{
-padding:24px;
-text-align:left;
-}
-
-.step{
-width:42px;
-height:42px;
-border-radius:12px;
-display:grid;
-place-items:center;
-background:linear-gradient(135deg,var(--navy),var(--blue));
-color:#fff;
-font-weight:800;
-margin-bottom:14px;
-box-shadow:var(--shadow-soft);
-}
-
-.join-choice-grid{
-grid-template-columns:repeat(2,1fr);
-margin-bottom:22px;
-}
-
-.join-option{
-padding:24px;
-border:1px solid var(--line);
-}
-
-.join-option p{
+.item p{
 color:var(--muted);
-margin-bottom:18px;
+font-size:.94rem;
+margin:0;
 }
 
-.us-title{
-color:var(--us-accent);
+.badge{
+display:inline-flex;
+align-items:center;
+padding:8px 13px;
+border-radius:999px;
+font-size:.78rem;
+font-weight:800;
+background:#ecfdf5;
+color:#166534;
+border:1px solid #bbf7d0;
+margin-bottom:14px;
 }
 
-.global-title{
-color:var(--global-accent);
+.callout{
+background:linear-gradient(135deg,#fff8df,#ffffff);
+border:1px solid #f0dd97;
+border-radius:22px;
+padding:24px;
+margin-top:22px;
 }
 
-.form-wrap{
+.callout strong{
+display:block;
+color:var(--navy);
+font-size:1.08rem;
+margin-bottom:8px;
+}
+
+.who-grid{
 display:grid;
-gap:24px;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+margin-top:24px;
+}
+
+.who-pill{
+background:#f8fbff;
+border:1px solid var(--line);
+border-radius:16px;
+padding:14px;
+font-weight:800;
+color:var(--navy);
+font-size:.9rem;
+text-align:center;
 }
 
 .form-shell{
-padding:26px;
-display:none;
-}
-
-.form-shell.active{
-display:block;
-animation:fadeIn .25s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(8px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-.form-shell .intro{
-color:var(--muted);
-font-size:.94rem;
-margin-bottom:18px;
-}
-
-.form-shell.us-form{
-border-top:5px solid var(--us-accent);
-}
-
-.form-shell.global-form{
-border-top:5px solid var(--global-accent);
+margin-top:24px;
+background:#fff;
+border:1px solid var(--line);
+border-radius:22px;
+padding:28px;
+box-shadow:var(--shadow2);
 }
 
 .form-grid{
@@ -538,12 +405,12 @@ gap:8px;
 }
 
 .field-full{
-grid-column:1 / -1;
+grid-column:1/-1;
 }
 
 label{
 font-size:.86rem;
-font-weight:700;
+font-weight:800;
 color:var(--navy);
 }
 
@@ -574,21 +441,22 @@ border-color:#8eb3ea;
 box-shadow:0 0 0 4px rgba(33,74,154,.10);
 }
 
-.consent{
+.privacy{
 margin-top:18px;
-padding:14px 16px;
-border-radius:14px;
+padding:15px 16px;
+border-radius:15px;
 background:#f8fbff;
 border:1px solid var(--line);
-font-size:.88rem;
+font-size:.87rem;
 color:var(--muted);
 }
 
-.submit-row{
-margin-top:18px;
-display:flex;
-flex-wrap:wrap;
-gap:12px;
+.hidden{
+position:absolute;
+left:-9999px;
+width:1px;
+height:1px;
+overflow:hidden;
 }
 
 .success-message{
@@ -596,126 +464,66 @@ display:none;
 margin-bottom:20px;
 padding:18px;
 border-radius:18px;
-background:#ecfdf5;
+background:var(--success);
 border:1px solid #bbf7d0;
-color:#14532d;
-font-weight:700;
-}
-
-.cta-card{
-padding:32px;
-text-align:center;
-}
-
-.cta-card p{
-max-width:850px;
-margin:0 auto 18px;
-color:var(--muted);
+color:var(--success-text);
+font-weight:800;
 }
 
 .footer{
-padding:36px 0 48px;
+padding:36px 0 50px;
 text-align:center;
-color:var(--muted);
-font-size:.92rem;
-}
-
-.footer strong{
-color:var(--navy);
-}
-
-.divider{
-height:1px;
-background:linear-gradient(90deg,transparent,rgba(11,31,58,.12),transparent);
-margin:26px 0;
-}
-
-.small-note{
-font-size:.84rem;
+font-size:.9rem;
 color:var(--muted);
 }
 
-.visually-hidden{
-position:absolute !important;
-width:1px;height:1px;
-padding:0;margin:-1px;
-overflow:hidden;clip:rect(0,0,0,0);
-white-space:nowrap;border:0;
-}
+.footer strong{color:var(--navy)}
 
-@media (max-width: 1180px){
-.nav a{
-padding:10px 11px;
-font-size:.82rem;
+@media(max-width:1080px){
+.grid-3,.grid-2,.who-grid{
+grid-template-columns:1fr 1fr;
 }
 }
 
-@media (max-width: 1100px){
-.hero-grid,
-.process-grid,
-.support-grid,
-.access-grid,
-.join-choice-grid{
-grid-template-columns:1fr;
-}
-
-.hero-side{
-grid-template-rows:auto;
-}
-}
-
-@media (max-width: 920px){
-.nav-toggle{
-display:inline-flex;
-}
-
-.topbar-inner{
-flex-wrap:wrap;
-align-items:center;
-}
+@media(max-width:920px){
+.nav-toggle{display:block}
 
 .nav{
 display:none;
-width:100%;
+position:absolute;
+top:84px;
+left:0;
+right:0;
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+padding:12px;
+box-shadow:var(--shadow);
 flex-direction:column;
 align-items:stretch;
-gap:8px;
-padding-top:8px;
 }
 
-.nav.open{
-display:flex;
-}
+.nav.open{display:flex}
 
 .nav a{
-width:100%;
-text-align:left;
-background:#fff;
 border:1px solid var(--line);
 border-radius:14px;
 padding:12px 14px;
 }
 }
 
-@media (max-width: 760px){
-html{
-scroll-padding-top:100px;
-}
-
+@media(max-width:760px){
 .hero{
 padding-top:48px;
 }
 
 .hero-card,
-.section-card,
-.choose-access,
-.cta-card,
-.form-shell,
-.join-option{
-padding:24px;
+.card,
+.form-shell{
+padding:26px;
 }
 
-.form-grid{
+.grid-3,.grid-2,.who-grid,.form-grid{
 grid-template-columns:1fr;
 }
 
@@ -723,12 +531,12 @@ grid-template-columns:1fr;
 width:100%;
 }
 
-.hero-actions{
+.actions{
 flex-direction:column;
 }
 
-.brand-text strong{
-font-size:.88rem;
+.brand span{
+display:none;
 }
 }
 </style>
@@ -739,26 +547,18 @@ font-size:.88rem;
 <header class="topbar">
 <div class="container topbar-inner">
 <div class="brand">
-<div class="brand-text">
 <strong>Government Workforce Network LLC</strong>
-</div>
+<span>Talent Connect USA</span>
 </div>
 
-<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation" onclick="toggleNav()">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-<path d="M4 7h16"></path>
-<path d="M4 12h16"></path>
-<path d="M4 17h16"></path>
-</svg>
-</button>
+<button class="nav-toggle" type="button" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
 
-<nav class="nav" id="primary-nav" aria-label="Primary Navigation">
+<nav class="nav" id="nav">
 <a href="/">Home</a>
-<a href="career-center-partners.html">Career Center &amp; University Network</a>
 <a href="#about">About</a>
-<a href="#choose-access">Access Paths</a>
-<a href="#services">The Program</a>
-<a href="#process">Process</a>
+<a href="#free">Free Access</a>
+<a href="#who">Who We Support</a>
+<a href="#how">How It Helps</a>
 <a href="#join">Join</a>
 </nav>
 </div>
@@ -767,41 +567,32 @@ font-size:.88rem;
 <main>
 
 <section class="hero">
-<div class="container hero-grid">
+<div class="container">
 <div class="hero-card">
-<div class="eyebrow">Human-Centered Access in an AI-Driven Hiring Environment</div>
-<h1>Talent Connect</h1>
-<p class="lead">
-Talent Connect is a workforce visibility and connection program designed to help bridge
-the growing gap between people and opportunity in a hiring environment increasingly shaped
-by automation, screening filters, and reduced human interaction.
-</p>
-<p class="lead">
-As hiring continues to evolve, many qualified individuals are filtered out before being seen.
-Talent Connect restores access by creating more intentional pathways between talent and opportunity,
-helping people gain visibility, strengthen workforce readiness, and move forward with greater clarity.
-</p>
+<div class="hero-content">
+<div class="eyebrow">Free for U.S. Participants</div>
 
-<div class="hero-actions">
-<a href="#choose-access" class="btn btn-primary">Choose Your Access Path</a>
-<a href="#join" class="btn btn-secondary">Join Talent Connect</a>
-</div>
-</div>
+<h1>Talent Connect USA</h1>
 
-<div class="hero-side">
-<div class="stat-card">
-<div class="kicker">Now Expanding</div>
-<strong>Supporting U.S. and Global Talent</strong>
-<p>Talent Connect is expanding beyond borders because opportunity should not be limited by geography.</p>
-</div>
-
-<div class="stat-card">
-<div class="kicker">Built for Real Access</div>
-<strong>Minimal barriers. Human-centered connection.</strong>
 <p>
-Designed to support diverse individuals, including students, veterans, career changers, emerging professionals,
-and underrepresented communities seeking greater visibility and opportunity.
+A free workforce visibility and resource program for individuals in the United States who need support, connection, and opportunity.
 </p>
+
+<p>
+Talent Connect USA helps build a talent community that can be shared with employers, partners, and workforce connections so people who are ready to work can be seen.
+</p>
+
+<div class="promise">
+<span>No Cost</span>
+<span>No Gimmicks</span>
+<span>No Hidden Agenda</span>
+<span>Real Workforce Support</span>
+</div>
+
+<div class="actions">
+<a href="#join" class="btn btn-gold">Join Talent Connect USA for Free</a>
+<a href="#who" class="btn btn-white">See Who We Support</a>
+</div>
 </div>
 </div>
 </div>
@@ -809,182 +600,94 @@ and underrepresented communities seeking greater visibility and opportunity.
 
 <section id="about" class="section">
 <div class="container">
-<div class="section-card">
-<div class="section-header">
-<div>
-<h2>About Talent Connect</h2>
-<p class="subtle">Talent Connect is built to strengthen real human connection in a workforce increasingly influenced by automation.</p>
-</div>
-</div>
+<div class="card center">
+<span class="badge">Simple. Free. Built for Access.</span>
+<h2>A Place for Talent to Be Seen</h2>
 
-<p>
-While AI may improve efficiency, it can also reduce meaningful interaction and create new barriers
-for individuals seeking opportunity and direction. Talent Connect reintroduces access, visibility,
-and conversation into the experience, helping individuals become seen beyond a resume while supporting
-more intentional workforce connection.
-</p>
-
-<p>
-By integrating workforce visibility with AI readiness awareness, Talent Connect supports a more
-informed and human-centered approach to opportunity, engagement, and hiring.
-</p>
-
-<a class="network-link" href="career-center-partners.html">
-View Our Career Center &amp; University Network
-</a>
-
-<div class="divider"></div>
-
-<h3>How Talent Connect Supports Participants</h3>
-<div class="support-grid">
-<div class="support-item">
-<h3>Visibility</h3>
-<p>Help individuals become discoverable beyond automated systems by increasing real-world exposure and workforce presence.</p>
-</div>
-
-<div class="support-item">
-<h3>Access</h3>
-<p>Provide structured, direct access to opportunity across universities, workforce communities, and emerging populations.</p>
-</div>
-
-<div class="support-item">
-<h3>Connection</h3>
-<p>Create meaningful, human-centered interactions that go beyond digital applications and automated screening.</p>
-</div>
-
-<div class="support-item">
-<h3>Opportunity</h3>
-<p>Support stronger workforce outcomes by aligning readiness, engagement, visibility, and access.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="choose-access" class="section">
-<div class="container">
-<div class="choose-access">
-<div class="section-header">
-<div>
-<h2>Choose Your Access Path</h2>
 <p class="subtle">
-Talent Connect now supports participants across the United States and internationally.
-Select the path that best fits your location and workforce context.
+Talent Connect USA is designed for people who need workforce resources, career support, visibility, and connection in today’s hiring environment.
+</p>
+
+<p class="subtle">
+Many qualified people are applying online but not being seen. Talent Connect USA helps create a more human-centered way to identify available talent and connect people to resources, updates, events, and employer visibility opportunities.
 </p>
 </div>
 </div>
+</section>
 
-<div class="access-grid">
-<article class="access-card">
-<div class="mini">United States</div>
-<h3 class="us-title">Talent Connect: U.S. Access</h3>
-<p>
-Designed for individuals in the United States, including students, veterans, military-connected communities,
-disabled community, career changers, returning workers, professionals seeking stronger visibility, and anyone seeking a more supportive path to opportunity.
-</p>
-<p>
-This path may align more closely with U.S.-based hiring structures, employer engagement, and workforce readiness support relevant to the American job market.
-</p>
-<a href="#join" class="btn btn-primary" onclick="openForm('us-form')">Open U.S. Access Form</a>
-</article>
+<section id="free" class="section">
+<div class="container">
+<div class="card">
+<span class="badge">U.S. Access Is Free</span>
+<h2>No Cost for U.S. Participants</h2>
 
-<article class="access-card">
-<div class="mini">International</div>
-<h3 class="global-title">🌍 Talent Connect: Global Access</h3>
-<p>
-Designed for international students, global job seekers, and individuals outside the United States
-who want stronger visibility, connection, and support navigating opportunity in a changing workforce.
+<p class="subtle">
+Talent Connect USA is free for individuals located in the United States. Participants may join at no cost to receive Talent Connect-related communication, workforce resources, event updates, and visibility opportunities.
 </p>
+
+<div class="callout">
+<strong>What does free mean?</strong>
 <p>
-This path helps create a more inclusive point of entry for people whose education, experience,
-or career journey deserves to be seen across borders.
+Free means there is no cost for U.S. participants to join Talent Connect USA. No hidden fees. No required subscription. No account setup required to submit the form.
 </p>
-<a href="#join" class="btn btn-primary" onclick="openForm('global-form')">Open Global Access Form</a>
-</article>
 </div>
 </div>
 </div>
 </section>
 
-<section id="services" class="section">
+<section id="who" class="section">
 <div class="container">
-<div class="section-card">
-<div class="section-header">
-<div>
-<h2>Talent Connect Program</h2>
-<p class="subtle">Structured visibility and connection for individuals.</p>
-</div>
-</div>
-
-<div class="services-grid">
-<article class="service-card">
-<div class="tag">For the Talent Community</div>
-<h3>Talent Listing</h3>
-<p>
-This service is completely free and designed to expand access to opportunity for individuals
-seeking stronger visibility in today’s workforce.
-</p>
-<p>
-Talent Connect helps people move beyond passive application cycles and automated filtering by creating
-more direct pathways to visibility, workforce connection, and opportunity.
+<div class="card">
+<h2>Who Talent Connect USA Supports</h2>
+<p class="subtle">
+Talent Connect USA is open to individuals in the United States who need workforce support, resources, visibility, or connection.
 </p>
 
-<ul class="service-list">
-<li>Greater visibility with participating employers and workforce connections</li>
-<li>Connection to opportunities across universities and workforce communities</li>
-<li>Inclusive support for veteran, military, student, disability, and returning workforce communities</li>
-<li>A more intentional pathway to workforce exposure and opportunity</li>
-</ul>
-
-<div class="muted-box">
-<strong style="color:var(--navy);display:block;margin-bottom:8px;">Privacy Statement</strong>
-<ul class="privacy-list">
-<li>We intentionally collect minimal data</li>
-<li>We do not require resumes or sensitive personal information to join</li>
-<li>Your email is used only for communication related to Talent Connect, opportunities, and resources</li>
-<li>Access details and communication will be sent by email</li>
-</ul>
-</div>
-</article>
+<div class="who-grid">
+<div class="who-pill">Veterans</div>
+<div class="who-pill">Transitioning Service Members</div>
+<div class="who-pill">Military Family Members</div>
+<div class="who-pill">Firefighters</div>
+<div class="who-pill">EMS Personnel</div>
+<div class="who-pill">Responders</div>
+<div class="who-pill">Law Enforcement</div>
+<div class="who-pill">Disabled Communities</div>
+<div class="who-pill">Students</div>
+<div class="who-pill">Alumni</div>
+<div class="who-pill">Career Changers</div>
+<div class="who-pill">Returning Workers</div>
+<div class="who-pill">Job Seekers</div>
+<div class="who-pill">Professionals Exploring Options</div>
+<div class="who-pill">Parents Returning to Work</div>
+<div class="who-pill">All U.S. Individuals Seeking Support</div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="process" class="section">
+<section id="how" class="section">
 <div class="container">
-<div class="section-card">
-<div class="section-header">
-<div>
-<h2>How the Process Works</h2>
-<p class="subtle">A simple, more intentional approach to visibility, connection, and workforce access.</p>
+<div class="card center">
+<h2>How Talent Connect USA Helps</h2>
+<p class="subtle">
+We are building a talent community that helps make available talent more visible to employers, partners, and workforce connections.
+</p>
+
+<div class="grid grid-3" style="margin-top:24px;">
+<div class="item">
+<strong>Join the Community</strong>
+<p>Submit the form so we can understand your background, interests, and workforce support needs.</p>
 </div>
+
+<div class="item">
+<strong>Receive Resources</strong>
+<p>Get Talent Connect-related updates, events, tools, and workforce information by email.</p>
 </div>
 
-<div class="process-grid">
-<article class="process-card">
-<div class="step">1</div>
-<h3>Choose Your Path</h3>
-<p>Select the access path that best fits your location and workforce context: U.S. Access or Global Access.</p>
-</article>
-
-<article class="process-card">
-<div class="step">2</div>
-<h3>Open the Form</h3>
-<p>Click the button for the access path that fits you. Your selected form will open in the Join section below.</p>
-</article>
-
-<article class="process-card">
-<div class="step">3</div>
-<h3>Increase Visibility</h3>
-<p>Participants gain greater exposure beyond automated screening and become part of a more intentional connection pathway.</p>
-</article>
-
-<article class="process-card">
-<div class="step">4</div>
-<h3>Support Opportunity</h3>
-<p>The result is stronger access, more meaningful engagement, and clearer pathways to modern workforce opportunity.</p>
-</article>
+<div class="item">
+<strong>Increase Visibility</strong>
+<p>Become part of a talent community we can help bring visibility to as opportunities and employer connections develop.</p>
+</div>
 </div>
 </div>
 </div>
@@ -992,43 +695,23 @@ more direct pathways to visibility, workforce connection, and opportunity.
 
 <section id="join" class="section">
 <div class="container">
-<div class="section-card">
-
+<div class="card">
 <div id="success-message" class="success-message">
-Thank you. Your Talent Connect submission has been received.
+Thank you. Your Talent Connect USA submission has been received.
 </div>
 
-<div class="section-header">
-<div>
-<h2>Join Talent Connect</h2>
-<p class="subtle">Select your access path. Your form will open when you click the matching button.</p>
-</div>
-</div>
+<span class="badge">Join for Free</span>
+<h2>Join Talent Connect USA</h2>
 
-<div class="join-choice-grid">
-<article class="join-option">
-<h3 class="us-title">Talent Connect: U.S. Access</h3>
-<p>For participants in the United States, including students, veterans, professionals, and workforce communities.</p>
-<button type="button" class="btn btn-primary" onclick="openForm('us-form')">Open U.S. Access Form</button>
-</article>
+<p class="subtle">
+Complete the form below so we can better understand who you are, what community you represent, and what type of workforce support or opportunity you are seeking.
+</p>
 
-<article class="join-option">
-<h3 class="global-title">🌍 Talent Connect: Global Access</h3>
-<p>For international students and global job seekers outside the United States seeking stronger visibility and opportunity.</p>
-<button type="button" class="btn btn-primary" onclick="openForm('global-form')">Open Global Access Form</button>
-</article>
-</div>
-
-<div class="form-wrap">
-
-<div class="form-shell us-form" id="us-form">
-<h3 class="us-title">🇺🇸 Talent Connect: U.S. Access</h3>
-<p class="intro">For participants in the United States, including students, veterans, professionals, and workforce communities.</p>
-
-<form name="talent-connect-us" method="POST" data-netlify="true" netlify-honeypot="website" action="/success.html">
+<div class="form-shell">
+<form action="/success.html" method="POST" name="talent-connect-us" data-netlify="true" netlify-honeypot="website">
 <input type="hidden" name="form-name" value="talent-connect-us" />
 
-<div class="visually-hidden">
+<div class="hidden">
 <label for="website-us">Do not fill this out if you're human</label>
 <input type="text" id="website-us" name="website" tabindex="-1" autocomplete="off" />
 </div>
@@ -1057,8 +740,15 @@ Thank you. Your Talent Connect submission has been received.
 <option>Active Duty Military</option>
 <option>Transitioning Service Member</option>
 <option>Military Spouse</option>
+<option>Military Family Member</option>
 <option>Student</option>
 <option>Recent Graduate</option>
+<option>Alumni</option>
+<option>Firefighter</option>
+<option>Former Firefighter</option>
+<option>EMS Personnel</option>
+<option>Responder</option>
+<option>Law Enforcement</option>
 <option>Stay-at-home Parent Returning to Work</option>
 <option>Professional Seeking New Opportunities</option>
 <option>Career Explorer</option>
@@ -1127,12 +817,12 @@ Thank you. Your Talent Connect submission has been received.
 
 <div class="field">
 <label for="us-field">Career Field of Interest</label>
-<input type="text" id="us-field" name="career_field" />
+<input type="text" id="us-field" name="career_field" placeholder="Example: HR, IT, healthcare, administration, public safety" />
 </div>
 
 <div class="field-full">
 <label for="us-summary">Skills / Experience Summary</label>
-<textarea id="us-summary" name="summary"></textarea>
+<textarea id="us-summary" name="summary" placeholder="Briefly share your background, skills, or what type of opportunity/support you are seeking."></textarea>
 </div>
 
 <div class="field-full">
@@ -1141,173 +831,30 @@ Thank you. Your Talent Connect submission has been received.
 </div>
 </div>
 
-<div class="consent">
-I understand that Talent Connect is intended to support visibility and access to opportunities
-and does not guarantee employment, interview selection, or placement.
+<div class="privacy">
+I understand that Talent Connect USA is intended to support visibility, resources, and workforce connection. It does not guarantee employment, interview selection, or placement. Government Workforce Network LLC intentionally collects minimal information and uses email only for Talent Connect-related communication, opportunities, resources, and updates.
 </div>
 
-<div class="submit-row">
-<button type="submit" class="btn btn-primary">Submit U.S. Access</button>
-</div>
-</form>
-</div>
-
-<div class="form-shell global-form" id="global-form">
-<h3 class="global-title">🌍 Talent Connect: Global Access</h3>
-<p class="intro">For international students and global job seekers outside the United States seeking stronger visibility and opportunity.</p>
-
-<form name="talent-connect-global" method="POST" data-netlify="true" netlify-honeypot="website" action="/success.html">
-<input type="hidden" name="form-name" value="talent-connect-global" />
-
-<div class="visually-hidden">
-<label for="website-global">Do not fill this out if you're human</label>
-<input type="text" id="website-global" name="website" tabindex="-1" autocomplete="off" />
-</div>
-
-<div class="form-grid">
-<div class="field">
-<label for="global-first-name">First Name Only</label>
-<input type="text" id="global-first-name" name="first_name" required />
-</div>
-
-<div class="field">
-<label for="global-email">Email Address</label>
-<input type="email" id="global-email" name="email" required />
-</div>
-
-<div class="field">
-<label for="global-country">Country</label>
-<input type="text" id="global-country" name="country" />
-</div>
-
-<div class="field">
-<label for="global-region">State / Province / Region</label>
-<input type="text" id="global-region" name="region" />
-</div>
-
-<div class="field">
-<label for="global-background">Which best describes you?</label>
-<select id="global-background" name="background">
-<option value="">Select one</option>
-<option>Student</option>
-<option>Recent Graduate</option>
-<option>International Student</option>
-<option>Professional Seeking New Opportunities</option>
-<option>Career Changer</option>
-<option>Returning to Workforce</option>
-<option>Entrepreneur / Independent Professional</option>
-<option>Workforce Advocate / Mentor</option>
-<option>Individual with Disability</option>
-<option>Career Explorer</option>
-<option>Employed and Exploring</option>
-<option>Unemployed / Seeking Work</option>
-<option>Other</option>
-</select>
-</div>
-
-<div class="field">
-<label for="global-school">School / University Name Optional</label>
-<input type="text" id="global-school" name="school" />
-</div>
-
-<div class="field">
-<label for="global-org">Current Employer / Organization Optional</label>
-<input type="text" id="global-org" name="organization" />
-</div>
-
-<div class="field">
-<label for="global-interest">Opportunity or Support Interest</label>
-<select id="global-interest" name="interest">
-<option value="">Select one</option>
-<option>Full-Time Employment</option>
-<option>Part-Time Employment</option>
-<option>Contract / Project Work</option>
-<option>Internship / Early Career Opportunities</option>
-<option>Temporary Employment</option>
-<option>Career Guidance</option>
-<option>Resume / CV Positioning Support</option>
-<option>Professional Visibility Support</option>
-<option>Networking / Community Access</option>
-<option>Open to Multiple Opportunities</option>
-</select>
-</div>
-
-<div class="field">
-<label for="global-format">Preferred Work Format</label>
-<select id="global-format" name="work_format">
-<option value="">Select one</option>
-<option>Remote</option>
-<option>Hybrid</option>
-<option>On-Site</option>
-<option>Open to Any</option>
-</select>
-</div>
-
-<div class="field">
-<label for="global-availability">Availability</label>
-<select id="global-availability" name="availability">
-<option value="">Select one</option>
-<option>Full-Time Schedule</option>
-<option>Part-Time Schedule</option>
-<option>Mornings</option>
-<option>Afternoons</option>
-<option>Evenings</option>
-<option>Weekends</option>
-<option>Flexible</option>
-</select>
-</div>
-
-<div class="field">
-<label for="global-field">Career Field of Interest</label>
-<input type="text" id="global-field" name="career_field" />
-</div>
-
-<div class="field-full">
-<label for="global-summary">Skills / Experience Summary</label>
-<textarea id="global-summary" name="summary"></textarea>
-</div>
-
-<div class="field-full">
-<label for="global-notes">Additional Notes Optional</label>
-<textarea id="global-notes" name="notes"></textarea>
-</div>
-</div>
-
-<div class="consent">
-I understand that Talent Connect is intended to support visibility and access to opportunities
-and does not guarantee employment, interview selection, or placement.
-</div>
-
-<div class="submit-row">
-<button type="submit" class="btn btn-primary">Submit Global Access</button>
+<div class="actions">
+<button type="submit" class="btn btn-blue">Submit Talent Connect USA Form</button>
 </div>
 </form>
 </div>
-</div>
-
-<div class="divider"></div>
-
-<p class="small-note">
-Privacy note: We intentionally collect minimal information. We do not require resumes or sensitive
-personal information to join. Your email is used only for communication related to Talent Connect,
-opportunities, and relevant resources.
-</p>
-
 </div>
 </div>
 </section>
 
 <section class="section">
 <div class="container">
-<div class="cta-card">
-<h2>Interested in Talent Connect?</h2>
-<p>
-Talent Connect creates a pathway where visibility meets opportunity.
-In a workforce shaped by AI, connection matters more than ever.
+<div class="card center">
+<h2>Talent deserves to be seen.</h2>
+<p class="subtle">
+If you are in the United States and need workforce support, resources, visibility, or connection, Talent Connect USA is here to help you take the next step.
 </p>
-<div class="hero-actions" style="justify-content:center;">
-<a href="#join" class="btn btn-primary">Join Talent Connect</a>
-<a href="career-center-partners.html" class="btn btn-secondary">View University Network</a>
+
+<div class="actions" style="justify-content:center;">
+<a href="#join" class="btn btn-blue">Join Talent Connect USA for Free</a>
+<a href="/" class="btn btn-white" style="border-color:var(--line);">Return Home</a>
 </div>
 </div>
 </div>
@@ -1323,53 +870,24 @@ In a workforce shaped by AI, connection matters more than ever.
 </footer>
 
 <script>
-function openForm(formId) {
-const forms = document.querySelectorAll('.form-shell');
-forms.forEach(form => form.classList.remove('active'));
-
-const selectedForm = document.getElementById(formId);
-if (selectedForm) {
-selectedForm.classList.add('active');
-setTimeout(() => {
-selectedForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}, 50);
-}
+function toggleNav(){
+const nav=document.getElementById("nav");
+nav.classList.toggle("open");
 }
 
-function toggleNav() {
-const nav = document.getElementById('primary-nav');
-const button = document.querySelector('.nav-toggle');
-const isOpen = nav.classList.toggle('open');
-button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-}
-
-document.querySelectorAll('#primary-nav a').forEach(link => {
-link.addEventListener('click', () => {
-const nav = document.getElementById('primary-nav');
-const button = document.querySelector('.nav-toggle');
-if (window.innerWidth <= 920 && nav.classList.contains('open')) {
-nav.classList.remove('open');
-button.setAttribute('aria-expanded', 'false');
-}
+document.querySelectorAll("#nav a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("nav").classList.remove("open");
 });
 });
 
-window.addEventListener('resize', () => {
-const nav = document.getElementById('primary-nav');
-const button = document.querySelector('.nav-toggle');
-if (window.innerWidth > 920) {
-nav.classList.remove('open');
-button.setAttribute('aria-expanded', 'false');
-}
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-const params = new URLSearchParams(window.location.search);
-if (params.get('success') === 'true') {
-const message = document.getElementById('success-message');
-if (message) {
-message.style.display = 'block';
-message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+window.addEventListener("DOMContentLoaded",()=>{
+const params=new URLSearchParams(window.location.search);
+if(params.get("success")==="true"){
+const message=document.getElementById("success-message");
+if(message){
+message.style.display="block";
+message.scrollIntoView({behavior:"smooth",block:"center"});
 }
 }
 });
