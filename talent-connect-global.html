@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Talent Connect Global Membership | Government Workforce Network LLC</title>
-<meta name="description" content="Talent Connect Global is a membership-based workforce visibility and resource access program for international participants outside the United States." />
+<meta name="description" content="Talent Connect Global is a membership-based workforce visibility, resource, and connection program for individuals outside the United States." />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
 
 <style>
 :root{
@@ -37,7 +37,7 @@ scroll-padding-top:105px;
 
 body{
 margin:0;
-font-family:"Manrope",system-ui,sans-serif;
+font-family:"Manrope",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 color:var(--text);
 background:
 radial-gradient(circle at top left,rgba(14,165,164,.18),transparent 32%),
@@ -158,7 +158,6 @@ border-radius:999px;
 right:-120px;
 bottom:-150px;
 background:rgba(204,251,241,.16);
-filter:blur(2px);
 }
 
 .hero-card:after{
@@ -180,8 +179,6 @@ max-width:900px;
 
 .eyebrow{
 display:inline-flex;
-align-items:center;
-gap:10px;
 padding:9px 15px;
 border-radius:999px;
 background:rgba(255,255,255,.12);
@@ -221,7 +218,7 @@ color:var(--deep);
 .hero p{
 font-size:1.08rem;
 color:rgba(255,255,255,.9);
-max-width:800px;
+max-width:820px;
 margin:0 0 18px;
 }
 
@@ -234,7 +231,6 @@ margin-top:24px;
 
 .pills span{
 display:inline-flex;
-align-items:center;
 padding:9px 13px;
 border-radius:999px;
 background:rgba(255,255,255,.12);
@@ -265,9 +261,7 @@ cursor:pointer;
 transition:.2s ease;
 }
 
-.btn:hover{
-transform:translateY(-1px);
-}
+.btn:hover{transform:translateY(-1px)}
 
 .btn-primary{
 background:linear-gradient(135deg,#5eead4,#ccfbf1);
@@ -276,9 +270,9 @@ box-shadow:0 18px 38px rgba(94,234,212,.22);
 }
 
 .btn-secondary{
-background:rgba(255,255,255,.98);
+background:#fff;
 color:var(--deep);
-border-color:rgba(255,255,255,.6);
+border-color:var(--line);
 }
 
 .btn-dark{
@@ -302,9 +296,7 @@ box-shadow:var(--shadow);
 .center{text-align:center}
 .center p{margin-left:auto;margin-right:auto}
 
-p{
-margin:0 0 16px;
-}
+p{margin:0 0 16px}
 
 .subtle{
 color:var(--muted);
@@ -313,7 +305,6 @@ max-width:860px;
 
 .badge{
 display:inline-flex;
-align-items:center;
 padding:8px 13px;
 border-radius:999px;
 font-size:.78rem;
@@ -339,10 +330,6 @@ gap:18px;
 
 .grid-3{
 grid-template-columns:repeat(3,1fr);
-}
-
-.grid-2{
-grid-template-columns:repeat(2,1fr);
 }
 
 .item{
@@ -399,22 +386,6 @@ font-size:.9rem;
 text-align:center;
 }
 
-.price-card{
-background:
-linear-gradient(135deg,#ffffff,#f0fdfa);
-border:1px solid var(--line);
-border-radius:26px;
-padding:30px;
-box-shadow:var(--shadow-soft);
-margin-top:24px;
-}
-
-.price-card h3{
-font-family:"Playfair Display",Georgia,serif;
-font-size:2rem;
-margin-bottom:8px;
-}
-
 .form-shell{
 margin-top:24px;
 background:#fff;
@@ -430,16 +401,13 @@ grid-template-columns:repeat(2,1fr);
 gap:14px;
 }
 
-.field,
-.field-full{
+.field,.field-full{
 display:flex;
 flex-direction:column;
 gap:8px;
 }
 
-.field-full{
-grid-column:1/-1;
-}
+.field-full{grid-column:1/-1}
 
 label{
 font-size:.86rem;
@@ -447,9 +415,7 @@ font-weight:900;
 color:var(--deep);
 }
 
-input,
-select,
-textarea{
+input,select,textarea{
 width:100%;
 border:1px solid #c6e7e7;
 background:#fff;
@@ -467,9 +433,7 @@ min-height:120px;
 resize:vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus{
+input:focus,select:focus,textarea:focus{
 border-color:#2dd4bf;
 box-shadow:0 0 0 4px rgba(45,212,191,.14);
 }
@@ -482,6 +446,17 @@ background:#f8ffff;
 border:1px solid var(--line);
 font-size:.87rem;
 color:var(--muted);
+}
+
+.success-message{
+display:none;
+margin-bottom:20px;
+padding:18px;
+border-radius:18px;
+background:#ecfdf5;
+border:1px solid #bbf7d0;
+color:#14532d;
+font-weight:800;
 }
 
 .hidden{
@@ -502,9 +477,7 @@ color:var(--muted);
 .footer strong{color:var(--deep)}
 
 @media(max-width:1080px){
-.grid-3,.grid-2,.who-grid{
-grid-template-columns:1fr 1fr;
-}
+.grid-3,.who-grid{grid-template-columns:1fr 1fr}
 }
 
 @media(max-width:920px){
@@ -533,37 +506,21 @@ border-radius:14px;
 padding:12px 14px;
 }
 
-.nav .nav-cta{
-text-align:center;
-}
+.nav .nav-cta{text-align:center}
 }
 
 @media(max-width:760px){
-.hero{
-padding-top:48px;
-}
+.hero{padding-top:48px}
 
-.hero-card,
-.card,
-.form-shell{
-padding:26px;
-}
+.hero-card,.card,.form-shell{padding:26px}
 
-.grid-3,.grid-2,.who-grid,.form-grid{
-grid-template-columns:1fr;
-}
+.grid-3,.who-grid,.form-grid{grid-template-columns:1fr}
 
-.btn{
-width:100%;
-}
+.btn{width:100%}
 
-.actions{
-flex-direction:column;
-}
+.actions{flex-direction:column}
 
-.brand span{
-display:none;
-}
+.brand span{display:none}
 }
 </style>
 </head>
@@ -584,8 +541,8 @@ display:none;
 <a href="#about">About</a>
 <a href="#membership">Membership</a>
 <a href="#who">Who It Supports</a>
-<a href="#form">Membership Form</a>
-<a class="nav-cta" href="PASTE-YOUR-STRIPE-LINK-HERE" target="_blank" rel="noopener">Sign Up</a>
+<a href="#process">Process</a>
+<a class="nav-cta" href="#form">Request Membership</a>
 </nav>
 </div>
 </header>
@@ -605,7 +562,7 @@ Talent Connect Global is a membership-based workforce visibility and resource ac
 </p>
 
 <p>
-This program is designed for global talent seeking career resources, professional visibility, workforce connection, and support in a changing international employment environment.
+Complete the membership request form first. After we receive your submission, payment instructions will be sent by email. Portal access is provided after payment is received.
 </p>
 
 <div class="pills">
@@ -616,8 +573,8 @@ This program is designed for global talent seeking career resources, professiona
 </div>
 
 <div class="actions">
-<a href="PASTE-YOUR-STRIPE-LINK-HERE" class="btn btn-primary" target="_blank" rel="noopener">Sign Up for Membership</a>
-<a href="#membership" class="btn btn-secondary">View Membership Details</a>
+<a href="#form" class="btn btn-primary">Complete Membership Request Form</a>
+<a href="#process" class="btn btn-secondary">How Membership Works</a>
 </div>
 </div>
 </div>
@@ -629,11 +586,9 @@ This program is designed for global talent seeking career resources, professiona
 <div class="card center">
 <span class="badge">Built for Global Talent</span>
 <h2>A Different Pathway for International Talent</h2>
-
 <p class="subtle">
-Talent Connect Global was created for individuals outside the United States who want access to workforce resources, career visibility support, and connection in a global workforce environment.
+Talent Connect Global was created for individuals outside the United States who want access to workforce resources, professional visibility support, and connection in a global workforce environment.
 </p>
-
 <p class="subtle">
 This is separate from Talent Connect USA. Talent Connect USA is free for U.S. participants. Talent Connect Global is a membership-based access path for international participants.
 </p>
@@ -646,7 +601,6 @@ This is separate from Talent Connect USA. Talent Connect USA is free for U.S. pa
 <div class="card">
 <span class="badge membership-badge">Membership Access</span>
 <h2>Talent Connect Global Membership</h2>
-
 <p class="subtle">
 Membership gives international participants access to Talent Connect Global communications, resources, workforce visibility support, and global career connection opportunities as they become available.
 </p>
@@ -656,26 +610,13 @@ Membership gives international participants access to Talent Connect Global comm
 <strong>Workforce Resources</strong>
 <p>Receive career guidance, workforce updates, tools, and information designed for global talent.</p>
 </div>
-
 <div class="item">
 <strong>Visibility Support</strong>
 <p>Become part of a global talent community built to strengthen professional visibility and connection.</p>
 </div>
-
 <div class="item">
-<strong>Global Connection</strong>
-<p>Receive updates connected to workforce events, opportunities, employer interest, and community access.</p>
-</div>
-</div>
-
-<div class="price-card">
-<h3>Membership-Based Access</h3>
-<p class="subtle">
-Talent Connect Global requires membership sign-up through our secure Stripe membership link. After completing membership payment, participants may submit the membership access form below.
-</p>
-
-<div class="actions">
-<a href="PASTE-YOUR-STRIPE-LINK-HERE" class="btn btn-dark" target="_blank" rel="noopener">Sign Up for Membership</a>
+<strong>Portal Access</strong>
+<p>After payment is received, members receive access instructions for the Talent Connect Global portal.</p>
 </div>
 </div>
 
@@ -694,7 +635,7 @@ Talent Connect Global membership does not guarantee employment, interview select
 <div class="card">
 <h2>Who Talent Connect Global Supports</h2>
 <p class="subtle">
-Talent Connect Global is for individuals outside the United States seeking workforce support, visibility, and resources.
+Talent Connect Global is for individuals outside the United States seeking workforce support, visibility, resources, and connection.
 </p>
 
 <div class="who-grid">
@@ -715,7 +656,7 @@ Talent Connect Global is for individuals outside the United States seeking workf
 </div>
 </section>
 
-<section class="section">
+<section id="process" class="section">
 <div class="container">
 <div class="card center">
 <h2>How Membership Works</h2>
@@ -725,18 +666,16 @@ Talent Connect Global is designed to keep the process simple, professional, and 
 
 <div class="grid grid-3" style="margin-top:24px;">
 <div class="item">
-<strong>1. Sign Up</strong>
-<p>Use the Stripe membership link to complete your Talent Connect Global membership.</p>
+<strong>1. Submit Request Form</strong>
+<p>Complete the membership request form so we can understand your location, background, and workforce goals.</p>
 </div>
-
 <div class="item">
-<strong>2. Submit Your Form</strong>
-<p>Complete the membership access form so we understand your background and goals.</p>
+<strong>2. Receive Payment Instructions</strong>
+<p>After we receive your form, payment instructions will be sent to you by email.</p>
 </div>
-
 <div class="item">
-<strong>3. Receive Access</strong>
-<p>Receive Talent Connect Global updates, resources, and visibility-related communication.</p>
+<strong>3. Receive Portal Access</strong>
+<p>Once payment is received, portal access instructions will be sent by email.</p>
 </div>
 </div>
 </div>
@@ -746,16 +685,16 @@ Talent Connect Global is designed to keep the process simple, professional, and 
 <section id="form" class="section">
 <div class="container">
 <div class="card">
-<span class="badge">Membership Access Form</span>
-<h2>Talent Connect Global Membership Form</h2>
+<div id="success-message" class="success-message">
+Thank you. Your Talent Connect Global membership request has been received. Payment instructions will be sent by email.
+</div>
+
+<span class="badge">Membership Request Form</span>
+<h2>Talent Connect Global Membership Request Form</h2>
 
 <p class="subtle">
-After completing membership payment through Stripe, submit this form so we can better understand your location, background, career interests, and workforce support needs.
+Complete this form to request Talent Connect Global membership. After we receive your submission, we will send payment instructions by email. Once payment is completed, portal access will be provided.
 </p>
-
-<div class="actions">
-<a href="PASTE-YOUR-STRIPE-LINK-HERE" class="btn btn-dark" target="_blank" rel="noopener">Sign Up for Membership First</a>
-</div>
 
 <div class="form-shell">
 <form action="/success.html" method="POST" name="talent-connect-global-membership" data-netlify="true" netlify-honeypot="website">
@@ -767,6 +706,7 @@ After completing membership payment through Stripe, submit this form so we can b
 </div>
 
 <div class="form-grid">
+
 <div class="field">
 <label for="global-first-name">First Name Only</label>
 <input type="text" id="global-first-name" name="first_name" required />
@@ -785,21 +725,6 @@ After completing membership payment through Stripe, submit this form so we can b
 <div class="field">
 <label for="global-region">State / Province / Region</label>
 <input type="text" id="global-region" name="region" />
-</div>
-
-<div class="field">
-<label for="stripe-email">Email Used for Stripe Membership</label>
-<input type="email" id="stripe-email" name="stripe_email" placeholder="If different from above" />
-</div>
-
-<div class="field">
-<label for="membership-status">Membership Payment Status</label>
-<select id="membership-status" name="membership_status" required>
-<option value="">Select one</option>
-<option>I completed membership payment</option>
-<option>I plan to complete membership payment</option>
-<option>I need help with membership payment</option>
-</select>
 </div>
 
 <div class="field">
@@ -891,15 +816,17 @@ After completing membership payment through Stripe, submit this form so we can b
 <label for="global-notes">Additional Notes Optional</label>
 <textarea id="global-notes" name="notes"></textarea>
 </div>
+
 </div>
 
 <div class="notice">
-I understand that Talent Connect Global is a membership-based access path for international participants. Membership does not guarantee employment, interview selection, placement, visa sponsorship, employer response, or job offer. Government Workforce Network LLC provides workforce visibility, resources, communication, and connection support as part of the membership experience.
+Talent Connect Global is a membership-based access path for international participants. After submitting this form, payment instructions will be sent by email. Portal access is provided after payment is received. Membership does not guarantee employment, interview selection, placement, visa sponsorship, employer response, or job offer.
 </div>
 
 <div class="actions">
-<button type="submit" class="btn btn-dark">Submit Membership Access Form</button>
+<button type="submit" class="btn btn-dark">Submit Membership Request Form</button>
 </div>
+
 </form>
 </div>
 </div>
@@ -915,8 +842,8 @@ Talent Connect Global gives international participants a membership-based pathwa
 </p>
 
 <div class="actions" style="justify-content:center;">
-<a href="PASTE-YOUR-STRIPE-LINK-HERE" class="btn btn-dark" target="_blank" rel="noopener">Sign Up for Membership</a>
-<a href="/" class="btn btn-secondary" style="border-color:var(--line);">Return Home</a>
+<a href="#form" class="btn btn-dark">Request Global Membership</a>
+<a href="/" class="btn btn-secondary">Return Home</a>
 </div>
 </div>
 </div>
@@ -941,6 +868,17 @@ document.querySelectorAll("#nav a").forEach(link=>{
 link.addEventListener("click",()=>{
 document.getElementById("nav").classList.remove("open");
 });
+});
+
+window.addEventListener("DOMContentLoaded",()=>{
+const params=new URLSearchParams(window.location.search);
+if(params.get("success")==="true"){
+const message=document.getElementById("success-message");
+if(message){
+message.style.display="block";
+message.scrollIntoView({behavior:"smooth",block:"center"});
+}
+}
 });
 </script>
 
