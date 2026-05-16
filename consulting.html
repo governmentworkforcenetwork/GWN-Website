@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,592 +6,373 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Consulting Services | Government Workforce Network LLC</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+:root{
+--navy:#0b1f3a;
+--deep:#0b0f1f;
+--blue:#1d4ed8;
+--gold:#d8b24c;
+--cream:#fffaf0;
+--white:#ffffff;
+--text:#1b2a3a;
+--muted:#5f7287;
+--line:rgba(216,178,76,.35);
+--shadow:0 18px 45px rgba(0,0,0,.22);
 }
 
-html {
-  scroll-behavior: smooth;
+body{
+margin:0;
+font-family:'Sora',Arial,sans-serif;
+background:
+radial-gradient(circle at top left, rgba(216,178,76,.18), transparent 28%),
+linear-gradient(180deg,#0b0f1f 0%,#162a63 48%,#0b0f1f 100%);
+color:#fff;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
-  color: #ffffff;
+header{
+background:rgba(0,0,0,.88);
+padding:18px 32px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-header {
-  background: rgba(0, 0, 0, 0.92);
-  padding: 18px 32px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+.brand{
+font-weight:800;
+font-size:19px;
+letter-spacing:.2px;
 }
 
-.brand {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.2px;
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: color 0.25s ease;
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:15px;
+font-weight:700;
 }
 
 nav a:hover,
-nav a.active {
-  color: #d8b24c;
+nav a.active{color:var(--gold)}
+
+.hero{
+text-align:center;
+padding:100px 20px 55px;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px 55px;
+.container{
+max-width:1240px;
+margin:0 auto;
+padding:0 20px 100px;
 }
 
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px 100px;
+.hero h1{
+font-family:'DM Serif Display',serif;
+font-size:64px;
+line-height:1.05;
+margin:0 0 16px;
+font-weight:400;
 }
 
-.hero h1 {
-  font-size: 56px;
-  line-height: 1.15;
-  margin: 0 0 14px;
-  font-weight: 800;
-  letter-spacing: -0.6px;
+.gold-rule{
+width:92px;
+height:6px;
+margin:0 auto 28px;
+border-radius:999px;
+background:linear-gradient(90deg,#b68b2d,#f2d477,#b68b2d);
 }
 
-.gold-rule {
-  width: 92px;
-  height: 6px;
-  margin: 0 auto 28px;
-  border-radius: 999px;
-  background: #d8b24c;
+.hero-tagline{
+max-width:940px;
+margin:0 auto 16px;
+color:var(--gold);
+font-size:19px;
+line-height:1.7;
+font-weight:800;
 }
 
-.hero-tagline {
-  max-width: 900px;
-  margin: 0 auto 16px;
-  color: #d8b24c;
-  font-size: 19px;
-  line-height: 1.7;
-  font-weight: 800;
+.hero-sub{
+max-width:980px;
+margin:0 auto;
+color:#e8eef9;
+font-size:18px;
+line-height:1.9;
 }
 
-.hero-sub {
-  max-width: 980px;
-  margin: 0 auto;
-  color: #e8eef9;
-  font-size: 18px;
-  line-height: 1.9;
+.hero-highlight{
+max-width:980px;
+margin:22px auto 0;
+color:#d9e2f4;
+font-size:15px;
+line-height:1.8;
 }
 
-.hero-highlight {
-  max-width: 960px;
-  margin: 18px auto 0;
-  color: #cfd8ef;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.section {
-  margin-top: 54px;
-}
+.section{margin-top:54px}
 
 .intro-card,
 .content-card,
-.cta-card {
-  background: rgba(255,255,255,0.97);
-  color: #222;
-  border-radius: 26px;
-  padding: 38px 34px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+.cta-card,
+.pricing-card{
+background:rgba(255,255,255,.97);
+color:#222;
+border-radius:28px;
+padding:40px 36px;
+box-shadow:var(--shadow);
+border:1px solid rgba(255,255,255,.45);
 }
 
 .intro-card h2,
 .content-card h2,
-.section-heading h2,
-.cta-card h2 {
-  margin: 0 0 16px;
-  font-size: 34px;
-  font-weight: 800;
-  color: #111;
-  line-height: 1.2;
+.cta-card h2{
+margin:0 0 16px;
+font-family:'DM Serif Display',serif;
+font-size:40px;
+font-weight:400;
+color:#111;
+line-height:1.15;
 }
 
 .intro-card p,
 .content-card p,
-.cta-card p {
-  margin: 0 0 16px;
-  color: #444;
-  line-height: 1.85;
-  font-size: 16px;
+.cta-card p{
+margin:0 0 16px;
+color:#444;
+line-height:1.85;
+font-size:16px;
 }
 
-.section-heading {
-  text-align: center;
-  margin: 70px 0 34px;
+.note-box{
+margin-top:22px;
+padding:18px 20px;
+background:#f4f6fb;
+border-left:5px solid var(--gold);
+border-radius:14px;
+color:#444;
+line-height:1.75;
+font-size:15px;
 }
 
-.section-heading h2 {
-  color: #fff;
-  font-size: 42px;
-  margin-bottom: 12px;
+.pricing-card{
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(135deg,#ffffff 0%,#fffaf0 52%,#ffffff 100%);
+border:1px solid rgba(216,178,76,.5);
 }
 
-.section-heading .gold-rule {
-  margin-bottom: 0;
-  width: 80px;
-  height: 5px;
+.pricing-card::before{
+content:"";
+position:absolute;
+right:-80px;
+top:-80px;
+width:220px;
+height:220px;
+background:radial-gradient(circle,rgba(216,178,76,.25),transparent 70%);
 }
 
-.note-box {
-  margin-top: 22px;
-  padding: 18px 20px;
-  background: #f4f6fb;
-  border-left: 5px solid #d8b24c;
-  border-radius: 14px;
-  color: #444;
-  line-height: 1.75;
-  font-size: 15px;
+.pricing-label{
+display:inline-block;
+font-size:.78rem;
+font-weight:800;
+letter-spacing:.1em;
+text-transform:uppercase;
+color:#7a5a10;
+margin-bottom:12px;
 }
 
-.purpose-grid,
-.pathway-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-  margin-top: 24px;
+.pricing-card h2{
+font-family:'DM Serif Display',serif;
+font-size:52px;
+font-weight:400;
+line-height:1;
+color:var(--navy);
+margin:0 0 18px;
 }
 
-.purpose-item,
-.pathway-item {
-  background: #f7f9fd;
-  border-radius: 18px;
-  padding: 22px 20px;
+.pricing-card p{
+color:#526174;
+line-height:1.8;
+font-size:16px;
+max-width:900px;
 }
 
-.purpose-item h3,
-.pathway-item h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  color: #13224a;
-  font-weight: 800;
+.pricing-actions{
+margin-top:24px;
+display:flex;
+flex-wrap:wrap;
+gap:14px;
 }
 
-.purpose-item p,
-.pathway-item p {
-  margin: 0;
-  color: #444;
-  line-height: 1.75;
-  font-size: 15px;
+.price-btn,
+.consult-btn,
+.secondary-btn,
+.cta-btn,
+.close-btn{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+border:none;
+cursor:pointer;
+font-family:'Sora',Arial,sans-serif;
+font-weight:800;
+transition:.25s ease;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 28px;
-  align-items: stretch;
+.price-btn{
+padding:15px 24px;
+border-radius:999px;
+background:linear-gradient(135deg,#0b1f3a,#1d4ed8);
+color:#fff;
 }
 
-.service-card {
-  background: #ffffff;
-  color: #222;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.price-btn:hover{
+transform:translateY(-2px);
+opacity:.95;
 }
 
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.22);
+.section-heading{
+text-align:center;
+margin:70px 0 34px;
 }
 
-.service-video-wrap {
-position: relative;
-background: #09162f;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 10px;
-min-height: 280px;
+.section-heading h2{
+font-family:'DM Serif Display',serif;
+font-size:48px;
+font-weight:400;
+color:#fff;
+margin:0 0 12px;
 }
 
-
-.service-video {
-width: 100%;
-height: 260px;
-object-fit: contain;
-object-position: center center;
-display: block;
-background: #09162f;
-border-radius: 16px;
+.section-heading .gold-rule{
+margin-bottom:0;
+width:80px;
+height:5px;
 }
 
-.video-badge {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  background: rgba(7, 36, 83, 0.88);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  padding: 8px 12px;
-  border-radius: 999px;
-  backdrop-filter: blur(4px);
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:28px;
+align-items:stretch;
 }
 
-.service-body {
-  padding: 24px 22px 26px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.service-name {
-  font-size: 26px;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-
-.service-title {
-  display: inline-block;
-  align-self: flex-start;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.35px;
-  text-transform: uppercase;
-  background: #eef3ff;
-  color: #1d3f8f;
-  padding: 8px 14px;
-  border-radius: 999px;
-  margin-bottom: 16px;
-}
-
-.service-caption {
-  margin: 0;
-  color: #55606f;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.card-footer-space {
-  margin-top: auto;
-}
-
-.button-stack {
-  margin-top: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.primary-btn,
-.cta-btn {
-  display: inline-block;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  font-weight: 800;
-  transition: all 0.25s ease;
-}
-
-.primary-btn {
-  width: 100%;
-  padding: 16px 20px;
-  border-radius: 18px;
-  background: #072453;
-  color: #fff;
-  font-size: 15px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-}
-
-.primary-btn:hover {
-  background: #0d3270;
-  transform: translateY(-1px);
-}
-
-.cta-card {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.cta-btn {
-  margin-top: 10px;
-  padding: 14px 24px;
-  background: #d8b24c;
-  color: #111;
-  border-radius: 999px;
-  font-size: 15px;
-}
-
-.cta-btn:hover {
-  background: #e7c46a;
-  transform: translateY(-2px);
-}
-
-footer {
-  text-align: center;
-  color: #cfd8ef;
-  font-size: 14px;
-  padding: 30px 20px 42px;
-}
-
-/* Modal */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  z-index: 2000;
-}
-
-.modal-backdrop.open {
-  display: flex;
-}
-
-.modal {
-  width: min(900px, 96vw);
-  max-height: 90vh;
-  overflow-y: auto;
-  background: #ffffff;
-  border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px;
-  background: linear-gradient(135deg, #0B1F3A, #1d3f8f);
-  color: #ffffff;
-  border-radius: 22px 22px 0 0;
-}
-
-.modal-header h3 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.modal-close {
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.modal-body {
-  padding: 28px 24px 30px;
-  color: #12344d;
-}
-
-.modal-body p {
-  color: #29465b;
-  line-height: 1.75;
-  margin: 0 0 24px;
-  text-align: center;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.form-group {
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #12344d;
-  font-size: 16px;
-}
-
-.modal input,
-.modal select,
-.modal textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #d9e8f2;
-  border-radius: 14px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  color: #222;
-  background: #fff;
-}
-
-.modal textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.form-actions {
-  text-align: center;
-  margin-top: 8px;
-}
-
-.close-btn {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 14px 24px;
-  background: #eef3ff;
-  color: #12344d;
-  text-decoration: none;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 800;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.close-btn:hover {
-  background: #dfe8ff;
-}
-  
-@media (max-width: 768px) {
-.service-video-wrap {
-padding: 8px;
-min-height: 236px;
-}
-
-  .brand {
-    font-size: 18px;
-  }
-
-  nav {
-    gap: 12px;
-  }
-
-  .hero {
-    padding: 82px 18px 42px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero-sub,
-  .hero-tagline,
-  .hero-highlight {
-    font-size: 16px;
-    line-height: 1.85;
-  }
-
-  .container {
-    padding: 0 18px 90px;
-  }
-
-  .intro-card,
-  .content-card,
-  .cta-card {
-    padding: 28px 22px;
-    border-radius: 20px;
-  }
-
-  .intro-card h2,
-  .content-card h2,
-  .cta-card h2 {
-    font-size: 28px;
-  }
-
-  .section-heading {
-    margin: 58px 0 28px;
-  }
-
-  .section-heading h2 {
-    font-size: 32px;
-  }
-
-.service-video {
-height: 220px;
-}
-}
-
-  .service-body {
-    padding: 22px 20px 24px;
-  }
-
-  .service-name {
-    font-size: 24px;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .close-btn {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .modal {
-    width: 100%;
-  }
-
-  .modal-header h3 {
-    font-size: 21px;
-  }
-}
-  .consulting-actions{
+.service-card{
+background:#fff;
+color:#222;
+border-radius:26px;
+overflow:hidden;
+box-shadow:0 16px 34px rgba(0,0,0,.2);
+transition:.25s ease;
 display:flex;
 flex-direction:column;
-gap:18px;
-margin-top:35px;
+height:100%;
+border:1px solid rgba(255,255,255,.45);
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 22px 45px rgba(0,0,0,.28);
+}
+
+.service-video-wrap{
+position:relative;
+background:#09162f;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:10px;
+min-height:280px;
+}
+
+.service-video{
+width:100%;
+height:260px;
+object-fit:contain;
+display:block;
+background:#09162f;
+border-radius:16px;
+}
+
+.video-badge{
+position:absolute;
+left:16px;
+top:16px;
+background:rgba(7,36,83,.9);
+color:#fff;
+font-size:12px;
+font-weight:800;
+letter-spacing:.4px;
+text-transform:uppercase;
+padding:8px 12px;
+border-radius:999px;
+backdrop-filter:blur(4px);
+}
+
+.service-body{
+padding:24px 22px 26px;
+display:flex;
+flex-direction:column;
+flex:1;
+}
+
+.service-name{
+font-size:25px;
+font-weight:800;
+color:#111;
+margin-bottom:10px;
+line-height:1.2;
+}
+
+.service-title{
+display:inline-block;
+align-self:flex-start;
+font-size:12px;
+font-weight:800;
+letter-spacing:.35px;
+text-transform:uppercase;
+background:#eef3ff;
+color:#1d3f8f;
+padding:8px 14px;
+border-radius:999px;
+margin-bottom:16px;
+}
+
+.card-footer-space{margin-top:auto}
+
+.consulting-actions{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:22px;
 }
 
 .consult-btn{
-display:flex;
-justify-content:center;
-align-items:center;
+width:100%;
 background:linear-gradient(135deg,#0f172a,#1d4ed8);
 color:#fff;
-text-decoration:none;
-padding:20px;
+padding:16px 20px;
 border-radius:999px;
-font-size:1.1rem;
-font-weight:700;
-transition:.3s ease;
-box-shadow:0 12px 30px rgba(29,78,216,.25);
+font-size:15px;
+box-shadow:0 12px 30px rgba(29,78,216,.22);
 }
 
 .consult-btn:hover{
@@ -600,700 +380,829 @@ transform:translateY(-2px);
 opacity:.95;
 }
 
-.inquiry-btn{
-display:flex;
-justify-content:center;
-align-items:center;
-background:#2563eb;
-color:#fff;
-text-decoration:none;
-padding:20px;
+.secondary-btn{
+width:100%;
+background:#eef3ff;
+color:#12344d;
+padding:15px 20px;
 border-radius:999px;
-font-size:1.05rem;
-font-weight:600;
-transition:.3s ease;
+font-size:14px;
 }
 
-.inquiry-btn:hover{
-background:#1d4ed8;
+.secondary-btn:hover{background:#dfe8ff}
+
+.purpose-grid,
+.pathway-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+margin-top:24px;
 }
 
+.purpose-item,
+.pathway-item{
+background:#f7f9fd;
+border-radius:18px;
+padding:22px 20px;
+}
+
+.purpose-item h3,
+.pathway-item h3{
+margin:0 0 10px;
+font-size:20px;
+color:#13224a;
+font-weight:800;
+}
+
+.purpose-item p,
+.pathway-item p{
+margin:0;
+color:#444;
+line-height:1.75;
+font-size:15px;
+}
+
+.cta-card{text-align:center;margin-top:30px}
+
+.cta-btn{
+margin-top:10px;
+padding:14px 24px;
+background:var(--gold);
+color:#111;
+border-radius:999px;
+font-size:15px;
+}
+
+.cta-btn:hover{
+background:#e7c46a;
+transform:translateY(-2px);
+}
+
+footer{
+text-align:center;
+color:#cfd8ef;
+font-size:14px;
+padding:30px 20px 42px;
+}
+
+.modal-backdrop{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.62);
+display:none;
+align-items:center;
+justify-content:center;
+padding:18px;
+z-index:2000;
+}
+
+.modal-backdrop.open{display:flex}
+
+.modal{
+width:min(900px,96vw);
+max-height:90vh;
+overflow-y:auto;
+background:#fff;
+border-radius:22px;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.modal-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 24px;
+background:linear-gradient(135deg,#0B1F3A,#1d3f8f);
+color:#fff;
+border-radius:22px 22px 0 0;
+}
+
+.modal-header h3{
+margin:0;
+font-size:24px;
+font-weight:800;
+}
+
+.modal-close{
+border:none;
+background:transparent;
+color:#fff;
+font-size:30px;
+line-height:1;
+cursor:pointer;
+}
+
+.modal-body{
+padding:28px 24px 30px;
+color:#12344d;
+}
+
+.modal-body p{
+color:#29465b;
+line-height:1.75;
+margin:0 0 24px;
+text-align:center;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-bottom:16px;
+}
+
+.form-group{margin-bottom:16px}
+
+.form-group label{
+display:block;
+font-weight:700;
+margin-bottom:8px;
+color:#12344d;
+font-size:16px;
+}
+
+.modal input,
+.modal select,
+.modal textarea{
+width:100%;
+padding:14px;
+border:1px solid #d9e8f2;
+border-radius:14px;
+font-size:15px;
+font-family:'Sora',Arial,sans-serif;
+color:#222;
+background:#fff;
+}
+
+.modal textarea{
+min-height:140px;
+resize:vertical;
+}
+
+.form-actions{
+text-align:center;
+margin-top:8px;
+}
+
+.close-btn{
+margin-left:10px;
+padding:14px 24px;
+background:#eef3ff;
+color:#12344d;
+border-radius:999px;
+font-size:15px;
+}
+
+.close-btn:hover{background:#dfe8ff}
+
+@media(max-width:768px){
+header{
+padding:16px 18px;
+align-items:flex-start;
+gap:14px;
+flex-direction:column;
+}
+
+.brand{font-size:17px}
+nav{gap:12px}
+
+.hero{
+padding:78px 18px 42px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero-sub,
+.hero-tagline,
+.hero-highlight{
+font-size:16px;
+line-height:1.85;
+}
+
+.container{
+padding:0 18px 90px;
+}
+
+.intro-card,
+.content-card,
+.cta-card,
+.pricing-card{
+padding:28px 22px;
+border-radius:22px;
+}
+
+.intro-card h2,
+.content-card h2,
+.cta-card h2{
+font-size:32px;
+}
+
+.pricing-card h2{
+font-size:42px;
+}
+
+.section-heading{
+margin:58px 0 28px;
+}
+
+.section-heading h2{
+font-size:36px;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.service-video-wrap{
+padding:8px;
+min-height:236px;
+}
+
+.service-video{
+height:220px;
+}
+
+.service-body{
+padding:22px 20px 24px;
+}
+
+.service-name{
+font-size:23px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.close-btn{
+margin-left:0;
+margin-top:10px;
+}
+
+.modal{
+width:100%;
+}
+
+.modal-header h3{
+font-size:21px;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="brand">Government Workforce Network LLC</div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/consulting.html" class="active">Consulting Services</a>
-  </nav>
+<div class="brand">Government Workforce Network LLC</div>
+<nav>
+<a href="/">Home</a>
+<a class="active" href="/consulting">Consulting Services</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h1>Strategic Consulting Services</h1>
-    <div class="gold-rule"></div>
+<div class="container">
+<h1>Strategic Consulting Services</h1>
+<div class="gold-rule"></div>
 
-    <p class="hero-tagline">
-      Human Intelligence + Artificial Intelligence, Built for What’s Next
-    </p>
-        <p class="hero-tagline">
-     Our solutions are built with compliance in mind and aligned with applicable laws, regulations, and workforce standards ensuring responsible, justifiable, defendable, and effective implementation.
-    </p>
+<p class="hero-tagline">Human Intelligence + Artificial Intelligence, Built for What’s Next</p>
 
-    <p class="hero-sub">
-      Our consulting services help organizations modernize hiring, strengthen workforce visibility, and prepare for an AI-driven future.
-    </p>
+<p class="hero-tagline">
+Our solutions are built with compliance in mind and aligned with applicable laws, regulations, and workforce standards — ensuring responsible, justifiable, defendable, and effective implementation.
+</p>
 
-    <p class="hero-highlight">
-      All consulting services are provided on a paid basis and may be structured hourly, through project-based contracts, or as ongoing retainer support. Pricing is aligned to scope, complexity, and organizational needs and is discussed during consultation.
-    </p>
-  </div>
+<p class="hero-sub">
+Our consulting services help organizations modernize hiring, strengthen workforce visibility, and prepare for an AI-driven future.
+</p>
+
+<p class="hero-highlight">
+Consulting services may be structured hourly, through project-based contracts, or as ongoing retainer support. Pricing is aligned to scope, complexity, and organizational needs and is discussed during consultation.
+</p>
+</div>
 </section>
 
 <div class="container">
 
-  <section class="section">
-    <div class="intro-card">
-      <h2>About Our Consulting Services</h2>
-      <p>
-       Our consulting approach combines human-centered strategy with emerging technologies to help organizations adapt to today’s evolving workforce.
-      </p>
-      <p>
-        We focus on workforce visibility and talent connection, modern hiring and assessment strategies, and AI-aligned workforce readiness.
-      </p>
-      <p>
-       Each service is designed to be practical, structured, and aligned with real organizational needs.
-      <div class="note-box">
-       We help organizations strengthen workforce strategy by aligning human intelligence with artificial intelligence.
-      </div>
-    </div>
-  </section>
-
-  <div class="consulting-starting-price">
-<span class="label">Consulting Services</span>
-<h3>Starting at $499</h3>
+<section class="section">
+<div class="intro-card">
+<h2>About Our Consulting Services</h2>
 <p>
-Government Workforce Network LLC provides flexible consulting solutions designed for organizations navigating workforce modernization, recruitment challenges, AI readiness, engagement strategies, and workforce visibility initiatives.
+Our consulting approach combines human-centered strategy with emerging technologies to help organizations adapt to today’s evolving workforce.
 </p>
-
 <p>
-Pricing varies based on project scope, organizational needs, customization, timelines, and level of support required.
+We focus on workforce visibility and talent connection, modern hiring and assessment strategies, and AI-aligned workforce readiness.
 </p>
-
 <p>
-Additional service details, recommendations, and project pricing are discussed during the consultation process.
+Each service is designed to be practical, structured, and aligned with real organizational needs.
 </p>
-
-<style>
-.consulting-starting-price{
-background:#ffffff;
-border:1px solid rgba(212,175,55,.35);
-border-radius:24px;
-padding:32px;
-margin:40px 0;
-box-shadow:0 12px 35px rgba(11,31,58,.08);
-}
-
-.consulting-starting-price .label{
-display:inline-block;
-font-family:'Sora',sans-serif;
-font-size:.78rem;
-font-weight:700;
-letter-spacing:.08em;
-text-transform:uppercase;
-color:#7a5a10;
-margin-bottom:12px;
-}
-
-.consulting-starting-price h3{
-font-family:'DM Serif Display',serif;
-font-size:3rem;
-line-height:1;
-color:#0b1f3a;
-margin:0 0 18px;
-}
-
-.consulting-starting-price p{
-font-family:'Sora',sans-serif;
-font-size:1rem;
-line-height:1.7;
-color:#5f7287;
-margin-bottom:16px;
-}
-
-.consulting-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-margin-top:12px;
-padding:14px 24px;
-border-radius:999px;
-background:#0b1f3a;
-color:#ffffff;
-text-decoration:none;
-font-family:'Sora',sans-serif;
-font-weight:600;
-transition:.25s ease;
-}
-
-.consulting-btn:hover{
-background:#214a9a;
-transform:translateY(-2px);
-}
-</style>
-
-  <section class="section">
-    <div class="section-heading">
-      <h2>Consulting Services</h2>
-      <div class="gold-rule"></div>
-    </div>
-
-    <div class="service-grid">
-
-        <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="salary-study.png">
-            <source src="salary-study.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Compensation Analysis & Salary Study</div>
-          <div class="service-title">Supporting Competitive and Sustainable Workforce Strategies</div>
-       
-          <div class="card-footer-space"></div>
-          <section class="consulting-booking-section">
-
-<div class="consulting-booking-container">
+<div class="note-box">
+We help organizations strengthen workforce strategy by aligning human intelligence with artificial intelligence.
+</div>
 </div>
 </section>
-          <div class="consulting-actions">
 
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-          </div>
-        </div>
-      </article>
-
-
-            <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="hands-on-ai-assessment.png">
-            <source src="hands-on-ai-assessment.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">AI Workforce Capability Assessment</div>
-          <div class="service-title">Custom Hands-On AI Assessment Built Around Real Job Tasks</div>
-        
-          <div class="card-footer-space"></div>
-          <section class="consulting-booking-section">
-
-<div class="consulting-booking-container">
+<section class="section">
+<div class="pricing-card">
+<span class="pricing-label">Consulting Services</span>
+<h2>Starting at $499</h2>
+<p>
+Government Workforce Network LLC provides flexible consulting solutions for organizations navigating workforce modernization, recruitment challenges, AI readiness, engagement strategies, and workforce visibility initiatives.
+</p>
+<p>
+Pricing varies based on project scope, organizational needs, customization, timelines, and level of support required. Additional service details, recommendations, and project pricing are provided during the consultation process.
+</p>
+<div class="pricing-actions">
+<a href="#" class="price-btn" onclick="openCalendly(); return false;">Schedule a Consultation</a>
+<button type="button" class="price-btn" onclick="openModal('consultingModal')">Submit Inquiry</button>
+</div>
 </div>
 </section>
-          <div class="consulting-actions">
 
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-          </div>
-        </div>
-      </article>
+<section class="section">
+<div class="section-heading">
+<h2>Consulting Services</h2>
+<div class="gold-rule"></div>
+</div>
 
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="ai-job-analysis-poster.jpeg">
-            <source src="ai-job-analysis.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">AI-Enhanced Job Analysis &amp; Position Design</div>
-          <div class="service-title">Role Design Support</div>
-       
-          <div class="card-footer-space"></div>
-          <section class="consulting-booking-section">
+<div class="service-grid">
 
-<div class="consulting-booking-container">
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="salary-study.png">
+<source src="salary-study.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Compensation Analysis &amp; Salary Study</div>
+<div class="service-title">Supporting Competitive and Sustainable Workforce Strategies</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="hands-on-ai-assessment.png">
+<source src="hands-on-ai-assessment.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">AI Workforce Capability Assessment</div>
+<div class="service-title">Custom Hands-On AI Assessment Built Around Real Job Tasks</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="ai-job-analysis-poster.jpeg">
+<source src="ai-job-analysis.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">AI-Enhanced Job Analysis &amp; Position Design</div>
+<div class="service-title">Role Design Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="hard-to-fill-poster.jpeg">
+<source src="strategic-recruitment-hard-to-fill.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Strategic Recruitment for Hard-to-Fill Roles</div>
+<div class="service-title">Recruitment Planning</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="assessment-test-development-poster.jpeg">
+<source src="strategic-assessment-test-development.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Strategic Assessment &amp; Test Development</div>
+<div class="service-title">Role-Specific Evaluation</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="bilingual-assessment-development-poster.jpeg">
+<source src="bilingual-assessment-development.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Bilingual Assessment Development</div>
+<div class="service-title">Language-Specific Evaluation</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="bilingual-testing-strategy-poster.jpeg">
+<source src="bilingual-testing-strategy.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Bilingual Testing Strategy</div>
+<div class="service-title">High-Volume Hiring Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="live-recruitment-engagement-poster.jpeg">
+<source src="live-recruitment-engagement-strategy.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Live Recruitment Engagement Strategy</div>
+<div class="service-title">Human-Centered Recruitment</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="human-centered-onboarding-poster.jpeg">
+<source src="human-centered-onboarding-strategy.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Human-Centered Onboarding Strategy</div>
+<div class="service-title">Onboarding Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="offer-process-optimization-poster.jpeg">
+<source src="offer-process-optimization.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Job Offer Process Optimization</div>
+<div class="service-title">Hiring Workflow Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="recruitment-retention-optimization-poster.jpeg">
+<source src="recruitment-retention-optimization.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Recruitment &amp; Retention Optimization</div>
+<div class="service-title">Workforce Stability Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="recruitment-visual-video-content-poster.jpeg">
+<source src="recruitment-visual-video-content-creation.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Recruitment Visual &amp; Video Content Creation</div>
+<div class="service-title">Recruitment Marketing Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="recognition-galas.jpg">
+<source src="employee-recognition-visibility-gala.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Employee Recognition &amp; Visibility Gala</div>
+<div class="service-title">Recognition Experience Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="talent-engagement-services.jpg">
+<source src="talent-engagement-services.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">No Cost - Talent Engagement Services</div>
+<div class="service-title">No Cost - Talent Access Program</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+<a class="secondary-btn" href="/talent-request-explore">Click Here For More Information</a>
+</div>
+</div>
+</article>
+
+<article class="service-card">
+<div class="service-video-wrap">
+<span class="video-badge">Video Overview</span>
+<video class="service-video" controls preload="metadata" playsinline poster="government-funding-readiness-bootcamp-poster.jpeg">
+<source src="government-funding-readiness-bootcamp.mp4" type="video/mp4">
+</video>
+</div>
+<div class="service-body">
+<div class="service-name">Government Funding &amp; Readiness Bootcamp</div>
+<div class="service-title">Funding Readiness Support</div>
+<div class="card-footer-space"></div>
+<div class="consulting-actions">
+<a href="#" onclick="openCalendly(); return false;" class="consult-btn">Schedule a Consultation</a>
+</div>
+</div>
+</article>
+
 </div>
 </section>
-          <div class="consulting-actions">
 
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
+<section class="section">
+<div class="content-card">
+<h2>How Our Consulting Services Support Organizations</h2>
+<p>
+Our services are designed to help organizations modernize, strengthen visibility, and prepare for workforce transformation.
+</p>
 
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="hard-to-fill-poster.jpeg">
-            <source src="strategic-recruitment-hard-to-fill.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Strategic Recruitment for Hard-to-Fill Roles</div>
-          <div class="service-title">Recruitment Planning</div>
-       
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
+<div class="purpose-grid">
+<div class="purpose-item">
+<h3>Modernization</h3>
+<p>Improve hiring and workforce operations by integrating efficient, human-centered, and technology-supported strategies.</p>
+</div>
+<div class="purpose-item">
+<h3>Visibility</h3>
+<p>Strengthen how organizations present opportunities, connect with talent, and position themselves in a competitive hiring environment.</p>
+</div>
+<div class="purpose-item">
+<h3>Readiness</h3>
+<p>Prepare for workforce transformation by aligning strategy, talent pipelines, and operations with emerging technologies, including AI.</p>
+</div>
+<div class="purpose-item">
+<h3>Strategic Support</h3>
+<p>Provide practical, forward-looking guidance aligned with real operational needs and long-term workforce goals.</p>
+</div>
+</div>
+</div>
+</section>
 
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-          </div>
-        </div>
-      </article>
+<section class="section">
+<div class="content-card">
+<h2>How the Process Works</h2>
+<div class="pathway-grid">
+<div class="pathway-item">
+<h3>1. Review the Service</h3>
+<p>Watch the short overview to understand the service and how it aligns with your needs.</p>
+</div>
+<div class="pathway-item">
+<h3>2. Schedule a Consultation or Submit an Inquiry</h3>
+<p>Share your goals, priorities, and the type of support you’re seeking.</p>
+</div>
+<div class="pathway-item">
+<h3>3. Consultation &amp; Alignment</h3>
+<p>We review your request and connect to discuss scope, needs, and next steps.</p>
+</div>
+<div class="pathway-item">
+<h3>4. Move Forward</h3>
+<p>Engagement begins based on alignment, availability, and organizational fit.</p>
+</div>
+</div>
+</div>
+</section>
 
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="assessment-test-development-poster.jpeg">
-            <source src="strategic-assessment-test-development.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Strategic Assessment &amp; Test Development</div>
-          <div class="service-title">Role-Specific Evaluation</div>
-        
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
+<section class="section">
+<div class="cta-card">
+<h2>How We Work with Organizations</h2>
+<p>
+While working with organizations, our goal is not to replace existing practices or processes.
+</p>
+<p>
+We focus on complementing and strengthening what already exists — identifying opportunities for improvement, providing practical recommendations, and supporting enhancements aligned with your specific needs.
+</p>
+<p>
+Our approach is flexible, collaborative, and designed to integrate with your current systems and processes, helping you modernize without disruption.
+</p>
+<button type="button" class="cta-btn" onclick="openModal('consultingModal')">
+Submit Inquiry
+</button>
+</div>
+</section>
 
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="bilingual-assessment-development-poster.jpeg">
-            <source src="bilingual-assessment-development.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Bilingual Assessment Development</div>
-          <div class="service-title">Language-Specific Evaluation</div>
-     
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="bilingual-testing-strategy-poster.jpeg">
-            <source src="bilingual-testing-strategy.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Bilingual Testing Strategy</div>
-          <div class="service-title">High-Volume Hiring Support</div>
-        
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-      
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="live-recruitment-engagement-poster.jpeg">
-            <source src="live-recruitment-engagement-strategy.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Live Recruitment Engagement Strategy</div>
-          <div class="service-title">Human-Centered Recruitment</div>
-        
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-          
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="human-centered-onboarding-poster.jpeg">
-            <source src="human-centered-onboarding-strategy.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Human-Centered Onboarding Strategy</div>
-          <div class="service-title">Onboarding Support</div>
-       
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="offer-process-optimization-poster.jpeg">
-            <source src="offer-process-optimization.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Job Offer Process Optimization</div>
-          <div class="service-title">Hiring Workflow Support</div>
-      
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="recruitment-retention-optimization-poster.jpeg">
-            <source src="recruitment-retention-optimization.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Recruitment &amp; Retention Optimization</div>
-          <div class="service-title">Workforce Stability Support</div>
-       
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="recruitment-visual-video-content-poster.jpeg">
-            <source src="recruitment-visual-video-content-creation.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Recruitment Visual &amp; Video Content Creation</div>
-          <div class="service-title">Recruitment Marketing Support</div>
-       
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="recognition-galas.jpg">
-            <source src="employee-recognition-visibility-gala.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Employee Recognition &amp; Visibility Gala</div>
-          <div class="service-title">Recognition Experience Support</div>
-       
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
-
-        <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="talent-engagement-services.jpg">
-            <source src="talent-engagement-services.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">No Cost - Talent Engagement Services</div>
-          <div class="service-title">No Cost - Talent Access Program</div>
-         
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-            <a class='secondary-btn' href='/talent-request-explore'>Click Here For More Information</a>
-
-          </div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-video-wrap">
-          <span class="video-badge">Video Overview</span>
-          <video class="service-video" controls preload="metadata" playsinline poster="government-funding-readiness-bootcamp-poster.jpeg">
-            <source src="government-funding-readiness-bootcamp.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-body">
-          <div class="service-name">Government Funding &amp; Readiness Bootcamp</div>
-          <div class="service-title">Funding Readiness Support</div>
-     
-          <div class="card-footer-space"></div>
-           <div class="consulting-actions">
-
-<!-- Calendly Button -->
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"class="consult-btn">Schedule a Consultation</a>
-        
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-   <section class="section">
-    <div class="content-card">
-      <h2>How Our Consulting Services Support Organizations</h2>
-      <p>
-       Our services are designed to help organizations modernize, strengthen visibility, and prepare for workforce transformation.
-      </p>
-
-      <div class="purpose-grid">
-        <div class="purpose-item">
-          <h3>Modernization</h3>
-          <p>Improve hiring and workforce operations by integrating efficient, human-centered, and technology-supported strategies.</p>
-        </div>
-        <div class="purpose-item">
-          <h3>Visibility</h3>
-          <p>Strengthen how organizations present opportunities, connect with talent, and position themselves in a competitive hiring environment.</p>
-        </div>
-        <div class="purpose-item">
-          <h3>Readiness</h3>
-          <p>Prepare for workforce transformation by aligning strategy, talent pipelines, and operations with emerging technologies, including AI.</p>
-        </div>
-        <div class="purpose-item">
-          <h3>Strategic Support</h3>
-          <p>Provide practical, forward-looking guidance aligned with real operational needs and long-term workforce goals.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="content-card">
-      <h2>How the Process Works</h2>
-      <div class="pathway-grid">
-        <div class="pathway-item">
-          <h3>1. Review the Service</h3>
-          <p>Watch the short overview to understand the service and how it aligns with your needs.</p>
-        </div>
-        <div class="pathway-item">
-          <h3>2. Schedule a Consultation or Submit an Inquiry</h3>
-          <p>Share your goals, priorities, and the type of support you’re seeking.</p>
-        </div>
-        <div class="pathway-item">
-          <h3>3. Consultation & Alignment</h3>
-          <p>We review your request and connect to discuss scope, needs, and next steps.</p>
-        </div>
-        <div class="pathway-item">
-          <h3>4. Move Forward</h3>
-          <p>Engagement begins based on alignment, availability, and organizational fit.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-      <section class="section">
-    <div class="cta-card">
-      <h2>How We Work with Organizations</h2>
-      <p>
-        While working with organizations, our goal is not to replace existing practices or processes.
-      </p>
-  <p>
-       We focus on complementing and strengthening what already exists identifying opportunities for improvement, providing practical recommendations, and supporting enhancements aligned with your specific needs.
-      </p>
-        <p>
-        Our approach is flexible, collaborative, and designed to integrate with your current systems and processes helping you modernize without disruption.
-      </p>
-     
-      <button type="button" class="cta-btn" onclick="openModal('consultingModal')">
-        Submit Inquiry
-      </button>
-    </div>
-  </section>
+</div>
 
 <div class="modal-backdrop" id="consultingModal" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="consultingModalTitle">
-    <div class="modal-header">
-      <h3 id="consultingModalTitle">Consulting Request</h3>
-      <button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-    </div>
-
-    <div class="modal-body">
-      <p>
-        Complete the form below to request consultation for one of our consulting services.
-      </p>
-
-      <form action="/thank-you" method="POST" name="consulting-inquiry" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="consulting-inquiry">
-        <p style="display:none;">
-          <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-        </p>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="full_name">Full Name</label>
-            <input id="full_name" type="text" name="full_name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" name="email" required>
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="organization_name">Organization / Business Name</label>
-            <input id="organization_name" type="text" name="organization_name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="country">Country</label>
-            <input id="country" type="text" name="country">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="service_interest">Service of Interest</label>
-          <select id="service_interest" name="service_interest" required>
-            <option value="">Select a Service</option>
-            <option>Compensation Analysis & Salary Study</option>
-            <option>AI Workforce Capability Assessment</option>
-            <option>AI-Enhanced Job Analysis & Position Design</option>
-            <option>Strategic Recruitment for Hard-to-Fill Roles</option>
-            <option>Strategic Assessment & Test Development</option>
-            <option>Bilingual Assessment Development</option>
-            <option>Bilingual Testing Strategy</option>
-            <option>Live Recruitment Engagement Strategy</option>
-            <option>Human-Centered Onboarding Strategy</option>
-            <option>Offer Process Optimization</option>
-            <option>Recruitment & Retention Optimization</option>
-            <option>Employee Relations & HR Documentation Support</option>
-            <option>Recruitment Visual & Video Content Creation</option>
-            <option>Employee Recognition & Visibility Gala</option>
-            <option>Government Funding & Readiness Bootcamp</option>
-            <option>General Consulting Inquiry</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="website_link">Website / LinkedIn / Social Media</label>
-          <input id="website_link" type="text" name="website_link">
-        </div>
-
-        <div class="form-group">
-          <label for="message">Tell Us More</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="cta-btn">Submit Form</button>
-          <button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div class="modal" role="dialog" aria-labelledby="consultingModalTitle">
+<div class="modal-header">
+<h3 id="consultingModalTitle">Consulting Request</h3>
+<button type="button" class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
 </div>
 
-  <footer>
-    <p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
-    <p>Together, Building Income, Opportunity, and Well-Being</p>
-  </footer>
+<div class="modal-body">
+<p>
+Complete the form below to request consultation for one of our consulting services.
+</p>
+
+<form action="/thank-you" method="POST" name="consulting-inquiry" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="consulting-inquiry">
+
+<p style="display:none;">
+<label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+</p>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="full_name">Full Name</label>
+<input id="full_name" type="text" name="full_name" required>
+</div>
+
+<div class="form-group">
+<label for="email">Email Address</label>
+<input id="email" type="email" name="email" required>
+</div>
+</div>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="organization_name">Organization / Business Name</label>
+<input id="organization_name" type="text" name="organization_name" required>
+</div>
+
+<div class="form-group">
+<label for="country">Country</label>
+<input id="country" type="text" name="country">
+</div>
+</div>
+
+<div class="form-group">
+<label for="service_interest">Service of Interest</label>
+<select id="service_interest" name="service_interest" required>
+<option value="">Select a Service</option>
+<option>Compensation Analysis &amp; Salary Study</option>
+<option>AI Workforce Capability Assessment</option>
+<option>AI-Enhanced Job Analysis &amp; Position Design</option>
+<option>Strategic Recruitment for Hard-to-Fill Roles</option>
+<option>Strategic Assessment &amp; Test Development</option>
+<option>Bilingual Assessment Development</option>
+<option>Bilingual Testing Strategy</option>
+<option>Live Recruitment Engagement Strategy</option>
+<option>Human-Centered Onboarding Strategy</option>
+<option>Offer Process Optimization</option>
+<option>Recruitment &amp; Retention Optimization</option>
+<option>Employee Relations &amp; HR Documentation Support</option>
+<option>Recruitment Visual &amp; Video Content Creation</option>
+<option>Employee Recognition &amp; Visibility Gala</option>
+<option>Government Funding &amp; Readiness Bootcamp</option>
+<option>General Consulting Inquiry</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="website_link">Website / LinkedIn / Social Media</label>
+<input id="website_link" type="text" name="website_link">
+</div>
+
+<div class="form-group">
+<label for="message">Tell Us More</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+
+<div class="form-actions">
+<button type="submit" class="cta-btn">Submit Form</button>
+<button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
+<p>Together, Building Income, Opportunity, and Well-Being</p>
+</footer>
 
 <script>
-function openModal(id, selectedService = '') {
-  const modal = document.getElementById(id);
-  if (!modal) return;
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+function openCalendly(){
+if (window.Calendly) {
+Calendly.initPopupWidget({
+url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'
+});
+} else {
+window.open('https://calendly.com/admin-governmentworkforcenetwork/30min', '_blank');
+}
+}
 
-  if (selectedService) {
-    const serviceSelect = modal.querySelector('#service_interest');
-    if (serviceSelect) serviceSelect.value = selectedService;
-  }
+function openModal(id, selectedService = '') {
+const modal = document.getElementById(id);
+if (!modal) return;
+modal.classList.add('open');
+modal.setAttribute('aria-hidden', 'false');
+document.body.style.overflow = 'hidden';
+
+if (selectedService) {
+const serviceSelect = modal.querySelector('#service_interest');
+if (serviceSelect) serviceSelect.value = selectedService;
+}
 }
 
 function closeModal(el) {
-  const modal = el.closest('.modal-backdrop');
-  if (!modal) return;
-  modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+const modal = el.closest('.modal-backdrop');
+if (!modal) return;
+modal.classList.remove('open');
+modal.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
 }
 
-document.addEventListener('click', function (e) {
-  if (e.target.classList.contains('modal-backdrop')) {
-    e.target.classList.remove('open');
-    e.target.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
+document.addEventListener('click', function(e) {
+if (e.target.classList.contains('modal-backdrop')) {
+e.target.classList.remove('open');
+e.target.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
+}
 });
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    const openModalEl = document.querySelector('.modal-backdrop.open');
-    if (openModalEl) {
-      openModalEl.classList.remove('open');
-      openModalEl.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  }
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape') {
+const openModalEl = document.querySelector('.modal-backdrop.open');
+if (openModalEl) {
+openModalEl.classList.remove('open');
+openModalEl.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
+}
+}
 });
 </script>
 
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzhkMWE1NThhYzc5MDAwOGFjOGMwMCIsImlzc3VlciI6Im5mc2VydmVyIn0.FV3VWaixQpLFRhUOjGKDcU7wtA8kU9_NAisb9Vc_0ZU"></script>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-<script
-src="https://assets.calendly.com/assets/external/widget.js"
-type="text/javascript"
-async>
-</script>
 </body>
 </html>
+
