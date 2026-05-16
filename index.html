@@ -1,873 +1,445 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Government Workforce Network LLC - Together, Building Income, Opportunity, and Well-Being"
-  />
-  <title>Government Workforce Network LLC</title>
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    :root{
-      --navy:#0B1F3A;
-      --navy-2:#12325E;
-      --royal:#214A9A;
-      --accent:#D4AF37;
-      --ink:#222;
-      --muted:#5a6b7a;
-      --card:#ffffff;
-      --soft:#f6f8fb;
-      --brand-green:#2E8B57;
-    }
-
-    body{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--ink);
-      background: linear-gradient(180deg, #0e1d36 0%, #1c3e83 100%) fixed;
-    }
-
-    .container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header{
-      background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
-      color: #fff;
-      padding: 12px 0;
-      box-shadow: 0 6px 24px rgba(0,0,0,.25);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .logo img{
-      height: 62px;
-      width: auto;
-      background: #fff;
-      padding: 4px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    }
-
-    .logo-text{
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: .2px;
-      white-space: nowrap;
-    }
-
-    .nav-links{
-      list-style: none;
-      display: flex;
-      gap: 1.25rem;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav-links a{
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: .2px;
-      padding: 6px 2px;
-      border-bottom: 2px solid transparent;
-      transition: color .25s ease, border-color .25s ease;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover{
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    #hero{
-      position: relative;
-      min-height: 88vh;
-      background:
-        linear-gradient(115deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.38) 100%),
-        url("hero.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      overflow: hidden;
-    }
-
-    .hero-overlay{
-      width: 100%;
-      padding: 70px 20px 50px;
-    }
-
-    .hero-content{
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .hero-logo{
-      width: 110px;
-      height: auto;
-      margin: 0 auto 22px;
-      display: block;
-      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.45));
-    }
-
-    .hero-content h1{
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      font-weight: 800;
-      line-height: 1.2;
-      text-shadow: 0 8px 24px rgba(0,0,0,.35);
-      margin-bottom: 18px;
-    }
-
-    .hero-content p{
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.08rem;
-      color: rgba(255,255,255,0.94);
-    }
-
-    .hero-image{
-      position: relative;
-      margin-top: 34px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-glow{
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border-radius: 50%;
-      background: radial-gradient(
-        circle,
-        rgba(255,255,255,0.32) 0%,
-        rgba(255,255,255,0.08) 45%,
-        rgba(0,0,0,0) 80%
-      );
-      filter: blur(40px);
-      z-index: 1;
-    }
-
-    .hero-image img{
-      position: relative;
-      z-index: 2;
-      width: 420px;
-      max-width: 92%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
-      display: block;
-    }
-
-    .mobile-offset-anchor{
-      display: block;
-      position: relative;
-      height: 0;
-    }
-
-    .about-section{
-      padding: 80px 20px;
-      color: #ffffff;
-    }
-
-    .about-container{
-      max-width: 980px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .gold-line{
-      width: 60px;
-      height: 4px;
-      background: var(--accent);
-      margin: 0 auto 24px auto;
-      border-radius: 2px;
-      box-shadow: 0 6px 16px rgba(212,175,55,.35);
-    }
-
-    .about-container h2{
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      font-weight: 800;
-      color: #fff;
-    }
-
-    .about-container p{
-      font-size: 1.08rem;
-      line-height: 1.85;
-      margin-bottom: 22px;
-      color: #e5e7eb;
-    }
-
-    .contact-card{
-      margin: 38px auto 34px;
-      max-width: 840px;
-      background: rgba(255,255,255,0.95);
-      color: var(--navy-2);
-      border-radius: 14px;
-      padding: 24px 28px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.14);
-      text-align: left;
-    }
-
-    .contact-item{
-      margin-bottom: 12px;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    .contact-item:last-child{
-      margin-bottom: 0;
-    }
-
-    .contact-label{
-      font-weight: 800;
-      margin-right: 6px;
-    }
-
-    .contact-card a{
-      color: var(--navy-2);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-card a:hover{
-      text-decoration: underline;
-    }
-
-    .welcome-video-wrap{
-      max-width: 640px;
-      margin: 30px auto 42px;
-      padding: 0 15px;
-    }
-
-    .welcome-video-wrap video{
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-      background: #000;
-    }
-
-    .three-columns{
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-top: 22px;
-    }
-
-    .info-card{
-      background-color: rgba(255,255,255,0.94);
-      border-radius: 14px;
-      padding: 28px 30px;
-      width: 100%;
-      max-width: 380px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-      text-align: center;
-    }
-
-    .info-card h3{
-      margin-bottom: 14px;
-      color: var(--navy);
-      font-size: 1.5rem;
-      font-weight: 800;
-    }
-
-    .info-card p{
-      color: #24364d;
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 0;
-    }
-
-    .services-section{
-      padding: 70px 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));
-    }
-
-    .services-container{
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-    }
-
-    .service-card{
-      background: #ffffff;
-      border: 1px solid #e5e5e5;
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .service-card:hover{
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
-    }
-
-    .service-badge{
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #111111;
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-    }
-
-    .service-card h3{
-      margin: 0 0 10px;
-      font-size: 28px;
-      line-height: 1.2;
-      color: #111111;
-    }
-
-    .service-tagline{
-      margin: 0 0 14px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #555555;
-      line-height: 1.5;
-    }
-
-    .service-description{
-      margin: 0 0 18px;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #444444;
-    }
-
-    .service-features{
-      margin: 0 0 24px;
-      padding-left: 18px;
-      color: #333333;
-      line-height: 1.8;
-      font-size: 15px;
-    }
-
-    .service-actions{
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn-primary,
-    .btn-secondary{
-      display: inline-block;
-      text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
-
-    .btn-primary{
-      background: #111111;
-      color: #ffffff;
-      border: 1px solid #111111;
-    }
-
-    .btn-primary:hover{
-      background: #222222;
-      border-color: #222222;
-    }
-
-    .btn-secondary{
-      background: #ffffff;
-      color: #111111;
-      border: 1px solid #111111;
-    }
-
-    .btn-secondary:hover{
-      background: #f3f3f3;
-    }
-
-    #opportunities{
-      padding: 70px 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));
-    }
-
-    .title-wrap{
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .section-title{
-      font-size: 2.3rem;
-      font-weight: 900;
-      letter-spacing: .2px;
-      margin-bottom: 10px;
-      color: var(--royal);
-    }
-
-    .rule{
-      width: 72px;
-      height: 4px;
-      background: var(--accent);
-      margin: 10px auto 0;
-      border-radius: 3px;
-      box-shadow: 0 6px 16px rgba(212,175,55,.35);
-    }
-
-    .job-list{
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .job-card{
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 12px;
-      padding: 18px 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
-
-    .job-title{
-      margin-bottom: 8px;
-      font-size: 1.35rem;
-    }
-
-    .job-title a{
-      color: var(--royal);
-      text-decoration: none;
-      font-weight: 800;
-    }
-
-    .job-title a:hover{
-      text-decoration: underline;
-    }
-
-    .job-meta{
-      color: #333;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .job-summary{
-      color: #333;
-      margin-bottom: 10px;
-      line-height: 1.75;
-    }
-
-    .job-apply{
-      display: inline-block;
-      margin-top: 6px;
-      color: var(--navy-2);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .job-apply:hover{
-      text-decoration: underline;
-    }
-
-    footer{
-      background: var(--navy);
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer p{
-      opacity: .92;
-    }
-
-    .modal-backdrop{
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.55);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-
-    .modal-backdrop.open{
-      display: flex;
-    }
-
-    .modal{
-      width: min(760px, 92vw);
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.35);
-      overflow: hidden;
-      border: 1px solid rgba(11,31,58,.08);
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .modal-header{
-      background: linear-gradient(135deg, #0B1F3A, #214A9A);
-      color: #fff;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .modal-header h3{
-      margin: 0;
-      font-size: 1.15rem;
-      font-weight: 800;
-    }
-
-    .modal-body{
-      padding: 18px 20px 22px;
-    }
-
-    .modal-close{
-      background: transparent;
-      border: none;
-      color: #fff;
-      font-size: 1.4rem;
-      cursor: pointer;
-    }
-
-    .grid-2{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .grid-1{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .modal label{
-      font-weight: 700;
-      font-size: .92rem;
-      color: #12325E;
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .modal input,
-    .modal select,
-    .modal textarea{
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #d6dbe3;
-      border-radius: 8px;
-      font: inherit;
-    }
-
-    .modal textarea{
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .modal .actions{
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn-submit{
-      background: #0B1F3A;
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 8px;
-      border: none;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .btn-cancel{
-      background: #e9edf5;
-      color: #12325E;
-      padding: 12px 16px;
-      border-radius: 8px;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .honeypot{
-      display: none;
-    }
-
-    .thankyou{
-      display: none;
-      padding: 12px 14px;
-      border-radius: 8px;
-      background: #f0f7ed;
-      color: #1b4d2b;
-      border: 1px solid #cfe7d6;
-      margin-bottom: 12px;
-    }
-
-    @media (max-width: 900px){
-      nav{
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .logo{
-        justify-content: center;
-      }
-
-      .nav-links{
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 768px){
-      #hero{
-        min-height: auto;
-      }
-
-      .hero-overlay{
-        padding: 52px 16px 36px;
-      }
-
-      .hero-logo{
-        width: 90px;
-      }
-
-      .hero-content h1{
-        font-size: 1.8rem;
-      }
-
-      .hero-glow{
-        width: 300px;
-        height: 300px;
-        filter: blur(25px);
-      }
-
-      .hero-image img{
-        width: 300px;
-      }
-
-      .grid-2{
-        grid-template-columns: 1fr;
-      }
-
-      .section-title{
-        font-size: 1.9rem;
-      }
-
-      .about-container h2{
-        font-size: 2rem;
-      }
-
-      .service-card{
-        padding: 22px;
-      }
-
-      .service-card h3{
-        font-size: 24px;
-      }
-
-      .mobile-offset-anchor{
-        top: -120px;
-      }
-    }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Government Workforce Network LLC - Together, Building Income, Opportunity, and Well-Being" />
+<title>About | Government Workforce Network LLC</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+:root{
+--navy:#0B1F3A;
+--blue:#214A9A;
+--gold:#D4AF37;
+--white:#ffffff;
+--soft:#f6f8fb;
+--text:#1f2f46;
+--muted:#5f6f84;
+--shadow:0 20px 50px rgba(0,0,0,.20);
+}
+
+body{
+font-family:'Sora',Arial,sans-serif;
+color:var(--text);
+background:
+radial-gradient(circle at top left,rgba(212,175,55,.16),transparent 28%),
+linear-gradient(180deg,#0b0f1f 0%,#183f86 48%,#0b0f1f 100%);
+}
+
+.container{
+max-width:1180px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* Header */
 header{
-background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
-color:#fff;
-padding: 10px 0;
-box-shadow: 0 6px 24px rgba(0,0,0,.25);
-position: sticky;
-top: 0;
-z-index: 100;
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(11,31,58,.94);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.12);
+box-shadow:0 8px 28px rgba(0,0,0,.25);
 }
 
 .top-nav{
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:12px 20px;
 }
 
 .logo{
-display: flex;
-align-items: center;
-gap: 12px;
-min-width: 0;
-flex-shrink: 0;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
 .logo img{
-height: 60px;
-width: auto;
-background: #fff;
-padding: 4px;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+height:58px;
+background:#fff;
+padding:4px;
+border-radius:10px;
 }
 
 .logo-text{
-font-size: 1.2rem;
-font-weight: 800;
-color: #fff;
-line-height: 1.2;
-white-space: nowrap;
+color:#fff;
+font-weight:800;
+font-size:1.1rem;
+white-space:nowrap;
 }
 
 .nav-links{
-list-style: none;
-display: flex;
-gap: 18px;
-align-items: center;
-justify-content: flex-end;
-flex-wrap: wrap;
-margin: 0;
-padding: 0;
-}
-
-.nav-links li{
-margin: 0;
-padding: 0;
+list-style:none;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+gap:16px;
+flex-wrap:wrap;
 }
 
 .nav-links a{
-color: #fff;
-text-decoration: none;
-font-weight: 600;
-font-size: 0.98rem;
-padding: 6px 0;
-border-bottom: 2px solid transparent;
-transition: color .25s ease, border-color .25s ease;
-white-space: nowrap;
+color:#fff;
+text-decoration:none;
+font-size:.94rem;
+font-weight:700;
+transition:.25s ease;
 }
 
 .nav-links a:hover{
-color: var(--accent);
-border-bottom-color: var(--accent);
+color:var(--gold);
 }
 
-/* Tablet */
-@media (max-width: 1100px){
-.top-nav{
-flex-direction: column;
-align-items: center;
-}
-
-.logo{
-justify-content: center;
-}
-
-.logo-text{
-white-space: normal;
-text-align: center;
-}
-
-.nav-links{
-justify-content: center;
-gap: 14px 22px;
-}
-
-.nav-links a{
-font-size: 0.95rem;
-}
-}
-
-/* Mobile */
-@media (max-width: 768px){
-header{
-padding: 12px 0;
-}
-
-.top-nav{
-gap: 14px;
-}
-
-.logo{
-flex-direction: column;
-justify-content: center;
-text-align: center;
-gap: 10px;
-}
-
-.logo img{
-height: 72px;
-}
-
-.logo-text{
-font-size: 1.05rem;
-white-space: normal;
-text-align: center;
-}
-
-.nav-links{
-width: 100%;
-justify-content: center;
-gap: 12px 18px;
-}
-
-.nav-links a{
-font-size: 0.95rem;
-}
-}
-
-    .consulting-btn{
-background: linear-gradient(135deg,#0f172a,#1d4ed8);
-color:#fff !important;
-padding:12px 22px;
+.consulting-btn{
+background:linear-gradient(135deg,#0f172a,#1d4ed8);
+color:#fff!important;
+padding:12px 20px;
 border-radius:999px;
-font-weight:600;
-transition:all .3s ease;
 box-shadow:0 10px 25px rgba(29,78,216,.25);
 }
 
-.consulting-btn:hover{
-transform:translateY(-2px);
-opacity:.95;
+/* Hero */
+.hero{
+min-height:86vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+background:
+linear-gradient(115deg,rgba(0,0,0,.42),rgba(0,0,0,.52)),
+url("hero.jpg") center/cover no-repeat;
+padding:90px 20px 70px;
 }
 
+.hero-content{
+max-width:980px;
+}
 
-  </style>
+.hero-logo{
+width:105px;
+margin:0 auto 22px;
+display:block;
+filter:drop-shadow(0 5px 14px rgba(0,0,0,.45));
+}
+
+.hero h1{
+font-family:'DM Serif Display',serif;
+font-size:clamp(2.6rem,5vw,5rem);
+font-weight:400;
+line-height:1.05;
+margin-bottom:20px;
+text-shadow:0 8px 28px rgba(0,0,0,.45);
+}
+
+.hero p{
+max-width:900px;
+margin:0 auto;
+font-size:1.08rem;
+line-height:1.85;
+color:rgba(255,255,255,.94);
+}
+
+.hero-actions{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+text-decoration:none;
+font-weight:800;
+transition:.25s ease;
+}
+
+.btn-primary{
+background:var(--gold);
+color:#111;
+}
+
+.btn-secondary{
+background:rgba(255,255,255,.12);
+color:#fff;
+border:1px solid rgba(255,255,255,.35);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+transform:translateY(-2px);
+}
+
+/* Sections */
+.section{
+padding:76px 20px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:38px;
+}
+
+.gold-line{
+width:74px;
+height:5px;
+border-radius:999px;
+background:linear-gradient(90deg,#b68b2d,#f4d979,#b68b2d);
+margin:0 auto 18px;
+}
+
+.section-title h2{
+font-family:'DM Serif Display',serif;
+font-size:clamp(2.2rem,4vw,3.4rem);
+font-weight:400;
+color:#fff;
+margin-bottom:12px;
+}
+
+.section-title p{
+max-width:760px;
+margin:0 auto;
+color:#dbe5f5;
+line-height:1.8;
+}
+
+.premium-card{
+background:rgba(255,255,255,.97);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+border:1px solid rgba(255,255,255,.4);
+}
+
+.premium-card h3{
+font-family:'DM Serif Display',serif;
+font-size:2.1rem;
+font-weight:400;
+color:var(--navy);
+margin-bottom:14px;
+}
+
+.premium-card p{
+color:#44546a;
+line-height:1.85;
+font-size:1rem;
+margin-bottom:16px;
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:26px;
+}
+
+.grid-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.small-card{
+background:#fff;
+border-radius:24px;
+padding:28px;
+box-shadow:0 14px 34px rgba(0,0,0,.14);
+border:1px solid rgba(212,175,55,.25);
+}
+
+.small-card h3{
+color:var(--navy);
+font-size:1.3rem;
+margin-bottom:12px;
+}
+
+.small-card p{
+color:#536377;
+line-height:1.8;
+font-size:.96rem;
+}
+
+.founder-card{
+background:
+linear-gradient(135deg,#ffffff 0%,#fffaf0 55%,#ffffff 100%);
+border:1px solid rgba(212,175,55,.45);
+}
+
+.signature{
+margin-top:18px;
+font-weight:800;
+color:var(--navy);
+}
+
+.badge-row{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.badge{
+display:inline-flex;
+padding:9px 14px;
+border-radius:999px;
+background:#eef3ff;
+color:#1d3f8f;
+font-size:.82rem;
+font-weight:800;
+}
+
+.process-list{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px;
+}
+
+.process-item{
+background:#fff;
+border-radius:22px;
+padding:24px 20px;
+box-shadow:0 14px 34px rgba(0,0,0,.13);
+}
+
+.process-number{
+width:38px;
+height:38px;
+border-radius:50%;
+background:var(--gold);
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:900;
+margin-bottom:14px;
+}
+
+.process-item h3{
+color:var(--navy);
+font-size:1.04rem;
+margin-bottom:10px;
+}
+
+.process-item p{
+color:#536377;
+line-height:1.7;
+font-size:.92rem;
+}
+
+/* Contact */
+.contact-card{
+max-width:920px;
+margin:0 auto;
+background:#fff;
+color:var(--navy);
+border-radius:28px;
+padding:34px;
+box-shadow:var(--shadow);
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.contact-item{
+padding:16px;
+border-radius:18px;
+background:#f6f8fb;
+line-height:1.7;
+}
+
+.contact-label{
+display:block;
+font-weight:900;
+color:var(--navy);
+margin-bottom:4px;
+}
+
+.contact-card a{
+color:var(--blue);
+text-decoration:none;
+font-weight:700;
+}
+
+.video-wrap{
+max-width:760px;
+margin:36px auto 0;
+}
+
+.video-wrap video{
+width:100%;
+border-radius:26px;
+box-shadow:var(--shadow);
+background:#000;
+}
+
+/* Footer */
+footer{
+background:var(--navy);
+color:#fff;
+text-align:center;
+padding:34px 20px;
+line-height:1.7;
+}
+
+/* Mobile */
+@media(max-width:980px){
+.top-nav{
+flex-direction:column;
+}
+
+.logo{
+flex-direction:column;
+text-align:center;
+}
+
+.logo-text{
+white-space:normal;
+}
+
+.nav-links{
+justify-content:center;
+}
+
+.grid-2,
+.grid-3,
+.process-list,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.premium-card{
+padding:28px 22px;
+}
+
+.section{
+padding:60px 18px;
+}
+}
+</style>
 </head>
 
 <body>
-  <header>
+
+<header>
 <nav class="container top-nav">
 <div class="logo">
 <img src="logo.png" alt="Government Workforce Network LLC Logo" />
@@ -875,691 +447,293 @@ opacity:.95;
 </div>
 
 <ul class="nav-links">
-<li><a href="#about-anchor">About</a></li>
-<li><a href="structure.html">Our Structure</a></li>
-<li><a href="/workforce-intelligence-team">Leadership</a></li> <li>
+<li><a href="#about">About</a></li>
+<li><a href="/structure">Our Structure</a></li>
+<li><a href="/workforce-intelligence-team">Leadership</a></li>
 <li><a href="/consulting">Consulting Services</a></li>
 <li><a href="/initiatives">Initiatives</a></li>
 <li><a href="/career-center-partners">University Network</a></li>
-<li><a href="/events">Events</a></li>
 <li><a href="/workforce-tv">Workforce TV</a></li>
-<a href="/is-hr-prepared.html">Is HR Prepared?</a>
 <li><a href="/talent-connect">Talent Connect - USA</a></li>
-<li><a href="/talent-connect-global.html">Talent Connect - GLOBAL</a></li>
-<a href="#"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/admin-governmentworkforcenetwork/30min'});return false;"
-class="consulting-btn">
-Schedule a Consultation</a></li>
-
+<li><a href="/talent-connect-global">Talent Connect - GLOBAL</a></li>
+<li>
+<a href="#" class="consulting-btn" onclick="openCalendly(); return false;">
+Schedule a Consultation
+</a>
+</li>
 </ul>
 </nav>
 </header>
 
-  <section id="hero">
-    <div class="hero-overlay">
-      <div class="hero-content">
-       
-        <h1>Together, Building Income, Opportunity, and Well-Being</h1>
-
-        <p>
-          Government Workforce Network LLC is building a people-centered ecosystem that helps organizations and individuals navigate the future of work through strategic consulting, workforce readiness, innovative initiatives, and meaningful connection.
-        </p>
-
-        <div class="hero-image">
-          <div class="hero-glow"></div>
-          <img src="hero.png" alt="Diverse Workforce Team" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <span id="about-anchor" class="mobile-offset-anchor"></span>
-
-  <section id="about" class="about-section">
-    <div class="about-container">
-      <div class="gold-line"></div>
-      <h2>Who We Are</h2>
-
-      <p>
-       Government Workforce Network LLC is a strategic workforce consulting and development organization focused on building income, opportunity, and well-being in a rapidly evolving, AI-driven world.
-      </p>
-
- <h2>Why We Were Built</h2>
-
-      <p>
-       Traditional workforce organizations follow the same legacy playbook. We chose not to. GWN was built from the ground up with a different model one that centers real people, lived experience, and community over credentials and corporate pipelines.
-       Built with compliance in mind and aligned with current laws and regulatory standards.
-      </p>
-
- <h2>Where We Are Now</h2>
-
-      <p>
-     Government Workforce Network LLC was established in September 2025. In January 2026, we began building in earnest and the momentum has been immediate.
+<section class="hero">
+<div class="hero-content">
+<img src="logo.png" class="hero-logo" alt="Government Workforce Network LLC Logo">
+<h1>Together, Building Income, Opportunity, and Well-Being</h1>
+<p>
+Government Workforce Network LLC is a workforce consulting and development organization built to help people and organizations navigate the future of work through strategy, visibility, readiness, and meaningful connection.
 </p>
-<p>
-In just a few months, we have engaged 20+ universities across the country, launched Talent Connect, built Workforce TV, developed a portfolio of 12 consulting services, and created active pathways for veterans, students, career changers, and underrepresented communities.
-</p>
-<p>
-We are not years into a legacy system. We are months into something intentionally different and the results of that intention are already showing up in real partnerships, real conversations, and real opportunity for real people.
-      </p>
 
-       <h2>How It Works (At a Glance)</h2>
-      <p>
-     Government Workforce Network LLC operates through a simple, human-centered model designed to expand access without adding complexity.
-</p>
-  <p>
-     <b>1. Access Without Barriers</b>
-<ul>
-Individuals access our tools through a simple entry point—no accounts, no login requirements, and no long onboarding process. This ensures immediate usability while protecting personal privacy.
-</ul></p>
-<p>
-<b>2. Skill Translation & Clarity</b>
-<ul>
-Through our workforce tools, individuals are supported in translating their experiences, skills, and capabilities into clear, workforce-ready language aligned with real-world opportunities.
-</ul></p>
-<p>
-<b>3. Empowered User Control</b>
-<ul>
-All outputs remain with the individual. Nothing is stored on our end. Participants choose how to use, save, or share their results maintaining full ownership of their information.
-</ul></p>
-<p>   
-<b>4. Connection to Opportunity</b>
-<ul>
-Participants are then positioned to pursue employment, education, or career pathways with greater clarity and confidence, supported by a growing network of institutions and partners.
-</ul></p>
-<p>
-<b>5. Institutional Engagement Without Disruption</b>
-<ul>
-Universities, workforce programs, and organizations can engage with Government Workforce Network LLC without replacing or interfering with their existing systems. Our model is designed to complement—not compete with—current infrastructure.
-</ul></p>
-      <style>
-.structure-link {
-color:#d4af37;
-font-weight:700;
-text-decoration:none;
-transition:all 0.3s ease;
-}
-.structure-link:hover {
-letter-spacing:1px;
-opacity:0.8;
-}
-</style>
-
-<div style="margin-top:20px;">
-<a href="https://governmentworkforcenetwork.com/structure" class="structure-link">
-View Full Structure & Model →
-</a>
+<div class="hero-actions">
+<a href="/consulting" class="btn-primary">Explore Consulting Services</a>
+<a href="/talent-connect" class="btn-secondary">Explore Talent Connect</a>
 </div>
-       <section class="reflection" id="reflection">
-      <div class="container">
-        <div class="reflection-box">
-        <h2>A Note from the Founder</h2>
-          <p>
-            Why I Built Something Different. 
-          </p>
-          <p>
-After 20+ years working inside HR and recruitment systems, I saw firsthand how those systems were leaving people behind and how AI was about to make it worse.
-I built Government Workforce Network because I believe workforce development needs a completely different model. One that centers real people, lived experience, and community, not just credentials and corporate pipelines.
-        </p>
-            <p>
-As a hands-on founder, I lead the creation, workflows, and solutions ensuring every services is practical, impactful, measurable, and built with compliance in mind, aligned with current laws and regulatory standards.
-        </p>
-        <p>
-Traditional workforce organizations follow the same legacy playbook. I chose not to. Every decision we make, from how we structure our team to how we engage with universities and communities, is intentional, human-centered, and built for the world we’re actually living in, not the one we inherited.
-We’re early. We’re building. And we’re doing it differently because differently is exactly what this moment requires.
-        </p>
-— Marivel Morgana Nunez, Founder, Government Workforce Network LLC
-          </p>
-        </div>
-      </div>
-    </section>
-      </div>
-    </div>
-  </section>
-
-    <div class="three-columns">
-        <div class="info-card">
-          <h3>Mission</h3>
-          <p>
-            To build an integrated ecosystem that strengthens income pathways, expands access to opportunity, and promotes well-being through strategic consulting, workforce initiatives, and community-driven collaboration.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <h3>Vision</h3>
-          <p>
-            To cultivate a nationally recognized ecosystem where organizations and individuals thrive through expanded opportunity, structured growth, and sustainable economic empowerment.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="margin-top:60px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">
-
-<h2 style="color:#d4af37; font-weight:900; margin-bottom:20px;">
-Federal Registration & Classification
-</h2>
-
-<p style="font-size:16px; line-height:1.7; color:#ffffff;">
-Government Workforce Network LLC is a registered entity in the System for Award Management (SAM.gov).
-</p>
-
-<p style="font-size:16px; line-height:1.7; color:#ffffff; margin-top:15px;">
-<strong>UEI:</strong> L8PDM1AKWB89
-</p>
-<p style="font-size:15px; line-height:1.7; color:#cccccc; margin-top:20px;">
-Registered to support federal, state, and local workforce initiatives, consulting, and development services.
-</p>
+</div>
 </section>
 
-      <div class="contact-card">
-        <div class="contact-item">
-          <span class="contact-label">Phone:</span>
-          <a href="tel:+19497752175">(949) 775-2175</a>
-        </div>
+<section id="about" class="section">
+<div class="container">
+<div class="section-title">
+<div class="gold-line"></div>
+<h2>Who We Are</h2>
+<p>
+A human-centered, AI-ready workforce organization built for a changing world.
+</p>
+</div>
 
-        <div class="contact-item">
-          <span class="contact-label">Email:</span>
-          <a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a>
-        </div>
+<div class="grid-2">
+<div class="premium-card">
+<h3>Our Purpose</h3>
+<p>
+Government Workforce Network LLC was created to strengthen workforce access, visibility, and opportunity for individuals, communities, and organizations.
+</p>
+<p>
+We support workforce modernization, recruitment strategy, AI readiness, talent engagement, and practical workforce solutions for public, private, and mission-driven organizations.
+</p>
+</div>
 
-        <div class="contact-item">
-          <span class="contact-label">Instagram:</span>
-          <a href="https://instagram.com/government_workforce_network" target="_blank">@government_workforce_network</a>
-        </div>
+<div class="premium-card">
+<h3>Our Global Reach</h3>
+<p>
+Our consulting services are available to organizations across the United States and internationally.
+</p>
+<p>
+We support organizations globally that are seeking practical, human-centered, and AI-aligned workforce solutions designed for today’s evolving workforce environment.
+</p>
+</div>
+</div>
+</div>
+</section>
 
-          <div class="contact-item">
-          <span class="contact-label">Office Address:</span>
-          <span>23046 Avenida de la Carlota, Suite #600, Laguna Hills, CA 92653</span>
-        </div>
+<section class="section">
+<div class="container">
+<div class="grid-3">
+<div class="small-card">
+<h3>Mission</h3>
+<p>
+To build an integrated ecosystem that strengthens income pathways, expands access to opportunity, and promotes well-being through consulting, workforce initiatives, and community-driven collaboration.
+</p>
+</div>
 
-        <div class="contact-item">
-          <span class="contact-label">Hours:</span>
-          <span>Monday - Friday, 9:00 a.m. - 4:00 p.m. PT</span>
-        </div>
-      </div>
+<div class="small-card">
+<h3>Vision</h3>
+<p>
+To cultivate a recognized workforce ecosystem where organizations and individuals thrive through expanded opportunity, structured growth, and sustainable economic empowerment.
+</p>
+</div>
 
-      <div class="welcome-video-wrap">
-        <video id="welcome-video" controls playsinline preload="metadata">
-          <source src="/welcome.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+<div class="small-card">
+<h3>Positioning</h3>
+<p>
+We combine human intelligence with artificial intelligence to support workforce modernization, talent visibility, engagement, and readiness for what comes next.
+</p>
+</div>
+</div>
+</div>
+</section>
 
-  
-  <footer>
-    <p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
-    <p>Together, Building Income, Opportunity, and Well-Being</p>
-  </footer>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<div class="gold-line"></div>
+<h2>Why We Were Built</h2>
+<p>
+We did not build another traditional workforce organization. We built a different model.
+</p>
+</div>
 
-  <!-- Strategic Recruitment & Job Visibility -->
-  <div class="modal-backdrop" id="jobModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-labelledby="jobModalTitle">
-      <div class="modal-header">
-        <h3 id="jobModalTitle">Strategic Recruitment & Job Visibility</h3>
-        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-      </div>
+<div class="premium-card founder-card">
+<h3>A Different Workforce Model</h3>
+<p>
+Traditional workforce systems often rely on legacy structures that can leave people behind. Government Workforce Network LLC was built to create a more accessible, practical, and people-centered way to connect talent, organizations, and opportunity.
+</p>
+<p>
+Our model is designed to complement existing systems, not replace them. We help organizations strengthen what they already have while building new pathways for visibility, engagement, and workforce readiness.
+</p>
 
-      <div class="modal-body">
-        <div class="thankyou">Thank you! Your job posting was submitted.</div>
+<div class="badge-row">
+<span class="badge">AI-Ready</span>
+<span class="badge">Human-Centered</span>
+<span class="badge">Compliance-Aware</span>
+<span class="badge">Globally Accessible</span>
+</div>
+</div>
+</div>
+</section>
 
-        <form method="POST" name="paid_job_posting" onsubmit="return afterSubmit(this)">
-          <input type="hidden" name="form-name" value="paid_job_posting" />
-          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<div class="gold-line"></div>
+<h2>How It Works</h2>
+<p>
+Our ecosystem is designed to expand access without adding unnecessary complexity.
+</p>
+</div>
 
-          <div class="grid-2">
-            <div>
-              <label>Organization *</label>
-              <input name="Organization" type="text" required />
-            </div>
-            <div>
-              <label>Website</label>
-              <input name="Website" type="url" />
-            </div>
-            <div>
-              <label>Contact Name *</label>
-              <input name="Contact Name" type="text" required />
-            </div>
-            <div>
-              <label>Email *</label>
-              <input name="Email" type="email" required />
-            </div>
-            <div>
-              <label>Phone</label>
-              <input name="Phone" type="tel" />
-            </div>
-            <div>
-              <label>Job Title *</label>
-              <input name="Job Title" type="text" required />
-            </div>
-          </div>
+<div class="process-list">
+<div class="process-item">
+<div class="process-number">1</div>
+<h3>Access Without Barriers</h3>
+<p>No complicated onboarding, account setup, or unnecessary friction.</p>
+</div>
 
-          <div class="grid-1">
-            <div>
-              <label>Location (City/State or Remote)</label>
-              <input name="Location" type="text" />
-            </div>
-            <div>
-              <label>Job Description / How to Apply *</label>
-              <textarea name="Job Description" required></textarea>
-            </div>
-          </div>
+<div class="process-item">
+<div class="process-number">2</div>
+<h3>Skill Translation</h3>
+<p>Tools and guidance help translate experience into workforce-ready language.</p>
+</div>
 
-          <div class="actions">
-            <button class="btn-submit" type="submit">Submit Posting</button>
-            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+<div class="process-item">
+<div class="process-number">3</div>
+<h3>User Control</h3>
+<p>Individuals choose how to use, save, and share their information.</p>
+</div>
 
-  <!-- Visibility & Recognition Gala -->
-  <div class="modal-backdrop" id="grantModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-labelledby="grantModalTitle">
-      <div class="modal-header">
-        <h3 id="grantModalTitle">Visibility & Recognition Gala – Consultation Request</h3>
-        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-      </div>
+<div class="process-item">
+<div class="process-number">4</div>
+<h3>Connection</h3>
+<p>Participants are positioned for employment, education, and career pathways.</p>
+</div>
 
-      <div class="modal-body">
-        <div class="thankyou">Thank you! Your inquiry was sent.</div>
+<div class="process-item">
+<div class="process-number">5</div>
+<h3>Institutional Support</h3>
+<p>Organizations can engage without disrupting their existing systems.</p>
+</div>
+</div>
+</div>
+</section>
 
-        <form method="POST" name="visibility-recognition-gala-inquiry" onsubmit="return afterSubmit(this)">
-          <input type="hidden" name="form-name" value="visibility-recognition-gala-inquiry" />
-          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+<section class="section">
+<div class="container">
+<div class="premium-card founder-card">
+<h3>A Note from the Founder</h3>
+<p>
+After 20+ years working inside HR and recruitment systems, I saw firsthand how workforce systems can leave people behind and how AI would make visibility even more important.
+</p>
+<p>
+I built Government Workforce Network LLC because workforce development needs a model that centers real people, lived experience, practical solutions, and community connection.
+</p>
+<p>
+As a hands-on founder, I lead the creation, workflows, and solutions to ensure our work remains practical, impactful, measurable, and built with compliance in mind.
+</p>
+<p>
+We are building something different because this moment requires something different.
+</p>
 
-          <div class="grid-2">
-            <div>
-              <label>Organization *</label>
-              <input name="Organization" required />
-            </div>
-            <div>
-              <label>Organization Type</label>
-              <select name="Organization Type">
-                <option>Private Company</option>
-                <option>Government Agency</option>
-                <option>Nonprofit</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label>Contact Name *</label>
-              <input name="Contact Name" required />
-            </div>
-            <div>
-              <label>Email *</label>
-              <input name="Email" type="email" required />
-            </div>
-            <div>
-              <label>Phone</label>
-              <input name="Phone" type="tel" />
-            </div>
-            <div>
-              <label>Proposed Event Date</label>
-              <input name="Proposed Event Date" type="date" />
-            </div>
-          </div>
+<div class="signature">
+— Marivel Morgana Nunez, Founder<br>
+Government Workforce Network LLC
+</div>
+</div>
+</div>
+</section>
 
-          <div class="grid-1">
-            <div>
-              <label>Event Objectives</label>
-              <input name="Event Objectives" />
-            </div>
-            <div>
-              <label>Tell Us About Your Recognition Program Needs *</label>
-              <textarea name="Recognition Program Needs" required></textarea>
-            </div>
-          </div>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<div class="gold-line"></div>
+<h2>Federal Registration & Classification</h2>
+<p>
+Government Workforce Network LLC is registered to support workforce initiatives, consulting, and development services.
+</p>
+</div>
 
-          <div class="actions">
-            <button class="btn-submit" type="submit">Request Consultation</button>
-            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+<div class="premium-card">
+<h3>SAM.gov Registration</h3>
+<p>
+Government Workforce Network LLC is a registered entity in the System for Award Management.
+</p>
+<p>
+<strong>UEI:</strong> L8PDM1AKWB89
+</p>
+</div>
+</div>
+</section>
 
-  <!-- Government Funding & Readiness Bootcamp -->
-  <div class="modal-backdrop" id="webModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-labelledby="webModalTitle">
-      <div class="modal-header">
-        <h3 id="webModalTitle">Government Funding & Readiness Bootcamp – Readiness Application</h3>
-        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-      </div>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<div class="gold-line"></div>
+<h2>Connect With Us</h2>
+<p>
+For consulting, collaboration, initiatives, or workforce partnership inquiries, contact us below.
+</p>
+</div>
 
-      <div class="modal-body">
-        <div class="thankyou">Thank you! We’ll get back to you shortly.</div>
+<div class="contact-card">
+<div class="contact-grid">
+<div class="contact-item">
+<span class="contact-label">Phone</span>
+<a href="tel:+19497752175">(949) 775-2175</a>
+</div>
 
-        <form method="POST" name="bootcamp_inquiry" onsubmit="return afterSubmit(this)">
-          <input type="hidden" name="form-name" value="bootcamp_inquiry" />
-          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+<div class="contact-item">
+<span class="contact-label">Email</span>
+<a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a>
+</div>
 
-          <div class="grid-2">
-            <div>
-              <label>Organization *</label>
-              <input name="Organization" required />
-            </div>
-            <div>
-              <label>Type *</label>
-              <select name="Type" required>
-                <option>Private Business</option>
-                <option>Nonprofit</option>
-                <option>Startup</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label>Contact Name *</label>
-              <input name="Contact Name" required />
-            </div>
-            <div>
-              <label>Email *</label>
-              <input name="Email" type="email" required />
-            </div>
-            <div>
-              <label>Current Funding Stage</label>
-              <input name="Current Funding Stage" />
-            </div>
-            <div>
-              <label>Readiness Status *</label>
-              <select name="Readiness Status" required>
-                <option>Exploring opportunities</option>
-                <option>Preparing for first grant/contract</option>
-                <option>Previously applied but was not awarded</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label>Funding Timeline Goal</label>
-              <input name="Timeline" type="text" placeholder="e.g., within 3 months" />
-            </div>
-          </div>
+<div class="contact-item">
+<span class="contact-label">Instagram</span>
+<a href="https://instagram.com/government_workforce_network" target="_blank">@government_workforce_network</a>
+</div>
 
-          <div class="grid-1">
-            <div>
-              <label>Describe Your Funding Objectives & Readiness Level *</label>
-              <textarea name="Funding Objectives and Readiness Level" required></textarea>
-            </div>
-          </div>
+<div class="contact-item">
+<span class="contact-label">Office Address</span>
+23046 Avenida de la Carlota, Suite #600, Laguna Hills, CA 92653
+</div>
 
-          <div class="actions">
-            <button class="btn-submit" type="submit">Apply for Bootcamp</button>
-            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+<div class="contact-item">
+<span class="contact-label">Hours</span>
+Monday - Friday, 9:00 a.m. - 4:00 p.m. PT
+</div>
 
-  <!-- Community Business Partners -->
-  <div class="modal-backdrop" id="fs-cbp" aria-hidden="true">
-    <div class="modal" role="dialog" aria-labelledby="fsCbpTitle">
-      <div class="modal-header">
-        <h3 id="fsCbpTitle">Community Business Partners — Free Listing (USA Only)</h3>
-        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-      </div>
+<div class="contact-item">
+<span class="contact-label">Consulting</span>
+<a href="#" onclick="openCalendly(); return false;">Schedule a Consultation</a>
+</div>
+</div>
+</div>
 
-      <div class="modal-body">
-        <div class="thankyou">Thanks! Your business listing request was received.</div>
+<div class="video-wrap">
+<video id="welcome-video" controls playsinline preload="metadata">
+<source src="/welcome.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</section>
 
-        <p style="margin:0 0 12px; color:#12325E; font-weight:700;">
-          Listings are free and reviewed for alignment with our community values.
-        </p>
+<footer>
+<p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
+<p>Together, Building Income, Opportunity, and Well-Being</p>
+</footer>
 
-        <form method="POST" name="community-business-partner" onsubmit="return afterSubmit(this)">
-          <input type="hidden" name="form-name" value="community-business-partner" />
-          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+<script>
+function openCalendly(){
+if(window.Calendly){
+Calendly.initPopupWidget({
+url:'https://calendly.com/admin-governmentworkforcenetwork/30min'
+});
+} else {
+window.open('https://calendly.com/admin-governmentworkforcenetwork/30min','_blank');
+}
+}
+</script>
 
-          <div class="grid-2">
-            <div>
-              <label>Business Name *</label>
-              <input name="Business Name" type="text" required />
-            </div>
-            <div>
-              <label>Category *</label>
-              <select name="Category" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Retail</option>
-                <option>Services</option>
-                <option>Food & Beverage</option>
-                <option>Health & Wellness</option>
-                <option>Nonprofit</option>
-                <option>Professional Services</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label>City *</label>
-              <input name="City" type="text" required />
-            </div>
-            <div>
-              <label>State *</label>
-              <input name="State" type="text" maxlength="2" placeholder="CA" required />
-            </div>
-            <div>
-              <label>Website</label>
-              <input name="Website" type="url" placeholder="https://yourwebsite.com" />
-            </div>
-            <div>
-              <label>Instagram</label>
-              <input name="Instagram" type="text" placeholder="@yourhandle" />
-            </div>
-          </div>
-
-          <div class="grid-1">
-            <div>
-              <label>Business Description *</label>
-              <textarea name="Short Description" required placeholder="Describe your business…"></textarea>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button class="btn-submit" type="submit">Submit for Review</button>
-            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Community Job Visibility -->
-  <div class="modal-backdrop" id="fs-cjv" aria-hidden="true">
-    <div class="modal" role="dialog" aria-labelledby="fsCjvTitle">
-      <div class="modal-header">
-        <h3 id="fsCjvTitle">Community Job Visibility – Free Job Listing</h3>
-        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="thankyou">Thanks! Your job listing request was received.</div>
-
-        <p style="margin:0 0 12px; color:#12325E; font-weight:700;">
-          Job listings are complimentary and reviewed for alignment and clarity before publication.
-        </p>
-
-        <form method="POST" name="job-listing" onsubmit="return afterSubmit(this)">
-          <input type="hidden" name="form-name" value="job-listing" />
-          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-
-          <div class="grid-2">
-            <div>
-              <label>Organization/Employer Name *</label>
-              <input name="Organization/Employer Name" type="text" required />
-            </div>
-            <div>
-              <label>Employment Type *</label>
-              <select name="Employment Type" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Full-time</option>
-                <option>Part-time</option>
-                <option>Contract</option>
-                <option>Internship</option>
-                <option>Temporary</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label>City *</label>
-              <input name="City" type="text" required />
-            </div>
-            <div>
-              <label>State (2-letter) *</label>
-              <input name="State" type="text" maxlength="2" placeholder="CA" pattern="[A-Za-z]{2}" required />
-            </div>
-            <div>
-              <label>Job Title *</label>
-              <input name="Job Title" type="text" placeholder="Registered Nurse - ICU" required />
-            </div>
-            <div>
-              <label>Application Link *</label>
-              <input name="Application Link" type="url" placeholder="https://yourwebsite.com/careers" required />
-            </div>
-          </div>
-
-          <div class="grid-1">
-            <div>
-              <label>Job Summary *</label>
-              <textarea name="Job Summary" required placeholder="Describe the role, responsibilities, and desirable qualifications."></textarea>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button class="btn-submit" type="submit">Submit Job Listing</button>
-            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Free Logo Design -->
-  <div class="modal-backdrop" id="fs-logo" aria-hidden="true">
-    <div class="modal" role="dialog" aria-labelledby="fsLogoTitle">
-      <div class="modal-header">
-        <h3 id="fsLogoTitle">Free Logo Design (Nonprofits & Startups)</h3>
-        <button class="modal-close" onclick="closeModal(this)" aria-label="Close">×</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="thankyou">Thanks! Your logo request was received.</div>
-
-        <form method="POST" name="free_logo_design" onsubmit="return afterSubmit(this)">
-          <input type="hidden" name="form-name" value="free_logo_design" />
-          <p class="honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-
-          <div class="grid-2">
-            <div>
-              <label>Organization *</label>
-              <input name="Organization" type="text" required />
-            </div>
-            <div>
-              <label>Nonprofit or Startup? *</label>
-              <select name="Org Type" required>
-                <option>Nonprofit</option>
-                <option>Startup</option>
-              </select>
-            </div>
-            <div>
-              <label>Contact Name *</label>
-              <input name="Contact Name" type="text" required />
-            </div>
-            <div>
-              <label>Email *</label>
-              <input name="Email" type="email" required />
-            </div>
-          </div>
-
-          <div class="grid-1">
-            <div>
-              <label>Brand Description / Ideas *</label>
-              <textarea name="Brand Notes" placeholder="Colors, vibe, symbols, sample links…" required></textarea>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button class="btn-submit" type="submit">Submit</button>
-            <button class="btn-cancel" type="button" onclick="closeModal(this)">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openModal(id){
-      document.querySelectorAll('.modal-backdrop').forEach(function(modal){
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden','true');
-      });
-
-      var modal = document.getElementById(id);
-      if(!modal) return;
-
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden','false');
-    }
-
-    function closeModal(el){
-      var backdrop = el.closest('.modal-backdrop');
-      if(!backdrop) return;
-      backdrop.classList.remove('open');
-      backdrop.setAttribute('aria-hidden','true');
-    }
-
-    document.addEventListener('click', function(e){
-      if(e.target.classList && e.target.classList.contains('modal-backdrop')){
-        e.target.classList.remove('open');
-        e.target.setAttribute('aria-hidden','true');
-      }
-    });
-
-    function encode(data) {
-      return Object.keys(data)
-        .map(function(key){
-          return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
-        })
-        .join("&");
-    }
-
-    function afterSubmit(form) {
-      var data = {};
-      new FormData(form).forEach(function(value, key){
-        data[key] = value;
-      });
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(data),
-      })
-      .then(function(){
-        var ty = form.closest(".modal-body")?.querySelector(".thankyou");
-        if (ty) ty.style.display = "block";
-        form.reset();
-      })
-      .catch(function(error){
-        alert("Oops — submission failed. Please try again.");
-        console.error(error);
-      });
-
-      return false;
-    }
-  </script>
-
-  <script
-    async
-    id="netlify-rum-container"
-    src="/.netlify/scripts/rum"
-    data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
-    data-netlify-deploy-branch="main"
-    data-netlify-deploy-context="production">
-  </script>
-
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  
+
 </body>
 </html>
+
 
