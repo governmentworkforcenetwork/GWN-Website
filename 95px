@@ -499,8 +499,90 @@ color:rgba(255,255,255,.55);
 .cards,.features,.preview-grid{grid-template-columns:1fr}
 .nav-links{display:none}
 .section{padding:78px 0}
-.hero{padding:95px 0}
 }
+
+  <style>
+@media(max-width:950px){
+
+.topbar{
+position:relative;
+}
+
+.nav{
+padding:16px 0;
+}
+
+.logo{
+font-size:1rem;
+line-height:1.25;
+}
+
+.hero{
+padding:64px 0 70px;
+min-height:auto;
+}
+
+.hero-grid{
+gap:32px;
+}
+
+.badge{
+font-size:.68rem;
+padding:7px 12px;
+max-width:100%;
+text-align:center;
+}
+
+.hero h1{
+font-size:clamp(3.1rem,17vw,4.8rem);
+line-height:.9;
+margin:24px 0 18px;
+}
+
+.hero p{
+font-size:1rem;
+line-height:1.65;
+}
+
+.btn-row{
+flex-direction:column;
+gap:14px;
+margin-top:30px;
+}
+
+.btn{
+width:100%;
+padding:15px 20px;
+font-size:.95rem;
+text-align:center;
+}
+
+.hero-note{
+display:block;
+margin-top:22px;
+font-size:.84rem;
+line-height:1.55;
+padding-bottom:20px;
+}
+
+.preview-card{
+margin-top:16px;
+}
+
+.section{
+padding:72px 0;
+}
+
+.cards,
+.features,
+.preview-grid,
+.lounge-grid,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+</style>
 </style>
 </head>
 
