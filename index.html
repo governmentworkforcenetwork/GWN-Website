@@ -1,767 +1,524 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Government Workforce Network LLC - Together, Building Income, Opportunity, and Well-Being" />
-<title>About | Government Workforce Network LLC</title>
+<meta name="description" content="Government Workforce Network LLC - Workforce visibility, opportunity, consulting, university engagement, virtual lounges, and talent connection programs." />
+<title>Government Workforce Network LLC | Workforce Visibility Ecosystem</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 :root{
---navy:#0B1F3A;
---blue:#214A9A;
---gold:#D4AF37;
---white:#ffffff;
---soft:#f6f8fb;
---text:#1f2f46;
---muted:#5f6f84;
---shadow:0 20px 50px rgba(0,0,0,.20);
+  --ink:#06162c;
+  --navy:#07182f;
+  --blue:#1167ff;
+  --cyan:#49d9ff;
+  --gold:#ffd56a;
+  --white:#fff;
+  --soft:#f5f9ff;
+  --muted:#5d7188;
+  --line:rgba(255,255,255,.16);
+  --shadow:0 28px 80px rgba(0,0,0,.25);
 }
-
 body{
-font-family:'Sora',Arial,sans-serif;
-color:var(--text);
-background:
-radial-gradient(circle at top left,rgba(212,175,55,.16),transparent 28%),
-linear-gradient(180deg,#0b0f1f 0%,#183f86 48%,#0b0f1f 100%);
+  font-family:'Sora',Arial,sans-serif;
+  color:var(--ink);
+  background:#06162c;
+  overflow-x:hidden;
 }
+a{color:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
 
-.container{
-max-width:1180px;
-margin:0 auto;
-padding:0 20px;
-}
-
-/* Header */
+/* HEADER */
 header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(11,31,58,.94);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,.12);
-box-shadow:0 8px 28px rgba(0,0,0,.25);
+  position:sticky;top:0;z-index:1000;
+  background:rgba(6,22,44,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.12);
 }
-
 .top-nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:22px;
-padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:12px 0;
 }
-
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.logo img{
-height:58px;
-background:#fff;
-padding:4px;
-border-radius:10px;
-}
-
-.logo-text{
-color:#fff;
-font-weight:800;
-font-size:1.1rem;
-white-space:nowrap;
-}
-
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo img{height:54px;background:#fff;padding:4px;border-radius:12px}
+.logo-text{font-weight:900;font-size:1rem;white-space:nowrap}
 .nav-links{
-list-style:none;
-display:flex;
-align-items:center;
-justify-content:flex-end;
-gap:16px;
-flex-wrap:wrap;
+  list-style:none;display:flex;align-items:center;justify-content:flex-end;
+  gap:10px;flex-wrap:wrap;
 }
-
 .nav-links a{
-color:#fff;
-text-decoration:none;
-font-size:.94rem;
-font-weight:700;
-transition:.25s ease;
+  text-decoration:none;color:#fff;font-size:.86rem;font-weight:800;
+  padding:10px 12px;border-radius:999px;transition:.25s ease;
 }
-
-.nav-links a:hover{
-color:var(--gold);
-}
-
+.nav-links a:hover{background:rgba(255,255,255,.1);color:var(--gold)}
 .consulting-btn{
-background:linear-gradient(135deg,#0f172a,#1d4ed8);
-color:#fff!important;
-padding:12px 20px;
-border-radius:999px;
-box-shadow:0 10px 25px rgba(29,78,216,.25);
+  background:linear-gradient(135deg,#1167ff,#6e4bff)!important;
+  box-shadow:0 14px 32px rgba(17,103,255,.32);
 }
 
-/* Hero */
+/* HERO */
 .hero{
-min-height:86vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-background:
-linear-gradient(115deg,rgba(0,0,0,.42),rgba(0,0,0,.52)),
-url("hero.jpg") center/cover no-repeat;
-padding:90px 20px 70px;
+  position:relative;min-height:92vh;display:flex;align-items:center;
+  padding:90px 0 70px;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(circle at 16% 16%,rgba(73,217,255,.28),transparent 30%),
+    radial-gradient(circle at 86% 12%,rgba(255,213,106,.18),transparent 28%),
+    linear-gradient(135deg,#06162c 0%,#0b2a58 48%,#06162c 100%);
 }
-
-.hero-content{
-max-width:980px;
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size:54px 54px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent 85%);
 }
-
-.hero-logo{
-width:105px;
-margin:0 auto 22px;
-display:block;
-filter:drop-shadow(0 5px 14px rgba(0,0,0,.45));
+.hero:after{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(73,217,255,.28),transparent 65%);
+  right:-180px;bottom:-180px;animation:floatGlow 6s ease-in-out infinite;
 }
-
+@keyframes floatGlow{50%{transform:translateY(-28px) scale(1.08)}}
+.hero-grid{
+  position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;
+  gap:46px;align-items:center;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 16px;border-radius:999px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);
+  color:#dff7ff;font-size:.78rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.pulse-dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan);animation:blink 1.25s infinite}
+@keyframes blink{50%{opacity:.25}}
 .hero h1{
-font-family:'DM Serif Display',serif;
-font-size:clamp(2.6rem,5vw,5rem);
-font-weight:400;
-line-height:1.05;
-margin-bottom:20px;
-text-shadow:0 8px 28px rgba(0,0,0,.45);
+  font-size:clamp(3.2rem,7vw,6.7rem);line-height:.92;letter-spacing:-.07em;
+  margin-bottom:22px;font-weight:900;
 }
-
+.hero h1 span{
+  background:linear-gradient(90deg,#fff,#49d9ff,#ffd56a);
+  -webkit-background-clip:text;color:transparent;
+}
 .hero p{
-max-width:900px;
-margin:0 auto;
-font-size:1.08rem;
-line-height:1.85;
-color:rgba(255,255,255,.94);
+  font-size:1.08rem;line-height:1.85;color:#dce9f7;max-width:760px;
 }
-
-.hero-actions{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:14px;
-flex-wrap:wrap;
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:54px;
+  padding:0 24px;border-radius:999px;text-decoration:none;font-weight:900;
+  transition:.25s ease;border:1px solid transparent;
 }
-
-.btn-primary,
-.btn-secondary{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:14px 24px;
-border-radius:999px;
-text-decoration:none;
-font-weight:800;
-transition:.25s ease;
+.btn-primary{background:linear-gradient(135deg,#ffd56a,#fff1b8);color:#06162c;box-shadow:0 18px 40px rgba(255,213,106,.22)}
+.btn-secondary{background:rgba(255,255,255,.09);color:#fff;border-color:rgba(255,255,255,.24)}
+.btn:hover{transform:translateY(-3px)}
+.hero-panel{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:34px;padding:24px;box-shadow:var(--shadow);backdrop-filter:blur(18px);
 }
-
-.btn-primary{
-background:var(--gold);
-color:#111;
+.hero-main-image{
+  width:100%;display:block;border-radius:28px;box-shadow:0 28px 70px rgba(0,0,0,.35);
+  background:#fff;
 }
-
-.btn-secondary{
-background:rgba(255,255,255,.12);
-color:#fff;
-border:1px solid rgba(255,255,255,.35);
+.flash-badge{
+  display:block;text-align:center;text-decoration:none;color:#06162c;font-weight:950;
+  margin-bottom:18px;padding:14px 18px;border-radius:18px;
+  background:linear-gradient(90deg,#ff2d75,#ffd56a,#49d9ff,#7c5cff,#ff2d75);
+  background-size:300% 300%;
+  animation:gradientMove 4s ease infinite, softFlash 1.4s ease-in-out infinite;
 }
+@keyframes gradientMove{50%{background-position:100% 50%}}
+@keyframes softFlash{50%{opacity:.76;box-shadow:0 0 36px rgba(73,217,255,.5)}}
 
-.btn-primary:hover,
-.btn-secondary:hover{
-transform:translateY(-2px);
+/* DASHBOARD */
+.dashboard{
+  margin-top:-38px;position:relative;z-index:2;
 }
-
-/* Sections */
-.section{
-padding:76px 20px;
+.stat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
 }
-
-.section-title{
-text-align:center;
-margin-bottom:38px;
+.stat{
+  background:#fff;border:1px solid #dcecff;border-radius:26px;padding:26px;
+  box-shadow:0 18px 50px rgba(6,22,44,.18);
 }
+.stat strong{display:block;font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.06em;color:#0b2a58}
+.stat span{display:block;color:var(--muted);font-weight:800;font-size:.88rem;line-height:1.5}
 
-.gold-line{
-width:74px;
-height:5px;
-border-radius:999px;
-background:linear-gradient(90deg,#b68b2d,#f4d979,#b68b2d);
-margin:0 auto 18px;
+/* SECTIONS */
+.section{padding:82px 0}
+.light{background:linear-gradient(180deg,#f7fbff,#fff)}
+.dark{
+  background:
+    radial-gradient(circle at 80% 20%,rgba(73,217,255,.16),transparent 30%),
+    linear-gradient(135deg,#06162c,#0b2a58);
+  color:#fff;
 }
-
+.section-title{text-align:center;max-width:840px;margin:0 auto 42px}
+.section-title .eyebrow{color:#1167ff;font-weight:950;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px}
+.dark .section-title .eyebrow{color:#8beaff}
 .section-title h2{
-font-family:'DM Serif Display',serif;
-font-size:clamp(2.2rem,4vw,3.4rem);
-font-weight:400;
-color:#fff;
-margin-bottom:12px;
+  font-size:clamp(2.2rem,4.8vw,4.5rem);line-height:1;letter-spacing:-.06em;margin-bottom:16px;
 }
+.section-title p{color:var(--muted);line-height:1.8}
+.dark .section-title p{color:#dce9f7}
 
-.section-title p{
-max-width:760px;
-margin:0 auto;
-color:#dbe5f5;
-line-height:1.8;
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:#fff;border:1px solid #dcecff;border-radius:28px;padding:28px;
+  box-shadow:0 18px 50px rgba(6,22,44,.1);transition:.25s ease;
 }
-
-.premium-card{
-background:rgba(255,255,255,.97);
-border-radius:30px;
-padding:40px;
-box-shadow:var(--shadow);
-border:1px solid rgba(255,255,255,.4);
+.card:hover{transform:translateY(-8px);box-shadow:0 28px 80px rgba(6,22,44,.17);border-color:#8bdfff}
+.card .icon{
+  width:50px;height:50px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#1167ff,#49d9ff);color:#fff;font-size:24px;margin-bottom:18px;
 }
+.card h3{font-size:1.25rem;margin-bottom:10px;letter-spacing:-.03em}
+.card p{color:#5d7188;line-height:1.75;font-size:.95rem}
 
-.premium-card h3{
-font-family:'DM Serif Display',serif;
-font-size:2.1rem;
-font-weight:400;
-color:var(--navy);
-margin-bottom:14px;
+/* ECOSYSTEM */
+.ecosystem{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;
 }
-
-.premium-card p{
-color:#44546a;
-line-height:1.85;
-font-size:1rem;
-margin-bottom:16px;
+.eco-left{
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);
+  border-radius:34px;padding:36px;backdrop-filter:blur(18px);
 }
-
-.grid-2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:26px;
+.eco-left h3{font-size:clamp(2rem,4vw,3.4rem);line-height:1;letter-spacing:-.055em;margin-bottom:18px}
+.eco-left p{color:#dce9f7;line-height:1.85;margin-bottom:20px}
+.eco-tags{display:flex;flex-wrap:wrap;gap:10px}
+.eco-tags span{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);padding:9px 13px;border-radius:999px;font-weight:800;font-size:.82rem}
+.eco-map{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.eco-node{
+  min-height:140px;border-radius:28px;padding:24px;background:#fff;color:#06162c;
+  border:1px solid #dcecff;box-shadow:0 20px 60px rgba(0,0,0,.18);
 }
+.eco-node h4{font-size:1.1rem;margin-bottom:8px}
+.eco-node p{color:#5d7188;line-height:1.65;font-size:.9rem}
 
-.grid-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
+/* FEATURED */
+.featured-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.feature-card{
+  background:#fff;border-radius:26px;padding:24px;border:1px solid #dcecff;
+  box-shadow:0 18px 46px rgba(6,22,44,.1);min-height:240px;
+  display:flex;flex-direction:column;justify-content:space-between;
 }
+.feature-card h3{font-size:1.05rem;margin-bottom:10px;letter-spacing:-.03em}
+.feature-card p{font-size:.88rem;line-height:1.65;color:#5d7188;margin-bottom:18px}
+.feature-card a{font-weight:900;text-decoration:none;color:#1167ff}
 
-.small-card{
-background:#fff;
-border-radius:24px;
-padding:28px;
-box-shadow:0 14px 34px rgba(0,0,0,.14);
-border:1px solid rgba(212,175,55,.25);
+/* FOUNDER */
+.founder{
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:center;
 }
-
-.small-card h3{
-color:var(--navy);
-font-size:1.3rem;
-margin-bottom:12px;
+.quote-card{
+  background:#fff;border-radius:34px;padding:38px;border:1px solid #dcecff;
+  box-shadow:0 22px 70px rgba(6,22,44,.13);
 }
-
-.small-card p{
-color:#536377;
-line-height:1.8;
-font-size:.96rem;
+.quote-card h2{font-size:clamp(2rem,4vw,3.8rem);line-height:1;letter-spacing:-.055em;margin-bottom:18px}
+.quote-card p{color:#51667e;line-height:1.85;margin-bottom:16px}
+.signature{font-weight:950;color:#06162c;margin-top:18px}
+.founder-metric{
+  border-radius:34px;padding:36px;color:#fff;
+  background:linear-gradient(135deg,#06162c,#1167ff);
+  box-shadow:0 22px 70px rgba(6,22,44,.22);
 }
+.founder-metric strong{font-size:5rem;letter-spacing:-.08em;display:block;color:#ffd56a}
+.founder-metric span{font-weight:900}
 
-.founder-card{
-background:
-linear-gradient(135deg,#ffffff 0%,#fffaf0 55%,#ffffff 100%);
-border:1px solid rgba(212,175,55,.45);
-}
-
-.signature{
-margin-top:18px;
-font-weight:800;
-color:var(--navy);
-}
-
-.badge-row{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.badge{
-display:inline-flex;
-padding:9px 14px;
-border-radius:999px;
-background:#eef3ff;
-color:#1d3f8f;
-font-size:.82rem;
-font-weight:800;
-}
-
-.process-list{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:18px;
-}
-
-.process-item{
-background:#fff;
-border-radius:22px;
-padding:24px 20px;
-box-shadow:0 14px 34px rgba(0,0,0,.13);
-}
-
-.process-number{
-width:38px;
-height:38px;
-border-radius:50%;
-background:var(--gold);
-color:#111;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:900;
-margin-bottom:14px;
-}
-
-.process-item h3{
-color:var(--navy);
-font-size:1.04rem;
-margin-bottom:10px;
-}
-
-.process-item p{
-color:#536377;
-line-height:1.7;
-font-size:.92rem;
-}
-
-/* Contact */
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .contact-card{
-max-width:920px;
-margin:0 auto;
-background:#fff;
-color:var(--navy);
-border-radius:28px;
-padding:34px;
-box-shadow:var(--shadow);
+  background:#fff;border-radius:28px;padding:26px;border:1px solid #dcecff;
+  box-shadow:0 18px 46px rgba(6,22,44,.11);line-height:1.7;
 }
+.contact-card strong{display:block;color:#06162c;margin-bottom:6px}
+.contact-card a{color:#1167ff;text-decoration:none;font-weight:800}
+.video-wrap{max-width:820px;margin:32px auto 0}
+.video-wrap video{width:100%;border-radius:28px;box-shadow:0 22px 70px rgba(6,22,44,.25);background:#000}
 
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
+/* CTA + FOOTER */
+.final-cta{
+  text-align:center;border-radius:38px;padding:54px 28px;
+  background:linear-gradient(135deg,#06162c,#0b2a58,#1167ff);
+  color:#fff;box-shadow:var(--shadow);
 }
+.final-cta h2{font-size:clamp(2.2rem,5vw,4.6rem);line-height:1;letter-spacing:-.06em;margin-bottom:16px}
+.final-cta p{color:#dce9f7;max-width:760px;margin:0 auto 28px;line-height:1.8}
+footer{background:#06162c;color:#fff;text-align:center;padding:34px 20px;line-height:1.7;border-top:1px solid rgba(255,255,255,.12)}
 
-.contact-item{
-padding:16px;
-border-radius:18px;
-background:#f6f8fb;
-line-height:1.7;
+/* MOBILE */
+.mobile-menu-btn{display:none}
+@media(max-width:1050px){
+  .top-nav{align-items:flex-start}
+  .mobile-menu-btn{
+    display:inline-flex;margin-left:auto;background:rgba(255,255,255,.1);color:#fff;
+    border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;font-weight:900;
+  }
+  .nav-links{
+    display:none;width:100%;grid-template-columns:1fr;gap:8px;margin-top:14px;
+  }
+  .nav-links.open{display:grid}
+  .nav-links a{display:block;text-align:center;background:rgba(255,255,255,.07)}
 }
-
-.contact-label{
-display:block;
-font-weight:900;
-color:var(--navy);
-margin-bottom:4px;
+@media(max-width:900px){
+  .hero-grid,.ecosystem,.founder{grid-template-columns:1fr}
+  .stat-grid,.card-grid,.featured-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding:70px 0 54px}
+  .section{padding:64px 0}
+  .logo-text{white-space:normal}
 }
-
-.contact-card a{
-color:var(--blue);
-text-decoration:none;
-font-weight:700;
+@media(max-width:560px){
+  .container{width:min(100% - 28px,1180px)}
+  .top-nav{padding:10px 0}
+  .logo img{height:48px}
+  .hero h1{font-size:3.1rem}
+  .hero-panel,.quote-card,.final-cta{border-radius:28px;padding:24px}
+  .stat,.card,.eco-left,.eco-node,.feature-card,.founder-metric,.contact-card{border-radius:24px;padding:22px}
+  .flash-badge{font-size:.86rem}
 }
-
-.video-wrap{
-max-width:760px;
-margin:36px auto 0;
-}
-
-.video-wrap video{
-width:100%;
-border-radius:26px;
-box-shadow:var(--shadow);
-background:#000;
-}
-
-/* Footer */
-footer{
-background:var(--navy);
-color:#fff;
-text-align:center;
-padding:34px 20px;
-line-height:1.7;
-}
-
-/* Mobile */
-@media(max-width:980px){
-.top-nav{
-flex-direction:column;
-}
-  .hero-main-image{
-width:min(360px,92vw);
-border-radius:22px;
-margin-bottom:24px;
-}
-
-.logo{
-flex-direction:column;
-text-align:center;
-}
-
-.logo-text{
-white-space:normal;
-}
-
-.nav-links{
-justify-content:center;
-}
-
-.grid-2,
-.grid-3,
-.process-list,
-.contact-grid{
-grid-template-columns:1fr;
-}
-
-.premium-card{
-padding:28px 22px;
-}
-
-.section{
-padding:60px 18px;
-}
-}
-
-  .hero-main-image{
-width:min(520px,90vw);
-height:auto;
-margin:0 auto 28px;
-display:block;
-border-radius:28px;
-box-shadow:0 18px 45px rgba(0,0,0,.35);
-filter:drop-shadow(0 8px 22px rgba(0,0,0,.45));
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<nav class="container top-nav">
-<div class="logo">
-<img src="logo.png" alt="Government Workforce Network LLC Logo" />
-<span class="logo-text">Government Workforce Network LLC</span>
-</div>
+  <nav class="container top-nav">
+    <a class="logo" href="/">
+      <img src="logo.png" alt="Government Workforce Network LLC Logo" />
+      <span class="logo-text">Government Workforce Network LLC</span>
+    </a>
 
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="/structure">Our Structure</a></li>
-<li><a href="/workforce-intelligence-team">Leadership</a></li>
-<li><a href="/consulting">Solutions</a></li>
-<li><a href="/initiatives">Initiatives</a></li>
-<li><a href="/career-center-partners">University Network</a></li>
-<li><a href="/events">Events</a></li>
-<li><a href="/lounge">Virtual Lounges</a></li>
-<li><a href="/workforce-tv">Workforce TV</a></li>
-<li><a href="/talent-connect">Talent Connect - USA</a></li>
-<li><a href="/talent-connect-global">Talent Connect - GLOBAL</a></li>
-<li>
-<a href="#" class="consulting-btn" onclick="openCalendly(); return false;">
-Schedule a Consultation
-</a>
-</li>
-</ul>
-</nav>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">Menu</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/who-we-are">Who We Are</a></li>
+      <li><a href="/initiatives">Programs</a></li>
+      <li><a href="/consulting">Solutions</a></li>
+      <li><a href="/career-center-partners">University Network</a></li>
+      <li><a href="/events">Events</a></li>
+      <li><a href="/lounge">Virtual Lounges</a></li>
+      <li><a href="/workforce-tv">Workforce TV</a></li>
+      <li><a href="#" class="consulting-btn" onclick="openCalendly(); return false;">Schedule Consultation</a></li>
+    </ul>
+  </nav>
 </header>
 
+<main>
+
 <section class="hero">
-<div class="hero-content">
-<img src="hero.png" class="hero-main-image" alt="Government Workforce Network LLC">
-<h1>Together, Building Income, Opportunity, and Well-Being</h1>
-<p>
-Government Workforce Network LLC is a consulting workforce modernization, workforce intelligence, and innovation-focused organization supporting AI-enabled engagement, talent visibility, workforce accessibility, operational readiness, and emerging workforce solutions across evolving public and private sector ecosystems.
-</p>
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker"><span class="pulse-dot"></span> Workforce Visibility Ecosystem</div>
+      <h1>Together, Building Income, Opportunity, and Well-Being.</span></h1>
+      <p>
+        Government Workforce Network LLC is a consulting workforce modernization, workforce intelligence, and innovation-focused organization supporting AI-enabled engagement, talent visibility, workforce accessibility, operational readiness, and emerging workforce solutions across evolving public and private sector ecosystems.
+      </p>
 
-<div class="hero-actions">
-<a href="/consulting" class="btn-primary">Explore Consulting Services</a>
-</div>
-</div>
+      <div class="hero-actions">
+        <a href="/initiatives" class="btn btn-primary">Explore Programs</a>
+        <a href="/career-center-partners" class="btn btn-secondary">University Network</a>
+        <a href="#" class="btn btn-secondary" onclick="openCalendly(); return false;">Schedule Consultation</a>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <a href="/events" class="flash-badge">Career Connection Festivals & Workforce Events Now Open</a>
+      <img src="hero.png" class="hero-main-image" alt="Government Workforce Network LLC" />
+    </div>
+  </div>
 </section>
 
-<section id="about" class="section">
-<div class="container">
-<div class="section-title">
-<div class="gold-line"></div>
-<h2>Who We Are</h2>
-<p>
-A human-centered, AI-ready workforce organization built for a changing world.
-</p>
-</div>
-
-<div class="grid-2">
-<div class="premium-card">
-<h3>Our Purpose</h3>
-<p>
-Government Workforce Network LLC was created to strengthen workforce access, visibility, and opportunity for individuals, communities, and organizations.
-</p>
-<p>
-We support workforce modernization, recruitment strategy, AI readiness, talent engagement, and practical workforce solutions for public, private, and mission-driven organizations.
-</p>
-</div>
-
-<div class="premium-card">
-<h3>Our Global Reach</h3>
-<p>
-Our consulting services are available to organizations across the United States and internationally.
-</p>
-<p>
-We support organizations globally that are seeking practical, human-centered, and AI-aligned workforce solutions designed for today’s evolving workforce environment.
-</p>
-</div>
-</div>
-</div>
+<section class="dashboard">
+  <div class="container stat-grid">
+    <div class="stat"><strong>887</strong><span>University Network Connections</span></div>
+    <div class="stat"><strong>50+</strong><span>Statewide Outreach </span></div>
+    <div class="stat"><strong>USA</strong><span>National Workforce Engagement</span></div>
+    <div class="stat"><strong>Global</strong><span>Growing International Presence</span></div>
+  </div>
 </section>
 
-<section class="section">
-<div class="container">
-<div class="grid-3">
-<div class="small-card">
-<h3>Mission</h3>
-<p>
-To build an integrated ecosystem that strengthens income pathways, expands access to opportunity, and promotes well-being through consulting, workforce initiatives, and community-driven collaboration.
-</p>
-</div>
+<section class="section light">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Who We Serve</div>
+      <h2>Built for the people traditional systems overlook.</h2>
+      <p>
+        The workforce is changing fast. Visibility now matters as much as experience.
+        We help people and organizations connect through modern, practical, and human-centered pathways.
+      </p>
+    </div>
 
-<div class="small-card">
-<h3>Vision</h3>
-<p>
-To cultivate a recognized workforce ecosystem where organizations and individuals thrive through expanded opportunity, structured growth, and sustainable economic empowerment.
-</p>
-</div>
-
-<div class="small-card">
-<h3>Positioning</h3>
-<p>
-We combine human intelligence with artificial intelligence to support workforce modernization, talent visibility, engagement, and readiness for what comes next.
-</p>
-</div>
-</div>
-</div>
+    <div class="card-grid">
+      <div class="card"><div class="icon">🎓</div><h3>Students</h3><p>Helping emerging talent become more visible, competitive, and connected to employers beyond traditional experience filters.</p></div>
+      <div class="card"><div class="icon">🏢</div><h3>Employers</h3><p>Supporting employer visibility, recruitment engagement, virtual events, workforce readiness, and partnership opportunities.</p></div>
+      <div class="card"><div class="icon">🎖️</div><h3>Veterans</h3><p>Creating pathways for military-experienced talent, business ownership visibility, and workforce transition support.</p></div>
+      <div class="card"><div class="icon">💼</div><h3>Professionals</h3><p>Supporting career visibility, skill translation, networking, and access to evolving workforce opportunities.</p></div>
+      <div class="card"><div class="icon">🚀</div><h3>Entrepreneurs</h3><p>Helping small businesses and emerging founders gain visibility, structure, and opportunity access.</p></div>
+      <div class="card"><div class="icon">🌎</div><h3>Communities</h3><p>Building community-centered workforce initiatives designed around access, visibility, and practical growth.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-<div class="container">
-<div class="section-title">
-<div class="gold-line"></div>
-<h2>Why We Were Built</h2>
-<p>
-We did not build another traditional workforce organization. We built a different model.
-</p>
-</div>
+<section class="section dark">
+  <div class="container ecosystem">
+    <div class="eco-left">
+      <div class="kicker"><span class="pulse-dot"></span> The GWN Ecosystem</div>
+      <h3>Not a single service. A connected workforce platform.</h3>
+      <p>
+        Government Workforce Network is structured as an ecosystem connecting programs, solutions,
+        university engagement, virtual experiences, employer visibility, and community-driven initiatives.
+      </p>
+      <div class="eco-tags">
+        <span>Visibility</span><span>Opportunity</span><span>AI-Ready</span><span>Human-Centered</span><span>Global</span>
+      </div>
+    </div>
 
-<div class="premium-card founder-card">
-<h3>A Different Workforce Model</h3>
-<p>
-Traditional workforce systems often rely on legacy structures that can leave people behind. Government Workforce Network LLC was built to create a more accessible, practical, and people-centered way to connect talent, organizations, and opportunity.
-</p>
-<p>
-Our model is designed to complement existing systems, not replace them. We help organizations strengthen what they already have while building new pathways for visibility, engagement, and workforce readiness.
-</p>
-
-<div class="badge-row">
-<span class="badge">AI-Ready</span>
-<span class="badge">Human-Centered</span>
-<span class="badge">Compliance-Aware</span>
-<span class="badge">Globally Accessible</span>
-</div>
-</div>
-</div>
+    <div class="eco-map">
+      <div class="eco-node"><h4>Programs</h4><p>University Network, Workforce TV, Talent Connect, and Career Connection Festivals.</p></div>
+      <div class="eco-node"><h4>Solutions</h4><p>Consulting, workforce innovation, employer visibility, and virtual event solutions.</p></div>
+      <div class="eco-node"><h4>Virtual Lounges</h4><p>Online spaces for hiring, networking, training, meetings, and engagement.</p></div>
+      <div class="eco-node"><h4>Community</h4><p>Workforce initiatives supporting students, veterans, professionals, and entrepreneurs.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-<div class="container">
-<div class="section-title">
-<div class="gold-line"></div>
-<h2>How It Works</h2>
-<p>
-Our ecosystem is designed to expand access without adding unnecessary complexity.
-</p>
-</div>
+<section class="section light">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Featured Programs</div>
+      <h2>Flagship initiatives built for visibility.</h2>
+      <p>These programs give Government Workforce Network its reach, relevance, and growth engine.</p>
+    </div>
 
-<div class="process-list">
-<div class="process-item">
-<div class="process-number">1</div>
-<h3>Access Without Barriers</h3>
-<p>Designed to reduce unnecessary friction while supporting privacy-conscious engagement, accessibility, and user control across evolving workforce environments.</p>
-</div>
-
-<div class="process-item">
-<div class="process-number">2</div>
-<h3>Skill Translation</h3>
-<p>AI-enabled tools and workforce guidance help translate experience, skills, and capabilities into workforce-ready language and opportunities.</p>
-</div>
-
-<div class="process-item">
-<div class="process-number">3</div>
-<h3>User Control</h3>
-<p>Participants maintain control over how information is used, shared, and engaged across workforce pathways and experiences.</p>
-</div>
-
-<div class="process-item">
-<div class="process-number">4</div>
-<h3>Connection</h3>
-<p>Individuals are positioned for employment, education, workforce visibility, and emerging career opportunities through structured engagement.</p>
-</div>
-
-<div class="process-item">
-<div class="process-number">5</div>
-<h3>Institutional Support</h3>
-<p>Organizations can participate through flexible, scalable workforce engagement models designed to complement existing systems and operational goals.
-</p>
-</div>
-</div>
-</div>
+    <div class="featured-grid">
+      <div class="feature-card"><div><h3>University Network</h3><p>887 university network connections built to expand student visibility and employer access.</p></div><a href="/career-center-partners">Explore →</a></div>
+      <div class="feature-card"><div><h3>Career Connection Festivals</h3><p>Virtual career engagement experiences connecting employers with talent communities.</p></div><a href="/events">Explore →</a></div>
+      <div class="feature-card"><div><h3>Workforce TV</h3><p>Thought-leadership conversations on hiring, classification, screening, and workforce change.</p></div><a href="/workforce-tv">Watch →</a></div>
+      <div class="feature-card"><div><h3>Talent Connect USA</h3><p>National talent visibility and connection pathway for U.S.-based participants.</p></div><a href="/talent-connect">Explore →</a></div>
+      <div class="feature-card"><div><h3>Talent Connect Global</h3><p>International workforce visibility and connection program for global participants.</p></div><a href="/talent-connect-global">Explore →</a></div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-<div class="container">
-<div class="premium-card founder-card">
-<h3>A Note from the Founder</h3>
-<p>
-After 20+ years working inside HR and recruitment systems, I saw firsthand how workforce systems can leave people behind and how AI would make visibility even more important.
-</p>
-<p>
-I built Government Workforce Network LLC because workforce development needs a model that centers real people, lived experience, practical solutions, and community connection.
-</p>
-<p>
-As a hands-on founder, I lead the creation, workflows, and solutions to ensure our work remains practical, impactful, measurable, and built with compliance in mind.
-</p>
-<p>
-We are building something different because this moment requires something different.
-</p>
+<section class="section dark">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Solutions</div>
+      <h2>Workforce modernization without the outdated playbook.</h2>
+      <p>
+        We support organizations seeking practical, human-centered, and AI-aligned workforce solutions
+        designed for today’s evolving workforce environment.
+      </p>
+    </div>
 
-<div class="signature">
-— Marivel Morgana Nunez, Founder<br>
-Government Workforce Network LLC
-</div>
-</div>
-</div>
+    <div class="card-grid">
+      <div class="card"><div class="icon">⚙️</div><h3>Consulting</h3><p>Workforce strategy, program design, employer engagement, and operational readiness support.</p></div>
+      <div class="card"><div class="icon">🧠</div><h3>Workforce Intelligence</h3><p>Modern insight-driven support for talent visibility, engagement, classification, and future readiness.</p></div>
+      <div class="card"><div class="icon">🌐</div><h3>Virtual Engagement</h3><p>Virtual lounges, events, employer pages, career festivals, and online workforce experiences.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-<div class="container">
-<div class="section-title">
-<div class="gold-line"></div>
-<h2>Federal Registration & Classification</h2>
-<p>
-Government Workforce Network LLC is registered to support workforce initiatives, consulting, and development services.
-</p>
-</div>
+<section class="section light">
+  <div class="container founder">
+    <div class="founder-metric">
+      <strong>20+</strong>
+      <span>Years of HR, recruitment, workforce, and public service experience behind the mission.</span>
+    </div>
 
-<div class="premium-card">
-<h3>SAM.gov Registration</h3>
-<p>
-Government Workforce Network LLC is a registered entity in the System for Award Management.
-</p>
-<p>
-<strong>UEI:</strong> L8PDM1AKWB89
-</p>
-</div>
-</div>
+    <div class="quote-card">
+      <h2>Founder-led. Built from real workforce experience.</h2>
+      <p>
+        After 20+ years working inside HR and recruitment systems, I saw firsthand how workforce systems can leave
+        people behind and how AI would make visibility even more important.
+      </p>
+      <p>
+        Government Workforce Network LLC was built because this moment requires a workforce model that centers real people,
+        lived experience, practical solutions, and community connection.
+      </p>
+      <div class="signature">— Marivel Morgana Nunez, Founder<br>Government Workforce Network LLC</div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-<div class="container">
-<div class="section-title">
-<div class="gold-line"></div>
-<h2>Connect With Us</h2>
-<p>
-For consulting, collaboration, initiatives, or workforce partnership inquiries, contact us below.
-</p>
-</div>
-
-<div class="contact-card">
-<div class="contact-grid">
-<div class="contact-item">
-<span class="contact-label">Phone</span>
-<a href="tel:+19497752175"> (+1) 949-775-2175</a>
-</div>
-
-<div class="contact-item">
-<span class="contact-label">Email</span>
-<a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a>
-</div>
-
-<div class="contact-item">
-<span class="contact-label">Office Address</span>
-23046 Avenida de la Carlota, Suite #600 Laguna Hills, CA 92653
-</div>
-
-<div class="contact-item">
-<span class="contact-label">Hours</span>
-Monday - Friday, 9:00 a.m. - 4:00 p.m. PT
-</div>
-
-<div class="contact-item">
-<span class="contact-label">Consulting</span>
-<a href="#" onclick="openCalendly(); return false;">Schedule a Consultation</a>
-</div>
-  
-  <div class="contact-item">
-<span class="contact-label">Instagram</span>
-<a href="https://instagram.com/government_workforce_network" target="_blank">@government_workforce_network</a>
-</div>
-
-  <div class="contact-item">
-<span class="contact-label">YouTube</span>
-<a href="https://youtube.com/@government_workforce_network?si=j4E9JMkhU9PL1eJ4" target="_blank">@government_workforce_network</a>
-</div>
-
-  <div class="contact-item">
-<span class="contact-label">TikTok</span>
-<a href="https://www.tiktok.com/@government.workfo?_r=1&_t=ZP-96OoDx4cI7q" target="_blank">@government_workforce_network</a>
-</div>
-</div>
-</div>
-
-<div class="video-wrap">
-<video id="welcome-video" controls playsinline preload="metadata">
-<source src="/welcome.mp4" type="video/mp4" />
-Your browser does not support the video tag.
-</video>
-</div>
-</div>
+<section class="section light">
+  <div class="container">
+    <div class="final-cta">
+      <h2>Ready to connect?</h2>
+      <p>
+        Explore our workforce programs, university engagement, virtual experiences, consulting solutions,
+        and national visibility initiatives.
+      </p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="/initiatives" class="btn btn-primary">Explore Programs</a>
+        <a href="/consulting" class="btn btn-secondary">View Solutions</a>
+        <a href="#" class="btn btn-secondary" onclick="openCalendly(); return false;">Schedule Consultation</a>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="section light" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Contact</div>
+      <h2>Connect With Us</h2>
+      <p>For consulting, collaboration, initiatives, or workforce partnership inquiries, contact us below.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card"><strong>Phone</strong><a href="tel:+19497752175">(+1) 949-775-2175</a></div>
+      <div class="contact-card"><strong>Email</strong><a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a></div>
+      <div class="contact-card"><strong>Office Address</strong>23046 Avenida de la Carlota, Suite #600<br>Laguna Hills, CA 92653</div>
+      <div class="contact-card"><strong>Hours</strong>Monday - Friday, 9:00 a.m. - 4:00 p.m. PT</div>
+      <div class="contact-card"><strong>Instagram</strong><a href="https://instagram.com/government_workforce_network" target="_blank">@government_workforce_network</a></div>
+      <div class="contact-card"><strong>YouTube</strong><a href="https://youtube.com/@government_workforce_network?si=j4E9JMkhU9PL1eJ4" target="_blank">@government_workforce_network</a></div>
+      <div class="contact-card"><strong>TikTok</strong><a href="https://www.tiktok.com/@government.workfo?_r=1&_t=ZP-96OoDx4cI7q" target="_blank">@government_workforce_network</a></div>
+      <div class="contact-card"><strong>SAM.gov Registration</strong>UEI: L8PDM1AKWB89</div>
+    </div>
+
+    <div class="video-wrap">
+      <video id="welcome-video" controls playsinline preload="metadata">
+        <source src="/welcome.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
-<p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
-<p>Together, Building Income, Opportunity, and Well-Being</p>
+  <p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
+  <p>Connecting people, opportunity, and workforce visibility.</p>
 </footer>
 
 <script>
-function openCalendly(){
-if(window.Calendly){
-Calendly.initPopupWidget({
-url:'https://calendly.com/admin-governmentworkforcenetwork/30min'
-});
-} else {
-window.open('https://calendly.com/admin-governmentworkforcenetwork/30min','_blank');
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
 }
+function openCalendly(){
+  if(window.Calendly){
+    Calendly.initPopupWidget({
+      url:'https://calendly.com/admin-governmentworkforcenetwork/30min'
+    });
+  } else {
+    window.open('https://calendly.com/admin-governmentworkforcenetwork/30min','_blank');
+  }
 }
 </script>
 
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjZhMWI1YTVhMDc0YzMwMDAwOGU4YzA1YiIsImlzc3VlciI6Im5mc2VydmVyIn0.601jL3gMODEDjNay5qSCwL-mxA36aRO-fOxKAv1FK-0"></script>
 </body>
 </html>
-
-
