@@ -38,9 +38,28 @@ header{position:sticky;top:0;z-index:1000;background:rgba(6,22,44,.9);backdrop-f
 @media(max-width:900px){.hero-grid,.ecosystem,.founder{grid-template-columns:1fr}.stat-grid,.card-grid,.featured-grid,.contact-grid{grid-template-columns:1fr}.eco-map{grid-template-columns:1fr}.hero{padding:70px 0 54px}.section{padding:64px 0}.logo-text{white-space:normal}.card-image{height:250px}}
 @media(max-width:560px){.container{width:min(100% - 28px,1180px)}.top-nav{padding:10px 0}.logo img{height:48px}.hero h1{font-size:3.05rem}.hero-panel,.quote-card,.final-cta{border-radius:28px;padding:24px}.stat,.card,.eco-left,.eco-node,.feature-card,.founder-metric,.contact-card{border-radius:24px;padding:22px}.flash-badge{font-size:.86rem}.card-image{height:220px}}
 </style>
+  <style>
+.nav-flash{
+background:linear-gradient(135deg,#d4af37,#f6d76b);
+color:#071426!important;
+padding:12px 20px;
+border-radius:999px;
+font-weight:800;
+text-decoration:none;
+animation:pulseGold 1.4s infinite;
+box-shadow:0 0 0 rgba(212,175,55,.7);
+}
+
+@keyframes pulseGold{
+0%{box-shadow:0 0 0 0 rgba(212,175,55,.7);}
+70%{box-shadow:0 0 0 12px rgba(212,175,55,0);}
+100%{box-shadow:0 0 0 0 rgba(212,175,55,0);}
+}
+</style>
 </head>
 <body>
-<header><nav class="container top-nav"><a class="logo" href="/"><img src="logo.png" alt="Government Workforce Network LLC Logo" /><span class="logo-text">Government Workforce Network LLC</span></a><button class="mobile-menu-btn" onclick="toggleMenu()">Menu</button><ul class="nav-links" id="navLinks"><li><a href="/">Home</a></li><li><a href="/who-we-are">Who We Are</a></li><li><a href="/initiatives">Programs</a></li><li><a href="/consulting">Solutions</a></li><li><a href="/career-center-partners">University Network</a></li><li><a href="/events">Events</a></li><li><a href="/lounge">Virtual Lounges</a></li><li><a href="/workforce-tv">Workforce TV</a></li><li><a href="#" class="consulting-btn" onclick="openCalendly(); return false;">Schedule Consultation</a></li></ul></nav></header>
+<header><nav class="container top-nav"><a class="logo" href="/"><img src="logo.png" alt="Government Workforce Network LLC Logo" /><span class="logo-text">Government Workforce Network LLC</span></a><button class="mobile-menu-btn" onclick="toggleMenu()">Menu</button><ul class="nav-links" id="navLinks"><li><a href="/">Home</a></li><li><a href="/who-we-are">Who We Are</a></li><li><a href="/initiatives">Programs</a></li><li><a href="/consulting">Solutions</a></li><li><a href="/career-center-partners">University Network</a></li><li><a href="/events">Events</a></li><li><a href="/lounge">Virtual Lounges</a></li><li><a href="/workforce-tv">Workforce TV</a></li><li><a href="#" class="consulting-btn" onclick="openCalendly(); return false;">Schedule Consultation</a> <a href="/career-connection-registration" class="nav-flash">
+Career Connection Festival | 2026</a></li></ul></nav></header>
 <main>
 <section class="hero"><div class="container hero-grid"><div><div class="kicker"><span class="pulse-dot"></span> Workforce Visibility Ecosystem | AI-Ready</div><div class="kicker"><span class="pulse-dot"></span> SAM.gov Registration | UEI: L8PDM1AKWB89</div><h2>Together, Building Income, Opportunity, and <span>Well-Being.</span></h2><p>Government Workforce Network LLC is a consulting workforce modernization, workforce intelligence, and innovation-focused organization supporting AI-enabled engagement, talent visibility, workforce accessibility, operational readiness, and emerging workforce solutions across evolving public and private sector ecosystems.</p><div class="hero-actions"><a href="/initiatives" class="btn btn-primary">Explore Programs</a><a href="/career-center-partners" class="btn btn-secondary">University Network</a><a href="#" class="btn btn-secondary" onclick="openCalendly(); return false;">Schedule Consultation</a></div></div><div class="hero-panel"><a href="/events" class="flash-badge">Register Now! Statewide Career Connection Festivals | California | New York | Pennsylvania</a><img src="hero.png" class="hero-main-image" alt="Government Workforce Network LLC" /></div></div></section>
 <section class="dashboard"><div class="container stat-grid"><div class="stat"><strong>887</strong><span>University Network Connections</span></div><div class="stat"><strong>50+</strong><span>Statewide Outreach</span></div><div class="stat"><strong>USA</strong><span>National Workforce Engagement</span></div><div class="stat"><strong>Global</strong><span>Growing International Presence</span></div></div></section>
