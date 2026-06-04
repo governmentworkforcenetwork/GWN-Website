@@ -1,26 +1,29 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Events | Government Workforce Network LLC</title>
+<title>Events & Media | Government Workforce Network LLC</title>
+<meta name="description" content="Explore upcoming events, past engagements, media highlights, workforce conversations, career connection festivals, and community visibility events by Government Workforce Network LLC." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
 :root{
 --navy:#071429;
 --navy2:#0b1f3a;
---blue:#162a63;
+--blue:#173b8f;
 --gold:#d8b24c;
 --gold2:#e7c46a;
 --white:#ffffff;
---cream:#f7f2e8;
+--cream:#f8f3e8;
 --text:#172033;
 --muted:#64748b;
+--soft:#eef3ff;
 --line:rgba(255,255,255,.14);
 --shadow:0 24px 70px rgba(0,0,0,.28);
 }
@@ -29,7 +32,7 @@
 html{scroll-behavior:smooth}
 body{
 font-family:'Sora',Arial,sans-serif;
-background:linear-gradient(180deg,#071429 0%,#102b63 45%,#071429 100%);
+background:linear-gradient(180deg,#071429 0%,#102b63 48%,#071429 100%);
 color:var(--white);
 overflow-x:hidden;
 }
@@ -40,7 +43,7 @@ top:0;
 z-index:1000;
 background:rgba(5,13,28,.92);
 backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(216,178,76,.22);
+border-bottom:1px solid rgba(216,178,76,.24);
 padding:16px 32px;
 display:flex;
 justify-content:space-between;
@@ -65,26 +68,26 @@ nav a{
 color:#fff;
 text-decoration:none;
 font-size:14px;
-font-weight:700;
+font-weight:800;
 }
 
 nav a:hover{color:var(--gold)}
 
-.nav-pay{
+.nav-highlight{
 background:var(--gold);
-color:#08162b!important;
+color:#071429!important;
 padding:11px 18px;
 border-radius:999px;
-font-weight:800;
+font-weight:900;
 }
 
 /* HERO */
 .hero{
 position:relative;
-min-height:86vh;
+min-height:78vh;
 display:flex;
 align-items:center;
-padding:110px 24px 80px;
+padding:105px 24px 80px;
 overflow:hidden;
 }
 
@@ -93,8 +96,8 @@ content:"";
 position:absolute;
 inset:0;
 background:
-radial-gradient(circle at 72% 32%,rgba(216,178,76,.15),transparent 34%),
-radial-gradient(circle at 18% 80%,rgba(255,255,255,.07),transparent 35%),
+radial-gradient(circle at 75% 28%,rgba(216,178,76,.17),transparent 34%),
+radial-gradient(circle at 18% 78%,rgba(255,255,255,.08),transparent 35%),
 linear-gradient(rgba(216,178,76,.035) 1px,transparent 1px),
 linear-gradient(90deg,rgba(216,178,76,.035) 1px,transparent 1px);
 background-size:auto,auto,64px 64px,64px 64px;
@@ -111,13 +114,13 @@ width:100%;
 display:inline-flex;
 align-items:center;
 gap:9px;
-border:1px solid rgba(216,178,76,.34);
+border:1px solid rgba(216,178,76,.36);
 background:rgba(216,178,76,.12);
 color:var(--gold);
 padding:9px 16px;
 border-radius:999px;
 font-size:12px;
-font-weight:800;
+font-weight:900;
 letter-spacing:.1em;
 text-transform:uppercase;
 margin-bottom:26px;
@@ -133,16 +136,16 @@ border-radius:50%;
 
 h1{
 font-family:'DM Serif Display',serif;
-font-size:clamp(48px,7vw,88px);
+font-size:clamp(50px,7vw,92px);
 line-height:.98;
-max-width:880px;
+max-width:950px;
 margin-bottom:24px;
 }
 
 h1 span{color:var(--gold)}
 
 .hero-sub{
-max-width:760px;
+max-width:780px;
 color:#dbe6f7;
 font-size:18px;
 line-height:1.85;
@@ -159,7 +162,7 @@ flex-wrap:wrap;
 display:inline-block;
 text-decoration:none;
 border-radius:999px;
-padding:15px 26px;
+padding:15px 25px;
 font-weight:900;
 font-size:14px;
 transition:.25s ease;
@@ -177,7 +180,7 @@ transform:translateY(-2px);
 
 .btn-secondary{
 color:#fff;
-border:1px solid rgba(255,255,255,.28);
+border:1px solid rgba(255,255,255,.3);
 }
 
 .btn-secondary:hover{
@@ -186,12 +189,12 @@ color:var(--gold);
 transform:translateY(-2px);
 }
 
-/* STATS */
+/* QUICK STATS */
 .stats{
 max-width:1180px;
-margin:-54px auto 0;
+margin:-50px auto 0;
 position:relative;
-z-index:2;
+z-index:3;
 padding:0 24px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -199,9 +202,9 @@ gap:16px;
 }
 
 .stat{
-background:rgba(255,255,255,.96);
+background:rgba(255,255,255,.97);
 color:var(--navy);
-border-radius:22px;
+border-radius:24px;
 padding:28px 20px;
 text-align:center;
 box-shadow:var(--shadow);
@@ -223,7 +226,7 @@ text-transform:uppercase;
 letter-spacing:.08em;
 }
 
-/* SECTIONS */
+/* GENERAL */
 .container{
 max-width:1180px;
 margin:0 auto;
@@ -232,7 +235,7 @@ padding:90px 24px;
 
 .section-heading{
 text-align:center;
-margin-bottom:38px;
+margin-bottom:42px;
 }
 
 .section-kicker{
@@ -246,7 +249,7 @@ margin-bottom:12px;
 
 .section-heading h2{
 font-family:'DM Serif Display',serif;
-font-size:clamp(34px,4vw,56px);
+font-size:clamp(34px,4vw,58px);
 line-height:1.08;
 }
 
@@ -257,41 +260,41 @@ color:#d7e1f2;
 line-height:1.8;
 }
 
-/* FEATURE EXPO */
-.expo-card{
+/* FEATURE EVENT */
+.feature-card{
 background:linear-gradient(135deg,#ffffff 0%,#f8f3e8 100%);
 color:var(--text);
-border-radius:34px;
+border-radius:36px;
 overflow:hidden;
 box-shadow:var(--shadow);
 display:grid;
-grid-template-columns:1.1fr .9fr;
+grid-template-columns:1.2fr .8fr;
 }
 
-.expo-copy{
-padding:46px;
+.feature-copy{
+padding:48px;
 }
 
-.expo-copy h2{
+.feature-copy h2{
 font-family:'DM Serif Display',serif;
 font-size:48px;
 line-height:1.05;
-margin-bottom:18px;
 color:#071429;
-}
-
-.expo-copy p{
-color:#4b5c72;
-line-height:1.85;
 margin-bottom:18px;
-font-size:15.5px;
 }
 
-.expo-pills{
+.feature-copy p{
+color:#475569;
+line-height:1.85;
+font-size:15.5px;
+margin-bottom:16px;
+}
+
+.pill-row{
 display:flex;
 gap:10px;
 flex-wrap:wrap;
-margin:24px 0;
+margin:24px 0 28px;
 }
 
 .pill{
@@ -303,14 +306,14 @@ font-size:12px;
 font-weight:900;
 }
 
-.price-panel{
+.feature-panel{
 background:#071429;
-padding:46px;
+padding:48px;
 color:#fff;
 position:relative;
 }
 
-.price-panel:before{
+.feature-panel:before{
 content:"";
 position:absolute;
 top:0;
@@ -320,99 +323,45 @@ height:5px;
 background:linear-gradient(90deg,var(--gold),var(--gold2));
 }
 
-.price{
+.feature-date{
 font-family:'DM Serif Display',serif;
+font-size:46px;
+line-height:1.05;
 color:var(--gold);
-font-size:70px;
-line-height:1;
+margin-bottom:18px;
 }
 
-.price-sub{
-color:rgba(255,255,255,.58);
-margin:8px 0 28px;
-font-size:13px;
-font-weight:700;
-}
-
-.perks{
-list-style:none;
-margin-bottom:32px;
-}
-
-.perks li{
-padding:12px 0;
-border-bottom:1px solid rgba(255,255,255,.1);
+.feature-detail{
 color:rgba(255,255,255,.82);
-line-height:1.5;
+line-height:1.75;
 font-size:14px;
-}
-
-.perks li:before{
-content:"✦ ";
-color:var(--gold);
-font-weight:900;
-}
-
-.note{
-margin-top:16px;
-font-size:12px;
-color:rgba(255,255,255,.42);
-line-height:1.6;
-}
-
-/* HOW */
-.steps{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.step{
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12);
-border-radius:24px;
-padding:28px;
-}
-
-.step-num{
-font-family:'DM Serif Display',serif;
-color:rgba(216,178,76,.45);
-font-size:48px;
-}
-
-.step h3{
-margin:10px 0;
-font-size:20px;
-}
-
-.step p{
-color:#c7d4e8;
-font-size:14px;
-line-height:1.7;
+margin-bottom:26px;
 }
 
 /* EVENTS */
 .events-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:26px;
+gap:24px;
 }
 
 .event-card{
 background:#fff;
 color:#222;
-border-radius:24px;
+border-radius:26px;
 padding:28px;
 box-shadow:0 16px 38px rgba(0,0,0,.2);
 transition:.25s ease;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:280px;
 }
 
-.event-card:hover{
-transform:translateY(-4px);
-}
+.event-card:hover{transform:translateY(-4px)}
 
 .event-title{
-font-size:21px;
+font-size:20px;
 font-weight:900;
 color:#071429;
 line-height:1.35;
@@ -434,6 +383,15 @@ line-height:1.8;
 margin-bottom:18px;
 }
 
+.card-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:auto;
+}
+
 .tag{
 display:inline-block;
 border-radius:999px;
@@ -449,32 +407,115 @@ background:#eef0f4;
 color:#667085;
 }
 
-/* PARTNER */
-.partner-card{
-background:rgba(255,255,255,.96);
-color:var(--text);
-border-radius:30px;
-padding:40px;
-box-shadow:var(--shadow);
+.tag.save{
+background:#fff4d8;
+color:#8a6400;
 }
 
-.partner-card h2{
-font-family:'DM Serif Display',serif;
-font-size:40px;
-margin-bottom:14px;
-color:#071429;
-}
-
-.partner-card p{
-color:#475569;
-line-height:1.8;
-margin-bottom:14px;
-}
-
-.partner-card a{
+.small-link{
 color:#173b8f;
 font-weight:900;
+font-size:13px;
 text-decoration:none;
+}
+
+.small-link:hover{color:#071429}
+
+/* MEDIA */
+.media-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.media-card{
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.14);
+border-radius:28px;
+padding:30px;
+min-height:250px;
+position:relative;
+overflow:hidden;
+}
+
+.media-card:before{
+content:"";
+position:absolute;
+top:-60px;
+right:-60px;
+width:150px;
+height:150px;
+background:rgba(216,178,76,.13);
+border-radius:50%;
+}
+
+.media-icon{
+font-size:34px;
+margin-bottom:18px;
+}
+
+.media-card h3{
+font-size:22px;
+margin-bottom:12px;
+}
+
+.media-card p{
+color:#c7d4e8;
+font-size:14px;
+line-height:1.8;
+}
+
+.media-placeholder{
+margin-top:22px;
+display:inline-block;
+color:var(--gold);
+font-size:12px;
+font-weight:900;
+letter-spacing:.08em;
+text-transform:uppercase;
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#ffffff 0%,#f7f2e8 100%);
+color:var(--text);
+border-radius:34px;
+padding:48px;
+box-shadow:var(--shadow);
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:30px;
+align-items:center;
+}
+
+.cta h2{
+font-family:'DM Serif Display',serif;
+font-size:44px;
+line-height:1.08;
+color:#071429;
+margin-bottom:14px;
+}
+
+.cta p{
+color:#475569;
+line-height:1.85;
+}
+
+.cta-actions{
+display:flex;
+justify-content:flex-end;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.cta .btn-secondary{
+color:#071429;
+border:1px solid rgba(7,20,41,.25);
+}
+
+.cta .btn-secondary:hover{
+color:#173b8f;
+border-color:#173b8f;
 }
 
 /* FOOTER */
@@ -486,20 +527,27 @@ padding:40px 20px;
 border-top:1px solid rgba(255,255,255,.1);
 }
 
+footer p{margin:6px 0}
+
 @media(max-width:900px){
-header{align-items:flex-start;flex-direction:column;gap:12px}
+header{
+align-items:flex-start;
+flex-direction:column;
+gap:12px;
+}
 .stats{grid-template-columns:repeat(2,1fr)}
-.expo-card{grid-template-columns:1fr}
-.steps{grid-template-columns:1fr 1fr}
+.feature-card,.cta{grid-template-columns:1fr}
+.cta-actions{justify-content:flex-start}
 }
 
 @media(max-width:640px){
+header{padding:15px 20px}
+nav{gap:12px}
 .hero{padding:92px 20px 70px}
 .stats{grid-template-columns:1fr;margin-top:-30px}
-.expo-copy,.price-panel,.partner-card{padding:28px}
-.expo-copy h2{font-size:36px}
-.steps{grid-template-columns:1fr}
-nav{gap:12px}
+.feature-copy,.feature-panel,.cta{padding:30px}
+.feature-copy h2,.cta h2{font-size:36px}
+.event-card{min-height:auto}
 }
 </style>
 </head>
@@ -510,131 +558,80 @@ nav{gap:12px}
 <div class="brand">Government Workforce Network LLC</div>
 <nav>
 <a href="/">Home</a>
-<a href="#career-expo">Career Connection Festival</a>
 <a href="#upcoming">Upcoming</a>
 <a href="#past">Past Events</a>
-<a href="/career-center-partners">University Network</a>
-<a class="nav-pay" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600" target="_blank" rel="noopener">Employer Registration</a>
+<a href="#media">Media</a>
+<a href="#partner">Partner With Us</a>
+<a class="nav-highlight" href="/festival">Career Connection Festival</a>
 </nav>
 </header>
 
 <section class="hero">
 <div class="hero-inner">
-<div class="badge">Featured Employer Event</div> <div class="badge">Date: July 29,2026</div>
-<h1>California Statewide <span>Career Connection Festival</span></h1>
+<div class="badge">Events & Media Hub</div>
+<h1>Workforce Events. <span>Real Conversations.</span> Visible Impact.</h1>
 <p class="hero-sub">
-A premium virtual festival event connecting private employers with students, emerging professionals,
-and university talent across California. Employers can reserve their virtual lounge directly through the payment link below.
+Explore Government Workforce Network events, workforce conversations, career connection festivals,
+university engagements, media highlights, and community visibility moments.
 </p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600" target="_blank" rel="noopener">Register & Pay — $99</a>
-<a class="btn btn-secondary" href="#career-expo">View Event Details</a>
+<a class="btn btn-primary" href="#upcoming">View Upcoming Events</a>
+<a class="btn btn-secondary" href="#media">Explore Media Gallery</a>
 </div>
 </div>
 </section>
 
 <div class="stats">
 <div class="stat">
-<div class="stat-number">60+</div>
-<div class="stat-label">CA Universities Invited</div>
+<div class="stat-number">2026</div>
+<div class="stat-label">Active Event Year</div>
 </div>
 <div class="stat">
-<div class="stat-number">$99</div>
-<div class="stat-label">Employer Registration</div>
+<div class="stat-number">Virtual</div>
+<div class="stat-label">Nationwide Access</div>
 </div>
 <div class="stat">
-<div class="stat-number">100%</div>
-<div class="stat-label">Virtual Access</div>
+<div class="stat-number">Media</div>
+<div class="stat-label">Photos & Videos</div>
 </div>
 <div class="stat">
-<div class="stat-number">CA</div>
-<div class="stat-label">Statewide Talent</div>
+<div class="stat-number">Global</div>
+<div class="stat-label">Visibility Focus</div>
 </div>
 </div>
 
 <main>
 
-<section class="container" id="career-expo">
-<div class="expo-card">
-<div class="expo-copy">
-<div class="section-kicker">Career Connection Festival Highlight</div>
-<h2>Where Employers Meet California’s Next Workforce</h2>
-<p>
-The California Virtual Career Connection Festival is designed to help employers build visibility, strengthen talent pipelines,
-and connect with students and emerging professionals through one streamlined virtual event.
-</p>
-<p>
-We are inviting universities across California and private employers in industries including logistics,
-banking, healthcare, business, technology, public-serving sectors, and more.
-</p>
-<div class="expo-pills">
-<span class="pill">Virtual Employer Lounge</span>
-<span class="pill">Student Talent Access</span>
-<span class="pill">Employer Visibility</span>
-<span class="pill">California Workforce Connection</span>
-</div>
-<p>
-Event link and participation details will be sent to registered employers before the event.
-</p>
-</div>
-
-<div class="price-panel" id="register">
-<div class="price">$99</div>
-<div class="price-sub">One-time employer registration</div>
-<ul class="perks">
-<li>Reserve your virtual employer lounge</li>
-<li>Connect with California university talent</li>
-<li>Gain employer visibility before the event</li>
-<li>Engage with students and emerging professionals</li>
-<li>Receive event participation details by email</li>
-</ul>
-<a class="btn btn-primary" style="width:100%;text-align:center;" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600" target="_blank" rel="noopener">
-Register & Pay Through Stripe
-</a>
-</div>
-</div>
-</section>
-
-<section class="container">
+<section class="container" id="featured">
 <div class="section-heading">
-<div class="section-kicker">How It Works</div>
-<h2>Simple. Professional. Built for Connection.</h2>
+<div class="section-kicker">Featured Upcoming Event</div>
+<h2>Career Connection Festival</h2>
 </div>
 
-<div class="steps">
-<div class="step">
-<div class="step-num">01</div>
-<h3>Register</h3>
-<p>Employers click the Stripe link and reserve their virtual lounge.</p>
-</div>
-<div class="step">
-<div class="step-num">02</div>
-<h3>Confirm</h3>
-<p>Registered employers receive event details and participation instructions.</p>
-</div>
-<div class="step">
-<div class="step-num">03</div>
-<h3>Connect</h3>
-<p>Employers engage with students, emerging professionals, and university talent.</p>
-</div>
-<div class="step">
-<div class="step-num">04</div>
-<h3>Follow Up</h3>
-<p>Employers continue conversations after the event with qualified prospects.</p>
-</div>
-</div>
-</section>
+<div class="feature-card">
+<div class="feature-copy">
+<h2>California Statewide Career Connection Festival</h2>
+<p>
+A premium virtual workforce connection event designed to connect employers, universities, students,
+emerging professionals, and career-ready talent across California.
+</p>
+<p>
+Employers can learn more, view event details, and register through the dedicated festival landing page.
+</p>
 
-<section class="container">
-<div class="partner-card">
-<h2>Interested in Partnering With Us?</h2>
-<p>
-Government Workforce Network welcomes collaboration with universities, organizations, community partners,
-employers, and public-serving institutions interested in workforce discussions, presentations, and career events.
-</p>
-<p>
-Contact us at <a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a>.
-</p>
+
+<a class="btn btn-primary" href="/festival">Register Now</a>
+</div>
+
+<div class="feature-panel">
+<div class="feature-date">July 29, 2026</div>
+<div class="feature-detail">
+<strong>Format:</strong> Virtual<br>
+<strong>Time:</strong> 1:00 p.m. – 4:00 p.m. Pacific Time<br>
+<strong>Audience:</strong> Employers, universities, students, emerging professionals, and workforce partners.
+</div>
+<a class="btn btn-primary" href="/festival" style="width:100%;text-align:center;">Learn More</a>
+</div>
 </div>
 </section>
 
@@ -647,56 +644,87 @@ Contact us at <a href="mailto:admin@governmentworkforcenetwork.com">admin@govern
 <div class="events-grid">
 
 <div class="event-card">
+<div>
 <div class="event-title">Workforce TV: Segment 4 | Is HR Prepared?</div>
-<div class="event-meta">Topic: Application Screening • Virtual • June 3, 2026 • 1:00 p.m. – 2:00 p.m. PST</div> 
-<div class="event-desc">To discuss how is fairness evaluated in early-stage of application screening.</div>
-<div class="tag">Upcoming</div>
+<div class="event-meta">Application Screening • Virtual • June 3, 2026 • 1:00 p.m. – 2:00 p.m. Pacific Time</div>
+<div class="event-desc">A workforce conversation exploring fairness, automated screening, keyword filters, and whether qualified applicants are being overlooked before human review.</div>
+</div>
+<div class="card-footer">
+<span class="tag">Upcoming</span>
+<span class="small-link">Workforce TV</span>
+</div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">San Diego State University</div>
-<div class="event-meta">In-Person • June 5, 2026 • 11:00 a.m. – 12:00 p.m. PST</div>
-<div class="event-desc">Employers Community | Orientation. Learning how Career Services works at San Diego State University</div>
-<div class="tag">Upcoming</div>
+<div class="event-meta">Employer Community Orientation • In-Person • June 5, 2026 • 11:00 a.m. – 12:00 p.m. Pacific Time</div>
+<div class="event-desc">An employer community orientation focused on learning how Career Services works at San Diego State University.</div>
+</div>
+<div class="card-footer">
+<span class="tag">Upcoming</span>
+<span class="small-link">University Engagement</span>
+</div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Alumni & Student Organization Workforce Connection Session</div>
-<div class="event-meta">Talent Connect • Virtual • June 24, 2026 • 10:00 a.m. – 12:00 p.m. PST</div>
+<div class="event-meta">Talent Connect • Virtual • June 24, 2026 • 10:00 a.m. – 12:00 p.m. Pacific Time</div>
 <div class="event-desc">A free virtual session introducing Talent Connect, workforce resources, and wellness initiatives for alumni, former students, and emerging professionals.</div>
-<div class="tag">Upcoming</div>
+</div>
+<div class="card-footer">
+<span class="tag">Upcoming</span>
+<span class="small-link">Talent Connect</span>
+</div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">California Statewide Career Connection Festival</div>
-<div class="event-meta">Connection Festival • Virtual • July 29, 2026 • 1:00 p.m. - 4:00 p.m. PST</div>
-<div class="event-desc">A paid employer registration event connecting private employers with California university talent and emerging professionals.</div>
-<div class="tag">Upcoming</div>
-<a class="btn btn-primary" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600" target="_blank" rel="noopener">Register Employer — $99</a>
+<div class="event-meta">Career Festival • Virtual • July 29, 2026 • 1:00 p.m. – 4:00 p.m. Pacific Time</div>
+<div class="event-desc">A statewide virtual career connection event designed to strengthen employer visibility and connect organizations with California university talent.</div>
+</div>
+<div class="card-footer">
+<span class="tag">Upcoming</span>
+<a class="small-link" href="/festival">View Details</a>
+</div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">New York Statewide Career Connection Festival</div>
-<div class="event-meta">Connection Festival • Virtual •  August 5, 2026 • 1:00 p.m. – 4:00 p.m. Central Time</div>
+<div class="event-meta">Career Festival • Virtual • August 5, 2026 • 1:00 p.m. – 4:00 p.m. Central Time</div>
 <div class="event-desc">A virtual workforce connection event designed to strengthen collaboration, visibility, and opportunity across education, workforce, and employers.</div>
-<div class="tag">Upcoming</div>
-<a class="btn btn-primary" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600" target="_blank" rel="noopener">Register Employer — $99</a>
+</div>
+<div class="card-footer">
+<span class="tag">Upcoming</span>
+<a class="small-link" href="/festival">View Details</a>
+</div>
 </div>
 
 <div class="event-card">
-<div class="event-title"> Pennsylvania Statewide Career Connection Festival</div>
-<div class="event-meta">Connection Festival • Virtual • August 12, 2026 • 1:00 p.m. – 4:00 p.m. Central Time</div>
+<div>
+<div class="event-title">Pennsylvania Statewide Career Connection Festival</div>
+<div class="event-meta">Career Festival • Virtual • August 12, 2026 • 1:00 p.m. – 4:00 p.m. Central Time</div>
 <div class="event-desc">A virtual workforce connection event designed to strengthen collaboration, visibility, and opportunity across education, workforce, and employers.</div>
-<div class="tag">Upcoming</div>
-<a class="btn btn-primary" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600" target="_blank" rel="noopener">Register Employer — $99</a>
+</div>
+<div class="card-footer">
+<span class="tag">Upcoming</span>
+<a class="small-link" href="/festival">View Details</a>
+</div>
 </div>
 
 <div class="event-card">
-<div class="event-title">Tokyo, Japan in October 2026</div>
-<div class="event-meta">Date, Time and Address: TBD</div>
-<div class="event-desc">Recognition & Visibility Gala</div>
-<div class="tag">Save the Date</div>
-<a class="btn btn-primary" href="PASTE STRIPE LINK HERE" target="_blank" rel="noopener">Registration Fee — TBD</a>
+<div>
+<div class="event-title">Recognition & Visibility Gala</div>
+<div class="event-meta">Tokyo, Japan • October 2026 • Date, Time, and Address TBD</div>
+<div class="event-desc">A save-the-date recognition event focused on visibility, leadership, partnership, and meaningful workforce impact.</div>
+</div>
+<div class="card-footer">
+<span class="tag save">Save the Date</span>
+<span class="small-link">Gala</span>
+</div>
 </div>
 
 </div>
@@ -710,118 +738,206 @@ Contact us at <a href="mailto:admin@governmentworkforcenetwork.com">admin@govern
 
 <div class="events-grid">
 
-  <div class="event-card">
+<div class="event-card">
+<div>
 <div class="event-title">Is HR Prepared? Segment 3</div>
-<div class="event-meta">Minimum Qualifications: Reflect Actual Capability or Historical Habits? • Virtual • May 28, 2026 • 1:00 p.m. – 2:00 p.m. Central Time</div>
-<div class="event-desc">To discuss legacy hiring structures that may no longer match how work, technology, and workforce capabilities have evolved.</div>
-<div class="tag">Upcoming</div>
+<div class="event-meta">Minimum Qualifications • Virtual • May 28, 2026 • 1:00 p.m. – 2:00 p.m. Central Time</div>
+<div class="event-desc">A workforce discussion on whether minimum qualifications reflect actual capability or outdated historical habits.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">Workforce TV</span></div>
 </div>
 
-  <div class="event-card">
+<div class="event-card">
+<div>
 <div class="event-title">Central Lakes College</div>
 <div class="event-meta">KSAs vs. AI • Virtual • May 27, 2026 • 12:00 p.m. – 1:00 p.m. Central Time</div>
-<div class="event-desc">A workforce discussion examining the skills and competencies that remain essential as students transition into today’s evolving, AI-driven job market.</div>
-<div class="tag">Completed</div>
+<div class="event-desc">A workforce discussion examining the skills and competencies that remain essential as students transition into today’s AI-driven job market.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
-  <div class="event-card">
+<div class="event-card">
+<div>
+<div class="event-title">Workforce TV: Is HR Prepared? Segment 2</div>
+<div class="event-meta">Job Classifications • Virtual • May 21, 2026 • 12:00 p.m. – 1:00 p.m. Pacific Time</div>
+<div class="event-desc">A workforce conversation asking when job classifications were last reviewed for current relevance.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">Workforce TV</span></div>
+</div>
+
+<div class="event-card">
+<div>
 <div class="event-title">Principia College</div>
 <div class="event-meta">KSAs vs. AI • Virtual • May 20, 2026 • 12:00 p.m. – 1:00 p.m. Central Time</div>
-<div class="event-desc">A workforce discussion examining the skills and competencies that remain essential as students transition into today’s evolving, AI-driven job market.</div>
-<div class="tag">Completed</div>
+<div class="event-desc">A university workforce session exploring student readiness, skills, and competencies in an AI-driven market.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
-<div class="event-title">Workforce TV: Is HR Prepared? Segment 2</div>
-<div class="event-meta">Job Classifications • Virtual • May 21, 2026 • 12:00 p.m. – 1:00 p.m. PST</div>
-<div class="event-desc">When was your job classification last reviewed for current relevance?</div>
-<div class="tag">Completed</div>
-</div>
-
-<div class="event-card">
+<div>
 <div class="event-title">Workforce TV: Is HR Prepared? Segment 1</div>
-<div class="event-meta">Years of Experience • Virtual • May 14, 2026 • 12:00 p.m. – 1:00 p.m. PST</div>
-<div class="event-desc">How was the required number of years of experience validated?</div>
-<div class="tag completed">Completed</div>
+<div class="event-meta">Years of Experience • Virtual • May 14, 2026 • 12:00 p.m. – 1:00 p.m. Pacific Time</div>
+<div class="event-desc">A discussion asking how required years of experience are validated in hiring and classification standards.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">Workforce TV</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Northland Community and Technical College</div>
 <div class="event-meta">KSAs vs. AI • Virtual • May 13, 2026 • 12:00 p.m. – 1:00 p.m. Central Time</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Davenport University</div>
 <div class="event-meta">KSAs vs. AI • Virtual • May 6, 2026 • 12:00 p.m. – 1:00 p.m. Central Time</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Mount Wachusett Community College</div>
 <div class="event-meta">KSAs vs. AI • Virtual • April 29, 2026 • 12:00 p.m. – 1:00 p.m. Central Time</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Accelerate 2026: Public Sector</div>
-<div class="event-meta">Hosted by Snowflake • Virtual • April 23, 2026 • 10:00 a.m. – 11:30 a.m. PST</div>
-<div class="event-desc">Attended to gain insights from public sector professionals and workforce technology leaders.</div>
-<div class="tag completed">Completed</div>
+<div class="event-meta">Hosted by Snowflake • Virtual • April 23, 2026 • 10:00 a.m. – 11:30 a.m. Pacific Time</div>
+<div class="event-desc">An attended public sector event focused on insights from workforce technology and public sector professionals.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">Industry Event</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">University of California, Northridge</div>
-<div class="event-meta">KSAs vs. AI • Virtual • April 22, 2026 • 12:00 p.m. – 1:00 p.m. PST</div>
+<div class="event-meta">KSAs vs. AI • Virtual • April 22, 2026 • 12:00 p.m. – 1:00 p.m. Pacific Time</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Workforce Live Session</div>
-<div class="event-meta">Speak Without Fear • Virtual • April 17, 2026 • 3:30 p.m. – 4:30 p.m. PST</div>
-<div class="event-desc">Why imperfection can make you a better presenter: clear, real, relatable, and willing to speak.</div>
-<div class="tag completed">Completed</div>
+<div class="event-meta">Speak Without Fear • Virtual • April 17, 2026 • 3:30 p.m. – 4:30 p.m. Pacific Time</div>
+<div class="event-desc">A live session on why imperfection can make someone a clearer, more real, and more relatable presenter.</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">Live Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Binghamton University</div>
 <div class="event-meta">KSAs vs. AI • Virtual • April 15, 2026</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Multi-University Event</div>
-<div class="event-meta">After Graduation: What Now? • Virtual • April 15, 2026 • 3:30 p.m. – 4:30 p.m. PST</div>
+<div class="event-meta">After Graduation: What Now? • Virtual • April 15, 2026 • 3:30 p.m. – 4:30 p.m. Pacific Time</div>
 <div class="event-desc">A real-world discussion on life after graduation and how to navigate today’s evolving job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">Career Readiness</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Tufts University</div>
 <div class="event-meta">KSAs vs. AI • Virtual • April 1, 2026</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">University of Massachusetts Amherst</div>
 <div class="event-meta">KSAs vs. AI • Virtual • March 25, 2026</div>
 <div class="event-desc">A workforce discussion examining essential skills and competencies in an AI-driven job market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
 <div class="event-card">
+<div>
 <div class="event-title">Louisiana State University</div>
 <div class="event-meta">KSAs vs. AI • Virtual • March 18, 2026</div>
 <div class="event-desc">A workforce discussion exploring knowledge, skills, abilities, and student competitiveness in an AI-driven market.</div>
-<div class="tag completed">Completed</div>
+</div>
+<div class="card-footer"><span class="tag completed">Completed</span><span class="small-link">University Session</span></div>
 </div>
 
+</div>
+</section>
+
+<section class="container" id="media">
+<div class="section-heading">
+<div class="section-kicker">Media Gallery</div>
+<h2>Photos, Videos & Event Highlights</h2>
+</div>
+
+<div class="media-grid">
+
+<div class="media-card">
+<div class="media-icon">📸</div>
+<h3>Event Photos</h3>
+<p>Add photos from university sessions, live events, networking moments, festivals, and community engagements.</p>
+<span class="media-placeholder">Photo Gallery Coming Soon</span>
+</div>
+
+<div class="media-card">
+<div class="media-icon">🎥</div>
+<h3>Video Recaps</h3>
+<p>Feature short recaps, event recordings, speaker clips, and highlight reels from completed events.</p>
+<span class="media-placeholder">Video Recaps Coming Soon</span>
+</div>
+
+<div class="media-card">
+<div class="media-icon">🎙️</div>
+<h3>Workforce TV Clips</h3>
+<p>Showcase clips from Workforce TV discussions, HR Prepared segments, and thought leadership conversations.</p>
+<span class="media-placeholder">Clips Coming Soon</span>
+</div>
+
+<div class="media-card">
+<div class="media-icon">🌎</div>
+<h3>Community Highlights</h3>
+<p>Feature partnership moments, community visibility, university engagement, and global workforce milestones.</p>
+<span class="media-placeholder">Highlights Coming Soon</span>
+</div>
+
+</div>
+</section>
+
+<section class="container" id="partner">
+<div class="cta">
+<div>
+<h2>Want to Host, Partner, or Be Featured?</h2>
+<p>
+Government Workforce Network welcomes collaboration with universities, employers, workforce organizations,
+community partners, and public-serving institutions interested in workforce events, discussions, presentations, and visibility opportunities.
+</p>
+</div>
+
+<div class="cta-actions">
+<a class="btn btn-primary" href="mailto:admin@governmentworkforcenetwork.com">Contact Us</a>
+<a class="btn btn-secondary" href="/festival">View Career Connection Festival</a>
+</div>
 </div>
 </section>
 
