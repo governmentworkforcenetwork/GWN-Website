@@ -441,6 +441,48 @@ border-color:#8eb3ea;
 box-shadow:0 0 0 4px rgba(33,74,154,.10);
 }
 
+.consent-box{
+margin-top:18px;
+}
+
+.checkbox-label{
+display:flex;
+align-items:flex-start;
+gap:12px;
+padding:16px;
+border-radius:15px;
+background:#fffdf5;
+border:1px solid #f0dd97;
+font-size:.87rem;
+font-weight:700;
+color:var(--navy);
+line-height:1.55;
+cursor:pointer;
+}
+
+.checkbox-label input{
+width:18px;
+height:18px;
+min-height:18px;
+margin-top:3px;
+accent-color:var(--blue);
+flex:0 0 auto;
+}
+
+.checkbox-label span{
+display:block;
+}
+
+.consent-list{
+margin:10px 0 0 0;
+padding-left:18px;
+color:var(--navy);
+}
+
+.consent-list li{
+margin:3px 0;
+}
+
 .privacy{
 margin-top:18px;
 padding:15px 16px;
@@ -708,7 +750,7 @@ Complete the form below so we can better understand who you are, what community 
 </p>
 
 <div class="form-shell">
-<form action="/success.html" method="POST" name="talent-connect-us" data-netlify="true" netlify-honeypot="website">
+<form action="/success" method="POST" name="talent-connect-us">
 <input type="hidden" name="form-name" value="talent-connect-us" />
 
 <div class="hidden">
@@ -787,7 +829,7 @@ Complete the form below so we can better understand who you are, what community 
 <option>Interview Preparation & Career Guidance</option>
 <option>Career Transition Support</option>
 <option>Professional Visibility Support</option>
-<option>Networking / Community Access</option>  
+<option>Networking / Community Access</option>
 <option>Open to Multiple Opportunities</option>
 </select>
 </div>
@@ -833,8 +875,38 @@ Complete the form below so we can better understand who you are, what community 
 </div>
 </div>
 
+<div class="field-full consent-box">
+<label class="checkbox-label" for="us-share-consent">
+<input type="checkbox" id="us-share-consent" name="information_sharing_consent" required />
+<span>
+I understand and acknowledge that the information I voluntarily provide through Talent Connect-USA may be shared with employers, recruiters, workforce partners, educational institutions, and organizations for workforce visibility, networking, and opportunity-related purposes.
+
+<ul class="consent-list">
+<li>First Name</li>
+<li>Email Address</li>
+<li>Community Affiliation</li>
+<li>Preferred Work Format</li>
+<li>Availability</li>
+<li>Career Field of Interest</li>
+<li>Skills / Experience Summary</li>
+</ul>
+
+I understand that Talent Connect-USA does not guarantee employment, interviews, job offers, or placement.
+</span>
+</label>
+</div>
+
+<div class="field-full consent-box">
+<label class="checkbox-label" for="us-email-consent">
+<input type="checkbox" id="us-email-consent" name="email_communication_consent" required />
+<span>
+I agree to receive Talent Connect-USA related emails, workforce opportunities, event announcements, resources, employer connection updates, and program updates from Government Workforce Network LLC.
+</span>
+</label>
+</div>
+
 <div class="privacy">
-I understand that Talent Connect-USA is intended to support visibility, resources, and workforce connection. It does not guarantee employment, interview selection, or placement. Government Workforce Network LLC intentionally collects minimal information and uses email only for Talent Connect-related communication, opportunities, resources, and updates.
+Talent Connect-USA is a free workforce visibility and connection initiative operated by Government Workforce Network LLC. We intentionally collect minimal information and use participant information only for Talent Connect-related communication, workforce visibility efforts, resources, employer connections, workforce partner engagement, educational opportunities, and program updates. Participants may request updates or removal from Talent Connect at any time.
 </div>
 
 <div class="actions">
@@ -894,6 +966,8 @@ message.scrollIntoView({behavior:"smooth",block:"center"});
 }
 });
 </script>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjZhMmExYzExZDIxODUxMDAwODIzZTAwYSIsImlzc3VlciI6Im5mc2VydmVyIn0.8ixwnvUCGyyOAACQE5ViscSBY5I3c3aE3ipgmr3AgyY"></script>
 
 </body>
 </html>
