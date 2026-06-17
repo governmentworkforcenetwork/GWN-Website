@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | Pennsylvania Statewide Career Connection Festival 2026</title>
+
+<style>
+
+:root{
+
+--navy:#07182F;
+
+--blue:#1167FF;
+
+--cyan:#49D9FF;
+
+--gold:#FFD56A;
+
+--white:#FFFFFF;
+
+--soft:#F7FBFF;
+
+--text:#243447;
+
+--muted:#617286;
+
+--border:#E4EEF9;
+
+--pared:#B31B1B;
+
+}
+
+
+
+*{
+
+box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+}
+
+
+
+body{
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:
+
+radial-gradient(circle at 14% 18%, rgba(17,103,255,.10), transparent 26%),
+
+radial-gradient(circle at 84% 22%, rgba(179,27,27,.10), transparent 24%),
+
+radial-gradient(circle at 50% 88%, rgba(255,213,106,.14), transparent 32%),
+
+linear-gradient(180deg,#F7FBFF,#FFFFFF 44%,#F6F9FF 100%);
+
+color:var(--text);
+
+line-height:1.7;
+
+overflow-x:hidden;
+
+}
+
+
+
+body::before{
+
+content:"PENNSYLVANIA";
+
+position:fixed;
+
+top:46%;
+
+left:50%;
+
+transform:translate(-50%,-50%) rotate(-10deg);
+
+font-size:clamp(4rem,13vw,13rem);
+
+font-weight:900;
+
+letter-spacing:.08em;
+
+color:rgba(7,24,47,.035);
+
+z-index:-2;
+
+white-space:nowrap;
+
+pointer-events:none;
+
+}
+
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(17,103,255,.035) 1px, transparent 1px),
+
+linear-gradient(90deg,rgba(179,27,27,.025) 1px, transparent 1px);
+
+background-size:54px 54px;
+
+mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 78%);
+
+z-index:-3;
+
+pointer-events:none;
+
+}
+
+
+
+.page-nav{
+
+max-width:1120px;
+
+margin:26px auto;
+
+padding:0 24px;
+
+}
+
+
+
+.home-link{
+
+display:inline-flex;
+
+padding:12px 22px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.92);
+
+border:1px solid var(--border);
+
+box-shadow:0 12px 30px rgba(6,22,44,.08);
+
+color:var(--navy);
+
+text-decoration:none;
+
+font-weight:900;
+
+transition:.25s ease;
+
+}
+
+
+
+.home-link:hover{
+
+background:linear-gradient(135deg,#06162C,#1167FF);
+
+color:white;
+
+transform:translateY(-2px);
+
+box-shadow:0 18px 44px rgba(17,103,255,.22);
+
+}
+
+
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+radial-gradient(circle at top right, rgba(179,27,27,.22), transparent 35%),
+
+radial-gradient(circle at bottom left, rgba(255,213,106,.25), transparent 30%),
+
+radial-gradient(circle at center, rgba(73,217,255,.12), transparent 42%),
+
+linear-gradient(135deg,#06162C,#0B2A58);
+
+color:white;
+
+padding:96px 24px 110px;
+
+text-align:center;
+
+}
+
+
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:18px;
+
+border:1px solid rgba(255,255,255,.13);
+
+border-radius:34px;
+
+pointer-events:none;
+
+}
+
+
+
+.hero::after{
+
+content:"PA";
+
+position:absolute;
+
+right:6%;
+
+bottom:-30px;
+
+font-size:clamp(8rem,20vw,18rem);
+
+font-weight:900;
+
+line-height:1;
+
+letter-spacing:-.08em;
+
+color:rgba(255,255,255,.045);
+
+pointer-events:none;
+
+}
+
+
+
+.badge{
+
+position:relative;
+
+display:inline-block;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+border:1px solid rgba(255,255,255,.22);
+
+background:rgba(255,255,255,.08);
+
+color:var(--gold);
+
+font-weight:900;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+margin-bottom:20px;
+
+}
+
+
+
+.hero h1{
+
+position:relative;
+
+font-size:clamp(2.8rem,6vw,5.4rem);
+
+line-height:1.02;
+
+letter-spacing:-.06em;
+
+margin-bottom:20px;
+
+}
+
+
+
+.hero h1 span{
+
+background:linear-gradient(90deg,#FFFFFF,#49D9FF,#FFD56A);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.hero p{
+
+position:relative;
+
+max-width:900px;
+
+margin:auto;
+
+font-size:1.12rem;
+
+color:rgba(255,255,255,.86);
+
+}
+
+
+
+.hero-subline{
+
+position:relative;
+
+margin-top:24px;
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.hero-pill{
+
+padding:9px 14px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+font-weight:800;
+
+font-size:.86rem;
+
+color:rgba(255,255,255,.86);
+
+}
+
+
+
+.container{
+
+max-width:1120px;
+
+margin:auto;
+
+padding:60px 24px;
+
+}
+
+
+
+.info-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+margin-top:-104px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+.info-card{
+
+background:rgba(255,255,255,.94);
+
+backdrop-filter:blur(8px);
+
+border:1px solid var(--border);
+
+border-radius:26px;
+
+padding:28px;
+
+box-shadow:0 20px 55px rgba(6,22,44,.12);
+
+text-align:center;
+
+}
+
+
+
+.info-card span{
+
+display:block;
+
+color:var(--blue);
+
+font-weight:900;
+
+font-size:.8rem;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+margin-bottom:8px;
+
+}
+
+
+
+.info-card strong{
+
+display:block;
+
+font-size:1.25rem;
+
+color:var(--navy);
+
+}
+
+
+
+.impact-strip{
+
+background:
+
+radial-gradient(circle at top right, rgba(179,27,27,.22), transparent 30%),
+
+linear-gradient(135deg,#06162C,#1167FF);
+
+color:white;
+
+border-radius:30px;
+
+padding:34px 28px;
+
+box-shadow:0 24px 60px rgba(6,22,44,.18);
+
+display:grid;
+
+grid-template-columns:1fr 1fr 1fr;
+
+gap:18px;
+
+text-align:center;
+
+}
+
+
+
+.impact-strip strong{
+
+display:block;
+
+font-size:1.7rem;
+
+color:var(--gold);
+
+line-height:1.1;
+
+margin-bottom:6px;
+
+}
+
+
+
+.impact-strip span{
+
+color:rgba(255,255,255,.82);
+
+font-weight:800;
+
+}
+
+
+
+.section-title{
+
+text-align:center;
+
+max-width:860px;
+
+margin:0 auto 38px;
+
+}
+
+
+
+.section-title h2{
+
+font-size:clamp(2rem,4vw,3.6rem);
+
+color:var(--navy);
+
+letter-spacing:-.05em;
+
+line-height:1.05;
+
+margin-bottom:16px;
+
+}
+
+
+
+.section-title p{
+
+color:var(--muted);
+
+}
+
+
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(8px);
+
+border:1px solid var(--border);
+
+border-radius:26px;
+
+padding:28px;
+
+box-shadow:0 18px 46px rgba(6,22,44,.08);
+
+transition:.25s ease;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 26px 60px rgba(6,22,44,.13);
+
+border-color:rgba(17,103,255,.28);
+
+}
+
+
+
+.card h3{
+
+color:var(--navy);
+
+font-size:1.15rem;
+
+margin-bottom:10px;
+
+}
+
+
+
+.card p{
+
+color:var(--muted);
+
+font-size:.95rem;
+
+}
+
+
+
+.audience-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+}
+
+
+
+.audience-card{
+
+background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,251,255,.96));
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+padding:24px;
+
+box-shadow:0 16px 42px rgba(6,22,44,.07);
+
+font-weight:900;
+
+color:var(--navy);
+
+}
+
+
+
+.audience-card span{
+
+color:var(--pared);
+
+margin-right:8px;
+
+}
+
+
+
+.includes{
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+radial-gradient(circle at top right, rgba(179,27,27,.16), transparent 34%),
+
+radial-gradient(circle at bottom left, rgba(73,217,255,.14), transparent 32%),
+
+linear-gradient(135deg,#06162C,#0B2A58);
+
+color:white;
+
+border-radius:34px;
+
+padding:48px;
+
+box-shadow:0 26px 70px rgba(6,22,44,.22);
+
+}
+
+
+
+.includes::after{
+
+content:"KEYSTONE";
+
+position:absolute;
+
+right:24px;
+
+bottom:-18px;
+
+font-size:clamp(4rem,10vw,8rem);
+
+font-weight:900;
+
+letter-spacing:-.06em;
+
+color:rgba(255,255,255,.045);
+
+}
+
+
+
+.includes h2{
+
+position:relative;
+
+font-size:clamp(2rem,4vw,3.5rem);
+
+line-height:1.05;
+
+letter-spacing:-.05em;
+
+margin-bottom:24px;
+
+}
+
+
+
+.check-grid{
+
+position:relative;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:14px;
+
+}
+
+
+
+.check{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.16);
+
+border-radius:18px;
+
+padding:16px 18px;
+
+font-weight:800;
+
+}
+
+
+
+.check span{
+
+color:var(--gold);
+
+margin-right:8px;
+
+}
+
+
+
+.registration-box{
+
+position:relative;
+
+overflow:hidden;
+
+text-align:center;
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(8px);
+
+border:1px solid var(--border);
+
+border-radius:34px;
+
+padding:50px;
+
+box-shadow:0 26px 70px rgba(6,22,44,.12);
+
+}
+
+
+
+.registration-box::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at top left, rgba(179,27,27,.12), transparent 32%),
+
+radial-gradient(circle at bottom right, rgba(17,103,255,.10), transparent 35%);
+
+pointer-events:none;
+
+}
+
+
+
+.registration-box > *{
+
+position:relative;
+
+}
+
+
+
+.registration-box h2{
+
+font-size:clamp(2rem,4vw,3.4rem);
+
+color:var(--navy);
+
+letter-spacing:-.05em;
+
+line-height:1.05;
+
+margin-bottom:14px;
+
+}
+
+
+
+.price{
+
+font-size:4.3rem;
+
+font-weight:900;
+
+color:var(--blue);
+
+letter-spacing:-.06em;
+
+margin:22px 0 4px;
+
+}
+
+
+
+.small{
+
+color:var(--muted);
+
+margin-bottom:26px;
+
+}
+
+
+
+.trust{
+
+background:#F7FBFF;
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:22px;
+
+margin:28px auto;
+
+max-width:780px;
+
+color:#374151;
+
+}
+
+
+
+.register-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 34px;
+
+border-radius:999px;
+
+background:linear-gradient(135deg,#FFD56A,#FFF1B8);
+
+color:#06162C;
+
+text-decoration:none;
+
+font-weight:900;
+
+box-shadow:0 18px 42px rgba(255,213,106,.3);
+
+transition:.25s ease;
+
+}
+
+
+
+.register-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 22px 50px rgba(255,213,106,.45);
+
+}
+
+
+
+.secure-note{
+
+margin-top:16px;
+
+font-size:.88rem;
+
+color:var(--muted);
+
+}
+
+
+
+.contact-panel{
+
+background:linear-gradient(135deg,#06162C,#1167FF);
+
+color:white;
+
+border-radius:30px;
+
+padding:38px;
+
+margin-top:40px;
+
+text-align:center;
+
+box-shadow:0 22px 60px rgba(6,22,44,.18);
+
+}
+
+
+
+.contact-panel a{
+
+color:var(--gold);
+
+font-weight:900;
+
+text-decoration:none;
+
+}
+
+
+
+.footer{
+
+text-align:center;
+
+padding:38px 20px;
+
+color:var(--muted);
+
+}
+
+
+
+.footer a{
+
+color:var(--navy);
+
+font-weight:800;
+
+text-decoration:none;
+
+margin:0 10px;
+
+}
+
+
+
+.footer a:hover{
+
+text-decoration:underline;
+
+}
+
+
+
+@media(max-width:900px){
+
+.info-grid,
+
+card-grid,
+
+.check-grid,
+
+.impact-strip,
+
+.audience-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.info-grid{
+
+margin-top:-70px;
+
+}
+
+
+
+.includes,
+
+.registration-box{
+
+padding:32px 24px;
+
+}
+
+
+
+.hero{
+
+padding:78px 22px 98px;
+
+}
+
+
+
+.page-nav{
+
+text-align:center;
+
+}
+
+}
+
+
+
+@media(max-width:560px){
+
+.home-link{
+
+width:100%;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+
+
+.price{
+
+font-size:3.4rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page-nav">
+
+<a class="home-link" href="https://governmentworkforcenetwork.com">← Return to Government Workforce Network Home</a>
+
+</div>
+
+<section class="hero">
+
+<div class="badge">Employer Registration</div>
+
+<h1>Pennsylvania Statewide Career Connection Festival <span>2026</span></h1>
+
+<p>
+
+Connecting talent, employers, universities, and opportunity across Pennsylvania through a statewide virtual workforce engagement experience designed for visibility, access, and AI-ready workforce connection.
+
+</p>
+
+<div class="hero-subline">
+
+<div class="hero-pill">Pennsylvania Statewide Outreach</div>
+
+<div class="hero-pill">University Network</div>
+
+<div class="hero-pill">Employer Visibility</div>
+
+<div class="hero-pill">Virtual Workforce Engagement</div>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<span>Date</span>
+
+<strong>August 12, 2026</strong>
+
+</div>
+
+<div class="info-card">
+
+<span>Time</span>
+
+<strong>1:00 PM – 4:00 PM Eastern Time</strong>
+
+</div>
+
+<div class="info-card">
+
+<span>Location</span>
+
+<strong>Virtual Event</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="container">
+
+<div class="impact-strip">
+
+<div>
+
+<strong>Pennsylvania</strong>
+
+<span>Statewide Workforce Engagement</span>
+
+</div>
+
+<div>
+
+<strong>AI-Ready</strong>
+
+<span>Workforce Visibility Ecosystem</span>
+
+</div>
+
+<div>
+
+<strong>GWN</strong>
+
+<span>Together, Building Income, Opportunity, and Well-Being.</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="registration-box">
+
+<h2>Reserve Employer Participation</h2>
+
+<p>
+
+One organization registration includes access to a dedicated virtual employer lounge during the event.
+
+</p>
+
+<div class="price">$99</div>
+
+<p class="small">Employer Participation Registration</p>
+
+<div class="trust">
+
+<strong>Hosted by Government Workforce Network LLC</strong><br><br>
+
+Government Workforce Network LLC is a SAM.gov registered organization supporting workforce visibility, employer engagement, university partnerships, workforce innovation, and AI-ready workforce solutions.
+
+<br><br>
+
+<strong>UEI: L8PDM1AKWB89</strong>
+
+</div>
+
+<a class="register-btn" href="https://buy.stripe.com/14AeV66zOcCk4YI4Lb7N600">
+
+Reserve My Employer Lounge
+
+</a>
+
+<p class="secure-note">
+
+Secure checkout is processed through Stripe.
+
+</p>
+
+</div>
+
+
+<section class="container">
+
+<div class="section-title">
+
+<h2>Why Employers Participate</h2>
+
+<p>
+
+This is not a traditional job fair. It is a virtual workforce visibility and engagement experience designed to help organizations connect with diverse talent communities across Pennsylvania.
+
+</p>
+
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>Employer Visibility</h3>
+
+<p>Increase awareness of your organization among students, job seekers, professionals, and community members.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Live Engagement</h3>
+
+<p>Interact directly with attendees through your dedicated virtual employer lounge.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Recruitment Opportunities</h3>
+
+<p>Share jobs, internships, apprenticeships, career pathways, and workforce information.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Community Impact</h3>
+
+<p>Support workforce access, career exploration, economic mobility, and opportunity-building initiatives.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+
+<h2>Who Employers May Reach</h2>
+
+<p>
+
+The festival is designed to expand workforce visibility for a wide range of Pennsylvania talent communities.
+
+</p>
+
+</div>
+
+<div class="audience-grid">
+
+<div class="audience-card"><span>•</span>Students & Recent Graduates</div>
+
+<div class="audience-card"><span>•</span>Veterans & Transitioning Military</div>
+
+<div class="audience-card"><span>•</span>Workforce Professionals</div>
+
+<div class="audience-card"><span>•</span>Public Safety Professionals</div>
+
+<div class="audience-card"><span>•</span>Entrepreneurs & Career Changers</div>
+
+<div class="audience-card"><span>•</span>Community Members Seeking Opportunity</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="includes">
+
+<h2>Employer Participation Includes</h2>
+
+<div class="check-grid">
+
+<div class="check"><span>✓</span> Dedicated Virtual Employer Lounge</div>
+
+<div class="check"><span>✓</span> Organization Profile Display</div>
+
+<div class="check"><span>✓</span> Company Logo Placement</div>
+
+<div class="check"><span>✓</span> Website Link</div>
+
+<div class="check"><span>✓</span> Current Openings Display</div>
+
+<div class="check"><span>✓</span> Live Q&A Opportunities</div>
+
+<div class="check"><span>✓</span> Direct Candidate Engagement</div>
+
+<div class="check"><span>✓</span> Event Promotion</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="contact-panel">
+
+<h2>Questions?</h2>
+
+<p>
+
+Email:
+
+<a href="mailto:admin@governmentworkforcenetwork.com">admin@governmentworkforcenetwork.com</a>
+
+</p>
+
+<p>
+
+Phone:
+
+<a href="tel:+19497752175">(949) 775-2175</a>
+
+</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>© 2026 Government Workforce Network LLC. All Rights Reserved.</p>
+
+<p>
+
+<a href="/privacy-policy">Privacy Policy</a>
+
+<a href="/terms-of-service">Terms of Service</a>
+
+<a href="/support">Support</a>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
+
+
+
+
