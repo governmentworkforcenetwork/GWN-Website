@@ -88,7 +88,7 @@ button{font-family:inherit}
         live Q&A, webinar, community engagement, or global experience. One link gives your audience everything they need.
       </p>
       <div class="btn-row">
-        <a href="https://buy.stripe.com/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener" class="btn btn-primary">Build My EventDeck — $149</a>
+        <a href="https://pay.governmentworkforcenetwork.com/b/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener" class="btn btn-primary">Build My EventDeck — $149</a>
         <button type="button" class="btn btn-outline" onclick="openDemo()">View Interactive Demo</button>
         <a href="https://calendly.com/admin-governmentworkforcenetwork/30min" target="_blank" rel="noopener" class="btn btn-outline">Schedule Setup Call</a>
       </div>
@@ -226,7 +226,7 @@ button{font-family:inherit}
       <div class="includes">
         <div>✓ Premium custom EventDeck setup</div><div>✓ Branded event or organization layout</div><div>✓ Live session link integration</div><div>✓ Resource and information sections</div><div>✓ CTA buttons for registration, interest, contact, or booking</div><div>✓ Shareable EventDeck link</div><div>✓ Setup guidance included</div>
       </div>
-      <a href="https://buy.stripe.com/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Build My EventDeck — $149</a>
+      <a href="https://pay.governmentworkforcenetwork.com/b/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Build My EventDeck — $149</a>
       <p style="margin-top:18px;font-size:13px;color:#64748b;">After payment is received, we will send your customization form and setup details.</p>
     </div>
   </div>
@@ -236,7 +236,7 @@ button{font-family:inherit}
   <div class="container">
     <h2>Ready to Build Your EventDeck?</h2>
     <p>Create a premium virtual destination for your event, meeting, recruiting session, business showcase, webinar, community program, or global engagement experience.</p>
-    <div class="btn-row" style="justify-content:center;"><a href="https://buy.stripe.com/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener" class="btn btn-primary">Build My EventDeck — $149</a><button type="button" class="btn btn-outline" onclick="openDemo()">View Interactive Demo</button><a href="https://calendly.com/admin-governmentworkforcenetwork/30min" target="_blank" rel="noopener" class="btn btn-outline">Schedule Setup Call</a></div>
+    <div class="btn-row" style="justify-content:center;"><a href="https://pay.governmentworkforcenetwork.com/b/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener" class="btn btn-primary">Build My EventDeck — $149</a><button type="button" class="btn btn-outline" onclick="openDemo()">View Interactive Demo</button><a href="https://calendly.com/admin-governmentworkforcenetwork/30min" target="_blank" rel="noopener" class="btn btn-outline">Schedule Setup Call</a></div>
     <p class="hero-note" style="margin:auto;margin-top:22px;">After payment, your organization will receive setup instructions, customization details, and next steps.</p>
   </div>
 </section>
@@ -246,7 +246,7 @@ button{font-family:inherit}
     <div class="footer-grid">
       <div><h4>Government Workforce Network LLC</h4><p>EventDeck creates custom online destinations for meetings, events, recruiting, showcases, webinars, community engagement, and global connection.</p></div>
       <div><h4>Explore</h4><a href="https://governmentworkforcenetwork.com/">Home</a><a href="#what">What It Is</a><a href="#sample">Sample Deck</a><a href="#uses">Uses</a><a href="#pricing">Pricing</a></div>
-      <div><h4>Take Action</h4><a href="https://buy.stripe.com/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener">Build My EventDeck</a><a href="https://calendly.com/admin-governmentworkforcenetwork/30min" target="_blank" rel="noopener">Schedule Setup Call</a><a href="mailto:admin@governmentworkforcenetwork.com">Contact Us</a></div>
+      <div><h4>Take Action</h4><a href="https://pay.governmentworkforcenetwork.com/b/7sY14g7DSbyg4YIfpP7N602" target="_blank" rel="noopener">Build My EventDeck</a><a href="https://calendly.com/admin-governmentworkforcenetwork/30min" target="_blank" rel="noopener">Schedule Setup Call</a><a href="mailto:admin@governmentworkforcenetwork.com">Contact Us</a></div>
     </div>
     <div class="footer-bottom">© 2026 Government Workforce Network LLC. All rights reserved.</div>
   </div>
@@ -303,7 +303,7 @@ function openDemo(){document.getElementById('demoModal').classList.add('open');d
 function closeDemo(){document.getElementById('demoModal').classList.remove('open');document.getElementById('demoModal').setAttribute('aria-hidden','true');document.body.style.overflow='';}
 document.getElementById('demoModal').addEventListener('click',e=>{if(e.target.id==='demoModal')closeDemo();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDemo();});
 function goToStep(n){currentStep=n;renderStep()}function nextStep(){if(currentStep<totalSteps-1){currentStep++;renderStep()}}function prevStep(){if(currentStep>0){currentStep--;renderStep()}}
-function renderStep(){const s=steps[currentStep];document.getElementById('heroStepLabel').textContent=s.label;document.getElementById('narrationText').innerHTML=s.narration;s.showCards.forEach(id=>{const el=document.getElementById(id);if(el){el.style.display='';setTimeout(()=>el.classList.add('visible'),50)}});s.hideCards.forEach(id=>{const el=document.getElementById(id);if(el){el.style.display='none';el.classList.remove('visible')}});document.querySelectorAll('.lounge-card,.lounge-header-band').forEach(el=>el.classList.remove('highlight'));const target=document.getElementById(s.highlight);if(target)setTimeout(()=>target.classList.add('highlight'),100);document.querySelectorAll('.step-item').forEach((el,i)=>{el.classList.remove('active','done');if(i===currentStep)el.classList.add('active');if(i<currentStep)el.classList.add('done');const num=el.querySelector('.step-num');num.textContent=i<currentStep?'✓':i+1;});document.getElementById('progressBar').style.width=((currentStep+1)/totalSteps*100)+'%';document.getElementById('progressLabel').textContent=`${currentStep+1} of ${totalSteps} complete`;document.querySelectorAll('.step-dot').forEach((dot,i)=>{dot.classList.remove('active','done');if(i===currentStep)dot.classList.add('active');if(i<currentStep)dot.classList.add('done')});document.getElementById('prevBtn').disabled=currentStep===0;const nextBtn=document.getElementById('nextBtn');if(currentStep===totalSteps-1){nextBtn.textContent='Build My EventDeck →';nextBtn.onclick=()=>window.open('https://buy.stripe.com/7sY14g7DSbyg4YIfpP7N602','_blank','noopener');}else{nextBtn.textContent='Next Step →';nextBtn.onclick=nextStep;}}
+function renderStep(){const s=steps[currentStep];document.getElementById('heroStepLabel').textContent=s.label;document.getElementById('narrationText').innerHTML=s.narration;s.showCards.forEach(id=>{const el=document.getElementById(id);if(el){el.style.display='';setTimeout(()=>el.classList.add('visible'),50)}});s.hideCards.forEach(id=>{const el=document.getElementById(id);if(el){el.style.display='none';el.classList.remove('visible')}});document.querySelectorAll('.lounge-card,.lounge-header-band').forEach(el=>el.classList.remove('highlight'));const target=document.getElementById(s.highlight);if(target)setTimeout(()=>target.classList.add('highlight'),100);document.querySelectorAll('.step-item').forEach((el,i)=>{el.classList.remove('active','done');if(i===currentStep)el.classList.add('active');if(i<currentStep)el.classList.add('done');const num=el.querySelector('.step-num');num.textContent=i<currentStep?'✓':i+1;});document.getElementById('progressBar').style.width=((currentStep+1)/totalSteps*100)+'%';document.getElementById('progressLabel').textContent=`${currentStep+1} of ${totalSteps} complete`;document.querySelectorAll('.step-dot').forEach((dot,i)=>{dot.classList.remove('active','done');if(i===currentStep)dot.classList.add('active');if(i<currentStep)dot.classList.add('done')});document.getElementById('prevBtn').disabled=currentStep===0;const nextBtn=document.getElementById('nextBtn');if(currentStep===totalSteps-1){nextBtn.textContent='Build My EventDeck →';nextBtn.onclick=()=>window.open('https://pay.governmentworkforcenetwork.com/b/7sY14g7DSbyg4YIfpP7N602','_blank','noopener');}else{nextBtn.textContent='Next Step →';nextBtn.onclick=nextStep;}}
 window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.lounge-card').forEach((card,i)=>{if(card.style.display!=='none'){setTimeout(()=>card.classList.add('visible'),400+i*100)}});});
 </script>
 </body>
