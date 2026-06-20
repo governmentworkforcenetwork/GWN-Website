@@ -42,6 +42,193 @@ content:none !important;
 .verify-badge{
 display:none !important;
 }
+
+  .premium-intro{
+padding:34px;
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+align-items:stretch;
+border-bottom:1px solid var(–line);
+}
+
+.intro-card{
+background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%);
+border:1px solid #e3e8f0;
+border-radius:24px;
+padding:24px;
+box-shadow:0 14px 34px rgba(7,20,38,.06);
+}
+
+.intro-main{
+grid-column:span 2;
+background:linear-gradient(135deg,#ffffff 0%,#f7f9ff 100%);
+}
+
+.section-label{
+display:inline-flex;
+margin-bottom:12px;
+padding:7px 11px;
+border-radius:999px;
+background:#f3f6fb;
+border:1px solid #e1e7f0;
+color:var(–navy2);
+font-size:11px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+
+.intro-card h2{
+font-size:25px;
+line-height:1.15;
+letter-spacing:-.02em;
+margin-bottom:12px;
+color:var(–navy);
+}
+
+.intro-card p{
+color:var(–muted);
+font-size:14px;
+margin-top:10px;
+}
+
+.opportunity-card ul{
+margin-top:12px;
+padding-left:20px;
+color:#2c3747;
+font-size:14px;
+}
+
+.opportunity-card li{
+margin-bottom:9px;
+}
+
+.free-note{
+margin-top:16px;
+padding:14px 15px;
+border-radius:16px;
+background:#fff7dd;
+border:1px solid rgba(212,175,55,.35);
+color:#5b4a0c !important;
+font-weight:700;
+}
+
+.intro-notice{
+grid-column:span 2;
+margin-top:4px;
+}
+
+@media (max-width:820px){
+.premium-intro{
+grid-template-columns:1fr;
+padding:24px;
+}
+
+.intro-main,
+.intro-notice{
+grid-column:span 1;
+}
+
+.intro-card{
+padding:21px;
+}
+
+.intro-card h2{
+font-size:22px;
+}
+}
+
+.global-visual-card{
+min-height:100%;
+border-radius:24px;
+padding:30px;
+color:#fff;
+background:
+radial-gradient(circle at 20% 20%, rgba(212,175,55,.55), transparent 28%),
+radial-gradient(circle at 90% 15%, rgba(29,78,216,.55), transparent 30%),
+linear-gradient(135deg,#071426 0%,#0d2347 55%,#1d4ed8 100%);
+border:1px solid rgba(255,255,255,.18);
+box-shadow:0 22px 48px rgba(7,20,38,.18);
+display:flex;
+flex-direction:column;
+justify-content:center;
+position:relative;
+overflow:hidden;
+}
+
+.global-visual-card::after{
+content:””;
+position:absolute;
+inset:auto -40px -70px auto;
+width:220px;
+height:220px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.18);
+}
+
+.global-orb{
+width:72px;
+height:72px;
+border-radius:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,.14);
+border:1px solid rgba(255,255,255,.22);
+font-size:36px;
+margin-bottom:18px;
+}
+
+.global-visual-card span{
+color:#ffe9a6;
+font-size:12px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:.1em;
+margin-bottom:12px;
+}
+
+.global-visual-card h2{
+color:#fff;
+font-size:30px;
+line-height:1.08;
+letter-spacing:-.03em;
+margin-bottom:14px;
+}
+
+.global-visual-card p{
+color:rgba(255,255,255,.78);
+font-size:14px;
+max-width:420px;
+}
+
+
+
+.intro-card:nth-child(2){
+border-top:5px solid var(–gold);
+}
+
+.intro-card:nth-child(3){
+border-top:5px solid var(–blue);
+}
+
+.opportunity-card{
+border-top:5px solid #0d2347;
+}
+
+
+.global-image{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.global-visual-card{
+height:100%;
+}
+
 </style>
 </head>
 <body>
@@ -53,7 +240,7 @@ display:none !important;
 </header>
 
 <section class="hero">
-  <div class="eyebrow">National Workforce Access Network</div>
+  <div class="eyebrow">Workforce Access Network</div>
   <h1>Career Center & University Network</h1>
   <p>Government Workforce Network LLC has been approved to engage with a broad national network of universities, colleges, and career centers in support of workforce visibility, career education, student access, and human-centered workforce connection.</p>
 </section>
@@ -67,13 +254,112 @@ display:none !important;
 
 <main class="page-wrap">
 <section class="panel">
-  <div class="panel-intro">
-    <div>
-      <h2>A growing education and workforce visibility network.</h2>
-      <p>This directory reflects schools and career centers where Government Workforce Network LLC has received approval to engage or conduct outreach, post jobs, create events, conduct on campus interviews or participate in career fairs. The purpose is to expand access to workforce tools, educational sessions, career visibility, and Talent Connect resources.</p>
-    </div>
-    <div class="notice"><strong>Note:</strong> Approval to engage is not the same as formal sponsorship, endorsement, or contractual partnership with each institution.</div>
+ <div class="panel-intro premium-intro">
+
+  <div class="intro-card intro-main">
+
+    <span class="section-label">U.S. Career Center Network</span>
+
+    <h2>A growing education and workforce visibility network.</h2>
+
+    <p>
+
+      This directory reflects universities, colleges, and career centers where Government Workforce Network LLC has received approval to engage, conduct outreach, post opportunities, create events, support career education, participate in career fairs, or expand workforce visibility.
+
+    </p>
+
+    <p>
+
+      The purpose is to help students, alumni, veterans, career seekers, and workforce partners access practical tools, educational sessions, visibility opportunities, and Talent Connect resources.
+
+    </p>
+
   </div>
+
+  <div class="intro-card">
+
+    <span class="section-label">Global Workforce Learning Exchange</span>
+
+    <h2>Cross-border learning. Real workforce conversations.</h2>
+
+    <p>
+
+      Government Workforce Network LLC is expanding university engagement through the Global Workforce Learning Exchange, a free workforce learning and engagement program designed to connect students, alumni, universities, employers, workforce professionals, veterans, and community leaders across regions.
+
+    </p>
+
+    <p>
+
+      This program complements existing university career services, alumni engagement, student success, and workforce readiness programs.
+
+    </p>
+
+  </div>
+
+  <div class="intro-card">
+
+    <span class="section-label">Connecting students, universities, and workforce leaders across borders</span>
+
+    <h2>Founding Global University Program</h2>
+
+    <p>
+
+      We are currently inviting universities outside the United States to participate in our Founding Global University Program. Initial outreach includes Canada, the United Kingdom, India, the Philippines, Australia, and other regions as the network grows.
+
+    </p>
+
+  </div>
+<div class="intro-card opportunity-card">
+
+  <span class="section-label">Free Opportunities</span>
+
+  <h2>For participating institutions</h2>
+
+  <ul>
+
+    <li>Access to Workforce TV educational discussions</li>
+
+    <li>Access to Virtual Workforce Lounges</li>
+
+    <li>Student and alumni workforce engagement opportunities</li>
+
+    <li>Leadership and hands-on workforce learning projects</li>
+
+    <li>Cross-border learning with students and professionals from other regions</li>
+
+    <li>Student, alumni, and university spotlight opportunities</li>
+
+    <li>Discussions focused on AI, leadership, workforce readiness, recruitment, and the future of work</li>
+
+  </ul>
+
+  <p class="free-note">
+
+    Participation is free. No membership fees, no contractual obligations, and no administrative burden.
+
+  </p>
+
+</div>
+
+<div class="global-visual-card">
+
+<img
+src="images/global-access.jpg"
+alt="Global Workforce Learning Exchange"
+class="global-image"
+>
+
+</div>
+
+  </div>
+
+  <div class="notice intro-notice">
+
+    <strong>Important Note:</strong> Approval to engage is not the same as formal sponsorship, endorsement, affiliation, or contractual partnership with each institution.
+
+  </div>
+
+</div>
 
   <div class="toolbar">
    <input id="schoolSearch" class="search" type="search" placeholder="Search by school, state, or college name..." aria-label="Search schools" autocomplete="off" spellcheck="false" />
