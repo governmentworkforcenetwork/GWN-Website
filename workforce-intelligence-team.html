@@ -7,1356 +7,890 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Workforce Intelligence Team | Government Workforce Network LLC</title>
+<meta name="description" content="Government Workforce Network LLC Workforce Intelligence Team. A collaborative contributor community helping transform workforce experience into practical innovation." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
+:root{
+  --navy:#07182f;
+  --navy2:#0d2748;
+  --blue:#0e3a70;
+  --sky:#8be7ff;
+  --gold:#ffda6a;
+  --white:#ffffff;
+  --ice:#f6fbff;
+  --line:#dcecff;
+  --text:#07182f;
+  --muted:#526b85;
+  --soft:#eef8ff;
+  --shadow:0 24px 70px rgba(20,72,120,.14);
+  --shadow-dark:0 34px 90px rgba(7,24,47,.25);
 }
 
-html {
-  scroll-behavior: smooth;
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:'Inter','Sora',Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
-  color: #ffffff;
+.gwn-team-page{
+  background:
+    radial-gradient(circle at top left,rgba(139,231,255,.24),transparent 32%),
+    radial-gradient(circle at top right,rgba(255,218,106,.20),transparent 30%),
+    linear-gradient(180deg,#07182f 0%,#0d2748 38%,#f6fbff 38%,#ffffff 100%);
+  padding:34px 20px 90px;
+  overflow:hidden;
 }
 
-header {
-  background: rgba(0, 0, 0, 0.92);
-  padding: 18px 32px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+.gwn-wrap{
+  max-width:1180px;
+  margin:0 auto;
 }
 
-.brand {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.2px;
+/* Navigation */
+.gwn-top-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:58px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
+.gwn-top-nav a{
+  text-decoration:none;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:850;
+  background:rgba(255,255,255,.08);
+  transition:.25s ease;
+  backdrop-filter:blur(10px);
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: color 0.25s ease;
+.gwn-top-nav a:hover{
+  background:#fff;
+  color:var(--navy);
+  transform:translateY(-3px);
 }
 
-nav a:hover {
-  color: #d8b24c;
+/* Hero */
+.gwn-hero{
+  text-align:center;
+  color:#fff;
+  max-width:1040px;
+  margin:0 auto 44px;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px 55px;
+.gwn-kicker{
+  display:inline-flex;
+  padding:11px 20px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#dff3ff;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:22px;
+  border:1px solid rgba(255,255,255,.14);
 }
 
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 20px 100px;
+.gwn-hero h1{
+  font-size:clamp(46px,8vw,88px);
+  line-height:.96;
+  letter-spacing:-.065em;
+  margin:0 0 24px;
 }
 
-.hero h1 {
-  font-size: 56px;
-  line-height: 1.15;
-  margin: 0 0 14px;
-  font-weight: 800;
-  letter-spacing: -0.6px;
+.gwn-hero h1 span{
+  background:linear-gradient(90deg,#8be7ff,#ffffff,#ffda6a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
-.gold-rule {
-  width: 92px;
-  height: 6px;
-  margin: 0 auto 28px;
-  border-radius: 999px;
-  background: #d8b24c;
+.gwn-hero p{
+  font-size:19px;
+  line-height:1.75;
+  color:#d8e8f8;
+  margin:0 auto;
+  max-width:850px;
 }
 
-.hero-sub {
-  max-width: 960px;
-  margin: 0 auto;
-  color: #e8eef9;
-  font-size: 18px;
-  line-height: 1.9;
+.gwn-flash-strip{
+  max-width:980px;
+  margin:0 auto 48px;
+  padding:17px 24px;
+  border-radius:999px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:950;
+  background:linear-gradient(90deg,#ffda6a,#ffffff,#8be7ff,#ffda6a);
+  background-size:300% 300%;
+  animation:gwnGlow 4s ease infinite, gwnPulse 1.9s ease-in-out infinite;
+  box-shadow:0 0 38px rgba(139,231,255,.32);
 }
 
-.section {
-  margin-top: 54px;
+@keyframes gwnGlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
-.intro-card,
-.purpose-card,
-.why-card,
-.cta-card {
-  background: rgba(255,255,255,0.97);
-  color: #222;
-  border-radius: 26px;
-  padding: 38px 34px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+@keyframes gwnPulse{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.016);opacity:.9}
 }
 
-.intro-card h2,
-.purpose-card h2,
-.why-card h2,
-.section-heading h2,
-.cta-card h2 {
-  margin: 0 0 16px;
-  font-size: 34px;
-  font-weight: 800;
-  color: #111;
-  line-height: 1.2;
+/* Sections */
+.gwn-section{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:48px;
+  margin-bottom:28px;
+  box-shadow:0 20px 55px rgba(20,72,120,.10);
 }
 
-.intro-card p,
-.purpose-card p,
-.why-card p,
-.cta-card p {
-  margin: 0 0 16px;
-  color: #444;
-  line-height: 1.85;
-  font-size: 16px;
+.gwn-section-dark{
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:34px;
+  padding:52px;
+  margin-bottom:28px;
+  box-shadow:var(--shadow-dark);
 }
 
-.section-heading {
-  text-align: center;
-  margin: 70px 0 34px;
+.gwn-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 15px;
+  border-radius:999px;
+  background:#eef8ff;
+  color:#0e3a70;
+  font-weight:950;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:18px;
 }
 
-.section-heading h2 {
-  color: #fff;
-  font-size: 42px;
-  margin-bottom: 12px;
+.gwn-section-dark .gwn-eyebrow{
+  background:rgba(255,255,255,.12);
+  color:#dff3ff;
+  border:1px solid rgba(255,255,255,.12);
 }
 
-.section-heading .gold-rule {
-  margin-bottom: 0;
-  width: 80px;
-  height: 5px;
+.gwn-section h2,
+.gwn-section-dark h2{
+  font-size:clamp(34px,4.5vw,60px);
+  line-height:1.02;
+  letter-spacing:-.055em;
+  margin:0 0 18px;
 }
 
-.board-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+.gwn-section h2 span{
+  background:linear-gradient(90deg,#0e3a70,#12a4d9,#ffb703);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
-.board-card {
-  background: #ffffff;
-  color: #222;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.gwn-section-dark h2 span{
+  color:#ffda6a;
 }
 
-.board-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.22);
+.gwn-section p,
+.gwn-section-dark p{
+  font-size:17px;
+  line-height:1.82;
+  margin:0 0 18px;
 }
 
-.board-photo {
-width: 100%;
-height: 380px;
-object-fit: cover;
-object-position: center 15%;
-display: block;
-background: #dfe5f2;
+.gwn-section p{color:#465f78}
+.gwn-section-dark p{color:#dcecff}
+
+/* Cards */
+.gwn-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:30px;
 }
 
-.board-body {
-  padding: 26px 24px 28px;
+.gwn-grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:30px;
 }
 
-.board-name {
-  font-size: 28px;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 8px;
-  line-height: 1.2;
+.gwn-card{
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:26px;
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
+  transition:.25s ease;
 }
 
-.board-title {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  background: #eef3ff;
-  color: #1d3f8f;
-  padding: 8px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
+.gwn-card:hover{
+  transform:translateY(-6px);
+  border-color:#58bfff;
+  box-shadow:0 20px 45px rgba(20,72,120,.14);
 }
 
-.board-section-label {
-  font-size: 14px;
-  font-weight: 800;
-  color: #162a63;
-  margin-bottom: 8px;
-  margin-top: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+.gwn-icon{
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:linear-gradient(135deg,#eaf8ff,#fff5cf);
+  border:1px solid #dcecff;
+  font-size:24px;
+  margin-bottom:16px;
 }
 
-.board-text {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.8;
-  margin: 0;
+.gwn-card h3{
+  margin:0 0 10px;
+  font-size:21px;
+  letter-spacing:-.032em;
 }
 
-.responsibility-list {
-  margin: 0;
-  padding-left: 18px;
-  color: #444;
-  line-height: 1.8;
-  font-size: 15px;
+.gwn-card p{
+  margin:0;
+  font-size:15px;
+  line-height:1.72;
 }
 
-.responsibility-list li {
-  margin-bottom: 8px;
+/* Connection */
+.gwn-flow{
+  display:grid;
+  gap:12px;
+  max-width:780px;
+  margin:32px auto 0;
+  text-align:center;
 }
 
-.purpose-grid,
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-  margin-top: 24px;
+.gwn-flow-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:16px 18px;
+  font-weight:900;
+  color:#07182f;
+  box-shadow:0 12px 32px rgba(20,72,120,.08);
 }
 
-.purpose-item,
-.why-item {
-  background: #f7f9fd;
-  border-radius: 18px;
-  padding: 22px 20px;
+.gwn-flow-arrow{
+  font-size:22px;
+  font-weight:950;
+  color:#ffda6a;
 }
 
-.purpose-item h3,
-.why-item h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  color: #13224a;
-  font-weight: 800;
+/* Contributors */
+.gwn-contributor-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:30px;
 }
 
-.purpose-item p,
-.why-item p {
-  margin: 0;
-  color: #444;
-  line-height: 1.75;
-  font-size: 15px;
+.gwn-contributor{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(20,72,120,.12);
+  transition:.25s ease;
 }
 
-.note-box {
-  margin-top: 22px;
-  padding: 18px 20px;
-  background: #f4f6fb;
-  border-left: 5px solid #d8b24c;
-  border-radius: 14px;
-  color: #444;
-  line-height: 1.75;
-  font-size: 15px;
+.gwn-contributor:hover{
+  transform:translateY(-6px);
+  border-color:#58bfff;
+  box-shadow:0 28px 70px rgba(20,72,120,.18);
 }
 
-.cta-card {
-  text-align: center;
-  margin-top: 30px;
+.gwn-contributor img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  background:#eaf1f8;
 }
 
-.cta-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 14px 24px;
-  background: #d8b24c;
-  color: #111;
-  text-decoration: none;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 800;
-  transition: all 0.25s ease;
-  border: none;
-  cursor: pointer;
+.gwn-contributor-body{
+  padding:24px;
 }
 
-.cta-btn:hover {
-  background: #e7c46a;
-  transform: translateY(-2px);
+.gwn-contributor h3{
+  margin:0 0 8px;
+  font-size:25px;
+  letter-spacing:-.04em;
 }
 
-footer {
-  text-align: center;
-  color: #cfd8ef;
-  font-size: 14px;
-  padding: 30px 20px 42px;
+.gwn-role{
+  display:inline-flex;
+  border-radius:999px;
+  padding:8px 12px;
+  background:#eef8ff;
+  border:1px solid #dcecff;
+  color:#0e3a70;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:14px;
 }
 
-/* ===== Workforce Intelligence CTA section fix ===== */
-.join-team-card {
-  max-width: 980px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.97);
-  border-radius: 22px;
-  padding: 42px 34px;
-  box-shadow: 0 14px 38px rgba(0,0,0,0.18);
-  text-align: center;
-  color: #1f2937;
+.gwn-contributor p{
+  font-size:15px;
+  line-height:1.72;
+  margin:0;
+  color:#465f78;
 }
 
-.join-team-card h2 {
-  color: #0B1F3A;
-  font-size: 34px;
-  font-weight: 900;
-  line-height: 1.25;
-  margin-bottom: 10px;
+.gwn-small-note{
+  margin-top:18px;
+  font-size:12px!important;
+  line-height:1.55!important;
+  color:#6b7280!important;
 }
 
-.join-team-card .gold-rule {
-  width: 78px;
-  height: 4px;
-  margin: 12px auto 24px;
-  border-radius: 999px;
-  background: #D4AF37;
-  box-shadow: 0 4px 12px rgba(212,175,55,0.35);
+.gwn-ack-link{
+  display:inline-flex;
+  margin-top:12px;
+  color:#0e3a70;
+  font-size:13px;
+  font-weight:800;
+  text-decoration:none;
+  border-bottom:1px solid #0e3a70;
 }
 
-.join-team-card p {
-  color: #374151;
-  font-size: 17px;
-  line-height: 1.85;
-  margin-bottom: 18px;
+.gwn-profile-label{
+  display:block;
+  margin:16px 0 7px;
+  font-size:12px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  font-weight:950;
+  color:#0e3a70;
 }
 
-.join-team-card .time-line {
-  color: #0B1F3A;
-  font-weight: 800;
-  margin-bottom: 24px;
+/* Join */
+.gwn-join-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin:26px auto 0;
+  max-width:800px;
 }
 
-.join-team-card .important-box {
-  margin: 30px auto 0;
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 24px 22px;
-  text-align: center;
+.gwn-join-list span{
+  display:inline-flex;
+  border-radius:999px;
+  padding:10px 14px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.20);
+  color:#fff;
+  font-size:13px;
+  font-weight:850;
 }
 
-.join-team-card .important-box h3 {
-  color: #0B1F3A;
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 14px;
+.gwn-notice{
+  margin-top:28px;
+  padding:22px;
+  border-radius:22px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.18);
 }
 
-.join-team-card .important-box p {
-  color: #374151;
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 14px;
+.gwn-notice p{
+  margin:0;
+  font-size:14px;
+  line-height:1.7;
 }
 
-.join-team-card .apply-btn {
-  display: inline-block;
-  margin-top: 28px;
-  background: linear-gradient(135deg, #D4AF37, #E8C65A);
-  color: #111827;
-  padding: 15px 30px;
-  border-radius: 999px;
-  font-weight: 800;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-  transition: all 0.25s ease;
-  border: none;
-  cursor: pointer;
+/* Modal / Form */
+.gwn-apply-btn{
+  display:inline-flex;
+  margin-top:28px;
+  min-height:52px;
+  align-items:center;
+  justify-content:center;
+  padding:0 24px;
+  border-radius:999px;
+  font-weight:900;
+  text-decoration:none;
+  transition:.25s ease;
+  background:#fff;
+  color:#07182f;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
 }
 
-.join-team-card .apply-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+.gwn-apply-btn:hover{transform:translateY(-3px)}
+
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.62);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:2000;
 }
 
-/* ===== Modal styles ===== */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  z-index: 2000;
+.modal-backdrop.open{display:flex}
+
+.modal{
+  width:min(900px,96vw);
+  max-height:90vh;
+  overflow-y:auto;
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
-.modal-backdrop.open {
-  display: flex;
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 24px;
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border-radius:22px 22px 0 0;
 }
 
-.modal {
-  width: min(900px, 96vw);
-  max-height: 90vh;
-  overflow-y: auto;
-  background: #ffffff;
-  border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+.modal-header h3{
+  margin:0;
+  font-size:24px;
+  font-weight:900;
 }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px;
-  background: linear-gradient(135deg, #0B1F3A, #1d3f8f);
-  color: #ffffff;
-  border-radius: 22px 22px 0 0;
+.modal-close{
+  border:none;
+  background:transparent;
+  color:#fff;
+  font-size:30px;
+  line-height:1;
+  cursor:pointer;
 }
 
-.modal-header h3 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 800;
+.modal-body{
+  padding:28px 24px 30px;
+  color:#12344d;
 }
 
-.modal-close {
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
+.modal-body p{
+  color:#29465b;
+  line-height:1.7;
+  margin:0 0 24px;
+  text-align:center;
 }
 
-.modal-body {
-  padding: 28px 24px 30px;
-  color: #12344d;
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:16px;
 }
 
-.modal-body p {
-  color: #29465b;
-  line-height: 1.7;
-  margin: 0 0 24px;
-  text-align: center;
-}
+.form-group{margin-bottom:16px}
 
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.form-group {
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #12344d;
-  font-size: 16px;
+.form-group label{
+  display:block;
+  font-weight:800;
+  margin-bottom:8px;
+  color:#12344d;
+  font-size:15px;
 }
 
 .modal input,
 .modal select,
-.modal textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #d9e8f2;
-  border-radius: 14px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  color: #222;
-  background: #fff;
+.modal textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #d9e8f2;
+  border-radius:14px;
+  font-size:15px;
+  font-family:inherit;
+  color:#222;
+  background:#fff;
 }
 
-.modal textarea {
-  min-height: 140px;
-  resize: vertical;
+.modal textarea{
+  min-height:130px;
+  resize:vertical;
 }
 
-.form-actions {
-  text-align: center;
-  margin-top: 8px;
+.form-actions{
+  text-align:center;
+  margin-top:8px;
 }
 
-.close-btn {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 14px 24px;
-  background: #eef3ff;
-  color: #12344d;
-  text-decoration: none;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 800;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s ease;
+.submit-btn,
+.close-btn{
+  display:inline-flex;
+  min-height:48px;
+  align-items:center;
+  justify-content:center;
+  padding:0 22px;
+  border-radius:999px;
+  font-weight:900;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
 }
 
-.close-btn:hover {
-  background: #dfe8ff;
+.submit-btn{
+  background:linear-gradient(135deg,#ffda6a,#e8c65a);
+  color:#07182f;
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 16px 18px;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .brand {
-    font-size: 18px;
-  }
-
-  nav {
-    gap: 12px;
-  }
-
-  .hero {
-    padding: 82px 18px 42px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero-sub {
-    font-size: 16px;
-    line-height: 1.85;
-  }
-
-  .container {
-    padding: 0 18px 90px;
-  }
-
-  .intro-card,
-  .purpose-card,
-  .why-card,
-  .cta-card,
-  .join-team-card {
-    padding: 28px 22px;
-    border-radius: 20px;
-  }
-
-  .intro-card h2,
-  .purpose-card h2,
-  .why-card h2,
-  .cta-card h2,
-  .join-team-card h2 {
-    font-size: 28px;
-  }
-
-  .section-heading {
-    margin: 58px 0 28px;
-  }
-
-  .section-heading h2 {
-    font-size: 32px;
-  }
-
-  .board-photo {
-width: 100%;
-height: 320px;
-object-fit: cover;
-display: block;
-background: #dfe5f2;
+.close-btn{
+  margin-left:10px;
+  background:#eef3ff;
+  color:#12344d;
 }
 
-@media (max-width: 768px) {
-.board-photo {
-height: auto !important;
-object-fit: contain !important;
-object-position: center top !important;
-background: #f7f9fd;
+/* CTA */
+.gwn-cta{
+  text-align:center;
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border-radius:34px;
+  padding:52px 30px;
+  margin-top:38px;
+  box-shadow:var(--shadow-dark);
 }
+
+.gwn-cta h2{
+  font-size:clamp(32px,5vw,58px);
+  line-height:1.04;
+  letter-spacing:-.055em;
+  margin:0 0 14px;
 }
 
-  .board-body {
-    padding: 22px 20px 24px;
-  }
+.gwn-cta p{
+  color:#dcecff;
+  max-width:780px;
+  margin:0 auto 28px;
+  line-height:1.75;
+}
 
-  .board-name {
-    font-size: 24px;
-  }
+.gwn-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
 
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
+.gwn-btn{
+  display:inline-flex;
+  min-height:52px;
+  align-items:center;
+  justify-content:center;
+  padding:0 24px;
+  border-radius:999px;
+  font-weight:900;
+  text-decoration:none;
+  transition:.25s ease;
+}
 
-  .close-btn {
-    margin-left: 0;
-    margin-top: 10px;
-  }
+.gwn-btn-primary{background:#fff;color:#07182f}
+.gwn-btn-secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
 
-  .modal {
-    width: 100%;
-  }
+.gwn-btn:hover{transform:translateY(-3px)}
 
-  .modal-header h3 {
-    font-size: 21px;
+.gwn-footer{
+  text-align:center;
+  color:#cfd8ef;
+  font-size:14px;
+  padding:30px 20px 0;
+}
+
+@media(max-width:1000px){
+  .gwn-grid,
+  .gwn-grid-3,
+  .gwn-contributor-grid{
+    grid-template-columns:1fr;
   }
 }
 
-  
-.board-photo {
-width: 100%;
-height: 320px;
-object-fit: cover;
-object-position: top center;
-}
+@media(max-width:720px){
+  .gwn-team-page{padding:26px 16px 72px}
 
-@media (max-width: 768px) {
-.board-photo {
-height: 260px;
-object-position: top center;
-}
-}
+  .gwn-top-nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:10px;
+  }
 
-  <style>
-.ack-note {
-font-size: 12px;
-color: #6b7280; /* soft gray */
-line-height: 1.5;
-margin-top: 14px;
-margin-bottom: 10px;
+  .gwn-top-nav a{white-space:nowrap}
+
+  .gwn-hero h1{font-size:clamp(44px,14vw,68px)}
+  .gwn-hero p{font-size:17px}
+
+  .gwn-flash-strip{
+    border-radius:24px;
+    font-size:14px;
+  }
+
+  .gwn-section,
+  .gwn-section-dark,
+  .gwn-cta{
+    border-radius:26px;
+    padding:30px;
+  }
+
+  .form-grid{grid-template-columns:1fr}
+  .close-btn{margin-left:0;margin-top:10px}
+  .gwn-contributor img{height:auto;object-fit:contain;background:#f7fbff}
 }
-
-.ack-btn {
-display: inline-block;
-font-size: 13px;
-font-weight: 500;
-color: #1e3a8a; /* deep elegant blue */
-text-decoration: none;
-border-bottom: 1px solid #1e3a8a;
-padding-bottom: 2px;
-transition: all 0.2s ease;
-}
-
-.ack-btn:hover {
-color: #000;
-border-bottom: 1px solid #000;
-}
-
-</style>
-
 </style>
 </head>
 
 <body>
+<main class="gwn-team-page">
+  <div class="gwn-wrap">
 
-<header>
-  <div class="brand">Government Workforce Network LLC</div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/workforce-intelligence-team">Workforce Intelligence Team</a>
-  </nav>
-</header>
+    <nav class="gwn-top-nav" aria-label="Government Workforce Network navigation">
+      <a href="/">Home</a>
+      <a href="/who-we-are">Who We Are</a>
+      <a href="/structure">Our Structure</a>
+      <a href="/workforce-innovation-lab">Workforce Innovation Lab</a>
+    </nav>
 
-<section class="hero">
-  <div class="container">
-    <h1>Workforce Intelligence Team</h1>
-<p style="margin:18px 0 0; font-size:1.1rem; font-weight:600; color:#d4af37; text-align:center; letter-spacing:0.3px;">
-Where Human Insight and Real-World Contribution Shape the Future of Work
+    <header class="gwn-hero">
+      <div class="gwn-kicker">Workforce Intelligence Team</div>
+      <h1><span>A New Era of Workforce Leadership</span></h1>
+      <p>
+        Government Workforce Network's collaborative contributor community helping transform workforce experience into practical innovation.
+      </p>
+    </header>
+
+    <div class="gwn-flash-strip">
+      Human Insight • Shared Experience • Workforce Innovation
+    </div>
+
+    <section class="gwn-section">
+      <div class="gwn-eyebrow">About</div>
+      <h2>What is the <span>Workforce Intelligence Team?</span></h2>
+      <p>
+        The Workforce Intelligence Team is Government Workforce Network's collaborative contributor community. Contributors share professional experience, diverse perspectives, and practical insight to help strengthen our programs, partnerships, research, and workforce innovation.
+      </p>
+      <p>
+        Rather than serving as a traditional advisory board, contributors help ensure our work reflects real workforce needs—not assumptions.
+      </p>
+    </section>
+
+    <section class="gwn-section">
+      <div class="gwn-eyebrow">Why Workforce Intelligence?</div>
+      <h2>AI learns from data. <span>Workforce Intelligence learns from people.</span></h2>
+      <p>
+        Data reveals patterns. People provide context, judgment, professional experience, and lived perspective. By combining both, the Workforce Intelligence Team helps shape workforce innovation that is practical, responsible, and centered on real workforce needs.
+      </p>
+    </section>
+
+    <section class="gwn-section-dark">
+      <div class="gwn-eyebrow">Why Contributors?</div>
+      <h2>Great ideas come from people who feel <span>free to share them.</span></h2>
+      <p>
+        The Workforce Intelligence Team is built on voluntary collaboration. Contributors are invited to share honest perspectives, practical experience, and thoughtful feedback that help Government Workforce Network strengthen workforce innovation through open dialogue and independent thinking.
+      </p>
+      <p>
+        Our goal is not agreement. Our goal is better ideas through logical, reasonable, and respectful collaboration.
+      </p>
+    </section>
+
+    <section class="gwn-section">
+      <div class="gwn-eyebrow">Contributors</div>
+      <h2>Meet our <span>contributors.</span></h2>
+      <p>
+        Our contributor community is growing intentionally, guided by a human-centered, quality-over-quantity approach.
+      </p>
+
+      <div class="gwn-contributor-grid">
+        <article class="gwn-contributor">
+          <img src="marivel-nunez1.jpg" alt="Photo of Marivel Morgana Nunez">
+          <div class="gwn-contributor-body">
+            <h3>Marivel Morgana Nunez</h3>
+            <div class="gwn-role">Founder & Workforce Intelligence Team Lead</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>With 26 years of combined public and private sector experience, including 20 years as a public-sector HR leader, Marivel is an expert in recruitment strategy, hiring operations, workforce initiatives, project management, and recruitment modernization. She has led complex projects and strategic hiring initiatives within highly regulated, mission-critical public agencies.
 </p>
-    <div class="gold-rule"></div>
-    <p class="hero-sub">
-     The Workforce Intelligence Team brings together diverse perspectives, lived experience, and real-world insight to support the development of modern workforce solutions.
-    This team plays a key role in shaping ideas, strengthening strategy, and ensuring our work reflects real needs across individuals, organizations, and communities.
-    </p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Marivel guides the organization's workforce strategy, contributor community, and innovation initiatives, helping translate workforce challenges into practical solutions through collaboration and AI-enabled tools.</p>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="joy-soo.jpg" alt="Photo of Joy Soo">
+          <div class="gwn-contributor-body">
+            <h3>Joy Soo</h3>
+            <div class="gwn-role">Philippines, Global Workforce Intelligence Director | Mentor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Joy is the founder of MUSA, an impact-driven advocacy organization creating second-chance career pathways for incarcerated women in the Philippines. She brings more than 25 years of experience in entrepreneurship, business leadership, and social impact innovation.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Joy contributes global perspective on entrepreneurship, inclusive employment, reintegration, and cross-cultural workforce pathways that connect social impact with economic opportunity.</p>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="ryan-may1.jpg" alt="Photo of Ryan May">
+          <div class="gwn-contributor-body">
+            <h3>Ryan May</h3>
+            <div class="gwn-role">Communications & Brand Intelligence Contributor | Mentor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Ryan is a Communications & Branding Director with 15+ years of experience leading high-impact media, marketing, and campaign strategy with Fox Sports</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Ryan contributes insight on communications, branding, media strategy, and storytelling to strengthen public engagement, organizational credibility, and visibility.</p>
+            <p class="gwn-small-note">Acknowledgment is only for selected or invited contributors.</p>
+            <a class="gwn-ack-link" href="/workforce-intelligence-contributor">Complete Acknowledgment</a>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="ilyna-wen.jpg" alt="Photo of Ilyna Wen">
+          <div class="gwn-contributor-body">
+            <h3>Ilyna Wen</h3>
+            <div class="gwn-role">Strategic Workforce Well-Being Integration Contributor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Ilyna is a wellness advocate and mentor with a community-centered perspective on health, transparent wellness practices, daily optimization, and human-centered performance.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Ilyna contributes insight on workforce well-being, helping connect health, energy, lifestyle, employee experience, and sustainable performance within workforce strategy.</p>
+            <p class="gwn-small-note">Acknowledgment is only for selected or invited contributors.</p>
+            <a class="gwn-ack-link" href="/workforce-intelligence-contributor">Complete Acknowledgment</a>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="university.png" alt="Photo placeholder for Daniel Handoyo">
+          <div class="gwn-contributor-body">
+            <h3>Daniel Handoyo</h3>
+            <div class="gwn-role">Education & University Partnerships Intelligence Contributor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Daniel is an undergraduate student in Political Science and Economics at the University of Massachusetts Amherst with experience related to judicial systems, civic engagement, and student leadership.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Daniel contributes student and university insight to strengthen career readiness, university engagement, and education-to-workforce pathways.</p>
+            <p class="gwn-small-note">Acknowledgment is only for selected or invited contributors.</p>
+            <a class="gwn-ack-link" href="/workforce-intelligence-contributor">Complete Acknowledgment</a>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="marina-arekhova.jpg" alt="Photo of Marina Arekhova">
+          <div class="gwn-contributor-body">
+            <h3>Marina Arekhova</h3>
+            <div class="gwn-role">United Kingdom, Digital Presence Contributor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Marina is a producer, model, actress, magazine editor, and publisher with experience in content creation, media production, creative visibility, and digital storytelling.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Marina supports professional visibility, media presence, digital engagement, and public-facing storytelling through creative industry experience.</p>
+            <p class="gwn-small-note">Acknowledgment is only for selected or invited contributors.</p>
+            <a class="gwn-ack-link" href="/workforce-intelligence-contributor">Complete Acknowledgment</a>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="ling-osawa.jpg" alt="Photo of Ling Osawa">
+          <div class="gwn-contributor-body">
+            <h3>Ling Osawa</h3>
+            <div class="gwn-role">Japan, Workforce Partnerships & Engagement Intelligence Director</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Ling brings more than 20 years of experience in customer service, international engagement, and coordination within Japan's airline and hospitality sectors, along with extensive experience supporting government delegations, political figures, and executive events.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Ling contributes international engagement experience to support workforce partnerships, visibility, recognition programs, and human-centered community connection in Japan.</p>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="hilda-puno.jpeg" alt="Photo of Hilda Puno">
+          <div class="gwn-contributor-body">
+            <h3>Hilda Puno</h3>
+            <div class="gwn-role">Veteran & Military Programs Intelligence Contributor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>Hilda is a veteran benefits and program operations specialist with more than 20 years of combined experience across federal operations, healthcare administration, and education, including service in the United States Navy. Hilda is also a SAG-AFTRA actress bringing expertise in media and public engagement.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>Hilda contributes perspective on veteran services, military transition, operational excellence, and workforce pathways for veterans, transitioning service members, and military families.</p>
+            <p class="gwn-small-note">Acknowledgment is only for selected or invited contributors.</p>
+            <a class="gwn-ack-link" href="/workforce-intelligence-contributor">Complete Acknowledgment</a>
+          </div>
+        </article>
+
+        <article class="gwn-contributor">
+          <img src="advisory-member.jpg" alt="Photo placeholder for future contributor">
+          <div class="gwn-contributor-body">
+            <h3>This Could Be You</h3>
+            <div class="gwn-role">Career Transition Contributor</div>
+            <span class="gwn-profile-label">Professional Background</span>
+            <p>This contributor role is designed for individuals with lived experience navigating career changes, employment gaps, workforce re-entry, or professional transition.</p>
+            <span class="gwn-profile-label">Role Summary</span>
+            <p>This contributor shares practical perspective on career transition barriers and helps inform resources that support people moving toward new opportunities.</p>
+            <p class="gwn-small-note">Acknowledgment is only for selected or invited contributors.</p>
+            <a class="gwn-ack-link" href="/workforce-intelligence-contributor">Complete Acknowledgment</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="gwn-section-dark">
+      <div class="gwn-eyebrow">Join Us</div>
+      <h2>Interested in joining the <span>Workforce Intelligence Team?</span></h2>
+      <p>
+        We welcome contributors who are passionate about strengthening the future of work through collaboration, innovation, and public service.
+      </p>
+
+      <div class="gwn-notice">
+        <p>
+          Members participate as voluntary community contributors. This is a non-paid, non-operational contributor
+          experience for learning, collaboration, and community engagement. Participants are not employees, contractors,
+          or interns of Government Workforce Network LLC.
+        </p>
+      </div>
+
+      <button type="button" class="gwn-apply-btn" onclick="openModal('applyModal')">Apply or Express Interest</button>
+    </section>
+
+    <section class="gwn-cta">
+      <h2>Human insight shapes better workforce innovation.</h2>
+      <p>
+        Every insight shared, every idea explored, and every collaboration formed helps strengthen our mission of
+        building Income, expanding Opportunity, and promoting Well-Being for the workforce of tomorrow.
+      </p>
+
+      <div class="gwn-buttons">
+        <a href="/" class="gwn-btn gwn-btn-primary">Back to Home</a>
+        <a href="/who-we-are" class="gwn-btn gwn-btn-secondary">Who We Are</a>
+        <a href="/structure" class="gwn-btn gwn-btn-secondary">Our Structure</a>
+        <a href="/workforce-innovation-lab" class="gwn-btn gwn-btn-secondary">Workforce Innovation Lab</a>
+      </div>
+    </section>
+
+    <footer class="gwn-footer">
+      <p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
+      <p>Together, Building Income, Opportunity, and Well-Being.</p>
+    </footer>
+
   </div>
-</section>
+</main>
 
-<div class="container">
-
-  <section class="section">
-    <div class="intro-card">
-      <h2>About the Workforce Intelligence Team</h2>
-      <p>
-        The Workforce Intelligence Team is a collective of individuals contributing insight, experience, and perspective to support the development of workforce solutions.
-      This includes human insight, lived experience, and AI-informed thinking working together to generate ideas, strengthen direction, and support meaningful workforce pathways.
-      </p>
-      <p>
-      This team serves as a real-time intelligence layer that informs our tools, initiatives, and consulting services.
-      </p>
-      <div class="note-box">
-      Members are selected based on their perspective, commitment to contribution, and ability to provide thoughtful insight that supports innovation and long-term impact.
-      </div>
-    </div>
-  </section>
-
-   <section class="section">
-    <div class="intro-card">
-      <h2>A New Approach to Leadership</h2>
-      <p>
-      Government Workforce Network LLC is building a more accessible and inclusive approach to leadership.
-      </p>
-      <p>
-      Rather than relying on traditional structures, this model creates space for individuals to contribute, share insight, and support one another through real-world experience.
-      </p>
-      <p>
-        Leadership is not defined by position, but by impact, contribution, and connection.
-      </p>
-      <div class="note-box">
-       This approach encourages collaboration, builds confidence, and supports individuals in shaping the future of the workforce together.
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="purpose-card">
-      <h2>Purpose of the Workforce Intelligence Team</h2>
-      <p>
-     The Workforce Intelligence Team serves as a strategic foundation for shaping ideas, strengthening direction, and supporting initiatives aligned with our mission.
-      <p>
-    This model is designed to be flexible, modern, and impact-driven ensuring solutions remain practical, inclusive, and connected to real-world workforce needs.
-      </p>
-
-      <div class="purpose-grid">
-        <div class="purpose-item">
-          <h3>Income</h3>
-          <p>Support ideas and strategies that strengthen access to meaningful work, career growth, and economic opportunity.</p>
-        </div>
-        <div class="purpose-item">
-          <h3>Opportunity</h3>
-          <p>Expand pathways that connect education, employers, communities, and emerging talent.</p>
-        </div>
-        <div class="purpose-item">
-          <h3>Well-Being</h3>
-          <p>Encourage workforce approaches that prioritize inclusion, sustainability, and long-term support.</p>
-        </div>
-        <div class="purpose-item">
-          <h3>Innovation</h3>
-          <p>Combine human insight with AI-informed thinking to support modern, adaptive, and future-ready solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="why-card">
-      <h2>Why a Workforce Intelligence Team?</h2>
-      <div class="why-grid">
-        <div class="why-item">
-          <h3>1. Why Human Intelligence Matters</h3>
-          <p>
-            AI can generate ideas but human experience, judgment, and perspective ensure those ideas are relevant, grounded, and connected to real people and communities.
-          </p>
-        </div>
-        <div class="why-item">
-          <h3>2. Why AI-Informed Thinking is Integrated</h3>
-          <p>
-            This model uses AI as a tool to support insight, identify trends, and enhance thinking while relying on human perspective to shape direction and meaning.
-          </p>
-        </div>
-        <div class="why-item">
-          <h3>3. Why This Model Strengthens Impact</h3>
-          <p>
-           Traditional advisory models focus on guidance. This approach emphasizes contribution, collaboration, and real-world application connecting ideas to meaningful outcomes.
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="section-heading">
-      <h2>A New Era of Workforce Leadership</h2>
-      <div class="gold-rule"></div>
-      <p class="hero-sub">
-      We are building our contributor community - here's who we are looking for and why.
-    </p>
-      <p class="hero-sub">
-Government Workforce Network LLC launched in early 2026. Our Workforce Intelligence Team is growing intentionally, guided by the same human-centered, quality over quantity approach that defines everything we do.
-      </p>
-    </div>
-
-    <div class="board-grid">
-
-      <article class="board-card">
-        <img src="marivel-nunez1.jpg" alt="Photo of Marivel Morgana Nunez" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Marivel Morgana Nunez</div>
-          <p class="board-text">Founder & Team Lead of Government Workforce Network LLC | 20+ years in Human Resources | Recruitment SME | Workforce Strategist | AI Workforce Readiness Consultant</p>
-          <div class="board-title">Workforce Intelligence Team Leader | EEOC & FEHA Navigation Contributor | Mentor</div> 
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Leads the design of modern workforce strategies that connect talent, education, and opportunity—driving long-term impact across organizations and communities.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Develops and directs organizational strategy and workforce innovation initiatives</li>
-            <li>Builds high-impact partnerships across government, education, and industry</li>
-            <li>Develops talent systems that improve recruitment, access, and retention</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="joy-soo.jpg" alt="Photo of Joy Soo" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Joy Soo</div>
-           <p class="board-text">Founder of MUSA creating second-chance careers for incarcerated women in the Philippines | Global Business Leader | 25+ Years in Entrepreneurship & Impact Innovation</p>
-          <div class="board-title">Philippines, Global Workforce Intelligence Director | Mentor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Brings a global perspective on workforce development, entrepreneurship, and inclusive employment—integrating social impact with economic opportunity.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Provides insight on global workforce and entrepreneurship trends</li>
-            <li>Shapes cross-cultural employment and reintegration strategies</li>
-            <li>Bridges international education-to-employment pathways</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="ryan-may1.jpg" alt="Photo placeholder for Communications & Brand Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Ryan May</div>
-          <p class="board-text">Communications Director with 15+ years of experience leading high-impact media, marketing, and campaign strategy with Fox Sports | Communications & Branding Strategist</p>
-          <div class="board-title">Communications & Brand Intelligence Contributor | Mentor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes insights to strengthen messaging, storytelling, and brand strategy to strengthen visibility, engagement, and organizational credibility.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares perspective on strategic communication and branding initiatives</li>
-            <li>Provides input on strengthening organizational credibility</li>
-            <li>Contributes ideas to enhance public presence through impactful storytelling</ul>
-         <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-
-      <article class="board-card">
-        <img src="ilyna-wen.jpg" alt="Photo placeholder for Workforce Well-Being Integration" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Ilyna Wen</div>
-          <p class="board-text">Wellness Advocate | Mentor</p>
-          <div class="board-title">Strategic Workforce Well-Being Integration | Clean & Transparent Health Advocacy | Human-Centered Performance & Daily Optimization</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-       Contributes to the advancement of workforce well-being by bringing a community-centered, human-first perspective to workforce strategy. Supports the integration of health, wellness, and employee experience into real-world workforce challenges, helping organizations better understand the connection between well-being, performance, and long-term sustainability. Engages in conversations, insights, and collaborative initiatives that strengthen the overall workforce ecosystem.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Provides insight on embedding wellness into workforce strategy connecting physical health, energy, and daily habits to workforce performance, retention, and long-term sustainability</li>
-<li>Champions the importance of clean, chemical-free, and transparent wellness practices helping organizations and individuals understand how product choices and lifestyle habits directly impact overall well-being and productivity</li>
-<li>Promotes practical, everyday approaches to improving workforce performance through organic, health-conscious living bridging the gap between personal wellness and professional effectiveness</li>
-         <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-       <article class="board-card">
-        <img src="university.png" alt="Photo placeholder for Education & University Partnerships Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Daniel Handoyo</div>
- <p class="board-text">Undergraduate in Political Science and Economics, University of Massachusetts Amherst | Background in judicial systems, civic engagement, and student leadership</p>
-          <div class="board-title">Education & University Partnerships Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes ideas and insight to strengthen university engagement and student workforce readiness initiatives.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares perspective on university partnerships and student engagement</li>
-            <li>Contributes ideas to support student career readiness</li>
-            <li>Provides input on strengthening connections between education and workforce pathways</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="marina-arekhova.jpg" alt="Photo placeholder for Digital Presence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Marina Arekhova</div>
- <p class="board-text">Producer | Model | Actress | Magazine Editor & Publisher | Expertise in content creation, media production, and digital storytelling</p>
-          <div class="board-title">United Kingdom, Digital Presence Contributor</div>
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-           Supports visibility and professional presence in the digital and social media space.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-<li>Shares strategies for building professional visibility online</li>
-<li>Supports personal branding and digital engagement</li>
-<li>Contributes insight on navigating digital platforms</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-        <article class="board-card">
-        <img src="ling-osawa.jpg" alt="Photo placeholder for Japan, Workforce Partnerships & Engagement Intelligence Director" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Ling Osawa</div>
-          <p class="board-text">Brings over 20 years of experience in customer service, international engagement, and coordination within Japan’s airline and hospitality sectors | Over 15 years coordinating and supporting government delegations, political figures, and high-level international and executive events.</p>
-          <div class="board-title">Japan, Workforce Partnerships & Engagement Intelligence Director</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-           Leads efforts across Japan to connect talent, institutions, and opportunity through human-centered community engagement and recognition programs.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Build & Lead Strategic Workforce Partnerships</li>
-<li>Workforce Engagement & Visibility</li>
-<li>Leverage Engagement Intelligence for Growth</li>
-         <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-        </div>
-      </article>
-
-       <article class="board-card">
-        <img src="hilda-puno.jpeg" alt="Photo placeholder for Veteran & Military Programs Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">Hilda Puno</div>
- <p class="board-text">Veteran Benefits & Program Operations Specialist with 20+ years of combined experience across federal operations, healthcare administration, and education, including service in the United States Navy | Veteran Services & Operational Excellence | SAG-AFTRA Actress | Mentor
-</p>
-          <div class="board-title">Veteran & Military Programs Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes perspective to support initiatives serving veterans, transitioning service members, and military families.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares insight on veteran workforce transition needs</li>
-            <li>Contributes ideas for outreach to military and veteran communities</li>
-            <li>Provides input on resources and partnerships that support veteran employment</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-<article class="board-card">
-        <img src="advisory-member.jpg" alt="Photo placeholder for Career Transition  Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
-          <p class="board-text">Background/Experience</p>
-
-          <div class="board-title">Career Transition Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Represents individuals navigating career changes, employment gaps, or re-entry into the workforce.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-<ul class="responsibility-list">
-<li>Shares real-world career transition experiences</li>
-<li>Provides perspective on barriers to re-employment</li>
-<li>Supports others navigating similar transitions</li>
-</ul>
-         <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="advisory-member-5.jpg" alt="Photo placeholder for Community Engagement Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Community Engagement Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes perspective to support outreach, inclusion, and engagement with communities and diverse populations.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares insight on community needs and engagement strategies</li>
-            <li>Contributes ideas to expand outreach efforts</li>
-            <li>Provides input on inclusive workforce initiatives</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="advisory-member-6.jpg" alt="Photo placeholder for Employer & Industry Partnerships Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Employer & Industry Partnerships Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes insight to strengthen employer engagement and workforce pipeline connections.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares perspective on employer needs and hiring trends</li>
-            <li>Contributes ideas to improve employer engagement strategies</li>
-            <li>Provides input on strengthening talent pipeline connections</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="advisory-member-8.jpg" alt="Photo placeholder for AI & Workforce Technology Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">AI & Technology Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes insight on AI, technology, and the evolving workforce landscape.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares perspective on AI and emerging technologies</li>
-            <li>Contributse ideas for future-ready workforce solutions</li>
-            <li>Provides input on integrating technology into workforce strategies</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="advisory-member-9.jpg" alt="Photo placeholder for Policy & Government Relations Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Policy & Government Relations Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes insight related to public-sector priorities, workforce policy alignment, and government engagement.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares perspective on workforce policies and regulations</li>
-            <li>Contributes ideas for government engagement strategies</li>
-            <li>Providse input on alignment with public-sector initiatives</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="advisory-member-10.jpg" alt="Photo placeholder for Sponsorships & Strategic Partnerships Intelligence Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Sponsorships & Partnerships Intelligence Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Contributes ideas to support partnerships, sponsorship opportunities, and sustainable engagement models.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-            <li>Shares perspective on partnership and sponsorship strategies</li>
-            <li>Contributes ideas to strengthen collaboration opportunities</li>
-            <li>Provides input on long-term sustainability approaches</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
- <article class="board-card">
-        <img src="advisory-member-10.jpg" alt="Photo placeholder for Stay-at-Home Parent Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Stay-at-Home Parent Contributor</div>
-
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-            Represents individuals re-entering the workforce after time dedicated to caregiving.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-<li>Highlights transferable skills from caregiving</li>
-<li>Shares insights on re-entering the workforce</li>
-<li>Supports inclusive opportunities for parents</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-<article class="board-card">
-        <img src="advisory-member-10.jpg" alt="Photo placeholder for Lived Experience Contributor (Disability & Accessibility)" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Lived Experience Contributor (Disability & Accessibility)</div>
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-           Shares lived experience to support accessibility and understanding in workforce environments.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-<li>Provides firsthand perspective on accessibility challenges</li>
-<li>Raises awareness of real-world barriers</li>
-<li>Supports more inclusive experiences</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-      
-<article class="board-card">
-        <img src="advisory-member-10.jpg" alt="Photo placeholder for Reintegration & Second Chance Contributor" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Reintegration & Second Chance Contributor</div>
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-        Represents individuals navigating reintegration and new opportunities, contributing perspective that supports inclusive pathways to employment, growth, and long-term stability.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-<li>Shares perspective on barriers and opportunities in workforce reintegration</li>
-<li>Supports awareness of inclusive hiring and second-chance opportunities</li>
-<li>Contributes insight to help build pathways for sustainable employment and growth</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-      <article class="board-card">
-        <img src="advisory-member-10.jpg" alt="Photo placeholder for Workforce Insight Intelligence Contributor – Retiree Experience" class="board-photo">
-        <div class="board-body">
-          <div class="board-name">This Could Be You</div>
- <p class="board-text">Background/Experience</p>
-          <div class="board-title">Workforce Insight Intelligence Contributor – Retiree Experience</div>
-          <div class="board-section-label">Role Summary</div>
-          <p class="board-text">
-       Contributes valuable insight and lived experience to support understanding of workforce re-entry challenges for public sector retirees. This role provides feedback, ideas, and perspective that help inform programs, discussions, and initiatives aimed at improving access to opportunity and workforce connection.
-          </p>
-
-          <div class="board-section-label">Key Contributions</div>
-          <ul class="responsibility-list">
-<li>Share Real-World Perspective</li>
-<li>Offer Feedback on Workforce Initiatives</li>
-<li>Support Community Insight & Dialogue</li>
-          </ul>
-          <p class="ack-note">
-This acknowledgment step is only for individuals who have been selected or invited by Government Workforce Network LLC.
-Submission does not guarantee acceptance or placement.
-</p>
-<a href="/workforce-intelligence-contributor.html" class="ack-btn">
-Complete Acknowledgment
-</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section style="padding: 70px 20px;">
-    <div class="join-team-card">
-
-      <h2>Interested in Joining the Workforce Intelligence Team?</h2>
-      <div class="gold-rule"></div>
-
-      <p class="time-line"><strong>Time Commitment:</strong> Approximately 6 hours per month</p>
-
-      <p>
-        This is a voluntary, non-paid contributor opportunity open to students, professionals, veterans, retirees, and individuals interested in supporting workforce innovation and community-driven initiatives.
-      </p>
-
-      <p>
-        This experience is designed for individuals seeking exposure to workforce development, leadership collaboration, and real-world insight. Participation is flexible and intended to support personal and professional growth through learning, idea-sharing, and community engagement.
-      </p>
-
-      <p>
-        This opportunity is ideal for individuals with little to no prior experience who are interested in gaining practical knowledge, strengthening professional skills, and participating in a collaborative environment.
-      </p>
-
-      <p>
-        Participants contribute ideas, perspectives, and insights that support Government Workforce Network LLC’s mission of building income, opportunity, and well-being.
-      </p>
-
-      <p>
-        We welcome individuals from diverse backgrounds, experiences, and perspectives, including individuals with disabilities, and are committed to fostering an inclusive and accessible environment.
-      </p>
-
-      <div class="important-box">
-        <h3>Important Information</h3>
-
-        <p>
-          Members of the Workforce Intelligence Team participate as community contributors. This is a non-paid, voluntary experience.
-        </p>
-
-        <p>
-          Participants are not employees, contractors, or interns of Government Workforce Network LLC and are not eligible for wages, benefits, or compensation.
-        </p>
-
-        <p>
-          This experience is designed solely for learning, collaboration, and community engagement. Participation is flexible, and there are no required employment obligations.
-        </p>
-
-        <p>
-          This role is non-operational and does not involve formal decision-making authority, management responsibilities, or employment-based duties within the organization.
-        </p>
-
-        <p>
-          This opportunity is not intended to replace paid positions or serve as an internship program.
-        </p>
-
-        <p>
-          Participation is entirely voluntary and may be discontinued at any time by the participant or the organization.
-        </p>
-      </div>
-
-      <button type="button" class="apply-btn" onclick="openModal('applyModal')">
-        Apply or Express Interest
-      </button>
-
-    </div>
-  </section>
-
-</div>
-
-<!-- APPLY / EXPRESS INTEREST MODAL -->
 <div class="modal-backdrop" id="applyModal" aria-hidden="true">
   <div class="modal" role="dialog" aria-labelledby="applyModalTitle">
     <div class="modal-header">
@@ -1365,11 +899,9 @@ Complete Acknowledgment
     </div>
 
     <div class="modal-body">
-      <p>
-        Complete the form below to express interest in the Workforce Intelligence Team.
-      </p>
+      <p>Complete the form below to express interest in the Workforce Intelligence Team.</p>
 
-      <form name="workforce-intelligence-interest" method="POST" data-netlify="true" action="/thank-you">
+      <form action="/thank-you" method="POST" name="workforce-intelligence-interest">
         <input type="hidden" name="form-name" value="workforce-intelligence-interest">
 
         <div class="form-grid">
@@ -1413,7 +945,7 @@ Complete Acknowledgment
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="cta-btn">Submit Form</button>
+          <button type="submit" class="submit-btn">Submit Form</button>
           <button type="button" class="close-btn" onclick="closeModal(this)">Cancel</button>
         </div>
       </form>
@@ -1421,50 +953,41 @@ Complete Acknowledgment
   </div>
 </div>
 
-  <footer>
-    <p>© 2026 Government Workforce Network LLC. All rights reserved.</p>
-    <p>Together, Building Income, Opportunity, and Well-Being</p>
-  </footer>
-
 <script>
-function openModal(id) {
-  const modal = document.getElementById(id);
-  if (!modal) return;
+function openModal(id){
+  const modal=document.getElementById(id);
+  if(!modal)return;
   modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
 }
 
-function closeModal(el) {
-  const modal = el.closest('.modal-backdrop');
-  if (!modal) return;
+function closeModal(el){
+  const modal=el.closest('.modal-backdrop');
+  if(!modal)return;
   modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
 }
 
-document.addEventListener('click', function (e) {
-  if (e.target.classList.contains('modal-backdrop')) {
+document.addEventListener('click',function(e){
+  if(e.target.classList.contains('modal-backdrop')){
     e.target.classList.remove('open');
-    e.target.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    e.target.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
   }
 });
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    const openModalEl = document.querySelector('.modal-backdrop.open');
-    if (openModalEl) {
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    const openModalEl=document.querySelector('.modal-backdrop.open');
+    if(openModalEl){
       openModalEl.classList.remove('open');
-      openModalEl.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      openModalEl.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
     }
   }
 });
 </script>
-
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5YzFhMWFjMzBlOGFjMDAwOTYwNzYxOSIsImlzc3VlciI6Im5mc2VydmVyIn0.g-UhKfzs0z6PZaPXR_y5BrrQywFGNGYe0ICPhjFgNso"></script>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-
 </body>
 </html>
