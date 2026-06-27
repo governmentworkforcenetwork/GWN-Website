@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,305 +6,444 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Initiatives | Government Workforce Network LLC</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
-* {
-  box-sizing: border-box;
+:root{
+  --navy:#07182f;
+  --navy2:#0d2748;
+  --blue:#0e3a70;
+  --sky:#8be7ff;
+  --gold:#ffda6a;
+  --white:#ffffff;
+  --ice:#f6fbff;
+  --line:#dcecff;
+  --text:#07182f;
+  --muted:#526b85;
+  --shadow:0 24px 70px rgba(20,72,120,.14);
+  --shadow-dark:0 34px 90px rgba(7,24,47,.25);
 }
 
-html {
-  scroll-behavior: smooth;
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:'Inter','Sora',Arial,sans-serif;
+  background:
+    radial-gradient(circle at top left,rgba(139,231,255,.24),transparent 32%),
+    radial-gradient(circle at top right,rgba(255,218,106,.20),transparent 30%),
+    linear-gradient(180deg,#07182f 0%,#0d2748 36%,#f6fbff 36%,#ffffff 100%);
+  color:var(--text);
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0b0f1f 0%, #162a63 48%, #0b0f1f 100%);
-  color: #ffffff;
+header{
+  max-width:1180px;
+  margin:0 auto;
+  padding:34px 20px 0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  align-items:center;
 }
 
-header {
-  background: rgba(0, 0, 0, 0.92);
-  padding: 18px 32px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+.brand{
+  width:100%;
+  text-align:center;
+  color:#fff;
+  font-weight:950;
+  font-size:15px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.86;
+  margin-bottom:10px;
 }
 
-.brand {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.2px;
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: color 0.25s ease;
+nav a{
+  text-decoration:none;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:850;
+  background:rgba(255,255,255,.08);
+  transition:.25s ease;
+  backdrop-filter:blur(10px);
 }
 
 nav a:hover,
-nav a.active {
-  color: #d8b24c;
+nav a.active{
+  background:#fff;
+  color:var(--navy);
+  transform:translateY(-3px);
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px 55px;
+.hero{
+  text-align:center;
+  padding:72px 20px 50px;
+  color:#fff;
 }
 
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 20px 100px;
+.container{
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 20px 90px;
 }
 
-.hero h1 {
-  font-size: 56px;
-  line-height: 1.15;
-  margin: 0 0 14px;
-  font-weight: 800;
-  letter-spacing: -0.6px;
+.hero h1{
+  font-size:clamp(46px,8vw,88px);
+  line-height:.96;
+  letter-spacing:-.065em;
+  margin:0 0 24px;
+  font-weight:950;
+  background:linear-gradient(90deg,#8be7ff,#ffffff,#ffda6a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
-.gold-rule {
-  width: 92px;
-  height: 6px;
-  margin: 0 auto 28px;
-  border-radius: 999px;
-  background: #d8b24c;
+.gold-rule{
+  display:none;
 }
 
-.hero-sub {
-  max-width: 960px;
-  margin: 0 auto;
-  color: #e8eef9;
-  font-size: 18px;
-  line-height: 1.9;
+.hero-sub{
+  max-width:860px;
+  margin:0 auto;
+  color:#d8e8f8;
+  font-size:19px;
+  line-height:1.75;
 }
 
-.section {
-  margin-top: 54px;
+.section{
+  margin-top:28px;
 }
 
 .intro-card,
 .content-card,
-.cta-card {
-  background: rgba(255,255,255,0.97);
-  color: #222;
-  border-radius: 26px;
-  padding: 38px 34px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+.cta-card{
+  background:#fff;
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:48px;
+  box-shadow:0 20px 55px rgba(20,72,120,.10);
 }
 
 .intro-card h2,
 .content-card h2,
-.section-heading h2,
-.cta-card h2 {
-  margin: 0 0 16px;
-  font-size: 34px;
-  font-weight: 800;
-  color: #111;
-  line-height: 1.2;
+.cta-card h2{
+  margin:0 0 18px;
+  font-size:clamp(34px,4.5vw,60px);
+  line-height:1.02;
+  letter-spacing:-.055em;
+  font-weight:950;
+  color:var(--text);
 }
 
 .intro-card p,
 .content-card p,
-.cta-card p {
-  margin: 0 0 16px;
-  color: #444;
-  line-height: 1.85;
-  font-size: 16px;
+.cta-card p{
+  margin:0 0 18px;
+  color:#465f78;
+  line-height:1.82;
+  font-size:17px;
 }
 
-.section-heading {
-  text-align: center;
-  margin: 70px 0 34px;
+.note-box{
+  margin-top:22px;
+  padding:22px 24px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#eef8ff,#fff9df);
+  border:1px solid #dcecff;
+  color:#24415e;
+  line-height:1.75;
+  font-size:16px;
+  font-weight:750;
 }
 
-.section-heading h2 {
-  color: #fff;
-  font-size: 42px;
-  margin-bottom: 12px;
+.section-heading{
+  text-align:center;
+  margin:68px 0 34px;
 }
 
-.section-heading .gold-rule {
-  margin-bottom: 0;
-  width: 80px;
-  height: 5px;
+.section-heading h2{
+  color:#fff;
+  font-size:clamp(34px,4.5vw,60px);
+  line-height:1.02;
+  letter-spacing:-.055em;
+  font-weight:950;
+  margin:0 0 12px;
 }
 
-.initiative-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+.initiative-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
 }
 
-.initiative-card {
-  background: #ffffff;
-  color: #222;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.initiative-card{
+  background:#fff;
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(20,72,120,.12);
+  transition:.25s ease;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
-.initiative-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.22);
+.initiative-card:nth-child(even){
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
 }
 
-.initiative-photo {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  background: #dfe5f2;
+.initiative-card:hover{
+  transform:translateY(-6px);
+  border-color:#58bfff;
+  box-shadow:0 28px 70px rgba(20,72,120,.18);
 }
 
-.initiative-body {
-  padding: 26px 24px 28px;
+.card-image{
+  width:100%;
+  height:220px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid var(--line);
 }
 
-.initiative-name {
-  font-size: 28px;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 8px;
-  line-height: 1.2;
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  background:#fff;
 }
 
-.initiative-title {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  background: #eef3ff;
-  color: #1d3f8f;
-  padding: 8px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
+.initiative-photo{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  background:#eaf1f8;
 }
 
-.initiative-section-label {
-  font-size: 14px;
-  font-weight: 800;
-  color: #162a63;
-  margin-bottom: 8px;
-  margin-top: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+.initiative-body{
+  padding:28px;
 }
 
-.initiative-text {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.8;
-  margin: 0;
+.initiative-name{
+  font-size:clamp(26px,2.7vw,34px);
+  font-weight:950;
+  color:var(--text);
+  margin-bottom:10px;
+  line-height:1.08;
+  letter-spacing:-.045em;
 }
 
-.responsibility-list {
-  margin: 0;
-  padding-left: 18px;
-  color: #444;
-  line-height: 1.8;
-  font-size: 15px;
+.initiative-title{
+  display:inline-flex;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  background:#eef8ff;
+  color:#0e3a70;
+  padding:9px 13px;
+  border:1px solid #dcecff;
+  border-radius:999px;
+  margin-bottom:18px;
 }
 
-.responsibility-list li {
-  margin-bottom: 8px;
+.initiative-section-label{
+  display:inline-flex;
+  margin-top:18px;
+  margin-bottom:10px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#07182f;
+  color:#fff;
+  font-size:11px;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+.initiative-text{
+  font-size:15.5px;
+  color:#526b85;
+  line-height:1.8;
+  margin:0 0 12px;
+}
+
+.responsibility-list{
+  margin:0;
+  padding-left:18px;
+  color:#526b85;
+  line-height:1.75;
+  font-size:15px;
+}
+
+.responsibility-list li{
+  margin-bottom:8px;
 }
 
 .pillars-grid,
-.pathway-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-  margin-top: 24px;
+.pathway-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:26px;
 }
 
 .pillar-item,
-.pathway-item {
-  background: #f7f9fd;
-  border-radius: 18px;
-  padding: 22px 20px;
+.pathway-item{
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:24px;
+  transition:.25s ease;
+}
+
+.pillar-item:hover,
+.pathway-item:hover{
+  transform:translateY(-5px);
+  border-color:#58bfff;
+  box-shadow:0 20px 45px rgba(20,72,120,.12);
 }
 
 .pillar-item h3,
-.pathway-item h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  color: #13224a;
-  font-weight: 800;
+.pathway-item h3{
+  margin:0 0 10px;
+  font-size:21px;
+  color:var(--text);
+  font-weight:950;
+  letter-spacing:-.035em;
 }
 
 .pillar-item p,
-.pathway-item p {
-  margin: 0;
-  color: #444;
-  line-height: 1.75;
-  font-size: 15px;
+.pathway-item p{
+  margin:0;
+  color:#526b85;
+  line-height:1.72;
+  font-size:15px;
 }
 
-.note-box {
-  margin-top: 22px;
-  padding: 18px 20px;
-  background: #f4f6fb;
-  border-left: 5px solid #d8b24c;
-  border-radius: 14px;
-  color: #444;
-  line-height: 1.75;
-  font-size: 15px;
+.cta-card{
+  text-align:center;
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  box-shadow:var(--shadow-dark);
 }
 
-.cta-card {
-  text-align: center;
-  margin-top: 30px;
+.cta-card h2{
+  color:#fff;
 }
 
-.cta-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 14px 24px;
-  background: #d8b24c;
-  color: #111;
-  text-decoration: none;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 800;
-  transition: all 0.25s ease;
-  border: none;
-  cursor: pointer;
+.cta-card p{
+  color:#dcecff;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.cta-btn:hover {
-  background: #e7c46a;
-  transform: translateY(-2px);
+.cta-btn{
+  display:inline-flex;
+  min-height:52px;
+  align-items:center;
+  justify-content:center;
+  margin-top:12px;
+  padding:0 24px;
+  background:#fff;
+  color:#07182f;
+  text-decoration:none;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:950;
+  transition:.25s ease;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
 }
 
-footer {
-  text-align: center;
-  color: #cfd8ef;
-  font-size: 14px;
-  padding: 30px 20px 42px;
+.cta-btn:hover{
+  transform:translateY(-3px);
+}
+
+footer{
+  text-align:center;
+  color:#cfd8ef;
+  font-size:14px;
+  padding:30px 20px 42px;
+}
+
+@media(max-width:768px){
+  header{
+    padding:26px 16px 0;
+  }
+
+  nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    width:100%;
+    padding-bottom:10px;
+  }
+
+  nav a{
+    white-space:nowrap;
+  }
+
+  .hero{
+    padding:56px 16px 38px;
+  }
+
+  .hero-sub{
+    font-size:17px;
+  }
+
+  .container{
+    padding:0 16px 72px;
+  }
+
+  .intro-card,
+  .content-card,
+  .cta-card{
+    border-radius:26px;
+    padding:30px;
+  }
+
+  .initiative-card{
+    border-radius:26px;
+  }
+
+  .initiative-body{
+    padding:24px;
+  }
+
+  .card-image{
+    height:180px;
+  }
+
+  .initiative-photo{
+    height:230px;
+  }
 }
 
 /* Modal */
@@ -553,7 +691,7 @@ height: 180px;
   <div class="brand">Government Workforce Network LLC</div>
   <nav>
     <a href="/">Home</a>
-    <a href="/talent-connect">Join Talent Connect - USA</a></li>
+    <a href="/talent-connect">Join Talent Connect - USA</a>
     <a href="/initiatives" class="active">Initiatives</a>
   </nav>
 </header>
@@ -563,8 +701,7 @@ height: 180px;
     <h1>Initiatives</h1>
     <div class="gold-rule"></div>
     <p class="hero-sub">
-     Our initiatives are where we apply what we build.
-They are designed to test, use, and refine our workforce solutions in real-world environments supporting visibility, connection, and meaningful outcomes in an AI-driven workforce.
+      Our initiatives transform ideas into real-world workforce solutions by expanding visibility, strengthening connection, and supporting meaningful workforce outcomes.
     </p>
   </div>
 </section>
@@ -575,16 +712,13 @@ They are designed to test, use, and refine our workforce solutions in real-world
     <div class="intro-card">
       <h2>About Our Initiatives</h2>
       <p>
-        Government Workforce Network LLC develops initiatives to apply and test our workforce system in real-world settings.
+        Government Workforce Network LLC develops initiatives that turn workforce ideas into practical action. Each initiative is designed to improve visibility, expand opportunity, strengthen connection, and support long-term workforce well-being.
       </p>
       <p>
- These efforts support individuals, organizations, and communities by improving visibility, expanding access, and strengthening connection.
-      </p>
-      <p>
-  While our consulting services provide structured solutions, our initiatives ensure those solutions are practical, relevant, and actively used.
+        These initiatives allow us to apply, test, and refine workforce solutions in real-world environments so our work remains practical, relevant, and useful.
       </p>
       <div class="note-box">
-        Together, we are building income, opportunity, and well-being.
+        Together, our initiatives support the mission of building income, expanding opportunity, and promoting well-being.
       </div>
     </div>
   </section>
@@ -871,30 +1005,28 @@ This initiative creates space for individuals to receive direction, ask question
     <div class="content-card">
       <h2>Purpose of Our Initiatives</h2>
       <p>
-        Our initiatives turn strategy into action.
+        Our initiatives transform workforce ideas into measurable impact.
       </p>
       <p>
-      They focus on increasing visibility, expanding access, strengthening connection, and creating real-world outcomes.
-      <p>
-     Each initiative helps apply our tools, insights, and workforce solutions in ways that are practical and measurable.
+        They help increase visibility, expand opportunity, strengthen connection, support well-being, and encourage practical innovation.
       </p>
 
       <div class="pillars-grid">
         <div class="pillar-item">
           <h3>Visibility</h3>
-          <p>Increase exposure for individuals and organizations in a hiring environment where many are screened out before being seen.</p>
+          <p>Help people and organizations become easier to see, understand, and connect with.</p>
         </div>
         <div class="pillar-item">
           <h3>Opportunity</h3>
-          <p>Create direct pathways between talent, resources, employers, and opportunities.</p>
+          <p>Create pathways that connect talent, resources, employers, and workforce partners.</p>
         </div>
         <div class="pillar-item">
-          <h3>Connection</h3>
-          <p>Build intentional relationships between individuals, institutions, and organizations.</p>
+          <h3>Well-Being</h3>
+          <p>Support human-centered workforce experiences that help people feel informed, included, and supported.</p>
         </div>
         <div class="pillar-item">
-          <h3>Impact</h3>
-          <p>Apply workforce solutions that lead to measurable, real-world outcomes.</p>
+          <h3>Innovation</h3>
+          <p>Test and refine practical solutions for a changing workforce and AI-driven future.</p>
         </div>
       </div>
     </div>
@@ -903,30 +1035,26 @@ This initiative creates space for individuals to receive direction, ask question
   <section class="section">
     <div class="content-card">
       <h2>How These Initiatives Support the Mission</h2>
+      <p>
+        Each initiative supports the same mission: helping people access tools, connections, guidance, and opportunities that move them forward.
+      </p>
+
       <div class="pathway-grid">
         <div class="pathway-item">
-          <h3>1. Build Awareness</h3>
-          <p>
-           Help individuals and organizations discover opportunities and solutions that may otherwise remain unseen.
-          </p>
+          <h3>1. Reveal Needs</h3>
+          <p>Initiatives help identify real workforce barriers through direct engagement and lived experience.</p>
         </div>
         <div class="pathway-item">
-          <h3>2. Strengthen Access</h3>
-          <p>
-         Create structured pathways that connect people, tools, and resources.
-          </p>
+          <h3>2. Build Access</h3>
+          <p>They create simple ways for people to access tools, resources, and support.</p>
         </div>
         <div class="pathway-item">
-          <h3>3. Encourage Participation</h3>
-          <p>
-       Provide clear and inclusive ways for individuals and organizations to engage.
-          </p>
+          <h3>3. Strengthen Connection</h3>
+          <p>They connect individuals, employers, universities, organizations, and communities.</p>
         </div>
         <div class="pathway-item">
-          <h3>4. Expand Opportunity</h3>
-          <p>
-     Turn visibility and connection into real outcomes supporting growth and long-term success.
-          </p>
+          <h3>4. Create Impact</h3>
+          <p>They help turn visibility and connection into practical workforce outcomes.</p>
         </div>
       </div>
     </div>
@@ -935,12 +1063,12 @@ This initiative creates space for individuals to receive direction, ask question
 
   <section class="section">
     <div class="cta-card">
-      <h2>Get Involved</h2>
+      <h2>Build the Future of Work With Us</h2>
       <p>
-Whether you’re looking to collaborate, participate, or explore partnership opportunities, our initiatives are designed to connect people, ideas, and solutions.
+        Whether you are an employer, university, workforce organization, public agency, nonprofit, or community partner, our initiatives are designed to connect people, ideas, and practical workforce solutions.
       </p>
       <p>
-      Government Workforce Network LLC is committed to building meaningful relationships that support visibility, connection, and opportunity across communities.
+        We welcome collaboration that expands visibility, strengthens access, and creates meaningful opportunity.
       </p>
       <button type="button" class="cta-btn" onclick="openModal('initiativeModal')">
         Submit Initiative Inquiry
@@ -1071,5 +1199,6 @@ document.addEventListener('keydown', function (e) {
 });
 </script>
 
-</body>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjZhM2Y3OGE5YmNiMGFiMDAwOGM3MzZkOSIsImlzc3VlciI6Im5mc2VydmVyIn0.AvKqh7kKplhBfCxz8Ns0p8p4pMmgEjwEnNUX0lEJ658"></script></body>
 </html>
