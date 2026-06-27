@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Government Workforce Innovation Lab | Government Workforce Network LLC</title>
+<meta name="description" content="Government Workforce Innovation Lab by Government Workforce Network LLC. Research, foundation reports, case studies, pilot programs, and AI workforce innovation focused on Income, Opportunity, and Well-Being." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#07182f;
+  --navy2:#0d2748;
+  --blue:#0e3a70;
+  --sky:#8be7ff;
+  --gold:#ffda6a;
+  --white:#ffffff;
+  --ice:#f6fbff;
+  --line:#dcecff;
+  --text:#07182f;
+  --muted:#526b85;
+  --soft:#eaf6ff;
+  --shadow:0 28px 80px rgba(20,72,120,.16);
+  --shadow2:0 38px 100px rgba(7,24,47,.28);
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:'Inter','Sora',Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+.gwil-page{
+  background:
+    radial-gradient(circle at top left,rgba(139,231,255,.28),transparent 34%),
+    radial-gradient(circle at top right,rgba(255,218,106,.20),transparent 30%),
+    linear-gradient(180deg,#07182f 0%,#0d2748 32%,#f6fbff 32%,#ffffff 100%);
+  overflow:hidden;
+}
+
+.gwil-wrap{
+  max-width:1180px;
+  margin:0 auto;
+  padding:34px 20px 90px;
+}
+
+/* Top Navigation */
+.gwil-top-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:58px;
+}
+
+.gwil-top-nav a{
+  text-decoration:none;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:850;
+  background:rgba(255,255,255,.08);
+  transition:.25s ease;
+  backdrop-filter:blur(10px);
+}
+
+.gwil-top-nav a:hover{
+  background:#fff;
+  color:var(--navy);
+  transform:translateY(-3px);
+}
+
+/* Hero */
+.gwil-hero{
+  position:relative;
+  text-align:center;
+  color:#fff;
+  max-width:1060px;
+  margin:0 auto 42px;
+  padding:18px 0 18px;
+}
+
+.gwil-kicker{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 20px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#dff3ff;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:24px;
+  border:1px solid rgba(255,255,255,.14);
+}
+
+.gwil-hero h1{
+  font-size:clamp(46px,8vw,92px);
+  line-height:.94;
+  letter-spacing:-.07em;
+  margin:0 0 24px;
+}
+
+.gwil-hero h1 span{
+  background:linear-gradient(90deg,#8be7ff,#ffffff,#ffda6a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.gwil-hero p{
+  font-size:19px;
+  line-height:1.75;
+  color:#d8e8f8;
+  margin:0 auto;
+  max-width:830px;
+}
+
+.gwil-hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin:30px auto 0;
+}
+
+.gwil-hero-badges span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.22);
+  color:#fff;
+  background:rgba(255,255,255,.08);
+  border-radius:999px;
+  padding:11px 16px;
+  font-weight:900;
+  font-size:13px;
+}
+
+/* Flash Strip */
+.gwil-flash-strip{
+  max-width:980px;
+  margin:0 auto 48px;
+  padding:17px 24px;
+  border-radius:999px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:950;
+  background:linear-gradient(90deg,#ffda6a,#ffffff,#8be7ff,#ffda6a);
+  background-size:300% 300%;
+  animation:gwilGlow 4s ease infinite, gwilPulse 1.9s ease-in-out infinite;
+  box-shadow:0 0 38px rgba(139,231,255,.32);
+}
+
+@keyframes gwilGlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes gwilPulse{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.016);opacity:.9}
+}
+
+/* Anchor Cards */
+.gwil-anchor-nav{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin:0 auto 34px;
+}
+
+.gwil-anchor-nav a{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:24px;
+  text-decoration:none;
+  color:var(--text);
+  box-shadow:0 24px 60px rgba(20,72,120,.14);
+  transition:.25s ease;
+  min-height:150px;
+}
+
+.gwil-anchor-nav a:hover{
+  transform:translateY(-8px);
+  border-color:#58bfff;
+  box-shadow:0 32px 80px rgba(20,72,120,.22);
+}
+
+.gwil-anchor-nav strong{
+  display:block;
+  font-size:20px;
+  margin-bottom:8px;
+  letter-spacing:-.035em;
+}
+
+.gwil-anchor-nav span{
+  color:var(--muted);
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* Universal Sections */
+.gwil-section{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:48px;
+  margin-bottom:28px;
+  box-shadow:0 20px 55px rgba(20,72,120,.1);
+}
+
+.gwil-section-dark{
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:34px;
+  padding:52px;
+  margin-bottom:28px;
+  box-shadow:var(--shadow2);
+}
+
+.gwil-section h2,
+.gwil-section-dark h2{
+  font-size:clamp(34px,4.6vw,60px);
+  margin:0 0 18px;
+  letter-spacing:-.055em;
+  line-height:1.02;
+}
+
+.gwil-section h2 span,
+.gwil-section-dark h2 span{
+  background:linear-gradient(90deg,#0e3a70,#12a4d9,#ffb703);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.gwil-section-dark h2 span{
+  background:linear-gradient(90deg,#8be7ff,#ffffff,#ffda6a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.gwil-section p,
+.gwil-section-dark p{
+  font-size:17px;
+  line-height:1.82;
+  margin:0 0 18px;
+}
+
+.gwil-section p{
+  color:#465f78;
+}
+
+.gwil-section-dark p{
+  color:#dcecff;
+}
+
+.gwil-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 15px;
+  border-radius:999px;
+  background:#eef8ff;
+  color:#0e3a70;
+  font-weight:950;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.gwil-section-dark .gwil-eyebrow{
+  background:rgba(255,255,255,.12);
+  color:#dff3ff;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* Cards */
+.gwil-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:30px;
+}
+
+.gwil-card{
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:26px;
+  transition:.25s ease;
+}
+
+.gwil-card:hover{
+  transform:translateY(-6px);
+  border-color:#58bfff;
+  box-shadow:0 20px 45px rgba(20,72,120,.14);
+}
+
+.gwil-card h3{
+  margin:0 0 10px;
+  font-size:22px;
+  letter-spacing:-.032em;
+}
+
+.gwil-card p{
+  font-size:15px;
+  line-height:1.72;
+  margin:0;
+}
+
+.gwil-card .gwil-icon{
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  margin-bottom:16px;
+  background:linear-gradient(135deg,#eaf8ff,#fff5cf);
+  border:1px solid #dcecff;
+  font-size:23px;
+}
+
+/* Highlight Statement */
+.gwil-statement{
+  margin-top:32px;
+  padding:28px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#eef8ff,#fff9df);
+  border:1px solid #dcecff;
+}
+
+.gwil-statement strong{
+  color:#07182f;
+}
+
+.gwil-statement p{
+  margin:0;
+  color:#24415e;
+  font-weight:750;
+}
+
+/* Responsive */
+@media(max-width:980px){
+  .gwil-anchor-nav{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gwil-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:720px){
+  .gwil-wrap{
+    padding:26px 16px 72px;
+  }
+
+  .gwil-top-nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:10px;
+  }
+
+  .gwil-top-nav a{
+    white-space:nowrap;
+  }
+
+  .gwil-hero h1{
+    font-size:clamp(44px,14vw,68px);
+  }
+
+  .gwil-hero p{
+    font-size:17px;
+  }
+
+  .gwil-anchor-nav{
+    grid-template-columns:1fr;
+  }
+
+  .gwil-section,
+  .gwil-section-dark{
+    border-radius:26px;
+    padding:30px;
+  }
+
+  .gwil-flash-strip{
+    border-radius:24px;
+    font-size:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="gwil-page">
+  <div class="gwil-wrap">
+
+    <nav class="gwil-top-nav" aria-label="Government Workforce Network navigation">
+      <a href="/">Home</a>
+      <a href="/who-we-are">Who We Are</a>
+      <a href="/structure">Our Structure</a>
+      <a href="/initiatives">Programs</a>
+      <a href="/career-center-partners">University Network</a>
+      <a href="/workforce-intelligence-team">Leadership</a>
+    </nav>
+
+    <header class="gwil-hero">
+      <div class="gwil-kicker">Government Workforce Innovation Lab</div>
+      <h1><span>Research. Evidence. Workforce Innovation.</span></h1>
+      <p>
+        The Government Workforce Innovation Lab documents how Government Workforce Network LLC is building responsible
+        AI workforce infrastructure to strengthen Income, Opportunity, and Well-Being for students, veterans,
+        public servants, employers, workforce organizations, and job seekers.
+      </p>
+
+      <div class="gwil-hero-badges" aria-label="Innovation Lab focus areas">
+        <span>Foundation Reports</span>
+        <span>Case Studies</span>
+        <span>Pilot Programs</span>
+        <span>AI Workforce Tools</span>
+        <span>Annual Reports</span>
+      </div>
+    </header>
+
+    <div class="gwil-flash-strip">
+      Building public-benefit AI workforce infrastructure for Income • Opportunity • Well-Being.
+    </div>
+
+    <section class="gwil-anchor-nav" aria-label="Page sections">
+      <a href="#executive-summary">
+        <strong>Executive Summary</strong>
+        <span>Why this lab exists and what it is designed to document.</span>
+      </a>
+
+      <a href="#three-pillars">
+        <strong>Three Pillars</strong>
+        <span>The Income, Opportunity, and Well-Being foundation behind every initiative.</span>
+      </a>
+
+      <a href="#why-created">
+        <strong>Why We Created It</strong>
+        <span>The workforce barriers that inspired Government Workforce Network.</span>
+      </a>
+
+      <a href="#stage-one-note">
+        <strong>Stage 1</strong>
+        <span>The opening foundation of the full upload-ready Innovation Lab page.</span>
+      </a>
+    </section>
+
+    <section class="gwil-section" id="executive-summary">
+      <div class="gwil-eyebrow">Executive Summary</div>
+      <h2>Building an evidence-based <span>workforce innovation platform.</span></h2>
+
+      <p>
+        Government Workforce Network LLC was established with a simple but ambitious purpose: to strengthen America's
+        workforce by leveraging responsible artificial intelligence to improve Income, Opportunity, and Well-Being.
+      </p>
+
+      <p>
+        The Government Workforce Innovation Lab exists to document that work. It serves as the research, case study,
+        pilot, and publication center for Government Workforce Network's workforce innovation efforts. Rather than
+        simply describing programs, the lab is designed to capture what we build, what we test, what we learn, and how
+        we improve.
+      </p>
+
+      <p>
+        The objective is not to create another ordinary workforce website. The objective is to build a body of evidence
+        around practical AI workforce tools that can help individuals communicate their skills, access career resources,
+        strengthen workforce readiness, and better understand workplace systems.
+      </p>
+
+      <div class="gwil-statement">
+        <p>
+          <strong>Core belief:</strong> meaningful workforce innovation should be supported by evidence, responsible
+          technology, public-benefit design, and continuous learning.
+        </p>
+      </div>
+    </section>
+
+    <section class="gwil-section-dark" id="three-pillars">
+      <div class="gwil-eyebrow">Our Foundation</div>
+      <h2><span>Income. Opportunity. Well-Being.</span></h2>
+
+      <p>
+        Government Workforce Network is built on three connected pillars. These pillars guide our programs, AI workforce
+        tools, university pilots, employer collaboration, and future research reports.
+      </p>
+
+      <div class="gwil-grid">
+        <article class="gwil-card">
+          <div class="gwil-icon">💼</div>
+          <h3>Income</h3>
+          <p>
+            Supporting individuals in building career readiness, increasing earning potential, and gaining access to
+            meaningful employment pathways that strengthen economic stability.
+          </p>
+        </article>
+
+        <article class="gwil-card">
+          <div class="gwil-icon">🌉</div>
+          <h3>Opportunity</h3>
+          <p>
+            Reducing barriers that prevent qualified people from being seen, understood, or connected to the right
+            employers, educational resources, and workforce opportunities.
+          </p>
+        </article>
+
+        <article class="gwil-card">
+          <div class="gwil-icon">🧭</div>
+          <h3>Well-Being</h3>
+          <p>
+            Helping individuals better understand workplace resources, organize concerns, and navigate workforce
+            systems with more confidence and clarity.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gwil-section" id="why-created">
+      <div class="gwil-eyebrow">Why It Was Created</div>
+      <h2>From workforce experience to <span>public-benefit innovation.</span></h2>
+
+      <p>
+        Government Workforce Network was inspired by nearly two decades of public-sector human resources experience.
+        During that time, recurring workforce barriers became clear: talented people were often overlooked, transferable
+        skills were not easily recognized, students needed more practical workforce readiness support, and workers often
+        struggled to understand workplace processes and available resources.
+      </p>
+
+      <p>
+        These challenges are not isolated. They affect students, veterans, transitioning professionals, public servants,
+        job seekers, employers, and workforce organizations. Government Workforce Network was created to explore whether
+        responsible AI can help reduce these barriers while complementing existing workforce systems.
+      </p>
+
+      <p>
+        The Innovation Lab captures this journey from concept to pilot. It documents the organization's philosophy,
+        tool development, research direction, pilot strategy, and long-term vision for public-benefit workforce
+        innovation.
+      </p>
+    </section>
+
+    <section class="gwil-section" id="stage-one-note">
+      <div class="gwil-eyebrow">Build Status</div>
+      <h2>Stage 1 of the upload-ready page is complete.</h2>
+
+      <p>
+        This first stage establishes the page identity, visual system, executive summary, purpose, and three-pillar
+        framework. The next stages will add the Foundation Report, Case Study 001, AI Workforce Tools, University Pilot
+        Strategy, Employer Pilot Strategy, Well-Being Navigator, Research Briefs, Annual Reports, Future Publications,
+        Timeline, Download Center, and final collaboration call-to-action.
+      </p>
+
+      <p>
+        When all stages are completed, they will be assembled into one final upload-ready HTML file for the
+        <strong>/workforce-innovation-lab</strong> page.
+      </p>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>
