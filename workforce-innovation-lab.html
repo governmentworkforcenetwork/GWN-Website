@@ -29,9 +29,7 @@
 
 *{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
@@ -54,7 +52,6 @@ body{
   padding:34px 20px 90px;
 }
 
-/* Top Navigation */
 .gwil-top-nav{
   display:flex;
   flex-wrap:wrap;
@@ -82,7 +79,6 @@ body{
   transform:translateY(-3px);
 }
 
-/* Hero */
 .gwil-hero{
   position:relative;
   text-align:center;
@@ -151,7 +147,6 @@ body{
   font-size:13px;
 }
 
-/* Flash Strip */
 .gwil-flash-strip{
   max-width:980px;
   margin:0 auto 48px;
@@ -177,7 +172,6 @@ body{
   50%{transform:scale(1.016);opacity:.9}
 }
 
-/* Anchor Cards */
 .gwil-anchor-nav{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -216,7 +210,6 @@ body{
   font-size:14px;
 }
 
-/* Universal Sections */
 .gwil-section{
   background:#fff;
   border:1px solid var(--line);
@@ -253,10 +246,15 @@ body{
 }
 
 .gwil-section-dark h2 span{
-  background:linear-gradient(90deg,#8be7ff,#ffffff,#ffda6a);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
+  background:none;
+  -webkit-background-clip:initial;
+  background-clip:initial;
+  color:#ffffff;
+  text-shadow:0 3px 18px rgba(0,0,0,.34);
+}
+
+.gwil-section-dark h2 span strong{
+  color:#ffda6a;
 }
 
 .gwil-section p,
@@ -266,13 +264,8 @@ body{
   margin:0 0 18px;
 }
 
-.gwil-section p{
-  color:#465f78;
-}
-
-.gwil-section-dark p{
-  color:#dcecff;
-}
+.gwil-section p{color:#465f78}
+.gwil-section-dark p{color:#dcecff}
 
 .gwil-eyebrow{
   display:inline-flex;
@@ -294,10 +287,16 @@ body{
   border:1px solid rgba(255,255,255,.12);
 }
 
-/* Cards */
 .gwil-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:30px;
+}
+
+.gwil-grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   gap:18px;
   margin-top:30px;
 }
@@ -341,7 +340,37 @@ body{
   font-size:23px;
 }
 
-/* Highlight Statement */
+/* Strong contrast cards inside dark sections */
+.gwil-section-dark .gwil-card{
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.gwil-section-dark .gwil-card h3{
+  color:#07182f;
+}
+
+.gwil-section-dark .gwil-card p{
+  color:#2f4f6b;
+}
+
+.gwil-section-dark .gwil-card .gwil-icon{
+  background:linear-gradient(135deg,#ffffff,#fff2c2);
+  border:1px solid rgba(255,218,106,.68);
+}
+
+.gwil-pillar-title{
+  color:#ffffff !important;
+  font-weight:950;
+}
+
+.gwil-pillar-title em{
+  color:#ffda6a;
+  font-style:normal;
+}
+
+
 .gwil-statement{
   margin-top:32px;
   padding:28px;
@@ -350,9 +379,7 @@ body{
   border:1px solid #dcecff;
 }
 
-.gwil-statement strong{
-  color:#07182f;
-}
+.gwil-statement strong{color:#07182f}
 
 .gwil-statement p{
   margin:0;
@@ -360,21 +387,134 @@ body{
   font-weight:750;
 }
 
-/* Responsive */
-@media(max-width:980px){
-  .gwil-anchor-nav{
-    grid-template-columns:repeat(2,1fr);
-  }
+/* Stage 2 Additions */
+.gwil-report-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  border:1px solid #dcecff;
+  background:
+    radial-gradient(circle at top right,rgba(255,218,106,.25),transparent 34%),
+    linear-gradient(135deg,#ffffff,#f7fbff);
+  padding:34px;
+  margin-top:28px;
+  box-shadow:0 26px 70px rgba(20,72,120,.12);
+}
 
-  .gwil-grid{
-    grid-template-columns:1fr;
-  }
+.gwil-report-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 22px;
+}
+
+.gwil-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  padding:9px 13px;
+  background:#eef8ff;
+  border:1px solid #dcecff;
+  color:#0e3a70;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.gwil-report-card h3{
+  font-size:clamp(28px,3.2vw,42px);
+  letter-spacing:-.05em;
+  line-height:1.05;
+  margin:0 0 14px;
+}
+
+.gwil-list{
+  display:grid;
+  gap:12px;
+  margin:22px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.gwil-list li{
+  position:relative;
+  padding:15px 18px 15px 46px;
+  border-radius:18px;
+  background:#f7fbff;
+  border:1px solid #dcecff;
+  color:#35506b;
+  line-height:1.58;
+  font-weight:650;
+}
+
+.gwil-list li:before{
+  content:"✓";
+  position:absolute;
+  left:17px;
+  top:14px;
+  width:20px;
+  height:20px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#8be7ff,#ffda6a);
+  color:#07182f;
+  font-size:12px;
+  font-weight:950;
+}
+
+.gwil-method{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:30px;
+}
+
+.gwil-method-step{
+  background:#fff;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:24px;
+  padding:22px;
+  background:rgba(255,255,255,.08);
+}
+
+.gwil-method-step strong{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  background:#fff;
+  color:#07182f;
+  margin-bottom:14px;
+  font-size:16px;
+}
+
+.gwil-method-step h3{
+  margin:0 0 8px;
+  color:#fff;
+  font-size:19px;
+  letter-spacing:-.03em;
+}
+
+.gwil-method-step p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+  color:#dcecff;
+}
+
+@media(max-width:980px){
+  .gwil-anchor-nav{grid-template-columns:repeat(2,1fr)}
+  .gwil-grid,.gwil-grid-2,.gwil-method{grid-template-columns:1fr}
 }
 
 @media(max-width:720px){
-  .gwil-wrap{
-    padding:26px 16px 72px;
-  }
+  .gwil-wrap{padding:26px 16px 72px}
 
   .gwil-top-nav{
     justify-content:flex-start;
@@ -383,21 +523,11 @@ body{
     padding-bottom:10px;
   }
 
-  .gwil-top-nav a{
-    white-space:nowrap;
-  }
+  .gwil-top-nav a{white-space:nowrap}
 
-  .gwil-hero h1{
-    font-size:clamp(44px,14vw,68px);
-  }
-
-  .gwil-hero p{
-    font-size:17px;
-  }
-
-  .gwil-anchor-nav{
-    grid-template-columns:1fr;
-  }
+  .gwil-hero h1{font-size:clamp(44px,14vw,68px)}
+  .gwil-hero p{font-size:17px}
+  .gwil-anchor-nav{grid-template-columns:1fr}
 
   .gwil-section,
   .gwil-section-dark{
@@ -409,6 +539,8 @@ body{
     border-radius:24px;
     font-size:14px;
   }
+
+  .gwil-report-card{padding:26px;border-radius:24px}
 }
 </style>
 </head>
@@ -459,14 +591,14 @@ body{
         <span>The Income, Opportunity, and Well-Being foundation behind every initiative.</span>
       </a>
 
-      <a href="#why-created">
-        <strong>Why We Created It</strong>
-        <span>The workforce barriers that inspired Government Workforce Network.</span>
+      <a href="#foundation-report">
+        <strong>Foundation Report</strong>
+        <span>Volume 1: Building AI workforce infrastructure from concept to pilot.</span>
       </a>
 
-      <a href="#stage-one-note">
-        <strong>Stage 1</strong>
-        <span>The opening foundation of the full upload-ready Innovation Lab page.</span>
+      <a href="#case-study-001">
+        <strong>Case Study 001</strong>
+        <span>The founding development case study for Government Workforce Network.</span>
       </a>
     </section>
 
@@ -502,7 +634,7 @@ body{
 
     <section class="gwil-section-dark" id="three-pillars">
       <div class="gwil-eyebrow">Our Foundation</div>
-      <h2><span>Income. Opportunity. Well-Being.</span></h2>
+      <h2><span class="gwil-pillar-title"><em>Income.</em> Opportunity. Well-Being.</span></h2>
 
       <p>
         Government Workforce Network is built on three connected pillars. These pillars guide our programs, AI workforce
@@ -563,20 +695,144 @@ body{
       </p>
     </section>
 
-    <section class="gwil-section" id="stage-one-note">
-      <div class="gwil-eyebrow">Build Status</div>
-      <h2>Stage 1 of the upload-ready page is complete.</h2>
+    <section class="gwil-section" id="foundation-report">
+      <div class="gwil-eyebrow">Foundation Report</div>
+      <h2>Volume 1: Building AI workforce infrastructure for <span>public benefit.</span></h2>
 
       <p>
-        This first stage establishes the page identity, visual system, executive summary, purpose, and three-pillar
-        framework. The next stages will add the Foundation Report, Case Study 001, AI Workforce Tools, University Pilot
-        Strategy, Employer Pilot Strategy, Well-Being Navigator, Research Briefs, Annual Reports, Future Publications,
-        Timeline, Download Center, and final collaboration call-to-action.
+        The first Foundation Report documents the early development of Government Workforce Network and the rationale
+        behind its AI workforce innovation model. This is not presented as a completed outcome study. It is a foundation
+        report that explains the problem, the philosophy, the tools being developed, and the evidence-building path
+        forward.
+      </p>
+
+      <div class="gwil-report-card">
+        <div class="gwil-report-meta">
+          <span class="gwil-pill">Volume 1</span>
+          <span class="gwil-pill">Foundation Report</span>
+          <span class="gwil-pill">Pilot Development Stage</span>
+        </div>
+
+        <h3>Building AI Workforce Infrastructure for Income, Opportunity, and Well-Being</h3>
+
+        <p>
+          This report frames Government Workforce Network as an emerging public-benefit workforce innovation platform.
+          It documents the workforce barriers observed, the strategic decision to build AI-enabled tools, and the
+          organization's commitment to evidence-based development through university, employer, and workforce pilot
+          programs.
+        </p>
+
+        <ul class="gwil-list">
+          <li>Documents the founding workforce observations behind Government Workforce Network.</li>
+          <li>Explains why the organization is built around Income, Opportunity, and Well-Being.</li>
+          <li>Describes the early AI workforce tools and public-benefit model.</li>
+          <li>Establishes a pilot-first strategy before broader public-sector collaboration.</li>
+          <li>Creates a transparent record of lessons learned, progress, and future direction.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gwil-section" id="case-study-001">
+      <div class="gwil-eyebrow">Featured Case Study</div>
+      <h2>Case Study 001: From concept to <span>pilot-ready platform.</span></h2>
+
+      <p>
+        Government Workforce Network's first case study is a founding development case study. It does not claim that the
+        platform has already produced large-scale workforce outcomes. Instead, it documents how an emerging organization
+        moved from problem identification to platform development, AI tool design, university outreach, and pilot
+        preparation.
+      </p>
+
+      <div class="gwil-grid-2">
+        <article class="gwil-card">
+          <div class="gwil-icon">🔎</div>
+          <h3>Problem Identified</h3>
+          <p>
+            Workforce systems often fail to recognize transferable skills, nontraditional experience, language needs,
+            and workplace resource gaps that affect people's ability to access opportunity.
+          </p>
+        </article>
+
+        <article class="gwil-card">
+          <div class="gwil-icon">🛠️</div>
+          <h3>Solution Designed</h3>
+          <p>
+            Government Workforce Network began developing free AI workforce tools, university engagement strategies,
+            employer resources, and workforce education programs to address those gaps.
+          </p>
+        </article>
+
+        <article class="gwil-card">
+          <div class="gwil-icon">🎓</div>
+          <h3>Pilot Path Created</h3>
+          <p>
+            The organization is preparing university and employer pilot initiatives to gather measurable evidence,
+            user feedback, and lessons that will guide the next stage of development.
+          </p>
+        </article>
+
+        <article class="gwil-card">
+          <div class="gwil-icon">📊</div>
+          <h3>Evidence Goal</h3>
+          <p>
+            The goal is to move beyond ideas by documenting user engagement, tool usefulness, workforce readiness,
+            translation effectiveness, and public-benefit outcomes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gwil-section-dark" id="research-philosophy">
+      <div class="gwil-eyebrow">Research Philosophy</div>
+      <h2><span>Build. Test. Learn. Improve.</span></h2>
+
+      <p>
+        The Innovation Lab is designed around a simple principle: do not overclaim. Early-stage innovation must be
+        honest about what has been built, what has not yet been proven, and what evidence is still needed.
       </p>
 
       <p>
-        When all stages are completed, they will be assembled into one final upload-ready HTML file for the
-        <strong>/workforce-innovation-lab</strong> page.
+        Government Workforce Network's research philosophy is to document progress transparently, gather feedback from
+        real users, improve tools based on evidence, and publish lessons learned as the organization grows.
+      </p>
+
+      <div class="gwil-method">
+        <div class="gwil-method-step">
+          <strong>01</strong>
+          <h3>Observe</h3>
+          <p>Identify workforce barriers affecting income, opportunity, and well-being.</p>
+        </div>
+
+        <div class="gwil-method-step">
+          <strong>02</strong>
+          <h3>Build</h3>
+          <p>Create practical AI workforce tools and human-centered support resources.</p>
+        </div>
+
+        <div class="gwil-method-step">
+          <strong>03</strong>
+          <h3>Pilot</h3>
+          <p>Test with universities, employers, workforce organizations, and community partners.</p>
+        </div>
+
+        <div class="gwil-method-step">
+          <strong>04</strong>
+          <h3>Publish</h3>
+          <p>Document findings through reports, case studies, research briefs, and annual updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gwil-section" id="stage-two-note">
+      <div class="gwil-eyebrow">Build Status</div>
+      <h2>Stage 2 - Coming Soon</h2>
+
+      <p>
+        This second stage adds the Foundation Report, Case Study 001, and Research Philosophy sections - Coming Soon!
+      </p>
+
+      <p>
+        The next stage is coming soon!
       </p>
     </section>
 
