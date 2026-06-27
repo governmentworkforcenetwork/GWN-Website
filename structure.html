@@ -1,660 +1,637 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Our Structure | Government Workforce Network LLC</title>
-<meta name="description" content="Government Workforce Network LLC structure page showing how initiatives support talent, engagement, solutions, and opportunities across a connected, human-centered, AI-enabled workforce ecosystem." />
+<meta name="description" content="Government Workforce Network LLC structure page explaining how initiatives, engagement, research, innovation, solutions, and partnerships support Income, Opportunity, and Well-Being." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{
---navy:#0b1f3a;
---navy-2:#12325e;
---navy-3:#163a6b;
---gold:#d4af37;
---gold-soft:rgba(212,175,55,0.30);
---gold-faint:rgba(212,175,55,0.08);
---white:#ffffff;
---white-soft:rgba(255,255,255,0.88);
---white-muted:rgba(255,255,255,0.74);
---border-soft:rgba(255,255,255,0.12);
---border-strong:rgba(255,255,255,0.82);
---card-bg:rgba(255,255,255,0.04);
---card-bg-2:rgba(255,255,255,0.05);
---shadow:0 14px 34px rgba(0,0,0,0.16);
+  --navy:#07182f;
+  --navy2:#0d2748;
+  --blue:#0e3a70;
+  --sky:#8be7ff;
+  --gold:#ffda6a;
+  --white:#ffffff;
+  --ice:#f6fbff;
+  --line:#dcecff;
+  --text:#07182f;
+  --muted:#526b85;
+  --shadow:0 24px 70px rgba(20,72,120,.14);
+  --shadow-dark:0 34px 90px rgba(7,24,47,.25);
 }
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+*{box-sizing:border-box}
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-font-family: Arial, Helvetica, sans-serif;
-background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 45%, var(--navy) 100%);
-color:var(--white);
-line-height:1.6;
+  margin:0;
+  font-family:'Inter','Sora',Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+.gwn-structure-page{
+  background:
+    radial-gradient(circle at top left,rgba(139,231,255,.24),transparent 32%),
+    radial-gradient(circle at top right,rgba(255,218,106,.20),transparent 30%),
+    linear-gradient(180deg,#07182f 0%,#0d2748 38%,#f6fbff 38%,#ffffff 100%);
+  padding:34px 20px 90px;
+  overflow:hidden;
+}
+
+.gwn-wrap{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+/* Navigation */
+.gwn-top-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:58px;
+}
+
+.gwn-top-nav a{
+  text-decoration:none;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:850;
+  background:rgba(255,255,255,.08);
+  transition:.25s ease;
+  backdrop-filter:blur(10px);
+}
+
+.gwn-top-nav a:hover{
+  background:#fff;
+  color:var(--navy);
+  transform:translateY(-3px);
+}
+
+/* Hero */
+.gwn-hero{
+  text-align:center;
+  color:#fff;
+  max-width:1040px;
+  margin:0 auto 44px;
+}
+
+.gwn-kicker{
+  display:inline-flex;
+  padding:11px 20px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#dff3ff;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:22px;
+  border:1px solid rgba(255,255,255,.14);
+}
+
+.gwn-hero h1{
+  font-size:clamp(46px,8vw,88px);
+  line-height:.96;
+  letter-spacing:-.065em;
+  margin:0 0 24px;
+}
+
+.gwn-hero h1 span{
+  background:linear-gradient(90deg,#8be7ff,#ffffff,#ffda6a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.gwn-hero p{
+  font-size:19px;
+  line-height:1.75;
+  color:#d8e8f8;
+  margin:0 auto;
+  max-width:830px;
+}
+
+.gwn-flash-strip{
+  max-width:980px;
+  margin:0 auto 48px;
+  padding:17px 24px;
+  border-radius:999px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:950;
+  background:linear-gradient(90deg,#ffda6a,#ffffff,#8be7ff,#ffda6a);
+  background-size:300% 300%;
+  animation:gwnGlow 4s ease infinite, gwnPulse 1.9s ease-in-out infinite;
+  box-shadow:0 0 38px rgba(139,231,255,.32);
 }
 
-a{
-color:inherit;
-text-decoration:none;
+@keyframes gwnGlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
-.page-shell{
-width:100%;
-overflow:hidden;
+@keyframes gwnPulse{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.016);opacity:.9}
 }
 
-.container{
-max-width:1200px;
-margin:0 auto;
-padding:0 20px;
+/* Sections */
+.gwn-section{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:48px;
+  margin-bottom:28px;
+  box-shadow:0 20px 55px rgba(20,72,120,.10);
 }
 
-.section{
-padding:88px 0;
+.gwn-section-dark{
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:34px;
+  padding:52px;
+  margin-bottom:28px;
+  box-shadow:var(--shadow-dark);
 }
 
-.eyebrow{
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:12px;
+.gwn-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 15px;
+  border-radius:999px;
+  background:#eef8ff;
+  color:#0e3a70;
+  font-weight:950;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:18px;
 }
 
-.section-title{
-font-size:clamp(2rem, 4vw, 3.3rem);
-line-height:1.12;
-font-weight:800;
-margin-bottom:18px;
-color:var(--white);
+.gwn-section-dark .gwn-eyebrow{
+  background:rgba(255,255,255,.12);
+  color:#dff3ff;
+  border:1px solid rgba(255,255,255,.12);
 }
 
-.section-subtitle{
-max-width:860px;
-margin:0 auto;
-font-size:1.04rem;
-line-height:1.8;
-color:var(--white-soft);
+.gwn-section h2,
+.gwn-section-dark h2{
+  font-size:clamp(34px,4.5vw,60px);
+  line-height:1.02;
+  letter-spacing:-.055em;
+  margin:0 0 18px;
 }
 
-.hero-structure{
-text-align:center;
-padding-top:96px;
-padding-bottom:64px;
+.gwn-section h2 span{
+  background:linear-gradient(90deg,#0e3a70,#12a4d9,#ffb703);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
-.hero-structure .page-title{
-font-size:clamp(2.4rem, 5vw, 4.2rem);
-line-height:1.08;
-font-weight:800;
-max-width:980px;
-margin:0 auto 18px;
-color:var(--white);
+.gwn-section-dark h2 span{
+  color:#ffda6a;
 }
 
-.hero-structure .page-subtitle{
-max-width:900px;
-margin:0 auto;
-font-size:1.08rem;
-line-height:1.85;
-color:var(--white-soft);
+.gwn-section p,
+.gwn-section-dark p{
+  font-size:17px;
+  line-height:1.82;
+  margin:0 0 18px;
 }
 
-.hero-note{
-margin-top:26px;
-display:inline-block;
-padding:10px 16px;
-border:1px solid var(--gold-soft);
-border-radius:999px;
-background:var(--gold-faint);
-color:var(--white-soft);
-font-size:0.92rem;
-letter-spacing:0.3px;
-}
-
-.structure-card{
-background:var(--card-bg);
-border:1px solid var(--border-soft);
-border-radius:28px;
-padding:40px 26px 42px;
-box-shadow:var(--shadow);
-backdrop-filter:blur(2px);
-}
-
-.org-chart-wrap{
-text-align:center;
-}
-
-.org-chart{
-position:relative;
-max-width:1080px;
-margin:0 auto;
-}
-
-.org-top,
-.org-core{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.org-box{
-background:rgba(255,255,255,0.03);
-border:1.5px solid var(--border-strong);
-border-radius:20px;
-padding:24px 22px;
-}
-
-.org-main{
-width:min(760px, 100%);
-font-size:clamp(1.15rem, 2vw, 1.65rem);
-font-weight:700;
-letter-spacing:0.2px;
-}
-
-.org-core-box{
-width:360px;
-max-width:100%;
-border:1.5px solid var(--gold-soft);
-background:rgba(212,175,55,0.04);
-}
-
-.org-core-box strong{
-display:block;
-font-size:1.55rem;
-text-transform:uppercase;
-letter-spacing:0.5px;
-font-weight:800;
-margin-bottom:6px;
-color:var(--white);
-}
-
-.org-core-box span,
-.org-pillar p span{
-color:var(--white-soft);
-font-size:0.98rem;
-}
-
-.line-vertical{
-width:2px;
-background:rgba(255,255,255,0.78);
-margin:0 auto;
-}
-
-.line-vertical.short{
-height:34px;
-}
-
-.line-vertical.medium{
-height:30px;
-}
-
-.ai-support{
-margin:14px auto 14px;
-font-size:0.9rem;
-line-height:1.5;
-letter-spacing:1.2px;
-text-transform:uppercase;
-color:var(--gold);
-}
-
-.line-horizontal{
-height:2px;
-width:calc(100% - 180px);
-max-width:840px;
-background:rgba(255,255,255,0.78);
-margin:0 auto 34px;
-}
+.gwn-section p{color:#465f78}
+.gwn-section-dark p{color:#dcecff}
 
-.org-pillars{
-display:grid;
-grid-template-columns:repeat(3, 1fr);
-gap:26px;
-align-items:stretch;
+/* Structure Diagram */
+.gwn-simple-chart{
+  display:grid;
+  gap:18px;
+  margin-top:34px;
 }
 
-.org-pillar{
-min-height:290px;
-text-align:center;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
+.gwn-chart-box{
+  text-align:center;
+  border-radius:28px;
+  padding:26px;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:0 18px 45px rgba(20,72,120,.10);
 }
 
-.org-pillar h3{
-font-size:1.34rem;
-line-height:1.3;
-font-weight:800;
-text-transform:uppercase;
-margin-bottom:16px;
-color:var(--white);
+.gwn-chart-box.main{
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border-color:rgba(255,255,255,.18);
 }
 
-.org-divider{
-width:100%;
-height:1px;
-background:var(--gold-soft);
-margin:0 0 18px;
+.gwn-chart-box.core{
+  background:linear-gradient(135deg,#fff9df,#eef8ff);
+  border-color:#dcecff;
 }
 
-.org-divider.soft{
-background:rgba(255,255,255,0.28);
-margin:18px 0;
+.gwn-chart-box h3{
+  margin:0 0 8px;
+  font-size:26px;
+  letter-spacing:-.04em;
 }
 
-.org-pillar p{
-font-size:1.16rem;
-line-height:1.55;
-font-weight:500;
-color:var(--white);
+.gwn-chart-box p{
+  margin:0;
+  font-size:15px;
+  line-height:1.65;
+  color:#526b85;
 }
 
-.explain-section{
-padding-top:34px;
+.gwn-chart-box.main p{
+  color:#dcecff;
 }
 
-.explain-heading{
-text-align:center;
-margin-bottom:40px;
+.gwn-arrow{
+  text-align:center;
+  color:#0e3a70;
+  font-weight:950;
+  font-size:26px;
+  line-height:1;
 }
 
-.support-grid{
-display:grid;
-grid-template-columns:repeat(3, 1fr);
-gap:24px;
+.gwn-pillar-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
 }
 
-.support-card{
-background:var(--card-bg-2);
-border:1px solid var(--border-soft);
-border-radius:22px;
-padding:30px 24px;
-box-shadow:0 12px 26px rgba(0,0,0,0.12);
-min-height:100%;
+.gwn-pillar{
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:26px;
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
+  transition:.25s ease;
 }
 
-.support-top{
-margin-bottom:16px;
+.gwn-pillar:hover{
+  transform:translateY(-6px);
+  border-color:#58bfff;
+  box-shadow:0 20px 45px rgba(20,72,120,.14);
 }
 
-.support-card h3{
-font-size:1.38rem;
-line-height:1.28;
-font-weight:800;
-margin-bottom:8px;
-color:var(--white);
+.gwn-pillar h3{
+  margin:0 0 10px;
+  font-size:22px;
+  letter-spacing:-.035em;
 }
 
-.support-label{
-font-size:0.9rem;
-letter-spacing:1.2px;
-text-transform:uppercase;
-color:var(--gold);
+.gwn-pillar p{
+  margin:0;
+  font-size:15px;
+  line-height:1.72;
 }
 
-.support-body{
-font-size:1rem;
-line-height:1.85;
-color:var(--white-soft);
+.gwn-mini-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:18px;
 }
 
-.support-links{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:22px;
+.gwn-mini-list span{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#eef8ff;
+  border:1px solid #dcecff;
+  color:#0e3a70;
+  font-size:12px;
+  font-weight:850;
 }
 
-.support-links span{
-display:inline-flex;
-align-items:center;
-padding:9px 14px;
-border-radius:999px;
-border:1px solid var(--gold-soft);
-background:var(--gold-faint);
-font-size:0.9rem;
-color:var(--white);
-white-space:nowrap;
+/* Cycle */
+.gwn-cycle{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  margin-top:30px;
 }
 
-.summary-bar{
-margin-top:30px;
-padding-top:22px;
-border-top:1px solid var(--gold-soft);
-text-align:center;
+.gwn-step{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(20,72,120,.10);
 }
 
-.summary-bar p{
-max-width:900px;
-margin:0 auto;
-font-size:1rem;
-line-height:1.85;
-color:var(--white-soft);
+.gwn-step strong{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  margin:0 auto 14px;
+  background:linear-gradient(135deg,#8be7ff,#ffda6a);
+  color:#07182f;
+  font-weight:950;
 }
 
-.summary-bar strong{
-color:var(--white);
+.gwn-step h3{
+  margin:0 0 8px;
+  font-size:18px;
+  letter-spacing:-.03em;
 }
 
-.closing-section{
-text-align:center;
-padding-top:20px;
+.gwn-step p{
+  margin:0;
+  font-size:14px;
+  line-height:1.62;
 }
 
-.closing-card{
-max-width:960px;
-margin:0 auto;
-background:var(--card-bg);
-border:1px solid var(--border-soft);
-border-radius:24px;
-padding:32px 24px;
+/* CTA */
+.gwn-cta{
+  text-align:center;
+  background:linear-gradient(135deg,#07182f,#0e3a70);
+  color:#fff;
+  border-radius:34px;
+  padding:52px 30px;
+  margin-top:38px;
+  box-shadow:var(--shadow-dark);
 }
 
-.closing-card p{
-font-size:1.04rem;
-line-height:1.9;
-color:var(--white-soft);
+.gwn-cta h2{
+  font-size:clamp(32px,5vw,58px);
+  line-height:1.04;
+  letter-spacing:-.055em;
+  margin:0 0 14px;
 }
 
-.closing-card strong{
-color:var(--gold);
+.gwn-cta p{
+  color:#dcecff;
+  max-width:780px;
+  margin:0 auto 28px;
+  line-height:1.75;
 }
 
-@media (max-width: 980px){
-.org-pillars,
-.support-grid{
-grid-template-columns:1fr;
+.gwn-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
 }
 
-.line-horizontal,
-.line-vertical{
-display:none;
+.gwn-btn{
+  display:inline-flex;
+  min-height:52px;
+  align-items:center;
+  justify-content:center;
+  padding:0 24px;
+  border-radius:999px;
+  font-weight:900;
+  text-decoration:none;
+  transition:.25s ease;
 }
 
-.org-pillars{
-margin-top:20px;
-}
-
-.ai-support{
-margin-top:20px;
-margin-bottom:18px;
-}
-
-.org-pillar{
-min-height:auto;
-}
-}
-
-@media (max-width: 640px){
-.section{
-padding:68px 0;
-}
-
-.hero-structure{
-padding-top:76px;
-padding-bottom:48px;
-}
-
-.container{
-padding:0 16px;
-}
-
-.structure-card{
-border-radius:22px;
-padding:28px 16px 30px;
-}
-
-.org-box,
-.support-card,
-.closing-card{
-border-radius:18px;
-}
-
-.org-box{
-padding:20px 16px;
-}
-
-.org-core-box strong{
-font-size:1.28rem;
-}
-
-.org-pillar h3,
-.support-card h3{
-font-size:1.18rem;
-}
+.gwn-btn-primary{background:#fff;color:#07182f}
+.gwn-btn-secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
 
-.org-pillar p{
-font-size:1.04rem;
-}
+.gwn-btn:hover{transform:translateY(-3px)}
 
-.section-subtitle,
-.hero-structure .page-subtitle,
-.support-body,
-.summary-bar p,
-.closing-card p{
-font-size:0.98rem;
+@media(max-width:1000px){
+  .gwn-pillar-row,
+  .gwn-cycle{
+    grid-template-columns:1fr;
+  }
 }
 
-.hero-note{
-font-size:0.84rem;
-padding:9px 14px;
-}
-}
+@media(max-width:720px){
+  .gwn-structure-page{
+    padding:26px 16px 72px;
+  }
 
-.back-home-btn{
-display:inline-flex;
-align-items:center;
-gap:8px;
-padding:12px 18px;
-border-radius:999px;
-border:1px solid rgba(212,175,55,0.45);
-background:rgba(212,175,55,0.10);
-color:#ffffff;
-font-size:0.95rem;
-letter-spacing:0.4px;
-font-weight:500;
-transition:all 0.25s ease;
-}
+  .gwn-top-nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:10px;
+  }
 
-.back-home-btn:hover{
-background:rgba(212,175,55,0.18);
-border-color:rgba(212,175,55,0.8);
-transform:translateY(-1px);
-}
+  .gwn-top-nav a{
+    white-space:nowrap;
+  }
 
+  .gwn-hero h1{
+    font-size:clamp(44px,14vw,68px);
+  }
 
-.back-home-wrap{
-margin-top:36px;
-}
+  .gwn-hero p{
+    font-size:17px;
+  }
 
+  .gwn-flash-strip{
+    border-radius:24px;
+    font-size:14px;
+  }
 
+  .gwn-section,
+  .gwn-section-dark,
+  .gwn-cta{
+    border-radius:26px;
+    padding:30px;
+  }
 
-.hero-note{
-opacity:0.9;
+  .gwn-pillar{
+    border-radius:22px;
+    padding:24px;
+  }
 }
-
-
 </style>
 </head>
+
 <body>
-<div class="page-shell">
+<main class="gwn-structure-page">
+  <div class="gwn-wrap">
 
-<section class="hero-structure">
-<div class="container">
-<p class="eyebrow">OUR STRUCTURE</p>
-<h1 class="page-title">Government Workforce Network LLC</h1>
-<p class="page-subtitle">
-Building Income, Opportunity, and Well-being through a Connected, Human-Centered, AI-Enabled Workforce Ecosystem.
-</p>
-<div class="hero-note">A clear view of how our ecosystem is organized and connected</div>
-</div>
-<div class="back-home-wrap">
-<a class='back-home-btn' href='/'>← Back to Home</a>
-</div>
-</section>
+    <nav class="gwn-top-nav" aria-label="Government Workforce Network navigation">
+      <a href="/">Home</a>
+      <a href="/who-we-are">Who We Are</a>
+      <a href="/workforce-innovation-lab">Innovation Lab</a>
+      <a href="/workforce-intelligence-team">Leadership</a>
+      <a href="/consulting">Solutions</a>
+      <a href="/initiatives">Programs</a>
+      <a href="/career-center-partners">University Network</a>
+    </nav>
 
-<section class="section">
-<div class="container">
-<div class="structure-card org-chart-wrap">
-<p class="eyebrow">ECOSYSTEM STRUCTURE</p>
-<h2 class="section-title">How Our Organization Is Structured</h2>
-<p class="section-subtitle">
-Our structure is built around initiatives as the impact core, with each pillar supporting how people enter, engage, and grow through the ecosystem.
-</p>
+    <header class="gwn-hero">
+      <div class="gwn-kicker">Our Structure</div>
+      <h1><span>Simple. Connected. Purpose-Driven.</span></h1>
+      <p>
+        Government Workforce Network LLC is organized to explain how people enter, engage, learn, and grow through a
+        connected workforce ecosystem built around Income, Opportunity, and Well-Being.
+      </p>
+    </header>
 
-<div class="org-chart" style="margin-top:42px;">
+    <div class="gwn-flash-strip">
+      Initiatives create impact. Engagement reveals needs. Research builds evidence. Solutions create opportunity.
+    </div>
 
-<div class="org-top">
-<div class="org-box org-main">Government Workforce Network LLC</div>
-</div>
+    <section class="gwn-section" id="structure">
+      <div class="gwn-eyebrow">Organizational Structure</div>
+      <h2>How our ecosystem <span>works together.</span></h2>
+      <p>
+        Our structure is intentionally simple. Initiatives sit at the center because they create impact, connect people,
+        reveal workforce needs, and guide the solutions we build.
+      </p>
 
-<div class="line-vertical short"></div>
+      <div class="gwn-simple-chart">
+        <div class="gwn-chart-box main">
+          <h3>Government Workforce Network LLC</h3>
+          <p>Building Income • Opportunity • Well-Being</p>
+        </div>
 
-<div class="org-core">
-<div class="org-box org-core-box">
-<strong>Initiatives</strong>
-<span>(Impact Core)</span>
-</div>
-</div>
+        <div class="gwn-arrow">↓</div>
 
-<div class="line-vertical medium"></div>
+        <div class="gwn-chart-box core">
+          <h3>Initiatives</h3>
+          <p>Impact Core</p>
+        </div>
 
-<div class="ai-support">Human-Centered, AI-Enabled Infrastructure Across the Ecosystem</div>
+        <div class="gwn-arrow">↓</div>
 
-<div class="line-horizontal"></div>
+        <div class="gwn-chart-box">
+          <h3>Human-Centered AI Infrastructure</h3>
+          <p>Practical tools, engagement, research, and solutions that support workforce access and readiness.</p>
+        </div>
 
-<div class="org-pillars">
-<div class="org-box org-pillar">
-<h3>Talent &amp; Community</h3>
-<div class="org-divider"></div>
-<p>Talent Connect<br><span>(Entry Point)</span></p>
-<div class="org-divider soft"></div>
-<p>Workforce Intelligence Team<br><span>(Contributors)</span></p>
-</div>
+        <div class="gwn-arrow">↓</div>
 
-<div class="org-box org-pillar">
-<h3>Engagement</h3>
-<div class="org-divider"></div>
-<p>Workforce TV | University & Organization Network<br><span>(Engagement)</span></p>
-<div class="org-divider soft"></div>
-<p>Events | Career Lounges<br><span>(Experience)</span></p>
-</div>
+        <div class="gwn-pillar-row">
+          <article class="gwn-pillar">
+            <h3>Talent & Community</h3>
+            <p>Where people connect to resources, support, tools, and workforce opportunities.</p>
+            <div class="gwn-mini-list">
+              <span>Talent Connect</span>
+              <span>Workforce Intelligence Team</span>
+            </div>
+          </article>
 
-<div class="org-box org-pillar">
-<h3>Solutions &amp; Opportunities</h3>
-<div class="org-divider"></div>
-<p>Consulting<br><span>(Solutions)</span></p>
-<div class="org-divider soft"></div>
-<p>Innovation &amp; Partnerships<br><span>(Opportunities)</span></p>
-</div>
-</div>
-</div>
+          <article class="gwn-pillar">
+            <h3>Engagement</h3>
+            <p>Where we listen, learn, educate, and build relationships with workforce communities.</p>
+            <div class="gwn-mini-list">
+              <span>Workforce TV</span>
+              <span>University Network</span>
+              <span>Career Lounges</span>
+            </div>
+          </article>
 
-<div class="explain-section">
-<div class="explain-heading">
-<p class="eyebrow">HOW IT WORKS</p>
-<h2 class="section-title">How Our Initiatives Support the Ecosystem</h2>
-<p class="section-subtitle">
-Our initiatives are the foundation of the ecosystem. They bring people together, create meaningful engagement, and help build the trust that leads to solutions and opportunities.
-</p>
-</div>
+          <article class="gwn-pillar">
+            <h3>Research & Innovation</h3>
+            <p>Where we document what we build, test, learn, and improve through evidence.</p>
+            <div class="gwn-mini-list">
+              <span>Innovation Lab</span>
+              <span>Case Studies</span>
+              <span>Foundation Reports</span>
+              <span>Pilot Programs</span>
+            </div>
+          </article>
 
-<div class="support-grid">
-<article class="support-card">
-<div class="support-top">
-<h3>Talent &amp; Community</h3>
-<p class="support-label">People</p>
-</div>
-<p class="support-body">
-We serve a diverse and inclusive talent community, including students, veterans, military families, individuals with disabilities, firefighters, EMS Responders & Personnel, law enforcement & correctional personnel, and emerging professionals navigating today’s workforce challenges.</p>
-<p class="support-body">
-Through Talent Connect and our Workforce Intelligence Team, we provide direct support, connection, and practical tools designed to deliver real, immediate help so individuals can move forward with clarity, confidence, and opportunity.</p>
+          <article class="gwn-pillar">
+            <h3>Solutions & Opportunities</h3>
+            <p>Where workforce insights become practical tools, partnerships, consulting, and solutions.</p>
+            <div class="gwn-mini-list">
+              <span>Consulting</span>
+              <span>AI Workforce Tools</span>
+              <span>Partnerships</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="support-links">
-<span>Talent Connect</span>
-<span>Workforce Intelligence Team</span>
-</div>
-</article>
+    <section class="gwn-section-dark" id="why-it-matters">
+      <div class="gwn-eyebrow">Why This Structure Matters</div>
+      <h2>Each part has a <span>purpose.</span></h2>
+      <p>
+        Talent brings real workforce needs. Engagement helps us understand those needs. Research and Innovation
+        document what we learn. Solutions and Opportunities help turn that learning into practical workforce action.
+      </p>
+      <p>
+        Together, this structure keeps Government Workforce Network focused on building pathways to income, expanding
+        opportunity, and promoting well-being.
+      </p>
+    </section>
 
-<article class="support-card">
-<div class="support-top">
-<h3>Engagement</h3>
-<p class="support-label">Connection</p>
-</div>
-<p class="support-body">
-Engagement is where we listen and learn.</p>
-<p class="support-body">
-Through Workforce TV, events, career loungers, and direct interaction, we gain insight into real experiences, challenges, and barriers facing today’s workforce.</p>
-<p class="support-body">
-This is where gaps become visible not through assumptions, but through lived experience and real conversation.</p>
-<p class="support-body">
-We don’t guess workforce problems, we learn them directly from the people experiencing them.</p>
+    <section class="gwn-section" id="operating-model">
+      <div class="gwn-eyebrow">Operating Model</div>
+      <h2>From real needs to <span>real solutions.</span></h2>
+      <p>
+        We do not build from assumptions. We listen, identify gaps, build tools, test ideas, and improve based on what
+        people and partners actually need.
+      </p>
 
-<div class="support-links">
-<span>Workforce TV</span>
-<span>University & Organization Network</span>
-<span>Events</span>
-<span>Career Lounges</span>
-</div>
-</article>
+      <div class="gwn-cycle">
+        <article class="gwn-step">
+          <strong>01</strong>
+          <h3>Listen</h3>
+          <p>Learn from students, workers, employers, universities, and communities.</p>
+        </article>
 
-<article class="support-card">
-<div class="support-top">
-<h3>Solutions &amp; Opportunities</h3>
-<p class="support-label">Value</p>
-</div>
-<p class="support-body">
-What we learn through engagement directly informs how we design and build solutions.
-</p>
-<p class="support-body">
-We help organizations address workforce gaps by modernizing recruitment practices, improving talent evaluation, updating job classifications, and aligning systems with today’s workforce and AI-driven environment.
-</p>
-<p class="support-body">
-Our solutions are practical, execution-focused, and built with compliance in mind helping organizations mitigate real issues impacting access, readiness, and opportunity.
-</p>
-<strong>How We Work with Organizations:</strong> Our approach is flexible, collaborative, and designed to integrate with your current systems and processes helping you modernize without disruption.
-</p>
+        <article class="gwn-step">
+          <strong>02</strong>
+          <h3>Identify</h3>
+          <p>Define workforce barriers affecting access, readiness, opportunity, and well-being.</p>
+        </article>
 
+        <article class="gwn-step">
+          <strong>03</strong>
+          <h3>Build</h3>
+          <p>Create practical AI-enabled workforce tools, programs, and resources.</p>
+        </article>
 
-<div class="support-links">
-<span>Consulting</span>
-<span>Innovation & Partnerships</span>
-</div>
-</article>
-</div>
+        <article class="gwn-step">
+          <strong>04</strong>
+          <h3>Test</h3>
+          <p>Use pilots, feedback, and engagement to learn what works and what needs improvement.</p>
+        </article>
 
-<div class="summary-bar">
-<p>
-<strong>In simple terms:</strong> Talent brings real needs, engagement reveals real gaps, and solutions help organizations respond with practical, modern workforce action.
-</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <article class="gwn-step">
+          <strong>05</strong>
+          <h3>Improve</h3>
+          <p>Document lessons learned and strengthen the next version of our work.</p>
+        </article>
+      </div>
+    </section>
 
-<section class="section closing-section">
-<div class="container">
-<div class="closing-card">
-<p>
-<strong>Why this structure matters:</strong> Government Workforce Network LLC operates as an integrated ecosystem not a collection of services where initiatives generate impact, engagement builds connection, and consulting sustains and scales long-term value.
-</p>
-</div>
-</div>
-</section>
+    <section class="gwn-cta">
+      <h2>One structure. One mission.</h2>
+      <p>
+        Government Workforce Network is designed to stay clear, connected, and mission-driven as we grow. Every part of
+        the organization supports our foundation: Income, Opportunity, and Well-Being.
+      </p>
 
-</div>
+      <div class="gwn-buttons">
+        <a href="/" class="gwn-btn gwn-btn-primary">Back to Home</a>
+        <a href="/who-we-are" class="gwn-btn gwn-btn-secondary">Who We Are</a>
+        <a href="/workforce-innovation-lab" class="gwn-btn gwn-btn-secondary">Innovation Lab</a>
+        <a href="/career-center-partners" class="gwn-btn gwn-btn-secondary">University Network</a>
+      </div>
+    </section>
 
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5ZWMxNWJmY2YwZDBmMDAwODQ5Yzk1OCIsImlzc3VlciI6Im5mc2VydmVyIn0.l0fA7BdPNCA0m5GHZRnAC8QGLvmneNACTnuNHF0aXUg"></script></body>
+  </div>
+</main>
+</body>
 </html>
