@@ -229,6 +229,26 @@ display:block;
 height:100%;
 }
 
+  .country-card{
+text-decoration:none;
+color:inherit;
+cursor:pointer;
+transition:.25s ease;
+}
+
+.country-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.country-card small{
+display:block;
+margin-top:10px;
+font-size:.82rem;
+color:#4b82ff;
+font-weight:600;
+}
+
 </style>
 </head>
 <body>
@@ -247,9 +267,18 @@ height:100%;
 
 <section class="stats" aria-label="Network highlights">
   <div class="stat-card"><strong>896</strong><span>U.S. Universities</span></div>
-  <div class="stat-card"><strong>56</strong><span>State/Region</span></div>
-  <div class="stat-card"><strong>Search</strong><span>Built-in directory filter</span></div>
-  <div class="stat-card"><strong>Free</strong><span>Talent Connect Program - USA</span></div>
+ <a href="united-kingdom-university-network.html" class="stat-card country-card"><strong>42</strong>
+<span>🇬🇧 United Kingdom Universities</span><small>Click to view network →</small>
+</a>
+  
+<a href="germany-university-network.html" class="stat-card country-card">
+<strong>31</strong>
+<span>🇩🇪 Germany Universities</span>
+<small>Click to view network →</small>
+</a>
+  
+<div class="stat-card"><strong>Search</strong><span>Built-in directory filter</span></div>
+  
 </section>
 
 <main class="page-wrap">
