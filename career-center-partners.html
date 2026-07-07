@@ -1,1811 +1,513 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Career Center & University Network | Government Workforce Network LLC</title>
-<meta name="description" content="Government Workforce Network LLC career center and university network directory organized by state." />
+<title>Global University Network | Government Workforce Network LLC</title>
+<meta name="description" content="Government Workforce Network LLC Global University Network connecting universities, students, career centers, employers, and workforce leaders across borders." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
 <style>
-:root{--navy:#071426;--navy2:#0d2347;--blue:#1d4ed8;--gold:#d4af37;--ink:#101827;--muted:#5f6b7a;--line:#e6eaf0;--ice:#f6f8fb;}
+:root{
+--navy:#06101f;
+--navy2:#0d2347;
+--blue:#1d4ed8;
+--gold:#d4af37;
+--gold2:#ffe9a6;
+--ink:#101827;
+--muted:#5f6b7a;
+--line:#e6eaf0;
+--ice:#f6f8fb;
+--white:#ffffff;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Sora",Arial,sans-serif;background:linear-gradient(180deg,#06101f 0%,#0d2347 36%,#f6f8fb 36%,#f6f8fb 100%);color:var(--ink);line-height:1.65}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(5,11,20,.9);backdrop-filter:blur(14px);padding:18px 40px;color:#fff;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.1)}
-.logo{font-size:15px;font-weight:800} .topbar nav{display:flex;gap:18px;flex-wrap:wrap} .topbar nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700} .topbar nav a:hover{color:var(--gold)}
-.hero{max-width:1200px;margin:0 auto;padding:76px 22px 34px;color:#fff} .eyebrow{display:inline-flex;padding:8px 14px;border:1px solid rgba(212,175,55,.45);border-radius:999px;background:rgba(255,255,255,.08);color:#ffe9a6;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
-h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(42px,7vw,82px);line-height:.95;letter-spacing:-.03em;max-width:930px;margin-bottom:20px}
-.hero p{max-width:880px;font-size:18px;color:rgba(255,255,255,.84)}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1200px;margin:26px auto 0;padding:0 22px}
-.stat-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:20px;color:#fff;box-shadow:0 18px 40px rgba(0,0,0,.18)} .stat-card strong{display:block;font-size:30px;line-height:1;color:#ffe9a6} .stat-card span{display:block;margin-top:8px;font-size:12px;color:rgba(255,255,255,.78);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
-.page-wrap{max-width:1200px;margin:42px auto 80px;padding:0 22px} .panel{background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.8);border-radius:32px;box-shadow:0 24px 70px rgba(7,20,38,.18);overflow:hidden}
-.panel-intro{padding:34px;display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center;border-bottom:1px solid var(--line)} .panel-intro h2{font-size:28px;line-height:1.15;margin-bottom:10px} .panel-intro p{color:var(--muted);font-size:15px}
-.notice{background:linear-gradient(135deg,#fff7dd,#fff);border:1px solid rgba(212,175,55,.35);border-radius:22px;padding:18px;font-size:13px;color:#5b4a0c}
-.toolbar{padding:22px 34px;background:#fff;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:61px;z-index:20}
-.search{width:100%;padding:15px 18px;border:1px solid #d9e0ea;border-radius:999px;font:inherit;outline:none} .search:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(29,78,216,.11)} .filter-note{font-size:12px;color:var(--muted);font-weight:800;white-space:nowrap}
-.state-nav{padding:18px 34px 8px;background:#fff;display:flex;gap:10px;flex-wrap:wrap} .state-nav a{text-decoration:none;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--ice);color:#233041;font-size:12px;font-weight:800} .state-nav a:hover{background:var(--navy2);color:#fff;border-color:var(--navy2)} .state-nav span{opacity:.65;margin-left:4px}
-.directory{padding:26px 34px 40px;background:#fff} .state-section{margin-top:26px;padding-top:20px;border-top:1px solid var(--line)} .state-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px} .state-heading h3{font-size:24px;letter-spacing:-.02em} .state-heading span{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px} .partner-link{display:flex;align-items:center;min-height:72px;padding:17px 18px;border:1px solid #dde4ee;border-radius:18px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:800;background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease} .partner-link:hover{transform:translateY(-3px);border-color:rgba(29,78,216,.35);color:var(--blue);box-shadow:0 16px 28px rgba(13,35,71,.12)}
-.partner-link[data-link-status="official-search"]::after{
-display:none !important;
-content:none !important;
+body{
+font-family:"Sora",Arial,sans-serif;
+background:#f6f8fb;
+color:var(--ink);
+line-height:1.65;
 }
-.cta-band{margin-top:34px;padding:28px;border-radius:26px;background:linear-gradient(135deg,#071426,#0d2347);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap} .cta-band h3{font-size:24px;margin-bottom:6px} .cta-band p{color:rgba(255,255,255,.78);max-width:720px;font-size:14px} .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:900;font-size:13px} .btn-primary{background:var(--gold);color:#111} .btn-secondary{border:1px solid rgba(255,255,255,.32);color:#fff;margin-left:10px}
-.footer-note{text-align:center;color:#607086;font-size:12px;margin-top:22px}
-.no-results{display:none;padding:22px;margin-top:24px;border:1px solid var(--line);border-radius:18px;background:#fff7dd;color:#5b4a0c;font-size:14px;font-weight:700}
-
-@media (max-width:820px){.topbar{padding:16px 20px}.hero{padding-top:54px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-intro{grid-template-columns:1fr;padding:24px}.toolbar{grid-template-columns:1fr;position:static;padding:18px 22px}.state-nav{padding:16px 22px 6px}.directory{padding:18px 22px 30px}}
-@media (max-width:520px){.stats{grid-template-columns:1fr}.partner-link{font-size:13px}}
-  .verify,
-.verify-badge{
-display:none !important;
+.hero-section{
+background:
+radial-gradient(circle at 85% 8%,rgba(29,78,216,.32),transparent 32%),
+radial-gradient(circle at 12% 22%,rgba(212,175,55,.18),transparent 28%),
+linear-gradient(180deg,#06101f 0%,#0d2347 100%);
+padding-bottom:64px;
 }
-
-  .premium-intro{
-padding:34px;
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
+.topbar{
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(5,11,20,.92);
+backdrop-filter:blur(14px);
+padding:18px 40px;
+color:#fff;
+display:flex;
+justify-content:space-between;
 gap:18px;
-align-items:stretch;
-border-bottom:1px solid var(–line);
+flex-wrap:wrap;
+border-bottom:1px solid rgba(255,255,255,.1);
 }
-
-.intro-card{
-background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%);
-border:1px solid #e3e8f0;
-border-radius:24px;
-padding:24px;
-box-shadow:0 14px 34px rgba(7,20,38,.06);
+.logo{font-size:15px;font-weight:800;letter-spacing:-.01em}
+.topbar nav{display:flex;gap:18px;flex-wrap:wrap}
+.topbar nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700}
+.topbar nav a:hover{color:var(--gold2)}
+.hero{
+max-width:1280px;
+margin:0 auto;
+padding:78px 22px 34px;
+color:#fff;
+display:grid;
+grid-template-columns:1fr .9fr;
+gap:44px;
+align-items:center;
 }
-
-.intro-main{
-grid-column:span 2;
-background:linear-gradient(135deg,#ffffff 0%,#f7f9ff 100%);
+.eyebrow{
+display:inline-flex;
+padding:8px 14px;
+border:1px solid rgba(212,175,55,.45);
+border-radius:999px;
+background:rgba(255,255,255,.08);
+color:var(--gold2);
+font-size:12px;
+font-weight:800;
+letter-spacing:.08em;
+text-transform:uppercase;
+margin-bottom:22px;
 }
-
+h1{
+font-family:"DM Serif Display",Georgia,serif;
+font-size:clamp(48px,7vw,88px);
+line-height:.95;
+letter-spacing:-.035em;
+max-width:820px;
+margin-bottom:22px;
+}
+.hero-copy p{
+max-width:760px;
+font-size:18px;
+color:rgba(255,255,255,.84);
+}
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:12px 20px;
+border-radius:999px;
+text-decoration:none;
+font-weight:900;
+font-size:13px;
+transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--gold2);color:#111827}
+.btn-secondary{border:1px solid rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.04)}
+.hero-visual{
+min-height:430px;
+border-radius:32px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.18);
+box-shadow:0 28px 70px rgba(0,0,0,.28);
+background:
+linear-gradient(135deg,rgba(5,11,20,.38),rgba(13,35,71,.18)),
+url("global-university-network.png") center/cover no-repeat;
+position:relative;
+}
+.hero-visual::after{
+content:"Connecting students, universities, and workforce leaders across borders.";
+position:absolute;
+left:24px;
+right:24px;
+bottom:24px;
+padding:20px 22px;
+border-radius:22px;
+background:rgba(5,11,20,.72);
+border:1px solid rgba(255,255,255,.18);
+color:#fff;
+font-weight:900;
+font-size:20px;
+line-height:1.25;
+backdrop-filter:blur(10px);
+}
+.stats{
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:16px;
+max-width:1280px;
+margin:18px auto 0;
+padding:0 22px;
+}
+.stat-card{
+background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.16);
+border-radius:22px;
+padding:24px 22px;
+color:#fff;
+box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+.stat-card strong{
+display:block;
+font-size:38px;
+line-height:1;
+color:var(--gold2);
+}
+.stat-card span{
+display:block;
+margin-top:8px;
+font-size:12px;
+color:rgba(255,255,255,.78);
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:.06em;
+}
+.page-wrap{
+max-width:1280px;
+margin:48px auto 80px;
+padding:0 22px;
+}
+.section-head{
+text-align:center;
+max-width:860px;
+margin:0 auto 28px;
+}
 .section-label{
 display:inline-flex;
 margin-bottom:12px;
 padding:7px 11px;
 border-radius:999px;
-background:#f3f6fb;
-border:1px solid #e1e7f0;
-color:var(–navy2);
+background:#eef4ff;
+border:1px solid #dbe7ff;
+color:var(--navy2);
 font-size:11px;
 font-weight:900;
 text-transform:uppercase;
 letter-spacing:.08em;
 }
-
-.intro-card h2{
-font-size:25px;
-line-height:1.15;
-letter-spacing:-.02em;
+.section-head h2{
+font-size:clamp(30px,4vw,48px);
+line-height:1.05;
+letter-spacing:-.035em;
+color:var(--navy);
 margin-bottom:12px;
-color:var(–navy);
 }
-
-.intro-card p{
-color:var(–muted);
-font-size:14px;
-margin-top:10px;
+.section-head p{
+color:var(--muted);
+font-size:15px;
 }
-
-.opportunity-card ul{
-margin-top:12px;
-padding-left:20px;
-color:#2c3747;
-font-size:14px;
+.country-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
 }
-
-.opportunity-card li{
-margin-bottom:9px;
-}
-
-.free-note{
-margin-top:16px;
-padding:14px 15px;
-border-radius:16px;
-background:#fff7dd;
-border:1px solid rgba(212,175,55,.35);
-color:#5b4a0c !important;
-font-weight:700;
-}
-
-.intro-notice{
-grid-column:span 2;
-margin-top:4px;
-}
-
-@media (max-width:820px){
-.premium-intro{
-grid-template-columns:1fr;
-padding:24px;
-}
-
-.intro-main,
-.intro-notice{
-grid-column:span 1;
-}
-
-.intro-card{
-padding:21px;
-}
-
-.intro-card h2{
-font-size:22px;
-}
-}
-
-.global-visual-card{
-min-height:100%;
-border-radius:24px;
-padding:30px;
-color:#fff;
-background:
-radial-gradient(circle at 20% 20%, rgba(212,175,55,.55), transparent 28%),
-radial-gradient(circle at 90% 15%, rgba(29,78,216,.55), transparent 30%),
-linear-gradient(135deg,#071426 0%,#0d2347 55%,#1d4ed8 100%);
-border:1px solid rgba(255,255,255,.18);
-box-shadow:0 22px 48px rgba(7,20,38,.18);
-display:flex;
-flex-direction:column;
-justify-content:center;
+.country-card{
 position:relative;
-overflow:hidden;
-}
-
-.global-visual-card::after{
-content:””;
-position:absolute;
-inset:auto -40px -70px auto;
-width:220px;
-height:220px;
-border-radius:50%;
-border:1px solid rgba(255,255,255,.18);
-}
-
-.global-orb{
-width:72px;
-height:72px;
-border-radius:22px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:rgba(255,255,255,.14);
-border:1px solid rgba(255,255,255,.22);
-font-size:36px;
-margin-bottom:18px;
-}
-
-.global-visual-card span{
-color:#ffe9a6;
-font-size:12px;
-font-weight:900;
-text-transform:uppercase;
-letter-spacing:.1em;
-margin-bottom:12px;
-}
-
-.global-visual-card h2{
-color:#fff;
-font-size:30px;
-line-height:1.08;
-letter-spacing:-.03em;
-margin-bottom:14px;
-}
-
-.global-visual-card p{
-color:rgba(255,255,255,.78);
-font-size:14px;
-max-width:420px;
-}
-
-
-
-.intro-card:nth-child(2){
-border-top:5px solid var(–gold);
-}
-
-.intro-card:nth-child(3){
-border-top:5px solid var(–blue);
-}
-
-.opportunity-card{
-border-top:5px solid #0d2347;
-}
-
-
-.global-image{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-.global-visual-card{
-height:100%;
-}
-
-  .country-card{
+min-height:250px;
+padding:26px;
+border-radius:26px;
+background:#fff;
+border:1px solid #dde4ee;
+box-shadow:0 18px 44px rgba(7,20,38,.08);
 text-decoration:none;
-color:inherit;
-cursor:pointer;
-transition:.25s ease;
+color:var(--ink);
+overflow:hidden;
+transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
 }
-
 .country-card:hover{
 transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(0,0,0,.25);
+box-shadow:0 26px 60px rgba(7,20,38,.15);
+border-color:rgba(29,78,216,.35);
 }
-
-.country-card small{
-display:block;
-margin-top:10px;
-font-size:.82rem;
-color:#4b82ff;
-font-weight:600;
+.country-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+background:linear-gradient(90deg,var(--gold),var(--blue));
 }
+.flag{
+font-size:42px;
+margin-bottom:18px;
+}
+.country-card h3{
+font-size:24px;
+line-height:1.1;
+letter-spacing:-.02em;
+margin-bottom:10px;
+}
+.country-card p{
+color:var(--muted);
+font-size:14px;
+margin-bottom:22px;
+}
+.country-meta{
+display:flex;
+justify-content:space-between;
+gap:12px;
+align-items:center;
+margin-top:auto;
+padding-top:18px;
+border-top:1px solid var(--line);
+}
+.country-meta strong{
+font-size:26px;
+color:var(--navy2);
+}
+.country-meta span{
+font-size:12px;
+font-weight:900;
+color:var(--blue);
+}
+.feature-panel{
+margin-top:42px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+.feature-card{
+background:#fff;
+border:1px solid #dde4ee;
+border-radius:28px;
+padding:30px;
+box-shadow:0 18px 44px rgba(7,20,38,.08);
+}
+.feature-card h3{
+font-size:26px;
+line-height:1.12;
+letter-spacing:-.02em;
+margin-bottom:12px;
+color:var(--navy);
+}
+.feature-card p,.feature-card li{
+color:var(--muted);
+font-size:14px;
+}
+.feature-card ul{
+margin-top:14px;
+padding-left:20px;
+}
+.feature-card li{margin-bottom:8px}
+.notice{
+margin-top:34px;
+background:linear-gradient(135deg,#fff7dd,#fff);
+border:1px solid rgba(212,175,55,.35);
+border-radius:22px;
+padding:18px;
+font-size:13px;
+color:#5b4a0c;
+}
+.cta-band{
+margin-top:34px;
+padding:30px;
+border-radius:28px;
+background:linear-gradient(135deg,#071426,#0d2347);
+color:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+.cta-band h3{font-size:26px;margin-bottom:6px}
+.cta-band p{color:rgba(255,255,255,.78);max-width:760px;font-size:14px}
+.footer-note{text-align:center;color:#607086;font-size:12px;margin-top:22px}
 
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;padding-top:54px}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.feature-panel{grid-template-columns:1fr}
+.hero-visual{min-height:320px}
+}
+@media(max-width:520px){
+.topbar{padding:16px 20px}
+.stats{grid-template-columns:1fr}
+.hero-actions{flex-direction:column}
+.btn{width:100%}
+.hero-visual::after{font-size:16px}
+}
 </style>
 </head>
+
 <body>
+
+<section class="hero-section">
 <header class="topbar">
-  <div class="logo">Government Workforce Network LLC</div>
-  <nav aria-label="Main navigation">
-    <a href="/">Home</a><a href="/talent-connect">Talent Connect</a><a href="/workforce-tv">Workforce TV</a><a href="/consulting">Solutions</a>
-  </nav>
+<div class="logo">Government Workforce Network LLC</div>
+<nav aria-label="Main navigation">
+<a href="/">Home</a>
+<a href="/talent-connect">Talent Connect</a>
+<a href="/workforce-tv">Workforce TV</a>
+<a href="/career-center-partners">University Network</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="eyebrow">Workforce Access Network</div>
-  <h1>Career Center & University Network</h1>
-  <p>Government Workforce Network LLC has been approved to engage with a broad national network of universities, colleges, and career centers in support of workforce visibility, career education, student access, and human-centered workforce connection.</p>
+<div class="hero-copy">
+<div class="eyebrow">Global University Network</div>
+<h1>University & Career Center Network</h1>
+<p>
+Government Workforce Network LLC is building a global university and career center access network connecting students, universities, employers, workforce professionals, and leaders across borders.
+</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#countries">Explore Country Networks</a>
+<a class="btn btn-secondary" href="/talent-connect">Explore Talent Connect</a>
+</div>
+</div>
+
+<div class="hero-visual"></div>
 </section>
 
-<section class="stats" aria-label="Network highlights">
-  <div class="stat-card"><strong>897</strong><span>USA Universities</span></div>
+<section class="stats" aria-label="Global university network highlights">
+<div class="stat-card">
+<strong>6</strong>
+<span>Countries Listed</span>
+</div>
+<div class="stat-card">
+<strong>984+</strong>
+<span>Universities Listed</span>
+</div>
+<div class="stat-card">
+<strong>Global</strong>
+<span>Career Readiness Access</span>
+</div>
+<div class="stat-card">
+<strong>Free</strong>
+<span>Talent Connect Network</span>
+</div>
+</section>
+</section>
 
-    <a href="austria-university-network.html" class="stat-card country-card">
-<strong>1</strong>
-<span>Austria</span>
-<small>Click to view network →</small>
+<main class="page-wrap" id="countries">
+
+<div class="section-head">
+<span class="section-label">Explore Network by Country</span>
+<h2>One global gateway. Separate country networks.</h2>
+<p>
+Each country page provides a dedicated university directory designed for workforce visibility, student access, leadership learning, and global career engagement.
+</p>
+</div>
+
+<section class="country-grid">
+
+<a class="country-card" href="/usa-university-network">
+<div class="flag">🇺🇸</div>
+<h3>United States</h3>
+<p>National university and career center directory organized by state and region.</p>
+<div class="country-meta">
+<strong>897</strong>
+<span>View USA Network →</span>
+</div>
 </a>
 
-    <a href="france-university-network.html" class="stat-card country-card">
-<strong>1</strong>
-<span>France</span>
-<small>Click to view network →</small>
+<a class="country-card" href="/united-kingdom-university-network">
+<div class="flag">🇬🇧</div>
+<h3>United Kingdom</h3>
+<p>University network directory supporting international workforce visibility and student access.</p>
+<div class="country-meta">
+<strong>75</strong>
+<span>View UK Network →</span>
+</div>
 </a>
-  
-<a href="germany-university-network.html" class="stat-card country-card">
+
+<a class="country-card" href="/germany-university-network">
+<div class="flag">🇩🇪</div>
+<h3>Germany</h3>
+<p>Dedicated university network page for German higher education and workforce connection.</p>
+<div class="country-meta">
 <strong>9</strong>
-<span>Germany</span>
-<small>Click to view network →</small>
+<span>View Germany Network →</span>
+</div>
 </a>
 
-  <a href="ireland-university-network.html" class="stat-card country-card">
+<a class="country-card" href="/france-university-network">
+<div class="flag">🇫🇷</div>
+<h3>France</h3>
+<p>France university network directory for global learning and workforce engagement.</p>
+<div class="country-meta">
 <strong>1</strong>
-<span>Ireland</span>
-<small>Click to view network →</small>
+<span>View France Network →</span>
+</div>
 </a>
 
-   <a href="united-kingdom-university-network.html" class="stat-card country-card"><strong>75</strong>
-<span>United Kingdom</span><small>Click to view network →</small>
+<a class="country-card" href="/ireland-university-network">
+<div class="flag">🇮🇪</div>
+<h3>Ireland</h3>
+<p>Ireland university network directory supporting student access and international connection.</p>
+<div class="country-meta">
+<strong>1</strong>
+<span>View Ireland Network →</span>
+</div>
 </a>
-  
-</section>
 
-<main class="page-wrap">
-<section class="panel">
- <div class="panel-intro premium-intro">
-
-  <div class="intro-card intro-main">
-
-    <span class="section-label">U.S. Career Center Network</span>
-
-    <h2>A growing education and workforce visibility network.</h2>
-
-    <p>
-
-      This directory reflects universities, colleges, and career centers where Government Workforce Network LLC has received approval to engage, conduct outreach, post opportunities, create events, support career education, participate in career fairs, or expand workforce visibility.
-
-    </p>
-
-    <p>
-
-      The purpose is to help students, alumni, veterans, career seekers, and workforce partners access practical tools, educational sessions, visibility opportunities, and Talent Connect resources.
-
-    </p>
-
-  </div>
-
-  <div class="intro-card">
-
-    <span class="section-label">Global Workforce Learning Exchange</span>
-
-    <h2>Cross-border learning. Real workforce conversations.</h2>
-
-    <p>
-
-      Government Workforce Network LLC is expanding university engagement through the Global Workforce Learning Exchange, a free workforce learning and engagement program designed to connect students, alumni, universities, employers, workforce professionals, veterans, and community leaders across regions.
-
-    </p>
-
-    <p>
-
-      This program complements existing university career services, alumni engagement, student success, and workforce readiness programs.
-
-    </p>
-
-  </div>
-
-  <div class="intro-card">
-
-    <span class="section-label">Connecting students, universities, and workforce leaders across borders</span>
-
-    <h2>Founding Global University Program</h2>
-
-    <p>
-
-      We are currently inviting universities outside the United States to participate in our Founding Global University Program. Initial outreach includes Canada, the United Kingdom, India, the Philippines, Australia, and other regions as the network grows.
-
-    </p>
-
-  </div>
-<div class="intro-card opportunity-card">
-
-  <span class="section-label">Free Opportunities</span>
-
-  <h2>For participating institutions</h2>
-
-  <ul>
-
-    <li>Access to Workforce TV educational discussions</li>
-
-    <li>Access to Virtual Workforce Lounges</li>
-
-    <li>Student and alumni workforce engagement opportunities</li>
-
-    <li>Leadership and hands-on workforce learning projects</li>
-
-    <li>Cross-border learning with students and professionals from other regions</li>
-
-    <li>Student, alumni, and university spotlight opportunities</li>
-
-    <li>Discussions focused on AI, leadership, workforce readiness, recruitment, and the future of work</li>
-
-  </ul>
-
-  <p class="free-note">
-
-    Participation is free. No membership fees, no contractual obligations, and no administrative burden.
-
-  </p>
-
+<a class="country-card" href="/austria-university-network">
+<div class="flag">🇦🇹</div>
+<h3>Austria</h3>
+<p>Austria university network directory for career visibility and global workforce collaboration.</p>
+<div class="country-meta">
+<strong>1</strong>
+<span>View Austria Network →</span>
 </div>
-
-<div class="global-visual-card">
-
-    <img src="global-access.png" alt="Global Workforce Learning Exchange">
-
-</div>
-
-
-  <div class="notice intro-notice">
-
-    <strong>Important Note:</strong> Approval to engage is not the same as formal sponsorship, endorsement, affiliation, or contractual partnership with each institution.
-
-  </div>
-
-</div>
-
-  <div class="toolbar">
-   <input id="schoolSearch" class="search" type="search" placeholder="Search by school, state, or college name..." aria-label="Search schools" autocomplete="off" spellcheck="false" />
-    <div class="filter-note"><span id="resultCount">Showing all</span></div>
-  </div>
-
-  <div class="state-nav" aria-label="Jump to state">
-    <a href="#alabama">Alabama <span>6</span></a><a href="#alaska">Alaska <span>1</span></a><a href="#arizona">Arizona <span>3</span></a><a href="#arkansas">Arkansas <span>3</span></a><a href="#california">California <span>74</span></a><a href="#colorado">Colorado <span>11</span></a><a href="#connecticut">Connecticut <span>15</span></a><a href="#delaware">Delaware <span>4</span></a><a href="#district-of-columbia">District of Columbia <span>3</span></a><a href="#florida">Florida <span>22</span></a><a href="#georgia">Georgia <span>27</span></a><a href="#hawaii">Hawaii <span>5</span></a><a href="#idaho">Idaho <span>5</span></a><a href="#illinois">Illinois <span>29</span></a><a href="#indiana">Indiana <span>12</span></a><a href="#iowa">Iowa <span>22</span></a><a href="#kansas">Kansas <span>17</span></a><a href="#kentucky">Kentucky <span>25</span></a><a href="#louisiana">Louisiana <span>21</span></a><a href="#maine">Maine <span>5</span></a><a href="#maryland">Maryland <span>14</span></a><a href="#massachusetts">Massachusetts <span>37</span></a><a href="#michigan">Michigan <span>27</span></a><a href="#minnesota">Minnesota <span>27</span></a><a href="#mississippi">Mississippi <span>7</span></a><a href="#missouri">Missouri <span>23</span></a><a href="#montana">Montana <span>2</span></a><a href="#nebraska">Nebraska <span>11</span></a><a href="#nevada">Nevada <span>3</span></a><a href="#new-hampshire">New Hampshire <span>3</span></a><a href="#new-jersey">New Jersey <span>16</span></a><a href="#new-mexico">New Mexico <span>4</span></a><a href="#new-york">New York <span>69</span></a><a href="#north-carolina">North Carolina <span>25</span></a><a href="#north-dakota">North Dakota <span>9</span></a><a href="#northern-mariana-islands">Northern Mariana Islands <span>1</span></a><a href="#ohio">Ohio <span>35</span></a><a href="#oklahoma">Oklahoma <span>15</span></a><a href="#oregon">Oregon <span>7</span></a><a href="#pennsylvania">Pennsylvania <span>64</span></a><a href="#puerto-rico">Puerto Rico <span>2</span></a><a href="#rhode-island">Rhode Island <span>5</span></a><a href="#south-carolina">South Carolina <span>20</span></a><a href="#south-dakota">South Dakota <span>2</span></a><a href="#tennessee">Tennessee <span>23</span></a><a href="#texas">Texas <span>38</span></a><a href="#utah">Utah <span>3</span></a><a href="#vermont">Vermont <span>6</span></a><a href="#virginia">Virginia <span>20</span></a><a href="#washington">Washington <span>17</span></a><a href="#west-virginia">West Virginia <span>11</span></a><a href="#wisconsin">Wisconsin <span>11</span></a><a href="#multi-state-online">Multi-State / Online <span>4</span></a><a href="#consortium-multi-state">Consortium / Multi-State <span>1</span></a><a href="#other-needed">Other <span>24</span></a>
-  </div>
-
-  <div class="directory">
-    
-      <section class="state-section" id="alabama">
-        <div class="state-heading">
-          <h3>Alabama</h3>
-          <span>6 approved</span>
-        </div>
-        <div class="partners-grid">
-       <a class="partner-link" href="https://www.aamu.edu/" target="_blank" rel="noopener noreferrer">Alabama A&M University</a>
-  <a class="partner-link" href="https://www.alasu.edu/" target="_blank" rel="noopener noreferrer">Alabama State University</a>
-  <a class="partner-link" href="https://www.uah.edu" target="_blank" rel="noopener noreferrer">The University of Alabama in Huntsville</a>
-  <a class="partner-link" href="https://www.uab.edu" target="_blank" rel="noopener noreferrer">University of Alabama at Birmingham</a>
-  <a class="partner-link" href="https://www.southalabama.edu" target="_blank" rel="noopener noreferrer">University of South Alabama</a>
-  <a class="partner-link" href="https://www.auburn.edu" target="_blank" rel="noopener noreferrer">Auburn University</a>         
-</div>
-           <section class="state-section" id="alaska">
-        <div class="state-heading">
-          <h3>Alaska</h3>
-          <span>1 approved</span>
-        </div>
-        <div class="partners-grid">
-   <a class="partner-link" href="https://www.alaska.edu/" target="_blank" rel="noopener noreferrer">University of Alaska</a>
-</div>
-      <section class="state-section" id="arizona">
-        <div class="state-heading">
-          <h3>Arizona</h3>
-          <span>3 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.arizonachristian.edu/" target="_blank" rel="noopener noreferrer" data-state="Arizona">Arizona Christian University</a><a class="partner-link" href="https://www.azwestern.edu/" target="_blank" rel="noopener noreferrer" data-state="Arizona">Arizona Western College</a><a class="partner-link" href="https://www.nau.edu" target="_blank" rel="noopener noreferrer" data-state="Arizona" data-link-status="official-search">Northern Arizona University</a>
-        </div>
-      </section>
-      <section class="state-section" id="arkansas">
-        <div class="state-heading">
-          <h3>Arkansas</h3>
-          <span>3 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.hsu.edu" target="_blank" rel="noopener noreferrer" data-state="Arkansas" data-link-status="official-search">Henderson State University</a><a class="partner-link" href="https://www.jbu.edu" target="_blank" rel="noopener noreferrer" data-state="Arkansas" data-link-status="official-search">John Brown University</a>
-          <a class="partner-link" href="https://www.lyon.edu" target="_blank" rel="noopener noreferrer" data-state="Arkansas" data-link-status="official-search">Lyon College
 </a>
-        </div>
-      </section>
-      <section class="state-section" id="california">
-        <div class="state-heading">
-          <h3>California</h3>
-          <span>74 approved</span>
-        </div>
-        <div class="partners-grid">
-        <a class="partner-link" href="https://www.avc.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Antelope Valley College</a><a class="partner-link" href="https://www.berkeleycitycollege.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Berkeley City College</a><a class="partner-link" href="https://www.butte.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Butte College</a><a class="partner-link" href="https://www.csuchico.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University Chico</a><a class="partner-link" href="https://www.csueastbay.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University, East Bay</a><a class="partner-link" href="https://www.csun.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University, Northridge</a><a class="partner-link" href="https://www.csusb.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University, San Bernardino</a><a class="partner-link" href="https://csumb.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University-Monterey Bay</a><a class="partner-link" href="https://www.csustan.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University-Stanislaus</a><a class="partner-link" href="https://www.citruscollege.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Citrus College</a><a class="partner-link" href="https://www.ccsf.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">City College of San Francisco</a><a class="partner-link" href="https://www.peralta.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">College of Alameda</a><a class="partner-link" href="https://www.collegeofthedesert.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">College of the Desert</a><a class="partner-link" href="https://www.cos.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">College of the Sequoias</a><a class="partner-link" href="https://www.craftonhills.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Crafton Hills College</a><a class="partner-link" href="https://www.cuesta.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Cuesta College</a><a class="partner-link" href="https://www.cuyamaca.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Cuyamaca College</a><a class="partner-link" href="https://www.cypresscollege.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Cypress College</a><a class="partner-link" href="https://www.deanza.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">De Anza College</a><a class="partner-link" href="https://www.dominican.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Dominican University of California</a><a class="partner-link" href="https://www.elcamino.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">El Camino Community College</a><a class="partner-link" href="https://www.foothill.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Foothill College</a><a class="partner-link" href="https://www.gcccd.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Grossmont College</a><a class="partner-link" href="https://www.hiu.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Hope International University</a><a class="partner-link" href="https://www.ivc.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Irvine Valley College</a><a class="partner-link" href="https://lifepacific.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Life Pacific University</a><a class="partner-link" href="https://www.lasc.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Los Angeles Southwest College</a><a class="partner-link" href="https://www.losmedanos.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Los Medanos College</a><a class="partner-link" href="https://www.losrios.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Los Rios Community College District</a><a class="partner-link" href="https://www.menlo.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Menlo College</a><a class="partner-link" href="https://www.merritt.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Merritt College</a><a class="partner-link" href="https://www.minerva.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Minerva University</a><a class="partner-link" href="https://msjc.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Mt San Jacinto Community College District</a><a class="partner-link" href="https://www.nu.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">National University</a><a class="partner-link" href="https://www.noce.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">North Orange Continuing Education</a><a class="partner-link" href="https://www.ndnu.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Notre Dame de Namur University</a><a class="partner-link" href="https://www.ohlone.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Ohlone Community College District</a><a class="partner-link" href="https://orangecoastcollege.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Orange Coast College and Golden West College</a><a class="partner-link" href="https://www.https://www.paloverde.edu/#gsc.tab=0" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Palo Verde College</a><a class="partner-link" href="https://www.pages.palomar.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Palomar College</a><a class="partner-link" href="https://www.pointloma.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Point Loma Nazarene University - Business School</a><a class="partner-link" href="https://www.providencecc.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Providence Christian College</a><a class="partner-link" href="https://www.riohondo.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Rio Hondo College</a><a class="partner-link" href="https://www.saddleback.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Saddleback College</a><a class="partner-link" href="https://www.sdccd.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">San Diego Community College District | City | Mesa | Miramar | Continuing Education</a><a class="partner-link" href="https://www.sdsu.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">San Diego State University</a><a class="partner-link" href="https://www.sfbu.edu/" target="_blank" rel="noopener noreferrer" data-state="California">San Francisco Bay University</a><a class="partner-link" href="https://www.scu.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Santa Clara University</a><a class="partner-link" href="https://www.saybrook.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Saybrook University</a><a class="partner-link" href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Stanford University</a><a class="partner-link" href="https://www.google.com/search?q=Trinity%20International%20University%20official%20website" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Trinity International University</a><a class="partner-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of California Berkeley</a><a class="partner-link" href="https://ucsd.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of California San Diego</a><a class="partner-link" href="https://www.ucla.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of California, Los Angeles</a><a class="partner-link" href="https://www.ucr.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of California, Riverside (UCR)</a><a class="partner-link" href="https://www.ucsb.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of California, Santa Barbara</a><a class="partner-link" href="https://www.ucmerced.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of California-Merced</a><a class="partner-link" href="https://www.laverne.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">University of La Verne</a><a class="partner-link" href="https://www.vvc.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Victor Valley College</a><a class="partner-link" href="https://www.woodbury.edu" target="_blank" rel="noopener noreferrer" data-state="California" data-link-status="official-search">Woodbury University</a>
-        <a class="partner-link" href="https://www.masters.edu/" target="_blank" rel="noopener noreferrer" data-state="California">The Master's University</a>
-        <a class="partner-link" href="https://sonoma.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Sonoma State University</a>
-        <a class="partner-link" href="https://www1.marin.edu/" target="_blank" rel="noopener noreferrer" data-state="California">College of Marin</a>
-        <a class="partner-link" href="https://wwwc.suci.edu/" target="_blank" rel="noopener noreferrer" data-state="California">California State University, Channel Island</a>
-        <a class="partner-link" href="https://www.soka.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Soka University of America</a>
-        <a class="partner-link" href="https://collegeofsanmateo.edu/" target="_blank" rel="noopener noreferrer" data-state="California">College of San Mateo</a>
-        <a class="partner-link" href="https://www.usfca.edu/" target="_blank" rel="noopener noreferrer" data-state="California">University of San Francisco</a> 
-        <a class="partner-link" href="https://www.biola.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Biola University</a>
-        <a class="partner-link" href="https://www.ggu.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Golden Gate University-San Francisco</a> 
-        <a class="partner-link" href="https://www.lasierra.edu/" target="_blank" rel="noopener noreferrer" data-state="California">La Sierra University</a>
-        <a class="partner-link" href="https://www.lbcc.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Long Beach City College</a>
-        <a class="partner-link" href="https://www.cui.edu/" target="_blank" rel="noopener noreferrer" data-state="California">Concordia University-Irvine</a>
-        <a class="partner-link" href="https://ocpd.redlands.edu//" target="_blank" rel="noopener noreferrer" data-state="California">University of Redlands</a>   
-        </div>
-      </section>
-      <section class="state-section" id="colorado">
-        <div class="state-heading">
-          <h3>Colorado</h3>
-          <span>11 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.aims.edu/" target="_blank" rel="noopener noreferrer" data-state="Colorado">Aims Community College</a><a class="partner-link" href="https://www.coloradomesa.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">Colorado Mesa University</a><a class="partner-link" href="https://www.coloradomtn.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">Colorado Mountain College</a><a class="partner-link" href="https://www.csupueblo.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">Colorado State University Pueblo</a><a class="partner-link" href="https://www.ccaurora.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">Community College of Aurora</a><a class="partner-link" href="https://www.rrcc.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">Red Rocks Community College</a><a class="partner-link" href="https://www.trinidadstate.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">Trinidad State College</a><a class="partner-link" href="https://www.uccs.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">University of Colorado - Colorado Springs</a><a class="partner-link" href="https://www.colorado.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">University of Colorado Boulder</a><a class="partner-link" href="https://www.unco.edu" target="_blank" rel="noopener noreferrer" data-state="Colorado" data-link-status="official-search">University of Northern Colorado</a>
-        <a class="partner-link" href="https://www.ccu.edu/" target="_blank" rel="noopener noreferrer" data-state="Colorado">Colorado Christian University</a>
-        </div>
-      </section>
-      <section class="state-section" id="connecticut">
-        <div class="state-heading">
-          <h3>Connecticut</h3>
-          <span>15 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.albertus.edu/" target="_blank" rel="noopener noreferrer" data-state="Connecticut">Albertus Magnus College</a><a class="partner-link" href="https://www.ccsu.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Central Connecticut State University</a><a class="partner-link" href="https://www.conncoll.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Connecticut College</a><a class="partner-link" href="https://www.easternct.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Eastern Connecticut State University</a><a class="partner-link" href="https://www.goodwin.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Goodwin University</a><a class="partner-link" href="https://www.post.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Post University</a><a class="partner-link" href="https://www.qu.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Quinnipiac University</a><a class="partner-link" href="https://www.sacredheart.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Sacred Heart University</a><a class="partner-link" href="https://www.trincoll.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Trinity College</a><a class="partner-link" href="https://www.bridgeport.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">University of Bridgeport</a><a class="partner-link" href="https://www.hartford.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">University of Hartford</a><a class="partner-link" href="https://www.wcsu.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Western Connecticut State University</a><a class="partner-link" href="https://www.yale.edu" target="_blank" rel="noopener noreferrer" data-state="Connecticut" data-link-status="official-search">Yale University</a>
-         <a class="partner-link" href="https://www.ctstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Connecticut">CT State Community College</a>
-         <a class="partner-link" href="https://www.charteroak.edu/" target="_blank" rel="noopener noreferrer" data-state="Connecticut">Charter Oak State College</a>
-        </div>
-      </section>
-      <section class="state-section" id="delaware">
-        <div class="state-heading">
-          <h3>Delaware</h3>
-          <span>4 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.desu.edu" target="_blank" rel="noopener noreferrer" data-state="Delaware" data-link-status="official-search">Delaware State University</a><a class="partner-link" href="https://www.wilmu.edu" target="_blank" rel="noopener noreferrer" data-state="Delaware" data-link-status="official-search">Wilmington University</a>
-          <a class="partner-link" href="https://www.udel.edu" target="_blank" rel="noopener noreferrer" data-state="Delaware" data-link-status="official-search">University of Delaware</a>
-          <a class="partner-link" href="https://www.dtcc.edu" target="_blank" rel="noopener noreferrer" data-state="Delaware" data-link-status="official-search">Delaware Technical Community College</a>
-        </div>
-      </section>
-      <section class="state-section" id="district-of-columbia">
-        <div class="state-heading">
-          <h3>District of Columbia</h3>
-          <span>2 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.georgetown.edu/" target="_blank" rel="noopener noreferrer" data-state="District of Columbia">Georgetown University</a><a class="partner-link" href="https://www.howard.edu" target="_blank" rel="noopener noreferrer" data-state="District of Columbia" data-link-status="official-search">Howard University</a>
-          <a class="partner-link" href="https://www.udc.edu/" target="_blank" rel="noopener noreferrer" data-state="District of Columbia">University of the District of Columbia (UDC)</a>
-        </div>
-      </section>
-      <section class="state-section" id="florida">
-        <div class="state-heading">
-          <h3>Florida</h3>
-          <span>22 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.beaconcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Florida">Beacon College</a><a class="partner-link" href="https://www.daytonastate.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Daytona State College</a><a class="partner-link" href="https://www.easternflorida.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Eastern Florida State College</a><a class="partner-link" href="https://www.flagler.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Flagler College</a><a class="partner-link" href="https://www.famu.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Florida Agricultural &amp; Mechanical University</a><a class="partner-link" href="https://floridacollege.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Florida College</a><a class="partner-link" href="https://www.fmu.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Florida Memorial University</a><a class="partner-link" href="https://www.flsouthern.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Florida Southern College</a><a class="partner-link" href="https://www.hcfl.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Hillsborough Community College</a><a class="partner-link" href="https://www.jsu.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Jacksonville University</a><a class="partner-link" href="https://www.lynn.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Lynn University</a><a class="partner-link" href="https://www.mdc.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Miami Dade College</a><a class="partner-link" href="https://www.phsc.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Pasco-Hernando State College</a><a class="partner-link" href="https://www.polk.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Polk State College</a><a class="partner-link" href="https://www.rollins.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Rollins College</a><a class="partner-link" href="https://www.spcollege.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">St. Petersburg College</a><a class="partner-link" href="https://www.ut.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">The University of Tampa</a><a class="partner-link" href="https://www.miami.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">University of Miami</a><a class="partner-link" href="https://www.unf.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">University of North Florida</a><a class="partner-link" href="https://www.usf.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">University of South Florida</a><a class="partner-link" href="https://www.uwf.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">University of West Florida</a><a class="partner-link" href="https://www.floridapoly.edu" target="_blank" rel="noopener noreferrer" data-state="Florida" data-link-status="official-search">Florida Polytechnic University
-</a>
-        </div>
-      </section>
-      <section class="state-section" id="georgia">
-        <div class="state-heading">
-          <h3>Georgia</h3>
-          <span>27 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.augusta.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">Augusta University</a><a class="partner-link" href="https://www.berry.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">Berry College</a><a class="partner-link" href="https://www.brenau.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Brenau University</a><a class="partner-link" href="https://www.centralgatech.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Central Georgia Technical College</a><a class="partner-link" href="https://www.cau.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Clark Atlanta University</a><a class="partner-link" href="https://www.covenant.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Covenant College</a><a class="partner-link" href="https://www.daltonstate.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Dalton State College</a><a class="partner-link" href="https://www.fvsu.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Fort Valley State University</a><a class="partner-link" href="https://www.gcsu.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Georgia College &amp; State University</a><a class="partner-link" href="https://www.gptc.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Georgia Piedmont Technical College</a><a class="partner-link" href="https://www.gsw.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Georgia Southwestern State University</a><a class="partner-link" href="https://www.lagrange.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">LaGrange College</a><a class="partner-link" href="https://www.laniertech.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Lanier Technical College</a><a class="partner-link" href="https://www.life.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Life University</a><a class="partner-link" href="https://www.newberry.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Newberry College</a><a class="partner-link" href="https://www.Oglethorpe.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Oglethorpe University</a><a class="partner-link" href="https://www.reinhardt.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Reinhardt University</a><a class="partner-link" href="https://www.southernregional.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Southern Regional Technical College</a><a class="partner-link" href="https://www.spelman.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Spelman College</a><a class="partner-link" href="https://www.thomasu.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Thomas University</a><a class="partner-link" href="https://www.uga.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">University of Georgia</a><a class="partner-link" href="https://www.valdosta.edu" target="_blank" rel="noopener noreferrer" data-state="Georgia" data-link-status="official-search">Valdosta State University</a>
-         <a class="partner-link" href="https://northgatech.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">North Georgia Technical College</a>
-         <a class="partner-link" href="https://www.yhc.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">Young Harris College</a>
-         <a class="partner-link" href="https://www.ggc.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">Georgia Gwinnett College</a>
-        <a class="partner-link" href="https://www.gsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">Georgia State University</a>  
-          <a class="partner-link" href="https://www.mga.edu/" target="_blank" rel="noopener noreferrer" data-state="Georgia">Middle Georgia State University</a>    
-        </div>
-      </section>
-      <section class="state-section" id="hawaii">
-        <div class="state-heading">
-          <h3>Hawaii</h3>
-          <span>5 approved</span>
-        </div>
-        <div class="partners-grid">
-          <a class="partner-link" href="https://www.hpu.edu" target="_blank" rel="noopener noreferrer" data-state="Hawaii" data-link-status="official-search">Hawaii Pacific University</a><a class="partner-link" href="https://www.shidler.hawaii.edu" target="_blank" rel="noopener noreferrer" data-state="Hawaii" data-link-status="official-search">The Shidler College of Business at the University of Hawaiʻi at Mānoa</a><a class="partner-link" href="https://www.westoahu.hawaii.edu" target="_blank" rel="noopener noreferrer" data-state="Hawaii" data-link-status="official-search">University of Hawaii - West Oahu</a><a class="partner-link" href="https://www.uhcc.hawaii.edu" target="_blank" rel="noopener noreferrer" data-state="Hawaii" data-link-status="official-search">University of Hawaii Community Colleges</a>
-          <a class="partner-link" href="https://www.byuh.edu" target="_blank" rel="noopener noreferrer" data-state="Hawaii" data-link-status="official-search">Brigham Young University–Hawaii</a>
-        </div>
-      </section>
-    <!-- IDAHO -->
-<section class="state-section" id="idaho">
-<div class="state-heading">
-<h3>Idaho</h3>
-<span>5 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.byui.edu/" target="_blank" rel="noopener noreferrer" data-state="Idaho">Brigham Young University–Idaho</a>
-<a class="partner-link" href="https://www.cei.edu/" target="_blank" rel="noopener noreferrer" data-state="Idaho">College of Eastern Idaho</a>
-<a class="partner-link" href="https://cwi.edu/" target="_blank" rel="noopener noreferrer" data-state="Idaho">College of Western Idaho</a>
-<a class="partner-link" href="https://nnu.edu/" target="_blank" rel="noopener noreferrer" data-state="Idaho">Northwest Nazarene University</a>
-<a class="partner-link" href="https://collegeofidaho.edu/" target="_blank" rel="noopener noreferrer" data-state="Idaho">The College of Idaho</a>
-</div>
+
 </section>
 
-<!-- ILLINOIS -->
-<section class="state-section" id="illinois">
-<div class="state-heading">
-<h3>Illinois</h3>
-<span>29 approved</span>
+<section class="feature-panel">
+
+<div class="feature-card">
+<span class="section-label">Global Workforce Learning Exchange</span>
+<h3>Cross-border learning. Real workforce conversations.</h3>
+<p>
+The Global University Network supports workforce learning, university engagement, employer visibility, and leadership development through practical conversations and access opportunities.
+</p>
 </div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.augustana.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Augustana College</a>
-<a class="partner-link" href="https://www.bhc.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Black Hawk College</a>
-<a class="partner-link" href="https://blackburn.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Blackburn College</a>
-<a class="partner-link" href="https://www.csu.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Chicago State University</a>
-<a class="partner-link" href="https://www.clcillinois.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">College of Lake County</a>
-<a class="partner-link" href="https://www.elmhurst.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Elmhurst University</a>
-<a class="partner-link" href="https://www.erikson.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Erikson Institute</a>
-<a class="partner-link" href="https://www.govst.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Governors State University</a>
-<a class="partner-link" href="https://www.heartland.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Heartland Community College</a>
-<a class="partner-link" href="https://www.ic.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Illinois College</a>
-<a class="partner-link" href="https://www.kcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Kankakee Community College</a>
-<a class="partner-link" href="https://kish.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Kishwaukee College</a>
-<a class="partner-link" href="https://www.mckendree.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">McKendree University</a>
-<a class="partner-link" href="https://millikin.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Millikin University</a>
-<a class="partner-link" href="https://www.monmouthcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Monmouth College</a>
-<a class="partner-link" href="https://www.nl.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">National Louis University</a>
-<a class="partner-link" href="https://www.northwestern.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Northwestern University</a>
-<a class="partner-link" href="https://www.principiacollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Principia College</a>
-<a class="partner-link" href="https://www.rockford.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Rockford University</a>
-<a class="partner-link" href="https://www.roosevelt.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Roosevelt University</a>
-<a class="partner-link" href="https://www.sxu.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Saint Xavier University</a>
-<a class="partner-link" href="https://siu.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Southern Illinois University - Carbondale</a>
-<a class="partner-link" href="https://www.uchicago.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">The University of Chicago</a>
-<a class="partner-link" href="https://www.uic.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">University of Illinois Chicago</a>
-<a class="partner-link" href="https://www.wiu.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Western Illinois University</a>
-<a class="partner-link" href="https://www.dom.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Dominican University</a>
-<a class="partner-link" href="https://www.lakeforest.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Lake Forest College</a>
-<a class="partner-link" href="https://www.illinois.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">University of Illinois Urbana-Champaign</a>
-<a class="partner-link" href="https://www.aurora.edu/" target="_blank" rel="noopener noreferrer" data-state="Illinois">Aurora University</a>  
+
+<div class="feature-card">
+<span class="section-label">Free Access Opportunities</span>
+<h3>For universities, students, alumni, and workforce partners.</h3>
+<ul>
+<li>Workforce TV educational discussions</li>
+<li>Virtual Workforce Lounge participation</li>
+<li>Student and alumni visibility opportunities</li>
+<li>Leadership and workforce readiness programs</li>
+<li>Cross-border engagement with universities and workforce leaders</li>
+</ul>
 </div>
+
 </section>
 
-<!-- INDIANA -->
-<section class="state-section" id="indiana">
-<div class="state-heading">
-<h3>Indiana</h3>
-<span>12 approved</span>
+<div class="notice">
+<strong>Important Note:</strong> Inclusion in this directory reflects network listing, outreach, engagement visibility, or approved access. It does not imply formal sponsorship, endorsement, affiliation, or contractual partnership unless separately stated.
 </div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.butler.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Butler University</a>
-<a class="partner-link" href="https://www.franklincollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Franklin College</a>
-<a class="partner-link" href="https://www.indstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Indiana State University</a>
-<a class="partner-link" href="https://www.indwes.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Indiana Wesleyan University</a>
-<a class="partner-link" href="https://www.pnw.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Purdue Northwest</a>
-<a class="partner-link" href="https://www.pfw.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Purdue University Fort Wayne</a>
-<a class="partner-link" href="https://www.smwc.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Saint Mary-of-the-Woods College</a>
-<a class="partner-link" href="https://www.taylor.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Taylor University</a>
-<a class="partner-link" href="https://www.uindy.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">University of Indianapolis</a>
-<a class="partner-link" href="https://www.sf.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">University of Saint Francis-Fort Wayne</a>
-<a class="partner-link" href="https://www.indianatech.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Indiana Institute of Technology</a>
-<a class="partner-link" href="https://www.iu.edu/" target="_blank" rel="noopener noreferrer" data-state="Indiana">Indiana University Indianapolis</a>  
-</div>
-</section>
-
-<!-- IOWA -->
-<section class="state-section" id="iowa">
-<div class="state-heading">
-<h3>Iowa</h3>
-<span>22 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.blc.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Bethany Lutheran College</a>
-<a class="partner-link" href="https://www.briarcliff.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Briar Cliff University</a>
-<a class="partner-link" href="https://www.central.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Central College</a>
-<a class="partner-link" href="https://www.coe.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Coe College</a>
-<a class="partner-link" href="https://www.cornellcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Cornell College</a>
-<a class="partner-link" href="https://www.drake.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Drake University</a>
-<a class="partner-link" href="https://www.eastcentral.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">East Central College</a>
-<a class="partner-link" href="https://www.eicc.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Eastern Iowa Community College District</a>
-<a class="partner-link" href="https://www.grandview.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Grand View University</a>
-<a class="partner-link" href="https://www.hawkeyecollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Hawkeye Community College</a>
-<a class="partner-link" href="https://www.kirkwood.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Kirkwood Community College</a>
-<a class="partner-link" href="https://www.luther.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Luther College</a>
-<a class="partner-link" href="https://www.morningside.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Morningside University</a>
-<a class="partner-link" href="https://simpson.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Simpson College</a>
-<a class="partner-link" href="https://www.scciowa.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Southeastern Community College</a>
-<a class="partner-link" href="https://www.sau.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">St. Ambrose University</a>
-<a class="partner-link" href="https://www.dbq.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">University of Dubuque</a>
-<a class="partner-link" href="https://uiowa.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">University of Iowa</a>
-<a class="partner-link" href="https://uiu.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Upper Iowa University</a>
-<a class="partner-link" href="https://www.wartburg.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Wartburg College</a>
-<a class="partner-link" href="https://uni.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">University of Northern Iowa</a>
-<a class="partner-link" href="https://www.iowacentral.edu/" target="_blank" rel="noopener noreferrer" data-state="Iowa">Iowa Central Community College</a>
-</div>
-</section>
-<!-- KANSAS -->
-<section class="state-section" id="kansas">
-<div class="state-heading">
-<h3>Kansas</h3>
-<span>17 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.asub.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Arkansas State University - Beebe</a>
-<a class="partner-link" href="https://www.atu.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Arkansas Tech University</a>
-<a class="partner-link" href="https://www.bethanylb.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Bethany College | Lindsborg</a>
-<a class="partner-link" href="https://www.butlercc.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Butler Community College</a>
-<a class="partner-link" href="https://www.donnelly.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Donnelly College</a>
-<a class="partner-link" href="https://www.emporia.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Emporia State University</a>
-<a class="partner-link" href="https://www.forthaystech.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Fort Hays Tech | Northwest</a>
-<a class="partner-link" href="https://highlandcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Highland Community College</a>
-<a class="partner-link" href="https://www.ottawa.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Ottawa University</a>
-<a class="partner-link" href="https://www.saumag.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Southern Arkansas University</a>
-<a class="partner-link" href="https://www.sckans.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Southwestern College - Winfield</a>
-<a class="partner-link" href="https://www.tabor.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Tabor College</a>
-<a class="partner-link" href="https://ualr.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">University of Arkansas at Little Rock</a>
-<a class="partner-link" href="https://cossatot.uacc.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">University of Arkansas Cossatot</a>
-<a class="partner-link" href="https://www.uca.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">University of Central Arkansas</a>
-<a class="partner-link" href="https://www.washburn.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">Washburn University</a>
-<a class="partner-link" href="https://www.mnu.edu/" target="_blank" rel="noopener noreferrer" data-state="Kansas">MidAmerica Nazarene University</a>  
-</div>
-</section>
-
-<!-- KENTUCKY -->
-<section class="state-section" id="kentucky">
-<div class="state-heading">
-<h3>Kentucky</h3>
-<span>25 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://bigsandy.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Big Sandy Community and Technical College</a>
-<a class="partner-link" href="https://bluegrass.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Bluegrass Community and Technical College</a>
-<a class="partner-link" href="https://www.campbellsville.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Campbellsville University</a>
-<a class="partner-link" href="https://www.eku.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Eastern Kentucky University</a>
-<a class="partner-link" href="https://hazard.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Hazard Community and Technical College</a>
-<a class="partner-link" href="https://henderson.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Henderson Community College</a>
-<a class="partner-link" href="https://hopkinsville.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Hopkinsville Community College</a>
-<a class="partner-link" href="https://jefferson.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Jefferson Community and Technical College</a>
-<a class="partner-link" href="https://www.kysu.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Kentucky State University</a>
-<a class="partner-link" href="https://www.kwc.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Kentucky Wesleyan College</a>
-<a class="partner-link" href="https://www.lindsey.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Lindsey Wilson College</a>
-<a class="partner-link" href="https://madisonville.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Madisonville Community College</a>
-<a class="partner-link" href="https://maysville.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Maysville Community and Technical College</a>
-<a class="partner-link" href="https://www.midway.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Midway University</a>
-<a class="partner-link" href="https://www.murraystate.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Murray State University</a>
-<a class="partner-link" href="https://www.nku.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Northern Kentucky University</a>
-<a class="partner-link" href="https://owensboro.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Owensboro Community and Technical College</a>
-<a class="partner-link" href="https://www.simmons.edu/kentucky" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Simmons College of Kentucky</a>
-<a class="partner-link" href="https://somerset.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Somerset Community College</a>
-<a class="partner-link" href="https://spalding.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Spalding University</a>
-<a class="partner-link" href="https://www.transy.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Transylvania University</a>
-<a class="partner-link" href="https://www.ucumberlands.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">University of the Cumberlands</a>
-<a class="partner-link" href="https://westkentucky.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">West Kentucky Community and Technical College</a>
-<a class="partner-link" href="https://www.wku.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Western Kentucky University</a>
-<a class="partner-link" href="https://www.kctcs.edu/" target="_blank" rel="noopener noreferrer" data-state="Kentucky">Ashland Community and Technical College</a>
-</div>
-</section>
-
-<!-- LOUISIANA -->
-<section class="state-section" id="louisiana">
-<div class="state-heading">
-<h3>Louisiana</h3>
-<span>21 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bpcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Bossier Parish Community College</a>
-<a class="partner-link" href="https://www.dillard.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Dillard University</a>
-<a class="partner-link" href="https://www.franu.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Franciscan Missionaries of Our Lady University</a>
-<a class="partner-link" href="https://www.lsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Louisiana State University</a>
-<a class="partner-link" href="https://www.lsua.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Louisiana State University of Alexandria</a>
-<a class="partner-link" href="https://www.lsus.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Louisiana State University Shreveport</a>
-<a class="partner-link" href="https://www.latech.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Louisiana Tech University</a>
-<a class="partner-link" href="https://www.nicholls.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Nicholls State University</a>
-<a class="partner-link" href="https://www.northshorecollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Northshore Technical Community College</a>
-<a class="partner-link" href="https://www.nunez.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Nunez Community College</a>
-<a class="partner-link" href="https://www.rpcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">River Parishes Community College</a>
-<a class="partner-link" href="https://www.solacc.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">South Louisiana Community College</a>
-<a class="partner-link" href="https://www.subr.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Southern University and A&amp;M College at Baton Rouge</a>
-<a class="partner-link" href="https://www.suno.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Southern University at New Orleans</a>
-<a class="partner-link" href="https://www.susla.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Southern University at Shreveport</a>
-<a class="partner-link" href="https://www.sowela.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">SOWELA Technical Community College</a>
-<a class="partner-link" href="https://www.louisiana.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">University of Louisiana at Lafayette</a>
-<a class="partner-link" href="https://www.ulm.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">University of Louisiana---Monroe</a>
-<a class="partner-link" href="https://www.uno.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">University of New Orleans</a>
-<a class="partner-link" href="https://www.xula.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Xavier University of Louisiana</a>
-<a class="partner-link" href="https://www.dcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Louisiana">Delgado Community College</a>
-</div>
-</section>
-<!-- MAINE -->
-<section class="state-section" id="maine">
-<div class="state-heading">
-<h3>Maine</h3>
-<span>5 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bates.edu/" target="_blank" rel="noopener noreferrer" data-state="Maine">Bates College</a>
-<a class="partner-link" href="https://www.colby.edu/" target="_blank" rel="noopener noreferrer" data-state="Maine">Colby College</a>
-<a class="partner-link" href="https://www.meca.edu/" target="_blank" rel="noopener noreferrer" data-state="Maine">Maine College of Art &amp; Design</a>
-<a class="partner-link" href="https://www.thomas.edu/" target="_blank" rel="noopener noreferrer" data-state="Maine">Thomas College</a>
-<a class="partner-link" href="https://www.une.edu/" target="_blank" rel="noopener noreferrer" data-state="Maine">University of New England</a>
-</div>
-</section>
-
-<!-- MARYLAND -->
-<section class="state-section" id="maryland">
-<div class="state-heading">
-<h3>Maryland</h3>
-<span>14 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.frostburg.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Frostburg State University</a>
-<a class="partner-link" href="https://www.goucher.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Goucher College</a>
-<a class="partner-link" href="https://www.hood.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Hood College</a>
-<a class="partner-link" href="https://www.howardcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Howard Community College</a>
-<a class="partner-link" href="https://www.loyola.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Loyola University Maryland</a>
-<a class="partner-link" href="https://www.mcdaniel.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">McDaniel College</a>
-<a class="partner-link" href="https://www.morgan.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Morgan State University</a>
-<a class="partner-link" href="https://www.ndm.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Notre Dame of Maryland University</a>
-<a class="partner-link" href="https://www.smcm.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">St. Mary's College of Maryland</a>
-<a class="partner-link" href="https://www.umes.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">University of Maryland Eastern Shore</a>
-<a class="partner-link" href="https://www.umgc.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">University of Maryland Global Campus</a>
-<a class="partner-link" href="https://umbc.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">University of Maryland, Baltimore County</a>
-<a class="partner-link" href="https://towson.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Towson University</a>
-<a class="partner-link" href="https://www.bowiestate.edu/" target="_blank" rel="noopener noreferrer" data-state="Maryland">Bowie State University</a> 
-</div>
-</section>
-
-<!-- MASSACHUSETTS -->
-<section class="state-section" id="massachusetts">
-<div class="state-heading">
-<h3>Massachusetts</h3>
-<span>37 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.baypath.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Bay Path University</a>
-<a class="partner-link" href="https://www.bentley.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Bentley University</a>
-<a class="partner-link" href="https://www.berkshirecc.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Berkshire Community College</a>
-<a class="partner-link" href="https://www.bc.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Boston College</a>
-<a class="partner-link" href="https://www.bridgew.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Bridgewater State University</a>
-<a class="partner-link" href="https://www.bhcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Bunker Hill Community College</a>
-<a class="partner-link" href="https://www.elms.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">College of Our Lady of the Elms</a>
-<a class="partner-link" href="https://www.holycross.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">College of the Holy Cross</a>
-<a class="partner-link" href="https://www.dean.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Dean College</a>
-<a class="partner-link" href="https://www.fisher.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Fisher College</a>
-<a class="partner-link" href="https://www.framingham.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Framingham State University</a>
-<a class="partner-link" href="https://www.hampshire.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Hampshire College</a>
-<a class="partner-link" href="https://www.hult.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Hult International Business School</a>
-<a class="partner-link" href="https://www.massbay.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Massachusetts Bay Community College</a>
-<a class="partner-link" href="https://www.mcla.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Massachusetts College of Liberal Arts</a>
-<a class="partner-link" href="https://www.massasoit.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Massasoit Community College</a>
-<a class="partner-link" href="https://www.middlesex.mass.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Middlesex Community College-MA</a>
-<a class="partner-link" href="https://mwcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Mount Wachusett Community College</a>
-<a class="partner-link" href="https://www.nichols.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Nichols College</a>
-<a class="partner-link" href="https://www.northshore.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">North Shore Community College</a>
-<a class="partner-link" href="https://www.quincycollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Quincy College</a>
-<a class="partner-link" href="https://www.qcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Quinsigamond Community College</a>
-<a class="partner-link" href="https://www.regiscollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Regis College</a>
-<a class="partner-link" href="https://www.rcc.mass.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Roxbury Community College</a>
-<a class="partner-link" href="https://www.simmons.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Simmons University</a>
-<a class="partner-link" href="https://www.snhu.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Southern New Hampshire University</a>
-<a class="partner-link" href="https://www.springfieldcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Springfield College</a>
-<a class="partner-link" href="https://www.tufts.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Tufts University</a>
-<a class="partner-link" href="https://www.umass.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">University of Massachusetts Amherst</a>
-<a class="partner-link" href="https://www.uml.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">University of Massachusetts Lowell</a>
-<a class="partner-link" href="https://www.unh.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">University of New Hampshire</a>
-<a class="partner-link" href="https://wheatoncollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Wheaton College - Norton, MA</a>
-<a class="partner-link" href="https://www.williams.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Williams College</a>
-<a class="partner-link" href="https://www.salemstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Salem State University</a>
-<a class="partner-link" href="https://www.stonehill.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Stonehill College</a>
-<a class="partner-link" href="https://www.worcester.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Worcester State University</a>
-<a class="partner-link" href="https://www.smith.edu/" target="_blank" rel="noopener noreferrer" data-state="Massachusetts">Smith College</a>  
-</div>
-</section>
-
-<!-- MICHIGAN -->
-<section class="state-section" id="michigan">
-<div class="state-heading">
-<h3>Michigan</h3>
-<span>27 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.albion.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Albion College</a>
-<a class="partner-link" href="https://www.andrews.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Andrews University</a>
-<a class="partner-link" href="https://www.aquinas.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Aquinas College</a>
-<a class="partner-link" href="https://www.baker.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Baker College</a>
-<a class="partner-link" href="https://calvin.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Calvin University</a>
-<a class="partner-link" href="https://www.cornerstone.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Cornerstone University</a>
-<a class="partner-link" href="https://www.davenport.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Davenport University</a>
-<a class="partner-link" href="https://www.emich.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Eastern Michigan University</a>
-<a class="partner-link" href="https://www.ferris.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Ferris State University and KCAD</a>
-<a class="partner-link" href="https://www.hillsdale.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Hillsdale College</a>
-<a class="partner-link" href="https://hope.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Hope College</a>
-<a class="partner-link" href="https://www.jccmi.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Jackson College</a>
-<a class="partner-link" href="https://www.mtu.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Michigan Technological University</a>
-<a class="partner-link" href="https://www.nmu.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Northern Michigan University</a>
-<a class="partner-link" href="https://www.northwood.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Northwood Technical College</a>
-<a class="partner-link" href="https://www.oaklandcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Oakland Community College</a>
-<a class="partner-link" href="https://www.svsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Saginaw Valley State University</a>
-<a class="partner-link" href="https://www.sienaheights.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Siena Heights University</a>
-<a class="partner-link" href="https://www.arbor.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Spring Arbor University</a>
-<a class="partner-link" href="https://umich.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">The University of Michigan</a>
-<a class="partner-link" href="https://www.olivetcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">The University of Olivet</a>
-<a class="partner-link" href="https://www.udmercy.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">University of Detroit Mercy</a>
-<a class="partner-link" href="https://www.oakland.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Oakland University</a>
-<a class="partner-link" href="https://www.msu.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Michigan State University</a>
-<a class="partner-link" href="https://www.lakemichigancollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Lake Michigan College</a>
-<a class="partner-link" href="https://www.kzoo.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Kalamazoo College</a>
-<a class="partner-link" href="https://www.gvsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Michigan">Grand Valley State University</a>
-</div>
-</section>
-<!-- MINNESOTA -->
-<section class="state-section" id="minnesota">
-<div class="state-heading">
-<h3>Minnesota</h3>
-<span>27 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.alextech.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Alexandria Technical &amp; Community College</a>
-<a class="partner-link" href="https://www.carleton.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Carleton College</a>
-<a class="partner-link" href="https://www.clcmn.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Central Lakes College</a>
-<a class="partner-link" href="https://www.century.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Century College</a>
-<a class="partner-link" href="https://www.csbsju.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">College of Saint Benedict &amp; Saint John's University</a>
-<a class="partner-link" href="https://www.concordiacollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Concordia College, Moorhead MN</a>
-<a class="partner-link" href="https://www.crown.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Crown College</a>
-<a class="partner-link" href="https://www.dctc.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Dakota County Technical College - DCTC</a>
-<a class="partner-link" href="https://www.dunwoody.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Dunwoody College of Technology</a>
-<a class="partner-link" href="https://gustavus.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Gustavus Adolphus College</a>
-<a class="partner-link" href="https://www.hamline.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Hamline University</a>
-<a class="partner-link" href="https://www.hennepintech.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Hennepin Technical College</a>
-<a class="partner-link" href="https://www.inverhills.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Inver Hills Community College</a>
-<a class="partner-link" href="https://www.macalester.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Macalester College</a>
-<a class="partner-link" href="https://www.metrostate.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Metro State University</a>
-<a class="partner-link" href="https://mankato.mnsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Minnesota State University, Mankato</a>
-<a class="partner-link" href="https://www.normandale.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Normandale Community College</a>
-<a class="partner-link" href="https://www.northlandcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Northland Community and Technical College</a>
-<a class="partner-link" href="https://www.smumn.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Saint Mary's University of Minnesota</a>
-<a class="partner-link" href="https://www.saintpaul.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Saint Paul College</a>
-<a class="partner-link" href="https://www.smsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Southwest Minnesota State University</a>
-<a class="partner-link" href="https://www.stkate.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">St. Catherine University</a>
-<a class="partner-link" href="https://www.stcloudstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">St. Cloud State University</a>
-<a class="partner-link" href="https://www.css.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">The College of St. Scholastica</a>
-<a class="partner-link" href="https://www.unwsp.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">University of Northwestern - St. Paul</a>
-<a class="partner-link" href="https://www.csp.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Concordia University, St. Paul</a>
-<a class="partner-link" href="https://www.minneapolis.edu/" target="_blank" rel="noopener noreferrer" data-state="Minnesota">Minneapolis College</a> 
-</div>
-</section>
-
-<!-- MISSISSIPPI -->
-<section class="state-section" id="mississippi">
-<div class="state-heading">
-<h3>Mississippi</h3>
-<span>7 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.alcorn.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Alcorn State University</a>
-<a class="partner-link" href="https://www.deltastate.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Delta State University</a>
-<a class="partner-link" href="https://www.jsums.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Jackson State University</a>
-<a class="partner-link" href="https://www.mvsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Mississippi Valley State University</a>
-<a class="partner-link" href="https://www.rustcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Rust College</a>
-<a class="partner-link" href="https://www.tougaloo.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Tougaloo College</a>
-<a class="partner-link" href="https://www.mc.edu/" target="_blank" rel="noopener noreferrer" data-state="Mississippi">Mississippi College</a>  
-</div>
-</section>
-
-<!-- MISSOURI -->
-<section class="state-section" id="missouri">
-<div class="state-heading">
-<h3>Missouri</h3>
-<span>23 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.avila.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Avila University</a>
-<a class="partner-link" href="https://www.drury.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Drury University</a>
-<a class="partner-link" href="https://www.evangel.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Evangel University</a>
-<a class="partner-link" href="https://www.hssu.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Harris-Stowe State University</a>
-<a class="partner-link" href="https://www.jeffco.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Jefferson College</a>
-<a class="partner-link" href="https://www.lincolnu.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Lincoln University - Missouri</a>
-<a class="partner-link" href="https://www.logan.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Logan University</a>
-<a class="partner-link" href="https://www.mcckc.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Metropolitan Community College-Kansas City</a>
-<a class="partner-link" href="https://www.otc.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Ozarks Technical Community College</a>
-<a class="partner-link" href="https://www.park.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Park University</a>
-<a class="partner-link" href="https://www.stlcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Saint Louis Community College</a>
-<a class="partner-link" href="https://www.sbuniv.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Southwest Baptist University</a>
-<a class="partner-link" href="https://www.uhsp.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">University of Health Sciences and Pharmacy in St. Louis</a>
-<a class="partner-link" href="https://www.washjeff.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Washington &amp; Jefferson College</a>
-<a class="partner-link" href="https://wustl.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">WashU</a>
-<a class="partner-link" href="https://www.webster.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Webster University</a>
-<a class="partner-link" href="https://www.westminster-mo.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Westminster College - Fulton</a>
-<a class="partner-link" href="https://www.williamjewell.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">William Jewell College</a>
-<a class="partner-link" href="https://www.williamwoods.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">William Woods University</a>
-<a class="partner-link" href="https://www.sfccmo.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">State Fair Community College</a>
-<a class="partner-link" href="https://www.maryville.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Maryville University of Saint Louis</a>
-<a class="partner-link" href="https://www.adrian.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Adrian College</a>
-<a class="partner-link" href="https://www.moval.edu/" target="_blank" rel="noopener noreferrer" data-state="Missouri">Missouri Valley College</a>
-</div>
-</section>
-
-<!-- MONTANA -->
-<section class="state-section" id="montana">
-<div class="state-heading">
-<h3>Montana</h3>
-<span>2 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.umt.edu/" target="_blank" rel="noopener noreferrer" data-state="Montana">University of Montana</a>
-<a class="partner-link" href="https://www.montana.edu/" target="_blank" rel="noopener noreferrer" data-state="Montana">Montana State University</a>
-</div>
-</section>
-
-<!-- NEBRASKA -->
-<section class="state-section" id="nebraska">
-<div class="state-heading">
-<h3>Nebraska</h3>
-<span>11 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.csc.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Chadron State College</a>
-<a class="partner-link" href="https://www.cune.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Concordia University, Nebraska</a>
-<a class="partner-link" href="https://www.creighton.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Creighton University</a>
-<a class="partner-link" href="https://www.mccneb.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Metropolitan Community College-Nebraska</a>
-<a class="partner-link" href="https://www.mpcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Mid-Plains Community College</a>
-<a class="partner-link" href="https://www.midlandu.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Midland University</a>
-<a class="partner-link" href="https://www.northeast.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Northeast Community College - Career Services</a>
-<a class="partner-link" href="https://www.peru.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Peru State College</a>
-<a class="partner-link" href="https://www.unmc.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">University of Nebraska Medical Center</a>
-<a class="partner-link" href="https://www.wsc.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Wayne State College</a>
-<a class="partner-link" href="https://www.bellevue.edu/" target="_blank" rel="noopener noreferrer" data-state="Nebraska">Bellevue University</a>
-</div>
-</section>
-
-<!-- NEVADA -->
-<section class="state-section" id="nevada">
-<div class="state-heading">
-<h3>Nevada</h3>
-<span>3 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.tmcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Nevada">Truckee Meadows Community College</a>
-<a class="partner-link" href="https://www.wnc.edu/" target="_blank" rel="noopener noreferrer" data-state="Nevada">Western Nevada College</a>
-<a class="partner-link" href="https://www.unr.edu.edu/" target="_blank" rel="noopener noreferrer" data-state="Nevada">University of Nevada, Reno</a>
-</div>
-</section>
-
-<!-- NEW HAMPSHIRE -->
-<section class="state-section" id="new-hampshire">
-<div class="state-heading">
-<h3>New Hampshire</h3>
-<span>3 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.nec.edu/" target="_blank" rel="noopener noreferrer" data-state="New Hampshire">New England College</a>
-<a class="partner-link" href="https://www.rivier.edu/" target="_blank" rel="noopener noreferrer" data-state="New Hampshire">Rivier University</a>
-<a class="partner-link" href="https://www.anselm.edu/" target="_blank" rel="noopener noreferrer" data-state="New Hampshire">Saint Anselm College</a>
-</div>
-</section>
-
-<!-- NEW JERSEY -->
-<section class="state-section" id="new-jersey">
-<div class="state-heading">
-<h3>New Jersey</h3>
-<span>16 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.aimseducation.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">AIMS Education - College of Health Sciences</a>
-<a class="partner-link" href="https://atlanticcape.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Atlantic Cape Community College</a>
-<a class="partner-link" href="https://www.centenaryuniversity.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Centenary University</a>
-<a class="partner-link" href="https://www.essex.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Essex County College</a>
-<a class="partner-link" href="https://www.fdu.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Fairleigh Dickinson University</a>
-<a class="partner-link" href="https://www.kean.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Kean University</a>
-<a class="partner-link" href="https://www.montclair.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Montclair State University</a>
-<a class="partner-link" href="https://www.njcu.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">New Jersey City University</a>
-<a class="partner-link" href="https://www.pccc.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Passaic County Community College</a>
-<a class="partner-link" href="https://www.pillar.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Pillar College</a>
-<a class="partner-link" href="https://www.raritanval.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Raritan Valley Community College</a>
-<a class="partner-link" href="https://www.camden.rutgers.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Rutgers University--Camden</a>
-<a class="partner-link" href="https://www.seu.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Saint Elizabeth University</a>
-<a class="partner-link" href="https://www.njit.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">New Jersey Institute of Technology</a>  
-<a class="partner-link" href="https://www.wpunj.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">William Paterson University</a>
-<a class="partner-link" href="https://www.saintpeters.edu/" target="_blank" rel="noopener noreferrer" data-state="New Jersey">Saint Peter's University</a> 
-</div>
-</section>
-
-<!-- NEW MEXICO -->
-<section class="state-section" id="new-mexico">
-<div class="state-heading">
-<h3>New Mexico</h3>
-<span>4 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.nmhu.edu/" target="_blank" rel="noopener noreferrer" data-state="New Mexico">New Mexico Highlands University</a>
-<a class="partner-link" href="https://www.nmt.edu/" target="_blank" rel="noopener noreferrer" data-state="New Mexico">New Mexico Institute of Mining and Technology</a>
-<a class="partner-link" href="https://www.unm.edu/" target="_blank" rel="noopener noreferrer" data-state="New Mexico">University of New Mexico</a>
-<a class="partner-link" href="https://www.usw.edu/" target="_blank" rel="noopener noreferrer" data-state="New Mexico">University of the Southwest</a>
-</div>
-</section>
-
-<!-- NEW YORK -->
-<section class="state-section" id="new-york">
-<div class="state-heading">
-<h3>New York</h3>
-<span>69 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.alfred.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Alfred University</a>
-<a class="partner-link" href="https://www.bard.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Bard College</a>
-<a class="partner-link" href="https://www.binghamton.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Binghamton University</a>
-<a class="partner-link" href="https://www.colgate.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Colgate University</a>
-<a class="partner-link" href="https://www.csi.cuny.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">CUNY College of Staten Island</a>
-<a class="partner-link" href="https://www.hunter.cuny.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">CUNY Hunter College</a>
-<a class="partner-link" href="https://www.citytech.cuny.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">CUNY New York City College of Technology</a>
-<a class="partner-link" href="https://www.york.cuny.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">CUNY York College</a>
-<a class="partner-link" href="https://www.dc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Dominican University New York</a>
-<a class="partner-link" href="https://www.elmira.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Elmira College</a>
-<a class="partner-link" href="https://www.excelsior.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Excelsior University</a>
-<a class="partner-link" href="https://www.flcc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Finger Lakes Community College</a>
-<a class="partner-link" href="https://www.fordham.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Fordham University</a>
-<a class="partner-link" href="https://www.genesee.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Genesee Community College</a>
-<a class="partner-link" href="https://www.gmercyu.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Gwynedd Mercy University</a>
-<a class="partner-link" href="https://www.hamilton.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Hamilton College</a>
-<a class="partner-link" href="https://www.hartwick.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Hartwick College</a>
-<a class="partner-link" href="https://www.herkimer.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Herkimer County Community College</a>
-<a class="partner-link" href="https://www.hws.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Hobart and William Smith Colleges</a>
-<a class="partner-link" href="https://icahn.mssm.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Icahn School of Medicine at Mount Sinai - Graduate School of Biomedical Sciences</a>
-<a class="partner-link" href="https://www.sunyjcc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Jamestown Community College</a>
-<a class="partner-link" href="https://www.keuka.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Keuka College</a>
-<a class="partner-link" href="https://www.mercy.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Mercy University</a>
-<a class="partner-link" href="https://www.mvcc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Mohawk Valley Community College</a>
-<a class="partner-link" href="https://www.molloy.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Molloy University</a>
-<a class="partner-link" href="https://www.nazareth.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Nazareth University</a>
-<a class="partner-link" href="https://www.nccc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">North Country Community College</a>
-<a class="partner-link" href="https://www.sunyocc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Onondaga Community College</a>
-<a class="partner-link" href="https://www.paulsmiths.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Paul Smiths College of Arts and Science</a>
-<a class="partner-link" href="https://www.pratt.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Pratt Institute</a>
-<a class="partner-link" href="https://www.roberts.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Roberts Wesleyan University</a>
-<a class="partner-link" href="https://www.sage.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Russell Sage College</a>
-<a class="partner-link" href="https://www.sarahlawrence.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Sarah Lawrence College</a>
-<a class="partner-link" href="https://www.siena.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Siena University</a>
-<a class="partner-link" href="https://www.skidmore.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Skidmore College</a>
-<a class="partner-link" href="https://www.sbu.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">St. Bonaventure University</a>
-<a class="partner-link" href="https://www.stfranciscollege.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">St. Francis College</a>
-<a class="partner-link" href="https://www.stlawu.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">St. Lawrence University</a>
-<a class="partner-link" href="https://www.fredonia.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">State University of New York at Fredonia</a>
-<a class="partner-link" href="https://www.geneseo.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">State University of New York at Geneseo</a>
-<a class="partner-link" href="https://www.newpaltz.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">State University of New York at New Paltz</a>
-<a class="partner-link" href="https://www.brockport.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Brockport</a>
-<a class="partner-link" href="https://www.sunybroome.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Broome Community College</a>
-<a class="partner-link" href="https://www.cobleskill.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Cobleskill</a>
-<a class="partner-link" href="https://www.delhi.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY College of Technology at Delhi</a>
-<a class="partner-link" href="https://www.sunyempire.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Empire State University</a>
-<a class="partner-link" href="https://www.ecc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Erie Community College</a>
-<a class="partner-link" href="https://www.sunyjefferson.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Jefferson Community College</a>
-<a class="partner-link" href="https://www.oldwestbury.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Old Westbury</a>
-<a class="partner-link" href="https://suny.oneonta.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Oneonta</a>
-<a class="partner-link" href="https://sunypoly.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">SUNY Polytechnic Institute</a>
-<a class="partner-link" href="https://www.syracuse.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Syracuse University</a>
-<a class="partner-link" href="https://www.newschool.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">The New School</a>
-<a class="partner-link" href="https://www.sunyulster.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Ulster County Community College</a>
-<a class="partner-link" href="https://www.union.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Union College</a>
-<a class="partner-link" href="https://www.ucc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Union College of Union County, New Jersey</a>
-<a class="partner-link" href="https://www.buffalo.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">University at Buffalo</a>
-<a class="partner-link" href="https://www.mountsaintvincent.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">University of Mount Saint Vincent</a>
-<a class="partner-link" href="https://www.rochester.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">University of Rochester</a>
-<a class="partner-link" href="https://www.utica.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Utica University</a>
-<a class="partner-link" href="https://www.ithaca.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Ithaca College</a>
-<a class="partner-link" href="https://www.niagara.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Niagara University</a>
-<a class="partner-link" href="https://adelphi.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Adelphi University</a>  
-<a class="partner-link" href="https://www.vaughn.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Vaughn College of Aeronautics and Technology</a>
-<a class="partner-link" href="https://www.lehman.cuny.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">CUNY Lehman College</a>
-<a class="partner-link" href="https://cce.columbia.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Columbia University - Undergraduate Schools</a>
-<a class="partner-link" href="https://www.liu.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Long Island University</a>
-<a class="partner-link" href="https://www.corning-cc.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Corning Community College</a>
-<a class="partner-link" href="https://www.iona.edu/" target="_blank" rel="noopener noreferrer" data-state="New York">Iona University</a>  
-</div>
-</section>
-
-<!-- NORTH CAROLINA -->
-<section class="state-section" id="north-carolina">
-<div class="state-heading">
-<h3>North Carolina</h3>
-<span>25 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.brevard.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Brevard College</a>
-<a class="partner-link" href="https://www.davidson.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Davidson College</a>
-<a class="partner-link" href="https://www.davidsondavie.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Davidson-Davie Community College</a>
-<a class="partner-link" href="https://duke.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Duke University</a>
-<a class="partner-link" href="https://www.ecsu.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Elizabeth City State University</a>
-<a class="partner-link" href="https://www.gardner-webb.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Gardner-Webb University</a>
-<a class="partner-link" href="https://www.guilford.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Guilford College</a>
-<a class="partner-link" href="https://www.jcsu.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Johnson C. Smith University</a>
-<a class="partner-link" href="https://www.livingstone.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Livingstone College</a>
-<a class="partner-link" href="https://www.methodist.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Methodist University</a>
-<a class="partner-link" href="https://www.mitchellcc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Mitchell Community College</a>
-<a class="partner-link" href="https://www.ncat.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">North Carolina A&amp;T State University</a>
-<a class="partner-link" href="https://www.queens.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Queens University of Charlotte</a>
-<a class="partner-link" href="https://www.richmondcc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Richmond Community College</a>
-<a class="partner-link" href="https://www.salem.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Salem College</a>
-<a class="partner-link" href="https://www.sampsoncc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Sampson Community College</a>
-<a class="partner-link" href="https://www.sandhills.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Sandhills Community College</a>
-<a class="partner-link" href="https://www.shawu.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Shaw University</a>
-<a class="partner-link" href="https://www.smu.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Southern Methodist University</a>
-<a class="partner-link" href="https://www.southwesterncc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Southwestern Community College - North Carolina</a>
-<a class="partner-link" href="https://www.uncp.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">The University of North Carolina at Pembroke</a>
-<a class="partner-link" href="https://www.unc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">University of North Carolina - Chapel Hill</a>
-<a class="partner-link" href="https://www.vgcc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">Vance-Granville Community College</a>
-<a class="partner-link" href="https://www.peace.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">William Peace University</a>
-<a class="partner-link" href="https://www.highpoint.edu/" target="_blank" rel="noopener noreferrer" data-state="North Carolina">High Point University</a>
-</div>
-</section>
-
-<!-- NORTH DAKOTA -->
-<section class="state-section" id="north-dakota">
-<div class="state-heading">
-<h3>North Dakota</h3>
-<span>9 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bismarckstate.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">Bismarck State College</a>
-<a class="partner-link" href="https://www.dickinsonstate.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">Dickinson State University</a>
-<a class="partner-link" href="https://www.mayvillestate.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">Mayville State University</a>
-<a class="partner-link" href="https://www.minotstateu.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">Minot State University</a>
-<a class="partner-link" href="https://www.ndscs.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">North Dakota State College of Science</a>
-<a class="partner-link" href="https://uttc.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">United Tribes Technical College</a>
-<a class="partner-link" href="https://www.umary.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">University of Mary</a>
-<a class="partner-link" href="https://und.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">University of North Dakota</a>
-<a class="partner-link" href="https://www.vcsu.edu/" target="_blank" rel="noopener noreferrer" data-state="North Dakota">Valley City State University</a>
-</div>
-</section>
-
-<!-- NORTHERN MARIANA ISLANDS -->
-<section class="state-section" id="northern-mariana-islands">
-<div class="state-heading">
-<h3>Northern Mariana Islands</h3>
-<span>1 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.marianas.edu/" target="_blank" rel="noopener noreferrer" data-state="Northern Mariana Islands">Northern Marianas College</a>
-</div>
-</section>
-
-<!-- OHIO -->
-<section class="state-section" id="ohio">
-<div class="state-heading">
-<h3>Ohio</h3>
-<span>35 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bw.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Baldwin Wallace University</a>
-<a class="partner-link" href="https://www.belmontcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Belmont College</a>
-<a class="partner-link" href="https://www.capital.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Capital University</a>
-<a class="partner-link" href="https://www.cedarville.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Cedarville University</a>
-<a class="partner-link" href="https://www.csuohio.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Cleveland State University</a>
-<a class="partner-link" href="https://www.tri-c.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Cuyahoga Community College</a>
-<a class="partner-link" href="https://www.denison.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Denison University</a>
-<a class="partner-link" href="https://www.franciscan.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Franciscan University of Steubenville</a>
-<a class="partner-link" href="https://www.hiram.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Hiram College</a>
-<a class="partner-link" href="https://www.hocking.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Hocking College</a>
-<a class="partner-link" href="https://www.kent.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Kent State University</a>
-<a class="partner-link" href="https://lourdes.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Lourdes University</a>
-<a class="partner-link" href="https://www.marietta.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Marietta College</a>
-<a class="partner-link" href="https://www.mtc.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Marion Technical College</a>
-<a class="partner-link" href="https://www.muskingum.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Muskingum University</a>
-<a class="partner-link" href="https://www.oberlin.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Oberlin College</a>
-<a class="partner-link" href="https://www.ohiodominican.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Ohio Dominican University</a>
-<a class="partner-link" href="https://www.onu.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Ohio Northern University</a>
-<a class="partner-link" href="https://www.ohio.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Ohio University</a>
-<a class="partner-link" href="https://www.owu.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Ohio Wesleyan University</a>
-<a class="partner-link" href="https://www.shawnee.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Shawnee State University</a>
-<a class="partner-link" href="https://www.sscc.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Southern State Community College</a>
-<a class="partner-link" href="https://www.starkstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Stark State College</a>
-<a class="partner-link" href="https://www.wooster.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">The College of Wooster</a>
-<a class="partner-link" href="https://www.uakron.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">The University of Akron</a>
-<a class="partner-link" href="https://www.tiffin.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Tiffin University</a>
-<a class="partner-link" href="https://www.udayton.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">University of Dayton</a>
-<a class="partner-link" href="https://www.mountunion.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">University of Mount Union</a>
-<a class="partner-link" href="https://www.walsh.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Walsh University</a>
-<a class="partner-link" href="https://www.wilberforce.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Wilberforce University</a>
-<a class="partner-link" href="https://wittenberg.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Wittenberg University</a>
-<a class="partner-link" href="https://www.osu.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">The Ohio State University</a>
-<a class="partner-link" href="https://www.ashland.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Ashland University</a>
-<a class="partner-link" href="https://www.unoh.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">University of Northwestern Ohio</a>
-<a class="partner-link" href="https://www.centralstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Ohio">Central State University</a>  
-</div>
-</section>
-
-<!-- OKLAHOMA -->
-<section class="state-section" id="oklahoma">
-<div class="state-heading">
-<h3>Oklahoma</h3>
-<span>15 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.cameron.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Cameron University</a>
-<a class="partner-link" href="https://www.ecok.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">East Central University</a>
-<a class="partner-link" href="https://www.langston.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Langston University</a>
-<a class="partner-link" href="https://www.macu.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Mid-America Christian University</a>
-<a class="partner-link" href="https://www.noc.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Northern Oklahoma College</a>
-<a class="partner-link" href="https://www.nwosu.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Northwestern Oklahoma State University</a>
-<a class="partner-link" href="https://www.occc.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Oklahoma City Community College</a>
-<a class="partner-link" href="https://www.okcu.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Oklahoma City University</a>
-<a class="partner-link" href="https://www.osuokc.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Oklahoma State University - OKC</a>
-<a class="partner-link" href="https://www.rsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Rogers State University</a>
-<a class="partner-link" href="https://www.se.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Southeastern Oklahoma State University</a>
-<a class="partner-link" href="https://www.swosu.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Southwestern Oklahoma State University</a>
-<a class="partner-link" href="https://utulsa.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">The University of Tulsa</a>
-<a class="partner-link" href="https://www.tulsacc.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">Tulsa Community College</a>
-<a class="partner-link" href="https://www.usao.edu/" target="_blank" rel="noopener noreferrer" data-state="Oklahoma">University of Science and Arts of Oklahoma</a>
-</div>
-</section>
-
-<!-- OREGON -->
-<section class="state-section" id="oregon">
-<div class="state-heading">
-<h3>Oregon</h3>
-<span>7 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bushnell.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">Bushnell University</a>
-<a class="partner-link" href="https://www.corban.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">Corban University</a>
-<a class="partner-link" href="https://www.georgefox.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">George Fox University</a>
-<a class="partner-link" href="https://www.mhcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">Mt. Hood Community College</a>
-<a class="partner-link" href="https://www.reed.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">Reed College</a>
-<a class="partner-link" href="https://www.warnerpacific.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">Warner Pacific University</a>
-<a class="partner-link" href="https://willamette.edu/" target="_blank" rel="noopener noreferrer" data-state="Oregon">Willamette University</a>
-</div>
-</section>
-
-<!-- PENNSYLVANIA -->
-<section class="state-section" id="pennsylvania">
-<div class="state-heading">
-<h3>Pennsylvania</h3>
-<span>64 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.albright.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Albright College</a>
-<a class="partner-link" href="https://www.bucknell.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Bucknell University</a>
-<a class="partner-link" href="https://www.carlow.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Carlow University</a>
-<a class="partner-link" href="https://www.cedarcrest.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Cedar Crest College</a>
-<a class="partner-link" href="https://www.centralpenn.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Central Penn College</a>
-<a class="partner-link" href="https://www.chatham.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Chatham University</a>
-<a class="partner-link" href="https://www.chc.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Chestnut Hill College</a>
-<a class="partner-link" href="https://www.commonwealthu.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Commonwealth University of PA (Bloomsburg | Lock Haven | Mansfield)</a>
-<a class="partner-link" href="https://www.desales.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">DeSales University</a>
-<a class="partner-link" href="https://www.dickinson.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Dickinson College</a>
-<a class="partner-link" href="https://drexel.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Drexel University</a>
-<a class="partner-link" href="https://www.esu.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">East Stroudsburg University of Pennsylvania</a>
-<a class="partner-link" href="https://www.eastern.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Eastern University</a>
-<a class="partner-link" href="https://www.etown.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Elizabethtown College</a>
-<a class="partner-link" href="https://www.fandm.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Franklin &amp; Marshall College</a>
-<a class="partner-link" href="https://www.gannon.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Gannon University</a>
-<a class="partner-link" href="https://www.gettysburg.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Gettysburg College</a>
-<a class="partner-link" href="https://www.harrisburgu.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Harrisburg University of Science and Technology</a>
-<a class="partner-link" href="https://www.haverford.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Haverford College</a>
-<a class="partner-link" href="https://holyfamily.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Holy Family University</a>
-<a class="partner-link" href="https://www.iup.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Indiana University of Pennsylvania</a>
-<a class="partner-link" href="https://www.kings.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">King's College</a>
-<a class="partner-link" href="https://www.kutztown.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Kutztown University of Pennsylvania</a>
-<a class="partner-link" href="https://www.lasalle.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">La Salle University</a>
-<a class="partner-link" href="https://www.lackawanna.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lackawanna College</a>
-<a class="partner-link" href="https://www.lvc.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lebanon Valley College</a>
-<a class="partner-link" href="https://www.lincoln.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lincoln University of Pennsylvania</a>
-<a class="partner-link" href="https://manor.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Manor College</a>
-<a class="partner-link" href="https://www.mercyhurst.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Mercyhurst University</a>
-<a class="partner-link" href="https://www.messiah.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Messiah University</a>
-<a class="partner-link" href="https://www.millersville.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Millersville University of Pennsylvania</a>
-<a class="partner-link" href="https://www.misericordia.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Misericordia University</a>
-<a class="partner-link" href="https://www.moore.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Moore College of Art and Design</a>
-<a class="partner-link" href="https://moravian.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Moravian University</a>
-<a class="partner-link" href="https://www.mtaloy.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Mount Aloysius College</a>
-<a class="partner-link" href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Northeastern University</a>
-<a class="partner-link" href="https://www.peirce.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Peirce at Lackawanna College</a>
-<a class="partner-link" href="https://www.pennwest.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">PennWest University</a>
-<a class="partner-link" href="https://www.pointpark.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Point Park University</a>
-<a class="partner-link" href="https://www.francis.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Saint Francis University</a>
-<a class="partner-link" href="https://www.sju.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Saint Joseph's University</a>
-<a class="partner-link" href="https://www.setonhill.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Seton Hill University</a>
-<a class="partner-link" href="https://www.ship.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Shippensburg University of Pennsylvania</a>
-<a class="partner-link" href="https://www.sru.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Slippery Rock University of Pennsylvania</a>
-<a class="partner-link" href="https://www.seu.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Southeastern University</a>
-<a class="partner-link" href="https://www.swarthmore.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Swarthmore College</a>
-<a class="partner-link" href="https://www.temple.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Temple University</a>
-<a class="partner-link" href="https://www.scranton.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">The University of Scranton</a>
-<a class="partner-link" href="https://www.upenn.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">University of Pennsylvania</a>
-<a class="partner-link" href="https://www.pitt.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">University of Pittsburgh</a>
-<a class="partner-link" href="https://www.usj.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">University of Saint Joseph</a>
-<a class="partner-link" href="https://www.ursinus.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Ursinus College</a>
-<a class="partner-link" href="https://www.warren-wilson.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Warren Wilson College</a>
-<a class="partner-link" href="https://www.waynesburg.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Waynesburg University</a>
-<a class="partner-link" href="https://www.widener.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Widener University</a>
-<a class="partner-link" href="https://www.wilkes.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Wilkes University</a>
-<a class="partner-link" href="https://www.wilson.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Wilson College</a>
-<a class="partner-link" href="https://www.ycp.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">York College of Pennsylvania</a>
-<a class="partner-link" href="https://www.lafayette.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lafayette College</a>
-<a class="partner-link" href="https://www.juniata.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Juniata College</a>
-<a class="partner-link" href="https://www.jefferson.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Thomas Jefferson University</a>
-<a class="partner-link" href="https://www.lehigh.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Lehigh University</a> 
-<a class="partner-link" href="https://www.ccp.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Community College of Philadelphia</a>
-<a class="partner-link" href="https://www.duq.edu/" target="_blank" rel="noopener noreferrer" data-state="Pennsylvania">Duquesne University</a>  
-</div>
-</section>
-
-<!-- PUERTO RICO -->
-<section class="state-section" id="puerto-rico">
-<div class="state-heading">
-<h3>Puerto Rico</h3>
-<span>2 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.uprm.edu/" target="_blank" rel="noopener noreferrer" data-state="Puerto Rico">University of Puerto Rico - Mayaguez Campus (School of Business Administration)</a>
-<a class="partner-link" href="https://www.pupr.edu/" target="_blank" rel="noopener noreferrer" data-state="Puerto Rico">Polytechnic University of Puerto Rico</a>  
-</div>
-</section>
-
-<!-- RHODE ISLAND -->
-<section class="state-section" id="rhode-island">
-<div class="state-heading">
-<h3>Rhode Island</h3>
-<span>5 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bryant.edu/" target="_blank" rel="noopener noreferrer" data-state="Rhode Island">Bryant University</a>
-<a class="partner-link" href="https://www.ric.edu/" target="_blank" rel="noopener noreferrer" data-state="Rhode Island">Rhode Island College</a>
-<a class="partner-link" href="https://www.rwu.edu/" target="_blank" rel="noopener noreferrer" data-state="Rhode Island">Roger Williams University</a>
-<a class="partner-link" href="https://www.uri.edu/" target="_blank" rel="noopener noreferrer" data-state="Rhode Island">The University of Rhode Island</a>
-<a class="partner-link" href="https://www.jwu.edu/" target="_blank" rel="noopener noreferrer" data-state="Rhode Island">Johnson & Wales University</a>
-</div>
-</section>
-
-<!-- SOUTH CAROLINA -->
-<section class="state-section" id="south-carolina">
-<div class="state-heading">
-<h3>South Carolina</h3>
-<span>20 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.allenuniversity.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Allen University</a>
-<a class="partner-link" href="https://www.benedict.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Benedict College</a>
-<a class="partner-link" href="https://www.charlestonsouthern.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Charleston Southern University</a>
-<a class="partner-link" href="https://www.claflin.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Claflin University</a>
-<a class="partner-link" href="https://www.clintoncollege.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Clinton College</a>
-<a class="partner-link" href="https://www.coastal.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Coastal Carolina University</a>
-<a class="partner-link" href="https://www.cofc.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">College of Charleston</a>
-<a class="partner-link" href="https://www.converse.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Converse University</a>
-<a class="partner-link" href="https://www.erskine.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Erskine College</a>
-<a class="partner-link" href="https://www.fmarion.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Francis Marion University</a>
-<a class="partner-link" href="https://www.lander.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Lander University</a>
-<a class="partner-link" href="https://www.limestone.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Limestone University</a>
-<a class="partner-link" href="https://www.presby.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Presbyterian College</a>
-<a class="partner-link" href="https://www.scsu.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">South Carolina State University</a>
-<a class="partner-link" href="https://www.smcsc.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Spartanburg Methodist College</a>
-<a class="partner-link" href="https://www.uscupstate.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">University of South Carolina Upstate</a>
-<a class="partner-link" href="https://www.uscb.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">University of South Carolina-Beaufort</a>
-<a class="partner-link" href="https://www.coker.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Coker University</a>  
-<a class="partner-link" href="https://www.usca.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">University of South Carolina Aiken</a>
-<a class="partner-link" href="https://www.voorhees.edu.edu/" target="_blank" rel="noopener noreferrer" data-state="South Carolina">Voorhees University</a> 
-</div>
-</section>
-
-<!-- SOUTH DAKOTA -->
-<section class="state-section" id="south-dakota">
-<div class="state-heading">
-<h3>South Dakota</h3>
-<span>2 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bhsu.edu/" target="_blank" rel="noopener noreferrer" data-state="South Dakota">Black Hills State University</a>
-<a class="partner-link" href="https://www.sdstate.edu/" target="_blank" rel="noopener noreferrer" data-state="South Dakota">South Dakota State University</a>
-</div>
-</section>
-
-<!-- TENNESSEE -->
-<section class="state-section" id="tennessee">
-<div class="state-heading">
-<h3>Tennessee</h3>
-<span>23 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://abcnash.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">American Baptist College</a>
-<a class="partner-link" href="https://www.chattanoogastate.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Chattanooga State Community College</a>
-<a class="partner-link" href="https://www.cbu.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Christian Brothers University</a>
-<a class="partner-link" href="https://www.etsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">East Tennessee State University</a>
-<a class="partner-link" href="https://www.lanecollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Lane College</a>
-<a class="partner-link" href="https://www.loc.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">LeMoyne-Owen College</a>
-<a class="partner-link" href="https://www.lipscomb.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Lipscomb University</a>
-<a class="partner-link" href="https://www.maryvillecollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Maryville College</a>
-<a class="partner-link" href="https://www.milligan.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Milligan University</a>
-<a class="partner-link" href="https://www.northeaststate.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Northeast State Community College</a>
-<a class="partner-link" href="https://www.pstcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Pellissippi State Community College</a>
-<a class="partner-link" href="https://www.roanestate.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Roane State Community College</a>
-<a class="partner-link" href="https://www.southwest.tn.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Southwest Tennessee Community College</a>
-<a class="partner-link" href="https://www.tnstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Tennessee State University</a>
-<a class="partner-link" href="https://www.tntech.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Tennessee Technological University</a>
-<a class="partner-link" href="https://www.uts.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">The University of Tennessee Southern</a>
-<a class="partner-link" href="https://www.utk.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">The University of Tennessee-Knoxville</a>
-<a class="partner-link" href="https://www.utm.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">The University of Tennessee-Martin</a>
-<a class="partner-link" href="https://www.trevecca.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Trevecca Nazarene University</a>
-<a class="partner-link" href="https://www.tusculum.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Tusculum University</a>
-<a class="partner-link" href="https://www.vanderbilt.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Vanderbilt University</a>
-<a class="partner-link" href="https://www.fhu.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Freed-Hardeman University</a>
-<a class="partner-link" href="https://www.apsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Tennessee">Austin Peay State University</a>
-
-</div>
-</section>
-
-<!-- TEXAS -->
-<section class="state-section" id="texas">
-<div class="state-heading">
-<h3>Texas</h3>
-<span>38 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.alamo.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Alamo Colleges District</a>
-<a class="partner-link" href="https://www.austincc.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Austin Community College</a>
-<a class="partner-link" href="https://www.baylor.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Baylor University</a>
-<a class="partner-link" href="https://www.dallascollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Dallas College</a>
-<a class="partner-link" href="https://www.etbu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">East Texas Baptist University</a>
-<a class="partner-link" href="https://www.hallmarkuniversity.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Hallmark University</a>
-<a class="partner-link" href="https://hbu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Houston Christian University</a>
-<a class="partner-link" href="https://www.htu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Huston-Tillotson University</a>
-<a class="partner-link" href="https://www.jarvis.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Jarvis Christian University</a>
-<a class="partner-link" href="https://www.lee.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Lee College</a>
-<a class="partner-link" href="https://www.letu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">LeTourneau University</a>
-<a class="partner-link" href="https://www.nctc.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">North Central Texas College (All Campuses)</a>
-<a class="partner-link" href="https://www.pvamu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Prairie View A&amp;M University</a>
-<a class="partner-link" href="https://www.schreiner.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Schreiner University</a>
-<a class="partner-link" href="https://www.stedwards.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">St. Edward's University</a>
-<a class="partner-link" href="https://www.tamuk.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas A&amp;M University-Kingsville</a>
-<a class="partner-link" href="https://www.tlu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas Lutheran University</a>
-<a class="partner-link" href="https://www.tsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas Southern University</a>
-<a class="partner-link" href="https://www.tsc.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas Southmost College</a>
-<a class="partner-link" href="https://www.txwes.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas Wesleyan University</a>
-<a class="partner-link" href="https://www.twu.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas Woman's University</a>
-<a class="partner-link" href="https://www.tku.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">The King's University</a>
-<a class="partner-link" href="https://www.utep.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">The University of Texas at El Paso</a>
-<a class="partner-link" href="https://www.uttyler.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">The University of Texas at Tyler</a>
-<a class="partner-link" href="https://www.tjc.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Tyler Junior College</a>
-<a class="partner-link" href="https://www.udallas.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">University of Dallas</a>
-<a class="partner-link" href="https://www.unt.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">University of North Texas</a>
-<a class="partner-link" href="https://www.wcjc.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Wharton County Junior College</a>
-<a class="partner-link" href="https://www.wiley.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Wiley University</a>
-<a class="partner-link" href="https://www.hsutx.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Hardin-Simmons University</a>
-<a class="partner-link" href="https://www.stthom.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">University of St Thomas-Houston</a>
-<a class="partner-link" href="https://www.tamusa.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Texas A&M University-San Antonio</a>
-<a class="partner-link" href="https://www.uhcl.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">University of Houston-Clear Lake</a>
-<a class="partner-link" href="https://www.southwestern.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Southwestern University</a>
-<a class="partner-link" href="https://www.msutexas.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Midwestern State University</a>
-<a class="partner-link" href="https://www.pqc.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">Paul Quinn College</a>  
-<a class="partner-link" href="https://www.uta.edu/" target="_blank" rel="noopener noreferrer" data-state="Texas">University of Texas at Arlington</a>
-</div>
-</section>
-
-<!-- UTAH -->
-<section class="state-section" id="utah">
-<div class="state-heading">
-<h3>Utah</h3>
-<span>3 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.utahtech.edu/" target="_blank" rel="noopener noreferrer" data-state="Utah">Utah Tech University</a>
-<a class="partner-link" href="https://www.uvu.edu/" target="_blank" rel="noopener noreferrer" data-state="Utah">Utah Valley University</a>
-<a class="partner-link" href="https://www.byu.edu/" target="_blank" rel="noopener noreferrer" data-state="Utah">Brigham Young University</a>
-</div>
-</section>
-
-<!-- VERMONT -->
-<section class="state-section" id="vermont">
-<div class="state-heading">
-<h3>Vermont</h3>
-<span>6 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.champlain.edu/" target="_blank" rel="noopener noreferrer" data-state="Vermont">Champlain College</a>
-<a class="partner-link" href="https://www.ccv.edu/" target="_blank" rel="noopener noreferrer" data-state="Vermont">Community College of Vermont</a>
-<a class="partner-link" href="https://www.landmark.edu/" target="_blank" rel="noopener noreferrer" data-state="Vermont">Landmark College</a>
-<a class="partner-link" href="https://www.middlebury.edu/" target="_blank" rel="noopener noreferrer" data-state="Vermont">Middlebury</a>
-<a class="partner-link" href="https://www.norwich.edu/" target="_blank" rel="noopener noreferrer" data-state="Vermont">Norwich University</a>
-<a class="partner-link" href="https://www.uvm.edu/" target="_blank" rel="noopener noreferrer" data-state="Vermont">University of Vermont</a>
-</div>
-</section>
-
-<!-- VIRGINIA -->
-<section class="state-section" id="virginia">
-<div class="state-heading">
-<h3>Virginia</h3>
-<span>20 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bridgewater.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Bridgewater College</a>
-<a class="partner-link" href="https://www.ecpi.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">ECPI University</a>
-<a class="partner-link" href="https://www.ehc.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Emory &amp; Henry University</a>
-<a class="partner-link" href="https://www.gmu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">George Mason University</a>
-<a class="partner-link" href="https://www.longwood.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Longwood University</a>
-<a class="partner-link" href="https://www.marymount.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Marymount University</a>
-<a class="partner-link" href="https://www.nsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Norfolk State University</a>
-<a class="partner-link" href="https://www.radford.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Radford University</a>
-<a class="partner-link" href="https://www.roanoke.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Roanoke College</a>
-<a class="partner-link" href="https://www.lynchburg.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">University of Lynchburg</a>
-<a class="partner-link" href="https://www.uvawise.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">University of Virginia College at Wise</a>
-<a class="partner-link" href="https://www.vcu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Virginia Commonwealth University</a>
-<a class="partner-link" href="https://www.vsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Virginia State University</a>
-<a class="partner-link" href="https://www.vt.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Virginia Tech</a>
-<a class="partner-link" href="https://www.vuu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Virginia Union University</a>
-<a class="partner-link" href="https://www.marybaldwin.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Mary Baldwin University</a>
-<a class="partner-link" href="https://www.liberty.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Liberty University</a>
-<a class="partner-link" href="https://www.odu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Old Dominion University</a>
-<a class="partner-link" href="https://www.vwu.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">Virginia Wesleyan University</a>
-<a class="partner-link" href="https://www.virginia.edu/" target="_blank" rel="noopener noreferrer" data-state="Virginia">University of Virginia</a>
-</div>
-</section>
-
-<!-- WASHINGTON -->
-<section class="state-section" id="washington">
-<div class="state-heading">
-<h3>Washington</h3>
-<span>17 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bellevuecollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Bellevue College</a>
-<a class="partner-link" href="https://www.cwu.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Central Washington University</a>
-<a class="partner-link" href="https://www.cityu.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">City University of Seattle</a>
-<a class="partner-link" href="https://www.cptc.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Clover Park Technical College</a>
-<a class="partner-link" href="https://www.ewu.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Eastern Washington University</a>
-<a class="partner-link" href="https://www.everettcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Everett Community College</a>
-<a class="partner-link" href="https://www.highline.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Highline College</a>
-<a class="partner-link" href="https://www.northwestu.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Northwest University</a>
-<a class="partner-link" href="https://www.rtc.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Renton Technical College</a>
-<a class="partner-link" href="https://www.stmartin.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Saint Martin's University</a>
-<a class="partner-link" href="https://spu.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Seattle Pacific University</a>
-<a class="partner-link" href="https://www.tacomacc.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Tacoma Community College</a>
-<a class="partner-link" href="https://www.umw.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">University of Mary Washington</a>
-<a class="partner-link" href="https://www.wlu.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Washington and Lee University</a>
-<a class="partner-link" href="https://www.washcoll.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Washington College</a>
-<a class="partner-link" href="https://www.whitworth.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Whitworth University</a>
-<a class="partner-link" href="https://www.olympic.edu/" target="_blank" rel="noopener noreferrer" data-state="Washington">Olympic College</a>  
-</div>
-</section>
-
-<!-- WEST VIRGINIA -->
-<section class="state-section" id="west-virginia">
-<div class="state-heading">
-<h3>West Virginia</h3>
-<span>11 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bluefieldstate.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Bluefield State University</a>
-<a class="partner-link" href="https://www.concord.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Concord University</a>
-<a class="partner-link" href="https://easternwv.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Eastern West Virginia Community and Technical College</a>
-<a class="partner-link" href="https://www.marshall.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Marshall University</a>
-<a class="partner-link" href="https://www.mctc.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Mountwest Community and Technical College</a>
-<a class="partner-link" href="https://www.newriver.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">New River Community and Technical College</a>
-<a class="partner-link" href="https://www.pierpont.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Pierpont Community &amp; Technical College</a>
-<a class="partner-link" href="https://www.shepherd.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">Shepherd University</a>
-<a class="partner-link" href="https://westliberty.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">West Liberty University</a>
-<a class="partner-link" href="https://www.wvup.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">WVU Parkersburg</a>
-<a class="partner-link" href="https://www.ucwv.edu/" target="_blank" rel="noopener noreferrer" data-state="West Virginia">University of Charleston</a>
-</div>
-</section>
-
-<!-- WISCONSIN -->
-<section class="state-section" id="wisconsin">
-<div class="state-heading">
-<h3>Wisconsin</h3>
-<span>11 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.marianuniversity.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">Marian University - Wisconsin</a>
-<a class="partner-link" href="https://www.uwec.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-Eau Claire</a>
-<a class="partner-link" href="https://www.uwlax.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-La Crosse</a>
-<a class="partner-link" href="https://www.uwm.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-Milwaukee</a>
-<a class="partner-link" href="https://www.uwosh.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-Oshkosh</a>
-<a class="partner-link" href="https://www.uwsp.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-Stevens Point</a>
-<a class="partner-link" href="https://www.uwsuper.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-Superior</a>
-<a class="partner-link" href="https://www.wic.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">Wisconsin Lutheran College</a>
-<a class="partner-link" href="https://www.cuw.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">Concordia University - Wisconsin & Ann Arbor</a>
-<a class="partner-link" href="https://www.carrollu.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">Carroll University</a>
-<a class="partner-link" href="https://www.uwstout.edu/" target="_blank" rel="noopener noreferrer" data-state="Wisconsin">University of Wisconsin-Stout</a>  
-</div>
-</section>
-
-<!-- MULTI-STATE / ONLINE -->
-<section class="state-section" id="multi-state-online">
-<div class="state-heading">
-<h3>Multi-State / Online</h3>
-<span>4 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.bryantstratton.edu/" target="_blank" rel="noopener noreferrer" data-state="Multi-State / Online">Bryant &amp; Stratton College (NY, OH, VA, WI, and Online Campuses)</a>
-<a class="partner-link" href="https://www.herzing.edu/" target="_blank" rel="noopener noreferrer" data-state="Multi-State / Online">Herzing University</a>
-<a class="partner-link" href="https://www.rasmussen.edu/" target="_blank" rel="noopener noreferrer" data-state="Multi-State / Online">Rasmussen University</a>
-<a class="partner-link" href="https://thechicagoschool.edu/" target="_blank" rel="noopener noreferrer" data-state="Multi-State / Online">The Chicago School</a>
-</div>
-</section>
-
-<!-- CONSORTIUM / MULTI-STATE -->
-<section class="state-section" id="consortium-multi-state">
-<div class="state-heading">
-<h3>Consortium / Multi-State</h3>
-<span>1 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://ivyplus.org/" target="_blank" rel="noopener noreferrer" data-state="Consortium / Multi-State">Ivy+ Consortium</a>
-</div>
-</section>
-
-<!-- OTHER -->
-<section class="state-section" id="review-needed">
-<div class="state-heading">
-<h3>Other</h3>
-<span>24 approved</span>
-</div>
-<div class="partners-grid">
-<a class="partner-link" href="https://www.alverno.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Alverno College</a>
-<a class="partner-link" href="https://www.asbury.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Asbury University</a>
-<a class="partner-link" href="https://www.cookman.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Bethune-Cookman University</a>
-<a class="partner-link" href="https://www.blackhawk.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Blackhawk Technical College</a>
-<a class="partner-link" href="https://www.cvcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Chattahoochee Valley Community College</a>
-<a class="partner-link" href="https://www.edgewood.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Edgewood University</a>
-<a class="partner-link" href="https://www.faulkner.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Faulkner University</a>
-<a class="partner-link" href="https://www.hfcc.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Henry Ford College</a>
-<a class="partner-link" href="https://www.jsu.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Jacksonville State University</a>
-<a class="partner-link" href="https://www.lakeland.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Lakeland University</a>
-<a class="partner-link" href="https://www.lasell.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Lasell University</a>
-<a class="partner-link" href="https://www.mbu.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Maranatha Baptist University</a>
-<a class="partner-link" href="https://www.midstate.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Mid-State Technical College</a>
-<a class="partner-link" href="https://www.matc.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Milwaukee Area Technical College</a>
-<a class="partner-link" href="https://www.msoe.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Milwaukee School of Engineering</a>
-<a class="partner-link" href="https://www.morainepark.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Moraine Park Technical College</a>
-<a class="partner-link" href="https://www.nicoletcollege.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Nicolet College</a>
-<a class="partner-link" href="https://www.oakwood.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Oakwood University</a>
-<a class="partner-link" href="https://www.suscc.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Southern Union State Community College</a>
-<a class="partner-link" href="https://www.shc.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Spring Hill College</a>
-<a class="partner-link" href="https://www.troy.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Troy University</a>
-<a class="partner-link" href="https://www.umobile.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">University of Mobile</a>
-<a class="partner-link" href="https://www.villanova.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Villanova University</a>
-<a class="partner-link" href="https://www.westfield.ma.edu/" target="_blank" rel="noopener noreferrer" data-state="Review Needed">Westfield State University</a>
-</div>
-</section>
-
-    <div id="noResults" class="no-results">No matching schools found. Try searching by school name, state, or region.</div>
 
 <div class="cta-band">
-      <div><h3>Connect with Talent Connect</h3><p>Talent Connect supports workforce visibility, career readiness, and human-centered access in an AI-influenced hiring environment.</p></div>
-      <div><a class="btn btn-primary" href="/talent-connect">Explore Talent Connect</a><a class="btn btn-secondary" href="/">Back Home</a></div>
-    </div>
-  </div>
-</section>
-<p class="footer-note">Government Workforce Network LLC | Career Center & University Network Directory</p>
+<div>
+<h3>Build workforce connection across borders.</h3>
+<p>
+Government Workforce Network LLC supports university visibility, student access, workforce learning, employer connection, and leadership development through a growing global network.
+</p>
+</div>
+<div>
+<a class="btn btn-primary" href="/talent-connect">Explore Talent Connect</a>
+<a class="btn btn-secondary" href="/workforce-tv">Watch Workforce TV</a>
+</div>
+</div>
+
+<p class="footer-note">Government Workforce Network LLC | Global University Network</p>
+
 </main>
 
-
-<script>
-(function () {
-  function clean(value) {
-    return String(value || "")
-      .toLowerCase()
-      .replace(/&/g, " and ")
-      .replace(/[’']/g, "")
-      .replace(/[^a-z0-9]+/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function showEverything() {
-    var links = document.querySelectorAll(".partner-link");
-    var sections = document.querySelectorAll(".state-section");
-    for (var i = 0; i < links.length; i++) {
-      links[i].style.display = "flex";
-    }
-    for (var j = 0; j < sections.length; j++) {
-      sections[j].style.display = "block";
-    }
-    var noResults = document.getElementById("noResults");
-    if (noResults) noResults.style.display = "none";
-    var resultCount = document.getElementById("resultCount");
-    if (resultCount) resultCount.textContent = "Showing all";
-  }
-
-  function filterCareerCenterNetwork() {
-    var input = document.getElementById("schoolSearch");
-    var resultCount = document.getElementById("resultCount");
-    var noResults = document.getElementById("noResults");
-    var links = document.querySelectorAll(".partner-link");
-    var sections = document.querySelectorAll(".state-section");
-
-    if (!input) return;
-
-    var query = clean(input.value);
-
-    if (query === "") {
-      showEverything();
-      return;
-    }
-
-    var count = 0;
-
-    for (var i = 0; i < links.length; i++) {
-      var link = links[i];
-      var section = link.closest(".state-section");
-      var heading = section ? section.querySelector("h3") : null;
-      var state = heading ? heading.textContent : "";
-      var dataState = link.getAttribute("data-state") || "";
-      var text = clean(link.textContent + " " + state + " " + dataState);
-
-      var match = text.indexOf(query) !== -1;
-      link.style.display = match ? "flex" : "none";
-      if (match) count++;
-    }
-
-    for (var s = 0; s < sections.length; s++) {
-      var visible = sections[s].querySelectorAll('.partner-link[style*="flex"]').length > 0;
-      sections[s].style.display = visible ? "block" : "none";
-    }
-
-    if (resultCount) {
-      resultCount.textContent = count + " result" + (count === 1 ? "" : "s");
-    }
-
-    if (noResults) {
-      noResults.style.display = count === 0 ? "block" : "none";
-    }
-  }
-
-  window.filterCareerCenterNetwork = filterCareerCenterNetwork;
-
-  function initSearch() {
-    var input = document.getElementById("schoolSearch");
-    if (!input) return;
-
-    input.value = "";
-    input.addEventListener("input", filterCareerCenterNetwork);
-    input.addEventListener("search", filterCareerCenterNetwork);
-    input.addEventListener("keyup", filterCareerCenterNetwork);
-    showEverything();
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initSearch);
-  } else {
-    initSearch();
-  }
-})();
-</script>
-
-
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjZhMDBmMzY2NmZjMjVkMDAwODQ1OWRmMyIsImlzc3VlciI6Im5mc2VydmVyIn0.poHTzPSRzZUZPFZ5T1ewUaK4MK8ld6aD_gS94fOLsUc"></script></body>
+</body>
 </html>
