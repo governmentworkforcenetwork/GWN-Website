@@ -1,0 +1,730 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Student Voices | Government Workforce Network LLC</title>
+<meta name="description" content="Student Voices gives students a professional platform to share perspectives, build communication skills, and participate in meaningful workforce conversations." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#06152b;
+  --navy-2:#0c2344;
+  --blue:#183f90;
+  --gold:#d8b24c;
+  --gold-light:#f0d889;
+  --cream:#f7f3e9;
+  --white:#ffffff;
+  --text:#172033;
+  --muted:#6b7280;
+  --line:#dce4ef;
+  --soft:#eef3f9;
+  --shadow:0 22px 60px rgba(6,21,43,.14);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',Arial,sans-serif;
+  background:#f7f9fc;
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(6,21,43,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(216,178,76,.18);
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:16px 0;
+}
+.brand{
+  color:var(--gold);
+  font-family:'DM Serif Display',serif;
+  font-size:22px;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.nav-links a{
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{
+  padding:11px 18px;
+  border-radius:999px;
+  background:var(--gold);
+  color:var(--navy)!important;
+}
+
+.hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  overflow:hidden;
+  background:
+    linear-gradient(110deg,rgba(6,21,43,.97) 8%,rgba(12,35,68,.90) 54%,rgba(24,63,144,.60)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1900&q=85') center/cover;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 78% 28%,rgba(216,178,76,.22),transparent 30%),
+    linear-gradient(to top,rgba(6,21,43,.45),transparent 55%);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:840px;
+  padding:110px 0;
+}
+.eyebrow{
+  display:inline-flex;
+  padding:8px 14px;
+  border:1px solid rgba(216,178,76,.35);
+  border-radius:999px;
+  background:rgba(216,178,76,.12);
+  color:#ffe9b6;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.hero h1{
+  margin:22px 0 20px;
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(54px,8vw,96px);
+  line-height:.98;
+  font-weight:400;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  max-width:720px;
+  font-size:18px;
+  line-height:1.8;
+  color:rgba(255,255,255,.82);
+}
+.btn-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:14px;
+  transition:.25s ease;
+}
+.btn-primary{background:var(--gold);color:var(--navy)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.34);
+  background:rgba(255,255,255,.04);
+}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+
+.section{padding:88px 0}
+.section-head{
+  max-width:760px;
+  margin:0 auto 44px;
+  text-align:center;
+}
+.kicker{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.section-title{
+  font-family:'DM Serif Display',serif;
+  color:var(--navy);
+  font-size:clamp(38px,5vw,62px);
+  line-height:1.05;
+  font-weight:400;
+}
+.section-copy{
+  margin-top:14px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.8;
+}
+
+.statement-wrap{
+  background:#fff;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.statement{
+  max-width:930px;
+  margin:auto;
+  text-align:center;
+}
+.statement blockquote{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(34px,4vw,54px);
+  line-height:1.2;
+  color:var(--navy);
+}
+.statement blockquote span{color:var(--gold)}
+
+.students-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.student-card{
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:0 16px 40px rgba(6,21,43,.07);
+  transition:.3s ease;
+}
+.student-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+.student-photo{
+  aspect-ratio:4/4.2;
+  object-fit:cover;
+  width:100%;
+  background:var(--soft);
+}
+.student-body{padding:24px}
+.degree{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.student-body h3{
+  margin:8px 0 5px;
+  font-family:'Sora',sans-serif;
+  color:var(--navy);
+  font-size:22px;
+}
+.school{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:14px;
+}
+.student-body p{
+  color:#526074;
+  font-size:14px;
+  line-height:1.7;
+}
+.card-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+.small-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+}
+.small-btn.primary{background:var(--navy);color:#fff}
+.small-btn.secondary{border:1px solid var(--line);color:var(--navy);background:#fff}
+.small-btn:hover{opacity:.86}
+
+.dark{
+  color:#fff;
+  background:
+    radial-gradient(circle at 12% 10%,rgba(216,178,76,.16),transparent 30%),
+    linear-gradient(135deg,var(--navy),#102e67);
+}
+.dark .section-title{color:#fff}
+.dark .section-copy{color:rgba(255,255,255,.72)}
+
+.video-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:28px;
+  align-items:stretch;
+}
+.video-frame{
+  background:#000;
+  border-radius:28px;
+  overflow:hidden;
+  min-height:380px;
+  box-shadow:0 24px 60px rgba(0,0,0,.3);
+}
+.video-frame iframe{
+  width:100%;
+  height:100%;
+  min-height:380px;
+  border:0;
+}
+.video-info{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(12px);
+  border-radius:28px;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.video-info h3{
+  font-family:'DM Serif Display',serif;
+  font-size:38px;
+  line-height:1.1;
+  margin-bottom:14px;
+}
+.video-info p{
+  color:rgba(255,255,255,.74);
+  line-height:1.75;
+}
+.video-info .btn{margin-top:22px;align-self:flex-start}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.value{
+  padding:24px;
+  border-radius:22px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.value strong{
+  display:block;
+  color:var(--navy);
+  font-size:16px;
+  margin-bottom:8px;
+}
+.value p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+.cta{
+  padding:100px 0;
+  text-align:center;
+  color:#fff;
+  background:
+    radial-gradient(circle at top left,rgba(216,178,76,.19),transparent 34%),
+    linear-gradient(135deg,#06152b,#102e67);
+}
+.cta h2{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(44px,6vw,74px);
+  line-height:1;
+  font-weight:400;
+}
+.cta p{
+  max-width:700px;
+  margin:18px auto 0;
+  color:rgba(255,255,255,.74);
+  line-height:1.8;
+}
+
+.footer{
+  background:#031025;
+  color:rgba(255,255,255,.64);
+  padding:42px 0 24px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr .8fr;
+  gap:32px;
+}
+.footer h4{
+  color:var(--gold);
+  margin-bottom:12px;
+}
+.footer p,.footer a{
+  font-size:14px;
+  line-height:1.7;
+}
+.footer a{
+  display:block;
+  margin-bottom:8px;
+}
+.footer-bottom{
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.1);
+  font-size:13px;
+}
+
+.reveal{
+  opacity:1;
+  transform:none;
+}
+
+.js-enabled .reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:.7s ease;
+}
+
+.js-enabled .reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+@media(max-width:950px){
+  .nav-links{display:none}
+  .hero{min-height:auto}
+  .hero-content{padding:90px 0}
+  .students-grid{grid-template-columns:1fr 1fr}
+  .video-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .hero h1{font-size:56px}
+  .hero p{font-size:16px}
+  .btn-row{flex-direction:column}
+  .btn{width:100%}
+  .section{padding:70px 0}
+  .students-grid,.values-grid{grid-template-columns:1fr}
+  .video-frame,.video-frame iframe{min-height:240px}
+  .student-body{padding:22px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="https://governmentworkforcenetwork.com/">Government Workforce Network</a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+   <a href="https://governmentworkforcenetwork.com/">Home</a>
+      <a href="#about">About</a>
+      <a href="#students">Student Voices</a>
+      <a href="#watch">Watch</a>
+      <a href="#experience">Experience</a>
+      <a href="#join" class="nav-cta">Become a Student Voice</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content reveal">
+      <div class="eyebrow">Student Voices</div>
+
+      <h1>The Future Is Already <span>Speaking.</span></h1>
+
+      <p>
+        A platform where students share ideas, build confidence, and gain real-world communication experience.
+      </p>
+
+      <div class="btn-row">
+        <a href="#students" class="btn btn-primary">Meet the Students</a>
+        <a href="#watch" class="btn btn-outline">Watch on Workforce TV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section statement-wrap" id="about">
+  <div class="container statement reveal">
+    <blockquote>
+      Students should not only prepare for the future.
+      <span>They should help shape it.</span>
+    </blockquote>
+  </div>
+</section>
+
+<section class="section" id="students">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="kicker">Meet the Students</div>
+      <h2 class="section-title">Every Student Has a Voice</h2>
+      <p class="section-copy">
+        Explore their interests, ideas, and conversations.
+      </p>
+    </div>
+
+    <div class="students-grid">
+
+      <!-- STUDENT 1 -->
+      <article class="student-card reveal">
+        <img
+          class="student-photo"
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85"
+          alt="Student profile placeholder"
+        >
+        <div class="student-body">
+          <div class="degree">Accounting</div>
+          <h3>Coming Soon</h3>
+          <div class="school">University Name</div>
+          <p>
+            Exploring how accounting, ethics, and public trust shape stronger organizations.
+          </p>
+
+          <div class="card-actions">
+            <a href="#" class="small-btn primary">View Student Voice</a>
+            <a href="#" class="small-btn secondary">Watch Video</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- STUDENT 2 -->
+      <article class="student-card reveal">
+        <img
+          class="student-photo"
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85"
+          alt="Student profile placeholder"
+        >
+        <div class="student-body">
+          <div class="degree">Journalism</div>
+          <h3>Coming Soon</h3>
+          <div class="school">University Name</div>
+          <p>
+            Interested in storytelling, public issues, and conversations that deserve greater attention.
+          </p>
+
+          <div class="card-actions">
+            <a href="#" class="small-btn primary">View Student Voice</a>
+            <a href="#" class="small-btn secondary">Watch Video</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- STUDENT 3 -->
+      <article class="student-card reveal">
+        <img
+          class="student-photo"
+          src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=85"
+          alt="Student profile placeholder"
+        >
+        <div class="student-body">
+          <div class="degree">Communications</div>
+          <h3>Coming Soon</h3>
+          <div class="school">University Name</div>
+          <p>
+            Building confidence through communication, interviews, collaboration, and public engagement.
+          </p>
+
+          <div class="card-actions">
+            <a href="#" class="small-btn primary">View Student Voice</a>
+            <a href="#" class="small-btn secondary">Watch Video</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="watch">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="kicker">Workforce TV</div>
+      <h2 class="section-title">Watch the Conversation</h2>
+      <p class="section-copy">
+        Student-led conversations with professionals, mentors, and leaders.
+      </p>
+    </div>
+
+    <div class="video-grid reveal">
+
+      <div class="video-frame">
+        <!-- Replace VIDEO_ID with the YouTube video ID -->
+        <iframe
+          src="https://www.youtube.com/@government_workforce_network"
+          title="Student Voices on Workforce TV"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-info">
+        <div class="kicker">Featured Conversation</div>
+        <h3>Students Bring a Perspective the Workforce Needs.</h3>
+        <p>
+          Watch the latest Student Voices discussion on Workforce TV.
+        </p>
+
+        <!-- Replace the URL with your Student Voices YouTube playlist -->
+        <a
+          href="https://www.youtube.com/@government_workforce_network"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary">
+          View All Conversations
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="kicker">Real-World Experience</div>
+      <h2 class="section-title">Learn by Doing</h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value reveal">
+        <strong>Communication</strong>
+        <p>Practice speaking, interviewing, and presenting ideas.</p>
+      </div>
+
+      <div class="value reveal">
+        <strong>Mentorship</strong>
+        <p>Learn directly from professionals and industry contributors.</p>
+      </div>
+
+      <div class="value reveal">
+        <strong>Visibility</strong>
+        <p>Build a public portfolio through recorded conversations.</p>
+      </div>
+
+      <div class="value reveal">
+        <strong>Confidence</strong>
+        <p>Develop a stronger professional voice through experience.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta" id="join">
+  <div class="container reveal">
+    <h2>Your Voice Belongs Here.</h2>
+    <p>
+      Join Student Voices as a student, mentor, university, or professional contributor.
+    </p>
+
+    <div class="btn-row" style="justify-content:center;">
+      <a href="mailto:admin@governmentworkforcenetwork.com?subject=Student%20Voices%20Interest" class="btn btn-primary">
+        Become a Student Voice
+      </a>
+
+      <a href="mailto:admin@governmentworkforcenetwork.com?subject=Student%20Voices%20Partnership" class="btn btn-outline">
+        Partner With Us
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+      <div>
+        <h4>Government Workforce Network LLC</h4>
+        <p>
+          Creating meaningful connections, mentorship, and real-world learning opportunities.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#students">Student Voices</a>
+        <a href="#watch">Workforce TV</a>
+      </div>
+
+      <div>
+        <h4>Connect</h4>
+        <a href="https://governmentworkforcenetwork.com/">Main Website</a>
+        <a href="mailto:admin@governmentworkforcenetwork.com">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Government Workforce Network LLC. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js-enabled');
+
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08
+  });
+
+  revealElements.forEach((element) => observer.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add('visible'));
+}
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hero .reveal').forEach((element) => {
+    element.classList.add('visible');
+  });
+});
+</script>
+
+<script async
+  id="netlify-rum-container"
+  src="/.netlify/scripts/rum"
+  data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a">
+</script>
+
+</body>
+</html>
