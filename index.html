@@ -89,6 +89,133 @@ footer{background:linear-gradient(135deg,#06162c,#07182f);color:#fff;text-align:
 
 @media(max-width:560px){.container{width:min(100% - 28px,1180px)}.top-nav{padding:10px 0}.logo img{height:48px}.hero h1{font-size:3.05rem}.hero-panel,.quote-card,.final-cta{border-radius:28px;padding:24px}.stat,.card,.eco-left,.eco-node,.feature-card,.founder-metric,.contact-card{border-radius:24px;padding:22px}.flash-badge{font-size:.86rem}.card-image{height:220px}}
 
+  /* =========================================
+FEATURED TOKYO GALA NAVIGATION LINK
+========================================= */
+
+.tokyo-gala-nav{
+position:relative;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:10px 20px;
+
+border-radius:999px;
+
+background:linear-gradient(
+135deg,
+#FFD76A,
+#FF9DB5,
+#F4DE9A,
+#FFD76A
+);
+
+background-size:300% 300%;
+
+color:#3A1028 !important;
+
+font-weight:900 !important;
+
+font-size:.86rem;
+
+letter-spacing:.06em;
+
+text-decoration:none !important;
+
+border:1px solid rgba(255,255,255,.75);
+
+box-shadow:
+0 0 12px rgba(255,215,106,.65),
+0 0 28px rgba(255,157,181,.40);
+
+animation:
+galaGradient 4s ease infinite,
+galaGlow 2s ease-in-out infinite alternate;
+
+transition:
+transform .25s ease,
+box-shadow .25s ease;
+}
+
+
+/* Hover */
+
+.tokyo-gala-nav:hover{
+
+transform:translateY(-3px) scale(1.05);
+
+color:#2A0B1D !important;
+
+box-shadow:
+0 0 18px rgba(255,215,106,.90),
+0 0 38px rgba(255,157,181,.65),
+0 10px 28px rgba(0,0,0,.20);
+}
+
+
+/* Animated luxury gradient */
+
+@keyframes galaGradient{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+
+/* Soft flashing glow */
+
+@keyframes galaGlow{
+
+from{
+box-shadow:
+0 0 8px rgba(255,215,106,.45),
+0 0 18px rgba(255,157,181,.25);
+}
+
+to{
+box-shadow:
+0 0 16px rgba(255,215,106,.90),
+0 0 32px rgba(255,157,181,.55);
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.tokyo-gala-nav{
+width:100%;
+margin-top:8px;
+text-align:center;
+}
+
+}
+
+
+/* Accessibility: disable animation when requested */
+
+@media(prefers-reduced-motion:reduce){
+
+.tokyo-gala-nav{
+animation:none;
+}
+
+}
+
+
 </style>
 
 <style>
@@ -133,7 +260,7 @@ box-shadow:0 0 0 rgba(212,175,55,.7);
 
 <header><nav class="container top-nav"><a class="logo" href="/"><img src="logo.png" alt="Government Workforce Network LLC Logo" /><span class="logo-text">Government Workforce Network LLC</span></a><button class="mobile-menu-btn" onclick="toggleMenu()">Menu</button><ul class="nav-links" id="navLinks"><li><a href="/">Home</a></li><li><a href="/who-we-are">Who We Are</a></li><li><a href="/initiatives">Initiatives</a></li><li><a href="/consulting">Solutions</a></li><li><a href="/career-center-partners">University Network</a></li><li><a href="/events">Events & Media Hub</a></li><li><a href="/sponsors">Sponsors</a></li><li><a href="/student-voice">Student Voices Live</a></li><li><a href="/workforce-tv">Workforce TV</a></li><li><a href="/talent-connect">Talent Connect-USA</a></li><li><a href="/talent-connect-global">Talent Connect-Global</a></li><li><a href="#" class="consulting-btn" onclick="openCalendly(); return false;">Let's Connect</a> <a href="/festival" class="nav-flash"> <a href="/gala-page" class="nav-flash">
 
-Career Connection Festival | 2027</a></li></ul></nav></header>
+Career Connection Festival | 2027</a></li></ul> <a href="/tokyo-gala" class="tokyo-gala-nav">✦ TOKYO GALA 2026</a></nav></header>
 
 <main>
 
