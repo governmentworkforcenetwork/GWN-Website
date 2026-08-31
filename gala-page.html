@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hearts United in Harmony | Tokyo Benefit Gala 2026</title>
+
+<meta name="description"
+content="Hearts United in Harmony — A special benefit gala presented by DDS Japan and Government Workforce Network LLC in Tokyo, Japan, benefiting House of Hope.">
+
+<style>
+
+/* =========================================================
+   COLOR SYSTEM
+========================================================= */
+
+:root{
+    --plum:#3B1638;
+    --plum-deep:#221126;
+    --burgundy:#5C1E2D;
+    --wine:#7A273E;
+
+    --emerald:#183B35;
+    --emerald-soft:#2E5B50;
+
+    --rose:#C98B96;
+    --rose-light:#E9C6CC;
+
+    --gold:#D6AC59;
+    --gold-light:#F4DE9A;
+    --champagne:#F6EBD2;
+
+    --ivory:#FFFDF8;
+    --white:#FFFFFF;
+
+    --text:#F4EFEA;
+    --muted:#D2C4CA;
+
+    --border:rgba(244,222,154,.28);
+    --glass:rgba(255,255,255,.07);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 8% 12%,
+            rgba(201,139,150,.28),
+            transparent 26%),
+
+        radial-gradient(circle at 88% 18%,
+            rgba(214,172,89,.22),
+            transparent 28%),
+
+        radial-gradient(circle at 20% 70%,
+            rgba(92,30,45,.38),
+            transparent 34%),
+
+        radial-gradient(circle at 85% 72%,
+            rgba(24,59,53,.30),
+            transparent 30%),
+
+        linear-gradient(
+            145deg,
+            #2B142B 0%,
+            #4A1830 22%,
+            #70253A 43%,
+            #3E263B 62%,
+            #173731 82%,
+            #291326 100%
+        );
+
+    background-attachment:fixed;
+
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(255,224,160,.08),
+            transparent 35%),
+
+        radial-gradient(circle at 50% 100%,
+            rgba(233,198,204,.08),
+            transparent 38%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+body::before{
+    content:"TOKYO";
+    position:fixed;
+    top:42%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:clamp(7rem,22vw,22rem);
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    color:rgba(255,255,255,.025);
+
+    z-index:-2;
+
+    pointer-events:none;
+
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+========================================================= */
+
+.page-nav{
+    max-width:1220px;
+    margin:24px auto;
+    padding:0 24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.home-link,
+.nav-rsvp{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:800;
+    font-size:.88rem;
+
+    transition:.25s ease;
+}
+
+.home-link{
+    color:var(--champagne);
+
+    border:1px solid rgba(244,222,154,.32);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(92,30,45,.50),
+            rgba(59,22,56,.55)
+        );
+
+    backdrop-filter:blur(14px);
+}
+
+.home-link:hover{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(122,39,62,.85),
+            rgba(59,22,56,.85)
+        );
+
+    transform:translateY(-2px);
+}
+
+.nav-rsvp{
+    color:#321827;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F1D786,
+            #F7EBC2
+        );
+
+    box-shadow:0 14px 36px rgba(214,172,89,.22);
+}
+
+.nav-rsvp:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 18px 44px rgba(214,172,89,.34);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+
+    min-height:760px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    border-top:1px solid rgba(244,222,154,.18);
+    border-bottom:1px solid rgba(244,222,154,.22);
+
+    background:
+
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(214,172,89,.20),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(201,139,150,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(44,16,39,.97) 0%,
+            rgba(83,26,49,.88) 40%,
+            rgba(69,32,55,.52) 68%,
+            rgba(35,43,45,.36) 100%
+        ),
+
+        url("YOUR-GALA-HERO-IMAGE.jpg")
+        center/cover no-repeat;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+
+    border:1px solid rgba(244,222,154,.18);
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:1220px;
+    width:100%;
+
+    margin:auto;
+
+    padding:100px 24px;
+}
+
+.hero-copy{
+    max-width:770px;
+}
+
+.eyebrow{
+    color:var(--gold-light);
+
+    text-transform:uppercase;
+
+    letter-spacing:.25em;
+
+    font-weight:800;
+
+    font-size:.76rem;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:clamp(3.4rem,8vw,7.8rem);
+
+    line-height:.93;
+
+    font-weight:500;
+
+    letter-spacing:-.045em;
+
+    color:var(--ivory);
+
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    display:block;
+    color:var(--gold-light);
+}
+
+.hero-tagline{
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-style:italic;
+
+    font-size:clamp(1.3rem,2.6vw,2rem);
+
+    color:var(--champagne);
+
+    margin-bottom:22px;
+}
+
+.hero-description{
+    max-width:710px;
+
+    color:rgba(255,255,255,.84);
+
+    font-size:1.04rem;
+}
+
+.hero-actions{
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+    margin-top:32px;
+}
+
+.primary-btn,
+.secondary-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:56px;
+
+    padding:0 28px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:900;
+
+    transition:.25s ease;
+}
+
+.primary-btn{
+    color:#321827;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold-light)
+        );
+
+    box-shadow:0 18px 45px rgba(214,172,89,.22);
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 24px 55px rgba(214,172,89,.34);
+}
+
+.secondary-btn{
+    color:white;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    background:rgba(255,255,255,.07);
+
+    backdrop-filter:blur(10px);
+}
+
+.secondary-btn:hover{
+    background:rgba(255,255,255,.13);
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.container{
+    max-width:1180px;
+
+    margin:auto;
+
+    padding:80px 24px;
+}
+
+.section-heading{
+    max-width:820px;
+
+    margin:0 auto 44px;
+
+    text-align:center;
+}
+
+.section-kicker{
+    color:var(--gold-light);
+
+    text-transform:uppercase;
+
+    font-size:.74rem;
+
+    font-weight:900;
+
+    letter-spacing:.22em;
+
+    margin-bottom:12px;
+}
+
+.section-heading h2{
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-weight:500;
+
+    color:#FFF7EB;
+
+    font-size:clamp(2.3rem,5vw,4.4rem);
+
+    line-height:1.02;
+
+    margin-bottom:18px;
+}
+
+.section-heading p{
+    color:#E0D2D7;
+    font-size:1rem;
+}
+
+
+/* =========================================================
+   EVENT INFO
+========================================================= */
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:16px;
+
+    position:relative;
+
+    margin-top:-72px;
+
+    z-index:4;
+}
+
+.info-card{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(92,30,45,.92),
+            rgba(56,25,52,.92)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(244,222,154,.28);
+
+    padding:28px 24px;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 28px 70px rgba(31,8,25,.32),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.info-card:nth-child(2){
+    background:
+        linear-gradient(
+            145deg,
+            rgba(62,26,53,.92),
+            rgba(111,37,58,.88)
+        );
+}
+
+.info-card:nth-child(3){
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24,59,53,.92),
+            rgba(48,52,57,.90)
+        );
+}
+
+.info-card:nth-child(4){
+    background:
+        linear-gradient(
+            145deg,
+            rgba(115,44,61,.90),
+            rgba(63,24,53,.92)
+        );
+}
+
+.info-card span{
+    display:block;
+
+    text-transform:uppercase;
+
+    letter-spacing:.16em;
+
+    font-size:.7rem;
+
+    color:var(--gold-light);
+
+    font-weight:900;
+
+    margin-bottom:8px;
+}
+
+.info-card strong{
+    display:block;
+
+    color:var(--ivory);
+
+    font-size:1rem;
+
+    line-height:1.45;
+}
+
+
+/* =========================================================
+   PURPOSE
+========================================================= */
+
+.purpose-panel{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:65px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(244,222,154,.28);
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(214,172,89,.22),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 8% 90%,
+            rgba(201,139,150,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #5A1F36,
+            #321A38 55%,
+            #183A35
+        );
+
+    box-shadow:0 35px 90px rgba(36,10,28,.28);
+}
+
+.purpose-panel::after{
+    content:"HOPE";
+
+    position:absolute;
+
+    right:-12px;
+
+    bottom:-48px;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:clamp(7rem,18vw,15rem);
+
+    color:rgba(255,255,255,.03);
+}
+
+.purpose-panel h2{
+    position:relative;
+
+    z-index:2;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    color:var(--gold-light);
+
+    font-weight:500;
+
+    font-size:clamp(2.4rem,5vw,4rem);
+
+    line-height:1.08;
+
+    max-width:850px;
+
+    margin-bottom:22px;
+}
+
+.purpose-panel p{
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    color:rgba(255,255,255,.84);
+
+    font-size:1.05rem;
+}
+
+.purpose-line{
+    margin-top:28px;
+
+    position:relative;
+
+    z-index:2;
+
+    color:var(--champagne);
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:1.4rem;
+
+    font-style:italic;
+}
+
+
+/* =========================================================
+   DRESS CODE
+========================================================= */
+
+.dress-section{
+    padding-top:30px;
+}
+
+.dress-intro{
+    max-width:830px;
+
+    margin:0 auto 35px;
+
+    padding:22px 26px;
+
+    text-align:center;
+
+    border:1px solid rgba(244,222,154,.42);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(122,39,62,.55),
+            rgba(55,23,54,.62)
+        );
+
+    border-radius:18px;
+
+    color:#FFF3DA;
+
+    font-weight:700;
+
+    box-shadow:0 16px 42px rgba(41,10,31,.20);
+}
+
+.dress-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:26px;
+}
+
+.dress-card{
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:0;
+
+    border-radius:28px;
+
+    border:1px solid rgba(244,222,154,.30);
+
+    display:block;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(76,28,55,.96),
+            rgba(38,25,47,.96)
+        );
+
+    box-shadow:
+        0 28px 70px rgba(31,8,25,.30),
+        inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.dress-card.men{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,58,52,.96),
+            rgba(47,34,48,.96)
+        );
+}
+
+
+/* =========================================================
+   FASHION THUMBNAILS
+========================================================= */
+
+.fashion-thumbnail{
+    width:100%;
+
+    height:340px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    border-bottom:1px solid rgba(244,222,154,.26);
+}
+
+.fashion-thumbnail img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+
+    transition:transform .45s ease;
+}
+
+.dress-card:hover .fashion-thumbnail img{
+    transform:scale(1.035);
+}
+
+.fashion-thumbnail::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(35,12,31,.55) 100%
+        );
+
+    pointer-events:none;
+}
+
+.fashion-tag{
+    position:absolute;
+
+    bottom:18px;
+
+    left:20px;
+
+    z-index:2;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:rgba(26,12,24,.72);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(244,222,154,.35);
+
+    color:#F7E2A4;
+
+    font-size:.72rem;
+
+    font-weight:900;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   DRESS CONTENT
+========================================================= */
+
+.dress-content{
+    padding:32px 34px 36px;
+    width:100%;
+}
+
+.dress-content .label{
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    color:var(--gold-light);
+
+    font-size:.73rem;
+
+    font-weight:900;
+}
+
+.dress-content h3{
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-weight:500;
+
+    color:#FFF9EF;
+
+    font-size:2.15rem;
+
+    margin:6px 0 15px;
+}
+
+.dress-list{
+    list-style:none;
+}
+
+.dress-list li{
+    margin:9px 0;
+
+    color:rgba(255,255,255,.88);
+}
+
+.dress-list li::before{
+    content:"✓";
+
+    color:#F4DE9A;
+
+    font-weight:bold;
+
+    margin-right:10px;
+}
+
+.not-permitted{
+    margin-top:22px;
+
+    padding:17px 18px;
+
+    background:rgba(31,11,26,.40);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:14px;
+
+    color:#F0DDE1;
+
+    font-size:.9rem;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-grid{
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr .85fr;
+
+    grid-template-rows:280px 280px;
+
+    gap:14px;
+}
+
+.gallery-item{
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(244,222,154,.20);
+
+    min-height:250px;
+
+    background-position:center;
+
+    background-size:cover;
+
+    box-shadow:0 20px 55px rgba(31,8,25,.22);
+}
+
+.gallery-item.one{
+    grid-row:span 2;
+    background-image:url("YOUR-GALLERY-IMAGE-1.jpg");
+}
+
+.gallery-item.two{
+    background-image:url("YOUR-GALLERY-IMAGE-2.jpg");
+}
+
+.gallery-item.three{
+    background-image:url("YOUR-GALLERY-IMAGE-3.jpg");
+}
+
+.gallery-item.four{
+    background-image:url("YOUR-GALLERY-IMAGE-4.jpg");
+}
+
+.gallery-item.five{
+    background-image:url("YOUR-GALLERY-IMAGE-5.jpg");
+}
+
+
+/* =========================================================
+   RSVP
+========================================================= */
+
+.rsvp-box{
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:65px 40px;
+
+    border-radius:34px;
+
+    border:1px solid rgba(244,222,154,.38);
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(214,172,89,.20),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(201,139,150,.22),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #641F38,
+            #3B183B 54%,
+            #183932
+        );
+
+    box-shadow:0 35px 95px rgba(31,8,25,.36);
+}
+
+.rsvp-box h2{
+    font-family:Georgia, "Times New Roman", serif;
+
+    color:var(--ivory);
+
+    font-size:clamp(2.4rem,5vw,4.3rem);
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    margin-bottom:15px;
+}
+
+.deadline{
+    display:inline-block;
+
+    margin:24px 0;
+
+    padding:13px 22px;
+
+    border-radius:999px;
+
+    color:#321827;
+
+    font-weight:900;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold-light)
+        );
+}
+
+.rsvp-box p{
+    color:#E2D5DA;
+
+    max-width:780px;
+
+    margin:0 auto;
+}
+
+.payment-note{
+    max-width:780px;
+
+    margin:28px auto !important;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.13);
+
+    color:rgba(255,255,255,.88) !important;
+}
+
+.payment-note strong{
+    color:var(--gold-light);
+}
+
+.pay-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:10px;
+
+    padding:18px 34px;
+
+    min-width:260px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:900;
+
+    color:#321827;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold-light)
+        );
+
+    box-shadow:0 20px 50px rgba(214,172,89,.25);
+
+    transition:.25s ease;
+}
+
+.pay-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 25px 60px rgba(214,172,89,.38);
+}
+
+.secure{
+    display:block;
+
+    margin-top:16px;
+
+    color:#D5C7CC;
+
+    font-size:.85rem;
+}
+
+
+/* =========================================================
+   POLICIES
+========================================================= */
+
+.policy-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.policy-card{
+    padding:28px;
+
+    border:1px solid rgba(244,222,154,.26);
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(101,35,58,.42),
+            rgba(42,31,50,.58)
+        );
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 20px 46px rgba(30,8,24,.14);
+}
+
+.policy-card:nth-child(2){
+    background:
+        linear-gradient(
+            145deg,
+            rgba(49,28,52,.58),
+            rgba(97,37,59,.44)
+        );
+}
+
+.policy-card:nth-child(3){
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,59,53,.58),
+            rgba(61,33,51,.55)
+        );
+}
+
+.policy-card h3{
+    color:var(--gold-light);
+
+    margin-bottom:10px;
+}
+
+.policy-card p{
+    color:#DED0D6;
+
+    font-size:.94rem;
+}
+
+
+/* =========================================================
+   HOST PANEL
+========================================================= */
+
+.host-panel{
+    text-align:center;
+
+    padding:55px 30px;
+
+    border-top:1px solid rgba(244,222,154,.30);
+
+    border-bottom:1px solid rgba(244,222,154,.30);
+
+    background:
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(214,172,89,.11),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(67,24,52,.72),
+            rgba(105,34,54,.72),
+            rgba(29,63,56,.70)
+        );
+}
+
+.host-panel .small-title{
+    color:var(--gold-light);
+
+    text-transform:uppercase;
+
+    letter-spacing:.2em;
+
+    font-size:.72rem;
+
+    font-weight:900;
+}
+
+.host-panel h2{
+    margin:10px 0;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    color:var(--ivory);
+
+    font-weight:500;
+
+    font-size:clamp(2rem,4vw,3.4rem);
+}
+
+.host-panel p{
+    color:#E0D4D7;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-panel{
+    text-align:center;
+
+    border-radius:28px;
+
+    padding:44px 25px;
+
+    border:1px solid rgba(244,222,154,.28);
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(214,172,89,.16),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #5D2038,
+            #3A1A3B,
+            #183C35
+        );
+
+    box-shadow:0 25px 65px rgba(32,9,25,.24);
+}
+
+.contact-panel h2{
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:2.3rem;
+
+    color:var(--ivory);
+
+    font-weight:500;
+
+    margin-bottom:12px;
+}
+
+.contact-panel p{
+    color:#E1D6D9;
+}
+
+.contact-panel a{
+    color:var(--gold-light);
+
+    text-decoration:none;
+
+    font-weight:800;
+}
+
+.contact-panel a:hover{
+    text-decoration:underline;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+    padding:42px 20px;
+
+    text-align:center;
+
+    color:#C6B7BD;
+
+    font-size:.88rem;
+}
+
+.footer-links{
+    margin-top:10px;
+}
+
+.footer a{
+    color:#E4D7DB;
+
+    text-decoration:none;
+
+    margin:0 10px;
+}
+
+.footer a:hover{
+    color:var(--gold-light);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:950px){
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dress-grid{
+        grid-template-columns:1fr;
+    }
+
+    .policy-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:auto;
+    }
+
+    .gallery-item.one{
+        grid-row:auto;
+    }
+
+    .gallery-item{
+        height:330px;
+    }
+
+    .purpose-panel{
+        padding:44px 30px;
+    }
+
+    .fashion-thumbnail{
+        height:420px;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .page-nav{
+        justify-content:center;
+    }
+
+    .home-link,
+    .nav-rsvp{
+        width:100%;
+    }
+
+    .hero{
+        min-height:720px;
+        background-position:65% center;
+    }
+
+    .hero-content{
+        padding:80px 22px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+        margin-top:-35px;
+    }
+
+    .container{
+        padding:60px 20px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:340px;
+    }
+
+    .rsvp-box{
+        padding:45px 22px;
+    }
+
+    .fashion-thumbnail{
+        height:330px;
+    }
+
+    .dress-content{
+        padding:26px 22px 30px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP NAVIGATION
+========================================================= -->
+
+<div class="page-nav">
+
+<a class="home-link"
+href="https://governmentworkforcenetwork.com">
+← Return to Government Workforce Network
+</a>
+
+<a class="nav-rsvp"
+href="#rsvp">
+RSVP & Secure Your Seat
+</a>
+
+</div>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-copy">
+
+<div class="eyebrow">
+DDS Japan × Government Workforce Network LLC Presents
+</div>
+
+<h1>
+Hearts
+<span>United in Harmony</span>
+</h1>
+
+<div class="hero-tagline">
+An Evening of Compassion. A Future of Hope.
+</div>
+
+<p class="hero-description">
+
+Join us in Tokyo for an elegant evening bringing diverse communities
+together through connection, compassion, and a shared commitment to
+creating hope where it is needed most.
+
+</p>
+
+<div class="hero-actions">
+
+<a class="primary-btn"
+href="#rsvp">
+Reserve Your Seat
+</a>
+
+<a class="secondary-btn"
+href="#attire">
+View Formal Attire Requirements
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EVENT INFORMATION
+========================================================= -->
+
+<div class="container">
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<span>
+Date
+</span>
+
+<strong>
+Saturday<br>
+October 10, 2026
+</strong>
+
+</div>
+
+
+<div class="info-card">
+
+<span>
+Time
+</span>
+
+<strong>
+6:00 PM – 9:00 PM
+</strong>
+
+</div>
+
+
+<div class="info-card">
+
+<span>
+Location
+</span>
+
+<strong>
+Grace Bali Shinjuku<br>
+Tokyo, Japan
+</strong>
+
+</div>
+
+
+<div class="info-card">
+
+<span>
+Benefiting
+</span>
+
+<strong>
+House of Hope
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================================
+     PURPOSE
+========================================================= -->
+
+<section class="container">
+
+<div class="purpose-panel">
+
+<h2>
+One Heart. One Purpose.
+</h2>
+
+<p>
+
+Hearts United in Harmony is a special benefit gala presented by
+DDS Japan and Government Workforce Network LLC to bring people and
+diverse communities together in an atmosphere of compassion,
+connection, and solidarity.
+
+</p>
+
+<br>
+
+<p>
+
+The evening will benefit <strong>House of Hope</strong>,
+supporting children and families while creating an opportunity for
+community leaders, professionals, advocates, and guests to come
+together around a shared purpose.
+
+</p>
+
+<div class="purpose-line">
+
+Together, we bring hope where it is needed most.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DRESS CODE
+========================================================= -->
+
+<section class="container dress-section"
+id="attire">
+
+<div class="section-heading">
+
+<div class="section-kicker">
+Black-Tie Evening
+</div>
+
+<h2>
+A Celebration Worth Dressing For
+</h2>
+
+<p>
+
+This gala has a strictly formal evening dress code.
+Guests are asked to honor the significance and elegance of the
+occasion through appropriate black-tie or formal attire.
+
+</p>
+
+</div>
+
+
+<div class="dress-intro">
+
+<strong>
+STRICT FORMAL ATTIRE WILL BE ENFORCED.
+</strong>
+
+<br>
+
+Casual, business casual, cocktail, and semi-formal attire are not
+appropriate for this event.
+
+</div>
+
+
+
+<div class="dress-grid">
+
+
+<!-- =========================================================
+     WOMEN
+========================================================= -->
+
+<div class="dress-card women">
+
+
+<div class="fashion-thumbnail">
+
+<img
+src="YOUR-WOMEN-GOWN-IMAGE.jpg"
+alt="Elegant full-length evening gown inspiration">
+
+<div class="fashion-tag">
+Gala Style Inspiration
+</div>
+
+</div>
+
+
+<div class="dress-content">
+
+<div class="label">
+For Women
+</div>
+
+<h3>
+Full-Length Evening Gown
+</h3>
+
+
+<ul class="dress-list">
+
+<li>
+Full-length formal evening gown
+</li>
+
+<li>
+Elegant gala or black-tie styling
+</li>
+
+<li>
+Formal evening shoes and accessories
+</li>
+
+<li>
+Sophisticated and polished presentation
+</li>
+
+</ul>
+
+
+<div class="not-permitted">
+
+<strong>
+Not permitted:
+</strong>
+
+cocktail dresses, short dresses, sundresses,
+business attire, casual attire, jeans,
+sneakers, or semi-formal clothing.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MEN
+========================================================= -->
+
+<div class="dress-card men">
+
+
+<div class="fashion-thumbnail">
+
+<img
+src="YOUR-MEN-TUXEDO-IMAGE.jpg"
+alt="Elegant tuxedo and formal suit inspiration">
+
+<div class="fashion-tag">
+Black-Tie Style Inspiration
+</div>
+
+</div>
+
+
+<div class="dress-content">
+
+<div class="label">
+For Men
+</div>
+
+<h3>
+Tuxedo or Formal Suit
+</h3>
+
+
+<ul class="dress-list">
+
+<li>
+Traditional tuxedo or formal dark suit
+</li>
+
+<li>
+Formal dress shirt
+</li>
+
+<li>
+Necktie or bow tie
+</li>
+
+<li>
+Formal dress shoes
+</li>
+
+</ul>
+
+
+<div class="not-permitted">
+
+<strong>
+Not permitted:
+</strong>
+
+business casual clothing, polo shirts,
+open-collar casual shirts, jeans,
+sneakers, casual jackets,
+or semi-formal attire.
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GALA VISUALS
+========================================================= -->
+
+<section class="container">
+
+<div class="section-heading">
+
+<div class="section-kicker">
+An International Evening
+</div>
+
+<h2>
+Elegance. Community. Connection.
+</h2>
+
+<p>
+
+An evening designed to bring together individuals from diverse
+backgrounds and communities in one extraordinary celebration of
+compassion and hope.
+
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item one"></div>
+
+<div class="gallery-item two"></div>
+
+<div class="gallery-item three"></div>
+
+<div class="gallery-item four"></div>
+
+<div class="gallery-item five"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RSVP
+========================================================= -->
+
+<section class="container"
+id="rsvp">
+
+<div class="rsvp-box">
+
+<div class="section-kicker">
+Attendance By Advance Reservation
+</div>
+
+<h2>
+Reserve Your Seat
+</h2>
+
+
+<div class="deadline">
+
+RSVP DEADLINE: SEPTEMBER 30, 2026
+
+</div>
+
+
+<p>
+
+Advance RSVP is required.
+Seating is limited and reservations may close before the deadline
+once event capacity has been reached.
+
+</p>
+
+
+<p class="payment-note">
+
+<strong>
+ONLINE PAYMENT ONLY
+</strong>
+
+<br><br>
+
+All event payments and reservations must be completed online
+through the official event payment link.
+
+Cash payments and payments at the venue will not be accepted.
+
+</p>
+
+
+<!-- REPLACE # WITH YOUR PAYMENT LINK -->
+
+<a class="pay-btn"
+href="#"
+target="_blank"
+rel="noopener">
+
+RSVP & Pay Online
+
+</a>
+
+
+<span class="secure">
+
+Secure online reservation and payment
+
+</span>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     IMPORTANT INFORMATION
+========================================================= -->
+
+<section class="container">
+
+<div class="section-heading">
+
+<div class="section-kicker">
+Before You Attend
+</div>
+
+<h2>
+Important Gala Information
+</h2>
+
+</div>
+
+
+<div class="policy-grid">
+
+
+<div class="policy-card">
+
+<h3>
+Advance RSVP Required
+</h3>
+
+<p>
+
+All guests must complete their reservation before the RSVP deadline.
+Walk-in attendance is not guaranteed.
+
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Online Payment Only
+</h3>
+
+<p>
+
+Reservations and event payments are accepted exclusively through
+the official online payment system.
+
+No cash payment will be accepted at the venue.
+
+</p>
+
+</div>
+
+
+
+<div class="policy-card">
+
+<h3>
+Strict Formal Dress Code
+</h3>
+
+<p>
+
+Women are required to wear full-length evening gowns.
+
+Men are required to wear a tuxedo or formal suit.
+
+Casual and semi-formal attire are not appropriate for admission
+to this gala.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOSTS
+========================================================= -->
+
+<section class="host-panel">
+
+<div class="small-title">
+Presented By
+</div>
+
+<h2>
+DDS Japan × Government Workforce Network LLC
+</h2>
+
+<p>
+Benefiting House of Hope
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="container">
+
+<div class="contact-panel">
+
+<h2>
+Event Questions?
+</h2>
+
+<p>
+
+For gala information, reservations, or general inquiries,
+please contact:
+
+<br><br>
+
+<a href="mailto:admin@governmentworkforcenetwork.com">
+
+admin@governmentworkforcenetwork.com
+
+</a>
+
+<br>
+
+<a href="tel:+19497752175">
+
+(949) 775-2175
+
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Government Workforce Network LLC.
+All Rights Reserved.
+
+</p>
+
+
+<div class="footer-links">
+
+<a href="/privacy-policy">
+Privacy Policy
+</a>
+
+<a href="/terms-of-service">
+Terms of Service
+</a>
+
+<a href="/support">
+Support
+</a>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
+
